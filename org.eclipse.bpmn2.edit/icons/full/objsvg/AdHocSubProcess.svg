@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="AdhocSubProcess.svg"
+   inkscape:export-filename="C:\apps\eclipse-workspace-gmf\trunk\org.eclipse.stp.bpmn.edit\icons\full\obj16\activities\sub_process.png"
+   inkscape:export-xdpi="60"
+   inkscape:export-ydpi="60">
+  <metadata
+     id="metadata6">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="749"
+     inkscape:window-width="1047"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="15.625"
+     inkscape:cx="12"
+     inkscape:cy="12"
+     inkscape:window-x="317"
+     inkscape:window-y="15"
+     inkscape:current-layer="svg2"
+     showgrid="false"
+     inkscape:window-maximized="0" />
+  <defs
+     id="defs13">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 12 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="24 : 12 : 1"
+       inkscape:persp3d-origin="12 : 8 : 1"
+       id="perspective14" />
+  </defs>
+  <rect
+     width="21.879652"
+     height="15.089416"
+     x="1.060174"
+     y="4.4552922"
+     rx="3"
+     ry="3"
+     style="opacity:1;fill:white;fill-opacity:1;stroke:black;stroke-width:0.5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+     id="rect5423" />
+  <rect
+     style="opacity:1;fill:none;fill-opacity:1;stroke:black;stroke-width:0.3;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1890"
+     width="4.1787243"
+     height="4.1787233"
+     x="9.9106379"
+     y="13.398638" />
+  <g
+     id="Layer_0"
+     transform="matrix(0.107143,0,0,0.107143,-0.214302,6.273701)">
+    <g
+       id="g3666">
+      <path
+         id="path3668"
+         style="fill:none;stroke:black;stroke-width:4;stroke-miterlimit:3.7320509"
+         d="M 114,74 L 114,98" />
+      <path
+         id="path3670"
+         style="fill:none;stroke:black;stroke-width:4;stroke-miterlimit:3.7320509"
+         d="M 126,86 L 102,86" />
+    </g>
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-size:3px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#666666;fill-opacity:1;stroke:none;font-family:Arial"
+     x="3.6467285"
+     y="9.7919998"
+     id="text1874"
+     sodipodi:linespacing="100%"><tspan
+       sodipodi:role="line"
+       id="tspan1878"
+       x="3.6467285"
+       y="9.7919998">Sub-process</tspan></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot2841"
+     style="font-size:4px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"><flowRegion
+       id="flowRegion2843"><rect
+         id="rect2845"
+         width="5.3119998"
+         height="4.48"
+         x="14.784"
+         y="13.184" /></flowRegion><flowPara
+       id="flowPara2847">~∼∼r</flowPara></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="flowRoot2849"
+     style="font-size:2px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"><flowRegion
+       id="flowRegion2851"><rect
+         id="rect2853"
+         width="6.2719998"
+         height="4.48"
+         x="14.784"
+         y="13.312"
+         style="font-size:2px" /></flowRegion><flowPara
+       id="flowPara2855">dfdfddfdffdffdeeeddff</flowPara><flowPara
+       id="flowPara2857" /><flowPara
+       id="flowPara2859" /></flowRoot>  <text
+     xml:space="preserve"
+     style="font-size:12.64805031px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="14.050837"
+     y="19.601288"
+     id="text2861"><tspan
+       sodipodi:role="line"
+       id="tspan2863"
+       x="14.050837"
+       y="19.601288">∼</tspan></text>
+</svg>

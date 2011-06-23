@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EMFEcoreGenerator
+Bundle-SymbolicName: org.eclipse.bpmn2.tools.ecoremerger;singleton:=true
+Bundle-Version: 0.7.0.qualifier
+Require-Bundle: org.eclipse.emf,
+ org.eclipse.jface,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: 
+ org.eclipse.bpmn2.tools.ecoremerger,
+ org.eclipse.bpmn2.tools.ecoremerger.exceptions,
+ org.eclipse.bpmn2.tools.ecoremerger.exceptions.impl,
+ org.eclipse.bpmn2.tools.ecoremerger.exceptions.util
+

@@ -1,0 +1,114 @@
+<%@ jet package="org.eclipse.bpmn2.tools.xsltFromEcore.jet" class="XMIToXML" imports="org.eclipse.emf.ecore.*" skeleton="generator.skeleton"%>
+<% JetInput input = (JetInput) argument; %>
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="2.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:xmi="http://schema.omg.org/spec/XMI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+	xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+	xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" 
+	xmlns:bpmn2xmi="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
+	xmlns:bpmndixmi="http://www.omg.org/spec/BPMN/20100524/DI-XMI"
+	xmlns:dixmi="http://www.omg.org/spec/DD/20100524/DI-XMI"
+	xmlns:dcxmi="http://www.omg.org/spec/DD/20100524/DC-XMI"> 
+	<xsl:output method="xml" indent="yes"/>
+
+	<xsl:template match="/">
+	  <xsl:apply-templates/>
+	</xsl:template>
+
+	<xsl:template name="SplitStringCore">
+		<xsl:param name="list" />
+		<xsl:param name="elementName" />
+		<xsl:param name="elementNamespace" />
+		<xsl:if test="string-length($list) > 1">
+			<xsl:element name="{$elementName}" namespace="{$elementNamespace}">
+				<xsl:value-of select="substring-before($list, ' ')" />
+			</xsl:element>
+			<xsl:call-template name="SplitStringCore">
+				<xsl:with-param name="list" select="substring-after($list, ' ')" />
+				<xsl:with-param name="elementName" select="$elementName" />
+				<xsl:with-param name="elementNamespace" select="$elementNamespace" />
+			</xsl:call-template>
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template name="SplitString">
+		<xsl:param name="list" />
+		<xsl:param name="elementName" />
+		<xsl:param name="elementNamespace" />
+		<xsl:call-template name="SplitStringCore">
+			<!-- Remove all unnecessary whitespace, but add a marker space at the 
+				end to simplify recursion. -->
+			<xsl:with-param name="list"
+				select="concat(normalize-space($list), ' ')" />
+			<xsl:with-param name="elementName" select="$elementName" />
+		    <xsl:with-param name="elementNamespace" select="$elementNamespace" />
+		</xsl:call-template>
+	</xsl:template>
+
+		
+	<xsl:template name="EObjectAttributesTemplate">
+	  <!-- TODO: Add your copy logic for extension attributes-->
+	</xsl:template>
+
+	<xsl:template name="EObjectTemplate">
+	  <!-- TODO: Add your copy logic for extension elements-->
+	</xsl:template>
+
+<% for(EClass c: input.getClasses()) { %>
+    <xsl:template name="<%=c.getName()%>AttributesTemplate">
+<%for(EClass superClass: c.getESuperTypes()) {%>
+     <xsl:call-template name="<%=superClass.getName()%>AttributesTemplate"/> 
+<%}
+ for(EStructuralFeature feature: input.getAllFeatureThatAreAttributesInXml(c)) { %>
+     <xsl:if test="<%=input.getXPathForXMI(feature)%>"><xsl:attribute name="<%=input.getExtendedMetadata().getName(feature)%>"> <xsl:value-of select="<%=input.getXPathForXMI(feature)%>" /> </xsl:attribute></xsl:if>			
+<% } %>
+	</xsl:template>
+
+    <xsl:template name="<%=c.getName()%>Template" <%if("Definitions".equals(c.getName())){%> match="//bpmn2xmi:Definitions">
+      <bpmn2:definitions>
+        <xsl:call-template name="DefinitionsAttributesTemplate"/>
+<%} else { %> > <% } %>
+<%for(EClass superClass: c.getESuperTypes()) {%>
+     <xsl:call-template name="<%=superClass.getName()%>Template"/> 
+<%}
+
+  for(EStructuralFeature feature: input.getAllElementsInXml(c)) { 
+  if(input.isReference(feature)) { %>
+     <xsl:call-template name="SplitString">
+       <xsl:with-param name="list" select="<%=input.getXPathForXMI(feature)%>" />
+       <xsl:with-param name="elementName" select="'<%=input.getPrefix(feature)%>:<%=input.getExtendedMetadata().getName(feature)%>'" />
+       <xsl:with-param name="elementNamespace" select="'<%=input.getNamespace(feature)%>'" />
+     </xsl:call-template>
+<% } else if(input.isSimpleElement(feature)) { %>
+     <<%=input.getPrefix(feature)%>:<%=input.getExtendedMetadata().getName(feature)%>><xsl:value-of select="<%=input.getXPathForXMI(feature)%>"/></<%=input.getPrefix(feature)%>:<%=feature.getName()%>>
+<% } else { %>
+     <xsl:for-each select="<%=feature.getName()%>">			
+<% if (input.hasSubFeatures(feature)) { %>
+      <xsl:choose>
+<%  for(EStructuralFeature subFeature: input.getAllSubFeatures(feature)) {  %>
+       <xsl:when test="substring-after(@xmi:type, ':') = '<%=subFeature.getEType().getName()%>' or substring-after(@xsi:type, ':') = '<%=subFeature.getEType().getName()%>'">
+         <<%=input.getPrefix(subFeature)%>:<%=input.getExtendedMetadata().getName(subFeature)%>>
+           <xsl:call-template name="<%=subFeature.getEType().getName()%>AttributesTemplate"/> 
+           <xsl:call-template name="<%=subFeature.getEType().getName()%>Template" />	       		   
+	     </<%=input.getPrefix(subFeature)%>:<%=input.getExtendedMetadata().getName(subFeature)%>>
+	   </xsl:when>
+<%  } %>
+      </xsl:choose>
+<% } else {%>
+      <<%=input.getPrefix(feature)%>:<%=input.getExtendedMetadata().getName(feature)%>>
+        <xsl:call-template name="<%=feature.getEType().getName()%>AttributesTemplate"/> 
+        <xsl:call-template name="<%=feature.getEType().getName()%>Template" />			   
+      </<%=input.getPrefix(feature)%>:<%=input.getExtendedMetadata().getName(feature)%>>
+<% }%>
+	 </xsl:for-each>						
+<% } } %>
+<%if("Definitions".equals(c.getName())){%>   </bpmn2:definitions><%}%>
+	</xsl:template>
+	
+<% }%>
+
+</xsl:stylesheet>

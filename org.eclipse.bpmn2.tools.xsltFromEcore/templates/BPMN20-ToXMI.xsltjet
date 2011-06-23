@@ -1,0 +1,87 @@
+<%@ jet package="org.eclipse.bpmn2.tools.xsltFromEcore.jet" class="XMLToXMI" imports="org.eclipse.emf.ecore.*" skeleton="generator.skeleton"%>
+<% JetInput input = (JetInput) argument; %>
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="2.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+	xmlns:xmi="http://schema.omg.org/spec/XMI"
+	xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+	xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+	xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" 
+	xmlns:bpmn2xmi="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
+	xmlns:bpmndixmi="http://www.omg.org/spec/BPMN/20100524/DI-XMI"
+	xmlns:dixmi="http://www.omg.org/spec/DD/20100524/DI-XMI"
+	xmlns:dcxmi="http://www.omg.org/spec/DD/20100524/DC-XMI"> 
+    <xsl:output method="xml" indent="yes"/>
+
+	<xsl:template name="concat">
+		<xsl:param name="nodeset" />
+		<xsl:variable name="buffer">
+		  <xsl:for-each select="$nodeset">
+		   <xsl:value-of select="concat(., ' ')"/>
+		  </xsl:for-each>
+		</xsl:variable>
+		<xsl:value-of select="normalize-space($buffer)"/>
+	</xsl:template>
+			
+	<xsl:template match="/">
+		<xmi:XMI xmi:version="2.0">
+			<xsl:for-each select="bpmn2:definitions">
+			  <bpmn2xmi:Definitions>			
+				<xsl:call-template name="DefinitionsAttributesTemplate" />
+				<xsl:call-template name="DefinitionsTemplate" />
+			  </bpmn2xmi:Definitions>				
+			</xsl:for-each>
+		</xmi:XMI>
+	</xsl:template>
+
+	<xsl:template name="EObjectAttributesTemplate">
+	  <!-- TODO: Add your copy logic for extension attributes-->
+	</xsl:template>
+
+	<xsl:template name="EObjectTemplate">
+	  <!-- TODO: Add your copy logic for extension elements-->
+	</xsl:template>
+
+<% for(EClass c: input.getClasses()) { %>
+	<xsl:template name="<%=c.getName()%>AttributesTemplate">
+<%for(EClass superClass: c.getESuperTypes()) {%>
+	  <xsl:call-template name="<%=superClass.getName()%>AttributesTemplate"/> 	
+<%}%>
+<% for(EStructuralFeature feature: input.getAllFeatureThatAreAttributesInXMI(c)) { %>
+	  <xsl:if test="<%=input.getXPathForXml(feature)%>"><xsl:attribute name="<%=feature.getName() %>"> <xsl:value-of select="<%=input.getXPathForXml(feature) %>" /> </xsl:attribute></xsl:if>			
+<% } %>
+<% for(EStructuralFeature feature: input.getAllFeatureThatAreReferences(c)) { %>
+      <xsl:if test="<%=input.getXPathForXml(feature)%>"><xsl:attribute name="<%=feature.getName() %>"><xsl:call-template name="concat"><xsl:with-param name="nodeset" select="<%=input.getXPathForXml(feature)%>"/></xsl:call-template></xsl:attribute></xsl:if>			
+<% } %>
+	</xsl:template>
+
+	<xsl:template name="<%=c.getName()%>Template">
+<%for(EClass superClass: c.getESuperTypes()) {%>
+	  <xsl:call-template name="<%=superClass.getName()%>Template"/> 
+<%}%>
+<% for(EStructuralFeature feature: input.getAllOtherFeaturesInXMI(c)) { %>
+      <xsl:for-each select="<%=input.getSubFeaturesXPath(feature)%>">
+<%if(input.hasSubFeatures(feature)){ %>
+        <xsl:choose>		
+<%for(EStructuralFeature subFeature: input.getAllSubFeatures(feature)) {%> 
+          <xsl:when test="self::<%=input.getXPathForXml(subFeature)%>">
+            <<%=feature.getName()%> xmi:type="<%=input.getPrefix(subFeature)%>xmi:<%=subFeature.getEType().getName()%>">			    
+	          <xsl:call-template name="<%=subFeature.getEType().getName()%>AttributesTemplate"/> 
+			  <xsl:call-template name="<%=subFeature.getEType().getName()%>Template" />			   
+			</<%=feature.getName()%>>
+          </xsl:when >
+<% }%>
+        </xsl:choose>
+<%} else {%>
+        <<%=feature.getName()%> xmi:type="<%=input.getPrefix(feature)%>xmi:<%=feature.getEType().getName()%>">			    
+	       <xsl:call-template name="<%=feature.getEType().getName()%>AttributesTemplate"/> 
+           <xsl:call-template name="<%=feature.getEType().getName()%>Template" />			   
+        </<%=feature.getName()%>>
+<%}%>
+      </xsl:for-each>
+<% }%>
+	</xsl:template>
+  
+<% }%>
+</xsl:stylesheet>

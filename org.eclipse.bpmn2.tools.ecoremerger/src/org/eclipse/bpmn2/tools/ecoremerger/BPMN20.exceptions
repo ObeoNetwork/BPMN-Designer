@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ex="com.sap.glx.bpmn.ecorepatcher.exceptions">
+  <ex:ClassMappingException xsdClassName="TInterface" mofClassName="Interface">
+    <attributeExceptions xsdAttributeName="operation" mofAttributeName="operations"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TDefintions" mofClassName="Defintions">
+    <attributeExceptions xsdAttributeName="import" mofAttributeName="imports"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TBaseElement" mofClassName="BaseElement">
+    <attributeExceptions xsdAttributeName="extensionElements" mofAttributeName="extensionValues"/>
+    <attributeExceptions xsdAttributeName="anyAttribute" mofAttributeName="anyAttribute"/>
+    <attributeExceptions mofAttributeName="extensionDefinitions"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TOperation" mofClassName="Operation">
+    <attributeExceptions xsdAttributeName="errorRef" mofAttributeName="errorRefs"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TGlobalTask" mofClassName="GlobalTask">
+    <attributeExceptions xsdAttributeName="resourceRole" mofAttributeName="resources"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TCallableElement" mofClassName="CallableElement">
+    <attributeExceptions xsdAttributeName="supportedInterfaceRef" mofAttributeName="supportedInterfaceRefs"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TInputOutputSpecification" mofClassName="InputOutputSpecification">
+    <attributeExceptions xsdAttributeName="inputSet" mofAttributeName="inputSets"/>
+    <attributeExceptions xsdAttributeName="outputSet" mofAttributeName="outputSets"/>
+    <attributeExceptions xsdAttributeName="dataInput" mofAttributeName="dataInputs"/>
+    <attributeExceptions xsdAttributeName="dataOutput" mofAttributeName="dataOutputs"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TInputSet " mofClassName="InputSet"/>
+  <ex:ClassMappingException xsdClassName="TActivity" mofClassName="Activity">
+    <attributeExceptions xsdAttributeName="property" mofAttributeName="properties"/>
+    <attributeExceptions xsdAttributeName="dataInputAssociation" mofAttributeName="dataInputAssociations"/>
+    <attributeExceptions xsdAttributeName="dataOutputAssociation" mofAttributeName="dataOutputAssociations"/>
+    <attributeExceptions xsdAttributeName="resourceRole" mofAttributeName="resources"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TCallChoreography" mofClassName="CallChoreography">
+    <attributeExceptions xsdAttributeName="participantAssociation" mofAttributeName="participantAssociations"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TCallConversation" mofClassName="CallConversation">
+    <attributeExceptions xsdAttributeName="participantAssociation" mofAttributeName="participantAssociations"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TCatchEvent" mofClassName="CatchEvent">
+    <attributeExceptions xsdAttributeName="eventDefinition" mofAttributeName="eventDefinitions"/>
+    <attributeExceptions xsdAttributeName="eventDefinitionRef" mofAttributeName="eventDefinitionRefs"/>
+    <attributeExceptions xsdAttributeName="dataOutput" mofAttributeName="dataOutputs"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TChoreography" mofClassName="Choreography">
+    <attributeExceptions xsdAttributeName="flowElement" mofAttributeName="flowElements"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TChoreographyActivity" mofClassName="ChoreographyActivity">
+    <attributeExceptions xsdAttributeName="participantRef" mofAttributeName="participantRefs"/>
+    <attributeExceptions xsdAttributeName="correlationKey" mofAttributeName="correlationKeys"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TCollaboration" mofClassName="Collaboration">
+    <attributeExceptions xsdAttributeName="participant" mofAttributeName="participants"/>
+    <attributeExceptions xsdAttributeName="artifact" mofAttributeName="artifacts"/>
+    <attributeExceptions xsdAttributeName="conversationNode" mofAttributeName="conversations"/>
+    <attributeExceptions xsdAttributeName="conversationAssociation" mofAttributeName="conversationAssociations"/>
+    <attributeExceptions xsdAttributeName="participantAssociation" mofAttributeName="participantAssociations"/>
+    <attributeExceptions xsdAttributeName="messageFlowAssociation" mofAttributeName="messageFlowAssociations"/>
+    <attributeExceptions xsdAttributeName="messageFlow" mofAttributeName="messageFlows"/>
+    <attributeExceptions xsdAttributeName="correlationKey" mofAttributeName="correlationKeys"/>
+    <attributeExceptions xsdAttributeName="conversationLink" mofAttributeName="conversationLinks"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TConversationNode" mofClassName="ConversationNode">
+    <attributeExceptions xsdAttributeName="participantRef" mofAttributeName="participantRefs"/>
+    <attributeExceptions xsdAttributeName="messageFlowRef" mofAttributeName="messageFlowRefs"/>
+    <attributeExceptions xsdAttributeName="correlationKey" mofAttributeName="correlationKeys"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TEvent" mofClassName="Event">
+    <attributeExceptions xsdAttributeName="property" mofAttributeName="properties"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TDefinitions" mofClassName="Definitions">
+    <attributeExceptions xsdAttributeName="import" mofAttributeName="imports"/>
+    <attributeExceptions xsdAttributeName="extension" mofAttributeName="extensions"/>
+    <attributeExceptions xsdAttributeName="rootElement" mofAttributeName="rootElements"/>
+    <attributeExceptions xsdAttributeName="bPMNDiagram" mofAttributeName="diagrams"/>
+    <attributeExceptions xsdAttributeName="relationship" mofAttributeName="relationships"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TGlobalUserTask" mofClassName="GlobalUserTask">
+    <attributeExceptions xsdAttributeName="rendering" mofAttributeName="renderings"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TLane" mofClassName="Lane">
+    <attributeExceptions xsdAttributeName="flowNodeRef" mofAttributeName="flowNodeRefs"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TLaneSet" mofClassName="LaneSet">
+    <attributeExceptions xsdAttributeName="lane" mofAttributeName="lanes"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TParticipant" mofClassName="Participant">
+    <attributeExceptions xsdAttributeName="interfaceRef" mofAttributeName="interfaceRefs"/>
+    <attributeExceptions xsdAttributeName="endPointRef" mofAttributeName="endPointRefs"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TProcess" mofClassName="Process">
+    <attributeExceptions xsdAttributeName="property" mofAttributeName="properties"/>
+    <attributeExceptions xsdAttributeName="flowElement" mofAttributeName="flowElements"/>
+    <attributeExceptions xsdAttributeName="artifact" mofAttributeName="artifacts"/>
+    <attributeExceptions xsdAttributeName="resourceRole" mofAttributeName="resources"/>
+    <attributeExceptions xsdAttributeName="laneSet" mofAttributeName="laneSets"/>
+    <attributeExceptions xsdAttributeName="correlationSubscription" mofAttributeName="correlationSubscriptions"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TRelationship" mofClassName="Relationship">
+    <attributeExceptions xsdAttributeName="source" mofAttributeName="sources"/>
+    <attributeExceptions xsdAttributeName="target" mofAttributeName="targets"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TResource" mofClassName="Resource">
+    <attributeExceptions xsdAttributeName="resourceParameter" mofAttributeName="resourceParameters"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TResourceRole" mofClassName="ResourceRole">
+    <attributeExceptions xsdAttributeName="resourceParameterBinding" mofAttributeName="resourceParameterBindings"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TSubChoreography" mofClassName="SubChoreography">
+    <attributeExceptions xsdAttributeName="flowElement" mofAttributeName="flowElements"/>
+    <attributeExceptions xsdAttributeName="artifact" mofAttributeName="artifacts"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TSubConversation" mofClassName="SubConversation">
+    <attributeExceptions xsdAttributeName="conversationNode" mofAttributeName="conversationNodes"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TSubProcess" mofClassName="SubProcess">
+    <attributeExceptions xsdAttributeName="flowElement" mofAttributeName="flowElements"/>
+    <attributeExceptions xsdAttributeName="artifact" mofAttributeName="artifacts"/>
+    <attributeExceptions xsdAttributeName="laneSet" mofAttributeName="laneSets"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TThrowEvent" mofClassName="ThrowEvent">
+    <attributeExceptions xsdAttributeName="eventDefinition" mofAttributeName="eventDefinitions"/>
+    <attributeExceptions xsdAttributeName="eventDefinitionRef" mofAttributeName="eventDefinitionRefs"/>
+    <attributeExceptions xsdAttributeName="dataInput" mofAttributeName="dataInputs"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TUserTask" mofClassName="UserTask">
+    <attributeExceptions xsdAttributeName="rendering" mofAttributeName="renderings"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TCallActivity" mofClassName="CallActivity">
+    <attributeExceptions xsdAttributeName="calledElement" mofAttributeName="calledElementRef"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="BPMNDiagram" mofClassName="BPMNDiagram">
+    <attributeExceptions xsdAttributeName="bPMNPlane" mofAttributeName="plane"/>
+    <attributeExceptions xsdAttributeName="bPMNLabelStyle" mofAttributeName="labelStyle"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="BPMNEdge" mofClassName="BPMNEdge">
+    <attributeExceptions xsdAttributeName="bPMNLabel" mofAttributeName="label"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="BPMNShape" mofClassName="BPMNShape">
+    <attributeExceptions xsdAttributeName="bPMNLabel" mofAttributeName="label"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="Plane" mofClassName="Plane">
+    <attributeExceptions xsdAttributeName="diagramElement" mofAttributeName="planeElement"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TExtensionElements" mofClassName="ExtensionAttributeValue">
+    <attributeExceptions xsdAttributeName="any" mofAttributeName="value"/>
+  </ex:ClassMappingException>
+  <ex:ClassMappingException xsdClassName="TMultiInstanceFlowCondition" mofClassName="MultiInstanceBehavior">
+    <attributeExceptions xsdAttributeName="any" mofAttributeName="value"/>
+  </ex:ClassMappingException>
+</xmi:XMI>

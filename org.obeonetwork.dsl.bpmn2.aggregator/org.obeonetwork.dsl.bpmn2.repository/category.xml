@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.obeonetwork.dsl.bpmn2.feature_0.7.0.qualifier.jar" id="org.obeonetwork.dsl.bpmn2.feature" version="0.7.0.qualifier"/>
+   <category-def name="BPMN2-Editor" label="BPMN2 Editor"/>
+</site>

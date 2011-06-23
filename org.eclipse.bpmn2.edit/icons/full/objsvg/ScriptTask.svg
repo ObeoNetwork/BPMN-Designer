@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="ScriptTask.svg"
+   inkscape:export-filename="C:\apps\eclipse-workspace-gmf\trunk\org.eclipse.stp.bpmn.edit\icons\full\obj16\activities\task.png"
+   inkscape:export-xdpi="60"
+   inkscape:export-ydpi="60">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="576"
+     inkscape:window-width="853"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="15.625"
+     inkscape:cx="14.528"
+     inkscape:cy="9.44"
+     inkscape:window-x="44"
+     inkscape:window-y="66"
+     inkscape:current-layer="svg2"
+     showgrid="false"
+     inkscape:window-maximized="0" />
+  <defs
+     id="defs13">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 12 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="24 : 12 : 1"
+       inkscape:persp3d-origin="12 : 8 : 1"
+       id="perspective9" />
+    <inkscape:perspective
+       id="perspective11"
+       inkscape:persp3d-origin="12 : 8 : 1"
+       inkscape:vp_z="24 : 12 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 12 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2818"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2822"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2826"
+       effect="spiro" />
+  </defs>
+  <rect
+     width="15.544889"
+     height="11.544889"
+     rx="2.1314175"
+     ry="2.2952952"
+     x="0.22755547"
+     y="12.227556"
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.45511094;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none"
+     id="rect5423" />
+  <g
+     id="g2900"
+     transform="matrix(0.4197692,0,0,0.41615019,2.9614641,12.990625)">
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path2832"
+       d="M 4.4268998,0.77197123 C -6.6368571,13.037731 11.78275,10.560093 1.3929061,23.366445 l 19.1691919,0.02131 C 29.469827,11.681267 12.670042,12.519635 22.657326,0.68797692 L 4.4268998,0.77197123 z"
+       style="fill:none;stroke:#000000;stroke-width:1.31472933px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       id="path2834"
+       d="m 1.9223089,4.5102041 16.2914371,0"
+       style="fill:none;stroke:#000000;stroke-width:1.71888518px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       id="path2836"
+       d="m 1.1271726,8.6598641 16.8613004,0"
+       style="fill:none;stroke:#000000;stroke-width:2.03853369px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       id="path2840"
+       d="m 5.9928167,15.428571 c 16.4980403,0 16.5857943,0 16.5857943,0"
+       style="fill:none;stroke:#000000;stroke-width:1.89945614px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       id="path2842"
+       d="m 5.9712363,17.333332 c 13.2956207,0 13.2956207,0 13.2956207,0"
+       style="fill:none;stroke:#000000;stroke-width:3.39945745px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+</svg>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:oryx="http://www.b3mn.org/oryx"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="40"
+   height="40"
+   version="1.0"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="escalation.boundary.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="D:\Workspaces\runtime-VerdeTools\org.obeonetwork.bpmn2.design\view\intermediateevent\escalation.boundary.png"
+   inkscape:export-xdpi="46.451614"
+   inkscape:export-ydpi="46.451614">
+  <metadata
+     id="metadata21">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="480"
+     inkscape:window-width="640"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false" />
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 20 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="40 : 20 : 1"
+       inkscape:persp3d-origin="20 : 13.333333 : 1"
+       id="perspective23" />
+  </defs>
+  <oryx:magnets>
+    <oryx:magnet
+       oryx:cx="16"
+       oryx:cy="16"
+       oryx:default="yes" />
+  </oryx:magnets>
+  <oryx:docker
+     oryx:cx="16"
+     oryx:cy="16" />
+  <g
+     pointer-events="fill"
+     id="g6">
+    <defs
+       id="defs8">
+      <radialGradient
+         id="background"
+         cx="10%"
+         cy="10%"
+         r="100%"
+         fx="10%"
+         fy="10%">
+        <stop
+           offset="0%"
+           stop-color="#ffffff"
+           stop-opacity="1"
+           id="stop11" />
+        <stop
+           id="fill_el"
+           offset="100%"
+           stop-color="#ffffff"
+           stop-opacity="1" />
+      </radialGradient>
+    </defs>
+    <circle
+       id="bg_frame"
+       cx="16"
+       cy="16"
+       r="15"
+       stroke="black"
+       fill="url(#background) white"
+       stroke-width="1"
+       style="stroke-dasharray: 5.5, 3" />
+    <circle
+       id="frame2_non_interrupting"
+       cx="16"
+       cy="16"
+       r="12"
+       stroke="black"
+       fill="none"
+       stroke-width="1"
+       style="stroke-dasharray: 4.5, 3" />
+    <circle
+       id="frame"
+       cx="16"
+       cy="16"
+       r="15"
+       stroke="black"
+       fill="none"
+       stroke-width="1" />
+    <circle
+       id="frame2"
+       cx="16"
+       cy="16"
+       r="12"
+       stroke="black"
+       fill="none"
+       stroke-width="1" />
+    <path
+       d="M 16,8.75 L22,23.75 L16,17 L10,23.75z "
+       id="path9"
+       style="fill:none;stroke:#000000;stroke-width:1" />
+    <text
+       font-size="11"
+       id="text_name"
+       x="16"
+       y="33"
+       oryx:align="top center"
+       stroke="black" />
+  </g>
+</svg>

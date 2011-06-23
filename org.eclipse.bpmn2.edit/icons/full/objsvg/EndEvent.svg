@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="EndEvent.svg"
+   inkscape:export-filename="/Users/antoine/w/git/bpmn2/org.eclipse.mdt.bpmn2.edit/icons/full/obj16/EndEvent.gif.png"
+   inkscape:export-xdpi="60"
+   inkscape:export-ydpi="60">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="576"
+     inkscape:window-width="853"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="15.625"
+     inkscape:cx="12"
+     inkscape:cy="13.81"
+     inkscape:window-x="154"
+     inkscape:window-y="231"
+     inkscape:current-layer="svg2"
+     showgrid="false"
+     inkscape:window-maximized="0" />
+  <defs
+     id="defs13">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 12 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="24 : 12 : 1"
+       inkscape:persp3d-origin="12 : 8 : 1"
+       id="perspective2913" />
+  </defs>
+  <g
+     transform="matrix(0.577525,0,0,0.577544,-16.87626,-28.42808)"
+     style="opacity:1;fill:white;fill-opacity:1;stroke:#3f3f3f;stroke-opacity:1"
+     id="g2146">
+    <g
+       id="g2137"
+       style="fill:white;fill-opacity:1;stroke:#3f3f3f;stroke-opacity:1">
+      <path
+         d="M 67.50003,70 C 67.50003,79.664978 59.665038,87.5 50.000015,87.5 C 40.335022,87.5 32.5,79.664978 32.5,70 C 32.5,60.335007 40.335022,52.5 50.000015,52.5 C 59.665039,52.5 67.50003,60.335007 67.50003,70 z "
+         style="fill:white;stroke:#3f3f3f;stroke-width:4;stroke-miterlimit:3.7320509;fill-opacity:1;stroke-opacity:1"
+         id="path2139" />
+    </g>
+  </g>
+</svg>

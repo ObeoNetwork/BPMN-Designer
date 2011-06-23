@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="EventBasedGateway.svg"
+   inkscape:export-filename="/Users/antoine/w/git/bpmn2/org.eclipse.mdt.bpmn2.edit/icons/full/obj16/EventBasedGateway.gif.png"
+   inkscape:export-xdpi="60"
+   inkscape:export-ydpi="60"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="663"
+     inkscape:window-width="853"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="15.625"
+     inkscape:cx="14.096591"
+     inkscape:cy="12"
+     inkscape:window-x="203"
+     inkscape:window-y="56"
+     inkscape:current-layer="svg2"
+     showgrid="false"
+     inkscape:window-maximized="0" />
+  <defs
+     id="defs13">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 12 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="24 : 12 : 1"
+       inkscape:persp3d-origin="12 : 8 : 1"
+       id="perspective14" />
+  </defs>
+  <rect
+     width="15.956599"
+     height="15.648066"
+     x="8.9877129"
+     y="-7.4384818"
+     transform="matrix(0.722989,0.69086,-0.690536,0.723298,0,0)"
+     style="opacity:1;fill:white;fill-opacity:1;stroke:black;stroke-width:0.59999994;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect4366" />
+  <g
+     id="g1992"
+     transform="matrix(0.317073,0,0,0.317073,-3.72565,-10.57911)">
+    <ellipse
+       sodipodi:ry="20"
+       sodipodi:rx="20"
+       sodipodi:cy="70"
+       sodipodi:cx="50"
+       id="ellipse1994"
+       style="fill:#ffffff;stroke:#000000"
+       ry="20"
+       rx="20"
+       cy="70"
+       cx="50"
+       d="M 70,70 C 70,81.045695 61.045695,90 50,90 38.954305,90 30,81.045695 30,70 30,58.954305 38.954305,50 50,50 c 11.045695,0 20,8.954305 20,20 z" />
+    <ellipse
+       sodipodi:ry="16"
+       sodipodi:rx="16"
+       sodipodi:cy="70"
+       sodipodi:cx="50"
+       id="ellipse1996"
+       style="fill:none;stroke:#000000"
+       ry="16"
+       rx="16"
+       cy="70"
+       cx="50"
+       d="m 66,70 c 0,8.836556 -7.163444,16 -16,16 -8.836556,0 -16,-7.163444 -16,-16 0,-8.836556 7.163444,-16 16,-16 8.836556,0 16,7.163444 16,16 z" />
+  </g>
+  <path
+     sodipodi:type="star"
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.52499998000000003;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path2391"
+     sodipodi:sides="5"
+     sodipodi:cx="-8.5120001"
+     sodipodi:cy="2.4319999"
+     sodipodi:r1="4.3904185"
+     sodipodi:r2="3.5519233"
+     sodipodi:arg1="0.93021066"
+     sodipodi:arg2="1.5585292"
+     inkscape:flatsided="true"
+     inkscape:rounded="0"
+     inkscape:randomized="0"
+     d="M -5.8880002,5.9519998 L -11.048858,6.0153119 L -12.703865,1.1266086 L -8.5658566,-1.9580883 L -4.3534207,1.0241675 L -5.8880002,5.9519998 z"
+     transform="matrix(0.9283735,1.3873048e-2,-1.4173901e-2,0.908668,19.933008,9.51769)" />
+</svg>
