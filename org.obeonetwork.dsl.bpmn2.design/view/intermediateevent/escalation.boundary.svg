@@ -16,9 +16,9 @@
    inkscape:version="0.46"
    sodipodi:docname="escalation.boundary.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="D:\Workspaces\runtime-VerdeTools\org.obeonetwork.bpmn2.design\view\intermediateevent\escalation.boundary.png"
-   inkscape:export-xdpi="46.451614"
-   inkscape:export-ydpi="46.451614">
+   inkscape:export-filename="C:\Users\steph\Desktop\escalation.png"
+   inkscape:export-xdpi="36"
+   inkscape:export-ydpi="36">
   <metadata
      id="metadata21">
     <rdf:RDF>
@@ -64,16 +64,18 @@
      oryx:cy="16" />
   <g
      pointer-events="fill"
-     id="g6">
+     id="g6"
+     transform="translate(3.8961039,3.7229437)">
     <defs
        id="defs8">
       <radialGradient
          id="background"
-         cx="10%"
-         cy="10%"
-         r="100%"
-         fx="10%"
-         fy="10%">
+         cx="3.5999999"
+         cy="3.5999999"
+         r="31"
+         fx="3.5999999"
+         fy="3.5999999"
+         gradientUnits="userSpaceOnUse">
         <stop
            offset="0%"
            stop-color="#ffffff"
@@ -91,37 +93,43 @@
        cx="16"
        cy="16"
        r="15"
-       stroke="black"
-       fill="url(#background) white"
-       stroke-width="1"
-       style="stroke-dasharray: 5.5, 3" />
+       style="fill:url(#background);stroke:#000000;stroke-width:1;stroke-dasharray:5.5, 3"
+       sodipodi:cx="16"
+       sodipodi:cy="16"
+       sodipodi:rx="15"
+       sodipodi:ry="15" />
     <circle
        id="frame2_non_interrupting"
        cx="16"
        cy="16"
        r="12"
-       stroke="black"
-       fill="none"
-       stroke-width="1"
-       style="stroke-dasharray: 4.5, 3" />
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:4.5, 3"
+       sodipodi:cx="16"
+       sodipodi:cy="16"
+       sodipodi:rx="12"
+       sodipodi:ry="12" />
     <circle
        id="frame"
        cx="16"
        cy="16"
        r="15"
-       stroke="black"
-       fill="none"
-       stroke-width="1" />
+       sodipodi:cx="16"
+       sodipodi:cy="16"
+       sodipodi:rx="15"
+       sodipodi:ry="15"
+       style="fill:none;stroke:#000000;stroke-width:1" />
     <circle
        id="frame2"
        cx="16"
        cy="16"
        r="12"
-       stroke="black"
-       fill="none"
-       stroke-width="1" />
+       sodipodi:cx="16"
+       sodipodi:cy="16"
+       sodipodi:rx="12"
+       sodipodi:ry="12"
+       style="fill:none;stroke:#000000;stroke-width:1" />
     <path
-       d="M 16,8.75 L22,23.75 L16,17 L10,23.75z "
+       d="M 16,8.75 L 22,23.75 L 16,17 L 10,23.75 L 16,8.75 z"
        id="path9"
        style="fill:none;stroke:#000000;stroke-width:1" />
     <text
@@ -130,6 +138,6 @@
        x="16"
        y="33"
        oryx:align="top center"
-       stroke="black" />
+       style="font-size:11px;stroke:#000000" />
   </g>
 </svg>
