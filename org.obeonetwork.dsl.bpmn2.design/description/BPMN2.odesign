@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="BPMN20">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="BPMN20">
   <ownedViewpoints name="Process" label="BPMN 2.0 - Process">
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveToLane']" name="ProcessDiagram" domainClass="bpmn2.Process">
       <defaultLayer name="Default">
@@ -64,7 +64,7 @@
             <subNodeMappings name="StartEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="StartEvent">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/StartEvent.png"/>
               <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
-                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.bpmn2.design/icons/startevent/message2.png"/>
+                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/message2.png"/>
               </conditionnalStyles>
             </subNodeMappings>
             <subNodeMappings name="ParallelGateway" label="Parallel Gateway" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="ParallelGateway">
@@ -101,34 +101,34 @@
               <borderedNodeMappings name="TaskBorder" semanticCandidatesExpression="&lt;%boundaryEventRefs%>" domainClass="BoundaryEvent">
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj16/BoundaryEvent.png"/>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;CancelEventDefinition&quot;)!=null%>">
-                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.bpmn2.design/icons/obj16/cancel.boundary.png"/>
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/cancel.boundary.png"/>
                 </conditionnalStyles>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;CompensateEventDefinition&quot;)!=null%>">
-                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.bpmn2.design/icons/obj16/compensate.boundary.png"/>
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/compensate.boundary.png"/>
                 </conditionnalStyles>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;ConditionalEventDefinition&quot;)!=null%>">
-                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.bpmn2.design/icons/obj16/conditional.boundary.png"/>
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/conditional.boundary.png"/>
                 </conditionnalStyles>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;ErrorEventDefinition&quot;)!=null%>">
-                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.bpmn2.design/icons/obj16/error.boundary.png"/>
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/error.boundary.png"/>
                 </conditionnalStyles>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;EscalationEventDefinition&quot;)!=null%>">
-                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.bpmn2.design/icons/obj16/escalation.boundary.png"/>
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/escalation.boundary.png"/>
                 </conditionnalStyles>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;LinkEventDefinition&quot;)!=null%>">
-                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.bpmn2.design/icons/obj16/link.boundary.png"/>
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/link.boundary.png"/>
                 </conditionnalStyles>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
-                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.bpmn2.design/icons/obj16/message.boundary.png"/>
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/message.boundary.png"/>
                 </conditionnalStyles>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;SignalEventDefinition&quot;)!=null%>">
-                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.bpmn2.design/icons/obj16/signal.boundary.png"/>
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/signal.boundary.png"/>
                 </conditionnalStyles>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;TerminateEventDefinition&quot;)!=null%>">
-                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.bpmn2.design/icons/obj16/terminate.boundary.png"/>
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/terminate.boundary.png"/>
                 </conditionnalStyles>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;TimerEventDefinition&quot;)!=null%>">
-                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.bpmn2.design/icons/obj16/timer.boundary.png"/>
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/timer.boundary.png"/>
                 </conditionnalStyles>
               </borderedNodeMappings>
               <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
@@ -141,10 +141,10 @@
               <borderedNodeMappings name="TaskBorder" semanticCandidatesExpression="&lt;%boundaryEventRefs%>" domainClass="BoundaryEvent">
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj16/BoundaryEvent.png"/>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;EscalationEventDefinition&quot;)!=null%>">
-                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.bpmn2.design/icons/obj16/escalation.boundary.png"/>
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/escalation.boundary.png"/>
                 </conditionnalStyles>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
-                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.bpmn2.design/icons/catching/message.png"/>
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/catching/message.png"/>
                 </conditionnalStyles>
               </borderedNodeMappings>
               <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
@@ -899,7 +899,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="LaneSet" label="Lane Set" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/LaneSet.png">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="LaneSet" label="Lane Set" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/swimlane/pool.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -908,7 +908,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Lane" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/Lane.png">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Lane" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/swimlane/lane.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -950,6 +950,22 @@
           <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="Task" position="NORTH_WEST" decoratorPath="/org.eclipse.bpmn2.edit/icons/full/obj32/Task.png" preconditionExpression="&lt;%self.filter(&quot;Task&quot;)!=null &amp;&amp; self.filter(&quot;UserTask&quot;)==null &amp;&amp; self.filter(&quot;ServiceTask&quot;)==null &amp;&amp; self.filter(&quot;SendTask&quot;)==null &amp;&amp; self.filter(&quot;ScriptTask&quot;)==null &amp;&amp; self.filter(&quot;ReceiveTask&quot;)==null &amp;&amp; self.filter(&quot;ManualTask&quot;)==null &amp;&amp; self.filter(&quot;BusinessRuleTask&quot;)==null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
         </decorationDescriptionsSet>
       </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Process Definitions" initialisation="true" domainClass="Definitions">
+      <ownedRepresentationCreationDescriptions xsi:type="tool:DiagramCreationDescription" name="Process Definition" titleExpression="&lt;%name%>" diagramDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']">
+        <containerViewVariable name="containerView"/>
+        <representationNameVariable name="diagramName"/>
+      </ownedRepresentationCreationDescriptions>
+      <lineMappings name="Process" detailDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='Process%20Definitions']/@ownedRepresentationCreationDescriptions[name='Process%20Definition']" domainClass="bpmn2.Process" semanticCandidatesExpression="&lt;%rootElements.filter(&quot;Process&quot;)%>"/>
+      <createLine name="Create Process" forceRefresh="true" mapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='Process%20Definitions']/@lineMappings[name='Process']">
+        <variables name="root" documentation="The semantic element of the table."/>
+        <variables name="element" documentation="The semantic currently edited element."/>
+        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+          <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Process" referenceName="rootElements"/>
+        </firstModelOperation>
+      </createLine>
+      <columnMappings name="Name" headerLabelExpression="Name" featureName="name" labelExpression="&lt;%name%>"/>
     </ownedRepresentations>
   </ownedViewpoints>
   <userColorsPalettes name="Colors">
