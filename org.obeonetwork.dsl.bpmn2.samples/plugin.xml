@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!--
+ <copyright>
+  Copyright (c) 2007-2008-2009-2010 Obeo
+  
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+ 
+  Contributors:
+     Obeo - initial API and implementation
+ </copyright>
+-->
+<plugin>
+   <extension-point id="org.obeonetwork.dsl.bpmn2.samples.Bpmn2Sample" name="org.obeonetwork.dsl.bpmn2.samples.Bpmn2Sample" schema="schema/org.obeonetwork.dsl.bpmn2.samples.Bpmn2Sample.exsd"/>
+   <extension-point id="org.obeonetwork.dsl.bpmn2.samples.Bpmn2Sample.postInit" name="org.obeonetwork.dsl.bpmn2.samples.Bpmn2Sample.postInit" schema="schema/org.obeonetwork.dsl.bpmn2.samples.Bpmn2Sample.postInit.exsd"/>
+
+<extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="BPMN2"
+            parentCategory="org.eclipse.ui.Examples"
+            id="org.obeonetwork.dsl.bpmn2.samples.Bpmn2Samples.plugin">
+      </category>
+      
+      <wizard
+            name="BPMN2 Samples"
+            icon="icons/bpmn2_logo.gif"
+            category="org.eclipse.ui.Examples/org.obeonetwork.dsl.bpmn2.samples.Bpmn2Samples.plugin"
+            class="org.obeonetwork.dsl.bpmn2.samples.wizards.ProjectUnzipperNewWizard"
+            project="true"
+            finalPerspective="org.obeonetwork.dsl.bpmn2.samples.common.perspective"
+            id="org.obeonetwork.dsl.bpmn2.samples.wizards.bpmn2Samples">
+         <description>
+            Create a project with a BPMN2 sample.
+         </description>
+      </wizard>
+</extension>
+   
+</plugin>

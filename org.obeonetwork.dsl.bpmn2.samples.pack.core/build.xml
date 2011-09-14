@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ <copyright>
+  Copyright (c) 2007-2008-2009-2010 Obeo
+  
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+ 
+  Contributors:
+     Obeo - initial API and implementation
+ </copyright>
+-->
+
+<project name="Test" basedir="." default="buildZips">
+
+	<!-- Project properties -->
+	<property name="dest.dir" value="examples" />
+	<property name="src.base.dir" value=".." />
+
+	<property name="test.dir" value="${src.base.dir}/org.obeonetwork.dsl.bpmn2.samples.src.test" />
+	<property name="travelagency.dir" value="${src.base.dir}/org.obeonetwork.dsl.bpmn2.samples.src.travelagency" />
+
+	<!-- Clean -->
+	<target name="clean">
+		<delete>
+			<fileset dir="${dest.dir}" includes="**/*.zip" />
+		</delete>
+	</target>
+
+	<!-- Build zip files -->
+	<target name="buildZips" depends="clean">
+		<zip
+		destfile="${dest.dir}/test.zip"
+		basedir="${test.dir}/" 
+		excludes=".svn/**, target/**"/>
+		<zip
+		destfile="${dest.dir}/travelagency.zip"
+		basedir="${travelagency.dir}/" 
+		excludes=".svn/**, target/**"/>
+	</target>
+
+</project>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="_u_K84N6xEeCbzp_EHZybUg">
+  <bpmn2:process id="_48wAUN6xEeCbzp_EHZybUg" name="Travel Booking">
+    <bpmn2:laneSet id="_IA8bcN62EeCbzp_EHZybUg" name="Customer">
+      <bpmn2:lane id="_IA8bcd62EeCbzp_EHZybUg" name="Travel booking">
+        <bpmn2:flowNodeRef>_IA8bct62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA8bc962EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA8bdN62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_3OfiMN7GEeCZXrARZ9_WHg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_T0BoIN7bEeCaEPqSoky6bw</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+    </bpmn2:laneSet>
+    <bpmn2:laneSet id="_IA8beN62EeCbzp_EHZybUg" name="Travel Agency">
+      <bpmn2:lane id="_IA9CgN62EeCbzp_EHZybUg" name="Agency">
+        <bpmn2:flowNodeRef>_IA8bd962EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9Cgd62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9Cgt62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9Cg962EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9ChN62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9Chd62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9Cht62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9Ch962EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9pkN62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9pkd62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9pkt62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9pk962EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9plN62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9pld62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9plt62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_IA9pl962EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_239r0N62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>_239r0d62EeCbzp_EHZybUg</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="_IA-Qot62EeCbzp_EHZybUg" name="Sales department"/>
+      <bpmn2:lane id="_IA-Qo962EeCbzp_EHZybUg" name="Accounting Department"/>
+    </bpmn2:laneSet>
+    <bpmn2:startEvent id="_IA8bct62EeCbzp_EHZybUg">
+      <bpmn2:outgoing>_IA-QpN62EeCbzp_EHZybUg</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:task id="_IA8bc962EeCbzp_EHZybUg" name="Request a trip">
+      <bpmn2:incoming>_IA-QpN62EeCbzp_EHZybUg</bpmn2:incoming>
+    </bpmn2:task>
+    <bpmn2:boundaryEvent id="_IA8bdt62EeCbzp_EHZybUg" attachedToRef="_IA8bc962EeCbzp_EHZybUg">
+      <bpmn2:messageEventDefinition id="_IA-Qpd62EeCbzp_EHZybUg"/>
+    </bpmn2:boundaryEvent>
+    <bpmn2:startEvent id="_IA8bd962EeCbzp_EHZybUg" name="">
+      <bpmn2:outgoing>_IA-Qpt62EeCbzp_EHZybUg</bpmn2:outgoing>
+      <bpmn2:messageEventDefinition id="_IA-3sN62EeCbzp_EHZybUg"/>
+    </bpmn2:startEvent>
+    <bpmn2:parallelGateway id="_IA9Cgd62EeCbzp_EHZybUg">
+      <bpmn2:incoming>_IA-Qpt62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_IA-3sd62EeCbzp_EHZybUg</bpmn2:outgoing>
+      <bpmn2:outgoing>_IA-3st62EeCbzp_EHZybUg</bpmn2:outgoing>
+    </bpmn2:parallelGateway>
+    <bpmn2:manualTask id="_IA9Cgt62EeCbzp_EHZybUg" name="Search flights">
+      <bpmn2:incoming>_IA-3sd62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_IA-3s962EeCbzp_EHZybUg</bpmn2:outgoing>
+    </bpmn2:manualTask>
+    <bpmn2:manualTask id="_IA9Cg962EeCbzp_EHZybUg" name="Search hotel rooms">
+      <bpmn2:incoming>_IA-3st62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_IA-3tN62EeCbzp_EHZybUg</bpmn2:outgoing>
+    </bpmn2:manualTask>
+    <bpmn2:manualTask id="_IA9ChN62EeCbzp_EHZybUg" name="Evaluate flights within customer criteria">
+      <bpmn2:incoming>_IA-3s962EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_IA-3td62EeCbzp_EHZybUg</bpmn2:outgoing>
+    </bpmn2:manualTask>
+    <bpmn2:manualTask id="_IA9Chd62EeCbzp_EHZybUg" name="Evaluate hotels within customer criteria">
+      <bpmn2:incoming>_IA-3tN62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_IA_ewN62EeCbzp_EHZybUg</bpmn2:outgoing>
+    </bpmn2:manualTask>
+    <bpmn2:parallelGateway id="_IA9Cht62EeCbzp_EHZybUg">
+      <bpmn2:incoming>_IA-3td62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:incoming>_IA_ewN62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_IA_ewd62EeCbzp_EHZybUg</bpmn2:outgoing>
+    </bpmn2:parallelGateway>
+    <bpmn2:sequenceFlow id="_IA-Qpt62EeCbzp_EHZybUg" sourceRef="_IA8bd962EeCbzp_EHZybUg" targetRef="_IA9Cgd62EeCbzp_EHZybUg"/>
+    <bpmn2:sequenceFlow id="_IA-3sd62EeCbzp_EHZybUg" sourceRef="_IA9Cgd62EeCbzp_EHZybUg" targetRef="_IA9Cgt62EeCbzp_EHZybUg"/>
+    <bpmn2:sequenceFlow id="_IA-3st62EeCbzp_EHZybUg" sourceRef="_IA9Cgd62EeCbzp_EHZybUg" targetRef="_IA9Cg962EeCbzp_EHZybUg"/>
+    <bpmn2:sequenceFlow id="_IA-3s962EeCbzp_EHZybUg" sourceRef="_IA9Cgt62EeCbzp_EHZybUg" targetRef="_IA9ChN62EeCbzp_EHZybUg"/>
+    <bpmn2:sequenceFlow id="_IA-3tN62EeCbzp_EHZybUg" sourceRef="_IA9Cg962EeCbzp_EHZybUg" targetRef="_IA9Chd62EeCbzp_EHZybUg"/>
+    <bpmn2:sequenceFlow id="_IA-3td62EeCbzp_EHZybUg" sourceRef="_IA9ChN62EeCbzp_EHZybUg" targetRef="_IA9Cht62EeCbzp_EHZybUg"/>
+    <bpmn2:sequenceFlow id="_IA_ewN62EeCbzp_EHZybUg" sourceRef="_IA9Chd62EeCbzp_EHZybUg" targetRef="_IA9Cht62EeCbzp_EHZybUg"/>
+    <bpmn2:sequenceFlow id="_IA-QpN62EeCbzp_EHZybUg" sourceRef="_IA8bct62EeCbzp_EHZybUg" targetRef="_IA8bc962EeCbzp_EHZybUg"/>
+    <bpmn2:manualTask id="_IA9Ch962EeCbzp_EHZybUg" name="Package flights and hotels for customer review">
+      <bpmn2:incoming>_IA_ewd62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_IA_ewt62EeCbzp_EHZybUg</bpmn2:outgoing>
+    </bpmn2:manualTask>
+    <bpmn2:sequenceFlow id="_IA_ewd62EeCbzp_EHZybUg" sourceRef="_IA9Cht62EeCbzp_EHZybUg" targetRef="_IA9Ch962EeCbzp_EHZybUg"/>
+    <bpmn2:manualTask id="_IA9pkN62EeCbzp_EHZybUg" name="Present flights and hotels to customer">
+      <bpmn2:incoming>_IA_ewt62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_IA_ew962EeCbzp_EHZybUg</bpmn2:outgoing>
+    </bpmn2:manualTask>
+    <bpmn2:boundaryEvent id="_IA-Qod62EeCbzp_EHZybUg" attachedToRef="_IA9pkN62EeCbzp_EHZybUg">
+      <bpmn2:messageEventDefinition id="_IBAF0N62EeCbzp_EHZybUg"/>
+    </bpmn2:boundaryEvent>
+    <bpmn2:sequenceFlow id="_IA_ewt62EeCbzp_EHZybUg" sourceRef="_IA9Ch962EeCbzp_EHZybUg" targetRef="_IA9pkN62EeCbzp_EHZybUg"/>
+    <bpmn2:task id="_IA8bdN62EeCbzp_EHZybUg" name="Choose alternative"/>
+    <bpmn2:boundaryEvent id="_IA_exN62EeCbzp_EHZybUg" attachedToRef="_IA9pkN62EeCbzp_EHZybUg">
+      <bpmn2:messageEventDefinition id="_IBAs4N62EeCbzp_EHZybUg"/>
+    </bpmn2:boundaryEvent>
+    <bpmn2:boundaryEvent id="_IBAF0d62EeCbzp_EHZybUg" name="" attachedToRef="_IA8bdN62EeCbzp_EHZybUg">
+      <bpmn2:messageEventDefinition id="_IBAs4d62EeCbzp_EHZybUg"/>
+    </bpmn2:boundaryEvent>
+    <bpmn2:boundaryEvent id="_IBAF0t62EeCbzp_EHZybUg" attachedToRef="_IA8bdN62EeCbzp_EHZybUg">
+      <bpmn2:messageEventDefinition id="_IBAs4t62EeCbzp_EHZybUg"/>
+    </bpmn2:boundaryEvent>
+    <bpmn2:eventBasedGateway id="_IA9pkd62EeCbzp_EHZybUg">
+      <bpmn2:incoming>_IA_ew962EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_IBAs4962EeCbzp_EHZybUg</bpmn2:outgoing>
+      <bpmn2:outgoing>_IBBT8N62EeCbzp_EHZybUg</bpmn2:outgoing>
+      <bpmn2:outgoing>_IBBT8d62EeCbzp_EHZybUg</bpmn2:outgoing>
+    </bpmn2:eventBasedGateway>
+    <bpmn2:intermediateCatchEvent id="_IA9pkt62EeCbzp_EHZybUg">
+      <bpmn2:incoming>_IBAs4962EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_IBBT8t62EeCbzp_EHZybUg</bpmn2:outgoing>
+      <bpmn2:messageEventDefinition id="_IBBT8962EeCbzp_EHZybUg"/>
+    </bpmn2:intermediateCatchEvent>
+    <bpmn2:intermediateCatchEvent id="_IA9pk962EeCbzp_EHZybUg">
+      <bpmn2:incoming>_IBBT8N62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_IBB7AN62EeCbzp_EHZybUg</bpmn2:outgoing>
+      <bpmn2:timerEventDefinition id="_IBB7Ad62EeCbzp_EHZybUg"/>
+    </bpmn2:intermediateCatchEvent>
+    <bpmn2:intermediateCatchEvent id="_IA9plN62EeCbzp_EHZybUg">
+      <bpmn2:incoming>_IBBT8d62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_IBCiEN62EeCbzp_EHZybUg</bpmn2:outgoing>
+      <bpmn2:messageEventDefinition id="_IBCiEd62EeCbzp_EHZybUg"/>
+    </bpmn2:intermediateCatchEvent>
+    <bpmn2:sequenceFlow id="_IA_ew962EeCbzp_EHZybUg" sourceRef="_IA9pkN62EeCbzp_EHZybUg" targetRef="_IA9pkd62EeCbzp_EHZybUg"/>
+    <bpmn2:sequenceFlow id="_IBAs4962EeCbzp_EHZybUg" sourceRef="_IA9pkd62EeCbzp_EHZybUg" targetRef="_IA9pkt62EeCbzp_EHZybUg"/>
+    <bpmn2:sequenceFlow id="_IBBT8N62EeCbzp_EHZybUg" sourceRef="_IA9pkd62EeCbzp_EHZybUg" targetRef="_IA9pk962EeCbzp_EHZybUg"/>
+    <bpmn2:sequenceFlow id="_IBBT8d62EeCbzp_EHZybUg" sourceRef="_IA9pkd62EeCbzp_EHZybUg" targetRef="_IA9plN62EeCbzp_EHZybUg"/>
+    <bpmn2:serviceTask id="_IA9pld62EeCbzp_EHZybUg" name="Notify customer to start again">
+      <bpmn2:incoming>_IBB7AN62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:incoming>_239r0t62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_IBCiEt62EeCbzp_EHZybUg</bpmn2:outgoing>
+    </bpmn2:serviceTask>
+    <bpmn2:boundaryEvent id="_IBCiE962EeCbzp_EHZybUg" attachedToRef="_IA9pld62EeCbzp_EHZybUg">
+      <bpmn2:messageEventDefinition id="_23-S4N62EeCbzp_EHZybUg"/>
+    </bpmn2:boundaryEvent>
+    <bpmn2:sequenceFlow id="_IBB7AN62EeCbzp_EHZybUg" sourceRef="_IA9pk962EeCbzp_EHZybUg" targetRef="_IA9pld62EeCbzp_EHZybUg"/>
+    <bpmn2:scriptTask id="_IA9plt62EeCbzp_EHZybUg" name="Updat recorde customer">
+      <bpmn2:incoming>_IBCiEN62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:incoming>_IBCiEt62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_23-S4d62EeCbzp_EHZybUg</bpmn2:outgoing>
+    </bpmn2:scriptTask>
+    <bpmn2:sequenceFlow id="_IBCiEN62EeCbzp_EHZybUg" sourceRef="_IA9plN62EeCbzp_EHZybUg" targetRef="_IA9plt62EeCbzp_EHZybUg"/>
+    <bpmn2:sequenceFlow id="_IBCiEt62EeCbzp_EHZybUg" sourceRef="_IA9pld62EeCbzp_EHZybUg" targetRef="_IA9plt62EeCbzp_EHZybUg"/>
+    <bpmn2:manualTask id="_IA9pl962EeCbzp_EHZybUg" name="Request credit card information">
+      <bpmn2:incoming>_IBBT8t62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:outgoing>_23-58N62EeCbzp_EHZybUg</bpmn2:outgoing>
+    </bpmn2:manualTask>
+    <bpmn2:sequenceFlow id="_IBBT8t62EeCbzp_EHZybUg" sourceRef="_IA9pkt62EeCbzp_EHZybUg" targetRef="_IA9pl962EeCbzp_EHZybUg"/>
+    <bpmn2:boundaryEvent id="_23-58d62EeCbzp_EHZybUg" attachedToRef="_IA9pl962EeCbzp_EHZybUg">
+      <bpmn2:outgoing>_239r0t62EeCbzp_EHZybUg</bpmn2:outgoing>
+      <bpmn2:timerEventDefinition id="_23_hAd62EeCbzp_EHZybUg"/>
+    </bpmn2:boundaryEvent>
+    <bpmn2:sequenceFlow id="_239r0t62EeCbzp_EHZybUg" sourceRef="_23-58d62EeCbzp_EHZybUg" targetRef="_IA9pld62EeCbzp_EHZybUg"/>
+    <bpmn2:boundaryEvent id="_23-58t62EeCbzp_EHZybUg" attachedToRef="_IA9pl962EeCbzp_EHZybUg">
+      <bpmn2:messageEventDefinition id="_23_hAt62EeCbzp_EHZybUg"/>
+    </bpmn2:boundaryEvent>
+    <bpmn2:boundaryEvent id="_23_hAN62EeCbzp_EHZybUg" attachedToRef="_IA9pl962EeCbzp_EHZybUg">
+      <bpmn2:messageEventDefinition id="_24AIEN62EeCbzp_EHZybUg"/>
+    </bpmn2:boundaryEvent>
+    <bpmn2:endEvent id="_239r0N62EeCbzp_EHZybUg">
+      <bpmn2:incoming>_23-S4d62EeCbzp_EHZybUg</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_23-S4d62EeCbzp_EHZybUg" sourceRef="_IA9plt62EeCbzp_EHZybUg" targetRef="_239r0N62EeCbzp_EHZybUg"/>
+    <bpmn2:intermediateCatchEvent id="_239r0d62EeCbzp_EHZybUg">
+      <bpmn2:incoming>_23-58N62EeCbzp_EHZybUg</bpmn2:incoming>
+      <bpmn2:linkEventDefinition id="_24AIEd62EeCbzp_EHZybUg"/>
+    </bpmn2:intermediateCatchEvent>
+    <bpmn2:sequenceFlow id="_23-58N62EeCbzp_EHZybUg" sourceRef="_IA9pl962EeCbzp_EHZybUg" targetRef="_239r0d62EeCbzp_EHZybUg"/>
+    <bpmn2:endEvent id="_3OfiMN7GEeCZXrARZ9_WHg"/>
+    <bpmn2:sendTask id="_T0BoIN7bEeCaEPqSoky6bw" name="Send credit card information"/>
+    <bpmn2:boundaryEvent id="_T0CPMN7bEeCaEPqSoky6bw" attachedToRef="_T0BoIN7bEeCaEPqSoky6bw">
+      <bpmn2:messageEventDefinition id="_T0C2QN7bEeCaEPqSoky6bw"/>
+    </bpmn2:boundaryEvent>
+    <bpmn2:boundaryEvent id="_T0CPMd7bEeCaEPqSoky6bw" attachedToRef="_T0BoIN7bEeCaEPqSoky6bw">
+      <bpmn2:messageEventDefinition id="_T0DdUN7bEeCaEPqSoky6bw"/>
+    </bpmn2:boundaryEvent>
+  </bpmn2:process>
+  <bpmn2:collaboration id="_T0DdUd7bEeCaEPqSoky6bw">
+    <bpmn2:messageFlow id="_T0EEYN7bEeCaEPqSoky6bw" sourceRef="_IA8bdt62EeCbzp_EHZybUg" targetRef="_IA8bd962EeCbzp_EHZybUg"/>
+    <bpmn2:messageFlow id="_T0ErcN7bEeCaEPqSoky6bw" sourceRef="_IA-Qod62EeCbzp_EHZybUg" targetRef="_IBAF0d62EeCbzp_EHZybUg"/>
+    <bpmn2:messageFlow id="_T0Ercd7bEeCaEPqSoky6bw" sourceRef="_IBAF0t62EeCbzp_EHZybUg" targetRef="_IA_exN62EeCbzp_EHZybUg"/>
+    <bpmn2:messageFlow id="_T0FSgN7bEeCaEPqSoky6bw" sourceRef="_IBCiE962EeCbzp_EHZybUg" targetRef="_3OfiMN7GEeCZXrARZ9_WHg"/>
+    <bpmn2:messageFlow id="_T0FSgd7bEeCaEPqSoky6bw" sourceRef="_23_hAN62EeCbzp_EHZybUg" targetRef="_T0CPMN7bEeCaEPqSoky6bw"/>
+    <bpmn2:messageFlow id="_T0F5kN7bEeCaEPqSoky6bw" sourceRef="_T0CPMd7bEeCaEPqSoky6bw" targetRef="_23-58t62EeCbzp_EHZybUg"/>
+  </bpmn2:collaboration>
+</bpmn2:definitions>
