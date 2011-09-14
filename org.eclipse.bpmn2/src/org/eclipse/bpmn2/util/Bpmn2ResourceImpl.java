@@ -101,7 +101,17 @@ public class Bpmn2ResourceImpl extends XMLResourceImpl implements Bpmn2Resource 
     // This method is called by all save methods - save(Document,...), doSave(Writer/OutputStream, ...) - in superclasses.
     @Override
     protected XMLSave createXMLSave() {
-        prepareSave();
+        //FIXME 
+        boolean ok = false;
+        int cpt = 0;
+        while (!ok && cpt < 1000) {
+            try {
+                prepareSave();
+                ok = true;
+            } catch (IllegalStateException e) {
+                cpt++;
+            }
+        }
         return new XMLSaveImpl(createXMLHelper()) {
             @Override
             protected boolean shouldSaveFeature(EObject o, EStructuralFeature f) {
