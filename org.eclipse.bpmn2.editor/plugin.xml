@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ 
+ Copyright (c) 2010 SAP AG.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+    Reiner Hille-Doering (SAP AG) - initial API and implementation and/or initial documentation
+ 
+ </copyright>
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.bpmn2.presentation.Bpmn2ModelWizardID"
+            name="%_UI_Bpmn2ModelWizard_label"
+            class="org.eclipse.bpmn2.presentation.Bpmn2ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Bpmn2ModelFile.gif">
+         <description>%_UI_Bpmn2ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            class="org.eclipse.bpmn2.presentation.Bpmn2Editor"
+            contributorClass="org.eclipse.bpmn2.presentation.Bpmn2ActionBarContributor"
+            default="true"
+            extensions="bpmn2"
+            icon="icons/full/obj16/Bpmn2ModelFile.gif"
+            id="org.eclipse.bpmn2.presentation.Bpmn2EditorID"
+            name="%_UI_Bpmn2Editor_label">
+         <contentTypeBinding
+               contentTypeId="org.eclipse.bpmn2.content-type.xml">
+         </contentTypeBinding>
+         <contentTypeBinding
+               contentTypeId="org.eclipse.bpmn2.content-type.xmi">
+         </contentTypeBinding>
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.editorActions">
+     <editorContribution 
+           id="org.eclipse.bpmn2.presentation.editorContribution1" 
+           targetID="org.eclipse.bpmn2.presentation.Bpmn2EditorID">
+       <action 
+             class="org.eclipse.bpmn2.presentation.actions.SaveAsXMIAction" 
+             id="org.eclipse.bpmn2.presentation.actions.saveasXMI" 
+             label="%_UI_BpmnEditorSaveAsXMILabel" 
+             style="push" 
+             toolbarPath="Normal/bpmnEditorActions" /> 
+     </editorContribution>
+   </extension>
+
+
+
+</plugin>

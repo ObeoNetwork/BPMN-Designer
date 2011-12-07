@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="&lt;copyright>&#xD;&#xA;&#xD;&#xA;Copyright (c) 2010 SAP AG.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;   Reiner Hille-Doering (SAP AG) - initial API and implementation and/or initial documentation&#xD;&#xA;&#xD;&#xA;&lt;/copyright>"
+    modelDirectory="/org.eclipse.bpmn2.tools.ecoremerger/src" editorDirectory="/org.eclipse.bpmn2.tools.ecoremerger.editor/src"
+    modelPluginID="org.eclipse.bpmn2.tools.ecoremerger" modelName="Exceptions" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" editorPluginID="org.eclipse.bpmn2.tools.ecoremerger.editor">
+  <foreignModel>exceptions.ecore</foreignModel>
+  <genPackages prefix="Exceptions" basePackage="org.eclipse.bpmn2.tools.ecoremerger"
+      disposableProviderFactory="true" ecorePackage="exceptions.ecore#/">
+    <genClasses ecoreClass="exceptions.ecore#//ClassMappingException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute exceptions.ecore#//ClassMappingException/xsdClassName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute exceptions.ecore#//ClassMappingException/mofClassName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference exceptions.ecore#//ClassMappingException/attributeExceptions"/>
+    </genClasses>
+    <genClasses ecoreClass="exceptions.ecore#//AttributeMappingExcpetion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute exceptions.ecore#//AttributeMappingExcpetion/xsdAttributeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute exceptions.ecore#//AttributeMappingExcpetion/mofAttributeName"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
