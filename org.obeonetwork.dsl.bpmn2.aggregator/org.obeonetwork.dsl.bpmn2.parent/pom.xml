@@ -27,9 +27,9 @@
     <url>http://build.eclipse.org/modeling/emf/eef/epf/</url>
   </repository>
   <repository>
-   <id>OD5</id>
+   <id>OD6</id>
     <layout>p2</layout>
-    <url>http://update.obeo.fr/stable/designer/stable-5.0.1/fr.obeo.designer.architect.update/</url>
+    <url>http://update.obeo.fr/release/designer/release-6.0.0/indigo/update/repository/</url>
   </repository>
   <repository>
    <id>Acceleo2</id>
