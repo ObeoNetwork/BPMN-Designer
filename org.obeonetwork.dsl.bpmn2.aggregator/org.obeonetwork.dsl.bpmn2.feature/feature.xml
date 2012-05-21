@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.obeonetwork.dsl.bpmn2.feature"
-      label="BPMN2 Editor"
-      version="0.7.0.qualifier">
+      label="BPMN-Designer"
+      version="0.7.0.qualifier"
+      provider-name="Obeo">
 
    <description url="http://marketplace.obeonetwork.com/module/bpmn">
       BPMN Designer is compatible with the version 2.0 of the OMG standard &quot;Business Process Model and Notation&quot;.

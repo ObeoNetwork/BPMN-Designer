@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bundle-Name: Obeo Designer Viewpoint Project
+Bundle-Name: BPMN-Designer Viewpoint
 Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.design;singleton=true
 Bundle-Version: 0.7.0.qualifier
 Bundle-Activator: org.obeonetwork.bpmn2.design.Activator
@@ -11,3 +11,4 @@ Require-Bundle: fr.obeo.acceleo.gen,
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Provide-Package: org.obeonetwork.dsl.bpmn2.design
+Bundle-Vendor: Obeo
