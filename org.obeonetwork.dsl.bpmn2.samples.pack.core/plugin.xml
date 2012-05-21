@@ -16,11 +16,11 @@
 <plugin>
    <extension
          point="org.obeonetwork.dsl.bpmn2.samples.Bpmn2Sample">
-      <Bpmn2Sample
+    <!--  <Bpmn2Sample
             class="org.obeonetwork.dsl.bpmn2.samples.pack.core.TestSample"
             id="org.obeonetwork.dsl.bpmn2.samples.pack.core.Bpmn2Sample1"
             name="oorg.obeonetwork.dsl.bpmn2.samples.pack.core.Bpmn2Sample1">
-      </Bpmn2Sample>
+      </Bpmn2Sample>-->
             <Bpmn2Sample
             class="org.obeonetwork.dsl.bpmn2.samples.pack.core.TravelAgencySample"
             id="org.obeonetwork.dsl.bpmn2.samples.pack.core.Bpmn2Sample2"
