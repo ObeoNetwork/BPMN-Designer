@@ -865,7 +865,7 @@
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Process Definitions" initialisation="true" domainClass="Definitions">
-      <ownedRepresentationCreationDescriptions xsi:type="tool:DiagramCreationDescription" name="CreateProcessDiagram" label="Process Diagram" diagramDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']">
+      <ownedRepresentationCreationDescriptions xsi:type="tool:DiagramCreationDescription" name="CreateProcessDiagram" label="Process Diagram" titleExpression="&lt;%name%>" diagramDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']">
         <initialOperation>
           <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView%>"/>
         </initialOperation>
