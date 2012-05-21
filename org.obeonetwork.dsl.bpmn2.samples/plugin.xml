@@ -31,7 +31,6 @@
             category="org.eclipse.ui.Examples/org.obeonetwork.dsl.bpmn2.samples.Bpmn2Samples.plugin"
             class="org.obeonetwork.dsl.bpmn2.samples.wizards.ProjectUnzipperNewWizard"
             project="true"
-            finalPerspective="org.obeonetwork.dsl.bpmn2.samples.common.perspective"
             id="org.obeonetwork.dsl.bpmn2.samples.wizards.bpmn2Samples">
          <description>
             Create a project with a BPMN2 sample.
