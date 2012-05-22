@@ -6,7 +6,7 @@
     <details key="SVG.BundledImageDescription.BorderColor" value=""/>
   </eAnnotations>
   <ownedViewpoints name="Process" label="BPMN 2.0 - Process">
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveToLane']" name="ProcessDiagram" domainClass="bpmn2.Process">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveToLane']" name="ProcessDiagram" domainClass="bpmn2.Process" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="StartEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%self.flowElements[lanes.nSize==0]%>" domainClass="StartEvent">
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/StartEvent.png"/>
