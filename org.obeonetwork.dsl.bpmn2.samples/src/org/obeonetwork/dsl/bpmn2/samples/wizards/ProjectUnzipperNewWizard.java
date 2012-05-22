@@ -87,21 +87,6 @@ public class ProjectUnzipperNewWizard extends Wizard implements INewWizard,
 	private final static String BPMN2_SAMPLES_EXTENSION_POINT_ID = "org.obeonetwork.dsl.bpmn2.samples.Bpmn2Sample"; //$NON-NLS-1$ 
 
 	/**
-	 * Java Nature
-	 */
-	private static final String ORG_ECLIPSE_JDT_CORE_JAVANATURE = "org.eclipse.jdt.core.javanature"; //$NON-NLS-1$
-
-	/**
-	 * BPMN2 Nature
-	 */
-	private static final String ORG_OBEONETWORK_DSL_BPMN2_COMMON_BPMN2NATURE = "org.obeonetwork.dsl.bpmn2.common.bpmn2Nature";//$NON-NLS-1$
-
-	/**
-	 * Java Builder
-	 */
-	private static final String ORG_ECLIPSE_JDT_CORE_JAVABUILDER = "org.eclipse.jdt.core.javabuilder"; //$NON-NLS-1$
-
-	/**
 	 * 
 	 */
 	private static final String BPMN2_SAMPLES_POST_INIT_EXTENSION_POINT_ID = "oorg.obeonetwork.dsl.bpmn2.samples.Bpmn2Example.postInit";//$NON-NLS-1$
@@ -225,24 +210,6 @@ public class ProjectUnzipperNewWizard extends Wizard implements INewWizard,
 						// Now, we ensure that the project is open.
 						project.open(monitor);
 						renameProject(project, projectName);
-						// Add Java nature
-						IProjectDescription desc = workspace
-								.newProjectDescription(project.getName());
-						desc.setNatureIds(new String[] {
-								
-								ORG_ECLIPSE_JDT_CORE_JAVANATURE });
-						// Add Java Builder
-						ICommand command = desc.newCommand();
-						command
-								.setBuilderName(ORG_ECLIPSE_JDT_CORE_JAVABUILDER);
-						ICommand[] newCommands = new ICommand[1];
-						newCommands[0] = command;
-						desc.setBuildSpec(newCommands);
-						project.setDescription(desc, monitor);
-						monitor.worked(10);
-						if (monitor.isCanceled()) {
-							throw new InterruptedException();
-						}
 						// Load portInit extension point
 						IConfigurationElement[] contributions = Platform
 								.getExtensionRegistry()
