@@ -5,7 +5,7 @@
     <details key="LabelAlignmentForDNodeListElementMappingMigrationForBehaviourPresevation" value=""/>
     <details key="SVG.BundledImageDescription.BorderColor" value=""/>
   </eAnnotations>
-  <ownedViewpoints name="Process" label="BPMN 2.0 - Process">
+  <ownedViewpoints name="Process" label="BPMN 2.0 - Process" modelFileExtension="bpmn2">
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveToLane']" name="ProcessDiagram" domainClass="bpmn2.Process" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="StartEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%self.flowElements[lanes.nSize==0]%>" domainClass="StartEvent">
