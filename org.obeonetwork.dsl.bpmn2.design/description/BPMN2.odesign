@@ -882,6 +882,10 @@
         </firstModelOperation>
       </ownedCreateLine>
       <ownedColumnMappings name="Name" headerLabelExpression="Name" featureName="name" labelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="Lane sets" headerLabelExpression="Lane sets" featureName="laneSets" labelExpression="&lt;%laneSets.name%>"/>
+      <ownedColumnMappings name="TaskNb" headerLabelExpression="Number of tasks" featureName="name" labelExpression="&lt;%eAllContents(&quot;Task&quot;).nSize()%>"/>
+      <ownedColumnMappings name="StartEventNb" headerLabelExpression="Number of start events" featureName="name" labelExpression="&lt;%eAllContents(&quot;StartEvent&quot;).nSize()%>"/>
+      <ownedColumnMappings name="EndEventNb" headerLabelExpression="Number of end events" featureName="name" labelExpression="&lt;%eAllContents(&quot;EndEvent&quot;).nSize()%>"/>
     </ownedRepresentations>
   </ownedViewpoints>
   <userColorsPalettes name="Colors">
