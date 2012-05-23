@@ -20,4 +20,28 @@
 	       name="BPMN2">
     </component>
   </extension>
+  <extension
+        point="org.eclipse.ui.newWizards">
+     <wizard
+           category="org.obeonetwork.dsl.bpmn2.designer"
+           class="org.obeonetwork.bpmn2.design.ui.wizards.newmodel.Bpmn2ModelWizard"
+           icon="icons/Bpmn2ModelFile.gif"
+           id="org.obeonetwork.dsl.bpmn2.wizard.newBpmn2Model"
+           name="BPMN2 Model"
+           preferredPerspectives="fr.obeo.dsl.viewpoint.ui.tools.perspective.modeling"
+           project="false">
+     </wizard>
+     <category
+           id="org.obeonetwork.dsl.bpmn2.designer"
+           name="BPMN2 Designer">
+     </category>
+     <wizard
+           category="org.obeonetwork.dsl.bpmn2.designer"
+           class="org.obeonetwork.bpmn2.design.ui.wizards.newmodel.Bpmn2ProjectWizard"
+           icon="icons/Bpmn2ModelFile.gif"
+           id="org.obeonetwork.dsl.bpmn2.wizard.newBpmn2Project"
+           name="BPMN2 Project"
+           project="true">
+     </wizard>
+  </extension>
 </plugin>
