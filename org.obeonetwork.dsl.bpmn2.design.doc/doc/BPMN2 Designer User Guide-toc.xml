@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<toc topic="doc/BPMN2 Designer User Guide.html" label="BPMN2 Designer User Guide">
+	<topic href="doc/BPMN2 Designer User Guide.html" label="Getting Started">
+		<topic href="doc/BPMN2 Designer User Guide.html#startingFromTravelAgency" label="Starting from the Travel Agency example"></topic>
+		<topic href="doc/BPMN2 Designer User Guide.html#createBPMN2" label="Create a new BPMN2 model &amp; BPMN2 project"></topic>
+	</topic>
+	<topic href="doc/BPMN2 Designer User Guide.html#processDiagram" label="Process Diagram">
+	</topic>
+</toc>
