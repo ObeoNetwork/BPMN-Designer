@@ -1,0 +1,63 @@
+
+__(c) Obeo 2011 -  All rights reserved. This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0__
+
+@Authors@ Stéphane Drapeau / Yann Mortier
+@Contact@ stephane.drapeau@obeo.fr
+
+h1. Getting Started
+
+This section describes how to start using the BPMN2 designer either from existing BPMN2 models or by creating a new one.
+
+h2. Starting from the Travel Agency example
+
+Import the TravelAgency project using the menu @File/New/Example...@.
+
+!gettingStarted/example-1-menu.png!
+
+Pick the *BPMN2 Samples* wizard anc click on @Next@ and then pick the *Travel Agency* agency sample.
+
+!gettingStarted/example-2-menu.png!
+
+Click on @Next@, name your project and then click on @Finish@. The project appears in your workspace.
+
+!gettingStarted/example-3-workspace.png!
+
+Double click on TravelAgency.aird to open the designer. You will be greeted with the process definitions table.
+
+!gettingStarted/example-4_1-maintable.png!
+
+From here you can navigate to the existing process diagram by right clicking on the process.
+
+h2. Create a new BPMN2 model & BPMN2 project
+
+To create a new BPMN2 project, ensure that the Modeling perspective is enabled.
+
+You can check the active perspective in the top-right corner of the window.
+
+!gettingStarted/example-5_1-perspective.png!
+
+If the modeling perspective is not active then you have to open it. Click on the @Open Perspective@ button and then select @Other...@
+
+!gettingStarted/example-5_2-perspective.png!
+
+Select the @Modeling@ perspective and the click on @OK@.
+
+!gettingStarted/example-5_3-perspective.png!
+
+Then click on the wizard shortcuts at the top-left of the Eclipse Workbench. Select __New BPMN2 Project.__
+
+!gettingStarted/example-6_1-newproject.png!
+
+You can choose a specific name for the project.
+
+!gettingStarted/example-6_2-newproject.png!
+
+When you press the __Finish__ button, the projects gets created and automatically enabled the BPMN2 viewpoints.
+
+!gettingStarted/example-6_3-newproject.png!
+
+h1. Process Diagram
+
+This diagram allows you to visualize and to edit a process. You can open or create this diagram from the process definitions table.
+
+!gettingStarted/example-7-processdiagram.png!
