@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="BPMN20">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:filter="http://www.obeo.fr/dsl/viewpoint/description/filter/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="BPMN20">
   <eAnnotations source="Migration">
     <details key="SemanticCandidatesExpressionBehaviorChange" value=""/>
     <details key="LabelAlignmentForDNodeListElementMappingMigrationForBehaviourPresevation" value=""/>
@@ -7,6 +7,7 @@
   </eAnnotations>
   <ownedViewpoints name="Process" label="BPMN 2.0 - Process" modelFileExtension="bpmn2">
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveToLane']" name="ProcessDiagram" domainClass="bpmn2.Process" enablePopupBars="true">
+      <filters xsi:type="filter:CompositeFilterDescription" name="FilterActivityDecorators"/>
       <defaultLayer name="Default">
         <nodeMappings name="TextAnnotation" semanticCandidatesExpression="&lt;%artifacts.filter(&quot;TextAnnotation&quot;)%>" domainClass="TextAnnotation">
           <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="&lt;%text%>" labelAlignment="RIGHT" labelPosition="node" resizeKind="NSEW">
@@ -762,6 +763,18 @@
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PopupMenu" name="DeleteEventDefinition" label="BPMN Designer" forceRefresh="true">
+            <menuItemDescription xsi:type="tool:OperationAction" name="OperationDeleteEventDefinition" label="Remove event definition" precondition="&lt;%$views.nGet(0).target.filter(&quot;Event&quot;)!=null%>">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="&lt;%$views%>">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$i.target%>">
+                    <subModelOperations xsi:type="tool:Unset" featureName="eventDefinitions" elementExpression="&lt;%$i.target.eventDefinitions%>"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
           </ownedTools>
         </toolSections>
         <toolSections name="Other">
