@@ -160,7 +160,7 @@
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/throwing/multiple2.png"/>
               </conditionnalStyles>
             </subNodeMappings>
-            <subNodeMappings name="BoundaryEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="BoundaryEvent">
+            <subNodeMappings name="BoundaryEvent" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="BoundaryEvent">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/BoundaryEvent.png"/>
             </subNodeMappings>
             <subNodeMappings name="ComplexGateway" label="Complex Gateway" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="ComplexGateway">
@@ -171,7 +171,7 @@
             </subNodeMappings>
             <subNodeMappings name="Task" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%flowNodeRefs%>" domainClass="Task">
               <borderedNodeMappings name="TaskBorder" semanticCandidatesExpression="&lt;%boundaryEventRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="BoundaryEvent">
-                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj16/BoundaryEvent.png"/>
+                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj16/BoundaryEvent.png"/>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
                   <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/boundary/message.png"/>
                 </conditionnalStyles>
