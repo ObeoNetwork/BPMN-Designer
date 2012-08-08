@@ -40,7 +40,7 @@
           </style>
         </edgeMappings>
         <containerMappings name="LaneSet" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%self.laneSets%>" domainClass="bpmn2.LaneSet">
-          <subContainerMappings name="Lane" label="Lane" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%lanes%>" domainClass="Lane" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveToLane']">
+          <subContainerMappings name="Lane" label="Lane" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%lanes%>" domainClass="Lane" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveToLane'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.6/@ownedTools[name='DropToLane']">
             <subNodeMappings name="StartEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="StartEvent">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/StartEvent.png"/>
               <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
@@ -868,6 +868,18 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%self%>">
                 <subModelOperations xsi:type="tool:SetValue" featureName="text" valueExpression="&lt;%$0%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="DropToLane" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ChoreographyTask'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ComplexGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EventBasedGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ExclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ImplicitThrowEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='InclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateCatchEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="lanes" elementExpression="&lt;%$oldSemanticContainer%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$newSemanticContainer%>"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
