@@ -128,7 +128,7 @@ public interface ExtensionAttributeDefinition extends EObject {
      * @see #setExtensionDefinition(ExtensionDefinition)
      * @see org.eclipse.bpmn2.Bpmn2Package#getExtensionAttributeDefinition_ExtensionDefinition()
      * @see org.eclipse.bpmn2.ExtensionDefinition#getExtensionAttributeDefinitions
-     * @model opposite="extensionAttributeDefinitions" resolveProxies="false" required="true" derived="true" ordered="false"
+     * @model opposite="extensionAttributeDefinitions" required="true" transient="false" ordered="false"
      * @generated
      */
     ExtensionDefinition getExtensionDefinition();

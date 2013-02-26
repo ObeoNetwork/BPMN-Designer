@@ -15,14 +15,12 @@
 package org.eclipse.dd.dc.util;
 
 import org.eclipse.dd.dc.*;
-import org.eclipse.dd.dc.Bounds;
-import org.eclipse.dd.dc.DcPackage;
-import org.eclipse.dd.dc.DocumentRoot;
-import org.eclipse.dd.dc.Font;
-import org.eclipse.dd.dc.Point;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -81,16 +79,6 @@ public class DcAdapterFactory extends AdapterFactoryImpl {
      */
     protected DcSwitch<Adapter> modelSwitch = new DcSwitch<Adapter>() {
         @Override
-        public Adapter caseDocumentRoot(DocumentRoot object) {
-            return createDocumentRootAdapter();
-        }
-
-        @Override
-        public Adapter caseBounds(Bounds object) {
-            return createBoundsAdapter();
-        }
-
-        @Override
         public Adapter caseFont(Font object) {
             return createFontAdapter();
         }
@@ -98,6 +86,11 @@ public class DcAdapterFactory extends AdapterFactoryImpl {
         @Override
         public Adapter casePoint(Point object) {
             return createPointAdapter();
+        }
+
+        @Override
+        public Adapter caseBounds(Bounds object) {
+            return createBoundsAdapter();
         }
 
         @Override
@@ -117,34 +110,6 @@ public class DcAdapterFactory extends AdapterFactoryImpl {
     @Override
     public Adapter createAdapter(Notifier target) {
         return modelSwitch.doSwitch((EObject) target);
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.dd.dc.DocumentRoot <em>Document Root</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.dd.dc.DocumentRoot
-     * @generated
-     */
-    public Adapter createDocumentRootAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.dd.dc.Bounds <em>Bounds</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.dd.dc.Bounds
-     * @generated
-     */
-    public Adapter createBoundsAdapter() {
-        return null;
     }
 
     /**
@@ -172,6 +137,20 @@ public class DcAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createPointAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.dc.Bounds <em>Bounds</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.dd.dc.Bounds
+     * @generated
+     */
+    public Adapter createBoundsAdapter() {
         return null;
     }
 

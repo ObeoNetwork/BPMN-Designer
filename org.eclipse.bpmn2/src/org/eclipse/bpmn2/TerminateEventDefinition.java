@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getTerminateEventDefinition()
- * @model extendedMetaData="name='tTerminateEventDefinition' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface TerminateEventDefinition extends EventDefinition {

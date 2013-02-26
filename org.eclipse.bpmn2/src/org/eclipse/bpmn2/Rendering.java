@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getRendering()
- * @model extendedMetaData="name='tRendering' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Rendering extends BaseElement {

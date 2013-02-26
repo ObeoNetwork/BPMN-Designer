@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getUserTask()
- * @model extendedMetaData="name='tUserTask' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface UserTask extends Task {
@@ -46,10 +46,9 @@ public interface UserTask extends Task {
      * @return the value of the '<em>Renderings</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getUserTask_Renderings()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='rendering' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<Rendering> getRenderings();
+    EList<Rendering> getRenderings();
 
     /**
      * Returns the value of the '<em><b>Implementation</b></em>' attribute.
@@ -63,7 +62,6 @@ public interface UserTask extends Task {
      * @see #setImplementation(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getUserTask_Implementation()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='implementation'"
      * @generated
      */
     String getImplementation();

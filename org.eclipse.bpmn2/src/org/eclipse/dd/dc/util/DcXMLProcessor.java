@@ -17,8 +17,11 @@ package org.eclipse.dd.dc.util;
 import java.util.Map;
 
 import org.eclipse.dd.dc.DcPackage;
+
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.resource.Resource;
+
 import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
 
 /**

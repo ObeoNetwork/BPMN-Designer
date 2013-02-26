@@ -22,45 +22,18 @@ package org.eclipse.bpmn2;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.SequenceFlow#getConditionExpression <em>Condition Expression</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.SequenceFlow#isIsImmediate <em>Is Immediate</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.SequenceFlow#getSourceRef <em>Source Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.SequenceFlow#getConditionExpression <em>Condition Expression</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.SequenceFlow#getTargetRef <em>Target Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.SequenceFlow#getSourceRef <em>Source Ref</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getSequenceFlow()
- * @model extendedMetaData="name='tSequenceFlow' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface SequenceFlow extends FlowElement {
-    /**
-     * Returns the value of the '<em><b>Condition Expression</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Condition Expression</em>' containment reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Condition Expression</em>' containment reference.
-     * @see #setConditionExpression(Expression)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getSequenceFlow_ConditionExpression()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='conditionExpression' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-     * @generated
-     */
-    Expression getConditionExpression();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.SequenceFlow#getConditionExpression <em>Condition Expression</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Condition Expression</em>' containment reference.
-     * @see #getConditionExpression()
-     * @generated
-     */
-    void setConditionExpression(Expression value);
-
     /**
      * Returns the value of the '<em><b>Is Immediate</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -73,7 +46,6 @@ public interface SequenceFlow extends FlowElement {
      * @see #setIsImmediate(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getSequenceFlow_IsImmediate()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='isImmediate'"
      * @generated
      */
     boolean isIsImmediate();
@@ -89,33 +61,30 @@ public interface SequenceFlow extends FlowElement {
     void setIsImmediate(boolean value);
 
     /**
-     * Returns the value of the '<em><b>Source Ref</b></em>' reference.
-     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.FlowNode#getOutgoing <em>Outgoing</em>}'.
+     * Returns the value of the '<em><b>Condition Expression</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Source Ref</em>' reference isn't clear,
+     * If the meaning of the '<em>Condition Expression</em>' containment reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Source Ref</em>' reference.
-     * @see #setSourceRef(FlowNode)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getSequenceFlow_SourceRef()
-     * @see org.eclipse.bpmn2.FlowNode#getOutgoing
-     * @model opposite="outgoing" resolveProxies="false" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='sourceRef'"
+     * @return the value of the '<em>Condition Expression</em>' containment reference.
+     * @see #setConditionExpression(Expression)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getSequenceFlow_ConditionExpression()
+     * @model containment="true" ordered="false"
      * @generated
      */
-    FlowNode getSourceRef();
+    Expression getConditionExpression();
 
     /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.SequenceFlow#getSourceRef <em>Source Ref</em>}' reference.
+     * Sets the value of the '{@link org.eclipse.bpmn2.SequenceFlow#getConditionExpression <em>Condition Expression</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Source Ref</em>' reference.
-     * @see #getSourceRef()
+     * @param value the new value of the '<em>Condition Expression</em>' containment reference.
+     * @see #getConditionExpression()
      * @generated
      */
-    void setSourceRef(FlowNode value);
+    void setConditionExpression(Expression value);
 
     /**
      * Returns the value of the '<em><b>Target Ref</b></em>' reference.
@@ -130,8 +99,7 @@ public interface SequenceFlow extends FlowElement {
      * @see #setTargetRef(FlowNode)
      * @see org.eclipse.bpmn2.Bpmn2Package#getSequenceFlow_TargetRef()
      * @see org.eclipse.bpmn2.FlowNode#getIncoming
-     * @model opposite="incoming" resolveProxies="false" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='targetRef'"
+     * @model opposite="incoming" required="true" ordered="false"
      * @generated
      */
     FlowNode getTargetRef();
@@ -145,5 +113,33 @@ public interface SequenceFlow extends FlowElement {
      * @generated
      */
     void setTargetRef(FlowNode value);
+
+    /**
+     * Returns the value of the '<em><b>Source Ref</b></em>' reference.
+     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.FlowNode#getOutgoing <em>Outgoing</em>}'.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Source Ref</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Source Ref</em>' reference.
+     * @see #setSourceRef(FlowNode)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getSequenceFlow_SourceRef()
+     * @see org.eclipse.bpmn2.FlowNode#getOutgoing
+     * @model opposite="outgoing" required="true" ordered="false"
+     * @generated
+     */
+    FlowNode getSourceRef();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.SequenceFlow#getSourceRef <em>Source Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Source Ref</em>' reference.
+     * @see #getSourceRef()
+     * @generated
+     */
+    void setSourceRef(FlowNode value);
 
 } // SequenceFlow

@@ -28,7 +28,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getComplexGateway()
- * @model extendedMetaData="name='tComplexGateway' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ComplexGateway extends Gateway {
@@ -44,7 +44,6 @@ public interface ComplexGateway extends Gateway {
      * @see #setActivationCondition(Expression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getComplexGateway_ActivationCondition()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='activationCondition' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Expression getActivationCondition();
@@ -70,8 +69,7 @@ public interface ComplexGateway extends Gateway {
      * @return the value of the '<em>Default</em>' reference.
      * @see #setDefault(SequenceFlow)
      * @see org.eclipse.bpmn2.Bpmn2Package#getComplexGateway_Default()
-     * @model resolveProxies="false" ordered="false"
-     *        extendedMetaData="kind='attribute' name='default'"
+     * @model ordered="false"
      * @generated
      */
     SequenceFlow getDefault();

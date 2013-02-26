@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getExpression()
- * @model extendedMetaData="name='tExpression' kind='mixed'"
+ * @model
  * @generated
  */
 public interface Expression extends BaseElement {

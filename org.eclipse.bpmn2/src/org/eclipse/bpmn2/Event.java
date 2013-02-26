@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,6 @@ import java.util.List;
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getEvent()
  * @model abstract="true"
- *        extendedMetaData="name='tEvent' kind='elementOnly'"
  * @generated
  */
 public interface Event extends FlowNode, InteractionNode {
@@ -46,9 +45,8 @@ public interface Event extends FlowNode, InteractionNode {
      * @return the value of the '<em>Properties</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getEvent_Properties()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='property' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<Property> getProperties();
+    EList<Property> getProperties();
 
 } // Event

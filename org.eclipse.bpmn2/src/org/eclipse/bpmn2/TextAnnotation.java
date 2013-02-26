@@ -28,7 +28,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getTextAnnotation()
- * @model extendedMetaData="name='tTextAnnotation' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface TextAnnotation extends Artifact {
@@ -44,7 +44,6 @@ public interface TextAnnotation extends Artifact {
      * @see #setText(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getTextAnnotation_Text()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='text' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     String getText();
@@ -72,7 +71,6 @@ public interface TextAnnotation extends Artifact {
      * @see #setTextFormat(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getTextAnnotation_TextFormat()
      * @model default="text/plain" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='textFormat'"
      * @generated
      */
     String getTextFormat();

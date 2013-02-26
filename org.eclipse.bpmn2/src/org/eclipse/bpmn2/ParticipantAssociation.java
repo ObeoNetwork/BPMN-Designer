@@ -28,7 +28,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getParticipantAssociation()
- * @model extendedMetaData="name='tParticipantAssociation' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ParticipantAssociation extends BaseElement {
@@ -44,7 +44,6 @@ public interface ParticipantAssociation extends BaseElement {
      * @see #setInnerParticipantRef(Participant)
      * @see org.eclipse.bpmn2.Bpmn2Package#getParticipantAssociation_InnerParticipantRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='innerParticipantRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Participant getInnerParticipantRef();
@@ -71,7 +70,6 @@ public interface ParticipantAssociation extends BaseElement {
      * @see #setOuterParticipantRef(Participant)
      * @see org.eclipse.bpmn2.Bpmn2Package#getParticipantAssociation_OuterParticipantRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='outerParticipantRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Participant getOuterParticipantRef();

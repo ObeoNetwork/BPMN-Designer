@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -26,51 +26,43 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.eclipse.bpmn2.Relationship#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.Relationship#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Relationship#getSources <em>Sources</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Relationship#getTargets <em>Targets</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.Relationship#getDirection <em>Direction</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.Relationship#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getRelationship()
- * @model extendedMetaData="name='tRelationship' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Relationship extends BaseElement {
     /**
-     * Returns the value of the '<em><b>Sources</b></em>' reference list.
-     * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+     * Returns the value of the '<em><b>Type</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Sources</em>' reference list isn't clear,
+     * If the meaning of the '<em>Type</em>' attribute isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Sources</em>' reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getRelationship_Sources()
+     * @return the value of the '<em>Type</em>' attribute.
+     * @see #setType(String)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getRelationship_Type()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='source' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<EObject> getSources();
+    String getType();
 
     /**
-     * Returns the value of the '<em><b>Targets</b></em>' reference list.
-     * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+     * Sets the value of the '{@link org.eclipse.bpmn2.Relationship#getType <em>Type</em>}' attribute.
      * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Targets</em>' reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Targets</em>' reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getRelationship_Targets()
-     * @model required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='target' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
+     * @param value the new value of the '<em>Type</em>' attribute.
+     * @see #getType()
      * @generated
      */
-    List<EObject> getTargets();
+    void setType(String value);
 
     /**
      * Returns the value of the '<em><b>Direction</b></em>' attribute.
@@ -86,7 +78,6 @@ public interface Relationship extends BaseElement {
      * @see #setDirection(RelationshipDirection)
      * @see org.eclipse.bpmn2.Bpmn2Package#getRelationship_Direction()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='direction'"
      * @generated
      */
     RelationshipDirection getDirection();
@@ -103,30 +94,35 @@ public interface Relationship extends BaseElement {
     void setDirection(RelationshipDirection value);
 
     /**
-     * Returns the value of the '<em><b>Type</b></em>' attribute.
+     * Returns the value of the '<em><b>Sources</b></em>' reference list.
+     * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Type</em>' attribute isn't clear,
+     * If the meaning of the '<em>Sources</em>' reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Type</em>' attribute.
-     * @see #setType(String)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getRelationship_Type()
+     * @return the value of the '<em>Sources</em>' reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getRelationship_Sources()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='type'"
      * @generated
      */
-    String getType();
+    EList<EObject> getSources();
 
     /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.Relationship#getType <em>Type</em>}' attribute.
+     * Returns the value of the '<em><b>Targets</b></em>' reference list.
+     * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
      * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Targets</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Type</em>' attribute.
-     * @see #getType()
+     * @return the value of the '<em>Targets</em>' reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getRelationship_Targets()
+     * @model required="true" ordered="false"
      * @generated
      */
-    void setType(String value);
+    EList<EObject> getTargets();
 
 } // Relationship

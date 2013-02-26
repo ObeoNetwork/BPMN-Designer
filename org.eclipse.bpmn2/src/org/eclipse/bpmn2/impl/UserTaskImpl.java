@@ -15,17 +15,21 @@
 package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Rendering;
 import org.eclipse.bpmn2.UserTask;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -98,7 +102,7 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<Rendering> getRenderings() {
+    public EList<Rendering> getRenderings() {
         if (renderings == null) {
             renderings = new EObjectContainmentEList<Rendering>(Rendering.class, this,
                     Bpmn2Package.USER_TASK__RENDERINGS);

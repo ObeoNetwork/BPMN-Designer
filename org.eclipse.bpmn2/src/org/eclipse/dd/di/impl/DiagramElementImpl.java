@@ -14,22 +14,18 @@
  */
 package org.eclipse.dd.di.impl;
 
-import java.util.List;
-
 import org.eclipse.dd.di.DiPackage;
 import org.eclipse.dd.di.Diagram;
 import org.eclipse.dd.di.DiagramElement;
 import org.eclipse.dd.di.Style;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,83 +39,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link org.eclipse.dd.di.impl.DiagramElementImpl#getOwnedElement <em>Owned Element</em>}</li>
  *   <li>{@link org.eclipse.dd.di.impl.DiagramElementImpl#getModelElement <em>Model Element</em>}</li>
  *   <li>{@link org.eclipse.dd.di.impl.DiagramElementImpl#getStyle <em>Style</em>}</li>
- *   <li>{@link org.eclipse.dd.di.impl.DiagramElementImpl#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
-    /**
-     * The cached value of the '{@link #getOwningDiagram() <em>Owning Diagram</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getOwningDiagram()
-     * @generated
-     * @ordered
-     */
-    protected Diagram owningDiagram;
-
-    /**
-     * The cached value of the '{@link #getOwningElement() <em>Owning Element</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getOwningElement()
-     * @generated
-     * @ordered
-     */
-    protected DiagramElement owningElement;
-
-    /**
-     * The cached value of the '{@link #getOwnedElement() <em>Owned Element</em>}' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getOwnedElement()
-     * @generated
-     * @ordered
-     */
-    protected EList<DiagramElement> ownedElement;
-
-    /**
-     * The cached value of the '{@link #getModelElement() <em>Model Element</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getModelElement()
-     * @generated
-     * @ordered
-     */
-    protected EObject modelElement;
-
-    /**
-     * The cached value of the '{@link #getStyle() <em>Style</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getStyle()
-     * @generated
-     * @ordered
-     */
-    protected Style style;
-
-    /**
-     * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getId()
-     * @generated
-     * @ordered
-     */
-    protected static final String ID_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getId()
-     * @generated
-     * @ordered
-     */
-    protected String id = ID_EDEFAULT;
-
+public abstract class DiagramElementImpl extends EObjectImpl implements DiagramElement {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -145,7 +70,9 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
      * @generated
      */
     public Diagram getOwningDiagram() {
-        return owningDiagram;
+        Diagram owningDiagram = basicGetOwningDiagram();
+        return owningDiagram != null && owningDiagram.eIsProxy() ? (Diagram) eResolveProxy((InternalEObject) owningDiagram)
+                : owningDiagram;
     }
 
     /**
@@ -153,18 +80,11 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetOwningDiagram(Diagram newOwningDiagram, NotificationChain msgs) {
-        Diagram oldOwningDiagram = owningDiagram;
-        owningDiagram = newOwningDiagram;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM, oldOwningDiagram, newOwningDiagram);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
-        }
-        return msgs;
+    public Diagram basicGetOwningDiagram() {
+        // TODO: implement this method to return the 'Owning Diagram' reference
+        // -> do not perform proxy resolution
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -173,7 +93,9 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
      * @generated
      */
     public DiagramElement getOwningElement() {
-        return owningElement;
+        DiagramElement owningElement = basicGetOwningElement();
+        return owningElement != null && owningElement.eIsProxy() ? (DiagramElement) eResolveProxy((InternalEObject) owningElement)
+                : owningElement;
     }
 
     /**
@@ -181,19 +103,11 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetOwningElement(DiagramElement newOwningElement,
-            NotificationChain msgs) {
-        DiagramElement oldOwningElement = owningElement;
-        owningElement = newOwningElement;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT, oldOwningElement, newOwningElement);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
-        }
-        return msgs;
+    public DiagramElement basicGetOwningElement() {
+        // TODO: implement this method to return the 'Owning Element' reference
+        // -> do not perform proxy resolution
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -201,13 +115,12 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<DiagramElement> getOwnedElement() {
-        if (ownedElement == null) {
-            ownedElement = new EObjectWithInverseEList<DiagramElement>(DiagramElement.class, this,
-                    DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT,
-                    DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT);
-        }
-        return ownedElement;
+    public EList<DiagramElement> getOwnedElement() {
+        // TODO: implement this method to return the 'Owned Element' reference list
+        // Ensure that you remove @generated or mark it @generated NOT
+        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -215,17 +128,10 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Object getModelElement() {
-        if (modelElement != null && modelElement.eIsProxy()) {
-            InternalEObject oldModelElement = (InternalEObject) modelElement;
-            modelElement = eResolveProxy(oldModelElement);
-            if (modelElement != oldModelElement) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            DiPackage.DIAGRAM_ELEMENT__MODEL_ELEMENT, oldModelElement, modelElement));
-            }
-        }
-        return modelElement;
+    public EObject getModelElement() {
+        EObject modelElement = basicGetModelElement();
+        return modelElement != null && modelElement.eIsProxy() ? eResolveProxy((InternalEObject) modelElement)
+                : modelElement;
     }
 
     /**
@@ -233,8 +139,11 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Object basicGetModelElement() {
-        return modelElement;
+    public EObject basicGetModelElement() {
+        // TODO: implement this method to return the 'Model Element' reference
+        // -> do not perform proxy resolution
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -243,16 +152,9 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
      * @generated
      */
     public Style getStyle() {
-        if (style != null && style.eIsProxy()) {
-            InternalEObject oldStyle = (InternalEObject) style;
-            style = (Style) eResolveProxy(oldStyle);
-            if (style != oldStyle) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            DiPackage.DIAGRAM_ELEMENT__STYLE, oldStyle, style));
-            }
-        }
-        return style;
+        Style style = basicGetStyle();
+        return style != null && style.eIsProxy() ? (Style) eResolveProxy((InternalEObject) style)
+                : style;
     }
 
     /**
@@ -261,75 +163,10 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
      * @generated
      */
     public Style basicGetStyle() {
-        return style;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setId(String newId) {
-        String oldId = id;
-        id = newId;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DiPackage.DIAGRAM_ELEMENT__ID,
-                    oldId, id));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
-            NotificationChain msgs) {
-        switch (featureID) {
-        case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
-            if (owningDiagram != null)
-                msgs = ((InternalEObject) owningDiagram).eInverseRemove(this,
-                        DiPackage.DIAGRAM__ROOT_ELEMENT, Diagram.class, msgs);
-            return basicSetOwningDiagram((Diagram) otherEnd, msgs);
-        case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
-            if (owningElement != null)
-                msgs = ((InternalEObject) owningElement).eInverseRemove(this,
-                        DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT, DiagramElement.class, msgs);
-            return basicSetOwningElement((DiagramElement) otherEnd, msgs);
-        case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
-            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOwnedElement())
-                    .basicAdd(otherEnd, msgs);
-        }
-        return super.eInverseAdd(otherEnd, featureID, msgs);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
-            NotificationChain msgs) {
-        switch (featureID) {
-        case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
-            return basicSetOwningDiagram(null, msgs);
-        case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
-            return basicSetOwningElement(null, msgs);
-        case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
-            return ((InternalEList<?>) getOwnedElement()).basicRemove(otherEnd, msgs);
-        }
-        return super.eInverseRemove(otherEnd, featureID, msgs);
+        // TODO: implement this method to return the 'Style' reference
+        // -> do not perform proxy resolution
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -341,9 +178,13 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
-            return getOwningDiagram();
+            if (resolve)
+                return getOwningDiagram();
+            return basicGetOwningDiagram();
         case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
-            return getOwningElement();
+            if (resolve)
+                return getOwningElement();
+            return basicGetOwningElement();
         case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
             return getOwnedElement();
         case DiPackage.DIAGRAM_ELEMENT__MODEL_ELEMENT:
@@ -354,40 +195,8 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
             if (resolve)
                 return getStyle();
             return basicGetStyle();
-        case DiPackage.DIAGRAM_ELEMENT__ID:
-            return getId();
         }
         return super.eGet(featureID, resolve, coreType);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-        case DiPackage.DIAGRAM_ELEMENT__ID:
-            setId((String) newValue);
-            return;
-        }
-        super.eSet(featureID, newValue);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void eUnset(int featureID) {
-        switch (featureID) {
-        case DiPackage.DIAGRAM_ELEMENT__ID:
-            setId(ID_EDEFAULT);
-            return;
-        }
-        super.eUnset(featureID);
     }
 
     /**
@@ -399,36 +208,17 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
-            return owningDiagram != null;
+            return basicGetOwningDiagram() != null;
         case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
-            return owningElement != null;
+            return basicGetOwningElement() != null;
         case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
-            return ownedElement != null && !ownedElement.isEmpty();
+            return !getOwnedElement().isEmpty();
         case DiPackage.DIAGRAM_ELEMENT__MODEL_ELEMENT:
-            return modelElement != null;
+            return basicGetModelElement() != null;
         case DiPackage.DIAGRAM_ELEMENT__STYLE:
-            return style != null;
-        case DiPackage.DIAGRAM_ELEMENT__ID:
-            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+            return basicGetStyle() != null;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (eIsProxy())
-            return super.toString();
-
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (id: ");
-        result.append(id);
-        result.append(')');
-        return result.toString();
     }
 
 } //DiagramElementImpl

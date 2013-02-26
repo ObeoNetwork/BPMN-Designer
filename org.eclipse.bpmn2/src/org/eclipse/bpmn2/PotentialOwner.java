@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getPotentialOwner()
- * @model extendedMetaData="name='tPotentialOwner' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface PotentialOwner extends HumanPerformer {

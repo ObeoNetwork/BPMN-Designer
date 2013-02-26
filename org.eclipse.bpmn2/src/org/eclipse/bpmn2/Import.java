@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getImport()
- * @model extendedMetaData="name='tImport' kind='empty'"
+ * @model
  * @generated
  */
 public interface Import extends EObject {
@@ -47,7 +47,6 @@ public interface Import extends EObject {
      * @see #setImportType(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getImport_ImportType()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='importType'"
      * @generated
      */
     String getImportType();
@@ -74,7 +73,6 @@ public interface Import extends EObject {
      * @see #setLocation(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getImport_Location()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='location'"
      * @generated
      */
     String getLocation();
@@ -101,7 +99,6 @@ public interface Import extends EObject {
      * @see #setNamespace(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getImport_Namespace()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='namespace'"
      * @generated
      */
     String getNamespace();

@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,25 +24,80 @@ import java.util.List;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.eclipse.bpmn2.Process#getProcessType <em>Process Type</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.Process#isIsClosed <em>Is Closed</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Process#getAuditing <em>Auditing</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Process#getMonitoring <em>Monitoring</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Process#getProperties <em>Properties</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.Process#getArtifacts <em>Artifacts</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.Process#getResources <em>Resources</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.Process#getCorrelationSubscriptions <em>Correlation Subscriptions</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Process#getSupports <em>Supports</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Process#getDefinitionalCollaborationRef <em>Definitional Collaboration Ref</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.Process#isIsClosed <em>Is Closed</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Process#isIsExecutable <em>Is Executable</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.Process#getProcessType <em>Process Type</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.Process#getResources <em>Resources</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.Process#getArtifacts <em>Artifacts</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.Process#getCorrelationSubscriptions <em>Correlation Subscriptions</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getProcess()
- * @model extendedMetaData="name='tProcess' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Process extends CallableElement, FlowElementsContainer {
+    /**
+     * Returns the value of the '<em><b>Process Type</b></em>' attribute.
+     * The literals are from the enumeration {@link org.eclipse.bpmn2.ProcessType}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Process Type</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Process Type</em>' attribute.
+     * @see org.eclipse.bpmn2.ProcessType
+     * @see #setProcessType(ProcessType)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_ProcessType()
+     * @model required="true" ordered="false"
+     * @generated
+     */
+    ProcessType getProcessType();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.Process#getProcessType <em>Process Type</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Process Type</em>' attribute.
+     * @see org.eclipse.bpmn2.ProcessType
+     * @see #getProcessType()
+     * @generated
+     */
+    void setProcessType(ProcessType value);
+
+    /**
+     * Returns the value of the '<em><b>Is Closed</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Is Closed</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Is Closed</em>' attribute.
+     * @see #setIsClosed(boolean)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_IsClosed()
+     * @model required="true" ordered="false"
+     * @generated
+     */
+    boolean isIsClosed();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.Process#isIsClosed <em>Is Closed</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Is Closed</em>' attribute.
+     * @see #isIsClosed()
+     * @generated
+     */
+    void setIsClosed(boolean value);
+
     /**
      * Returns the value of the '<em><b>Auditing</b></em>' containment reference.
      * <!-- begin-user-doc -->
@@ -55,7 +110,6 @@ public interface Process extends CallableElement, FlowElementsContainer {
      * @see #setAuditing(Auditing)
      * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_Auditing()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='auditing' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Auditing getAuditing();
@@ -82,7 +136,6 @@ public interface Process extends CallableElement, FlowElementsContainer {
      * @see #setMonitoring(Monitoring)
      * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_Monitoring()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='monitoring' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Monitoring getMonitoring();
@@ -109,61 +162,9 @@ public interface Process extends CallableElement, FlowElementsContainer {
      * @return the value of the '<em>Properties</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_Properties()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='property' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<Property> getProperties();
-
-    /**
-     * Returns the value of the '<em><b>Artifacts</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.Artifact}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Artifacts</em>' containment reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Artifacts</em>' containment reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_Artifacts()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='artifact' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#artifact'"
-     * @generated
-     */
-    List<Artifact> getArtifacts();
-
-    /**
-     * Returns the value of the '<em><b>Resources</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.ResourceRole}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Resources</em>' containment reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Resources</em>' containment reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_Resources()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='resourceRole' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#resourceRole'"
-     * @generated
-     */
-    List<ResourceRole> getResources();
-
-    /**
-     * Returns the value of the '<em><b>Correlation Subscriptions</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.CorrelationSubscription}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Correlation Subscriptions</em>' containment reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Correlation Subscriptions</em>' containment reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_CorrelationSubscriptions()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='correlationSubscription' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-     * @generated
-     */
-    List<CorrelationSubscription> getCorrelationSubscriptions();
+    EList<Property> getProperties();
 
     /**
      * Returns the value of the '<em><b>Supports</b></em>' reference list.
@@ -177,10 +178,9 @@ public interface Process extends CallableElement, FlowElementsContainer {
      * @return the value of the '<em>Supports</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_Supports()
      * @model ordered="false"
-     *        extendedMetaData="kind='element' name='supports' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<Process> getSupports();
+    EList<Process> getSupports();
 
     /**
      * Returns the value of the '<em><b>Definitional Collaboration Ref</b></em>' reference.
@@ -194,7 +194,6 @@ public interface Process extends CallableElement, FlowElementsContainer {
      * @see #setDefinitionalCollaborationRef(Collaboration)
      * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_DefinitionalCollaborationRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='definitionalCollaborationRef'"
      * @generated
      */
     Collaboration getDefinitionalCollaborationRef();
@@ -210,33 +209,6 @@ public interface Process extends CallableElement, FlowElementsContainer {
     void setDefinitionalCollaborationRef(Collaboration value);
 
     /**
-     * Returns the value of the '<em><b>Is Closed</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Is Closed</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Is Closed</em>' attribute.
-     * @see #setIsClosed(boolean)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_IsClosed()
-     * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='isClosed'"
-     * @generated
-     */
-    boolean isIsClosed();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.Process#isIsClosed <em>Is Closed</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Is Closed</em>' attribute.
-     * @see #isIsClosed()
-     * @generated
-     */
-    void setIsClosed(boolean value);
-
-    /**
      * Returns the value of the '<em><b>Is Executable</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
@@ -248,7 +220,6 @@ public interface Process extends CallableElement, FlowElementsContainer {
      * @see #setIsExecutable(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_IsExecutable()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='isExecutable'"
      * @generated
      */
     boolean isIsExecutable();
@@ -264,33 +235,51 @@ public interface Process extends CallableElement, FlowElementsContainer {
     void setIsExecutable(boolean value);
 
     /**
-     * Returns the value of the '<em><b>Process Type</b></em>' attribute.
-     * The literals are from the enumeration {@link org.eclipse.bpmn2.ProcessType}.
+     * Returns the value of the '<em><b>Resources</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.ResourceRole}.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Process Type</em>' attribute isn't clear,
+     * If the meaning of the '<em>Resources</em>' containment reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Process Type</em>' attribute.
-     * @see org.eclipse.bpmn2.ProcessType
-     * @see #setProcessType(ProcessType)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_ProcessType()
-     * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='processType'"
+     * @return the value of the '<em>Resources</em>' containment reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_Resources()
+     * @model containment="true" ordered="false"
      * @generated
      */
-    ProcessType getProcessType();
+    EList<ResourceRole> getResources();
 
     /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.Process#getProcessType <em>Process Type</em>}' attribute.
+     * Returns the value of the '<em><b>Artifacts</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.Artifact}.
      * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Artifacts</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Process Type</em>' attribute.
-     * @see org.eclipse.bpmn2.ProcessType
-     * @see #getProcessType()
+     * @return the value of the '<em>Artifacts</em>' containment reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_Artifacts()
+     * @model containment="true" ordered="false"
      * @generated
      */
-    void setProcessType(ProcessType value);
+    EList<Artifact> getArtifacts();
+
+    /**
+     * Returns the value of the '<em><b>Correlation Subscriptions</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.CorrelationSubscription}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Correlation Subscriptions</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Correlation Subscriptions</em>' containment reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_CorrelationSubscriptions()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<CorrelationSubscription> getCorrelationSubscriptions();
 
 } // Process

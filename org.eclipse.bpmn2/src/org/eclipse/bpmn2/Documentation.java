@@ -14,8 +14,6 @@
  */
 package org.eclipse.bpmn2;
 
-import org.eclipse.emf.ecore.util.FeatureMap;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Documentation</b></em>'.
@@ -24,34 +22,16 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.Documentation#getMixed <em>Mixed</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Documentation#getText <em>Text</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Documentation#getTextFormat <em>Text Format</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentation()
- * @model extendedMetaData="name='tDocumentation' kind='mixed'"
+ * @model
  * @generated
  */
 public interface Documentation extends BaseElement {
-    /**
-     * Returns the value of the '<em><b>Mixed</b></em>' attribute list.
-     * The list contents are of type {@link org.eclipse.emf.ecore.util.FeatureMap.Entry}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Mixed</em>' attribute list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Mixed</em>' attribute list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentation_Mixed()
-     * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
-     *        extendedMetaData="kind='elementWildcard' name=':mixed'"
-     * @generated
-     */
-    FeatureMap getMixed();
-
     /**
      * Returns the value of the '<em><b>Text</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -63,7 +43,7 @@ public interface Documentation extends BaseElement {
      * @return the value of the '<em>Text</em>' attribute.
      * @see #setText(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentation_Text()
-     * @model required="true" volatile="true" derived="true" ordered="false"
+     * @model required="true" ordered="false"
      * @generated
      */
     String getText();
@@ -91,7 +71,6 @@ public interface Documentation extends BaseElement {
      * @see #setTextFormat(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentation_TextFormat()
      * @model default="text/plain" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='textFormat'"
      * @generated
      */
     String getTextFormat();

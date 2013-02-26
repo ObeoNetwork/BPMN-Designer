@@ -17,10 +17,14 @@ package org.eclipse.bpmn2.impl;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Escalation;
 import org.eclipse.bpmn2.ItemDefinition;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,34 +33,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.impl.EscalationImpl#getEscalationCode <em>Escalation Code</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.EscalationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.EscalationImpl#getStructureRef <em>Structure Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.EscalationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.EscalationImpl#getEscalationCode <em>Escalation Code</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class EscalationImpl extends RootElementImpl implements Escalation {
+public class EscalationImpl extends EObjectImpl implements Escalation {
     /**
-     * The default value of the '{@link #getEscalationCode() <em>Escalation Code</em>}' attribute.
+     * The cached value of the '{@link #getStructureRef() <em>Structure Ref</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getEscalationCode()
+     * @see #getStructureRef()
      * @generated
      * @ordered
      */
-    protected static final String ESCALATION_CODE_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getEscalationCode() <em>Escalation Code</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getEscalationCode()
-     * @generated
-     * @ordered
-     */
-    protected String escalationCode = ESCALATION_CODE_EDEFAULT;
+    protected ItemDefinition structureRef;
 
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -79,14 +73,24 @@ public class EscalationImpl extends RootElementImpl implements Escalation {
     protected String name = NAME_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getStructureRef() <em>Structure Ref</em>}' reference.
+     * The default value of the '{@link #getEscalationCode() <em>Escalation Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getStructureRef()
+     * @see #getEscalationCode()
      * @generated
      * @ordered
      */
-    protected ItemDefinition structureRef;
+    protected static final String ESCALATION_CODE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getEscalationCode() <em>Escalation Code</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getEscalationCode()
+     * @generated
+     * @ordered
+     */
+    protected String escalationCode = ESCALATION_CODE_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -105,50 +109,6 @@ public class EscalationImpl extends RootElementImpl implements Escalation {
     @Override
     protected EClass eStaticClass() {
         return Bpmn2Package.Literals.ESCALATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public String getEscalationCode() {
-        return escalationCode;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setEscalationCode(String newEscalationCode) {
-        String oldEscalationCode = escalationCode;
-        escalationCode = newEscalationCode;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.ESCALATION__ESCALATION_CODE, oldEscalationCode, escalationCode));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setName(String newName) {
-        String oldName = name;
-        name = newName;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ESCALATION__NAME,
-                    oldName, name));
     }
 
     /**
@@ -196,17 +156,61 @@ public class EscalationImpl extends RootElementImpl implements Escalation {
      * <!-- end-user-doc -->
      * @generated
      */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ESCALATION__NAME,
+                    oldName, name));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getEscalationCode() {
+        return escalationCode;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setEscalationCode(String newEscalationCode) {
+        String oldEscalationCode = escalationCode;
+        escalationCode = newEscalationCode;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.ESCALATION__ESCALATION_CODE, oldEscalationCode, escalationCode));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case Bpmn2Package.ESCALATION__ESCALATION_CODE:
-            return getEscalationCode();
-        case Bpmn2Package.ESCALATION__NAME:
-            return getName();
         case Bpmn2Package.ESCALATION__STRUCTURE_REF:
             if (resolve)
                 return getStructureRef();
             return basicGetStructureRef();
+        case Bpmn2Package.ESCALATION__NAME:
+            return getName();
+        case Bpmn2Package.ESCALATION__ESCALATION_CODE:
+            return getEscalationCode();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -219,14 +223,14 @@ public class EscalationImpl extends RootElementImpl implements Escalation {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case Bpmn2Package.ESCALATION__ESCALATION_CODE:
-            setEscalationCode((String) newValue);
+        case Bpmn2Package.ESCALATION__STRUCTURE_REF:
+            setStructureRef((ItemDefinition) newValue);
             return;
         case Bpmn2Package.ESCALATION__NAME:
             setName((String) newValue);
             return;
-        case Bpmn2Package.ESCALATION__STRUCTURE_REF:
-            setStructureRef((ItemDefinition) newValue);
+        case Bpmn2Package.ESCALATION__ESCALATION_CODE:
+            setEscalationCode((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -240,14 +244,14 @@ public class EscalationImpl extends RootElementImpl implements Escalation {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.ESCALATION__ESCALATION_CODE:
-            setEscalationCode(ESCALATION_CODE_EDEFAULT);
+        case Bpmn2Package.ESCALATION__STRUCTURE_REF:
+            setStructureRef((ItemDefinition) null);
             return;
         case Bpmn2Package.ESCALATION__NAME:
             setName(NAME_EDEFAULT);
             return;
-        case Bpmn2Package.ESCALATION__STRUCTURE_REF:
-            setStructureRef((ItemDefinition) null);
+        case Bpmn2Package.ESCALATION__ESCALATION_CODE:
+            setEscalationCode(ESCALATION_CODE_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -261,13 +265,13 @@ public class EscalationImpl extends RootElementImpl implements Escalation {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+        case Bpmn2Package.ESCALATION__STRUCTURE_REF:
+            return structureRef != null;
+        case Bpmn2Package.ESCALATION__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         case Bpmn2Package.ESCALATION__ESCALATION_CODE:
             return ESCALATION_CODE_EDEFAULT == null ? escalationCode != null
                     : !ESCALATION_CODE_EDEFAULT.equals(escalationCode);
-        case Bpmn2Package.ESCALATION__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-        case Bpmn2Package.ESCALATION__STRUCTURE_REF:
-            return structureRef != null;
         }
         return super.eIsSet(featureID);
     }
@@ -283,10 +287,10 @@ public class EscalationImpl extends RootElementImpl implements Escalation {
             return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (escalationCode: ");
-        result.append(escalationCode);
-        result.append(", name: ");
+        result.append(" (name: ");
         result.append(name);
+        result.append(", escalationCode: ");
+        result.append(escalationCode);
         result.append(')');
         return result.toString();
     }

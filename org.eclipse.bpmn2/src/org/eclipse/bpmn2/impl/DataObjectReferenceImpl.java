@@ -20,10 +20,13 @@ import org.eclipse.bpmn2.DataObjectReference;
 import org.eclipse.bpmn2.DataState;
 import org.eclipse.bpmn2.ItemAwareElement;
 import org.eclipse.bpmn2.ItemDefinition;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -33,8 +36,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.impl.DataObjectReferenceImpl#getDataState <em>Data State</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.DataObjectReferenceImpl#getItemSubjectRef <em>Item Subject Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.DataObjectReferenceImpl#getDataState <em>Data State</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.DataObjectReferenceImpl#getDataObjectRef <em>Data Object Ref</em>}</li>
  * </ul>
  * </p>
@@ -42,16 +45,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class DataObjectReferenceImpl extends FlowElementImpl implements DataObjectReference {
-    /**
-     * The cached value of the '{@link #getDataState() <em>Data State</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getDataState()
-     * @generated
-     * @ordered
-     */
-    protected DataState dataState;
-
     /**
      * The cached value of the '{@link #getItemSubjectRef() <em>Item Subject Ref</em>}' reference.
      * <!-- begin-user-doc -->
@@ -61,6 +54,16 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements DataObje
      * @ordered
      */
     protected ItemDefinition itemSubjectRef;
+
+    /**
+     * The cached value of the '{@link #getDataState() <em>Data State</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getDataState()
+     * @generated
+     * @ordered
+     */
+    protected DataState dataState;
 
     /**
      * The cached value of the '{@link #getDataObjectRef() <em>Data Object Ref</em>}' reference.
@@ -89,6 +92,48 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements DataObje
     @Override
     protected EClass eStaticClass() {
         return Bpmn2Package.Literals.DATA_OBJECT_REFERENCE;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ItemDefinition getItemSubjectRef() {
+        if (itemSubjectRef != null && itemSubjectRef.eIsProxy()) {
+            InternalEObject oldItemSubjectRef = (InternalEObject) itemSubjectRef;
+            itemSubjectRef = (ItemDefinition) eResolveProxy(oldItemSubjectRef);
+            if (itemSubjectRef != oldItemSubjectRef) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF,
+                            oldItemSubjectRef, itemSubjectRef));
+            }
+        }
+        return itemSubjectRef;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ItemDefinition basicGetItemSubjectRef() {
+        return itemSubjectRef;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setItemSubjectRef(ItemDefinition newItemSubjectRef) {
+        ItemDefinition oldItemSubjectRef = itemSubjectRef;
+        itemSubjectRef = newItemSubjectRef;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF, oldItemSubjectRef,
+                    itemSubjectRef));
     }
 
     /**
@@ -146,18 +191,18 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements DataObje
      * <!-- end-user-doc -->
      * @generated
      */
-    public ItemDefinition getItemSubjectRef() {
-        if (itemSubjectRef != null && itemSubjectRef.eIsProxy()) {
-            InternalEObject oldItemSubjectRef = (InternalEObject) itemSubjectRef;
-            itemSubjectRef = (ItemDefinition) eResolveProxy(oldItemSubjectRef);
-            if (itemSubjectRef != oldItemSubjectRef) {
+    public DataObject getDataObjectRef() {
+        if (dataObjectRef != null && dataObjectRef.eIsProxy()) {
+            InternalEObject oldDataObjectRef = (InternalEObject) dataObjectRef;
+            dataObjectRef = (DataObject) eResolveProxy(oldDataObjectRef);
+            if (dataObjectRef != oldDataObjectRef) {
                 if (eNotificationRequired())
                     eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF,
-                            oldItemSubjectRef, itemSubjectRef));
+                            Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF, oldDataObjectRef,
+                            dataObjectRef));
             }
         }
-        return itemSubjectRef;
+        return dataObjectRef;
     }
 
     /**
@@ -165,30 +210,7 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements DataObje
      * <!-- end-user-doc -->
      * @generated
      */
-    public ItemDefinition basicGetItemSubjectRef() {
-        return itemSubjectRef;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setItemSubjectRef(ItemDefinition newItemSubjectRef) {
-        ItemDefinition oldItemSubjectRef = itemSubjectRef;
-        itemSubjectRef = newItemSubjectRef;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF, oldItemSubjectRef,
-                    itemSubjectRef));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public DataObject getDataObjectRef() {
+    public DataObject basicGetDataObjectRef() {
         return dataObjectRef;
     }
 
@@ -229,14 +251,16 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements DataObje
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE:
-            return getDataState();
         case Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF:
             if (resolve)
                 return getItemSubjectRef();
             return basicGetItemSubjectRef();
+        case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE:
+            return getDataState();
         case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF:
-            return getDataObjectRef();
+            if (resolve)
+                return getDataObjectRef();
+            return basicGetDataObjectRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -249,11 +273,11 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements DataObje
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE:
-            setDataState((DataState) newValue);
-            return;
         case Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF:
             setItemSubjectRef((ItemDefinition) newValue);
+            return;
+        case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE:
+            setDataState((DataState) newValue);
             return;
         case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF:
             setDataObjectRef((DataObject) newValue);
@@ -270,11 +294,11 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements DataObje
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE:
-            setDataState((DataState) null);
-            return;
         case Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF:
             setItemSubjectRef((ItemDefinition) null);
+            return;
+        case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE:
+            setDataState((DataState) null);
             return;
         case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF:
             setDataObjectRef((DataObject) null);
@@ -291,10 +315,10 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements DataObje
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE:
-            return dataState != null;
         case Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF:
             return itemSubjectRef != null;
+        case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE:
+            return dataState != null;
         case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF:
             return dataObjectRef != null;
         }
@@ -310,10 +334,10 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements DataObje
     public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == ItemAwareElement.class) {
             switch (derivedFeatureID) {
-            case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE:
-                return Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE;
             case Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF:
                 return Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF;
+            case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE:
+                return Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE;
             default:
                 return -1;
             }
@@ -330,10 +354,10 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements DataObje
     public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == ItemAwareElement.class) {
             switch (baseFeatureID) {
-            case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
-                return Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE;
             case Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF:
                 return Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF;
+            case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
+                return Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE;
             default:
                 return -1;
             }

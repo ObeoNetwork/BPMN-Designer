@@ -14,14 +14,13 @@
  */
 package org.eclipse.dd.di.impl;
 
-import java.util.List;
-
 import org.eclipse.dd.di.DiPackage;
 import org.eclipse.dd.di.Label;
 import org.eclipse.dd.di.LabeledShape;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,16 +36,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * @generated
  */
 public abstract class LabeledShapeImpl extends ShapeImpl implements LabeledShape {
-    /**
-     * The cached value of the '{@link #getOwnedLabel() <em>Owned Label</em>}' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getOwnedLabel()
-     * @generated
-     * @ordered
-     */
-    protected EList<Label> ownedLabel;
-
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -71,12 +60,12 @@ public abstract class LabeledShapeImpl extends ShapeImpl implements LabeledShape
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<Label> getOwnedLabel() {
-        if (ownedLabel == null) {
-            ownedLabel = new EObjectResolvingEList<Label>(Label.class, this,
-                    DiPackage.LABELED_SHAPE__OWNED_LABEL);
-        }
-        return ownedLabel;
+    public EList<Label> getOwnedLabel() {
+        // TODO: implement this method to return the 'Owned Label' reference list
+        // Ensure that you remove @generated or mark it @generated NOT
+        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -102,7 +91,7 @@ public abstract class LabeledShapeImpl extends ShapeImpl implements LabeledShape
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case DiPackage.LABELED_SHAPE__OWNED_LABEL:
-            return ownedLabel != null && !ownedLabel.isEmpty();
+            return !getOwnedLabel().isEmpty();
         }
         return super.eIsSet(featureID);
     }

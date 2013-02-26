@@ -23,13 +23,13 @@ package org.eclipse.bpmn2;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipse.bpmn2.SendTask#getImplementation <em>Implementation</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.SendTask#getMessageRef <em>Message Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.SendTask#getOperationRef <em>Operation Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.SendTask#getMessageRef <em>Message Ref</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getSendTask()
- * @model extendedMetaData="name='tSendTask' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface SendTask extends Task {
@@ -45,7 +45,6 @@ public interface SendTask extends Task {
      * @see #setImplementation(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getSendTask_Implementation()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='implementation'"
      * @generated
      */
     String getImplementation();
@@ -61,33 +60,6 @@ public interface SendTask extends Task {
     void setImplementation(String value);
 
     /**
-     * Returns the value of the '<em><b>Message Ref</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Message Ref</em>' reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Message Ref</em>' reference.
-     * @see #setMessageRef(Message)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getSendTask_MessageRef()
-     * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='messageRef'"
-     * @generated
-     */
-    Message getMessageRef();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.SendTask#getMessageRef <em>Message Ref</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Message Ref</em>' reference.
-     * @see #getMessageRef()
-     * @generated
-     */
-    void setMessageRef(Message value);
-
-    /**
      * Returns the value of the '<em><b>Operation Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <p>
@@ -99,7 +71,6 @@ public interface SendTask extends Task {
      * @see #setOperationRef(Operation)
      * @see org.eclipse.bpmn2.Bpmn2Package#getSendTask_OperationRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='operationRef'"
      * @generated
      */
     Operation getOperationRef();
@@ -113,5 +84,31 @@ public interface SendTask extends Task {
      * @generated
      */
     void setOperationRef(Operation value);
+
+    /**
+     * Returns the value of the '<em><b>Message Ref</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Message Ref</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Message Ref</em>' reference.
+     * @see #setMessageRef(Message)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getSendTask_MessageRef()
+     * @model ordered="false"
+     * @generated
+     */
+    Message getMessageRef();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.SendTask#getMessageRef <em>Message Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Message Ref</em>' reference.
+     * @see #getMessageRef()
+     * @generated
+     */
+    void setMessageRef(Message value);
 
 } // SendTask

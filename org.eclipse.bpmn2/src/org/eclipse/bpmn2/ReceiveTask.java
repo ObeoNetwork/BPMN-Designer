@@ -24,13 +24,13 @@ package org.eclipse.bpmn2;
  * <ul>
  *   <li>{@link org.eclipse.bpmn2.ReceiveTask#getImplementation <em>Implementation</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.ReceiveTask#isInstantiate <em>Instantiate</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.ReceiveTask#getMessageRef <em>Message Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.ReceiveTask#getOperationRef <em>Operation Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.ReceiveTask#getMessageRef <em>Message Ref</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getReceiveTask()
- * @model extendedMetaData="name='tReceiveTask' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ReceiveTask extends Task {
@@ -46,7 +46,6 @@ public interface ReceiveTask extends Task {
      * @see #setImplementation(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getReceiveTask_Implementation()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='implementation'"
      * @generated
      */
     String getImplementation();
@@ -74,7 +73,6 @@ public interface ReceiveTask extends Task {
      * @see #setInstantiate(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getReceiveTask_Instantiate()
      * @model default="false" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='instantiate'"
      * @generated
      */
     boolean isInstantiate();
@@ -90,33 +88,6 @@ public interface ReceiveTask extends Task {
     void setInstantiate(boolean value);
 
     /**
-     * Returns the value of the '<em><b>Message Ref</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Message Ref</em>' reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Message Ref</em>' reference.
-     * @see #setMessageRef(Message)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getReceiveTask_MessageRef()
-     * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='messageRef'"
-     * @generated
-     */
-    Message getMessageRef();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.ReceiveTask#getMessageRef <em>Message Ref</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Message Ref</em>' reference.
-     * @see #getMessageRef()
-     * @generated
-     */
-    void setMessageRef(Message value);
-
-    /**
      * Returns the value of the '<em><b>Operation Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <p>
@@ -128,7 +99,6 @@ public interface ReceiveTask extends Task {
      * @see #setOperationRef(Operation)
      * @see org.eclipse.bpmn2.Bpmn2Package#getReceiveTask_OperationRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='operationRef'"
      * @generated
      */
     Operation getOperationRef();
@@ -142,5 +112,31 @@ public interface ReceiveTask extends Task {
      * @generated
      */
     void setOperationRef(Operation value);
+
+    /**
+     * Returns the value of the '<em><b>Message Ref</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Message Ref</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Message Ref</em>' reference.
+     * @see #setMessageRef(Message)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getReceiveTask_MessageRef()
+     * @model ordered="false"
+     * @generated
+     */
+    Message getMessageRef();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.ReceiveTask#getMessageRef <em>Message Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Message Ref</em>' reference.
+     * @see #getMessageRef()
+     * @generated
+     */
+    void setMessageRef(Message value);
 
 } // ReceiveTask

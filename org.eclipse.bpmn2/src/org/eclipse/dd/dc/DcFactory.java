@@ -34,24 +34,6 @@ public interface DcFactory extends EFactory {
     DcFactory eINSTANCE = org.eclipse.dd.dc.impl.DcFactoryImpl.init();
 
     /**
-     * Returns a new object of class '<em>Document Root</em>'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return a new object of class '<em>Document Root</em>'.
-     * @generated
-     */
-    DocumentRoot createDocumentRoot();
-
-    /**
-     * Returns a new object of class '<em>Bounds</em>'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return a new object of class '<em>Bounds</em>'.
-     * @generated
-     */
-    Bounds createBounds();
-
-    /**
      * Returns a new object of class '<em>Font</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -68,6 +50,15 @@ public interface DcFactory extends EFactory {
      * @generated
      */
     Point createPoint();
+
+    /**
+     * Returns a new object of class '<em>Bounds</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Bounds</em>'.
+     * @generated
+     */
+    Bounds createBounds();
 
     /**
      * Returns the package supported by this factory.

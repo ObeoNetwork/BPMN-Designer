@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,52 +24,18 @@ import java.util.List;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.InputOutputSpecification#getDataInputs <em>Data Inputs</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.InputOutputSpecification#getDataOutputs <em>Data Outputs</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.InputOutputSpecification#getInputSets <em>Input Sets</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.InputOutputSpecification#getOutputSets <em>Output Sets</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.InputOutputSpecification#getDataInputs <em>Data Inputs</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.InputOutputSpecification#getDataOutputs <em>Data Outputs</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getInputOutputSpecification()
- * @model extendedMetaData="name='tInputOutputSpecification' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface InputOutputSpecification extends BaseElement {
-    /**
-     * Returns the value of the '<em><b>Data Inputs</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.DataInput}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Data Inputs</em>' containment reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Data Inputs</em>' containment reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getInputOutputSpecification_DataInputs()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='dataInput' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-     * @generated
-     */
-    List<DataInput> getDataInputs();
-
-    /**
-     * Returns the value of the '<em><b>Data Outputs</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.DataOutput}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Data Outputs</em>' containment reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Data Outputs</em>' containment reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getInputOutputSpecification_DataOutputs()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='dataOutput' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-     * @generated
-     */
-    List<DataOutput> getDataOutputs();
-
     /**
      * Returns the value of the '<em><b>Input Sets</b></em>' containment reference list.
      * The list contents are of type {@link org.eclipse.bpmn2.InputSet}.
@@ -82,10 +48,9 @@ public interface InputOutputSpecification extends BaseElement {
      * @return the value of the '<em>Input Sets</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getInputOutputSpecification_InputSets()
      * @model containment="true" required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='inputSet' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<InputSet> getInputSets();
+    EList<InputSet> getInputSets();
 
     /**
      * Returns the value of the '<em><b>Output Sets</b></em>' containment reference list.
@@ -99,9 +64,40 @@ public interface InputOutputSpecification extends BaseElement {
      * @return the value of the '<em>Output Sets</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getInputOutputSpecification_OutputSets()
      * @model containment="true" required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='outputSet' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<OutputSet> getOutputSets();
+    EList<OutputSet> getOutputSets();
+
+    /**
+     * Returns the value of the '<em><b>Data Inputs</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.DataInput}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Data Inputs</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Data Inputs</em>' containment reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getInputOutputSpecification_DataInputs()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<DataInput> getDataInputs();
+
+    /**
+     * Returns the value of the '<em><b>Data Outputs</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.DataOutput}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Data Outputs</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Data Outputs</em>' containment reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getInputOutputSpecification_DataOutputs()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<DataOutput> getDataOutputs();
 
 } // InputOutputSpecification

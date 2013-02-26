@@ -15,21 +15,26 @@
 package org.eclipse.dd.di.impl;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 
 import org.eclipse.dd.di.DiPackage;
 import org.eclipse.dd.di.DiagramElement;
 import org.eclipse.dd.di.Plane;
+
 import org.eclipse.dd.di.util.DiValidator;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -82,7 +87,7 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<DiagramElement> getPlaneElement() {
+    public EList<DiagramElement> getPlaneElement() {
         if (planeElement == null) {
             planeElement = new EObjectContainmentEList<DiagramElement>(DiagramElement.class, this,
                     DiPackage.PLANE__PLANE_ELEMENT);

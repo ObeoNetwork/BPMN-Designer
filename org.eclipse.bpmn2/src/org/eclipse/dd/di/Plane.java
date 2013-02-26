@@ -14,10 +14,10 @@
  */
 package org.eclipse.dd.di;
 
-import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,6 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *
  * @see org.eclipse.dd.di.DiPackage#getPlane()
  * @model abstract="true"
- *        extendedMetaData="name='Plane' kind='elementOnly'"
  * @generated
  */
 public interface Plane extends Node {
@@ -49,10 +48,9 @@ public interface Plane extends Node {
      * @return the value of the '<em>Plane Element</em>' containment reference list.
      * @see org.eclipse.dd.di.DiPackage#getPlane_PlaneElement()
      * @model containment="true"
-     *        extendedMetaData="kind='element' name='DiagramElement' namespace='http://www.omg.org/spec/DD/20100524/DI' group='http://www.omg.org/spec/DD/20100524/DI#DiagramElement'"
      * @generated
      */
-    List<DiagramElement> getPlaneElement();
+    EList<DiagramElement> getPlaneElement();
 
     /**
      * <!-- begin-user-doc -->

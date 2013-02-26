@@ -16,8 +16,11 @@ package org.eclipse.dd.dc.impl;
 
 import org.eclipse.dd.dc.DcPackage;
 import org.eclipse.dd.dc.Point;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 

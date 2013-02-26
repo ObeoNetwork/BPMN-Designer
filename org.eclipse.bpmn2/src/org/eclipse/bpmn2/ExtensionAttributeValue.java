@@ -14,9 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.util.FeatureMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +31,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getExtensionAttributeValue()
- * @model extendedMetaData="name='tExtensionElements' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ExtensionAttributeValue extends EObject {
@@ -46,12 +44,12 @@ public interface ExtensionAttributeValue extends EObject {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Value Ref</em>' reference.
-     * @see #setValueRef(Object)
+     * @see #setValueRef(EObject)
      * @see org.eclipse.bpmn2.Bpmn2Package#getExtensionAttributeValue_ValueRef()
-     * @model transient="true" derived="true" ordered="false"
+     * @model ordered="false"
      * @generated
      */
-    Object getValueRef();
+    EObject getValueRef();
 
     /**
      * Sets the value of the '{@link org.eclipse.bpmn2.ExtensionAttributeValue#getValueRef <em>Value Ref</em>}' reference.
@@ -61,24 +59,33 @@ public interface ExtensionAttributeValue extends EObject {
      * @see #getValueRef()
      * @generated
      */
-    void setValueRef(Object value);
+    void setValueRef(EObject value);
 
     /**
-     * Returns the value of the '<em><b>Value</b></em>' attribute list.
-     * The list contents are of type {@link org.eclipse.emf.ecore.util.FeatureMap.Entry}.
+     * Returns the value of the '<em><b>Value</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Value</em>' containment reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Value</em>' attribute list.
+     * @return the value of the '<em>Value</em>' containment reference.
+     * @see #setValue(EObject)
      * @see org.eclipse.bpmn2.Bpmn2Package#getExtensionAttributeValue_Value()
-     * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
-     *        extendedMetaData="kind='elementWildcard' wildcards='##other' name=':0' processing='lax'"
+     * @model containment="true" ordered="false"
      * @generated
      */
-    FeatureMap getValue();
+    EObject getValue();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.ExtensionAttributeValue#getValue <em>Value</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Value</em>' containment reference.
+     * @see #getValue()
+     * @generated
+     */
+    void setValue(EObject value);
 
     /**
      * Returns the value of the '<em><b>Extension Attribute Definition</b></em>' reference.
@@ -91,7 +98,7 @@ public interface ExtensionAttributeValue extends EObject {
      * @return the value of the '<em>Extension Attribute Definition</em>' reference.
      * @see #setExtensionAttributeDefinition(ExtensionAttributeDefinition)
      * @see org.eclipse.bpmn2.Bpmn2Package#getExtensionAttributeValue_ExtensionAttributeDefinition()
-     * @model required="true" transient="true" derived="true" ordered="false"
+     * @model required="true" ordered="false"
      * @generated
      */
     ExtensionAttributeDefinition getExtensionAttributeDefinition();

@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getBusinessRuleTask()
- * @model extendedMetaData="name='tBusinessRuleTask' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface BusinessRuleTask extends Task {
@@ -43,7 +43,6 @@ public interface BusinessRuleTask extends Task {
      * @see #setImplementation(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getBusinessRuleTask_Implementation()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='implementation'"
      * @generated
      */
     String getImplementation();

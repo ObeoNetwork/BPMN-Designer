@@ -18,10 +18,13 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Expression;
 import org.eclipse.bpmn2.ResourceParameter;
 import org.eclipse.bpmn2.ResourceParameterBinding;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
@@ -39,8 +42,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class ResourceParameterBindingImpl extends BaseElementImpl implements
-        ResourceParameterBinding {
+public class ResourceParameterBindingImpl extends EObjectImpl implements ResourceParameterBinding {
     /**
      * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
      * <!-- begin-user-doc -->

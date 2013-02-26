@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,25 +24,82 @@ import java.util.List;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#isIsSequential <em>Is Sequential</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getBehavior <em>Behavior</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getLoopCardinality <em>Loop Cardinality</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getLoopDataInputRef <em>Loop Data Input Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getLoopDataOutputRef <em>Loop Data Output Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getInputDataItem <em>Input Data Item</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getOutputDataItem <em>Output Data Item</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getComplexBehaviorDefinition <em>Complex Behavior Definition</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getCompletionCondition <em>Completion Condition</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getBehavior <em>Behavior</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#isIsSequential <em>Is Sequential</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getNoneBehaviorEventRef <em>None Behavior Event Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getComplexBehaviorDefinition <em>Complex Behavior Definition</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getOneBehaviorEventRef <em>One Behavior Event Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getNoneBehaviorEventRef <em>None Behavior Event Ref</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics()
- * @model extendedMetaData="name='tMultiInstanceLoopCharacteristics' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
+    /**
+     * Returns the value of the '<em><b>Is Sequential</b></em>' attribute.
+     * The default value is <code>"false"</code>.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Is Sequential</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Is Sequential</em>' attribute.
+     * @see #setIsSequential(boolean)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_IsSequential()
+     * @model default="false" required="true" ordered="false"
+     * @generated
+     */
+    boolean isIsSequential();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#isIsSequential <em>Is Sequential</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Is Sequential</em>' attribute.
+     * @see #isIsSequential()
+     * @generated
+     */
+    void setIsSequential(boolean value);
+
+    /**
+     * Returns the value of the '<em><b>Behavior</b></em>' attribute.
+     * The default value is <code>"All"</code>.
+     * The literals are from the enumeration {@link org.eclipse.bpmn2.MultiInstanceBehavior}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Behavior</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Behavior</em>' attribute.
+     * @see org.eclipse.bpmn2.MultiInstanceBehavior
+     * @see #setBehavior(MultiInstanceBehavior)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_Behavior()
+     * @model default="All" required="true" ordered="false"
+     * @generated
+     */
+    MultiInstanceBehavior getBehavior();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getBehavior <em>Behavior</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Behavior</em>' attribute.
+     * @see org.eclipse.bpmn2.MultiInstanceBehavior
+     * @see #getBehavior()
+     * @generated
+     */
+    void setBehavior(MultiInstanceBehavior value);
+
     /**
      * Returns the value of the '<em><b>Loop Cardinality</b></em>' containment reference.
      * <!-- begin-user-doc -->
@@ -55,7 +112,6 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * @see #setLoopCardinality(Expression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_LoopCardinality()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='loopCardinality' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Expression getLoopCardinality();
@@ -82,7 +138,6 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * @see #setLoopDataInputRef(ItemAwareElement)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_LoopDataInputRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='element' name='loopDataInputRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     ItemAwareElement getLoopDataInputRef();
@@ -109,7 +164,6 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * @see #setLoopDataOutputRef(ItemAwareElement)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_LoopDataOutputRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='element' name='loopDataOutputRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     ItemAwareElement getLoopDataOutputRef();
@@ -136,7 +190,6 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * @see #setInputDataItem(DataInput)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_InputDataItem()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='inputDataItem' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     DataInput getInputDataItem();
@@ -163,7 +216,6 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * @see #setOutputDataItem(DataOutput)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_OutputDataItem()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='outputDataItem' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     DataOutput getOutputDataItem();
@@ -179,23 +231,6 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
     void setOutputDataItem(DataOutput value);
 
     /**
-     * Returns the value of the '<em><b>Complex Behavior Definition</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.ComplexBehaviorDefinition}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Complex Behavior Definition</em>' containment reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Complex Behavior Definition</em>' containment reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_ComplexBehaviorDefinition()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='complexBehaviorDefinition' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-     * @generated
-     */
-    List<ComplexBehaviorDefinition> getComplexBehaviorDefinition();
-
-    /**
      * Returns the value of the '<em><b>Completion Condition</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <p>
@@ -207,7 +242,6 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * @see #setCompletionCondition(Expression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_CompletionCondition()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='completionCondition' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Expression getCompletionCondition();
@@ -223,90 +257,20 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
     void setCompletionCondition(Expression value);
 
     /**
-     * Returns the value of the '<em><b>Behavior</b></em>' attribute.
-     * The default value is <code>"All"</code>.
-     * The literals are from the enumeration {@link org.eclipse.bpmn2.MultiInstanceBehavior}.
+     * Returns the value of the '<em><b>Complex Behavior Definition</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.ComplexBehaviorDefinition}.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Behavior</em>' attribute isn't clear,
+     * If the meaning of the '<em>Complex Behavior Definition</em>' containment reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Behavior</em>' attribute.
-     * @see org.eclipse.bpmn2.MultiInstanceBehavior
-     * @see #setBehavior(MultiInstanceBehavior)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_Behavior()
-     * @model default="All" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='behavior'"
+     * @return the value of the '<em>Complex Behavior Definition</em>' containment reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_ComplexBehaviorDefinition()
+     * @model containment="true" ordered="false"
      * @generated
      */
-    MultiInstanceBehavior getBehavior();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getBehavior <em>Behavior</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Behavior</em>' attribute.
-     * @see org.eclipse.bpmn2.MultiInstanceBehavior
-     * @see #getBehavior()
-     * @generated
-     */
-    void setBehavior(MultiInstanceBehavior value);
-
-    /**
-     * Returns the value of the '<em><b>Is Sequential</b></em>' attribute.
-     * The default value is <code>"false"</code>.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Is Sequential</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Is Sequential</em>' attribute.
-     * @see #setIsSequential(boolean)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_IsSequential()
-     * @model default="false" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='isSequential'"
-     * @generated
-     */
-    boolean isIsSequential();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#isIsSequential <em>Is Sequential</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Is Sequential</em>' attribute.
-     * @see #isIsSequential()
-     * @generated
-     */
-    void setIsSequential(boolean value);
-
-    /**
-     * Returns the value of the '<em><b>None Behavior Event Ref</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>None Behavior Event Ref</em>' reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>None Behavior Event Ref</em>' reference.
-     * @see #setNoneBehaviorEventRef(EventDefinition)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_NoneBehaviorEventRef()
-     * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='noneBehaviorEventRef'"
-     * @generated
-     */
-    EventDefinition getNoneBehaviorEventRef();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getNoneBehaviorEventRef <em>None Behavior Event Ref</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>None Behavior Event Ref</em>' reference.
-     * @see #getNoneBehaviorEventRef()
-     * @generated
-     */
-    void setNoneBehaviorEventRef(EventDefinition value);
+    EList<ComplexBehaviorDefinition> getComplexBehaviorDefinition();
 
     /**
      * Returns the value of the '<em><b>One Behavior Event Ref</b></em>' reference.
@@ -320,7 +284,6 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * @see #setOneBehaviorEventRef(EventDefinition)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_OneBehaviorEventRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='oneBehaviorEventRef'"
      * @generated
      */
     EventDefinition getOneBehaviorEventRef();
@@ -334,5 +297,31 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * @generated
      */
     void setOneBehaviorEventRef(EventDefinition value);
+
+    /**
+     * Returns the value of the '<em><b>None Behavior Event Ref</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>None Behavior Event Ref</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>None Behavior Event Ref</em>' reference.
+     * @see #setNoneBehaviorEventRef(EventDefinition)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_NoneBehaviorEventRef()
+     * @model ordered="false"
+     * @generated
+     */
+    EventDefinition getNoneBehaviorEventRef();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics#getNoneBehaviorEventRef <em>None Behavior Event Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>None Behavior Event Ref</em>' reference.
+     * @see #getNoneBehaviorEventRef()
+     * @generated
+     */
+    void setNoneBehaviorEventRef(EventDefinition value);
 
 } // MultiInstanceLoopCharacteristics

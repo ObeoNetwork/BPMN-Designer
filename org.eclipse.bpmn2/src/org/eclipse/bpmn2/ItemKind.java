@@ -26,7 +26,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see org.eclipse.bpmn2.Bpmn2Package#getItemKind()
- * @model extendedMetaData="name='tItemKind'"
+ * @model
  * @generated
  */
 public enum ItemKind implements Enumerator {

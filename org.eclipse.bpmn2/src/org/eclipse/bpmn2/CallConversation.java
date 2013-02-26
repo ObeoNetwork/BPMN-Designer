@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,33 +24,16 @@ import java.util.List;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.CallConversation#getParticipantAssociations <em>Participant Associations</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.CallConversation#getCalledCollaborationRef <em>Called Collaboration Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.CallConversation#getParticipantAssociations <em>Participant Associations</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getCallConversation()
- * @model extendedMetaData="name='tCallConversation' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface CallConversation extends ConversationNode {
-    /**
-     * Returns the value of the '<em><b>Participant Associations</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.ParticipantAssociation}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Participant Associations</em>' containment reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Participant Associations</em>' containment reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getCallConversation_ParticipantAssociations()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='participantAssociation' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-     * @generated
-     */
-    List<ParticipantAssociation> getParticipantAssociations();
-
     /**
      * Returns the value of the '<em><b>Called Collaboration Ref</b></em>' reference.
      * <!-- begin-user-doc -->
@@ -63,7 +46,6 @@ public interface CallConversation extends ConversationNode {
      * @see #setCalledCollaborationRef(Collaboration)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCallConversation_CalledCollaborationRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='calledCollaborationRef'"
      * @generated
      */
     Collaboration getCalledCollaborationRef();
@@ -77,5 +59,21 @@ public interface CallConversation extends ConversationNode {
      * @generated
      */
     void setCalledCollaborationRef(Collaboration value);
+
+    /**
+     * Returns the value of the '<em><b>Participant Associations</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.ParticipantAssociation}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Participant Associations</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Participant Associations</em>' containment reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getCallConversation_ParticipantAssociations()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<ParticipantAssociation> getParticipantAssociations();
 
 } // CallConversation

@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +29,7 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getGlobalTask()
- * @model extendedMetaData="name='tGlobalTask' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface GlobalTask extends CallableElement {
@@ -45,9 +45,8 @@ public interface GlobalTask extends CallableElement {
      * @return the value of the '<em>Resources</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getGlobalTask_Resources()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='resourceRole' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#resourceRole'"
      * @generated
      */
-    List<ResourceRole> getResources();
+    EList<ResourceRole> getResources();
 
 } // GlobalTask

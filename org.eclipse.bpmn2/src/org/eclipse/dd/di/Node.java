@@ -22,7 +22,6 @@ package org.eclipse.dd.di;
  *
  * @see org.eclipse.dd.di.DiPackage#getNode()
  * @model abstract="true"
- *        extendedMetaData="name='Node' kind='elementOnly'"
  * @generated
  */
 public interface Node extends DiagramElement {

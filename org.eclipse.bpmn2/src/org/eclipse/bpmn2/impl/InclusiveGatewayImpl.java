@@ -17,8 +17,12 @@ package org.eclipse.bpmn2.impl;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.InclusiveGateway;
 import org.eclipse.bpmn2.SequenceFlow;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -70,6 +74,24 @@ public class InclusiveGatewayImpl extends GatewayImpl implements InclusiveGatewa
      * @generated
      */
     public SequenceFlow getDefault() {
+        if (default_ != null && default_.eIsProxy()) {
+            InternalEObject oldDefault = (InternalEObject) default_;
+            default_ = (SequenceFlow) eResolveProxy(oldDefault);
+            if (default_ != oldDefault) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.INCLUSIVE_GATEWAY__DEFAULT, oldDefault, default_));
+            }
+        }
+        return default_;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SequenceFlow basicGetDefault() {
         return default_;
     }
 
@@ -95,7 +117,9 @@ public class InclusiveGatewayImpl extends GatewayImpl implements InclusiveGatewa
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case Bpmn2Package.INCLUSIVE_GATEWAY__DEFAULT:
-            return getDefault();
+            if (resolve)
+                return getDefault();
+            return basicGetDefault();
         }
         return super.eGet(featureID, resolve, coreType);
     }

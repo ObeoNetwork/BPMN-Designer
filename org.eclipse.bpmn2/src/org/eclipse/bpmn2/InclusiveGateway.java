@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getInclusiveGateway()
- * @model extendedMetaData="name='tInclusiveGateway' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface InclusiveGateway extends Gateway {
@@ -42,8 +42,7 @@ public interface InclusiveGateway extends Gateway {
      * @return the value of the '<em>Default</em>' reference.
      * @see #setDefault(SequenceFlow)
      * @see org.eclipse.bpmn2.Bpmn2Package#getInclusiveGateway_Default()
-     * @model resolveProxies="false" ordered="false"
-     *        extendedMetaData="kind='attribute' name='default'"
+     * @model ordered="false"
      * @generated
      */
     SequenceFlow getDefault();

@@ -14,15 +14,16 @@
  */
 package org.eclipse.bpmn2.impl;
 
-import javax.xml.namespace.QName;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Extension;
 import org.eclipse.bpmn2.ExtensionDefinition;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
@@ -33,25 +34,14 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.impl.ExtensionImpl#getDefinition <em>Definition</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.ExtensionImpl#isMustUnderstand <em>Must Understand</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.ExtensionImpl#getXsdDefinition <em>Xsd Definition</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.ExtensionImpl#getDefinition <em>Definition</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class ExtensionImpl extends EObjectImpl implements Extension {
-    /**
-     * The cached value of the '{@link #getDefinition() <em>Definition</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getDefinition()
-     * @generated
-     * @ordered
-     */
-    protected ExtensionDefinition definition;
-
     /**
      * The default value of the '{@link #isMustUnderstand() <em>Must Understand</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -73,24 +63,14 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     protected boolean mustUnderstand = MUST_UNDERSTAND_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getXsdDefinition() <em>Xsd Definition</em>}' attribute.
+     * The cached value of the '{@link #getDefinition() <em>Definition</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getXsdDefinition()
+     * @see #getDefinition()
      * @generated
      * @ordered
      */
-    protected static final QName XSD_DEFINITION_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getXsdDefinition() <em>Xsd Definition</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getXsdDefinition()
-     * @generated
-     * @ordered
-     */
-    protected QName xsdDefinition = XSD_DEFINITION_EDEFAULT;
+    protected ExtensionDefinition definition;
 
     /**
      * <!-- begin-user-doc -->
@@ -109,6 +89,28 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     @Override
     protected EClass eStaticClass() {
         return Bpmn2Package.Literals.EXTENSION;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean isMustUnderstand() {
+        return mustUnderstand;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setMustUnderstand(boolean newMustUnderstand) {
+        boolean oldMustUnderstand = mustUnderstand;
+        mustUnderstand = newMustUnderstand;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.EXTENSION__MUST_UNDERSTAND, oldMustUnderstand, mustUnderstand));
     }
 
     /**
@@ -167,50 +169,6 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean isMustUnderstand() {
-        return mustUnderstand;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setMustUnderstand(boolean newMustUnderstand) {
-        boolean oldMustUnderstand = mustUnderstand;
-        mustUnderstand = newMustUnderstand;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.EXTENSION__MUST_UNDERSTAND, oldMustUnderstand, mustUnderstand));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public QName getXsdDefinition() {
-        return xsdDefinition;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setXsdDefinition(QName newXsdDefinition) {
-        QName oldXsdDefinition = xsdDefinition;
-        xsdDefinition = newXsdDefinition;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.EXTENSION__XSD_DEFINITION, oldXsdDefinition, xsdDefinition));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
@@ -229,12 +187,10 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case Bpmn2Package.EXTENSION__DEFINITION:
-            return getDefinition();
         case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
             return isMustUnderstand();
-        case Bpmn2Package.EXTENSION__XSD_DEFINITION:
-            return getXsdDefinition();
+        case Bpmn2Package.EXTENSION__DEFINITION:
+            return getDefinition();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -247,14 +203,11 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case Bpmn2Package.EXTENSION__DEFINITION:
-            setDefinition((ExtensionDefinition) newValue);
-            return;
         case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
             setMustUnderstand((Boolean) newValue);
             return;
-        case Bpmn2Package.EXTENSION__XSD_DEFINITION:
-            setXsdDefinition((QName) newValue);
+        case Bpmn2Package.EXTENSION__DEFINITION:
+            setDefinition((ExtensionDefinition) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -268,14 +221,11 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.EXTENSION__DEFINITION:
-            setDefinition((ExtensionDefinition) null);
-            return;
         case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
             setMustUnderstand(MUST_UNDERSTAND_EDEFAULT);
             return;
-        case Bpmn2Package.EXTENSION__XSD_DEFINITION:
-            setXsdDefinition(XSD_DEFINITION_EDEFAULT);
+        case Bpmn2Package.EXTENSION__DEFINITION:
+            setDefinition((ExtensionDefinition) null);
             return;
         }
         super.eUnset(featureID);
@@ -289,13 +239,10 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.EXTENSION__DEFINITION:
-            return definition != null;
         case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
             return mustUnderstand != MUST_UNDERSTAND_EDEFAULT;
-        case Bpmn2Package.EXTENSION__XSD_DEFINITION:
-            return XSD_DEFINITION_EDEFAULT == null ? xsdDefinition != null
-                    : !XSD_DEFINITION_EDEFAULT.equals(xsdDefinition);
+        case Bpmn2Package.EXTENSION__DEFINITION:
+            return definition != null;
         }
         return super.eIsSet(featureID);
     }
@@ -313,8 +260,6 @@ public class ExtensionImpl extends EObjectImpl implements Extension {
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (mustUnderstand: ");
         result.append(mustUnderstand);
-        result.append(", xsdDefinition: ");
-        result.append(xsdDefinition);
         result.append(')');
         return result.toString();
     }

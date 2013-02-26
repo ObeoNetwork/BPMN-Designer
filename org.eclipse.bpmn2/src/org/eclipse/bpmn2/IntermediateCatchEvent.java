@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getIntermediateCatchEvent()
- * @model extendedMetaData="name='tIntermediateCatchEvent' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface IntermediateCatchEvent extends CatchEvent {

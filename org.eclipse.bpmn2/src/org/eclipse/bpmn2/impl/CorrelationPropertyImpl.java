@@ -15,18 +15,22 @@
 package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.CorrelationProperty;
 import org.eclipse.bpmn2.CorrelationPropertyRetrievalExpression;
 import org.eclipse.bpmn2.ItemDefinition;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -110,7 +114,7 @@ public class CorrelationPropertyImpl extends RootElementImpl implements Correlat
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression() {
+    public EList<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression() {
         if (correlationPropertyRetrievalExpression == null) {
             correlationPropertyRetrievalExpression = new EObjectContainmentEList<CorrelationPropertyRetrievalExpression>(
                     CorrelationPropertyRetrievalExpression.class, this,

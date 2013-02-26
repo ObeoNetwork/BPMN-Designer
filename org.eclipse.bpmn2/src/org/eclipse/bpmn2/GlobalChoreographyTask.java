@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getGlobalChoreographyTask()
- * @model extendedMetaData="name='tGlobalChoreographyTask' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface GlobalChoreographyTask extends Choreography {
@@ -43,7 +43,6 @@ public interface GlobalChoreographyTask extends Choreography {
      * @see #setInitiatingParticipantRef(Participant)
      * @see org.eclipse.bpmn2.Bpmn2Package#getGlobalChoreographyTask_InitiatingParticipantRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='initiatingParticipantRef'"
      * @generated
      */
     Participant getInitiatingParticipantRef();

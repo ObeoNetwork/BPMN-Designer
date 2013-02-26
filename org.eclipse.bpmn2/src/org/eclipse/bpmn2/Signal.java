@@ -22,43 +22,16 @@ package org.eclipse.bpmn2;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.Signal#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Signal#getStructureRef <em>Structure Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.Signal#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getSignal()
- * @model extendedMetaData="name='tSignal' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Signal extends RootElement {
-    /**
-     * Returns the value of the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Name</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Name</em>' attribute.
-     * @see #setName(String)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getSignal_Name()
-     * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
-     * @generated
-     */
-    String getName();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.Signal#getName <em>Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Name</em>' attribute.
-     * @see #getName()
-     * @generated
-     */
-    void setName(String value);
-
     /**
      * Returns the value of the '<em><b>Structure Ref</b></em>' reference.
      * <!-- begin-user-doc -->
@@ -71,7 +44,6 @@ public interface Signal extends RootElement {
      * @see #setStructureRef(ItemDefinition)
      * @see org.eclipse.bpmn2.Bpmn2Package#getSignal_StructureRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='structureRef'"
      * @generated
      */
     ItemDefinition getStructureRef();
@@ -85,5 +57,31 @@ public interface Signal extends RootElement {
      * @generated
      */
     void setStructureRef(ItemDefinition value);
+
+    /**
+     * Returns the value of the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Name</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Name</em>' attribute.
+     * @see #setName(String)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getSignal_Name()
+     * @model required="true" ordered="false"
+     * @generated
+     */
+    String getName();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.Signal#getName <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Name</em>' attribute.
+     * @see #getName()
+     * @generated
+     */
+    void setName(String value);
 
 } // Signal

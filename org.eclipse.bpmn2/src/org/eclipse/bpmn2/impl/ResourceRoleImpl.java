@@ -15,19 +15,23 @@
 package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Resource;
 import org.eclipse.bpmn2.ResourceAssignmentExpression;
 import org.eclipse.bpmn2.ResourceParameterBinding;
 import org.eclipse.bpmn2.ResourceRole;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -162,7 +166,7 @@ public class ResourceRoleImpl extends BaseElementImpl implements ResourceRole {
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<ResourceParameterBinding> getResourceParameterBindings() {
+    public EList<ResourceParameterBinding> getResourceParameterBindings() {
         if (resourceParameterBindings == null) {
             resourceParameterBindings = new EObjectContainmentEList<ResourceParameterBinding>(
                     ResourceParameterBinding.class, this,

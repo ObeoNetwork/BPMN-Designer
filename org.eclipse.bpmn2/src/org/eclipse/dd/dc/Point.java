@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see org.eclipse.dd.dc.DcPackage#getPoint()
- * @model extendedMetaData="name='Point' kind='empty'"
+ * @model
  * @generated
  */
 public interface Point extends EObject {
@@ -47,7 +47,6 @@ public interface Point extends EObject {
      * @see #setX(float)
      * @see org.eclipse.dd.dc.DcPackage#getPoint_X()
      * @model default="0" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='x'"
      * @generated
      */
     float getX();
@@ -75,7 +74,6 @@ public interface Point extends EObject {
      * @see #setY(float)
      * @see org.eclipse.dd.dc.DcPackage#getPoint_Y()
      * @model default="0" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='y'"
      * @generated
      */
     float getY();

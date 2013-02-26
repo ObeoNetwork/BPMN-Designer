@@ -22,7 +22,6 @@ package org.eclipse.bpmn2;
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getLoopCharacteristics()
  * @model abstract="true"
- *        extendedMetaData="name='tLoopCharacteristics' kind='elementOnly'"
  * @generated
  */
 public interface LoopCharacteristics extends BaseElement {

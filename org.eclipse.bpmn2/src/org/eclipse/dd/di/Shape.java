@@ -30,7 +30,6 @@ import org.eclipse.dd.dc.Bounds;
  *
  * @see org.eclipse.dd.di.DiPackage#getShape()
  * @model abstract="true"
- *        extendedMetaData="name='Shape' kind='elementOnly'"
  * @generated
  */
 public interface Shape extends Node {
@@ -46,7 +45,6 @@ public interface Shape extends Node {
      * @see #setBounds(Bounds)
      * @see org.eclipse.dd.di.DiPackage#getShape_Bounds()
      * @model containment="true" required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='Bounds' namespace='http://www.omg.org/spec/DD/20100524/DC'"
      * @generated
      */
     Bounds getBounds();

@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,92 +24,19 @@ import java.util.List;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.Lane#getPartitionElement <em>Partition Element</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.Lane#getFlowNodeRefs <em>Flow Node Refs</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.Lane#getChildLaneSet <em>Child Lane Set</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Lane#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.Lane#getChildLaneSet <em>Child Lane Set</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Lane#getPartitionElementRef <em>Partition Element Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.Lane#getFlowNodeRefs <em>Flow Node Refs</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.Lane#getPartitionElement <em>Partition Element</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getLane()
- * @model extendedMetaData="name='tLane' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Lane extends BaseElement {
-    /**
-     * Returns the value of the '<em><b>Partition Element</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Partition Element</em>' containment reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Partition Element</em>' containment reference.
-     * @see #setPartitionElement(BaseElement)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getLane_PartitionElement()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='partitionElement' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-     * @generated
-     */
-    BaseElement getPartitionElement();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.Lane#getPartitionElement <em>Partition Element</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Partition Element</em>' containment reference.
-     * @see #getPartitionElement()
-     * @generated
-     */
-    void setPartitionElement(BaseElement value);
-
-    /**
-     * Returns the value of the '<em><b>Flow Node Refs</b></em>' reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.FlowNode}.
-     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.FlowNode#getLanes <em>Lanes</em>}'.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Flow Node Refs</em>' reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Flow Node Refs</em>' reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getLane_FlowNodeRefs()
-     * @see org.eclipse.bpmn2.FlowNode#getLanes
-     * @model opposite="lanes" resolveProxies="false" ordered="false"
-     *        extendedMetaData="kind='element' name='flowNodeRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-     * @generated
-     */
-    List<FlowNode> getFlowNodeRefs();
-
-    /**
-     * Returns the value of the '<em><b>Child Lane Set</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Child Lane Set</em>' containment reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Child Lane Set</em>' containment reference.
-     * @see #setChildLaneSet(LaneSet)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getLane_ChildLaneSet()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='childLaneSet' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-     * @generated
-     */
-    LaneSet getChildLaneSet();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.Lane#getChildLaneSet <em>Child Lane Set</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Child Lane Set</em>' containment reference.
-     * @see #getChildLaneSet()
-     * @generated
-     */
-    void setChildLaneSet(LaneSet value);
-
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -122,7 +49,6 @@ public interface Lane extends BaseElement {
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getLane_Name()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
     String getName();
@@ -138,6 +64,32 @@ public interface Lane extends BaseElement {
     void setName(String value);
 
     /**
+     * Returns the value of the '<em><b>Child Lane Set</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Child Lane Set</em>' containment reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Child Lane Set</em>' containment reference.
+     * @see #setChildLaneSet(LaneSet)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getLane_ChildLaneSet()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    LaneSet getChildLaneSet();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.Lane#getChildLaneSet <em>Child Lane Set</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Child Lane Set</em>' containment reference.
+     * @see #getChildLaneSet()
+     * @generated
+     */
+    void setChildLaneSet(LaneSet value);
+
+    /**
      * Returns the value of the '<em><b>Partition Element Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <p>
@@ -149,7 +101,6 @@ public interface Lane extends BaseElement {
      * @see #setPartitionElementRef(BaseElement)
      * @see org.eclipse.bpmn2.Bpmn2Package#getLane_PartitionElementRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='partitionElementRef'"
      * @generated
      */
     BaseElement getPartitionElementRef();
@@ -163,5 +114,49 @@ public interface Lane extends BaseElement {
      * @generated
      */
     void setPartitionElementRef(BaseElement value);
+
+    /**
+     * Returns the value of the '<em><b>Flow Node Refs</b></em>' reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.FlowNode}.
+     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.FlowNode#getLanes <em>Lanes</em>}'.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Flow Node Refs</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Flow Node Refs</em>' reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getLane_FlowNodeRefs()
+     * @see org.eclipse.bpmn2.FlowNode#getLanes
+     * @model opposite="lanes" volatile="true" derived="true" ordered="false"
+     * @generated
+     */
+    EList<FlowNode> getFlowNodeRefs();
+
+    /**
+     * Returns the value of the '<em><b>Partition Element</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Partition Element</em>' containment reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Partition Element</em>' containment reference.
+     * @see #setPartitionElement(BaseElement)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getLane_PartitionElement()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    BaseElement getPartitionElement();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.Lane#getPartitionElement <em>Partition Element</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Partition Element</em>' containment reference.
+     * @see #getPartitionElement()
+     * @generated
+     */
+    void setPartitionElement(BaseElement value);
 
 } // Lane

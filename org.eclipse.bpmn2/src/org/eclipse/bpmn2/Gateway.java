@@ -28,7 +28,6 @@ package org.eclipse.bpmn2;
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getGateway()
  * @model abstract="true"
- *        extendedMetaData="name='tGateway' kind='elementOnly'"
  * @generated
  */
 public interface Gateway extends FlowNode {
@@ -47,7 +46,6 @@ public interface Gateway extends FlowNode {
      * @see #setGatewayDirection(GatewayDirection)
      * @see org.eclipse.bpmn2.Bpmn2Package#getGateway_GatewayDirection()
      * @model default="unspecified" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='gatewayDirection'"
      * @generated
      */
     GatewayDirection getGatewayDirection();

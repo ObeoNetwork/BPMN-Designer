@@ -28,7 +28,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationPropertyBinding()
- * @model extendedMetaData="name='tCorrelationPropertyBinding' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface CorrelationPropertyBinding extends BaseElement {
@@ -44,7 +44,6 @@ public interface CorrelationPropertyBinding extends BaseElement {
      * @see #setDataPath(FormalExpression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationPropertyBinding_DataPath()
      * @model containment="true" required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='dataPath' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     FormalExpression getDataPath();
@@ -71,7 +70,6 @@ public interface CorrelationPropertyBinding extends BaseElement {
      * @see #setCorrelationPropertyRef(CorrelationProperty)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationPropertyBinding_CorrelationPropertyRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='correlationPropertyRef'"
      * @generated
      */
     CorrelationProperty getCorrelationPropertyRef();

@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getDataState()
- * @model extendedMetaData="name='tDataState' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface DataState extends BaseElement {
@@ -43,7 +43,6 @@ public interface DataState extends BaseElement {
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataState_Name()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
     String getName();

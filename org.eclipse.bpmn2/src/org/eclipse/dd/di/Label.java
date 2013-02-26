@@ -30,7 +30,6 @@ import org.eclipse.dd.dc.Bounds;
  *
  * @see org.eclipse.dd.di.DiPackage#getLabel()
  * @model abstract="true"
- *        extendedMetaData="name='Label' kind='elementOnly'"
  * @generated
  */
 public interface Label extends Node {
@@ -46,7 +45,6 @@ public interface Label extends Node {
      * @see #setBounds(Bounds)
      * @see org.eclipse.dd.di.DiPackage#getLabel_Bounds()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='Bounds' namespace='http://www.omg.org/spec/DD/20100524/DC'"
      * @generated
      */
     Bounds getBounds();

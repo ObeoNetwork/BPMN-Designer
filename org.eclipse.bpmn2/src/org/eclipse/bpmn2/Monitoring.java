@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getMonitoring()
- * @model extendedMetaData="name='tMonitoring' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Monitoring extends BaseElement {

@@ -17,14 +17,12 @@ package org.eclipse.dd.dc.util;
 import java.util.Map;
 
 import org.eclipse.dd.dc.*;
-import org.eclipse.dd.dc.Bounds;
-import org.eclipse.dd.dc.DcPackage;
-import org.eclipse.dd.dc.DocumentRoot;
-import org.eclipse.dd.dc.Font;
-import org.eclipse.dd.dc.Point;
+
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.util.EObjectValidator;
 
 /**
@@ -108,37 +106,15 @@ public class DcValidator extends EObjectValidator {
     protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics,
             Map<Object, Object> context) {
         switch (classifierID) {
-        case DcPackage.DOCUMENT_ROOT:
-            return validateDocumentRoot((DocumentRoot) value, diagnostics, context);
-        case DcPackage.BOUNDS:
-            return validateBounds((Bounds) value, diagnostics, context);
         case DcPackage.FONT:
             return validateFont((Font) value, diagnostics, context);
         case DcPackage.POINT:
             return validatePoint((Point) value, diagnostics, context);
+        case DcPackage.BOUNDS:
+            return validateBounds((Bounds) value, diagnostics, context);
         default:
             return true;
         }
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public boolean validateDocumentRoot(DocumentRoot documentRoot, DiagnosticChain diagnostics,
-            Map<Object, Object> context) {
-        return validate_EveryDefaultConstraint(documentRoot, diagnostics, context);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public boolean validateBounds(Bounds bounds, DiagnosticChain diagnostics,
-            Map<Object, Object> context) {
-        return validate_EveryDefaultConstraint(bounds, diagnostics, context);
     }
 
     /**
@@ -184,6 +160,16 @@ public class DcValidator extends EObjectValidator {
     public boolean validatePoint(Point point, DiagnosticChain diagnostics,
             Map<Object, Object> context) {
         return validate_EveryDefaultConstraint(point, diagnostics, context);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean validateBounds(Bounds bounds, DiagnosticChain diagnostics,
+            Map<Object, Object> context) {
+        return validate_EveryDefaultConstraint(bounds, diagnostics, context);
     }
 
     /**

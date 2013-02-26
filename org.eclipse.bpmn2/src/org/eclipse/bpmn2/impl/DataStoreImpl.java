@@ -16,8 +16,11 @@ package org.eclipse.bpmn2.impl;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.DataStore;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -27,15 +30,35 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipse.bpmn2.impl.DataStoreImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.DataStoreImpl#getCapacity <em>Capacity</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.DataStoreImpl#isIsUnlimited <em>Is Unlimited</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.DataStoreImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
+    /**
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected static final String NAME_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected String name = NAME_EDEFAULT;
+
     /**
      * The default value of the '{@link #getCapacity() <em>Capacity</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -77,26 +100,6 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
     protected boolean isUnlimited = IS_UNLIMITED_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getName()
-     * @generated
-     * @ordered
-     */
-    protected static final String NAME_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getName()
-     * @generated
-     * @ordered
-     */
-    protected String name = NAME_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -113,6 +116,28 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
     @Override
     protected EClass eStaticClass() {
         return Bpmn2Package.Literals.DATA_STORE;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_STORE__NAME,
+                    oldName, name));
     }
 
     /**
@@ -164,37 +189,15 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setName(String newName) {
-        String oldName = name;
-        name = newName;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.DATA_STORE__NAME,
-                    oldName, name));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+        case Bpmn2Package.DATA_STORE__NAME:
+            return getName();
         case Bpmn2Package.DATA_STORE__CAPACITY:
             return getCapacity();
         case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
             return isIsUnlimited();
-        case Bpmn2Package.DATA_STORE__NAME:
-            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -207,14 +210,14 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+        case Bpmn2Package.DATA_STORE__NAME:
+            setName((String) newValue);
+            return;
         case Bpmn2Package.DATA_STORE__CAPACITY:
             setCapacity((Integer) newValue);
             return;
         case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
             setIsUnlimited((Boolean) newValue);
-            return;
-        case Bpmn2Package.DATA_STORE__NAME:
-            setName((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -228,14 +231,14 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
+        case Bpmn2Package.DATA_STORE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         case Bpmn2Package.DATA_STORE__CAPACITY:
             setCapacity(CAPACITY_EDEFAULT);
             return;
         case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
             setIsUnlimited(IS_UNLIMITED_EDEFAULT);
-            return;
-        case Bpmn2Package.DATA_STORE__NAME:
-            setName(NAME_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -249,12 +252,12 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+        case Bpmn2Package.DATA_STORE__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         case Bpmn2Package.DATA_STORE__CAPACITY:
             return capacity != CAPACITY_EDEFAULT;
         case Bpmn2Package.DATA_STORE__IS_UNLIMITED:
             return isUnlimited != IS_UNLIMITED_EDEFAULT;
-        case Bpmn2Package.DATA_STORE__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }
@@ -270,12 +273,12 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
             return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (capacity: ");
+        result.append(" (name: ");
+        result.append(name);
+        result.append(", capacity: ");
         result.append(capacity);
         result.append(", isUnlimited: ");
         result.append(isUnlimited);
-        result.append(", name: ");
-        result.append(name);
         result.append(')');
         return result.toString();
     }

@@ -28,7 +28,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getAssignment()
- * @model extendedMetaData="name='tAssignment' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Assignment extends BaseElement {
@@ -44,7 +44,6 @@ public interface Assignment extends BaseElement {
      * @see #setFrom(Expression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getAssignment_From()
      * @model containment="true" required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='from' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Expression getFrom();
@@ -71,7 +70,6 @@ public interface Assignment extends BaseElement {
      * @see #setTo(Expression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getAssignment_To()
      * @model containment="true" required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='to' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Expression getTo();

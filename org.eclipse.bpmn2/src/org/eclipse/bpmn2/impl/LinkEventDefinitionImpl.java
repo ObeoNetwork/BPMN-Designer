@@ -15,16 +15,20 @@
 package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.LinkEventDefinition;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -35,35 +39,15 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.impl.LinkEventDefinitionImpl#getSource <em>Source</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.LinkEventDefinitionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.LinkEventDefinitionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.LinkEventDefinitionImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.LinkEventDefinitionImpl#getSource <em>Source</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class LinkEventDefinitionImpl extends EventDefinitionImpl implements LinkEventDefinition {
-    /**
-     * The cached value of the '{@link #getSource() <em>Source</em>}' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getSource()
-     * @generated
-     * @ordered
-     */
-    protected EList<LinkEventDefinition> source;
-
-    /**
-     * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getTarget()
-     * @generated
-     * @ordered
-     */
-    protected LinkEventDefinition target;
-
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -83,6 +67,26 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
      * @ordered
      */
     protected String name = NAME_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getTarget()
+     * @generated
+     * @ordered
+     */
+    protected LinkEventDefinition target;
+
+    /**
+     * The cached value of the '{@link #getSource() <em>Source</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSource()
+     * @generated
+     * @ordered
+     */
+    protected EList<LinkEventDefinition> source;
 
     /**
      * <!-- begin-user-doc -->
@@ -108,13 +112,21 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<LinkEventDefinition> getSource() {
-        if (source == null) {
-            source = new EObjectWithInverseResolvingEList<LinkEventDefinition>(
-                    LinkEventDefinition.class, this, Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE,
-                    Bpmn2Package.LINK_EVENT_DEFINITION__TARGET);
-        }
-        return source;
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.LINK_EVENT_DEFINITION__NAME, oldName, name));
     }
 
     /**
@@ -192,21 +204,13 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
      * <!-- end-user-doc -->
      * @generated
      */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setName(String newName) {
-        String oldName = name;
-        name = newName;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.LINK_EVENT_DEFINITION__NAME, oldName, name));
+    public EList<LinkEventDefinition> getSource() {
+        if (source == null) {
+            source = new EObjectWithInverseResolvingEList<LinkEventDefinition>(
+                    LinkEventDefinition.class, this, Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE,
+                    Bpmn2Package.LINK_EVENT_DEFINITION__TARGET);
+        }
+        return source;
     }
 
     /**
@@ -219,15 +223,15 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
         switch (featureID) {
-        case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
-            return ((InternalEList<InternalEObject>) (InternalEList<?>) getSource()).basicAdd(
-                    otherEnd, msgs);
         case Bpmn2Package.LINK_EVENT_DEFINITION__TARGET:
             if (target != null)
                 msgs = ((InternalEObject) target)
                         .eInverseRemove(this, Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE,
                                 LinkEventDefinition.class, msgs);
             return basicSetTarget((LinkEventDefinition) otherEnd, msgs);
+        case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getSource()).basicAdd(
+                    otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -241,10 +245,10 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
         switch (featureID) {
-        case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
-            return ((InternalEList<?>) getSource()).basicRemove(otherEnd, msgs);
         case Bpmn2Package.LINK_EVENT_DEFINITION__TARGET:
             return basicSetTarget(null, msgs);
+        case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
+            return ((InternalEList<?>) getSource()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -257,14 +261,14 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
-            return getSource();
+        case Bpmn2Package.LINK_EVENT_DEFINITION__NAME:
+            return getName();
         case Bpmn2Package.LINK_EVENT_DEFINITION__TARGET:
             if (resolve)
                 return getTarget();
             return basicGetTarget();
-        case Bpmn2Package.LINK_EVENT_DEFINITION__NAME:
-            return getName();
+        case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
+            return getSource();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -278,15 +282,15 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
-            getSource().clear();
-            getSource().addAll((Collection<? extends LinkEventDefinition>) newValue);
+        case Bpmn2Package.LINK_EVENT_DEFINITION__NAME:
+            setName((String) newValue);
             return;
         case Bpmn2Package.LINK_EVENT_DEFINITION__TARGET:
             setTarget((LinkEventDefinition) newValue);
             return;
-        case Bpmn2Package.LINK_EVENT_DEFINITION__NAME:
-            setName((String) newValue);
+        case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
+            getSource().clear();
+            getSource().addAll((Collection<? extends LinkEventDefinition>) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -300,14 +304,14 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
-            getSource().clear();
+        case Bpmn2Package.LINK_EVENT_DEFINITION__NAME:
+            setName(NAME_EDEFAULT);
             return;
         case Bpmn2Package.LINK_EVENT_DEFINITION__TARGET:
             setTarget((LinkEventDefinition) null);
             return;
-        case Bpmn2Package.LINK_EVENT_DEFINITION__NAME:
-            setName(NAME_EDEFAULT);
+        case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
+            getSource().clear();
             return;
         }
         super.eUnset(featureID);
@@ -321,12 +325,12 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements Link
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
-            return source != null && !source.isEmpty();
-        case Bpmn2Package.LINK_EVENT_DEFINITION__TARGET:
-            return target != null;
         case Bpmn2Package.LINK_EVENT_DEFINITION__NAME:
             return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.LINK_EVENT_DEFINITION__TARGET:
+            return target != null;
+        case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
+            return source != null && !source.isEmpty();
         }
         return super.eIsSet(featureID);
     }

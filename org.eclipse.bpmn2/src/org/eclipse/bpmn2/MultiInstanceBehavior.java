@@ -26,7 +26,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceBehavior()
- * @model extendedMetaData="name='tMultiInstanceFlowCondition'"
+ * @model
  * @generated
  */
 public enum MultiInstanceBehavior implements Enumerator {

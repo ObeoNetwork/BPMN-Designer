@@ -16,6 +16,7 @@ package org.eclipse.dd.di.impl;
 
 import org.eclipse.dd.di.DiPackage;
 import org.eclipse.dd.di.Node;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

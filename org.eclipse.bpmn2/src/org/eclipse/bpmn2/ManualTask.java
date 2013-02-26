@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getManualTask()
- * @model extendedMetaData="name='tManualTask' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ManualTask extends Task {

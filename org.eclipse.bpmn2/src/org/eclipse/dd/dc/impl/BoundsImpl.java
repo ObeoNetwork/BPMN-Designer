@@ -16,8 +16,11 @@ package org.eclipse.dd.dc.impl;
 
 import org.eclipse.dd.dc.Bounds;
 import org.eclipse.dd.dc.DcPackage;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
@@ -28,56 +31,16 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.dd.dc.impl.BoundsImpl#getHeight <em>Height</em>}</li>
- *   <li>{@link org.eclipse.dd.dc.impl.BoundsImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipse.dd.dc.impl.BoundsImpl#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.dd.dc.impl.BoundsImpl#getY <em>Y</em>}</li>
+ *   <li>{@link org.eclipse.dd.dc.impl.BoundsImpl#getWidth <em>Width</em>}</li>
+ *   <li>{@link org.eclipse.dd.dc.impl.BoundsImpl#getHeight <em>Height</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class BoundsImpl extends EObjectImpl implements Bounds {
-    /**
-     * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getHeight()
-     * @generated
-     * @ordered
-     */
-    protected static final float HEIGHT_EDEFAULT = 0.0F;
-
-    /**
-     * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getHeight()
-     * @generated
-     * @ordered
-     */
-    protected float height = HEIGHT_EDEFAULT;
-
-    /**
-     * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getWidth()
-     * @generated
-     * @ordered
-     */
-    protected static final float WIDTH_EDEFAULT = 0.0F;
-
-    /**
-     * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getWidth()
-     * @generated
-     * @ordered
-     */
-    protected float width = WIDTH_EDEFAULT;
-
     /**
      * The default value of the '{@link #getX() <em>X</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -119,6 +82,46 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
     protected float y = Y_EDEFAULT;
 
     /**
+     * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWidth()
+     * @generated
+     * @ordered
+     */
+    protected static final float WIDTH_EDEFAULT = 0.0F;
+
+    /**
+     * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWidth()
+     * @generated
+     * @ordered
+     */
+    protected float width = WIDTH_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getHeight()
+     * @generated
+     * @ordered
+     */
+    protected static final float HEIGHT_EDEFAULT = 0.0F;
+
+    /**
+     * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getHeight()
+     * @generated
+     * @ordered
+     */
+    protected float height = HEIGHT_EDEFAULT;
+
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -135,50 +138,6 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
     @Override
     protected EClass eStaticClass() {
         return DcPackage.Literals.BOUNDS;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public float getHeight() {
-        return height;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setHeight(float newHeight) {
-        float oldHeight = height;
-        height = newHeight;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.BOUNDS__HEIGHT,
-                    oldHeight, height));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public float getWidth() {
-        return width;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setWidth(float newWidth) {
-        float oldWidth = width;
-        width = newWidth;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.BOUNDS__WIDTH,
-                    oldWidth, width));
     }
 
     /**
@@ -228,17 +187,61 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
      * <!-- end-user-doc -->
      * @generated
      */
+    public float getWidth() {
+        return width;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setWidth(float newWidth) {
+        float oldWidth = width;
+        width = newWidth;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.BOUNDS__WIDTH,
+                    oldWidth, width));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public float getHeight() {
+        return height;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setHeight(float newHeight) {
+        float oldHeight = height;
+        height = newHeight;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.BOUNDS__HEIGHT,
+                    oldHeight, height));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case DcPackage.BOUNDS__HEIGHT:
-            return getHeight();
-        case DcPackage.BOUNDS__WIDTH:
-            return getWidth();
         case DcPackage.BOUNDS__X:
             return getX();
         case DcPackage.BOUNDS__Y:
             return getY();
+        case DcPackage.BOUNDS__WIDTH:
+            return getWidth();
+        case DcPackage.BOUNDS__HEIGHT:
+            return getHeight();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -251,17 +254,17 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case DcPackage.BOUNDS__HEIGHT:
-            setHeight((Float) newValue);
-            return;
-        case DcPackage.BOUNDS__WIDTH:
-            setWidth((Float) newValue);
-            return;
         case DcPackage.BOUNDS__X:
             setX((Float) newValue);
             return;
         case DcPackage.BOUNDS__Y:
             setY((Float) newValue);
+            return;
+        case DcPackage.BOUNDS__WIDTH:
+            setWidth((Float) newValue);
+            return;
+        case DcPackage.BOUNDS__HEIGHT:
+            setHeight((Float) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -275,17 +278,17 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case DcPackage.BOUNDS__HEIGHT:
-            setHeight(HEIGHT_EDEFAULT);
-            return;
-        case DcPackage.BOUNDS__WIDTH:
-            setWidth(WIDTH_EDEFAULT);
-            return;
         case DcPackage.BOUNDS__X:
             setX(X_EDEFAULT);
             return;
         case DcPackage.BOUNDS__Y:
             setY(Y_EDEFAULT);
+            return;
+        case DcPackage.BOUNDS__WIDTH:
+            setWidth(WIDTH_EDEFAULT);
+            return;
+        case DcPackage.BOUNDS__HEIGHT:
+            setHeight(HEIGHT_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -299,14 +302,14 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case DcPackage.BOUNDS__HEIGHT:
-            return height != HEIGHT_EDEFAULT;
-        case DcPackage.BOUNDS__WIDTH:
-            return width != WIDTH_EDEFAULT;
         case DcPackage.BOUNDS__X:
             return x != X_EDEFAULT;
         case DcPackage.BOUNDS__Y:
             return y != Y_EDEFAULT;
+        case DcPackage.BOUNDS__WIDTH:
+            return width != WIDTH_EDEFAULT;
+        case DcPackage.BOUNDS__HEIGHT:
+            return height != HEIGHT_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -322,14 +325,14 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
             return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (height: ");
-        result.append(height);
-        result.append(", width: ");
-        result.append(width);
-        result.append(", x: ");
+        result.append(" (x: ");
         result.append(x);
         result.append(", y: ");
         result.append(y);
+        result.append(", width: ");
+        result.append(width);
+        result.append(", height: ");
+        result.append(height);
         result.append(')');
         return result.toString();
     }

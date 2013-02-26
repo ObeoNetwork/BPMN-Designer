@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getIntermediateThrowEvent()
- * @model extendedMetaData="name='tIntermediateThrowEvent' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface IntermediateThrowEvent extends ThrowEvent {

@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getStartEvent()
- * @model extendedMetaData="name='tStartEvent' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface StartEvent extends CatchEvent {
@@ -44,7 +44,6 @@ public interface StartEvent extends CatchEvent {
      * @see #setIsInterrupting(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getStartEvent_IsInterrupting()
      * @model default="true" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='isInterrupting'"
      * @generated
      */
     boolean isIsInterrupting();

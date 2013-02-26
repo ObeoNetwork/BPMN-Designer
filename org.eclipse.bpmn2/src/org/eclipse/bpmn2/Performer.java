@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getPerformer()
- * @model extendedMetaData="name='tPerformer' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Performer extends ResourceRole {

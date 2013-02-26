@@ -18,9 +18,12 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.InteractionNode;
 import org.eclipse.bpmn2.Message;
 import org.eclipse.bpmn2.MessageFlow;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -30,26 +33,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.impl.MessageFlowImpl#getMessageRef <em>Message Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.MessageFlowImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.MessageFlowImpl#getSourceRef <em>Source Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.MessageFlowImpl#getTargetRef <em>Target Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.MessageFlowImpl#getMessageRef <em>Message Ref</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
-    /**
-     * The cached value of the '{@link #getMessageRef() <em>Message Ref</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getMessageRef()
-     * @generated
-     * @ordered
-     */
-    protected Message messageRef;
-
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -91,6 +84,16 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
     protected InteractionNode targetRef;
 
     /**
+     * The cached value of the '{@link #getMessageRef() <em>Message Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getMessageRef()
+     * @generated
+     * @ordered
+     */
+    protected Message messageRef;
+
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -107,46 +110,6 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
     @Override
     protected EClass eStaticClass() {
         return Bpmn2Package.Literals.MESSAGE_FLOW;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public Message getMessageRef() {
-        if (messageRef != null && messageRef.eIsProxy()) {
-            InternalEObject oldMessageRef = (InternalEObject) messageRef;
-            messageRef = (Message) eResolveProxy(oldMessageRef);
-            if (messageRef != oldMessageRef) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF, oldMessageRef, messageRef));
-            }
-        }
-        return messageRef;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public Message basicGetMessageRef() {
-        return messageRef;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setMessageRef(Message newMessageRef) {
-        Message oldMessageRef = messageRef;
-        messageRef = newMessageRef;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF, oldMessageRef, messageRef));
     }
 
     /**
@@ -256,13 +219,49 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
      * <!-- end-user-doc -->
      * @generated
      */
+    public Message getMessageRef() {
+        if (messageRef != null && messageRef.eIsProxy()) {
+            InternalEObject oldMessageRef = (InternalEObject) messageRef;
+            messageRef = (Message) eResolveProxy(oldMessageRef);
+            if (messageRef != oldMessageRef) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF, oldMessageRef, messageRef));
+            }
+        }
+        return messageRef;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Message basicGetMessageRef() {
+        return messageRef;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setMessageRef(Message newMessageRef) {
+        Message oldMessageRef = messageRef;
+        messageRef = newMessageRef;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF, oldMessageRef, messageRef));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF:
-            if (resolve)
-                return getMessageRef();
-            return basicGetMessageRef();
         case Bpmn2Package.MESSAGE_FLOW__NAME:
             return getName();
         case Bpmn2Package.MESSAGE_FLOW__SOURCE_REF:
@@ -273,6 +272,10 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
             if (resolve)
                 return getTargetRef();
             return basicGetTargetRef();
+        case Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF:
+            if (resolve)
+                return getMessageRef();
+            return basicGetMessageRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -285,9 +288,6 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF:
-            setMessageRef((Message) newValue);
-            return;
         case Bpmn2Package.MESSAGE_FLOW__NAME:
             setName((String) newValue);
             return;
@@ -296,6 +296,9 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
             return;
         case Bpmn2Package.MESSAGE_FLOW__TARGET_REF:
             setTargetRef((InteractionNode) newValue);
+            return;
+        case Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF:
+            setMessageRef((Message) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -309,9 +312,6 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF:
-            setMessageRef((Message) null);
-            return;
         case Bpmn2Package.MESSAGE_FLOW__NAME:
             setName(NAME_EDEFAULT);
             return;
@@ -320,6 +320,9 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
             return;
         case Bpmn2Package.MESSAGE_FLOW__TARGET_REF:
             setTargetRef((InteractionNode) null);
+            return;
+        case Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF:
+            setMessageRef((Message) null);
             return;
         }
         super.eUnset(featureID);
@@ -333,14 +336,14 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF:
-            return messageRef != null;
         case Bpmn2Package.MESSAGE_FLOW__NAME:
             return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         case Bpmn2Package.MESSAGE_FLOW__SOURCE_REF:
             return sourceRef != null;
         case Bpmn2Package.MESSAGE_FLOW__TARGET_REF:
             return targetRef != null;
+        case Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF:
+            return messageRef != null;
         }
         return super.eIsSet(featureID);
     }

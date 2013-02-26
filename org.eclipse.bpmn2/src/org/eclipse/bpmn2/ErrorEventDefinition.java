@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getErrorEventDefinition()
- * @model extendedMetaData="name='tErrorEventDefinition' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ErrorEventDefinition extends EventDefinition {
@@ -43,7 +43,6 @@ public interface ErrorEventDefinition extends EventDefinition {
      * @see #setErrorRef(org.eclipse.bpmn2.Error)
      * @see org.eclipse.bpmn2.Bpmn2Package#getErrorEventDefinition_ErrorRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='errorRef'"
      * @generated
      */
     org.eclipse.bpmn2.Error getErrorRef();

@@ -15,19 +15,23 @@
 package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.CallableElement;
 import org.eclipse.bpmn2.InputOutputBinding;
 import org.eclipse.bpmn2.InputOutputSpecification;
 import org.eclipse.bpmn2.Interface;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -39,46 +43,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.impl.CallableElementImpl#getSupportedInterfaceRefs <em>Supported Interface Refs</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.CallableElementImpl#getIoSpecification <em>Io Specification</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.CallableElementImpl#getIoBinding <em>Io Binding</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.CallableElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.CallableElementImpl#getIoSpecification <em>Io Specification</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.CallableElementImpl#getSupportedInterfaceRefs <em>Supported Interface Refs</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.CallableElementImpl#getIoBinding <em>Io Binding</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class CallableElementImpl extends RootElementImpl implements CallableElement {
-    /**
-     * The cached value of the '{@link #getSupportedInterfaceRefs() <em>Supported Interface Refs</em>}' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getSupportedInterfaceRefs()
-     * @generated
-     * @ordered
-     */
-    protected EList<Interface> supportedInterfaceRefs;
-
-    /**
-     * The cached value of the '{@link #getIoSpecification() <em>Io Specification</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getIoSpecification()
-     * @generated
-     * @ordered
-     */
-    protected InputOutputSpecification ioSpecification;
-
-    /**
-     * The cached value of the '{@link #getIoBinding() <em>Io Binding</em>}' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getIoBinding()
-     * @generated
-     * @ordered
-     */
-    protected EList<InputOutputBinding> ioBinding;
-
+public abstract class CallableElementImpl extends RootElementImpl implements CallableElement {
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -98,6 +72,36 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
      * @ordered
      */
     protected String name = NAME_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getIoSpecification() <em>Io Specification</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getIoSpecification()
+     * @generated
+     * @ordered
+     */
+    protected InputOutputSpecification ioSpecification;
+
+    /**
+     * The cached value of the '{@link #getSupportedInterfaceRefs() <em>Supported Interface Refs</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSupportedInterfaceRefs()
+     * @generated
+     * @ordered
+     */
+    protected EList<Interface> supportedInterfaceRefs;
+
+    /**
+     * The cached value of the '{@link #getIoBinding() <em>Io Binding</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getIoBinding()
+     * @generated
+     * @ordered
+     */
+    protected EList<InputOutputBinding> ioBinding;
 
     /**
      * <!-- begin-user-doc -->
@@ -123,12 +127,21 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<Interface> getSupportedInterfaceRefs() {
-        if (supportedInterfaceRefs == null) {
-            supportedInterfaceRefs = new EObjectResolvingEList<Interface>(Interface.class, this,
-                    Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS);
-        }
-        return supportedInterfaceRefs;
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.CALLABLE_ELEMENT__NAME, oldName, name));
     }
 
     /**
@@ -191,34 +204,25 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<InputOutputBinding> getIoBinding() {
+    public EList<Interface> getSupportedInterfaceRefs() {
+        if (supportedInterfaceRefs == null) {
+            supportedInterfaceRefs = new EObjectResolvingEList<Interface>(Interface.class, this,
+                    Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS);
+        }
+        return supportedInterfaceRefs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<InputOutputBinding> getIoBinding() {
         if (ioBinding == null) {
             ioBinding = new EObjectContainmentEList<InputOutputBinding>(InputOutputBinding.class,
                     this, Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING);
         }
         return ioBinding;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setName(String newName) {
-        String oldName = name;
-        name = newName;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.CALLABLE_ELEMENT__NAME, oldName, name));
     }
 
     /**
@@ -246,14 +250,14 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
-            return getSupportedInterfaceRefs();
-        case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
-            return getIoSpecification();
-        case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
-            return getIoBinding();
         case Bpmn2Package.CALLABLE_ELEMENT__NAME:
             return getName();
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
+            return getIoSpecification();
+        case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
+            return getSupportedInterfaceRefs();
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
+            return getIoBinding();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -267,19 +271,19 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
-            getSupportedInterfaceRefs().clear();
-            getSupportedInterfaceRefs().addAll((Collection<? extends Interface>) newValue);
+        case Bpmn2Package.CALLABLE_ELEMENT__NAME:
+            setName((String) newValue);
             return;
         case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
             setIoSpecification((InputOutputSpecification) newValue);
             return;
+        case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
+            getSupportedInterfaceRefs().clear();
+            getSupportedInterfaceRefs().addAll((Collection<? extends Interface>) newValue);
+            return;
         case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
             getIoBinding().clear();
             getIoBinding().addAll((Collection<? extends InputOutputBinding>) newValue);
-            return;
-        case Bpmn2Package.CALLABLE_ELEMENT__NAME:
-            setName((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -293,17 +297,17 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
-            getSupportedInterfaceRefs().clear();
+        case Bpmn2Package.CALLABLE_ELEMENT__NAME:
+            setName(NAME_EDEFAULT);
             return;
         case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
             setIoSpecification((InputOutputSpecification) null);
             return;
+        case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
+            getSupportedInterfaceRefs().clear();
+            return;
         case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
             getIoBinding().clear();
-            return;
-        case Bpmn2Package.CALLABLE_ELEMENT__NAME:
-            setName(NAME_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -317,14 +321,14 @@ public class CallableElementImpl extends RootElementImpl implements CallableElem
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
-            return supportedInterfaceRefs != null && !supportedInterfaceRefs.isEmpty();
-        case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
-            return ioSpecification != null;
-        case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
-            return ioBinding != null && !ioBinding.isEmpty();
         case Bpmn2Package.CALLABLE_ELEMENT__NAME:
             return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
+            return ioSpecification != null;
+        case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
+            return supportedInterfaceRefs != null && !supportedInterfaceRefs.isEmpty();
+        case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
+            return ioBinding != null && !ioBinding.isEmpty();
         }
         return super.eIsSet(featureID);
     }

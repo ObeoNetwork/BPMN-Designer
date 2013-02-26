@@ -28,7 +28,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getMessageFlowAssociation()
- * @model extendedMetaData="name='tMessageFlowAssociation' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface MessageFlowAssociation extends BaseElement {
@@ -44,7 +44,6 @@ public interface MessageFlowAssociation extends BaseElement {
      * @see #setInnerMessageFlowRef(MessageFlow)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMessageFlowAssociation_InnerMessageFlowRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='innerMessageFlowRef'"
      * @generated
      */
     MessageFlow getInnerMessageFlowRef();
@@ -71,7 +70,6 @@ public interface MessageFlowAssociation extends BaseElement {
      * @see #setOuterMessageFlowRef(MessageFlow)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMessageFlowAssociation_OuterMessageFlowRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='outerMessageFlowRef'"
      * @generated
      */
     MessageFlow getOuterMessageFlowRef();

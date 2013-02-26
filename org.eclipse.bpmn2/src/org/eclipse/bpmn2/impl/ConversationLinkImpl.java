@@ -17,9 +17,12 @@ package org.eclipse.bpmn2.impl;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ConversationLink;
 import org.eclipse.bpmn2.InteractionNode;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -29,8 +32,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.impl.ConversationLinkImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.ConversationLinkImpl#getSourceRef <em>Source Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.ConversationLinkImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.ConversationLinkImpl#getTargetRef <em>Target Ref</em>}</li>
  * </ul>
  * </p>
@@ -59,26 +62,6 @@ public class ConversationLinkImpl extends BaseElementImpl implements Conversatio
     protected String name = NAME_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getSourceRef() <em>Source Ref</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getSourceRef()
-     * @generated
-     * @ordered
-     */
-    protected InteractionNode sourceRef;
-
-    /**
-     * The cached value of the '{@link #getTargetRef() <em>Target Ref</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getTargetRef()
-     * @generated
-     * @ordered
-     */
-    protected InteractionNode targetRef;
-
-    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -95,6 +78,40 @@ public class ConversationLinkImpl extends BaseElementImpl implements Conversatio
     @Override
     protected EClass eStaticClass() {
         return Bpmn2Package.Literals.CONVERSATION_LINK;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public InteractionNode getSourceRef() {
+        InteractionNode sourceRef = basicGetSourceRef();
+        return sourceRef != null && sourceRef.eIsProxy() ? (InteractionNode) eResolveProxy((InternalEObject) sourceRef)
+                : sourceRef;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public InteractionNode basicGetSourceRef() {
+        // TODO: implement this method to return the 'Source Ref' reference
+        // -> do not perform proxy resolution
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setSourceRef(InteractionNode newSourceRef) {
+        // TODO: implement this method to set the 'Source Ref' reference
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -124,57 +141,10 @@ public class ConversationLinkImpl extends BaseElementImpl implements Conversatio
      * <!-- end-user-doc -->
      * @generated
      */
-    public InteractionNode getSourceRef() {
-        if (sourceRef != null && sourceRef.eIsProxy()) {
-            InternalEObject oldSourceRef = (InternalEObject) sourceRef;
-            sourceRef = (InteractionNode) eResolveProxy(oldSourceRef);
-            if (sourceRef != oldSourceRef) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            Bpmn2Package.CONVERSATION_LINK__SOURCE_REF, oldSourceRef, sourceRef));
-            }
-        }
-        return sourceRef;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public InteractionNode basicGetSourceRef() {
-        return sourceRef;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setSourceRef(InteractionNode newSourceRef) {
-        InteractionNode oldSourceRef = sourceRef;
-        sourceRef = newSourceRef;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.CONVERSATION_LINK__SOURCE_REF, oldSourceRef, sourceRef));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public InteractionNode getTargetRef() {
-        if (targetRef != null && targetRef.eIsProxy()) {
-            InternalEObject oldTargetRef = (InternalEObject) targetRef;
-            targetRef = (InteractionNode) eResolveProxy(oldTargetRef);
-            if (targetRef != oldTargetRef) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            Bpmn2Package.CONVERSATION_LINK__TARGET_REF, oldTargetRef, targetRef));
-            }
-        }
-        return targetRef;
+        InteractionNode targetRef = basicGetTargetRef();
+        return targetRef != null && targetRef.eIsProxy() ? (InteractionNode) eResolveProxy((InternalEObject) targetRef)
+                : targetRef;
     }
 
     /**
@@ -183,7 +153,10 @@ public class ConversationLinkImpl extends BaseElementImpl implements Conversatio
      * @generated
      */
     public InteractionNode basicGetTargetRef() {
-        return targetRef;
+        // TODO: implement this method to return the 'Target Ref' reference
+        // -> do not perform proxy resolution
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -192,11 +165,9 @@ public class ConversationLinkImpl extends BaseElementImpl implements Conversatio
      * @generated
      */
     public void setTargetRef(InteractionNode newTargetRef) {
-        InteractionNode oldTargetRef = targetRef;
-        targetRef = newTargetRef;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.CONVERSATION_LINK__TARGET_REF, oldTargetRef, targetRef));
+        // TODO: implement this method to set the 'Target Ref' reference
+        // Ensure that you remove @generated or mark it @generated NOT
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -207,12 +178,12 @@ public class ConversationLinkImpl extends BaseElementImpl implements Conversatio
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case Bpmn2Package.CONVERSATION_LINK__NAME:
-            return getName();
         case Bpmn2Package.CONVERSATION_LINK__SOURCE_REF:
             if (resolve)
                 return getSourceRef();
             return basicGetSourceRef();
+        case Bpmn2Package.CONVERSATION_LINK__NAME:
+            return getName();
         case Bpmn2Package.CONVERSATION_LINK__TARGET_REF:
             if (resolve)
                 return getTargetRef();
@@ -229,11 +200,11 @@ public class ConversationLinkImpl extends BaseElementImpl implements Conversatio
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case Bpmn2Package.CONVERSATION_LINK__NAME:
-            setName((String) newValue);
-            return;
         case Bpmn2Package.CONVERSATION_LINK__SOURCE_REF:
             setSourceRef((InteractionNode) newValue);
+            return;
+        case Bpmn2Package.CONVERSATION_LINK__NAME:
+            setName((String) newValue);
             return;
         case Bpmn2Package.CONVERSATION_LINK__TARGET_REF:
             setTargetRef((InteractionNode) newValue);
@@ -250,11 +221,11 @@ public class ConversationLinkImpl extends BaseElementImpl implements Conversatio
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.CONVERSATION_LINK__NAME:
-            setName(NAME_EDEFAULT);
-            return;
         case Bpmn2Package.CONVERSATION_LINK__SOURCE_REF:
             setSourceRef((InteractionNode) null);
+            return;
+        case Bpmn2Package.CONVERSATION_LINK__NAME:
+            setName(NAME_EDEFAULT);
             return;
         case Bpmn2Package.CONVERSATION_LINK__TARGET_REF:
             setTargetRef((InteractionNode) null);
@@ -271,12 +242,12 @@ public class ConversationLinkImpl extends BaseElementImpl implements Conversatio
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+        case Bpmn2Package.CONVERSATION_LINK__SOURCE_REF:
+            return basicGetSourceRef() != null;
         case Bpmn2Package.CONVERSATION_LINK__NAME:
             return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-        case Bpmn2Package.CONVERSATION_LINK__SOURCE_REF:
-            return sourceRef != null;
         case Bpmn2Package.CONVERSATION_LINK__TARGET_REF:
-            return targetRef != null;
+            return basicGetTargetRef() != null;
         }
         return super.eIsSet(featureID);
     }

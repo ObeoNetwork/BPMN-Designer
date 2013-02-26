@@ -15,18 +15,22 @@
 package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ExtensionAttributeDefinition;
 import org.eclipse.bpmn2.ExtensionDefinition;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -121,7 +125,7 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements ExtensionDef
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<ExtensionAttributeDefinition> getExtensionAttributeDefinitions() {
+    public EList<ExtensionAttributeDefinition> getExtensionAttributeDefinitions() {
         if (extensionAttributeDefinitions == null) {
             extensionAttributeDefinitions = new EObjectContainmentWithInverseEList<ExtensionAttributeDefinition>(
                     ExtensionAttributeDefinition.class, this,

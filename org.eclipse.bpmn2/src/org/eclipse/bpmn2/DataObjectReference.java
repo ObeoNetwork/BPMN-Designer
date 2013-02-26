@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getDataObjectReference()
- * @model extendedMetaData="name='tDataObjectReference' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface DataObjectReference extends FlowElement, ItemAwareElement {
@@ -42,8 +42,7 @@ public interface DataObjectReference extends FlowElement, ItemAwareElement {
      * @return the value of the '<em>Data Object Ref</em>' reference.
      * @see #setDataObjectRef(DataObject)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataObjectReference_DataObjectRef()
-     * @model resolveProxies="false" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='dataObjectRef'"
+     * @model required="true" ordered="false"
      * @generated
      */
     DataObject getDataObjectRef();

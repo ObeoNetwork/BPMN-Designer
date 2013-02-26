@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationKey()
- * @model extendedMetaData="name='tCorrelationKey' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface CorrelationKey extends BaseElement {
@@ -46,10 +46,9 @@ public interface CorrelationKey extends BaseElement {
      * @return the value of the '<em>Correlation Property Ref</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationKey_CorrelationPropertyRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='element' name='correlationPropertyRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<CorrelationProperty> getCorrelationPropertyRef();
+    EList<CorrelationProperty> getCorrelationPropertyRef();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -63,7 +62,6 @@ public interface CorrelationKey extends BaseElement {
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationKey_Name()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
     String getName();

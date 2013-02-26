@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getConditionalEventDefinition()
- * @model extendedMetaData="name='tConditionalEventDefinition' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ConditionalEventDefinition extends EventDefinition {
@@ -43,7 +43,6 @@ public interface ConditionalEventDefinition extends EventDefinition {
      * @see #setCondition(Expression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getConditionalEventDefinition_Condition()
      * @model containment="true" required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='condition' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Expression getCondition();

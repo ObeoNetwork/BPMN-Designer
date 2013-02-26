@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,72 +24,44 @@ import java.util.List;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.eclipse.bpmn2.DataInput#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.DataInput#isIsCollection <em>Is Collection</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.DataInput#getInputSetWithOptional <em>Input Set With Optional</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.DataInput#getInputSetWithWhileExecuting <em>Input Set With While Executing</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.DataInput#getInputSetRefs <em>Input Set Refs</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.DataInput#isIsCollection <em>Is Collection</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.DataInput#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getDataInput()
- * @model extendedMetaData="name='tDataInput' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface DataInput extends ItemAwareElement {
     /**
-     * Returns the value of the '<em><b>Input Set With Optional</b></em>' reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.InputSet}.
-     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.InputSet#getOptionalInputRefs <em>Optional Input Refs</em>}'.
+     * Returns the value of the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Input Set With Optional</em>' reference list isn't clear,
+     * If the meaning of the '<em>Name</em>' attribute isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Input Set With Optional</em>' reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getDataInput_InputSetWithOptional()
-     * @see org.eclipse.bpmn2.InputSet#getOptionalInputRefs
-     * @model opposite="optionalInputRefs" transient="true" derived="true" ordered="false"
+     * @return the value of the '<em>Name</em>' attribute.
+     * @see #setName(String)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getDataInput_Name()
+     * @model ordered="false"
      * @generated
      */
-    List<InputSet> getInputSetWithOptional();
+    String getName();
 
     /**
-     * Returns the value of the '<em><b>Input Set With While Executing</b></em>' reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.InputSet}.
-     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.InputSet#getWhileExecutingInputRefs <em>While Executing Input Refs</em>}'.
+     * Sets the value of the '{@link org.eclipse.bpmn2.DataInput#getName <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Input Set With While Executing</em>' reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Input Set With While Executing</em>' reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getDataInput_InputSetWithWhileExecuting()
-     * @see org.eclipse.bpmn2.InputSet#getWhileExecutingInputRefs
-     * @model opposite="whileExecutingInputRefs" transient="true" derived="true" ordered="false"
+     * @param value the new value of the '<em>Name</em>' attribute.
+     * @see #getName()
      * @generated
      */
-    List<InputSet> getInputSetWithWhileExecuting();
-
-    /**
-     * Returns the value of the '<em><b>Input Set Refs</b></em>' reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.InputSet}.
-     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.InputSet#getDataInputRefs <em>Data Input Refs</em>}'.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Input Set Refs</em>' reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Input Set Refs</em>' reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getDataInput_InputSetRefs()
-     * @see org.eclipse.bpmn2.InputSet#getDataInputRefs
-     * @model opposite="dataInputRefs" required="true" transient="true" derived="true" ordered="false"
-     * @generated
-     */
-    List<InputSet> getInputSetRefs();
+    void setName(String value);
 
     /**
      * Returns the value of the '<em><b>Is Collection</b></em>' attribute.
@@ -104,7 +76,6 @@ public interface DataInput extends ItemAwareElement {
      * @see #setIsCollection(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataInput_IsCollection()
      * @model default="false" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='isCollection'"
      * @generated
      */
     boolean isIsCollection();
@@ -120,30 +91,57 @@ public interface DataInput extends ItemAwareElement {
     void setIsCollection(boolean value);
 
     /**
-     * Returns the value of the '<em><b>Name</b></em>' attribute.
+     * Returns the value of the '<em><b>Input Set With Optional</b></em>' reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.InputSet}.
+     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.InputSet#getOptionalInputRefs <em>Optional Input Refs</em>}'.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Name</em>' attribute isn't clear,
+     * If the meaning of the '<em>Input Set With Optional</em>' reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Name</em>' attribute.
-     * @see #setName(String)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getDataInput_Name()
-     * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
+     * @return the value of the '<em>Input Set With Optional</em>' reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getDataInput_InputSetWithOptional()
+     * @see org.eclipse.bpmn2.InputSet#getOptionalInputRefs
+     * @model opposite="optionalInputRefs" volatile="true" derived="true" ordered="false"
      * @generated
      */
-    String getName();
+    EList<InputSet> getInputSetWithOptional();
 
     /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.DataInput#getName <em>Name</em>}' attribute.
+     * Returns the value of the '<em><b>Input Set With While Executing</b></em>' reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.InputSet}.
+     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.InputSet#getWhileExecutingInputRefs <em>While Executing Input Refs</em>}'.
      * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Input Set With While Executing</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Name</em>' attribute.
-     * @see #getName()
+     * @return the value of the '<em>Input Set With While Executing</em>' reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getDataInput_InputSetWithWhileExecuting()
+     * @see org.eclipse.bpmn2.InputSet#getWhileExecutingInputRefs
+     * @model opposite="whileExecutingInputRefs" volatile="true" derived="true" ordered="false"
      * @generated
      */
-    void setName(String value);
+    EList<InputSet> getInputSetWithWhileExecuting();
+
+    /**
+     * Returns the value of the '<em><b>Input Set Refs</b></em>' reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.InputSet}.
+     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.InputSet#getDataInputRefs <em>Data Input Refs</em>}'.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Input Set Refs</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Input Set Refs</em>' reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getDataInput_InputSetRefs()
+     * @see org.eclipse.bpmn2.InputSet#getDataInputRefs
+     * @model opposite="dataInputRefs" required="true" volatile="true" derived="true" ordered="false"
+     * @generated
+     */
+    EList<InputSet> getInputSetRefs();
 
 } // DataInput

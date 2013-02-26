@@ -16,6 +16,7 @@ package org.eclipse.bpmn2.impl;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.RootElement;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -27,7 +28,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class RootElementImpl extends BaseElementImpl implements RootElement {
+public abstract class RootElementImpl extends BaseElementImpl implements RootElement {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

@@ -19,10 +19,14 @@ import org.eclipse.bpmn2.InputOutputBinding;
 import org.eclipse.bpmn2.InputSet;
 import org.eclipse.bpmn2.Operation;
 import org.eclipse.bpmn2.OutputSet;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,14 +36,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.bpmn2.impl.InputOutputBindingImpl#getInputDataRef <em>Input Data Ref</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.InputOutputBindingImpl#getOperationRef <em>Operation Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.InputOutputBindingImpl#getOutputDataRef <em>Output Data Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.InputOutputBindingImpl#getOperationRef <em>Operation Ref</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class InputOutputBindingImpl extends BaseElementImpl implements InputOutputBinding {
+public class InputOutputBindingImpl extends EObjectImpl implements InputOutputBinding {
     /**
      * The cached value of the '{@link #getInputDataRef() <em>Input Data Ref</em>}' reference.
      * <!-- begin-user-doc -->
@@ -51,16 +55,6 @@ public class InputOutputBindingImpl extends BaseElementImpl implements InputOutp
     protected InputSet inputDataRef;
 
     /**
-     * The cached value of the '{@link #getOperationRef() <em>Operation Ref</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getOperationRef()
-     * @generated
-     * @ordered
-     */
-    protected Operation operationRef;
-
-    /**
      * The cached value of the '{@link #getOutputDataRef() <em>Output Data Ref</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -69,6 +63,16 @@ public class InputOutputBindingImpl extends BaseElementImpl implements InputOutp
      * @ordered
      */
     protected OutputSet outputDataRef;
+
+    /**
+     * The cached value of the '{@link #getOperationRef() <em>Operation Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getOperationRef()
+     * @generated
+     * @ordered
+     */
+    protected Operation operationRef;
 
     /**
      * <!-- begin-user-doc -->
@@ -95,6 +99,25 @@ public class InputOutputBindingImpl extends BaseElementImpl implements InputOutp
      * @generated
      */
     public InputSet getInputDataRef() {
+        if (inputDataRef != null && inputDataRef.eIsProxy()) {
+            InternalEObject oldInputDataRef = (InternalEObject) inputDataRef;
+            inputDataRef = (InputSet) eResolveProxy(oldInputDataRef);
+            if (inputDataRef != oldInputDataRef) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF, oldInputDataRef,
+                            inputDataRef));
+            }
+        }
+        return inputDataRef;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public InputSet basicGetInputDataRef() {
         return inputDataRef;
     }
 
@@ -110,6 +133,48 @@ public class InputOutputBindingImpl extends BaseElementImpl implements InputOutp
             eNotify(new ENotificationImpl(this, Notification.SET,
                     Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF, oldInputDataRef,
                     inputDataRef));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public OutputSet getOutputDataRef() {
+        if (outputDataRef != null && outputDataRef.eIsProxy()) {
+            InternalEObject oldOutputDataRef = (InternalEObject) outputDataRef;
+            outputDataRef = (OutputSet) eResolveProxy(oldOutputDataRef);
+            if (outputDataRef != oldOutputDataRef) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF, oldOutputDataRef,
+                            outputDataRef));
+            }
+        }
+        return outputDataRef;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public OutputSet basicGetOutputDataRef() {
+        return outputDataRef;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setOutputDataRef(OutputSet newOutputDataRef) {
+        OutputSet oldOutputDataRef = outputDataRef;
+        outputDataRef = newOutputDataRef;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF, oldOutputDataRef,
+                    outputDataRef));
     }
 
     /**
@@ -158,40 +223,21 @@ public class InputOutputBindingImpl extends BaseElementImpl implements InputOutp
      * <!-- end-user-doc -->
      * @generated
      */
-    public OutputSet getOutputDataRef() {
-        return outputDataRef;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setOutputDataRef(OutputSet newOutputDataRef) {
-        OutputSet oldOutputDataRef = outputDataRef;
-        outputDataRef = newOutputDataRef;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF, oldOutputDataRef,
-                    outputDataRef));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
-            return getInputDataRef();
+            if (resolve)
+                return getInputDataRef();
+            return basicGetInputDataRef();
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
+            if (resolve)
+                return getOutputDataRef();
+            return basicGetOutputDataRef();
         case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
             if (resolve)
                 return getOperationRef();
             return basicGetOperationRef();
-        case Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
-            return getOutputDataRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -207,11 +253,11 @@ public class InputOutputBindingImpl extends BaseElementImpl implements InputOutp
         case Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
             setInputDataRef((InputSet) newValue);
             return;
-        case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
-            setOperationRef((Operation) newValue);
-            return;
         case Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
             setOutputDataRef((OutputSet) newValue);
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
+            setOperationRef((Operation) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -228,11 +274,11 @@ public class InputOutputBindingImpl extends BaseElementImpl implements InputOutp
         case Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
             setInputDataRef((InputSet) null);
             return;
-        case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
-            setOperationRef((Operation) null);
-            return;
         case Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
             setOutputDataRef((OutputSet) null);
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
+            setOperationRef((Operation) null);
             return;
         }
         super.eUnset(featureID);
@@ -248,10 +294,10 @@ public class InputOutputBindingImpl extends BaseElementImpl implements InputOutp
         switch (featureID) {
         case Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF:
             return inputDataRef != null;
-        case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
-            return operationRef != null;
         case Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF:
             return outputDataRef != null;
+        case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
+            return operationRef != null;
         }
         return super.eIsSet(featureID);
     }

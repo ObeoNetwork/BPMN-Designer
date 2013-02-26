@@ -23,13 +23,13 @@ package org.eclipse.bpmn2;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipse.bpmn2.AdHocSubProcess#getCompletionCondition <em>Completion Condition</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.AdHocSubProcess#isCancelRemainingInstances <em>Cancel Remaining Instances</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.AdHocSubProcess#getOrdering <em>Ordering</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.AdHocSubProcess#isCancelRemainingInstances <em>Cancel Remaining Instances</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getAdHocSubProcess()
- * @model extendedMetaData="name='tAdHocSubProcess' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface AdHocSubProcess extends SubProcess {
@@ -45,7 +45,6 @@ public interface AdHocSubProcess extends SubProcess {
      * @see #setCompletionCondition(Expression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getAdHocSubProcess_CompletionCondition()
      * @model containment="true" required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='completionCondition' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Expression getCompletionCondition();
@@ -61,34 +60,6 @@ public interface AdHocSubProcess extends SubProcess {
     void setCompletionCondition(Expression value);
 
     /**
-     * Returns the value of the '<em><b>Cancel Remaining Instances</b></em>' attribute.
-     * The default value is <code>"true"</code>.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Cancel Remaining Instances</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Cancel Remaining Instances</em>' attribute.
-     * @see #setCancelRemainingInstances(boolean)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getAdHocSubProcess_CancelRemainingInstances()
-     * @model default="true" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='cancelRemainingInstances'"
-     * @generated
-     */
-    boolean isCancelRemainingInstances();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.AdHocSubProcess#isCancelRemainingInstances <em>Cancel Remaining Instances</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Cancel Remaining Instances</em>' attribute.
-     * @see #isCancelRemainingInstances()
-     * @generated
-     */
-    void setCancelRemainingInstances(boolean value);
-
-    /**
      * Returns the value of the '<em><b>Ordering</b></em>' attribute.
      * The literals are from the enumeration {@link org.eclipse.bpmn2.AdHocOrdering}.
      * <!-- begin-user-doc -->
@@ -102,7 +73,6 @@ public interface AdHocSubProcess extends SubProcess {
      * @see #setOrdering(AdHocOrdering)
      * @see org.eclipse.bpmn2.Bpmn2Package#getAdHocSubProcess_Ordering()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='ordering'"
      * @generated
      */
     AdHocOrdering getOrdering();
@@ -117,5 +87,32 @@ public interface AdHocSubProcess extends SubProcess {
      * @generated
      */
     void setOrdering(AdHocOrdering value);
+
+    /**
+     * Returns the value of the '<em><b>Cancel Remaining Instances</b></em>' attribute.
+     * The default value is <code>"true"</code>.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Cancel Remaining Instances</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Cancel Remaining Instances</em>' attribute.
+     * @see #setCancelRemainingInstances(boolean)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getAdHocSubProcess_CancelRemainingInstances()
+     * @model default="true" required="true" ordered="false"
+     * @generated
+     */
+    boolean isCancelRemainingInstances();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.AdHocSubProcess#isCancelRemainingInstances <em>Cancel Remaining Instances</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Cancel Remaining Instances</em>' attribute.
+     * @see #isCancelRemainingInstances()
+     * @generated
+     */
+    void setCancelRemainingInstances(boolean value);
 
 } // AdHocSubProcess

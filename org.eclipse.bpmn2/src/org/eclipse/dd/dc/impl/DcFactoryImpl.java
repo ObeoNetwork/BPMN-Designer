@@ -15,16 +15,13 @@
 package org.eclipse.dd.dc.impl;
 
 import org.eclipse.dd.dc.*;
-import org.eclipse.dd.dc.Bounds;
-import org.eclipse.dd.dc.DcFactory;
-import org.eclipse.dd.dc.DcPackage;
-import org.eclipse.dd.dc.DocumentRoot;
-import org.eclipse.dd.dc.Font;
-import org.eclipse.dd.dc.Point;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -71,38 +68,16 @@ public class DcFactoryImpl extends EFactoryImpl implements DcFactory {
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case DcPackage.DOCUMENT_ROOT:
-            return createDocumentRoot();
-        case DcPackage.BOUNDS:
-            return createBounds();
         case DcPackage.FONT:
             return createFont();
         case DcPackage.POINT:
             return createPoint();
+        case DcPackage.BOUNDS:
+            return createBounds();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName()
                     + "' is not a valid classifier");
         }
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public DocumentRoot createDocumentRoot() {
-        DocumentRootImpl documentRoot = new DocumentRootImpl();
-        return documentRoot;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public Bounds createBounds() {
-        BoundsImpl bounds = new BoundsImpl();
-        return bounds;
     }
 
     /**
@@ -123,6 +98,16 @@ public class DcFactoryImpl extends EFactoryImpl implements DcFactory {
     public Point createPoint() {
         PointImpl point = new PointImpl();
         return point;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Bounds createBounds() {
+        BoundsImpl bounds = new BoundsImpl();
+        return bounds;
     }
 
     /**

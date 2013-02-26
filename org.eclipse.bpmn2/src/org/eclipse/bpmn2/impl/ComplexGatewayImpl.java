@@ -18,10 +18,13 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ComplexGateway;
 import org.eclipse.bpmn2.Expression;
 import org.eclipse.bpmn2.SequenceFlow;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -139,6 +142,24 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
      * @generated
      */
     public SequenceFlow getDefault() {
+        if (default_ != null && default_.eIsProxy()) {
+            InternalEObject oldDefault = (InternalEObject) default_;
+            default_ = (SequenceFlow) eResolveProxy(oldDefault);
+            if (default_ != oldDefault) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.COMPLEX_GATEWAY__DEFAULT, oldDefault, default_));
+            }
+        }
+        return default_;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SequenceFlow basicGetDefault() {
         return default_;
     }
 
@@ -181,7 +202,9 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
         case Bpmn2Package.COMPLEX_GATEWAY__ACTIVATION_CONDITION:
             return getActivationCondition();
         case Bpmn2Package.COMPLEX_GATEWAY__DEFAULT:
-            return getDefault();
+            if (resolve)
+                return getDefault();
+            return basicGetDefault();
         }
         return super.eGet(featureID, resolve, coreType);
     }

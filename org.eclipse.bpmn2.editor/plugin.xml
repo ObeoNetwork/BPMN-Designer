@@ -35,35 +35,35 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            class="org.eclipse.bpmn2.presentation.Bpmn2Editor"
-            contributorClass="org.eclipse.bpmn2.presentation.Bpmn2ActionBarContributor"
-            default="true"
-            extensions="bpmn2"
-            icon="icons/full/obj16/Bpmn2ModelFile.gif"
             id="org.eclipse.bpmn2.presentation.Bpmn2EditorID"
-            name="%_UI_Bpmn2Editor_label">
-         <contentTypeBinding
-               contentTypeId="org.eclipse.bpmn2.content-type.xml">
-         </contentTypeBinding>
-         <contentTypeBinding
-               contentTypeId="org.eclipse.bpmn2.content-type.xmi">
-         </contentTypeBinding>
+            name="%_UI_Bpmn2Editor_label"
+            icon="icons/full/obj16/Bpmn2ModelFile.gif"
+            extensions="bpmn2"
+            class="org.eclipse.bpmn2.presentation.Bpmn2Editor"
+            contributorClass="org.eclipse.bpmn2.presentation.Bpmn2ActionBarContributor">
       </editor>
    </extension>
-   
-   <extension point="org.eclipse.ui.editorActions">
-     <editorContribution 
-           id="org.eclipse.bpmn2.presentation.editorContribution1" 
-           targetID="org.eclipse.bpmn2.presentation.Bpmn2EditorID">
-       <action 
-             class="org.eclipse.bpmn2.presentation.actions.SaveAsXMIAction" 
-             id="org.eclipse.bpmn2.presentation.actions.saveasXMI" 
-             label="%_UI_BpmnEditorSaveAsXMILabel" 
-             style="push" 
-             toolbarPath="Normal/bpmnEditorActions" /> 
-     </editorContribution>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipse.bpmn2.bpmdi.presentation.BpmnDiEditorID"
+            name="%_UI_BpmnDiEditor_label"
+            icon="icons/full/obj16/BpmnDiModelFile.gif"
+            extensions="bpmndi"
+            class="org.eclipse.bpmn2.bpmdi.presentation.BpmnDiEditor"
+            contributorClass="org.eclipse.bpmn2.bpmdi.presentation.BpmnDiActionBarContributor">
+      </editor>
    </extension>
 
-
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipse.dd.dc.presentation.DcEditorID"
+            name="%_UI_DcEditor_label"
+            icon="icons/full/obj16/DcModelFile.gif"
+            extensions="dc"
+            class="org.eclipse.dd.dc.presentation.DcEditor"
+            contributorClass="org.eclipse.dd.dc.presentation.DcActionBarContributor">
+      </editor>
+   </extension>
 
 </plugin>

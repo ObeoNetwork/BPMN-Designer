@@ -15,17 +15,21 @@
 package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Category;
 import org.eclipse.bpmn2.CategoryValue;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -98,7 +102,7 @@ public class CategoryImpl extends RootElementImpl implements Category {
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<CategoryValue> getCategoryValue() {
+    public EList<CategoryValue> getCategoryValue() {
         if (categoryValue == null) {
             categoryValue = new EObjectContainmentEList<CategoryValue>(CategoryValue.class, this,
                     Bpmn2Package.CATEGORY__CATEGORY_VALUE);

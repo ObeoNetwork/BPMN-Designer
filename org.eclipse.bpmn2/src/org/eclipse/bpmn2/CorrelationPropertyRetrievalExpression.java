@@ -28,7 +28,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationPropertyRetrievalExpression()
- * @model extendedMetaData="name='tCorrelationPropertyRetrievalExpression' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface CorrelationPropertyRetrievalExpression extends BaseElement {
@@ -44,7 +44,6 @@ public interface CorrelationPropertyRetrievalExpression extends BaseElement {
      * @see #setMessagePath(FormalExpression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationPropertyRetrievalExpression_MessagePath()
      * @model containment="true" required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='messagePath' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     FormalExpression getMessagePath();
@@ -71,7 +70,6 @@ public interface CorrelationPropertyRetrievalExpression extends BaseElement {
      * @see #setMessageRef(Message)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationPropertyRetrievalExpression_MessageRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='messageRef'"
      * @generated
      */
     Message getMessageRef();

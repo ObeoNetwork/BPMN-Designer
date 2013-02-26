@@ -17,11 +17,7 @@ package org.eclipse.dd.dc.util;
 import java.util.List;
 
 import org.eclipse.dd.dc.*;
-import org.eclipse.dd.dc.Bounds;
-import org.eclipse.dd.dc.DcPackage;
-import org.eclipse.dd.dc.DocumentRoot;
-import org.eclipse.dd.dc.Font;
-import org.eclipse.dd.dc.Point;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
@@ -96,20 +92,6 @@ public class DcSwitch<T> {
      */
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-        case DcPackage.DOCUMENT_ROOT: {
-            DocumentRoot documentRoot = (DocumentRoot) theEObject;
-            T result = caseDocumentRoot(documentRoot);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        case DcPackage.BOUNDS: {
-            Bounds bounds = (Bounds) theEObject;
-            T result = caseBounds(bounds);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
         case DcPackage.FONT: {
             Font font = (Font) theEObject;
             T result = caseFont(font);
@@ -124,39 +106,16 @@ public class DcSwitch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
+        case DcPackage.BOUNDS: {
+            Bounds bounds = (Bounds) theEObject;
+            T result = caseBounds(bounds);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
         default:
             return defaultCase(theEObject);
         }
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>Document Root</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Document Root</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseDocumentRoot(DocumentRoot object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>Bounds</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Bounds</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseBounds(Bounds object) {
-        return null;
     }
 
     /**
@@ -186,6 +145,21 @@ public class DcSwitch<T> {
      * @generated
      */
     public T casePoint(Point object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Bounds</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Bounds</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseBounds(Bounds object) {
         return null;
     }
 

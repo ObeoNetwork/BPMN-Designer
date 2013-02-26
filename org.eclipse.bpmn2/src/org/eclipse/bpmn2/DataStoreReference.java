@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getDataStoreReference()
- * @model extendedMetaData="name='tDataStoreReference' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface DataStoreReference extends FlowElement, ItemAwareElement {
@@ -43,7 +43,6 @@ public interface DataStoreReference extends FlowElement, ItemAwareElement {
      * @see #setDataStoreRef(DataStore)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataStoreReference_DataStoreRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='dataStoreRef'"
      * @generated
      */
     DataStore getDataStoreRef();

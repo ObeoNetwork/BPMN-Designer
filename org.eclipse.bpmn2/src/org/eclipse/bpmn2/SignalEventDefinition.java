@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getSignalEventDefinition()
- * @model extendedMetaData="name='tSignalEventDefinition' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface SignalEventDefinition extends EventDefinition {
@@ -43,7 +43,6 @@ public interface SignalEventDefinition extends EventDefinition {
      * @see #setSignalRef(Signal)
      * @see org.eclipse.bpmn2.Bpmn2Package#getSignalEventDefinition_SignalRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='signalRef'"
      * @generated
      */
     Signal getSignalRef();

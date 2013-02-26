@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getHumanPerformer()
- * @model extendedMetaData="name='tHumanPerformer' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface HumanPerformer extends Performer {

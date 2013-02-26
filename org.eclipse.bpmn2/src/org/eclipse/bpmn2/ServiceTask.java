@@ -28,7 +28,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getServiceTask()
- * @model extendedMetaData="name='tServiceTask' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ServiceTask extends Task {
@@ -44,7 +44,6 @@ public interface ServiceTask extends Task {
      * @see #setImplementation(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getServiceTask_Implementation()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='implementation'"
      * @generated
      */
     String getImplementation();
@@ -71,7 +70,6 @@ public interface ServiceTask extends Task {
      * @see #setOperationRef(Operation)
      * @see org.eclipse.bpmn2.Bpmn2Package#getServiceTask_OperationRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='operationRef'"
      * @generated
      */
     Operation getOperationRef();

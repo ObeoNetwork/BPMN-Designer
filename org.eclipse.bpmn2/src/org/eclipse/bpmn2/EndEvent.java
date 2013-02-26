@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getEndEvent()
- * @model extendedMetaData="name='tEndEvent' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface EndEvent extends ThrowEvent {

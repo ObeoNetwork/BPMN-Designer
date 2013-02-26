@@ -22,45 +22,18 @@ package org.eclipse.bpmn2;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.MessageFlow#getMessageRef <em>Message Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.MessageFlow#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.MessageFlow#getSourceRef <em>Source Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.MessageFlow#getTargetRef <em>Target Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.MessageFlow#getMessageRef <em>Message Ref</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getMessageFlow()
- * @model extendedMetaData="name='tMessageFlow' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface MessageFlow extends BaseElement {
-    /**
-     * Returns the value of the '<em><b>Message Ref</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Message Ref</em>' reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Message Ref</em>' reference.
-     * @see #setMessageRef(Message)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getMessageFlow_MessageRef()
-     * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='messageRef'"
-     * @generated
-     */
-    Message getMessageRef();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.MessageFlow#getMessageRef <em>Message Ref</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Message Ref</em>' reference.
-     * @see #getMessageRef()
-     * @generated
-     */
-    void setMessageRef(Message value);
-
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -73,7 +46,6 @@ public interface MessageFlow extends BaseElement {
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMessageFlow_Name()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
     String getName();
@@ -100,7 +72,6 @@ public interface MessageFlow extends BaseElement {
      * @see #setSourceRef(InteractionNode)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMessageFlow_SourceRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='sourceRef'"
      * @generated
      */
     InteractionNode getSourceRef();
@@ -127,7 +98,6 @@ public interface MessageFlow extends BaseElement {
      * @see #setTargetRef(InteractionNode)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMessageFlow_TargetRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='targetRef'"
      * @generated
      */
     InteractionNode getTargetRef();
@@ -141,5 +111,31 @@ public interface MessageFlow extends BaseElement {
      * @generated
      */
     void setTargetRef(InteractionNode value);
+
+    /**
+     * Returns the value of the '<em><b>Message Ref</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Message Ref</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Message Ref</em>' reference.
+     * @see #setMessageRef(Message)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getMessageFlow_MessageRef()
+     * @model ordered="false"
+     * @generated
+     */
+    Message getMessageRef();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.MessageFlow#getMessageRef <em>Message Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Message Ref</em>' reference.
+     * @see #getMessageRef()
+     * @generated
+     */
+    void setMessageRef(Message value);
 
 } // MessageFlow

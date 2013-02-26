@@ -15,19 +15,23 @@
 package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ChoreographyActivity;
 import org.eclipse.bpmn2.ChoreographyLoopType;
 import org.eclipse.bpmn2.CorrelationKey;
 import org.eclipse.bpmn2.Participant;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -40,8 +44,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.bpmn2.impl.ChoreographyActivityImpl#getParticipantRefs <em>Participant Refs</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.ChoreographyActivityImpl#getCorrelationKeys <em>Correlation Keys</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.ChoreographyActivityImpl#getInitiatingParticipantRef <em>Initiating Participant Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.ChoreographyActivityImpl#getCorrelationKeys <em>Correlation Keys</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.ChoreographyActivityImpl#getLoopType <em>Loop Type</em>}</li>
  * </ul>
  * </p>
@@ -60,16 +64,6 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
     protected EList<Participant> participantRefs;
 
     /**
-     * The cached value of the '{@link #getCorrelationKeys() <em>Correlation Keys</em>}' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getCorrelationKeys()
-     * @generated
-     * @ordered
-     */
-    protected EList<CorrelationKey> correlationKeys;
-
-    /**
      * The cached value of the '{@link #getInitiatingParticipantRef() <em>Initiating Participant Ref</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -78,6 +72,16 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
      * @ordered
      */
     protected Participant initiatingParticipantRef;
+
+    /**
+     * The cached value of the '{@link #getCorrelationKeys() <em>Correlation Keys</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCorrelationKeys()
+     * @generated
+     * @ordered
+     */
+    protected EList<CorrelationKey> correlationKeys;
 
     /**
      * The default value of the '{@link #getLoopType() <em>Loop Type</em>}' attribute.
@@ -123,25 +127,12 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<Participant> getParticipantRefs() {
+    public EList<Participant> getParticipantRefs() {
         if (participantRefs == null) {
             participantRefs = new EObjectResolvingEList<Participant>(Participant.class, this,
                     Bpmn2Package.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS);
         }
         return participantRefs;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public List<CorrelationKey> getCorrelationKeys() {
-        if (correlationKeys == null) {
-            correlationKeys = new EObjectContainmentEList<CorrelationKey>(CorrelationKey.class,
-                    this, Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS);
-        }
-        return correlationKeys;
     }
 
     /**
@@ -191,6 +182,19 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<CorrelationKey> getCorrelationKeys() {
+        if (correlationKeys == null) {
+            correlationKeys = new EObjectContainmentEList<CorrelationKey>(CorrelationKey.class,
+                    this, Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS);
+        }
+        return correlationKeys;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public ChoreographyLoopType getLoopType() {
         return loopType;
     }
@@ -233,12 +237,12 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
         switch (featureID) {
         case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS:
             return getParticipantRefs();
-        case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS:
-            return getCorrelationKeys();
         case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
             if (resolve)
                 return getInitiatingParticipantRef();
             return basicGetInitiatingParticipantRef();
+        case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS:
+            return getCorrelationKeys();
         case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE:
             return getLoopType();
         }
@@ -258,12 +262,12 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
             getParticipantRefs().clear();
             getParticipantRefs().addAll((Collection<? extends Participant>) newValue);
             return;
+        case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
+            setInitiatingParticipantRef((Participant) newValue);
+            return;
         case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS:
             getCorrelationKeys().clear();
             getCorrelationKeys().addAll((Collection<? extends CorrelationKey>) newValue);
-            return;
-        case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
-            setInitiatingParticipantRef((Participant) newValue);
             return;
         case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE:
             setLoopType((ChoreographyLoopType) newValue);
@@ -283,11 +287,11 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
         case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS:
             getParticipantRefs().clear();
             return;
-        case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS:
-            getCorrelationKeys().clear();
-            return;
         case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
             setInitiatingParticipantRef((Participant) null);
+            return;
+        case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS:
+            getCorrelationKeys().clear();
             return;
         case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE:
             setLoopType(LOOP_TYPE_EDEFAULT);
@@ -306,10 +310,10 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements C
         switch (featureID) {
         case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS:
             return participantRefs != null && !participantRefs.isEmpty();
-        case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS:
-            return correlationKeys != null && !correlationKeys.isEmpty();
         case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
             return initiatingParticipantRef != null;
+        case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS:
+            return correlationKeys != null && !correlationKeys.isEmpty();
         case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE:
             return loopType != LOOP_TYPE_EDEFAULT;
         }

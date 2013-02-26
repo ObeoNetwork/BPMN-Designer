@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getCancelEventDefinition()
- * @model extendedMetaData="name='tCancelEventDefinition' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface CancelEventDefinition extends EventDefinition {

@@ -28,7 +28,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getConversationAssociation()
- * @model extendedMetaData="name='tConversationAssociation' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ConversationAssociation extends BaseElement {
@@ -44,7 +44,6 @@ public interface ConversationAssociation extends BaseElement {
      * @see #setInnerConversationNodeRef(ConversationNode)
      * @see org.eclipse.bpmn2.Bpmn2Package#getConversationAssociation_InnerConversationNodeRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='innerConversationNodeRef'"
      * @generated
      */
     ConversationNode getInnerConversationNodeRef();
@@ -71,7 +70,6 @@ public interface ConversationAssociation extends BaseElement {
      * @see #setOuterConversationNodeRef(ConversationNode)
      * @see org.eclipse.bpmn2.Bpmn2Package#getConversationAssociation_OuterConversationNodeRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='outerConversationNodeRef'"
      * @generated
      */
     ConversationNode getOuterConversationNodeRef();

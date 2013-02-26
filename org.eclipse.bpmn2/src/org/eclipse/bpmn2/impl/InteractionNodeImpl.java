@@ -14,13 +14,16 @@
  */
 package org.eclipse.bpmn2.impl;
 
-import java.util.List;
+import java.util.Collection;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ConversationLink;
 import org.eclipse.bpmn2.InteractionNode;
-import org.eclipse.bpmn2.util.Bpmn2Resource;
+
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
@@ -37,7 +40,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class InteractionNodeImpl extends EObjectImpl implements InteractionNode {
+public abstract class InteractionNodeImpl extends EObjectImpl implements InteractionNode {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -59,33 +62,27 @@ public class InteractionNodeImpl extends EObjectImpl implements InteractionNode 
 
     /**
      * <!-- begin-user-doc -->
-     * Virtual opposite of {@link ConversationLink#getTargetRef()}.
-     * For general information about virtual opposites see {@link CategoryValueImpl#getCategorizedFlowElements()}
      * <!-- end-user-doc -->
-     * @generated NOT
+     * @generated
      */
-    public List<ConversationLink> getIncomingConversationLinks() {
-        if (eResource() instanceof Bpmn2Resource) {
-            return ((Bpmn2Resource) eResource()).getOppositeReferenceAdapter().getOppositeList(
-                    ConversationLink.class, this,
-                    Bpmn2Package.Literals.CONVERSATION_LINK__TARGET_REF);
-        }
+    public EList<ConversationLink> getIncomingConversationLinks() {
+        // TODO: implement this method to return the 'Incoming Conversation Links' reference list
+        // Ensure that you remove @generated or mark it @generated NOT
+        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
         throw new UnsupportedOperationException();
     }
 
     /**
      * <!-- begin-user-doc -->
-     * Virtual opposite of {@link ConversationLink#getSourceRef()}.
-     * For general information about virtual opposites see {@link CategoryValueImpl#getCategorizedFlowElements()}
      * <!-- end-user-doc -->
-     * @generated NOT
+     * @generated
      */
-    public List<ConversationLink> getOutgoingConversationLinks() {
-        if (eResource() instanceof Bpmn2Resource) {
-            return ((Bpmn2Resource) eResource()).getOppositeReferenceAdapter().getOppositeList(
-                    ConversationLink.class, this,
-                    Bpmn2Package.Literals.CONVERSATION_LINK__SOURCE_REF);
-        }
+    public EList<ConversationLink> getOutgoingConversationLinks() {
+        // TODO: implement this method to return the 'Outgoing Conversation Links' reference list
+        // Ensure that you remove @generated or mark it @generated NOT
+        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
         throw new UnsupportedOperationException();
     }
 
@@ -103,6 +100,47 @@ public class InteractionNodeImpl extends EObjectImpl implements InteractionNode 
             return getOutgoingConversationLinks();
         }
         return super.eGet(featureID, resolve, coreType);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+            getIncomingConversationLinks().clear();
+            getIncomingConversationLinks()
+                    .addAll((Collection<? extends ConversationLink>) newValue);
+            return;
+        case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+            getOutgoingConversationLinks().clear();
+            getOutgoingConversationLinks()
+                    .addAll((Collection<? extends ConversationLink>) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+            getIncomingConversationLinks().clear();
+            return;
+        case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+            getOutgoingConversationLinks().clear();
+            return;
+        }
+        super.eUnset(featureID);
     }
 
     /**

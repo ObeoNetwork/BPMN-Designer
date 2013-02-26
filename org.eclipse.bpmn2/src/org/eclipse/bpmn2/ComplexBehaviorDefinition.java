@@ -28,7 +28,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getComplexBehaviorDefinition()
- * @model extendedMetaData="name='tComplexBehaviorDefinition' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ComplexBehaviorDefinition extends BaseElement {
@@ -44,7 +44,6 @@ public interface ComplexBehaviorDefinition extends BaseElement {
      * @see #setCondition(FormalExpression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getComplexBehaviorDefinition_Condition()
      * @model containment="true" required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='condition' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     FormalExpression getCondition();
@@ -71,7 +70,6 @@ public interface ComplexBehaviorDefinition extends BaseElement {
      * @see #setEvent(ImplicitThrowEvent)
      * @see org.eclipse.bpmn2.Bpmn2Package#getComplexBehaviorDefinition_Event()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='event' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     ImplicitThrowEvent getEvent();

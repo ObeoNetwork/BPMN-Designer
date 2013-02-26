@@ -17,10 +17,13 @@ package org.eclipse.bpmn2.impl;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Expression;
 import org.eclipse.bpmn2.StandardLoopCharacteristics;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -30,9 +33,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipse.bpmn2.impl.StandardLoopCharacteristicsImpl#isTestBefore <em>Test Before</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.StandardLoopCharacteristicsImpl#getLoopCondition <em>Loop Condition</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.StandardLoopCharacteristicsImpl#getLoopMaximum <em>Loop Maximum</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.StandardLoopCharacteristicsImpl#isTestBefore <em>Test Before</em>}</li>
  * </ul>
  * </p>
  *
@@ -40,26 +43,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl implements
         StandardLoopCharacteristics {
-    /**
-     * The cached value of the '{@link #getLoopCondition() <em>Loop Condition</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getLoopCondition()
-     * @generated
-     * @ordered
-     */
-    protected Expression loopCondition;
-
-    /**
-     * The cached value of the '{@link #getLoopMaximum() <em>Loop Maximum</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getLoopMaximum()
-     * @generated
-     * @ordered
-     */
-    protected Expression loopMaximum;
-
     /**
      * The default value of the '{@link #isTestBefore() <em>Test Before</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -81,6 +64,26 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
     protected boolean testBefore = TEST_BEFORE_EDEFAULT;
 
     /**
+     * The cached value of the '{@link #getLoopCondition() <em>Loop Condition</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLoopCondition()
+     * @generated
+     * @ordered
+     */
+    protected Expression loopCondition;
+
+    /**
+     * The cached value of the '{@link #getLoopMaximum() <em>Loop Maximum</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLoopMaximum()
+     * @generated
+     * @ordered
+     */
+    protected Expression loopMaximum;
+
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -97,6 +100,29 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
     @Override
     protected EClass eStaticClass() {
         return Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public boolean isTestBefore() {
+        return testBefore;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setTestBefore(boolean newTestBefore) {
+        boolean oldTestBefore = testBefore;
+        testBefore = newTestBefore;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE, oldTestBefore,
+                    testBefore));
     }
 
     /**
@@ -213,29 +239,6 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
      * <!-- end-user-doc -->
      * @generated
      */
-    public boolean isTestBefore() {
-        return testBefore;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setTestBefore(boolean newTestBefore) {
-        boolean oldTestBefore = testBefore;
-        testBefore = newTestBefore;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE, oldTestBefore,
-                    testBefore));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
@@ -256,12 +259,12 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+        case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
+            return isTestBefore();
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
             return getLoopCondition();
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
             return getLoopMaximum();
-        case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
-            return isTestBefore();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -274,14 +277,14 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+        case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
+            setTestBefore((Boolean) newValue);
+            return;
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
             setLoopCondition((Expression) newValue);
             return;
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
             setLoopMaximum((Expression) newValue);
-            return;
-        case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
-            setTestBefore((Boolean) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -295,14 +298,14 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
+        case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
+            setTestBefore(TEST_BEFORE_EDEFAULT);
+            return;
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
             setLoopCondition((Expression) null);
             return;
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
             setLoopMaximum((Expression) null);
-            return;
-        case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
-            setTestBefore(TEST_BEFORE_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -316,12 +319,12 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+        case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
+            return testBefore != TEST_BEFORE_EDEFAULT;
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
             return loopCondition != null;
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
             return loopMaximum != null;
-        case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
-            return testBefore != TEST_BEFORE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }

@@ -29,7 +29,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getAssociation()
- * @model extendedMetaData="name='tAssociation' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Association extends Artifact {
@@ -47,7 +47,6 @@ public interface Association extends Artifact {
      * @see #setAssociationDirection(AssociationDirection)
      * @see org.eclipse.bpmn2.Bpmn2Package#getAssociation_AssociationDirection()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='associationDirection'"
      * @generated
      */
     AssociationDirection getAssociationDirection();
@@ -75,7 +74,6 @@ public interface Association extends Artifact {
      * @see #setSourceRef(BaseElement)
      * @see org.eclipse.bpmn2.Bpmn2Package#getAssociation_SourceRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='sourceRef'"
      * @generated
      */
     BaseElement getSourceRef();
@@ -102,7 +100,6 @@ public interface Association extends Artifact {
      * @see #setTargetRef(BaseElement)
      * @see org.eclipse.bpmn2.Bpmn2Package#getAssociation_TargetRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='targetRef'"
      * @generated
      */
     BaseElement getTargetRef();

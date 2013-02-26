@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,35 +24,42 @@ import java.util.List;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.LinkEventDefinition#getSource <em>Source</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.LinkEventDefinition#getTarget <em>Target</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.LinkEventDefinition#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.LinkEventDefinition#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.LinkEventDefinition#getSource <em>Source</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getLinkEventDefinition()
- * @model extendedMetaData="name='tLinkEventDefinition' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface LinkEventDefinition extends EventDefinition {
     /**
-     * Returns the value of the '<em><b>Source</b></em>' reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.LinkEventDefinition}.
-     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.LinkEventDefinition#getTarget <em>Target</em>}'.
+     * Returns the value of the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Source</em>' reference list isn't clear,
+     * If the meaning of the '<em>Name</em>' attribute isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Source</em>' reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getLinkEventDefinition_Source()
-     * @see org.eclipse.bpmn2.LinkEventDefinition#getTarget
-     * @model opposite="target" ordered="false"
-     *        extendedMetaData="kind='element' name='source' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
+     * @return the value of the '<em>Name</em>' attribute.
+     * @see #setName(String)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getLinkEventDefinition_Name()
+     * @model required="true" ordered="false"
      * @generated
      */
-    List<LinkEventDefinition> getSource();
+    String getName();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.LinkEventDefinition#getName <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Name</em>' attribute.
+     * @see #getName()
+     * @generated
+     */
+    void setName(String value);
 
     /**
      * Returns the value of the '<em><b>Target</b></em>' reference.
@@ -68,7 +75,6 @@ public interface LinkEventDefinition extends EventDefinition {
      * @see org.eclipse.bpmn2.Bpmn2Package#getLinkEventDefinition_Target()
      * @see org.eclipse.bpmn2.LinkEventDefinition#getSource
      * @model opposite="source" ordered="false"
-     *        extendedMetaData="kind='element' name='target' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     LinkEventDefinition getTarget();
@@ -84,30 +90,21 @@ public interface LinkEventDefinition extends EventDefinition {
     void setTarget(LinkEventDefinition value);
 
     /**
-     * Returns the value of the '<em><b>Name</b></em>' attribute.
+     * Returns the value of the '<em><b>Source</b></em>' reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.LinkEventDefinition}.
+     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.LinkEventDefinition#getTarget <em>Target</em>}'.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Name</em>' attribute isn't clear,
+     * If the meaning of the '<em>Source</em>' reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Name</em>' attribute.
-     * @see #setName(String)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getLinkEventDefinition_Name()
-     * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
+     * @return the value of the '<em>Source</em>' reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getLinkEventDefinition_Source()
+     * @see org.eclipse.bpmn2.LinkEventDefinition#getTarget
+     * @model opposite="target" ordered="false"
      * @generated
      */
-    String getName();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.LinkEventDefinition#getName <em>Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Name</em>' attribute.
-     * @see #getName()
-     * @generated
-     */
-    void setName(String value);
+    EList<LinkEventDefinition> getSource();
 
 } // LinkEventDefinition

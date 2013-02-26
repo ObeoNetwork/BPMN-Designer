@@ -14,9 +14,9 @@
  */
 package org.eclipse.dd.di;
 
-import java.util.List;
-
 import org.eclipse.dd.dc.Point;
+
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,6 @@ import org.eclipse.dd.dc.Point;
  *
  * @see org.eclipse.dd.di.DiPackage#getEdge()
  * @model abstract="true"
- *        extendedMetaData="name='Edge' kind='elementOnly'"
  * @generated
  */
 public interface Edge extends DiagramElement {
@@ -48,7 +47,7 @@ public interface Edge extends DiagramElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Source</em>' reference.
      * @see org.eclipse.dd.di.DiPackage#getEdge_Source()
-     * @model transient="true" changeable="false" derived="true" ordered="false"
+     * @model changeable="false" volatile="true" derived="true" ordered="false"
      * @generated
      */
     DiagramElement getSource();
@@ -63,7 +62,7 @@ public interface Edge extends DiagramElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Target</em>' reference.
      * @see org.eclipse.dd.di.DiPackage#getEdge_Target()
-     * @model transient="true" changeable="false" derived="true" ordered="false"
+     * @model changeable="false" volatile="true" derived="true" ordered="false"
      * @generated
      */
     DiagramElement getTarget();
@@ -80,9 +79,8 @@ public interface Edge extends DiagramElement {
      * @return the value of the '<em>Waypoint</em>' containment reference list.
      * @see org.eclipse.dd.di.DiPackage#getEdge_Waypoint()
      * @model containment="true" lower="2"
-     *        extendedMetaData="kind='element' name='waypoint' namespace='http://www.omg.org/spec/DD/20100524/DI'"
      * @generated
      */
-    List<Point> getWaypoint();
+    EList<Point> getWaypoint();
 
 } // Edge

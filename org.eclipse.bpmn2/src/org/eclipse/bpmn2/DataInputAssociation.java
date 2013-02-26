@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getDataInputAssociation()
- * @model extendedMetaData="name='tDataInputAssociation' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface DataInputAssociation extends DataAssociation {

@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getDataObject()
- * @model extendedMetaData="name='tDataObject' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface DataObject extends FlowElement, ItemAwareElement {
@@ -44,7 +44,6 @@ public interface DataObject extends FlowElement, ItemAwareElement {
      * @see #setIsCollection(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataObject_IsCollection()
      * @model default="false" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='isCollection'"
      * @generated
      */
     boolean isIsCollection();

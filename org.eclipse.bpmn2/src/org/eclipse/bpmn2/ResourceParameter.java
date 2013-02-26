@@ -22,44 +22,17 @@ package org.eclipse.bpmn2;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.ResourceParameter#isIsRequired <em>Is Required</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.ResourceParameter#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.ResourceParameter#isIsRequired <em>Is Required</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.ResourceParameter#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getResourceParameter()
- * @model extendedMetaData="name='tResourceParameter' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ResourceParameter extends BaseElement {
-    /**
-     * Returns the value of the '<em><b>Is Required</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Is Required</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Is Required</em>' attribute.
-     * @see #setIsRequired(boolean)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getResourceParameter_IsRequired()
-     * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='isRequired'"
-     * @generated
-     */
-    boolean isIsRequired();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.ResourceParameter#isIsRequired <em>Is Required</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Is Required</em>' attribute.
-     * @see #isIsRequired()
-     * @generated
-     */
-    void setIsRequired(boolean value);
-
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -72,7 +45,6 @@ public interface ResourceParameter extends BaseElement {
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getResourceParameter_Name()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
     String getName();
@@ -88,6 +60,32 @@ public interface ResourceParameter extends BaseElement {
     void setName(String value);
 
     /**
+     * Returns the value of the '<em><b>Is Required</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Is Required</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Is Required</em>' attribute.
+     * @see #setIsRequired(boolean)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getResourceParameter_IsRequired()
+     * @model required="true" ordered="false"
+     * @generated
+     */
+    boolean isIsRequired();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.ResourceParameter#isIsRequired <em>Is Required</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Is Required</em>' attribute.
+     * @see #isIsRequired()
+     * @generated
+     */
+    void setIsRequired(boolean value);
+
+    /**
      * Returns the value of the '<em><b>Type</b></em>' reference.
      * <!-- begin-user-doc -->
      * <p>
@@ -99,7 +97,6 @@ public interface ResourceParameter extends BaseElement {
      * @see #setType(ItemDefinition)
      * @see org.eclipse.bpmn2.Bpmn2Package#getResourceParameter_Type()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='type'"
      * @generated
      */
     ItemDefinition getType();

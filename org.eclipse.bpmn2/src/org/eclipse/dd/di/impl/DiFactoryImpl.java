@@ -15,13 +15,13 @@
 package org.eclipse.dd.di.impl;
 
 import org.eclipse.dd.di.*;
-import org.eclipse.dd.di.DiFactory;
-import org.eclipse.dd.di.DiPackage;
-import org.eclipse.dd.di.DocumentRoot;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -68,34 +68,10 @@ public class DiFactoryImpl extends EFactoryImpl implements DiFactory {
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case DiPackage.DOCUMENT_ROOT:
-            return createDocumentRoot();
-        case DiPackage.DIAGRAM_ELEMENT:
-            return createDiagramElement();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName()
                     + "' is not a valid classifier");
         }
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public DocumentRoot createDocumentRoot() {
-        DocumentRootImpl documentRoot = new DocumentRootImpl();
-        return documentRoot;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected DiagramElement createDiagramElement() {
-        DiagramElementImpl diagramElement = new DiagramElementImpl();
-        return diagramElement;
     }
 
     /**

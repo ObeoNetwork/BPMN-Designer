@@ -17,18 +17,7 @@ package org.eclipse.dd.di.util;
 import java.util.List;
 
 import org.eclipse.dd.di.*;
-import org.eclipse.dd.di.DiPackage;
-import org.eclipse.dd.di.Diagram;
-import org.eclipse.dd.di.DiagramElement;
-import org.eclipse.dd.di.DocumentRoot;
-import org.eclipse.dd.di.Edge;
-import org.eclipse.dd.di.Label;
-import org.eclipse.dd.di.LabeledEdge;
-import org.eclipse.dd.di.LabeledShape;
-import org.eclipse.dd.di.Node;
-import org.eclipse.dd.di.Plane;
-import org.eclipse.dd.di.Shape;
-import org.eclipse.dd.di.Style;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
@@ -103,9 +92,9 @@ public class DiSwitch<T> {
      */
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-        case DiPackage.DOCUMENT_ROOT: {
-            DocumentRoot documentRoot = (DocumentRoot) theEObject;
-            T result = caseDocumentRoot(documentRoot);
+        case DiPackage.DIAGRAM_ELEMENT: {
+            DiagramElement diagramElement = (DiagramElement) theEObject;
+            T result = caseDiagramElement(diagramElement);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
@@ -117,9 +106,18 @@ public class DiSwitch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case DiPackage.DIAGRAM_ELEMENT: {
-            DiagramElement diagramElement = (DiagramElement) theEObject;
-            T result = caseDiagramElement(diagramElement);
+        case DiPackage.STYLE: {
+            Style style = (Style) theEObject;
+            T result = caseStyle(style);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DiPackage.NODE: {
+            Node node = (Node) theEObject;
+            T result = caseNode(node);
+            if (result == null)
+                result = caseDiagramElement(node);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
@@ -133,13 +131,13 @@ public class DiSwitch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case DiPackage.LABEL: {
-            Label label = (Label) theEObject;
-            T result = caseLabel(label);
+        case DiPackage.SHAPE: {
+            Shape shape = (Shape) theEObject;
+            T result = caseShape(shape);
             if (result == null)
-                result = caseNode(label);
+                result = caseNode(shape);
             if (result == null)
-                result = caseDiagramElement(label);
+                result = caseDiagramElement(shape);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
@@ -151,6 +149,17 @@ public class DiSwitch<T> {
                 result = caseEdge(labeledEdge);
             if (result == null)
                 result = caseDiagramElement(labeledEdge);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case DiPackage.LABEL: {
+            Label label = (Label) theEObject;
+            T result = caseLabel(label);
+            if (result == null)
+                result = caseNode(label);
+            if (result == null)
+                result = caseDiagramElement(label);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
@@ -168,15 +177,6 @@ public class DiSwitch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case DiPackage.NODE: {
-            Node node = (Node) theEObject;
-            T result = caseNode(node);
-            if (result == null)
-                result = caseDiagramElement(node);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
         case DiPackage.PLANE: {
             Plane plane = (Plane) theEObject;
             T result = casePlane(plane);
@@ -188,41 +188,23 @@ public class DiSwitch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case DiPackage.SHAPE: {
-            Shape shape = (Shape) theEObject;
-            T result = caseShape(shape);
-            if (result == null)
-                result = caseNode(shape);
-            if (result == null)
-                result = caseDiagramElement(shape);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        case DiPackage.STYLE: {
-            Style style = (Style) theEObject;
-            T result = caseStyle(style);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
         default:
             return defaultCase(theEObject);
         }
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Document Root</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Document Root</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseDocumentRoot(DocumentRoot object) {
+    public T caseDiagramElement(DiagramElement object) {
         return null;
     }
 
@@ -242,77 +224,17 @@ public class DiSwitch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Style</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Style</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseDiagramElement(DiagramElement object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>Edge</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Edge</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseEdge(Edge object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>Label</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Label</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseLabel(Label object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>Labeled Edge</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Labeled Edge</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseLabeledEdge(LabeledEdge object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>Labeled Shape</em>'.
-     * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
-     * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Labeled Shape</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseLabeledShape(LabeledShape object) {
+    public T caseStyle(Style object) {
         return null;
     }
 
@@ -332,17 +254,17 @@ public class DiSwitch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Plane</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Edge</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Plane</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Edge</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T casePlane(Plane object) {
+    public T caseEdge(Edge object) {
         return null;
     }
 
@@ -362,17 +284,62 @@ public class DiSwitch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Style</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Labeled Edge</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Style</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Labeled Edge</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseStyle(Style object) {
+    public T caseLabeledEdge(LabeledEdge object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Label</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Label</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseLabel(Label object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Labeled Shape</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Labeled Shape</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseLabeledShape(LabeledShape object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Plane</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Plane</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T casePlane(Plane object) {
         return null;
     }
 

@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,33 +24,16 @@ import java.util.List;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.GlobalUserTask#getRenderings <em>Renderings</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.GlobalUserTask#getImplementation <em>Implementation</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.GlobalUserTask#getRenderings <em>Renderings</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getGlobalUserTask()
- * @model extendedMetaData="name='tGlobalUserTask' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface GlobalUserTask extends GlobalTask {
-    /**
-     * Returns the value of the '<em><b>Renderings</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.Rendering}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Renderings</em>' containment reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Renderings</em>' containment reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getGlobalUserTask_Renderings()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='rendering' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-     * @generated
-     */
-    List<Rendering> getRenderings();
-
     /**
      * Returns the value of the '<em><b>Implementation</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -63,7 +46,6 @@ public interface GlobalUserTask extends GlobalTask {
      * @see #setImplementation(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getGlobalUserTask_Implementation()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='implementation'"
      * @generated
      */
     String getImplementation();
@@ -77,5 +59,21 @@ public interface GlobalUserTask extends GlobalTask {
      * @generated
      */
     void setImplementation(String value);
+
+    /**
+     * Returns the value of the '<em><b>Renderings</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.Rendering}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Renderings</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Renderings</em>' containment reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getGlobalUserTask_Renderings()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<Rendering> getRenderings();
 
 } // GlobalUserTask

@@ -18,9 +18,12 @@ import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Message;
 import org.eclipse.bpmn2.MessageEventDefinition;
 import org.eclipse.bpmn2.Operation;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -30,8 +33,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.impl.MessageEventDefinitionImpl#getOperationRef <em>Operation Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.MessageEventDefinitionImpl#getMessageRef <em>Message Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.MessageEventDefinitionImpl#getOperationRef <em>Operation Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,16 +42,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
         MessageEventDefinition {
-    /**
-     * The cached value of the '{@link #getOperationRef() <em>Operation Ref</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getOperationRef()
-     * @generated
-     * @ordered
-     */
-    protected Operation operationRef;
-
     /**
      * The cached value of the '{@link #getMessageRef() <em>Message Ref</em>}' reference.
      * <!-- begin-user-doc -->
@@ -58,6 +51,16 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
      * @ordered
      */
     protected Message messageRef;
+
+    /**
+     * The cached value of the '{@link #getOperationRef() <em>Operation Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getOperationRef()
+     * @generated
+     * @ordered
+     */
+    protected Operation operationRef;
 
     /**
      * <!-- begin-user-doc -->
@@ -76,6 +79,47 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
     @Override
     protected EClass eStaticClass() {
         return Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Message getMessageRef() {
+        if (messageRef != null && messageRef.eIsProxy()) {
+            InternalEObject oldMessageRef = (InternalEObject) messageRef;
+            messageRef = (Message) eResolveProxy(oldMessageRef);
+            if (messageRef != oldMessageRef) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF, oldMessageRef,
+                            messageRef));
+            }
+        }
+        return messageRef;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Message basicGetMessageRef() {
+        return messageRef;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setMessageRef(Message newMessageRef) {
+        Message oldMessageRef = messageRef;
+        messageRef = newMessageRef;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF, oldMessageRef, messageRef));
     }
 
     /**
@@ -125,58 +169,17 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
-    public Message getMessageRef() {
-        if (messageRef != null && messageRef.eIsProxy()) {
-            InternalEObject oldMessageRef = (InternalEObject) messageRef;
-            messageRef = (Message) eResolveProxy(oldMessageRef);
-            if (messageRef != oldMessageRef) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF, oldMessageRef,
-                            messageRef));
-            }
-        }
-        return messageRef;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public Message basicGetMessageRef() {
-        return messageRef;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setMessageRef(Message newMessageRef) {
-        Message oldMessageRef = messageRef;
-        messageRef = newMessageRef;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF, oldMessageRef, messageRef));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
-            if (resolve)
-                return getOperationRef();
-            return basicGetOperationRef();
         case Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
             if (resolve)
                 return getMessageRef();
             return basicGetMessageRef();
+        case Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
+            if (resolve)
+                return getOperationRef();
+            return basicGetOperationRef();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -189,11 +192,11 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
-            setOperationRef((Operation) newValue);
-            return;
         case Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
             setMessageRef((Message) newValue);
+            return;
+        case Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
+            setOperationRef((Operation) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -207,11 +210,11 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
-            setOperationRef((Operation) null);
-            return;
         case Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
             setMessageRef((Message) null);
+            return;
+        case Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
+            setOperationRef((Operation) null);
             return;
         }
         super.eUnset(featureID);
@@ -225,10 +228,10 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
-            return operationRef != null;
         case Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
             return messageRef != null;
+        case Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
+            return operationRef != null;
         }
         return super.eIsSet(featureID);
     }

@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getProperty()
- * @model extendedMetaData="name='tProperty' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Property extends ItemAwareElement {
@@ -43,7 +43,6 @@ public interface Property extends ItemAwareElement {
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getProperty_Name()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
     String getName();

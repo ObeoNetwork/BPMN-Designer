@@ -22,43 +22,16 @@ package org.eclipse.bpmn2;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.CompensateEventDefinition#getActivityRef <em>Activity Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.CompensateEventDefinition#isWaitForCompletion <em>Wait For Completion</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.CompensateEventDefinition#getActivityRef <em>Activity Ref</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getCompensateEventDefinition()
- * @model extendedMetaData="name='tCompensateEventDefinition' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface CompensateEventDefinition extends EventDefinition {
-    /**
-     * Returns the value of the '<em><b>Activity Ref</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Activity Ref</em>' reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Activity Ref</em>' reference.
-     * @see #setActivityRef(Activity)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getCompensateEventDefinition_ActivityRef()
-     * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='activityRef'"
-     * @generated
-     */
-    Activity getActivityRef();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.CompensateEventDefinition#getActivityRef <em>Activity Ref</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Activity Ref</em>' reference.
-     * @see #getActivityRef()
-     * @generated
-     */
-    void setActivityRef(Activity value);
-
     /**
      * Returns the value of the '<em><b>Wait For Completion</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -71,7 +44,6 @@ public interface CompensateEventDefinition extends EventDefinition {
      * @see #setWaitForCompletion(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCompensateEventDefinition_WaitForCompletion()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='waitForCompletion'"
      * @generated
      */
     boolean isWaitForCompletion();
@@ -85,5 +57,31 @@ public interface CompensateEventDefinition extends EventDefinition {
      * @generated
      */
     void setWaitForCompletion(boolean value);
+
+    /**
+     * Returns the value of the '<em><b>Activity Ref</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Activity Ref</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Activity Ref</em>' reference.
+     * @see #setActivityRef(Activity)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getCompensateEventDefinition_ActivityRef()
+     * @model ordered="false"
+     * @generated
+     */
+    Activity getActivityRef();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.CompensateEventDefinition#getActivityRef <em>Activity Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Activity Ref</em>' reference.
+     * @see #getActivityRef()
+     * @generated
+     */
+    void setActivityRef(Activity value);
 
 } // CompensateEventDefinition

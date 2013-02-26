@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +29,7 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getSubConversation()
- * @model extendedMetaData="name='tSubConversation' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface SubConversation extends ConversationNode {
@@ -45,9 +45,8 @@ public interface SubConversation extends ConversationNode {
      * @return the value of the '<em>Conversation Nodes</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getSubConversation_ConversationNodes()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='conversationNode' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#conversationNode'"
      * @generated
      */
-    List<ConversationNode> getConversationNodes();
+    EList<ConversationNode> getConversationNodes();
 
 } // SubConversation

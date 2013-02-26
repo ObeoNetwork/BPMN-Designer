@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,34 +24,43 @@ import java.util.List;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.CallableElement#getSupportedInterfaceRefs <em>Supported Interface Refs</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.CallableElement#getIoSpecification <em>Io Specification</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.CallableElement#getIoBinding <em>Io Binding</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.CallableElement#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.CallableElement#getIoSpecification <em>Io Specification</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.CallableElement#getSupportedInterfaceRefs <em>Supported Interface Refs</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.CallableElement#getIoBinding <em>Io Binding</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getCallableElement()
- * @model extendedMetaData="name='tCallableElement' kind='elementOnly' abstract='true'"
+ * @model abstract="true"
  * @generated
  */
 public interface CallableElement extends RootElement {
     /**
-     * Returns the value of the '<em><b>Supported Interface Refs</b></em>' reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.Interface}.
+     * Returns the value of the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Supported Interface Refs</em>' reference list isn't clear,
+     * If the meaning of the '<em>Name</em>' attribute isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Supported Interface Refs</em>' reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getCallableElement_SupportedInterfaceRefs()
-     * @model ordered="false"
-     *        extendedMetaData="kind='element' name='supportedInterfaceRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
+     * @return the value of the '<em>Name</em>' attribute.
+     * @see #setName(String)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getCallableElement_Name()
+     * @model required="true" ordered="false"
      * @generated
      */
-    List<Interface> getSupportedInterfaceRefs();
+    String getName();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.CallableElement#getName <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Name</em>' attribute.
+     * @see #getName()
+     * @generated
+     */
+    void setName(String value);
 
     /**
      * Returns the value of the '<em><b>Io Specification</b></em>' containment reference.
@@ -65,7 +74,6 @@ public interface CallableElement extends RootElement {
      * @see #setIoSpecification(InputOutputSpecification)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCallableElement_IoSpecification()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='ioSpecification' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     InputOutputSpecification getIoSpecification();
@@ -81,6 +89,22 @@ public interface CallableElement extends RootElement {
     void setIoSpecification(InputOutputSpecification value);
 
     /**
+     * Returns the value of the '<em><b>Supported Interface Refs</b></em>' reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.Interface}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Supported Interface Refs</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Supported Interface Refs</em>' reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getCallableElement_SupportedInterfaceRefs()
+     * @model ordered="false"
+     * @generated
+     */
+    EList<Interface> getSupportedInterfaceRefs();
+
+    /**
      * Returns the value of the '<em><b>Io Binding</b></em>' containment reference list.
      * The list contents are of type {@link org.eclipse.bpmn2.InputOutputBinding}.
      * <!-- begin-user-doc -->
@@ -92,36 +116,8 @@ public interface CallableElement extends RootElement {
      * @return the value of the '<em>Io Binding</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getCallableElement_IoBinding()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='ioBinding' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<InputOutputBinding> getIoBinding();
-
-    /**
-     * Returns the value of the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Name</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Name</em>' attribute.
-     * @see #setName(String)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getCallableElement_Name()
-     * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
-     * @generated
-     */
-    String getName();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.CallableElement#getName <em>Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Name</em>' attribute.
-     * @see #getName()
-     * @generated
-     */
-    void setName(String value);
+    EList<InputOutputBinding> getIoBinding();
 
 } // CallableElement

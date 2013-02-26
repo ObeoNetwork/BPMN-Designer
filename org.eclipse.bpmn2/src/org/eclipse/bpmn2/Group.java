@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getGroup()
- * @model extendedMetaData="name='tGroup' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Group extends Artifact {
@@ -43,7 +43,6 @@ public interface Group extends Artifact {
      * @see #setCategoryValueRef(CategoryValue)
      * @see org.eclipse.bpmn2.Bpmn2Package#getGroup_CategoryValueRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='categoryValueRef'"
      * @generated
      */
     CategoryValue getCategoryValueRef();

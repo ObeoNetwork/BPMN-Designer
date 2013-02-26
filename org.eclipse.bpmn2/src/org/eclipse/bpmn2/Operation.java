@@ -14,7 +14,9 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,19 +26,45 @@ import java.util.List;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.eclipse.bpmn2.Operation#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Operation#getInMessageRef <em>In Message Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Operation#getOutMessageRef <em>Out Message Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Operation#getErrorRefs <em>Error Refs</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Operation#getImplementationRef <em>Implementation Ref</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.Operation#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getOperation()
- * @model extendedMetaData="name='tOperation' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Operation extends BaseElement {
+    /**
+     * Returns the value of the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Name</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Name</em>' attribute.
+     * @see #setName(String)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getOperation_Name()
+     * @model required="true" ordered="false"
+     * @generated
+     */
+    String getName();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.Operation#getName <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Name</em>' attribute.
+     * @see #getName()
+     * @generated
+     */
+    void setName(String value);
+
     /**
      * Returns the value of the '<em><b>In Message Ref</b></em>' reference.
      * <!-- begin-user-doc -->
@@ -49,7 +77,6 @@ public interface Operation extends BaseElement {
      * @see #setInMessageRef(Message)
      * @see org.eclipse.bpmn2.Bpmn2Package#getOperation_InMessageRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='inMessageRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Message getInMessageRef();
@@ -76,7 +103,6 @@ public interface Operation extends BaseElement {
      * @see #setOutMessageRef(Message)
      * @see org.eclipse.bpmn2.Bpmn2Package#getOperation_OutMessageRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='element' name='outMessageRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Message getOutMessageRef();
@@ -103,10 +129,9 @@ public interface Operation extends BaseElement {
      * @return the value of the '<em>Error Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getOperation_ErrorRefs()
      * @model ordered="false"
-     *        extendedMetaData="kind='element' name='errorRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<org.eclipse.bpmn2.Error> getErrorRefs();
+    EList<org.eclipse.bpmn2.Error> getErrorRefs();
 
     /**
      * Returns the value of the '<em><b>Implementation Ref</b></em>' reference.
@@ -117,13 +142,12 @@ public interface Operation extends BaseElement {
      * </p>
      * <!-- end-user-doc -->
      * @return the value of the '<em>Implementation Ref</em>' reference.
-     * @see #setImplementationRef(Object)
+     * @see #setImplementationRef(EObject)
      * @see org.eclipse.bpmn2.Bpmn2Package#getOperation_ImplementationRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='implementationRef'"
      * @generated
      */
-    Object getImplementationRef();
+    EObject getImplementationRef();
 
     /**
      * Sets the value of the '{@link org.eclipse.bpmn2.Operation#getImplementationRef <em>Implementation Ref</em>}' reference.
@@ -133,33 +157,6 @@ public interface Operation extends BaseElement {
      * @see #getImplementationRef()
      * @generated
      */
-    void setImplementationRef(Object value);
-
-    /**
-     * Returns the value of the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Name</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Name</em>' attribute.
-     * @see #setName(String)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getOperation_Name()
-     * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
-     * @generated
-     */
-    String getName();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.Operation#getName <em>Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Name</em>' attribute.
-     * @see #getName()
-     * @generated
-     */
-    void setName(String value);
+    void setImplementationRef(EObject value);
 
 } // Operation

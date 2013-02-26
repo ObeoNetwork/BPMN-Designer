@@ -14,6 +14,8 @@
  */
 package org.eclipse.bpmn2;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Resource Parameter Binding</b></em>'.
@@ -28,10 +30,10 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getResourceParameterBinding()
- * @model extendedMetaData="name='tResourceParameterBinding' kind='elementOnly'"
+ * @model
  * @generated
  */
-public interface ResourceParameterBinding extends BaseElement {
+public interface ResourceParameterBinding extends EObject {
     /**
      * Returns the value of the '<em><b>Expression</b></em>' containment reference.
      * <!-- begin-user-doc -->
@@ -44,7 +46,6 @@ public interface ResourceParameterBinding extends BaseElement {
      * @see #setExpression(Expression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getResourceParameterBinding_Expression()
      * @model containment="true" required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='expression' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#expression'"
      * @generated
      */
     Expression getExpression();
@@ -71,7 +72,6 @@ public interface ResourceParameterBinding extends BaseElement {
      * @see #setParameterRef(ResourceParameter)
      * @see org.eclipse.bpmn2.Bpmn2Package#getResourceParameterBinding_ParameterRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='parameterRef'"
      * @generated
      */
     ResourceParameter getParameterRef();

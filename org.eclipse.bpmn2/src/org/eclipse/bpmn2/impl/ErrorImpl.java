@@ -16,9 +16,12 @@ package org.eclipse.bpmn2.impl;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ItemDefinition;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -28,9 +31,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.impl.ErrorImpl#getErrorCode <em>Error Code</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.ErrorImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.ErrorImpl#getStructureRef <em>Structure Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.ErrorImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.ErrorImpl#getErrorCode <em>Error Code</em>}</li>
  * </ul>
  * </p>
  *
@@ -38,24 +41,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Error {
     /**
-     * The default value of the '{@link #getErrorCode() <em>Error Code</em>}' attribute.
+     * The cached value of the '{@link #getStructureRef() <em>Structure Ref</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getErrorCode()
+     * @see #getStructureRef()
      * @generated
      * @ordered
      */
-    protected static final String ERROR_CODE_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getErrorCode() <em>Error Code</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getErrorCode()
-     * @generated
-     * @ordered
-     */
-    protected String errorCode = ERROR_CODE_EDEFAULT;
+    protected ItemDefinition structureRef;
 
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -78,14 +71,24 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
     protected String name = NAME_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getStructureRef() <em>Structure Ref</em>}' reference.
+     * The default value of the '{@link #getErrorCode() <em>Error Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getStructureRef()
+     * @see #getErrorCode()
      * @generated
      * @ordered
      */
-    protected ItemDefinition structureRef;
+    protected static final String ERROR_CODE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getErrorCode() <em>Error Code</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getErrorCode()
+     * @generated
+     * @ordered
+     */
+    protected String errorCode = ERROR_CODE_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -104,50 +107,6 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
     @Override
     protected EClass eStaticClass() {
         return Bpmn2Package.Literals.ERROR;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public String getErrorCode() {
-        return errorCode;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setErrorCode(String newErrorCode) {
-        String oldErrorCode = errorCode;
-        errorCode = newErrorCode;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ERROR__ERROR_CODE,
-                    oldErrorCode, errorCode));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setName(String newName) {
-        String oldName = name;
-        name = newName;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ERROR__NAME,
-                    oldName, name));
     }
 
     /**
@@ -195,17 +154,61 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
      * <!-- end-user-doc -->
      * @generated
      */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ERROR__NAME,
+                    oldName, name));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getErrorCode() {
+        return errorCode;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setErrorCode(String newErrorCode) {
+        String oldErrorCode = errorCode;
+        errorCode = newErrorCode;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.ERROR__ERROR_CODE,
+                    oldErrorCode, errorCode));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case Bpmn2Package.ERROR__ERROR_CODE:
-            return getErrorCode();
-        case Bpmn2Package.ERROR__NAME:
-            return getName();
         case Bpmn2Package.ERROR__STRUCTURE_REF:
             if (resolve)
                 return getStructureRef();
             return basicGetStructureRef();
+        case Bpmn2Package.ERROR__NAME:
+            return getName();
+        case Bpmn2Package.ERROR__ERROR_CODE:
+            return getErrorCode();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -218,14 +221,14 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case Bpmn2Package.ERROR__ERROR_CODE:
-            setErrorCode((String) newValue);
+        case Bpmn2Package.ERROR__STRUCTURE_REF:
+            setStructureRef((ItemDefinition) newValue);
             return;
         case Bpmn2Package.ERROR__NAME:
             setName((String) newValue);
             return;
-        case Bpmn2Package.ERROR__STRUCTURE_REF:
-            setStructureRef((ItemDefinition) newValue);
+        case Bpmn2Package.ERROR__ERROR_CODE:
+            setErrorCode((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -239,14 +242,14 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.ERROR__ERROR_CODE:
-            setErrorCode(ERROR_CODE_EDEFAULT);
+        case Bpmn2Package.ERROR__STRUCTURE_REF:
+            setStructureRef((ItemDefinition) null);
             return;
         case Bpmn2Package.ERROR__NAME:
             setName(NAME_EDEFAULT);
             return;
-        case Bpmn2Package.ERROR__STRUCTURE_REF:
-            setStructureRef((ItemDefinition) null);
+        case Bpmn2Package.ERROR__ERROR_CODE:
+            setErrorCode(ERROR_CODE_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -260,13 +263,13 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+        case Bpmn2Package.ERROR__STRUCTURE_REF:
+            return structureRef != null;
+        case Bpmn2Package.ERROR__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         case Bpmn2Package.ERROR__ERROR_CODE:
             return ERROR_CODE_EDEFAULT == null ? errorCode != null : !ERROR_CODE_EDEFAULT
                     .equals(errorCode);
-        case Bpmn2Package.ERROR__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-        case Bpmn2Package.ERROR__STRUCTURE_REF:
-            return structureRef != null;
         }
         return super.eIsSet(featureID);
     }
@@ -282,10 +285,10 @@ public class ErrorImpl extends RootElementImpl implements org.eclipse.bpmn2.Erro
             return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (errorCode: ");
-        result.append(errorCode);
-        result.append(", name: ");
+        result.append(" (name: ");
         result.append(name);
+        result.append(", errorCode: ");
+        result.append(errorCode);
         result.append(')');
         return result.toString();
     }

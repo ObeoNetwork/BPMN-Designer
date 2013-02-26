@@ -15,15 +15,18 @@
 package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.GlobalTask;
 import org.eclipse.bpmn2.ResourceRole;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -75,7 +78,7 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<ResourceRole> getResources() {
+    public EList<ResourceRole> getResources() {
         if (resources == null) {
             resources = new EObjectContainmentEList<ResourceRole>(ResourceRole.class, this,
                     Bpmn2Package.GLOBAL_TASK__RESOURCES);

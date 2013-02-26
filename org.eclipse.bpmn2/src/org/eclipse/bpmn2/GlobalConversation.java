@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getGlobalConversation()
- * @model extendedMetaData="name='tGlobalConversation' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface GlobalConversation extends Collaboration {

@@ -15,17 +15,21 @@
 package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Message;
 import org.eclipse.bpmn2.Operation;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -35,17 +39,37 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipse.bpmn2.impl.OperationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.OperationImpl#getInMessageRef <em>In Message Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.OperationImpl#getOutMessageRef <em>Out Message Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.OperationImpl#getErrorRefs <em>Error Refs</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.OperationImpl#getImplementationRef <em>Implementation Ref</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.OperationImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class OperationImpl extends BaseElementImpl implements Operation {
+    /**
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected static final String NAME_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected String name = NAME_EDEFAULT;
+
     /**
      * The cached value of the '{@link #getInMessageRef() <em>In Message Ref</em>}' reference.
      * <!-- begin-user-doc -->
@@ -87,26 +111,6 @@ public class OperationImpl extends BaseElementImpl implements Operation {
     protected EObject implementationRef;
 
     /**
-     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getName()
-     * @generated
-     * @ordered
-     */
-    protected static final String NAME_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getName()
-     * @generated
-     * @ordered
-     */
-    protected String name = NAME_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -123,6 +127,28 @@ public class OperationImpl extends BaseElementImpl implements Operation {
     @Override
     protected EClass eStaticClass() {
         return Bpmn2Package.Literals.OPERATION;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.OPERATION__NAME,
+                    oldName, name));
     }
 
     /**
@@ -211,7 +237,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<org.eclipse.bpmn2.Error> getErrorRefs() {
+    public EList<org.eclipse.bpmn2.Error> getErrorRefs() {
         if (errorRefs == null) {
             errorRefs = new EObjectResolvingEList<org.eclipse.bpmn2.Error>(
                     org.eclipse.bpmn2.Error.class, this, Bpmn2Package.OPERATION__ERROR_REFS);
@@ -224,7 +250,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Object getImplementationRef() {
+    public EObject getImplementationRef() {
         if (implementationRef != null && implementationRef.eIsProxy()) {
             InternalEObject oldImplementationRef = (InternalEObject) implementationRef;
             implementationRef = eResolveProxy(oldImplementationRef);
@@ -243,7 +269,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Object basicGetImplementationRef() {
+    public EObject basicGetImplementationRef() {
         return implementationRef;
     }
 
@@ -252,9 +278,9 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setImplementationRef(Object newImplementationRef) {
-        Object oldImplementationRef = implementationRef;
-        implementationRef = (EObject) newImplementationRef;
+    public void setImplementationRef(EObject newImplementationRef) {
+        EObject oldImplementationRef = implementationRef;
+        implementationRef = newImplementationRef;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
                     Bpmn2Package.OPERATION__IMPLEMENTATION_REF, oldImplementationRef,
@@ -266,31 +292,11 @@ public class OperationImpl extends BaseElementImpl implements Operation {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setName(String newName) {
-        String oldName = name;
-        name = newName;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.OPERATION__NAME,
-                    oldName, name));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+        case Bpmn2Package.OPERATION__NAME:
+            return getName();
         case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
             if (resolve)
                 return getInMessageRef();
@@ -305,8 +311,6 @@ public class OperationImpl extends BaseElementImpl implements Operation {
             if (resolve)
                 return getImplementationRef();
             return basicGetImplementationRef();
-        case Bpmn2Package.OPERATION__NAME:
-            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -320,6 +324,9 @@ public class OperationImpl extends BaseElementImpl implements Operation {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+        case Bpmn2Package.OPERATION__NAME:
+            setName((String) newValue);
+            return;
         case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
             setInMessageRef((Message) newValue);
             return;
@@ -331,10 +338,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
             getErrorRefs().addAll((Collection<? extends org.eclipse.bpmn2.Error>) newValue);
             return;
         case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
-            setImplementationRef((Object) newValue);
-            return;
-        case Bpmn2Package.OPERATION__NAME:
-            setName((String) newValue);
+            setImplementationRef((EObject) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -348,6 +352,9 @@ public class OperationImpl extends BaseElementImpl implements Operation {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
+        case Bpmn2Package.OPERATION__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
             setInMessageRef((Message) null);
             return;
@@ -358,10 +365,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
             getErrorRefs().clear();
             return;
         case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
-            setImplementationRef((Object) null);
-            return;
-        case Bpmn2Package.OPERATION__NAME:
-            setName(NAME_EDEFAULT);
+            setImplementationRef((EObject) null);
             return;
         }
         super.eUnset(featureID);
@@ -375,6 +379,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
+        case Bpmn2Package.OPERATION__NAME:
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
             return inMessageRef != null;
         case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
@@ -383,8 +389,6 @@ public class OperationImpl extends BaseElementImpl implements Operation {
             return errorRefs != null && !errorRefs.isEmpty();
         case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
             return implementationRef != null;
-        case Bpmn2Package.OPERATION__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         }
         return super.eIsSet(featureID);
     }

@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -75,9 +75,9 @@ public interface ExtensionDefinition extends EObject {
      * @return the value of the '<em>Extension Attribute Definitions</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getExtensionDefinition_ExtensionAttributeDefinitions()
      * @see org.eclipse.bpmn2.ExtensionAttributeDefinition#getExtensionDefinition
-     * @model opposite="extensionDefinition" containment="true" transient="true" derived="true" ordered="false"
+     * @model opposite="extensionDefinition" containment="true" ordered="false"
      * @generated
      */
-    List<ExtensionAttributeDefinition> getExtensionAttributeDefinitions();
+    EList<ExtensionAttributeDefinition> getExtensionAttributeDefinitions();
 
 } // ExtensionDefinition

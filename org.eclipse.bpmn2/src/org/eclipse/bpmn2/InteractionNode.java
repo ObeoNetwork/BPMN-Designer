@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -32,13 +32,14 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getInteractionNode()
- * @model extendedMetaData="abstract='true'"
+ * @model abstract="true"
  * @generated
  */
 public interface InteractionNode extends EObject {
     /**
      * Returns the value of the '<em><b>Incoming Conversation Links</b></em>' reference list.
      * The list contents are of type {@link org.eclipse.bpmn2.ConversationLink}.
+     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.ConversationLink#getTargetRef <em>Target Ref</em>}'.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Incoming Conversation Links</em>' reference list isn't clear,
@@ -47,14 +48,16 @@ public interface InteractionNode extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Incoming Conversation Links</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getInteractionNode_IncomingConversationLinks()
-     * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true" ordered="false"
+     * @see org.eclipse.bpmn2.ConversationLink#getTargetRef
+     * @model opposite="targetRef" volatile="true" derived="true" ordered="false"
      * @generated
      */
-    List<ConversationLink> getIncomingConversationLinks();
+    EList<ConversationLink> getIncomingConversationLinks();
 
     /**
      * Returns the value of the '<em><b>Outgoing Conversation Links</b></em>' reference list.
      * The list contents are of type {@link org.eclipse.bpmn2.ConversationLink}.
+     * It is bidirectional and its opposite is '{@link org.eclipse.bpmn2.ConversationLink#getSourceRef <em>Source Ref</em>}'.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Outgoing Conversation Links</em>' reference list isn't clear,
@@ -63,9 +66,10 @@ public interface InteractionNode extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Outgoing Conversation Links</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getInteractionNode_OutgoingConversationLinks()
-     * @model transient="true" changeable="false" volatile="true" derived="true" ordered="false"
+     * @see org.eclipse.bpmn2.ConversationLink#getSourceRef
+     * @model opposite="sourceRef" volatile="true" derived="true" ordered="false"
      * @generated
      */
-    List<ConversationLink> getOutgoingConversationLinks();
+    EList<ConversationLink> getOutgoingConversationLinks();
 
 } // InteractionNode

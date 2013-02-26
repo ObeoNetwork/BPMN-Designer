@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,15 +25,14 @@ import java.util.List;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipse.bpmn2.ChoreographyActivity#getParticipantRefs <em>Participant Refs</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.ChoreographyActivity#getCorrelationKeys <em>Correlation Keys</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.ChoreographyActivity#getInitiatingParticipantRef <em>Initiating Participant Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.ChoreographyActivity#getCorrelationKeys <em>Correlation Keys</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.ChoreographyActivity#getLoopType <em>Loop Type</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getChoreographyActivity()
  * @model abstract="true"
- *        extendedMetaData="name='tChoreographyActivity' kind='elementOnly'"
  * @generated
  */
 public interface ChoreographyActivity extends FlowNode {
@@ -49,27 +48,9 @@ public interface ChoreographyActivity extends FlowNode {
      * @return the value of the '<em>Participant Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getChoreographyActivity_ParticipantRefs()
      * @model lower="2" ordered="false"
-     *        extendedMetaData="kind='element' name='participantRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<Participant> getParticipantRefs();
-
-    /**
-     * Returns the value of the '<em><b>Correlation Keys</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.CorrelationKey}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Correlation Keys</em>' containment reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Correlation Keys</em>' containment reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getChoreographyActivity_CorrelationKeys()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='correlationKey' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-     * @generated
-     */
-    List<CorrelationKey> getCorrelationKeys();
+    EList<Participant> getParticipantRefs();
 
     /**
      * Returns the value of the '<em><b>Initiating Participant Ref</b></em>' reference.
@@ -83,7 +64,6 @@ public interface ChoreographyActivity extends FlowNode {
      * @see #setInitiatingParticipantRef(Participant)
      * @see org.eclipse.bpmn2.Bpmn2Package#getChoreographyActivity_InitiatingParticipantRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='initiatingParticipantRef'"
      * @generated
      */
     Participant getInitiatingParticipantRef();
@@ -97,6 +77,22 @@ public interface ChoreographyActivity extends FlowNode {
      * @generated
      */
     void setInitiatingParticipantRef(Participant value);
+
+    /**
+     * Returns the value of the '<em><b>Correlation Keys</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.CorrelationKey}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Correlation Keys</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Correlation Keys</em>' containment reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getChoreographyActivity_CorrelationKeys()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<CorrelationKey> getCorrelationKeys();
 
     /**
      * Returns the value of the '<em><b>Loop Type</b></em>' attribute.
@@ -113,7 +109,6 @@ public interface ChoreographyActivity extends FlowNode {
      * @see #setLoopType(ChoreographyLoopType)
      * @see org.eclipse.bpmn2.Bpmn2Package#getChoreographyActivity_LoopType()
      * @model default="None" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='loopType'"
      * @generated
      */
     ChoreographyLoopType getLoopType();

@@ -14,7 +14,7 @@
  */
 package org.eclipse.dd.di;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,6 @@ import java.util.List;
  *
  * @see org.eclipse.dd.di.DiPackage#getLabeledEdge()
  * @model abstract="true"
- *        extendedMetaData="name='LabeledEdge' kind='elementOnly'"
  * @generated
  */
 public interface LabeledEdge extends Edge {
@@ -45,9 +44,9 @@ public interface LabeledEdge extends Edge {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Owned Label</em>' reference list.
      * @see org.eclipse.dd.di.DiPackage#getLabeledEdge_OwnedLabel()
-     * @model transient="true" changeable="false" derived="true" ordered="false"
+     * @model changeable="false" volatile="true" derived="true" ordered="false"
      * @generated
      */
-    List<Label> getOwnedLabel();
+    EList<Label> getOwnedLabel();
 
 } // LabeledEdge

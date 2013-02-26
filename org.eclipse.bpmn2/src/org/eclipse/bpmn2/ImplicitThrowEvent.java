@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getImplicitThrowEvent()
- * @model extendedMetaData="name='tImplicitThrowEvent' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ImplicitThrowEvent extends ThrowEvent {

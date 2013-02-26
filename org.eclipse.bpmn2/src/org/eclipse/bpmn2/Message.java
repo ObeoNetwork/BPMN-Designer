@@ -22,43 +22,16 @@ package org.eclipse.bpmn2;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.Message#getItemRef <em>Item Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Message#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.Message#getItemRef <em>Item Ref</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getMessage()
- * @model extendedMetaData="name='tMessage' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Message extends RootElement {
-    /**
-     * Returns the value of the '<em><b>Item Ref</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Item Ref</em>' reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Item Ref</em>' reference.
-     * @see #setItemRef(ItemDefinition)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getMessage_ItemRef()
-     * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='itemRef'"
-     * @generated
-     */
-    ItemDefinition getItemRef();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.Message#getItemRef <em>Item Ref</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Item Ref</em>' reference.
-     * @see #getItemRef()
-     * @generated
-     */
-    void setItemRef(ItemDefinition value);
-
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -71,7 +44,6 @@ public interface Message extends RootElement {
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMessage_Name()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
     String getName();
@@ -85,5 +57,31 @@ public interface Message extends RootElement {
      * @generated
      */
     void setName(String value);
+
+    /**
+     * Returns the value of the '<em><b>Item Ref</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Item Ref</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Item Ref</em>' reference.
+     * @see #setItemRef(ItemDefinition)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getMessage_ItemRef()
+     * @model ordered="false"
+     * @generated
+     */
+    ItemDefinition getItemRef();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.Message#getItemRef <em>Item Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Item Ref</em>' reference.
+     * @see #getItemRef()
+     * @generated
+     */
+    void setItemRef(ItemDefinition value);
 
 } // Message

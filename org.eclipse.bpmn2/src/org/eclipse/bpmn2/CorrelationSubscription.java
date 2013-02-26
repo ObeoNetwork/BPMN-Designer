@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,33 +24,16 @@ import java.util.List;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.CorrelationSubscription#getCorrelationPropertyBinding <em>Correlation Property Binding</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.CorrelationSubscription#getCorrelationKeyRef <em>Correlation Key Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.CorrelationSubscription#getCorrelationPropertyBinding <em>Correlation Property Binding</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationSubscription()
- * @model extendedMetaData="name='tCorrelationSubscription' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface CorrelationSubscription extends BaseElement {
-    /**
-     * Returns the value of the '<em><b>Correlation Property Binding</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.CorrelationPropertyBinding}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Correlation Property Binding</em>' containment reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Correlation Property Binding</em>' containment reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationSubscription_CorrelationPropertyBinding()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='correlationPropertyBinding' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-     * @generated
-     */
-    List<CorrelationPropertyBinding> getCorrelationPropertyBinding();
-
     /**
      * Returns the value of the '<em><b>Correlation Key Ref</b></em>' reference.
      * <!-- begin-user-doc -->
@@ -63,7 +46,6 @@ public interface CorrelationSubscription extends BaseElement {
      * @see #setCorrelationKeyRef(CorrelationKey)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationSubscription_CorrelationKeyRef()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='correlationKeyRef'"
      * @generated
      */
     CorrelationKey getCorrelationKeyRef();
@@ -77,5 +59,21 @@ public interface CorrelationSubscription extends BaseElement {
      * @generated
      */
     void setCorrelationKeyRef(CorrelationKey value);
+
+    /**
+     * Returns the value of the '<em><b>Correlation Property Binding</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.CorrelationPropertyBinding}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Correlation Property Binding</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Correlation Property Binding</em>' containment reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationSubscription_CorrelationPropertyBinding()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<CorrelationPropertyBinding> getCorrelationPropertyBinding();
 
 } // CorrelationSubscription

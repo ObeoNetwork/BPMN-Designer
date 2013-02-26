@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,33 +24,16 @@ import java.util.List;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.SubProcess#getArtifacts <em>Artifacts</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.SubProcess#isTriggeredByEvent <em>Triggered By Event</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.SubProcess#getArtifacts <em>Artifacts</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getSubProcess()
- * @model extendedMetaData="name='tSubProcess' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface SubProcess extends Activity, FlowElementsContainer {
-    /**
-     * Returns the value of the '<em><b>Artifacts</b></em>' containment reference list.
-     * The list contents are of type {@link org.eclipse.bpmn2.Artifact}.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Artifacts</em>' containment reference list isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Artifacts</em>' containment reference list.
-     * @see org.eclipse.bpmn2.Bpmn2Package#getSubProcess_Artifacts()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='artifact' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL' group='http://www.omg.org/spec/BPMN/20100524/MODEL#artifact'"
-     * @generated
-     */
-    List<Artifact> getArtifacts();
-
     /**
      * Returns the value of the '<em><b>Triggered By Event</b></em>' attribute.
      * The default value is <code>"false"</code>.
@@ -64,7 +47,6 @@ public interface SubProcess extends Activity, FlowElementsContainer {
      * @see #setTriggeredByEvent(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getSubProcess_TriggeredByEvent()
      * @model default="false" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='triggeredByEvent'"
      * @generated
      */
     boolean isTriggeredByEvent();
@@ -78,5 +60,21 @@ public interface SubProcess extends Activity, FlowElementsContainer {
      * @generated
      */
     void setTriggeredByEvent(boolean value);
+
+    /**
+     * Returns the value of the '<em><b>Artifacts</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.Artifact}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Artifacts</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Artifacts</em>' containment reference list.
+     * @see org.eclipse.bpmn2.Bpmn2Package#getSubProcess_Artifacts()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<Artifact> getArtifacts();
 
 } // SubProcess

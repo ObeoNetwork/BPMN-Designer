@@ -15,21 +15,12 @@
 package org.eclipse.dd.di.util;
 
 import org.eclipse.dd.di.*;
-import org.eclipse.dd.di.DiPackage;
-import org.eclipse.dd.di.Diagram;
-import org.eclipse.dd.di.DiagramElement;
-import org.eclipse.dd.di.DocumentRoot;
-import org.eclipse.dd.di.Edge;
-import org.eclipse.dd.di.Label;
-import org.eclipse.dd.di.LabeledEdge;
-import org.eclipse.dd.di.LabeledShape;
-import org.eclipse.dd.di.Node;
-import org.eclipse.dd.di.Plane;
-import org.eclipse.dd.di.Shape;
-import org.eclipse.dd.di.Style;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -88,8 +79,8 @@ public class DiAdapterFactory extends AdapterFactoryImpl {
      */
     protected DiSwitch<Adapter> modelSwitch = new DiSwitch<Adapter>() {
         @Override
-        public Adapter caseDocumentRoot(DocumentRoot object) {
-            return createDocumentRootAdapter();
+        public Adapter caseDiagramElement(DiagramElement object) {
+            return createDiagramElementAdapter();
         }
 
         @Override
@@ -98,28 +89,8 @@ public class DiAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseDiagramElement(DiagramElement object) {
-            return createDiagramElementAdapter();
-        }
-
-        @Override
-        public Adapter caseEdge(Edge object) {
-            return createEdgeAdapter();
-        }
-
-        @Override
-        public Adapter caseLabel(Label object) {
-            return createLabelAdapter();
-        }
-
-        @Override
-        public Adapter caseLabeledEdge(LabeledEdge object) {
-            return createLabeledEdgeAdapter();
-        }
-
-        @Override
-        public Adapter caseLabeledShape(LabeledShape object) {
-            return createLabeledShapeAdapter();
+        public Adapter caseStyle(Style object) {
+            return createStyleAdapter();
         }
 
         @Override
@@ -128,8 +99,8 @@ public class DiAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter casePlane(Plane object) {
-            return createPlaneAdapter();
+        public Adapter caseEdge(Edge object) {
+            return createEdgeAdapter();
         }
 
         @Override
@@ -138,8 +109,23 @@ public class DiAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseStyle(Style object) {
-            return createStyleAdapter();
+        public Adapter caseLabeledEdge(LabeledEdge object) {
+            return createLabeledEdgeAdapter();
+        }
+
+        @Override
+        public Adapter caseLabel(Label object) {
+            return createLabelAdapter();
+        }
+
+        @Override
+        public Adapter caseLabeledShape(LabeledShape object) {
+            return createLabeledShapeAdapter();
+        }
+
+        @Override
+        public Adapter casePlane(Plane object) {
+            return createPlaneAdapter();
         }
 
         @Override
@@ -162,16 +148,16 @@ public class DiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.DocumentRoot <em>Document Root</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.DiagramElement <em>Diagram Element</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.dd.di.DocumentRoot
+     * @see org.eclipse.dd.di.DiagramElement
      * @generated
      */
-    public Adapter createDocumentRootAdapter() {
+    public Adapter createDiagramElementAdapter() {
         return null;
     }
 
@@ -190,72 +176,16 @@ public class DiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.DiagramElement <em>Diagram Element</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Style <em>Style</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.dd.di.DiagramElement
+     * @see org.eclipse.dd.di.Style
      * @generated
      */
-    public Adapter createDiagramElementAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Edge <em>Edge</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.dd.di.Edge
-     * @generated
-     */
-    public Adapter createEdgeAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Label <em>Label</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.dd.di.Label
-     * @generated
-     */
-    public Adapter createLabelAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.LabeledEdge <em>Labeled Edge</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.dd.di.LabeledEdge
-     * @generated
-     */
-    public Adapter createLabeledEdgeAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.LabeledShape <em>Labeled Shape</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.dd.di.LabeledShape
-     * @generated
-     */
-    public Adapter createLabeledShapeAdapter() {
+    public Adapter createStyleAdapter() {
         return null;
     }
 
@@ -274,16 +204,16 @@ public class DiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Plane <em>Plane</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Edge <em>Edge</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.dd.di.Plane
+     * @see org.eclipse.dd.di.Edge
      * @generated
      */
-    public Adapter createPlaneAdapter() {
+    public Adapter createEdgeAdapter() {
         return null;
     }
 
@@ -302,16 +232,58 @@ public class DiAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Style <em>Style</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.LabeledEdge <em>Labeled Edge</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.dd.di.Style
+     * @see org.eclipse.dd.di.LabeledEdge
      * @generated
      */
-    public Adapter createStyleAdapter() {
+    public Adapter createLabeledEdgeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Label <em>Label</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.dd.di.Label
+     * @generated
+     */
+    public Adapter createLabelAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.LabeledShape <em>Labeled Shape</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.dd.di.LabeledShape
+     * @generated
+     */
+    public Adapter createLabeledShapeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.dd.di.Plane <em>Plane</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.dd.di.Plane
+     * @generated
+     */
+    public Adapter createPlaneAdapter() {
         return null;
     }
 

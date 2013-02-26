@@ -22,17 +22,43 @@ package org.eclipse.bpmn2;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.eclipse.bpmn2.DataStore#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.DataStore#getCapacity <em>Capacity</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.DataStore#isIsUnlimited <em>Is Unlimited</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.DataStore#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getDataStore()
- * @model extendedMetaData="name='tDataStore' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface DataStore extends ItemAwareElement, RootElement {
+    /**
+     * Returns the value of the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Name</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Name</em>' attribute.
+     * @see #setName(String)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getDataStore_Name()
+     * @model required="true" ordered="false"
+     * @generated
+     */
+    String getName();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.DataStore#getName <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Name</em>' attribute.
+     * @see #getName()
+     * @generated
+     */
+    void setName(String value);
+
     /**
      * Returns the value of the '<em><b>Capacity</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -45,7 +71,6 @@ public interface DataStore extends ItemAwareElement, RootElement {
      * @see #setCapacity(int)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataStore_Capacity()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='capacity'"
      * @generated
      */
     int getCapacity();
@@ -73,7 +98,6 @@ public interface DataStore extends ItemAwareElement, RootElement {
      * @see #setIsUnlimited(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataStore_IsUnlimited()
      * @model default="true" required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='isUnlimited'"
      * @generated
      */
     boolean isIsUnlimited();
@@ -87,32 +111,5 @@ public interface DataStore extends ItemAwareElement, RootElement {
      * @generated
      */
     void setIsUnlimited(boolean value);
-
-    /**
-     * Returns the value of the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Name</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Name</em>' attribute.
-     * @see #setName(String)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getDataStore_Name()
-     * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
-     * @generated
-     */
-    String getName();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.DataStore#getName <em>Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Name</em>' attribute.
-     * @see #getName()
-     * @generated
-     */
-    void setName(String value);
 
 } // DataStore

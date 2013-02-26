@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getEscalationEventDefinition()
- * @model extendedMetaData="name='tEscalationEventDefinition' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface EscalationEventDefinition extends EventDefinition {
@@ -43,7 +43,6 @@ public interface EscalationEventDefinition extends EventDefinition {
      * @see #setEscalationRef(Escalation)
      * @see org.eclipse.bpmn2.Bpmn2Package#getEscalationEventDefinition_EscalationRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='escalationRef'"
      * @generated
      */
     Escalation getEscalationRef();

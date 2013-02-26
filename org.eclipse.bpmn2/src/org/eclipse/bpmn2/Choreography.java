@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getChoreography()
- * @model extendedMetaData="name='tChoreography' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Choreography extends Collaboration, FlowElementsContainer {

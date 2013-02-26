@@ -28,7 +28,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getTransaction()
- * @model extendedMetaData="name='tTransaction' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Transaction extends SubProcess {
@@ -70,7 +70,6 @@ public interface Transaction extends SubProcess {
      * @see #setMethod(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getTransaction_Method()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='method'"
      * @generated
      */
     String getMethod();

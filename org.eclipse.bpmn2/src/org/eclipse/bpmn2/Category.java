@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getCategory()
- * @model extendedMetaData="name='tCategory' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Category extends RootElement {
@@ -46,10 +46,9 @@ public interface Category extends RootElement {
      * @return the value of the '<em>Category Value</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getCategory_CategoryValue()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='categoryValue' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<CategoryValue> getCategoryValue();
+    EList<CategoryValue> getCategoryValue();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -63,7 +62,6 @@ public interface Category extends RootElement {
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCategory_Name()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
     String getName();

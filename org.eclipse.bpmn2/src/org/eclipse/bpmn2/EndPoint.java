@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getEndPoint()
- * @model extendedMetaData="name='tEndPoint' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface EndPoint extends RootElement {

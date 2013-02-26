@@ -23,13 +23,13 @@ package org.eclipse.bpmn2;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipse.bpmn2.TimerEventDefinition#getTimeDate <em>Time Date</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.TimerEventDefinition#getTimeDuration <em>Time Duration</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.TimerEventDefinition#getTimeCycle <em>Time Cycle</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.TimerEventDefinition#getTimeDuration <em>Time Duration</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getTimerEventDefinition()
- * @model extendedMetaData="name='tTimerEventDefinition' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface TimerEventDefinition extends EventDefinition {
@@ -45,7 +45,6 @@ public interface TimerEventDefinition extends EventDefinition {
      * @see #setTimeDate(Expression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getTimerEventDefinition_TimeDate()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='timeDate' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Expression getTimeDate();
@@ -61,33 +60,6 @@ public interface TimerEventDefinition extends EventDefinition {
     void setTimeDate(Expression value);
 
     /**
-     * Returns the value of the '<em><b>Time Duration</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Time Duration</em>' containment reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Time Duration</em>' containment reference.
-     * @see #setTimeDuration(Expression)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getTimerEventDefinition_TimeDuration()
-     * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='timeDuration' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
-     * @generated
-     */
-    Expression getTimeDuration();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.TimerEventDefinition#getTimeDuration <em>Time Duration</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Time Duration</em>' containment reference.
-     * @see #getTimeDuration()
-     * @generated
-     */
-    void setTimeDuration(Expression value);
-
-    /**
      * Returns the value of the '<em><b>Time Cycle</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <p>
@@ -99,7 +71,6 @@ public interface TimerEventDefinition extends EventDefinition {
      * @see #setTimeCycle(Expression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getTimerEventDefinition_TimeCycle()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='timeCycle' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Expression getTimeCycle();
@@ -113,5 +84,31 @@ public interface TimerEventDefinition extends EventDefinition {
      * @generated
      */
     void setTimeCycle(Expression value);
+
+    /**
+     * Returns the value of the '<em><b>Time Duration</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Time Duration</em>' containment reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Time Duration</em>' containment reference.
+     * @see #setTimeDuration(Expression)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getTimerEventDefinition_TimeDuration()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    Expression getTimeDuration();
+
+    /**
+     * Sets the value of the '{@link org.eclipse.bpmn2.TimerEventDefinition#getTimeDuration <em>Time Duration</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Time Duration</em>' containment reference.
+     * @see #getTimeDuration()
+     * @generated
+     */
+    void setTimeDuration(Expression value);
 
 } // TimerEventDefinition

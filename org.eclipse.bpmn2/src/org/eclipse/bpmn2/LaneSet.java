@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getLaneSet()
- * @model extendedMetaData="name='tLaneSet' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface LaneSet extends BaseElement {
@@ -46,10 +46,9 @@ public interface LaneSet extends BaseElement {
      * @return the value of the '<em>Lanes</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getLaneSet_Lanes()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='lane' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<Lane> getLanes();
+    EList<Lane> getLanes();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -63,7 +62,6 @@ public interface LaneSet extends BaseElement {
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getLaneSet_Name()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
     String getName();

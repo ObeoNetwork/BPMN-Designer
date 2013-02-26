@@ -18,10 +18,13 @@ import org.eclipse.bpmn2.AdHocOrdering;
 import org.eclipse.bpmn2.AdHocSubProcess;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Expression;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -32,8 +35,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.bpmn2.impl.AdHocSubProcessImpl#getCompletionCondition <em>Completion Condition</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.AdHocSubProcessImpl#isCancelRemainingInstances <em>Cancel Remaining Instances</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.AdHocSubProcessImpl#getOrdering <em>Ordering</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.AdHocSubProcessImpl#isCancelRemainingInstances <em>Cancel Remaining Instances</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,26 +52,6 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
      * @ordered
      */
     protected Expression completionCondition;
-
-    /**
-     * The default value of the '{@link #isCancelRemainingInstances() <em>Cancel Remaining Instances</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #isCancelRemainingInstances()
-     * @generated
-     * @ordered
-     */
-    protected static final boolean CANCEL_REMAINING_INSTANCES_EDEFAULT = true;
-
-    /**
-     * The cached value of the '{@link #isCancelRemainingInstances() <em>Cancel Remaining Instances</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #isCancelRemainingInstances()
-     * @generated
-     * @ordered
-     */
-    protected boolean cancelRemainingInstances = CANCEL_REMAINING_INSTANCES_EDEFAULT;
 
     /**
      * The default value of the '{@link #getOrdering() <em>Ordering</em>}' attribute.
@@ -89,6 +72,26 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
      * @ordered
      */
     protected AdHocOrdering ordering = ORDERING_EDEFAULT;
+
+    /**
+     * The default value of the '{@link #isCancelRemainingInstances() <em>Cancel Remaining Instances</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isCancelRemainingInstances()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean CANCEL_REMAINING_INSTANCES_EDEFAULT = true;
+
+    /**
+     * The cached value of the '{@link #isCancelRemainingInstances() <em>Cancel Remaining Instances</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isCancelRemainingInstances()
+     * @generated
+     * @ordered
+     */
+    protected boolean cancelRemainingInstances = CANCEL_REMAINING_INSTANCES_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -169,6 +172,28 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
      * <!-- end-user-doc -->
      * @generated
      */
+    public AdHocOrdering getOrdering() {
+        return ordering;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setOrdering(AdHocOrdering newOrdering) {
+        AdHocOrdering oldOrdering = ordering;
+        ordering = newOrdering == null ? ORDERING_EDEFAULT : newOrdering;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING, oldOrdering, ordering));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public boolean isCancelRemainingInstances() {
         return cancelRemainingInstances;
     }
@@ -185,28 +210,6 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
             eNotify(new ENotificationImpl(this, Notification.SET,
                     Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES,
                     oldCancelRemainingInstances, cancelRemainingInstances));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public AdHocOrdering getOrdering() {
-        return ordering;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setOrdering(AdHocOrdering newOrdering) {
-        AdHocOrdering oldOrdering = ordering;
-        ordering = newOrdering == null ? ORDERING_EDEFAULT : newOrdering;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING, oldOrdering, ordering));
     }
 
     /**
@@ -234,10 +237,10 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
         switch (featureID) {
         case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
             return getCompletionCondition();
-        case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
-            return isCancelRemainingInstances();
         case Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING:
             return getOrdering();
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
+            return isCancelRemainingInstances();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -253,11 +256,11 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
         case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
             setCompletionCondition((Expression) newValue);
             return;
-        case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
-            setCancelRemainingInstances((Boolean) newValue);
-            return;
         case Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING:
             setOrdering((AdHocOrdering) newValue);
+            return;
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
+            setCancelRemainingInstances((Boolean) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -274,11 +277,11 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
         case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
             setCompletionCondition((Expression) null);
             return;
-        case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
-            setCancelRemainingInstances(CANCEL_REMAINING_INSTANCES_EDEFAULT);
-            return;
         case Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING:
             setOrdering(ORDERING_EDEFAULT);
+            return;
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
+            setCancelRemainingInstances(CANCEL_REMAINING_INSTANCES_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -294,10 +297,10 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
         switch (featureID) {
         case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
             return completionCondition != null;
-        case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
-            return cancelRemainingInstances != CANCEL_REMAINING_INSTANCES_EDEFAULT;
         case Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING:
             return ordering != ORDERING_EDEFAULT;
+        case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
+            return cancelRemainingInstances != CANCEL_REMAINING_INSTANCES_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -313,10 +316,10 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProce
             return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (cancelRemainingInstances: ");
-        result.append(cancelRemainingInstances);
-        result.append(", ordering: ");
+        result.append(" (ordering: ");
         result.append(ordering);
+        result.append(", cancelRemainingInstances: ");
+        result.append(cancelRemainingInstances);
         result.append(')');
         return result.toString();
     }

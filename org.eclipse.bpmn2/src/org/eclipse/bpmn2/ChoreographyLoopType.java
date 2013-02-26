@@ -26,7 +26,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see org.eclipse.bpmn2.Bpmn2Package#getChoreographyLoopType()
- * @model extendedMetaData="name='tChoreographyLoopType'"
+ * @model
  * @generated
  */
 public enum ChoreographyLoopType implements Enumerator {

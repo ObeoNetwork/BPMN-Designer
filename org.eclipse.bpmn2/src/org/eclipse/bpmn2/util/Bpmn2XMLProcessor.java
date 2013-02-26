@@ -17,9 +17,11 @@ package org.eclipse.bpmn2.util;
 import java.util.Map;
 
 import org.eclipse.bpmn2.Bpmn2Package;
+
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.xmi.XMLResource;
+
 import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
 
 /**
@@ -34,13 +36,11 @@ public class Bpmn2XMLProcessor extends XMLProcessor {
      * Public constructor to instantiate the helper.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated NOT
+     * @generated
      */
     public Bpmn2XMLProcessor() {
         super((EPackage.Registry.INSTANCE));
         Bpmn2Package.eINSTANCE.eClass();
-        // Use option from Bpmn2ResourceFactory
-        saveOptions.remove(XMLResource.OPTION_EXTENDED_META_DATA);
     }
 
     /**

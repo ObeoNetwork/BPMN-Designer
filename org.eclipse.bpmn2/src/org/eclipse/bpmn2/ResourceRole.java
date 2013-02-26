@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getResourceRole()
- * @model extendedMetaData="name='tResourceRole' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ResourceRole extends BaseElement {
@@ -48,7 +48,6 @@ public interface ResourceRole extends BaseElement {
      * @see #setResourceRef(Resource)
      * @see org.eclipse.bpmn2.Bpmn2Package#getResourceRole_ResourceRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='element' name='resourceRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     Resource getResourceRef();
@@ -75,10 +74,9 @@ public interface ResourceRole extends BaseElement {
      * @return the value of the '<em>Resource Parameter Bindings</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getResourceRole_ResourceParameterBindings()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='resourceParameterBinding' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<ResourceParameterBinding> getResourceParameterBindings();
+    EList<ResourceParameterBinding> getResourceParameterBindings();
 
     /**
      * Returns the value of the '<em><b>Resource Assignment Expression</b></em>' containment reference.
@@ -92,7 +90,6 @@ public interface ResourceRole extends BaseElement {
      * @see #setResourceAssignmentExpression(ResourceAssignmentExpression)
      * @see org.eclipse.bpmn2.Bpmn2Package#getResourceRole_ResourceAssignmentExpression()
      * @model containment="true" ordered="false"
-     *        extendedMetaData="kind='element' name='resourceAssignmentExpression' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
     ResourceAssignmentExpression getResourceAssignmentExpression();
@@ -119,7 +116,6 @@ public interface ResourceRole extends BaseElement {
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getResourceRole_Name()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
     String getName();

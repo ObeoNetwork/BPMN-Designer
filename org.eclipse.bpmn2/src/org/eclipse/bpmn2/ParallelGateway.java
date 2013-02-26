@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getParallelGateway()
- * @model extendedMetaData="name='tParallelGateway' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ParallelGateway extends Gateway {

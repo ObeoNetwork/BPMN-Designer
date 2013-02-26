@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +29,7 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getChoreographyTask()
- * @model extendedMetaData="name='tChoreographyTask' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ChoreographyTask extends ChoreographyActivity {
@@ -45,9 +45,8 @@ public interface ChoreographyTask extends ChoreographyActivity {
      * @return the value of the '<em>Message Flow Ref</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getChoreographyTask_MessageFlowRef()
      * @model required="true" upper="2" ordered="false"
-     *        extendedMetaData="kind='element' name='messageFlowRef' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<MessageFlow> getMessageFlowRef();
+    EList<MessageFlow> getMessageFlowRef();
 
 } // ChoreographyTask

@@ -14,7 +14,7 @@
  */
 package org.eclipse.bpmn2;
 
-import java.util.List;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ import java.util.List;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationProperty()
- * @model extendedMetaData="name='tCorrelationProperty' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface CorrelationProperty extends RootElement {
@@ -47,10 +47,9 @@ public interface CorrelationProperty extends RootElement {
      * @return the value of the '<em>Correlation Property Retrieval Expression</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationProperty_CorrelationPropertyRetrievalExpression()
      * @model containment="true" required="true" ordered="false"
-     *        extendedMetaData="kind='element' name='correlationPropertyRetrievalExpression' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    List<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression();
+    EList<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression();
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -64,7 +63,6 @@ public interface CorrelationProperty extends RootElement {
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationProperty_Name()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
     String getName();
@@ -91,7 +89,6 @@ public interface CorrelationProperty extends RootElement {
      * @see #setType(ItemDefinition)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCorrelationProperty_Type()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='type'"
      * @generated
      */
     ItemDefinition getType();

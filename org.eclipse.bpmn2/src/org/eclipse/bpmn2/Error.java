@@ -22,43 +22,42 @@ package org.eclipse.bpmn2;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.Error#getErrorCode <em>Error Code</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.Error#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.Error#getStructureRef <em>Structure Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.Error#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.Error#getErrorCode <em>Error Code</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getError()
- * @model extendedMetaData="name='tError' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Error extends RootElement {
     /**
-     * Returns the value of the '<em><b>Error Code</b></em>' attribute.
+     * Returns the value of the '<em><b>Structure Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Error Code</em>' attribute isn't clear,
+     * If the meaning of the '<em>Structure Ref</em>' reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Error Code</em>' attribute.
-     * @see #setErrorCode(String)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getError_ErrorCode()
-     * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='errorCode'"
+     * @return the value of the '<em>Structure Ref</em>' reference.
+     * @see #setStructureRef(ItemDefinition)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getError_StructureRef()
+     * @model ordered="false"
      * @generated
      */
-    String getErrorCode();
+    ItemDefinition getStructureRef();
 
     /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.Error#getErrorCode <em>Error Code</em>}' attribute.
+     * Sets the value of the '{@link org.eclipse.bpmn2.Error#getStructureRef <em>Structure Ref</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Error Code</em>' attribute.
-     * @see #getErrorCode()
+     * @param value the new value of the '<em>Structure Ref</em>' reference.
+     * @see #getStructureRef()
      * @generated
      */
-    void setErrorCode(String value);
+    void setStructureRef(ItemDefinition value);
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -72,7 +71,6 @@ public interface Error extends RootElement {
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getError_Name()
      * @model required="true" ordered="false"
-     *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
     String getName();
@@ -88,30 +86,29 @@ public interface Error extends RootElement {
     void setName(String value);
 
     /**
-     * Returns the value of the '<em><b>Structure Ref</b></em>' reference.
+     * Returns the value of the '<em><b>Error Code</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
-     * If the meaning of the '<em>Structure Ref</em>' reference isn't clear,
+     * If the meaning of the '<em>Error Code</em>' attribute isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Structure Ref</em>' reference.
-     * @see #setStructureRef(ItemDefinition)
-     * @see org.eclipse.bpmn2.Bpmn2Package#getError_StructureRef()
-     * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='structureRef'"
+     * @return the value of the '<em>Error Code</em>' attribute.
+     * @see #setErrorCode(String)
+     * @see org.eclipse.bpmn2.Bpmn2Package#getError_ErrorCode()
+     * @model required="true" ordered="false"
      * @generated
      */
-    ItemDefinition getStructureRef();
+    String getErrorCode();
 
     /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.Error#getStructureRef <em>Structure Ref</em>}' reference.
+     * Sets the value of the '{@link org.eclipse.bpmn2.Error#getErrorCode <em>Error Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Structure Ref</em>' reference.
-     * @see #getStructureRef()
+     * @param value the new value of the '<em>Error Code</em>' attribute.
+     * @see #getErrorCode()
      * @generated
      */
-    void setStructureRef(ItemDefinition value);
+    void setErrorCode(String value);
 
 } // Error

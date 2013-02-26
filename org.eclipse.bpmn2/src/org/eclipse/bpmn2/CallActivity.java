@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getCallActivity()
- * @model extendedMetaData="name='tCallActivity' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface CallActivity extends Activity {
@@ -43,7 +43,6 @@ public interface CallActivity extends Activity {
      * @see #setCalledElementRef(CallableElement)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCallActivity_CalledElementRef()
      * @model ordered="false"
-     *        extendedMetaData="kind='attribute' name='calledElement'"
      * @generated
      */
     CallableElement getCalledElementRef();

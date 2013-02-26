@@ -27,7 +27,7 @@ package org.eclipse.bpmn2;
  * </p>
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getExclusiveGateway()
- * @model extendedMetaData="name='tExclusiveGateway' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ExclusiveGateway extends Gateway {
@@ -42,8 +42,7 @@ public interface ExclusiveGateway extends Gateway {
      * @return the value of the '<em>Default</em>' reference.
      * @see #setDefault(SequenceFlow)
      * @see org.eclipse.bpmn2.Bpmn2Package#getExclusiveGateway_Default()
-     * @model resolveProxies="false" ordered="false"
-     *        extendedMetaData="kind='attribute' name='default'"
+     * @model ordered="false"
      * @generated
      */
     SequenceFlow getDefault();

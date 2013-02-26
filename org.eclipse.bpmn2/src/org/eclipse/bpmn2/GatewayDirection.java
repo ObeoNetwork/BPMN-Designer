@@ -26,7 +26,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see org.eclipse.bpmn2.Bpmn2Package#getGatewayDirection()
- * @model extendedMetaData="name='tGatewayDirection'"
+ * @model
  * @generated
  */
 public enum GatewayDirection implements Enumerator {

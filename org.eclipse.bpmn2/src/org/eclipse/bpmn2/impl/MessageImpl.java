@@ -17,9 +17,12 @@ package org.eclipse.bpmn2.impl;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ItemDefinition;
 import org.eclipse.bpmn2.Message;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -29,24 +32,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.impl.MessageImpl#getItemRef <em>Item Ref</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.MessageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.MessageImpl#getItemRef <em>Item Ref</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class MessageImpl extends RootElementImpl implements Message {
-    /**
-     * The cached value of the '{@link #getItemRef() <em>Item Ref</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getItemRef()
-     * @generated
-     * @ordered
-     */
-    protected ItemDefinition itemRef;
-
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -68,6 +61,16 @@ public class MessageImpl extends RootElementImpl implements Message {
     protected String name = NAME_EDEFAULT;
 
     /**
+     * The cached value of the '{@link #getItemRef() <em>Item Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getItemRef()
+     * @generated
+     * @ordered
+     */
+    protected ItemDefinition itemRef;
+
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -84,6 +87,28 @@ public class MessageImpl extends RootElementImpl implements Message {
     @Override
     protected EClass eStaticClass() {
         return Bpmn2Package.Literals.MESSAGE;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MESSAGE__NAME,
+                    oldName, name));
     }
 
     /**
@@ -131,37 +156,15 @@ public class MessageImpl extends RootElementImpl implements Message {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setName(String newName) {
-        String oldName = name;
-        name = newName;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.MESSAGE__NAME,
-                    oldName, name));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
+        case Bpmn2Package.MESSAGE__NAME:
+            return getName();
         case Bpmn2Package.MESSAGE__ITEM_REF:
             if (resolve)
                 return getItemRef();
             return basicGetItemRef();
-        case Bpmn2Package.MESSAGE__NAME:
-            return getName();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -174,11 +177,11 @@ public class MessageImpl extends RootElementImpl implements Message {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case Bpmn2Package.MESSAGE__ITEM_REF:
-            setItemRef((ItemDefinition) newValue);
-            return;
         case Bpmn2Package.MESSAGE__NAME:
             setName((String) newValue);
+            return;
+        case Bpmn2Package.MESSAGE__ITEM_REF:
+            setItemRef((ItemDefinition) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -192,11 +195,11 @@ public class MessageImpl extends RootElementImpl implements Message {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.MESSAGE__ITEM_REF:
-            setItemRef((ItemDefinition) null);
-            return;
         case Bpmn2Package.MESSAGE__NAME:
             setName(NAME_EDEFAULT);
+            return;
+        case Bpmn2Package.MESSAGE__ITEM_REF:
+            setItemRef((ItemDefinition) null);
             return;
         }
         super.eUnset(featureID);
@@ -210,10 +213,10 @@ public class MessageImpl extends RootElementImpl implements Message {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.MESSAGE__ITEM_REF:
-            return itemRef != null;
         case Bpmn2Package.MESSAGE__NAME:
             return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.MESSAGE__ITEM_REF:
+            return itemRef != null;
         }
         return super.eIsSet(featureID);
     }

@@ -15,18 +15,22 @@
 package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.CorrelationKey;
 import org.eclipse.bpmn2.CorrelationPropertyBinding;
 import org.eclipse.bpmn2.CorrelationSubscription;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -37,24 +41,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.bpmn2.impl.CorrelationSubscriptionImpl#getCorrelationPropertyBinding <em>Correlation Property Binding</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.CorrelationSubscriptionImpl#getCorrelationKeyRef <em>Correlation Key Ref</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.CorrelationSubscriptionImpl#getCorrelationPropertyBinding <em>Correlation Property Binding</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class CorrelationSubscriptionImpl extends BaseElementImpl implements CorrelationSubscription {
-    /**
-     * The cached value of the '{@link #getCorrelationPropertyBinding() <em>Correlation Property Binding</em>}' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getCorrelationPropertyBinding()
-     * @generated
-     * @ordered
-     */
-    protected EList<CorrelationPropertyBinding> correlationPropertyBinding;
-
     /**
      * The cached value of the '{@link #getCorrelationKeyRef() <em>Correlation Key Ref</em>}' reference.
      * <!-- begin-user-doc -->
@@ -64,6 +58,16 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements Corr
      * @ordered
      */
     protected CorrelationKey correlationKeyRef;
+
+    /**
+     * The cached value of the '{@link #getCorrelationPropertyBinding() <em>Correlation Property Binding</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCorrelationPropertyBinding()
+     * @generated
+     * @ordered
+     */
+    protected EList<CorrelationPropertyBinding> correlationPropertyBinding;
 
     /**
      * <!-- begin-user-doc -->
@@ -82,20 +86,6 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements Corr
     @Override
     protected EClass eStaticClass() {
         return Bpmn2Package.Literals.CORRELATION_SUBSCRIPTION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public List<CorrelationPropertyBinding> getCorrelationPropertyBinding() {
-        if (correlationPropertyBinding == null) {
-            correlationPropertyBinding = new EObjectContainmentEList<CorrelationPropertyBinding>(
-                    CorrelationPropertyBinding.class, this,
-                    Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING);
-        }
-        return correlationPropertyBinding;
     }
 
     /**
@@ -145,6 +135,20 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements Corr
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<CorrelationPropertyBinding> getCorrelationPropertyBinding() {
+        if (correlationPropertyBinding == null) {
+            correlationPropertyBinding = new EObjectContainmentEList<CorrelationPropertyBinding>(
+                    CorrelationPropertyBinding.class, this,
+                    Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING);
+        }
+        return correlationPropertyBinding;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
@@ -163,12 +167,12 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements Corr
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING:
-            return getCorrelationPropertyBinding();
         case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF:
             if (resolve)
                 return getCorrelationKeyRef();
             return basicGetCorrelationKeyRef();
+        case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING:
+            return getCorrelationPropertyBinding();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -182,13 +186,13 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements Corr
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+        case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF:
+            setCorrelationKeyRef((CorrelationKey) newValue);
+            return;
         case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING:
             getCorrelationPropertyBinding().clear();
             getCorrelationPropertyBinding().addAll(
                     (Collection<? extends CorrelationPropertyBinding>) newValue);
-            return;
-        case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF:
-            setCorrelationKeyRef((CorrelationKey) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -202,11 +206,11 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements Corr
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING:
-            getCorrelationPropertyBinding().clear();
-            return;
         case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF:
             setCorrelationKeyRef((CorrelationKey) null);
+            return;
+        case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING:
+            getCorrelationPropertyBinding().clear();
             return;
         }
         super.eUnset(featureID);
@@ -220,10 +224,10 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements Corr
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING:
-            return correlationPropertyBinding != null && !correlationPropertyBinding.isEmpty();
         case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF:
             return correlationKeyRef != null;
+        case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING:
+            return correlationPropertyBinding != null && !correlationPropertyBinding.isEmpty();
         }
         return super.eIsSet(featureID);
     }

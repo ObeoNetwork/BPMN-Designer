@@ -21,7 +21,7 @@ package org.eclipse.bpmn2;
  *
  *
  * @see org.eclipse.bpmn2.Bpmn2Package#getTask()
- * @model extendedMetaData="name='tTask' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Task extends Activity, InteractionNode {

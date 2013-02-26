@@ -26,7 +26,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see org.eclipse.bpmn2.Bpmn2Package#getAdHocOrdering()
- * @model extendedMetaData="name='tAdHocOrdering'"
+ * @model
  * @generated
  */
 public enum AdHocOrdering implements Enumerator {

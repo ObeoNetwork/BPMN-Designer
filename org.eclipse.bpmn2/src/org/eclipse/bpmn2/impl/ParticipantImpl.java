@@ -15,7 +15,6 @@
 package org.eclipse.bpmn2.impl;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.ConversationLink;
@@ -24,13 +23,17 @@ import org.eclipse.bpmn2.InteractionNode;
 import org.eclipse.bpmn2.Interface;
 import org.eclipse.bpmn2.Participant;
 import org.eclipse.bpmn2.ParticipantMultiplicity;
-import org.eclipse.bpmn2.util.Bpmn2Resource;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -42,10 +45,10 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link org.eclipse.bpmn2.impl.ParticipantImpl#getIncomingConversationLinks <em>Incoming Conversation Links</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.ParticipantImpl#getOutgoingConversationLinks <em>Outgoing Conversation Links</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.ParticipantImpl#getInterfaceRefs <em>Interface Refs</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.ParticipantImpl#getEndPointRefs <em>End Point Refs</em>}</li>
- *   <li>{@link org.eclipse.bpmn2.impl.ParticipantImpl#getParticipantMultiplicity <em>Participant Multiplicity</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.ParticipantImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.ParticipantImpl#getInterfaceRefs <em>Interface Refs</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.ParticipantImpl#getParticipantMultiplicity <em>Participant Multiplicity</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.ParticipantImpl#getEndPointRefs <em>End Point Refs</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.ParticipantImpl#getProcessRef <em>Process Ref</em>}</li>
  * </ul>
  * </p>
@@ -53,36 +56,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * @generated
  */
 public class ParticipantImpl extends BaseElementImpl implements Participant {
-    /**
-     * The cached value of the '{@link #getInterfaceRefs() <em>Interface Refs</em>}' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getInterfaceRefs()
-     * @generated
-     * @ordered
-     */
-    protected EList<Interface> interfaceRefs;
-
-    /**
-     * The cached value of the '{@link #getEndPointRefs() <em>End Point Refs</em>}' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getEndPointRefs()
-     * @generated
-     * @ordered
-     */
-    protected EList<EndPoint> endPointRefs;
-
-    /**
-     * The cached value of the '{@link #getParticipantMultiplicity() <em>Participant Multiplicity</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getParticipantMultiplicity()
-     * @generated
-     * @ordered
-     */
-    protected ParticipantMultiplicity participantMultiplicity;
-
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -102,6 +75,36 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      * @ordered
      */
     protected String name = NAME_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getInterfaceRefs() <em>Interface Refs</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getInterfaceRefs()
+     * @generated
+     * @ordered
+     */
+    protected EList<Interface> interfaceRefs;
+
+    /**
+     * The cached value of the '{@link #getParticipantMultiplicity() <em>Participant Multiplicity</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getParticipantMultiplicity()
+     * @generated
+     * @ordered
+     */
+    protected ParticipantMultiplicity participantMultiplicity;
+
+    /**
+     * The cached value of the '{@link #getEndPointRefs() <em>End Point Refs</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getEndPointRefs()
+     * @generated
+     * @ordered
+     */
+    protected EList<EndPoint> endPointRefs;
 
     /**
      * The cached value of the '{@link #getProcessRef() <em>Process Ref</em>}' reference.
@@ -134,33 +137,14 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 
     /**
      * <!-- begin-user-doc -->
-     * Virtual opposite of {@link ConversationLink#getTargetRef()}.
-     * For general information about virtual opposites see {@link CategoryValueImpl#getCategorizedFlowElements()}
      * <!-- end-user-doc -->
-     * @generated NOT
+     * @generated
      */
-    public List<ConversationLink> getIncomingConversationLinks() {
-        if (eResource() instanceof Bpmn2Resource) {
-            return ((Bpmn2Resource) eResource()).getOppositeReferenceAdapter().getOppositeList(
-                    ConversationLink.class, this,
-                    Bpmn2Package.Literals.CONVERSATION_LINK__TARGET_REF);
-        }
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * Virtual opposite of {@link ConversationLink#getSourceRef()}.
-     * For general information about virtual opposites see {@link CategoryValueImpl#getCategorizedFlowElements()}
-     * <!-- end-user-doc -->
-     * @generated NOT
-     */
-    public List<ConversationLink> getOutgoingConversationLinks() {
-        if (eResource() instanceof Bpmn2Resource) {
-            return ((Bpmn2Resource) eResource()).getOppositeReferenceAdapter().getOppositeList(
-                    ConversationLink.class, this,
-                    Bpmn2Package.Literals.CONVERSATION_LINK__SOURCE_REF);
-        }
+    public EList<ConversationLink> getIncomingConversationLinks() {
+        // TODO: implement this method to return the 'Incoming Conversation Links' reference list
+        // Ensure that you remove @generated or mark it @generated NOT
+        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
         throw new UnsupportedOperationException();
     }
 
@@ -169,25 +153,47 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      * <!-- end-user-doc -->
      * @generated
      */
-    public List<Interface> getInterfaceRefs() {
+    public EList<ConversationLink> getOutgoingConversationLinks() {
+        // TODO: implement this method to return the 'Outgoing Conversation Links' reference list
+        // Ensure that you remove @generated or mark it @generated NOT
+        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PARTICIPANT__NAME,
+                    oldName, name));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EList<Interface> getInterfaceRefs() {
         if (interfaceRefs == null) {
             interfaceRefs = new EObjectResolvingEList<Interface>(Interface.class, this,
                     Bpmn2Package.PARTICIPANT__INTERFACE_REFS);
         }
         return interfaceRefs;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public List<EndPoint> getEndPointRefs() {
-        if (endPointRefs == null) {
-            endPointRefs = new EObjectResolvingEList<EndPoint>(EndPoint.class, this,
-                    Bpmn2Package.PARTICIPANT__END_POINT_REFS);
-        }
-        return endPointRefs;
     }
 
     /**
@@ -250,21 +256,12 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setName(String newName) {
-        String oldName = name;
-        name = newName;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.PARTICIPANT__NAME,
-                    oldName, name));
+    public EList<EndPoint> getEndPointRefs() {
+        if (endPointRefs == null) {
+            endPointRefs = new EObjectResolvingEList<EndPoint>(EndPoint.class, this,
+                    Bpmn2Package.PARTICIPANT__END_POINT_REFS);
+        }
+        return endPointRefs;
     }
 
     /**
@@ -334,14 +331,14 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
             return getIncomingConversationLinks();
         case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
             return getOutgoingConversationLinks();
-        case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
-            return getInterfaceRefs();
-        case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
-            return getEndPointRefs();
-        case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-            return getParticipantMultiplicity();
         case Bpmn2Package.PARTICIPANT__NAME:
             return getName();
+        case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
+            return getInterfaceRefs();
+        case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
+            return getParticipantMultiplicity();
+        case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
+            return getEndPointRefs();
         case Bpmn2Package.PARTICIPANT__PROCESS_REF:
             if (resolve)
                 return getProcessRef();
@@ -359,19 +356,29 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+        case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
+            getIncomingConversationLinks().clear();
+            getIncomingConversationLinks()
+                    .addAll((Collection<? extends ConversationLink>) newValue);
+            return;
+        case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
+            getOutgoingConversationLinks().clear();
+            getOutgoingConversationLinks()
+                    .addAll((Collection<? extends ConversationLink>) newValue);
+            return;
+        case Bpmn2Package.PARTICIPANT__NAME:
+            setName((String) newValue);
+            return;
         case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
             getInterfaceRefs().clear();
             getInterfaceRefs().addAll((Collection<? extends Interface>) newValue);
             return;
-        case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
-            getEndPointRefs().clear();
-            getEndPointRefs().addAll((Collection<? extends EndPoint>) newValue);
-            return;
         case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
             setParticipantMultiplicity((ParticipantMultiplicity) newValue);
             return;
-        case Bpmn2Package.PARTICIPANT__NAME:
-            setName((String) newValue);
+        case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
+            getEndPointRefs().clear();
+            getEndPointRefs().addAll((Collection<? extends EndPoint>) newValue);
             return;
         case Bpmn2Package.PARTICIPANT__PROCESS_REF:
             setProcessRef((org.eclipse.bpmn2.Process) newValue);
@@ -388,17 +395,23 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
+        case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
+            getIncomingConversationLinks().clear();
+            return;
+        case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
+            getOutgoingConversationLinks().clear();
+            return;
+        case Bpmn2Package.PARTICIPANT__NAME:
+            setName(NAME_EDEFAULT);
+            return;
         case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
             getInterfaceRefs().clear();
-            return;
-        case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
-            getEndPointRefs().clear();
             return;
         case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
             setParticipantMultiplicity((ParticipantMultiplicity) null);
             return;
-        case Bpmn2Package.PARTICIPANT__NAME:
-            setName(NAME_EDEFAULT);
+        case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
+            getEndPointRefs().clear();
             return;
         case Bpmn2Package.PARTICIPANT__PROCESS_REF:
             setProcessRef((org.eclipse.bpmn2.Process) null);
@@ -419,14 +432,14 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
             return !getIncomingConversationLinks().isEmpty();
         case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
             return !getOutgoingConversationLinks().isEmpty();
-        case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
-            return interfaceRefs != null && !interfaceRefs.isEmpty();
-        case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
-            return endPointRefs != null && !endPointRefs.isEmpty();
-        case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-            return participantMultiplicity != null;
         case Bpmn2Package.PARTICIPANT__NAME:
             return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
+            return interfaceRefs != null && !interfaceRefs.isEmpty();
+        case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
+            return participantMultiplicity != null;
+        case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
+            return endPointRefs != null && !endPointRefs.isEmpty();
         case Bpmn2Package.PARTICIPANT__PROCESS_REF:
             return processRef != null;
         }

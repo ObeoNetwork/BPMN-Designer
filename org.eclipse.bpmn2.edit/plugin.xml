@@ -33,7 +33,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http://www.omg.org/spec/BPMN/20100524/DI-XMI"
-            class="org.eclipse.bpmn2.di.provider.BpmnDiItemProviderAdapterFactory"
+            class="org.eclipse.bpmn2.bpmdi.provider.BpmnDiItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

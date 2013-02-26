@@ -60,7 +60,6 @@ import org.eclipse.bpmn2.DataState;
 import org.eclipse.bpmn2.DataStore;
 import org.eclipse.bpmn2.DataStoreReference;
 import org.eclipse.bpmn2.Definitions;
-import org.eclipse.bpmn2.DocumentRoot;
 import org.eclipse.bpmn2.Documentation;
 import org.eclipse.bpmn2.EndEvent;
 import org.eclipse.bpmn2.EndPoint;
@@ -151,10 +150,12 @@ import org.eclipse.bpmn2.ThrowEvent;
 import org.eclipse.bpmn2.TimerEventDefinition;
 import org.eclipse.bpmn2.Transaction;
 import org.eclipse.bpmn2.UserTask;
-import org.eclipse.bpmn2.*;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -213,38 +214,13 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
      */
     protected Bpmn2Switch<Adapter> modelSwitch = new Bpmn2Switch<Adapter>() {
         @Override
-        public Adapter caseDocumentRoot(DocumentRoot object) {
-            return createDocumentRootAdapter();
+        public Adapter caseInterface(Interface object) {
+            return createInterfaceAdapter();
         }
 
         @Override
-        public Adapter caseActivity(Activity object) {
-            return createActivityAdapter();
-        }
-
-        @Override
-        public Adapter caseAdHocSubProcess(AdHocSubProcess object) {
-            return createAdHocSubProcessAdapter();
-        }
-
-        @Override
-        public Adapter caseArtifact(Artifact object) {
-            return createArtifactAdapter();
-        }
-
-        @Override
-        public Adapter caseAssignment(Assignment object) {
-            return createAssignmentAdapter();
-        }
-
-        @Override
-        public Adapter caseAssociation(Association object) {
-            return createAssociationAdapter();
-        }
-
-        @Override
-        public Adapter caseAuditing(Auditing object) {
-            return createAuditingAdapter();
+        public Adapter caseRootElement(RootElement object) {
+            return createRootElementAdapter();
         }
 
         @Override
@@ -253,28 +229,63 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseBoundaryEvent(BoundaryEvent object) {
-            return createBoundaryEventAdapter();
+        public Adapter caseExtensionDefinition(ExtensionDefinition object) {
+            return createExtensionDefinitionAdapter();
         }
 
         @Override
-        public Adapter caseBusinessRuleTask(BusinessRuleTask object) {
-            return createBusinessRuleTaskAdapter();
+        public Adapter caseExtensionAttributeDefinition(ExtensionAttributeDefinition object) {
+            return createExtensionAttributeDefinitionAdapter();
         }
 
         @Override
-        public Adapter caseCallActivity(CallActivity object) {
-            return createCallActivityAdapter();
+        public Adapter caseExtensionAttributeValue(ExtensionAttributeValue object) {
+            return createExtensionAttributeValueAdapter();
         }
 
         @Override
-        public Adapter caseCallChoreography(CallChoreography object) {
-            return createCallChoreographyAdapter();
+        public Adapter caseDocumentation(Documentation object) {
+            return createDocumentationAdapter();
         }
 
         @Override
-        public Adapter caseCallConversation(CallConversation object) {
-            return createCallConversationAdapter();
+        public Adapter caseOperation(Operation object) {
+            return createOperationAdapter();
+        }
+
+        @Override
+        public Adapter caseMessage(Message object) {
+            return createMessageAdapter();
+        }
+
+        @Override
+        public Adapter caseItemDefinition(ItemDefinition object) {
+            return createItemDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseImport(Import object) {
+            return createImportAdapter();
+        }
+
+        @Override
+        public Adapter caseError(org.eclipse.bpmn2.Error object) {
+            return createErrorAdapter();
+        }
+
+        @Override
+        public Adapter caseEndPoint(EndPoint object) {
+            return createEndPointAdapter();
+        }
+
+        @Override
+        public Adapter caseAuditing(Auditing object) {
+            return createAuditingAdapter();
+        }
+
+        @Override
+        public Adapter caseGlobalTask(GlobalTask object) {
+            return createGlobalTaskAdapter();
         }
 
         @Override
@@ -283,18 +294,98 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseCancelEventDefinition(CancelEventDefinition object) {
-            return createCancelEventDefinitionAdapter();
+        public Adapter caseInputOutputSpecification(InputOutputSpecification object) {
+            return createInputOutputSpecificationAdapter();
         }
 
         @Override
-        public Adapter caseCatchEvent(CatchEvent object) {
-            return createCatchEventAdapter();
+        public Adapter caseInputSet(InputSet object) {
+            return createInputSetAdapter();
         }
 
         @Override
-        public Adapter caseCategory(Category object) {
-            return createCategoryAdapter();
+        public Adapter caseDataInput(DataInput object) {
+            return createDataInputAdapter();
+        }
+
+        @Override
+        public Adapter caseItemAwareElement(ItemAwareElement object) {
+            return createItemAwareElementAdapter();
+        }
+
+        @Override
+        public Adapter caseDataState(DataState object) {
+            return createDataStateAdapter();
+        }
+
+        @Override
+        public Adapter caseOutputSet(OutputSet object) {
+            return createOutputSetAdapter();
+        }
+
+        @Override
+        public Adapter caseDataOutput(DataOutput object) {
+            return createDataOutputAdapter();
+        }
+
+        @Override
+        public Adapter caseInputOutputBinding(InputOutputBinding object) {
+            return createInputOutputBindingAdapter();
+        }
+
+        @Override
+        public Adapter caseResourceRole(ResourceRole object) {
+            return createResourceRoleAdapter();
+        }
+
+        @Override
+        public Adapter caseResource(Resource object) {
+            return createResourceAdapter();
+        }
+
+        @Override
+        public Adapter caseResourceParameter(ResourceParameter object) {
+            return createResourceParameterAdapter();
+        }
+
+        @Override
+        public Adapter caseResourceParameterBinding(ResourceParameterBinding object) {
+            return createResourceParameterBindingAdapter();
+        }
+
+        @Override
+        public Adapter caseExpression(Expression object) {
+            return createExpressionAdapter();
+        }
+
+        @Override
+        public Adapter caseResourceAssignmentExpression(ResourceAssignmentExpression object) {
+            return createResourceAssignmentExpressionAdapter();
+        }
+
+        @Override
+        public Adapter caseMonitoring(Monitoring object) {
+            return createMonitoringAdapter();
+        }
+
+        @Override
+        public Adapter casePerformer(Performer object) {
+            return createPerformerAdapter();
+        }
+
+        @Override
+        public Adapter caseProcess(org.eclipse.bpmn2.Process object) {
+            return createProcessAdapter();
+        }
+
+        @Override
+        public Adapter caseFlowElementsContainer(FlowElementsContainer object) {
+            return createFlowElementsContainerAdapter();
+        }
+
+        @Override
+        public Adapter caseFlowElement(FlowElement object) {
+            return createFlowElementAdapter();
         }
 
         @Override
@@ -303,18 +394,28 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseChoreography(Choreography object) {
-            return createChoreographyAdapter();
+        public Adapter caseLaneSet(LaneSet object) {
+            return createLaneSetAdapter();
         }
 
         @Override
-        public Adapter caseChoreographyActivity(ChoreographyActivity object) {
-            return createChoreographyActivityAdapter();
+        public Adapter caseLane(Lane object) {
+            return createLaneAdapter();
         }
 
         @Override
-        public Adapter caseChoreographyTask(ChoreographyTask object) {
-            return createChoreographyTaskAdapter();
+        public Adapter caseFlowNode(FlowNode object) {
+            return createFlowNodeAdapter();
+        }
+
+        @Override
+        public Adapter caseSequenceFlow(SequenceFlow object) {
+            return createSequenceFlowAdapter();
+        }
+
+        @Override
+        public Adapter caseProperty(Property object) {
+            return createPropertyAdapter();
         }
 
         @Override
@@ -323,38 +424,53 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseCompensateEventDefinition(CompensateEventDefinition object) {
-            return createCompensateEventDefinitionAdapter();
+        public Adapter caseChoreography(Choreography object) {
+            return createChoreographyAdapter();
         }
 
         @Override
-        public Adapter caseComplexBehaviorDefinition(ComplexBehaviorDefinition object) {
-            return createComplexBehaviorDefinitionAdapter();
+        public Adapter caseArtifact(Artifact object) {
+            return createArtifactAdapter();
         }
 
         @Override
-        public Adapter caseComplexGateway(ComplexGateway object) {
-            return createComplexGatewayAdapter();
+        public Adapter caseParticipantAssociation(ParticipantAssociation object) {
+            return createParticipantAssociationAdapter();
         }
 
         @Override
-        public Adapter caseConditionalEventDefinition(ConditionalEventDefinition object) {
-            return createConditionalEventDefinitionAdapter();
+        public Adapter caseParticipant(Participant object) {
+            return createParticipantAdapter();
         }
 
         @Override
-        public Adapter caseConversation(Conversation object) {
-            return createConversationAdapter();
-        }
-
-        @Override
-        public Adapter caseConversationAssociation(ConversationAssociation object) {
-            return createConversationAssociationAdapter();
+        public Adapter caseInteractionNode(InteractionNode object) {
+            return createInteractionNodeAdapter();
         }
 
         @Override
         public Adapter caseConversationLink(ConversationLink object) {
             return createConversationLinkAdapter();
+        }
+
+        @Override
+        public Adapter caseParticipantMultiplicity(ParticipantMultiplicity object) {
+            return createParticipantMultiplicityAdapter();
+        }
+
+        @Override
+        public Adapter caseMessageFlowAssociation(MessageFlowAssociation object) {
+            return createMessageFlowAssociationAdapter();
+        }
+
+        @Override
+        public Adapter caseMessageFlow(MessageFlow object) {
+            return createMessageFlowAdapter();
+        }
+
+        @Override
+        public Adapter caseConversationAssociation(ConversationAssociation object) {
+            return createConversationAssociationAdapter();
         }
 
         @Override
@@ -373,169 +489,9 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseCorrelationPropertyBinding(CorrelationPropertyBinding object) {
-            return createCorrelationPropertyBindingAdapter();
-        }
-
-        @Override
         public Adapter caseCorrelationPropertyRetrievalExpression(
                 CorrelationPropertyRetrievalExpression object) {
             return createCorrelationPropertyRetrievalExpressionAdapter();
-        }
-
-        @Override
-        public Adapter caseCorrelationSubscription(CorrelationSubscription object) {
-            return createCorrelationSubscriptionAdapter();
-        }
-
-        @Override
-        public Adapter caseDataAssociation(DataAssociation object) {
-            return createDataAssociationAdapter();
-        }
-
-        @Override
-        public Adapter caseDataInput(DataInput object) {
-            return createDataInputAdapter();
-        }
-
-        @Override
-        public Adapter caseDataInputAssociation(DataInputAssociation object) {
-            return createDataInputAssociationAdapter();
-        }
-
-        @Override
-        public Adapter caseDataObject(DataObject object) {
-            return createDataObjectAdapter();
-        }
-
-        @Override
-        public Adapter caseDataObjectReference(DataObjectReference object) {
-            return createDataObjectReferenceAdapter();
-        }
-
-        @Override
-        public Adapter caseDataOutput(DataOutput object) {
-            return createDataOutputAdapter();
-        }
-
-        @Override
-        public Adapter caseDataOutputAssociation(DataOutputAssociation object) {
-            return createDataOutputAssociationAdapter();
-        }
-
-        @Override
-        public Adapter caseDataState(DataState object) {
-            return createDataStateAdapter();
-        }
-
-        @Override
-        public Adapter caseDataStore(DataStore object) {
-            return createDataStoreAdapter();
-        }
-
-        @Override
-        public Adapter caseDataStoreReference(DataStoreReference object) {
-            return createDataStoreReferenceAdapter();
-        }
-
-        @Override
-        public Adapter caseDefinitions(Definitions object) {
-            return createDefinitionsAdapter();
-        }
-
-        @Override
-        public Adapter caseDocumentation(Documentation object) {
-            return createDocumentationAdapter();
-        }
-
-        @Override
-        public Adapter caseEndEvent(EndEvent object) {
-            return createEndEventAdapter();
-        }
-
-        @Override
-        public Adapter caseEndPoint(EndPoint object) {
-            return createEndPointAdapter();
-        }
-
-        @Override
-        public Adapter caseError(org.eclipse.bpmn2.Error object) {
-            return createErrorAdapter();
-        }
-
-        @Override
-        public Adapter caseErrorEventDefinition(ErrorEventDefinition object) {
-            return createErrorEventDefinitionAdapter();
-        }
-
-        @Override
-        public Adapter caseEscalation(Escalation object) {
-            return createEscalationAdapter();
-        }
-
-        @Override
-        public Adapter caseEscalationEventDefinition(EscalationEventDefinition object) {
-            return createEscalationEventDefinitionAdapter();
-        }
-
-        @Override
-        public Adapter caseEvent(Event object) {
-            return createEventAdapter();
-        }
-
-        @Override
-        public Adapter caseEventBasedGateway(EventBasedGateway object) {
-            return createEventBasedGatewayAdapter();
-        }
-
-        @Override
-        public Adapter caseEventDefinition(EventDefinition object) {
-            return createEventDefinitionAdapter();
-        }
-
-        @Override
-        public Adapter caseExclusiveGateway(ExclusiveGateway object) {
-            return createExclusiveGatewayAdapter();
-        }
-
-        @Override
-        public Adapter caseExpression(Expression object) {
-            return createExpressionAdapter();
-        }
-
-        @Override
-        public Adapter caseExtension(Extension object) {
-            return createExtensionAdapter();
-        }
-
-        @Override
-        public Adapter caseExtensionAttributeDefinition(ExtensionAttributeDefinition object) {
-            return createExtensionAttributeDefinitionAdapter();
-        }
-
-        @Override
-        public Adapter caseExtensionAttributeValue(ExtensionAttributeValue object) {
-            return createExtensionAttributeValueAdapter();
-        }
-
-        @Override
-        public Adapter caseExtensionDefinition(ExtensionDefinition object) {
-            return createExtensionDefinitionAdapter();
-        }
-
-        @Override
-        public Adapter caseFlowElement(FlowElement object) {
-            return createFlowElementAdapter();
-        }
-
-        @Override
-        public Adapter caseFlowElementsContainer(FlowElementsContainer object) {
-            return createFlowElementsContainerAdapter();
-        }
-
-        @Override
-        public Adapter caseFlowNode(FlowNode object) {
-            return createFlowNodeAdapter();
         }
 
         @Override
@@ -544,23 +500,13 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseGateway(Gateway object) {
-            return createGatewayAdapter();
+        public Adapter caseCorrelationSubscription(CorrelationSubscription object) {
+            return createCorrelationSubscriptionAdapter();
         }
 
         @Override
-        public Adapter caseGlobalBusinessRuleTask(GlobalBusinessRuleTask object) {
-            return createGlobalBusinessRuleTaskAdapter();
-        }
-
-        @Override
-        public Adapter caseGlobalChoreographyTask(GlobalChoreographyTask object) {
-            return createGlobalChoreographyTaskAdapter();
-        }
-
-        @Override
-        public Adapter caseGlobalConversation(GlobalConversation object) {
-            return createGlobalConversationAdapter();
+        public Adapter caseCorrelationPropertyBinding(CorrelationPropertyBinding object) {
+            return createCorrelationPropertyBindingAdapter();
         }
 
         @Override
@@ -569,23 +515,73 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseGlobalScriptTask(GlobalScriptTask object) {
-            return createGlobalScriptTaskAdapter();
+        public Adapter caseManualTask(ManualTask object) {
+            return createManualTaskAdapter();
         }
 
         @Override
-        public Adapter caseGlobalTask(GlobalTask object) {
-            return createGlobalTaskAdapter();
+        public Adapter caseTask(Task object) {
+            return createTaskAdapter();
         }
 
         @Override
-        public Adapter caseGlobalUserTask(GlobalUserTask object) {
-            return createGlobalUserTaskAdapter();
+        public Adapter caseActivity(Activity object) {
+            return createActivityAdapter();
         }
 
         @Override
-        public Adapter caseGroup(Group object) {
-            return createGroupAdapter();
+        public Adapter caseLoopCharacteristics(LoopCharacteristics object) {
+            return createLoopCharacteristicsAdapter();
+        }
+
+        @Override
+        public Adapter caseBoundaryEvent(BoundaryEvent object) {
+            return createBoundaryEventAdapter();
+        }
+
+        @Override
+        public Adapter caseCatchEvent(CatchEvent object) {
+            return createCatchEventAdapter();
+        }
+
+        @Override
+        public Adapter caseEvent(Event object) {
+            return createEventAdapter();
+        }
+
+        @Override
+        public Adapter caseEventDefinition(EventDefinition object) {
+            return createEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseDataOutputAssociation(DataOutputAssociation object) {
+            return createDataOutputAssociationAdapter();
+        }
+
+        @Override
+        public Adapter caseDataAssociation(DataAssociation object) {
+            return createDataAssociationAdapter();
+        }
+
+        @Override
+        public Adapter caseAssignment(Assignment object) {
+            return createAssignmentAdapter();
+        }
+
+        @Override
+        public Adapter caseDataInputAssociation(DataInputAssociation object) {
+            return createDataInputAssociationAdapter();
+        }
+
+        @Override
+        public Adapter caseUserTask(UserTask object) {
+            return createUserTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseRendering(Rendering object) {
+            return createRenderingAdapter();
         }
 
         @Override
@@ -594,13 +590,33 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseImplicitThrowEvent(ImplicitThrowEvent object) {
-            return createImplicitThrowEventAdapter();
+        public Adapter casePotentialOwner(PotentialOwner object) {
+            return createPotentialOwnerAdapter();
         }
 
         @Override
-        public Adapter caseImport(Import object) {
-            return createImportAdapter();
+        public Adapter caseGlobalUserTask(GlobalUserTask object) {
+            return createGlobalUserTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseGateway(Gateway object) {
+            return createGatewayAdapter();
+        }
+
+        @Override
+        public Adapter caseEventBasedGateway(EventBasedGateway object) {
+            return createEventBasedGatewayAdapter();
+        }
+
+        @Override
+        public Adapter caseComplexGateway(ComplexGateway object) {
+            return createComplexGatewayAdapter();
+        }
+
+        @Override
+        public Adapter caseExclusiveGateway(ExclusiveGateway object) {
+            return createExclusiveGatewayAdapter();
         }
 
         @Override
@@ -609,28 +625,18 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseInputOutputBinding(InputOutputBinding object) {
-            return createInputOutputBindingAdapter();
+        public Adapter caseParallelGateway(ParallelGateway object) {
+            return createParallelGatewayAdapter();
         }
 
         @Override
-        public Adapter caseInputOutputSpecification(InputOutputSpecification object) {
-            return createInputOutputSpecificationAdapter();
+        public Adapter caseRelationship(Relationship object) {
+            return createRelationshipAdapter();
         }
 
         @Override
-        public Adapter caseInputSet(InputSet object) {
-            return createInputSetAdapter();
-        }
-
-        @Override
-        public Adapter caseInteractionNode(InteractionNode object) {
-            return createInteractionNodeAdapter();
-        }
-
-        @Override
-        public Adapter caseInterface(Interface object) {
-            return createInterfaceAdapter();
+        public Adapter caseExtension(Extension object) {
+            return createExtensionAdapter();
         }
 
         @Override
@@ -644,23 +650,53 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseItemAwareElement(ItemAwareElement object) {
-            return createItemAwareElementAdapter();
+        public Adapter caseThrowEvent(ThrowEvent object) {
+            return createThrowEventAdapter();
         }
 
         @Override
-        public Adapter caseItemDefinition(ItemDefinition object) {
-            return createItemDefinitionAdapter();
+        public Adapter caseEndEvent(EndEvent object) {
+            return createEndEventAdapter();
         }
 
         @Override
-        public Adapter caseLane(Lane object) {
-            return createLaneAdapter();
+        public Adapter caseStartEvent(StartEvent object) {
+            return createStartEventAdapter();
         }
 
         @Override
-        public Adapter caseLaneSet(LaneSet object) {
-            return createLaneSetAdapter();
+        public Adapter caseCancelEventDefinition(CancelEventDefinition object) {
+            return createCancelEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseErrorEventDefinition(ErrorEventDefinition object) {
+            return createErrorEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseTerminateEventDefinition(TerminateEventDefinition object) {
+            return createTerminateEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseEscalationEventDefinition(EscalationEventDefinition object) {
+            return createEscalationEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseEscalation(Escalation object) {
+            return createEscalationAdapter();
+        }
+
+        @Override
+        public Adapter caseCompensateEventDefinition(CompensateEventDefinition object) {
+            return createCompensateEventDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseTimerEventDefinition(TimerEventDefinition object) {
+            return createTimerEventDefinitionAdapter();
         }
 
         @Override
@@ -669,73 +705,68 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseLoopCharacteristics(LoopCharacteristics object) {
-            return createLoopCharacteristicsAdapter();
-        }
-
-        @Override
-        public Adapter caseManualTask(ManualTask object) {
-            return createManualTaskAdapter();
-        }
-
-        @Override
-        public Adapter caseMessage(Message object) {
-            return createMessageAdapter();
-        }
-
-        @Override
         public Adapter caseMessageEventDefinition(MessageEventDefinition object) {
             return createMessageEventDefinitionAdapter();
         }
 
         @Override
-        public Adapter caseMessageFlow(MessageFlow object) {
-            return createMessageFlowAdapter();
+        public Adapter caseConditionalEventDefinition(ConditionalEventDefinition object) {
+            return createConditionalEventDefinitionAdapter();
         }
 
         @Override
-        public Adapter caseMessageFlowAssociation(MessageFlowAssociation object) {
-            return createMessageFlowAssociationAdapter();
+        public Adapter caseSignalEventDefinition(SignalEventDefinition object) {
+            return createSignalEventDefinitionAdapter();
         }
 
         @Override
-        public Adapter caseMonitoring(Monitoring object) {
-            return createMonitoringAdapter();
+        public Adapter caseSignal(Signal object) {
+            return createSignalAdapter();
         }
 
         @Override
-        public Adapter caseMultiInstanceLoopCharacteristics(MultiInstanceLoopCharacteristics object) {
-            return createMultiInstanceLoopCharacteristicsAdapter();
+        public Adapter caseImplicitThrowEvent(ImplicitThrowEvent object) {
+            return createImplicitThrowEventAdapter();
         }
 
         @Override
-        public Adapter caseOperation(Operation object) {
-            return createOperationAdapter();
+        public Adapter caseDataObject(DataObject object) {
+            return createDataObjectAdapter();
         }
 
         @Override
-        public Adapter caseOutputSet(OutputSet object) {
-            return createOutputSetAdapter();
+        public Adapter caseDataStore(DataStore object) {
+            return createDataStoreAdapter();
         }
 
         @Override
-        public Adapter caseParallelGateway(ParallelGateway object) {
-            return createParallelGatewayAdapter();
+        public Adapter caseDataStoreReference(DataStoreReference object) {
+            return createDataStoreReferenceAdapter();
         }
 
         @Override
-        public Adapter caseParticipant(Participant object) {
-            return createParticipantAdapter();
+        public Adapter caseDataObjectReference(DataObjectReference object) {
+            return createDataObjectReferenceAdapter();
         }
 
         @Override
-        public Adapter caseParticipantAssociation(ParticipantAssociation object) {
-            return createParticipantAssociationAdapter();
+        public Adapter caseCallConversation(CallConversation object) {
+            return createCallConversationAdapter();
         }
 
         @Override
-        public Adapter caseParticipantMultiplicity(ParticipantMultiplicity object) {
-            return createParticipantMultiplicityAdapter();
+        public Adapter caseConversation(Conversation object) {
+            return createConversationAdapter();
+        }
+
+        @Override
+        public Adapter caseSubConversation(SubConversation object) {
+            return createSubConversationAdapter();
+        }
+
+        @Override
+        public Adapter caseGlobalConversation(GlobalConversation object) {
+            return createGlobalConversationAdapter();
         }
 
         @Override
@@ -749,108 +780,13 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter casePerformer(Performer object) {
-            return createPerformerAdapter();
+        public Adapter caseChoreographyActivity(ChoreographyActivity object) {
+            return createChoreographyActivityAdapter();
         }
 
         @Override
-        public Adapter casePotentialOwner(PotentialOwner object) {
-            return createPotentialOwnerAdapter();
-        }
-
-        @Override
-        public Adapter caseProcess(org.eclipse.bpmn2.Process object) {
-            return createProcessAdapter();
-        }
-
-        @Override
-        public Adapter caseProperty(Property object) {
-            return createPropertyAdapter();
-        }
-
-        @Override
-        public Adapter caseReceiveTask(ReceiveTask object) {
-            return createReceiveTaskAdapter();
-        }
-
-        @Override
-        public Adapter caseRelationship(Relationship object) {
-            return createRelationshipAdapter();
-        }
-
-        @Override
-        public Adapter caseRendering(Rendering object) {
-            return createRenderingAdapter();
-        }
-
-        @Override
-        public Adapter caseResource(Resource object) {
-            return createResourceAdapter();
-        }
-
-        @Override
-        public Adapter caseResourceAssignmentExpression(ResourceAssignmentExpression object) {
-            return createResourceAssignmentExpressionAdapter();
-        }
-
-        @Override
-        public Adapter caseResourceParameter(ResourceParameter object) {
-            return createResourceParameterAdapter();
-        }
-
-        @Override
-        public Adapter caseResourceParameterBinding(ResourceParameterBinding object) {
-            return createResourceParameterBindingAdapter();
-        }
-
-        @Override
-        public Adapter caseResourceRole(ResourceRole object) {
-            return createResourceRoleAdapter();
-        }
-
-        @Override
-        public Adapter caseRootElement(RootElement object) {
-            return createRootElementAdapter();
-        }
-
-        @Override
-        public Adapter caseScriptTask(ScriptTask object) {
-            return createScriptTaskAdapter();
-        }
-
-        @Override
-        public Adapter caseSendTask(SendTask object) {
-            return createSendTaskAdapter();
-        }
-
-        @Override
-        public Adapter caseSequenceFlow(SequenceFlow object) {
-            return createSequenceFlowAdapter();
-        }
-
-        @Override
-        public Adapter caseServiceTask(ServiceTask object) {
-            return createServiceTaskAdapter();
-        }
-
-        @Override
-        public Adapter caseSignal(Signal object) {
-            return createSignalAdapter();
-        }
-
-        @Override
-        public Adapter caseSignalEventDefinition(SignalEventDefinition object) {
-            return createSignalEventDefinitionAdapter();
-        }
-
-        @Override
-        public Adapter caseStandardLoopCharacteristics(StandardLoopCharacteristics object) {
-            return createStandardLoopCharacteristicsAdapter();
-        }
-
-        @Override
-        public Adapter caseStartEvent(StartEvent object) {
-            return createStartEventAdapter();
+        public Adapter caseCallChoreography(CallChoreography object) {
+            return createCallChoreographyAdapter();
         }
 
         @Override
@@ -859,23 +795,13 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseSubConversation(SubConversation object) {
-            return createSubConversationAdapter();
+        public Adapter caseChoreographyTask(ChoreographyTask object) {
+            return createChoreographyTaskAdapter();
         }
 
         @Override
-        public Adapter caseSubProcess(SubProcess object) {
-            return createSubProcessAdapter();
-        }
-
-        @Override
-        public Adapter caseTask(Task object) {
-            return createTaskAdapter();
-        }
-
-        @Override
-        public Adapter caseTerminateEventDefinition(TerminateEventDefinition object) {
-            return createTerminateEventDefinitionAdapter();
+        public Adapter caseGlobalChoreographyTask(GlobalChoreographyTask object) {
+            return createGlobalChoreographyTaskAdapter();
         }
 
         @Override
@@ -884,13 +810,73 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseThrowEvent(ThrowEvent object) {
-            return createThrowEventAdapter();
+        public Adapter caseGroup(Group object) {
+            return createGroupAdapter();
         }
 
         @Override
-        public Adapter caseTimerEventDefinition(TimerEventDefinition object) {
-            return createTimerEventDefinitionAdapter();
+        public Adapter caseAssociation(Association object) {
+            return createAssociationAdapter();
+        }
+
+        @Override
+        public Adapter caseCategory(Category object) {
+            return createCategoryAdapter();
+        }
+
+        @Override
+        public Adapter caseServiceTask(ServiceTask object) {
+            return createServiceTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseSubProcess(SubProcess object) {
+            return createSubProcessAdapter();
+        }
+
+        @Override
+        public Adapter caseMultiInstanceLoopCharacteristics(MultiInstanceLoopCharacteristics object) {
+            return createMultiInstanceLoopCharacteristicsAdapter();
+        }
+
+        @Override
+        public Adapter caseComplexBehaviorDefinition(ComplexBehaviorDefinition object) {
+            return createComplexBehaviorDefinitionAdapter();
+        }
+
+        @Override
+        public Adapter caseStandardLoopCharacteristics(StandardLoopCharacteristics object) {
+            return createStandardLoopCharacteristicsAdapter();
+        }
+
+        @Override
+        public Adapter caseCallActivity(CallActivity object) {
+            return createCallActivityAdapter();
+        }
+
+        @Override
+        public Adapter caseSendTask(SendTask object) {
+            return createSendTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseReceiveTask(ReceiveTask object) {
+            return createReceiveTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseScriptTask(ScriptTask object) {
+            return createScriptTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseBusinessRuleTask(BusinessRuleTask object) {
+            return createBusinessRuleTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseAdHocSubProcess(AdHocSubProcess object) {
+            return createAdHocSubProcessAdapter();
         }
 
         @Override
@@ -899,8 +885,18 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseUserTask(UserTask object) {
-            return createUserTaskAdapter();
+        public Adapter caseGlobalScriptTask(GlobalScriptTask object) {
+            return createGlobalScriptTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseGlobalBusinessRuleTask(GlobalBusinessRuleTask object) {
+            return createGlobalBusinessRuleTaskAdapter();
+        }
+
+        @Override
+        public Adapter caseDefinitions(Definitions object) {
+            return createDefinitionsAdapter();
         }
 
         @Override
@@ -923,100 +919,30 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DocumentRoot <em>Document Root</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Interface <em>Interface</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.DocumentRoot
+     * @see org.eclipse.bpmn2.Interface
      * @generated
      */
-    public Adapter createDocumentRootAdapter() {
+    public Adapter createInterfaceAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Activity <em>Activity</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.RootElement <em>Root Element</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.Activity
+     * @see org.eclipse.bpmn2.RootElement
      * @generated
      */
-    public Adapter createActivityAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.AdHocSubProcess <em>Ad Hoc Sub Process</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.AdHocSubProcess
-     * @generated
-     */
-    public Adapter createAdHocSubProcessAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Artifact <em>Artifact</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Artifact
-     * @generated
-     */
-    public Adapter createArtifactAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Assignment <em>Assignment</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Assignment
-     * @generated
-     */
-    public Adapter createAssignmentAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Association <em>Association</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Association
-     * @generated
-     */
-    public Adapter createAssociationAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Auditing <em>Auditing</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Auditing
-     * @generated
-     */
-    public Adapter createAuditingAdapter() {
+    public Adapter createRootElementAdapter() {
         return null;
     }
 
@@ -1035,72 +961,170 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.BoundaryEvent <em>Boundary Event</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ExtensionDefinition <em>Extension Definition</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.BoundaryEvent
+     * @see org.eclipse.bpmn2.ExtensionDefinition
      * @generated
      */
-    public Adapter createBoundaryEventAdapter() {
+    public Adapter createExtensionDefinitionAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.BusinessRuleTask <em>Business Rule Task</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ExtensionAttributeDefinition <em>Extension Attribute Definition</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.BusinessRuleTask
+     * @see org.eclipse.bpmn2.ExtensionAttributeDefinition
      * @generated
      */
-    public Adapter createBusinessRuleTaskAdapter() {
+    public Adapter createExtensionAttributeDefinitionAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CallActivity <em>Call Activity</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ExtensionAttributeValue <em>Extension Attribute Value</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.CallActivity
+     * @see org.eclipse.bpmn2.ExtensionAttributeValue
      * @generated
      */
-    public Adapter createCallActivityAdapter() {
+    public Adapter createExtensionAttributeValueAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CallChoreography <em>Call Choreography</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Documentation <em>Documentation</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.CallChoreography
+     * @see org.eclipse.bpmn2.Documentation
      * @generated
      */
-    public Adapter createCallChoreographyAdapter() {
+    public Adapter createDocumentationAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CallConversation <em>Call Conversation</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Operation <em>Operation</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.CallConversation
+     * @see org.eclipse.bpmn2.Operation
      * @generated
      */
-    public Adapter createCallConversationAdapter() {
+    public Adapter createOperationAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Message <em>Message</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Message
+     * @generated
+     */
+    public Adapter createMessageAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ItemDefinition <em>Item Definition</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ItemDefinition
+     * @generated
+     */
+    public Adapter createItemDefinitionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Import <em>Import</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Import
+     * @generated
+     */
+    public Adapter createImportAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Error <em>Error</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Error
+     * @generated
+     */
+    public Adapter createErrorAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.EndPoint <em>End Point</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.EndPoint
+     * @generated
+     */
+    public Adapter createEndPointAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Auditing <em>Auditing</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Auditing
+     * @generated
+     */
+    public Adapter createAuditingAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.GlobalTask <em>Global Task</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.GlobalTask
+     * @generated
+     */
+    public Adapter createGlobalTaskAdapter() {
         return null;
     }
 
@@ -1119,44 +1143,268 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CancelEventDefinition <em>Cancel Event Definition</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.InputOutputSpecification <em>Input Output Specification</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.CancelEventDefinition
+     * @see org.eclipse.bpmn2.InputOutputSpecification
      * @generated
      */
-    public Adapter createCancelEventDefinitionAdapter() {
+    public Adapter createInputOutputSpecificationAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CatchEvent <em>Catch Event</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.InputSet <em>Input Set</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.CatchEvent
+     * @see org.eclipse.bpmn2.InputSet
      * @generated
      */
-    public Adapter createCatchEventAdapter() {
+    public Adapter createInputSetAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Category <em>Category</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataInput <em>Data Input</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.Category
+     * @see org.eclipse.bpmn2.DataInput
      * @generated
      */
-    public Adapter createCategoryAdapter() {
+    public Adapter createDataInputAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ItemAwareElement <em>Item Aware Element</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ItemAwareElement
+     * @generated
+     */
+    public Adapter createItemAwareElementAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataState <em>Data State</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.DataState
+     * @generated
+     */
+    public Adapter createDataStateAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.OutputSet <em>Output Set</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.OutputSet
+     * @generated
+     */
+    public Adapter createOutputSetAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataOutput <em>Data Output</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.DataOutput
+     * @generated
+     */
+    public Adapter createDataOutputAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.InputOutputBinding <em>Input Output Binding</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.InputOutputBinding
+     * @generated
+     */
+    public Adapter createInputOutputBindingAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ResourceRole <em>Resource Role</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ResourceRole
+     * @generated
+     */
+    public Adapter createResourceRoleAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Resource <em>Resource</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Resource
+     * @generated
+     */
+    public Adapter createResourceAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ResourceParameter <em>Resource Parameter</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ResourceParameter
+     * @generated
+     */
+    public Adapter createResourceParameterAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ResourceParameterBinding <em>Resource Parameter Binding</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ResourceParameterBinding
+     * @generated
+     */
+    public Adapter createResourceParameterBindingAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Expression <em>Expression</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Expression
+     * @generated
+     */
+    public Adapter createExpressionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ResourceAssignmentExpression <em>Resource Assignment Expression</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ResourceAssignmentExpression
+     * @generated
+     */
+    public Adapter createResourceAssignmentExpressionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Monitoring <em>Monitoring</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Monitoring
+     * @generated
+     */
+    public Adapter createMonitoringAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Performer <em>Performer</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Performer
+     * @generated
+     */
+    public Adapter createPerformerAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Process <em>Process</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Process
+     * @generated
+     */
+    public Adapter createProcessAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.FlowElementsContainer <em>Flow Elements Container</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.FlowElementsContainer
+     * @generated
+     */
+    public Adapter createFlowElementsContainerAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.FlowElement <em>Flow Element</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.FlowElement
+     * @generated
+     */
+    public Adapter createFlowElementAdapter() {
         return null;
     }
 
@@ -1175,44 +1423,72 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Choreography <em>Choreography</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.LaneSet <em>Lane Set</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.Choreography
+     * @see org.eclipse.bpmn2.LaneSet
      * @generated
      */
-    public Adapter createChoreographyAdapter() {
+    public Adapter createLaneSetAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ChoreographyActivity <em>Choreography Activity</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Lane <em>Lane</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.ChoreographyActivity
+     * @see org.eclipse.bpmn2.Lane
      * @generated
      */
-    public Adapter createChoreographyActivityAdapter() {
+    public Adapter createLaneAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ChoreographyTask <em>Choreography Task</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.FlowNode <em>Flow Node</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.ChoreographyTask
+     * @see org.eclipse.bpmn2.FlowNode
      * @generated
      */
-    public Adapter createChoreographyTaskAdapter() {
+    public Adapter createFlowNodeAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.SequenceFlow <em>Sequence Flow</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.SequenceFlow
+     * @generated
+     */
+    public Adapter createSequenceFlowAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Property <em>Property</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Property
+     * @generated
+     */
+    public Adapter createPropertyAdapter() {
         return null;
     }
 
@@ -1231,86 +1507,72 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CompensateEventDefinition <em>Compensate Event Definition</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Choreography <em>Choreography</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.CompensateEventDefinition
+     * @see org.eclipse.bpmn2.Choreography
      * @generated
      */
-    public Adapter createCompensateEventDefinitionAdapter() {
+    public Adapter createChoreographyAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ComplexBehaviorDefinition <em>Complex Behavior Definition</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Artifact <em>Artifact</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.ComplexBehaviorDefinition
+     * @see org.eclipse.bpmn2.Artifact
      * @generated
      */
-    public Adapter createComplexBehaviorDefinitionAdapter() {
+    public Adapter createArtifactAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ComplexGateway <em>Complex Gateway</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ParticipantAssociation <em>Participant Association</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.ComplexGateway
+     * @see org.eclipse.bpmn2.ParticipantAssociation
      * @generated
      */
-    public Adapter createComplexGatewayAdapter() {
+    public Adapter createParticipantAssociationAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ConditionalEventDefinition <em>Conditional Event Definition</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Participant <em>Participant</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.ConditionalEventDefinition
+     * @see org.eclipse.bpmn2.Participant
      * @generated
      */
-    public Adapter createConditionalEventDefinitionAdapter() {
+    public Adapter createParticipantAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Conversation <em>Conversation</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.InteractionNode <em>Interaction Node</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.Conversation
+     * @see org.eclipse.bpmn2.InteractionNode
      * @generated
      */
-    public Adapter createConversationAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ConversationAssociation <em>Conversation Association</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ConversationAssociation
-     * @generated
-     */
-    public Adapter createConversationAssociationAdapter() {
+    public Adapter createInteractionNodeAdapter() {
         return null;
     }
 
@@ -1325,6 +1587,62 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createConversationLinkAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ParticipantMultiplicity <em>Participant Multiplicity</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ParticipantMultiplicity
+     * @generated
+     */
+    public Adapter createParticipantMultiplicityAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.MessageFlowAssociation <em>Message Flow Association</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.MessageFlowAssociation
+     * @generated
+     */
+    public Adapter createMessageFlowAssociationAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.MessageFlow <em>Message Flow</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.MessageFlow
+     * @generated
+     */
+    public Adapter createMessageFlowAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ConversationAssociation <em>Conversation Association</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ConversationAssociation
+     * @generated
+     */
+    public Adapter createConversationAssociationAdapter() {
         return null;
     }
 
@@ -1371,20 +1689,6 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CorrelationPropertyBinding <em>Correlation Property Binding</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.CorrelationPropertyBinding
-     * @generated
-     */
-    public Adapter createCorrelationPropertyBindingAdapter() {
-        return null;
-    }
-
-    /**
      * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CorrelationPropertyRetrievalExpression <em>Correlation Property Retrieval Expression</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
@@ -1395,440 +1699,6 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createCorrelationPropertyRetrievalExpressionAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CorrelationSubscription <em>Correlation Subscription</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.CorrelationSubscription
-     * @generated
-     */
-    public Adapter createCorrelationSubscriptionAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataAssociation <em>Data Association</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.DataAssociation
-     * @generated
-     */
-    public Adapter createDataAssociationAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataInput <em>Data Input</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.DataInput
-     * @generated
-     */
-    public Adapter createDataInputAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataInputAssociation <em>Data Input Association</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.DataInputAssociation
-     * @generated
-     */
-    public Adapter createDataInputAssociationAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataObject <em>Data Object</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.DataObject
-     * @generated
-     */
-    public Adapter createDataObjectAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataObjectReference <em>Data Object Reference</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.DataObjectReference
-     * @generated
-     */
-    public Adapter createDataObjectReferenceAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataOutput <em>Data Output</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.DataOutput
-     * @generated
-     */
-    public Adapter createDataOutputAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataOutputAssociation <em>Data Output Association</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.DataOutputAssociation
-     * @generated
-     */
-    public Adapter createDataOutputAssociationAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataState <em>Data State</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.DataState
-     * @generated
-     */
-    public Adapter createDataStateAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataStore <em>Data Store</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.DataStore
-     * @generated
-     */
-    public Adapter createDataStoreAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataStoreReference <em>Data Store Reference</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.DataStoreReference
-     * @generated
-     */
-    public Adapter createDataStoreReferenceAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Definitions <em>Definitions</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Definitions
-     * @generated
-     */
-    public Adapter createDefinitionsAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Documentation <em>Documentation</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Documentation
-     * @generated
-     */
-    public Adapter createDocumentationAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.EndEvent <em>End Event</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.EndEvent
-     * @generated
-     */
-    public Adapter createEndEventAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.EndPoint <em>End Point</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.EndPoint
-     * @generated
-     */
-    public Adapter createEndPointAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Error <em>Error</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Error
-     * @generated
-     */
-    public Adapter createErrorAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ErrorEventDefinition <em>Error Event Definition</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ErrorEventDefinition
-     * @generated
-     */
-    public Adapter createErrorEventDefinitionAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Escalation <em>Escalation</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Escalation
-     * @generated
-     */
-    public Adapter createEscalationAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.EscalationEventDefinition <em>Escalation Event Definition</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.EscalationEventDefinition
-     * @generated
-     */
-    public Adapter createEscalationEventDefinitionAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Event <em>Event</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Event
-     * @generated
-     */
-    public Adapter createEventAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.EventBasedGateway <em>Event Based Gateway</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.EventBasedGateway
-     * @generated
-     */
-    public Adapter createEventBasedGatewayAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.EventDefinition <em>Event Definition</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.EventDefinition
-     * @generated
-     */
-    public Adapter createEventDefinitionAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ExclusiveGateway <em>Exclusive Gateway</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ExclusiveGateway
-     * @generated
-     */
-    public Adapter createExclusiveGatewayAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Expression <em>Expression</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Expression
-     * @generated
-     */
-    public Adapter createExpressionAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Extension <em>Extension</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Extension
-     * @generated
-     */
-    public Adapter createExtensionAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ExtensionAttributeDefinition <em>Extension Attribute Definition</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ExtensionAttributeDefinition
-     * @generated
-     */
-    public Adapter createExtensionAttributeDefinitionAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ExtensionAttributeValue <em>Extension Attribute Value</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ExtensionAttributeValue
-     * @generated
-     */
-    public Adapter createExtensionAttributeValueAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ExtensionDefinition <em>Extension Definition</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ExtensionDefinition
-     * @generated
-     */
-    public Adapter createExtensionDefinitionAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.FlowElement <em>Flow Element</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.FlowElement
-     * @generated
-     */
-    public Adapter createFlowElementAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.FlowElementsContainer <em>Flow Elements Container</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.FlowElementsContainer
-     * @generated
-     */
-    public Adapter createFlowElementsContainerAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.FlowNode <em>Flow Node</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.FlowNode
-     * @generated
-     */
-    public Adapter createFlowNodeAdapter() {
         return null;
     }
 
@@ -1847,58 +1717,30 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Gateway <em>Gateway</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CorrelationSubscription <em>Correlation Subscription</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.Gateway
+     * @see org.eclipse.bpmn2.CorrelationSubscription
      * @generated
      */
-    public Adapter createGatewayAdapter() {
+    public Adapter createCorrelationSubscriptionAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.GlobalBusinessRuleTask <em>Global Business Rule Task</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CorrelationPropertyBinding <em>Correlation Property Binding</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.GlobalBusinessRuleTask
+     * @see org.eclipse.bpmn2.CorrelationPropertyBinding
      * @generated
      */
-    public Adapter createGlobalBusinessRuleTaskAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.GlobalChoreographyTask <em>Global Choreography Task</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.GlobalChoreographyTask
-     * @generated
-     */
-    public Adapter createGlobalChoreographyTaskAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.GlobalConversation <em>Global Conversation</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.GlobalConversation
-     * @generated
-     */
-    public Adapter createGlobalConversationAdapter() {
+    public Adapter createCorrelationPropertyBindingAdapter() {
         return null;
     }
 
@@ -1917,58 +1759,198 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.GlobalScriptTask <em>Global Script Task</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ManualTask <em>Manual Task</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.GlobalScriptTask
+     * @see org.eclipse.bpmn2.ManualTask
      * @generated
      */
-    public Adapter createGlobalScriptTaskAdapter() {
+    public Adapter createManualTaskAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.GlobalTask <em>Global Task</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Task <em>Task</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.GlobalTask
+     * @see org.eclipse.bpmn2.Task
      * @generated
      */
-    public Adapter createGlobalTaskAdapter() {
+    public Adapter createTaskAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.GlobalUserTask <em>Global User Task</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Activity <em>Activity</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.GlobalUserTask
+     * @see org.eclipse.bpmn2.Activity
      * @generated
      */
-    public Adapter createGlobalUserTaskAdapter() {
+    public Adapter createActivityAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Group <em>Group</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.LoopCharacteristics <em>Loop Characteristics</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.Group
+     * @see org.eclipse.bpmn2.LoopCharacteristics
      * @generated
      */
-    public Adapter createGroupAdapter() {
+    public Adapter createLoopCharacteristicsAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.BoundaryEvent <em>Boundary Event</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.BoundaryEvent
+     * @generated
+     */
+    public Adapter createBoundaryEventAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CatchEvent <em>Catch Event</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.CatchEvent
+     * @generated
+     */
+    public Adapter createCatchEventAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Event <em>Event</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Event
+     * @generated
+     */
+    public Adapter createEventAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.EventDefinition <em>Event Definition</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.EventDefinition
+     * @generated
+     */
+    public Adapter createEventDefinitionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataOutputAssociation <em>Data Output Association</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.DataOutputAssociation
+     * @generated
+     */
+    public Adapter createDataOutputAssociationAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataAssociation <em>Data Association</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.DataAssociation
+     * @generated
+     */
+    public Adapter createDataAssociationAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Assignment <em>Assignment</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Assignment
+     * @generated
+     */
+    public Adapter createAssignmentAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataInputAssociation <em>Data Input Association</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.DataInputAssociation
+     * @generated
+     */
+    public Adapter createDataInputAssociationAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.UserTask <em>User Task</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.UserTask
+     * @generated
+     */
+    public Adapter createUserTaskAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Rendering <em>Rendering</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Rendering
+     * @generated
+     */
+    public Adapter createRenderingAdapter() {
         return null;
     }
 
@@ -1987,30 +1969,86 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ImplicitThrowEvent <em>Implicit Throw Event</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.PotentialOwner <em>Potential Owner</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.ImplicitThrowEvent
+     * @see org.eclipse.bpmn2.PotentialOwner
      * @generated
      */
-    public Adapter createImplicitThrowEventAdapter() {
+    public Adapter createPotentialOwnerAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Import <em>Import</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.GlobalUserTask <em>Global User Task</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.Import
+     * @see org.eclipse.bpmn2.GlobalUserTask
      * @generated
      */
-    public Adapter createImportAdapter() {
+    public Adapter createGlobalUserTaskAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Gateway <em>Gateway</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Gateway
+     * @generated
+     */
+    public Adapter createGatewayAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.EventBasedGateway <em>Event Based Gateway</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.EventBasedGateway
+     * @generated
+     */
+    public Adapter createEventBasedGatewayAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ComplexGateway <em>Complex Gateway</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ComplexGateway
+     * @generated
+     */
+    public Adapter createComplexGatewayAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ExclusiveGateway <em>Exclusive Gateway</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ExclusiveGateway
+     * @generated
+     */
+    public Adapter createExclusiveGatewayAdapter() {
         return null;
     }
 
@@ -2029,72 +2067,44 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.InputOutputBinding <em>Input Output Binding</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ParallelGateway <em>Parallel Gateway</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.InputOutputBinding
+     * @see org.eclipse.bpmn2.ParallelGateway
      * @generated
      */
-    public Adapter createInputOutputBindingAdapter() {
+    public Adapter createParallelGatewayAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.InputOutputSpecification <em>Input Output Specification</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Relationship <em>Relationship</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.InputOutputSpecification
+     * @see org.eclipse.bpmn2.Relationship
      * @generated
      */
-    public Adapter createInputOutputSpecificationAdapter() {
+    public Adapter createRelationshipAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.InputSet <em>Input Set</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Extension <em>Extension</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.InputSet
+     * @see org.eclipse.bpmn2.Extension
      * @generated
      */
-    public Adapter createInputSetAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.InteractionNode <em>Interaction Node</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.InteractionNode
-     * @generated
-     */
-    public Adapter createInteractionNodeAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Interface <em>Interface</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Interface
-     * @generated
-     */
-    public Adapter createInterfaceAdapter() {
+    public Adapter createExtensionAdapter() {
         return null;
     }
 
@@ -2127,58 +2137,142 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ItemAwareElement <em>Item Aware Element</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ThrowEvent <em>Throw Event</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.ItemAwareElement
+     * @see org.eclipse.bpmn2.ThrowEvent
      * @generated
      */
-    public Adapter createItemAwareElementAdapter() {
+    public Adapter createThrowEventAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ItemDefinition <em>Item Definition</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.EndEvent <em>End Event</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.ItemDefinition
+     * @see org.eclipse.bpmn2.EndEvent
      * @generated
      */
-    public Adapter createItemDefinitionAdapter() {
+    public Adapter createEndEventAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Lane <em>Lane</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.StartEvent <em>Start Event</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.Lane
+     * @see org.eclipse.bpmn2.StartEvent
      * @generated
      */
-    public Adapter createLaneAdapter() {
+    public Adapter createStartEventAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.LaneSet <em>Lane Set</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CancelEventDefinition <em>Cancel Event Definition</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.LaneSet
+     * @see org.eclipse.bpmn2.CancelEventDefinition
      * @generated
      */
-    public Adapter createLaneSetAdapter() {
+    public Adapter createCancelEventDefinitionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ErrorEventDefinition <em>Error Event Definition</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ErrorEventDefinition
+     * @generated
+     */
+    public Adapter createErrorEventDefinitionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.TerminateEventDefinition <em>Terminate Event Definition</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.TerminateEventDefinition
+     * @generated
+     */
+    public Adapter createTerminateEventDefinitionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.EscalationEventDefinition <em>Escalation Event Definition</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.EscalationEventDefinition
+     * @generated
+     */
+    public Adapter createEscalationEventDefinitionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Escalation <em>Escalation</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Escalation
+     * @generated
+     */
+    public Adapter createEscalationAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CompensateEventDefinition <em>Compensate Event Definition</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.CompensateEventDefinition
+     * @generated
+     */
+    public Adapter createCompensateEventDefinitionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.TimerEventDefinition <em>Timer Event Definition</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.TimerEventDefinition
+     * @generated
+     */
+    public Adapter createTimerEventDefinitionAdapter() {
         return null;
     }
 
@@ -2197,48 +2291,6 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.LoopCharacteristics <em>Loop Characteristics</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.LoopCharacteristics
-     * @generated
-     */
-    public Adapter createLoopCharacteristicsAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ManualTask <em>Manual Task</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ManualTask
-     * @generated
-     */
-    public Adapter createManualTaskAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Message <em>Message</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Message
-     * @generated
-     */
-    public Adapter createMessageAdapter() {
-        return null;
-    }
-
-    /**
      * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.MessageEventDefinition <em>Message Event Definition</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
@@ -2253,142 +2305,170 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.MessageFlow <em>Message Flow</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ConditionalEventDefinition <em>Conditional Event Definition</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.MessageFlow
+     * @see org.eclipse.bpmn2.ConditionalEventDefinition
      * @generated
      */
-    public Adapter createMessageFlowAdapter() {
+    public Adapter createConditionalEventDefinitionAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.MessageFlowAssociation <em>Message Flow Association</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.SignalEventDefinition <em>Signal Event Definition</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.MessageFlowAssociation
+     * @see org.eclipse.bpmn2.SignalEventDefinition
      * @generated
      */
-    public Adapter createMessageFlowAssociationAdapter() {
+    public Adapter createSignalEventDefinitionAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Monitoring <em>Monitoring</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Signal <em>Signal</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.Monitoring
+     * @see org.eclipse.bpmn2.Signal
      * @generated
      */
-    public Adapter createMonitoringAdapter() {
+    public Adapter createSignalAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics <em>Multi Instance Loop Characteristics</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ImplicitThrowEvent <em>Implicit Throw Event</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.MultiInstanceLoopCharacteristics
+     * @see org.eclipse.bpmn2.ImplicitThrowEvent
      * @generated
      */
-    public Adapter createMultiInstanceLoopCharacteristicsAdapter() {
+    public Adapter createImplicitThrowEventAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Operation <em>Operation</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataObject <em>Data Object</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.Operation
+     * @see org.eclipse.bpmn2.DataObject
      * @generated
      */
-    public Adapter createOperationAdapter() {
+    public Adapter createDataObjectAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.OutputSet <em>Output Set</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataStore <em>Data Store</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.OutputSet
+     * @see org.eclipse.bpmn2.DataStore
      * @generated
      */
-    public Adapter createOutputSetAdapter() {
+    public Adapter createDataStoreAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ParallelGateway <em>Parallel Gateway</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataStoreReference <em>Data Store Reference</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.ParallelGateway
+     * @see org.eclipse.bpmn2.DataStoreReference
      * @generated
      */
-    public Adapter createParallelGatewayAdapter() {
+    public Adapter createDataStoreReferenceAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Participant <em>Participant</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.DataObjectReference <em>Data Object Reference</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.Participant
+     * @see org.eclipse.bpmn2.DataObjectReference
      * @generated
      */
-    public Adapter createParticipantAdapter() {
+    public Adapter createDataObjectReferenceAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ParticipantAssociation <em>Participant Association</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CallConversation <em>Call Conversation</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.ParticipantAssociation
+     * @see org.eclipse.bpmn2.CallConversation
      * @generated
      */
-    public Adapter createParticipantAssociationAdapter() {
+    public Adapter createCallConversationAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ParticipantMultiplicity <em>Participant Multiplicity</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Conversation <em>Conversation</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.ParticipantMultiplicity
+     * @see org.eclipse.bpmn2.Conversation
      * @generated
      */
-    public Adapter createParticipantMultiplicityAdapter() {
+    public Adapter createConversationAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.SubConversation <em>Sub Conversation</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.SubConversation
+     * @generated
+     */
+    public Adapter createSubConversationAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.GlobalConversation <em>Global Conversation</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.GlobalConversation
+     * @generated
+     */
+    public Adapter createGlobalConversationAdapter() {
         return null;
     }
 
@@ -2421,296 +2501,30 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Performer <em>Performer</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ChoreographyActivity <em>Choreography Activity</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.Performer
+     * @see org.eclipse.bpmn2.ChoreographyActivity
      * @generated
      */
-    public Adapter createPerformerAdapter() {
+    public Adapter createChoreographyActivityAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.PotentialOwner <em>Potential Owner</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CallChoreography <em>Call Choreography</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.PotentialOwner
+     * @see org.eclipse.bpmn2.CallChoreography
      * @generated
      */
-    public Adapter createPotentialOwnerAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Process <em>Process</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Process
-     * @generated
-     */
-    public Adapter createProcessAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Property <em>Property</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Property
-     * @generated
-     */
-    public Adapter createPropertyAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ReceiveTask <em>Receive Task</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ReceiveTask
-     * @generated
-     */
-    public Adapter createReceiveTaskAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Relationship <em>Relationship</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Relationship
-     * @generated
-     */
-    public Adapter createRelationshipAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Rendering <em>Rendering</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Rendering
-     * @generated
-     */
-    public Adapter createRenderingAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Resource <em>Resource</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Resource
-     * @generated
-     */
-    public Adapter createResourceAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ResourceAssignmentExpression <em>Resource Assignment Expression</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ResourceAssignmentExpression
-     * @generated
-     */
-    public Adapter createResourceAssignmentExpressionAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ResourceParameter <em>Resource Parameter</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ResourceParameter
-     * @generated
-     */
-    public Adapter createResourceParameterAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ResourceParameterBinding <em>Resource Parameter Binding</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ResourceParameterBinding
-     * @generated
-     */
-    public Adapter createResourceParameterBindingAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ResourceRole <em>Resource Role</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ResourceRole
-     * @generated
-     */
-    public Adapter createResourceRoleAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.RootElement <em>Root Element</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.RootElement
-     * @generated
-     */
-    public Adapter createRootElementAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ScriptTask <em>Script Task</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ScriptTask
-     * @generated
-     */
-    public Adapter createScriptTaskAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.SendTask <em>Send Task</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.SendTask
-     * @generated
-     */
-    public Adapter createSendTaskAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.SequenceFlow <em>Sequence Flow</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.SequenceFlow
-     * @generated
-     */
-    public Adapter createSequenceFlowAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ServiceTask <em>Service Task</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.ServiceTask
-     * @generated
-     */
-    public Adapter createServiceTaskAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Signal <em>Signal</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Signal
-     * @generated
-     */
-    public Adapter createSignalAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.SignalEventDefinition <em>Signal Event Definition</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.SignalEventDefinition
-     * @generated
-     */
-    public Adapter createSignalEventDefinitionAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.StandardLoopCharacteristics <em>Standard Loop Characteristics</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.StandardLoopCharacteristics
-     * @generated
-     */
-    public Adapter createStandardLoopCharacteristicsAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.StartEvent <em>Start Event</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.StartEvent
-     * @generated
-     */
-    public Adapter createStartEventAdapter() {
+    public Adapter createCallChoreographyAdapter() {
         return null;
     }
 
@@ -2729,58 +2543,30 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.SubConversation <em>Sub Conversation</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ChoreographyTask <em>Choreography Task</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.SubConversation
+     * @see org.eclipse.bpmn2.ChoreographyTask
      * @generated
      */
-    public Adapter createSubConversationAdapter() {
+    public Adapter createChoreographyTaskAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.SubProcess <em>Sub Process</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.GlobalChoreographyTask <em>Global Choreography Task</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.SubProcess
+     * @see org.eclipse.bpmn2.GlobalChoreographyTask
      * @generated
      */
-    public Adapter createSubProcessAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Task <em>Task</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.Task
-     * @generated
-     */
-    public Adapter createTaskAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.TerminateEventDefinition <em>Terminate Event Definition</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see org.eclipse.bpmn2.TerminateEventDefinition
-     * @generated
-     */
-    public Adapter createTerminateEventDefinitionAdapter() {
+    public Adapter createGlobalChoreographyTaskAdapter() {
         return null;
     }
 
@@ -2799,30 +2585,198 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ThrowEvent <em>Throw Event</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Group <em>Group</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.ThrowEvent
+     * @see org.eclipse.bpmn2.Group
      * @generated
      */
-    public Adapter createThrowEventAdapter() {
+    public Adapter createGroupAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.TimerEventDefinition <em>Timer Event Definition</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Association <em>Association</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.TimerEventDefinition
+     * @see org.eclipse.bpmn2.Association
      * @generated
      */
-    public Adapter createTimerEventDefinitionAdapter() {
+    public Adapter createAssociationAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Category <em>Category</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Category
+     * @generated
+     */
+    public Adapter createCategoryAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ServiceTask <em>Service Task</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ServiceTask
+     * @generated
+     */
+    public Adapter createServiceTaskAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.SubProcess <em>Sub Process</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.SubProcess
+     * @generated
+     */
+    public Adapter createSubProcessAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.MultiInstanceLoopCharacteristics <em>Multi Instance Loop Characteristics</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.MultiInstanceLoopCharacteristics
+     * @generated
+     */
+    public Adapter createMultiInstanceLoopCharacteristicsAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ComplexBehaviorDefinition <em>Complex Behavior Definition</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ComplexBehaviorDefinition
+     * @generated
+     */
+    public Adapter createComplexBehaviorDefinitionAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.StandardLoopCharacteristics <em>Standard Loop Characteristics</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.StandardLoopCharacteristics
+     * @generated
+     */
+    public Adapter createStandardLoopCharacteristicsAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.CallActivity <em>Call Activity</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.CallActivity
+     * @generated
+     */
+    public Adapter createCallActivityAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.SendTask <em>Send Task</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.SendTask
+     * @generated
+     */
+    public Adapter createSendTaskAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ReceiveTask <em>Receive Task</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ReceiveTask
+     * @generated
+     */
+    public Adapter createReceiveTaskAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.ScriptTask <em>Script Task</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.ScriptTask
+     * @generated
+     */
+    public Adapter createScriptTaskAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.BusinessRuleTask <em>Business Rule Task</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.BusinessRuleTask
+     * @generated
+     */
+    public Adapter createBusinessRuleTaskAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.AdHocSubProcess <em>Ad Hoc Sub Process</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.AdHocSubProcess
+     * @generated
+     */
+    public Adapter createAdHocSubProcessAdapter() {
         return null;
     }
 
@@ -2841,16 +2795,44 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.UserTask <em>User Task</em>}'.
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.GlobalScriptTask <em>Global Script Task</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.eclipse.bpmn2.UserTask
+     * @see org.eclipse.bpmn2.GlobalScriptTask
      * @generated
      */
-    public Adapter createUserTaskAdapter() {
+    public Adapter createGlobalScriptTaskAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.GlobalBusinessRuleTask <em>Global Business Rule Task</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.GlobalBusinessRuleTask
+     * @generated
+     */
+    public Adapter createGlobalBusinessRuleTaskAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.eclipse.bpmn2.Definitions <em>Definitions</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see org.eclipse.bpmn2.Definitions
+     * @generated
+     */
+    public Adapter createDefinitionsAdapter() {
         return null;
     }
 
