@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16px"
+   height="16px"
+   id="svg1870"
+   sodipodi:version="0.32"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="Association.svg"
+   inkscape:export-filename="/Users/antoine/w/git/bpmn2/org.eclipse.mdt.bpmn2.edit/icons/full/obj16/ExclusiveGateway.gif.png"
+   inkscape:export-xdpi="60"
+   inkscape:export-ydpi="60"
+   version="1.1">
+  <defs
+     id="defs1872">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 8 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="16 : 8 : 1"
+       inkscape:persp3d-origin="8 : 5.3333333 : 1"
+       id="perspective14" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3751">
+      <stop
+         style="stop-color:#d8e32b;stop-opacity:1;"
+         offset="0"
+         id="stop3753" />
+      <stop
+         style="stop-color:#d8e32b;stop-opacity:0;"
+         offset="1"
+         id="stop3755" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3751"
+       id="linearGradient2284"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.127834,0,0,0.144345,9.767213,0.40203)"
+       x1="5"
+       y1="44.5"
+       x2="10.000001"
+       y2="16.957108" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.098901"
+     inkscape:cx="3.5727168"
+     inkscape:cy="5.7455688"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="853"
+     inkscape:window-height="576"
+     inkscape:window-x="291"
+     inkscape:window-y="115"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata1875">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:black;stroke-width:0.40792021px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1"
+       d="M 10.759863,10.20396 L 10.759863,10.20396 L 12.79604,12.246991 L 10.759863,12.246991 L 10.759863,10.20396 L 7.5019796,10.20396 L 7.5019796,15.515843 L 12.79604,15.515843 L 12.79604,12.246991 L 12.723073,12.136994"
+       id="path3747"
+       sodipodi:nodetypes="cccccccccc" />
+    <path
+       style="fill:url(#linearGradient2284);fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:0.49536964;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 13.292909,4.9022183 L 11.278636,4.9022183 L 11.278636,0.79718974 L 13.292909,0.79718974 L 13.292909,0.79718974"
+       id="path1927" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#363636;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1,1;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 9.6559456,13.286158 L 5.927553,13.185088 L 4.3496735,12.077857 L 3.77487,10.777282 L 3.9816244,8.5278464 L 4.8303177,6.7527368 L 6.5633618,5.0002807 L 9.0589373,3.415922 L 10.978214,2.8379044"
+       id="path3759"
+       sodipodi:nodetypes="ccccccccc" />
+  </g>
+</svg>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.44.1"
+   sodipodi:docname="gateway_complex.svg"
+   sodipodi:docbase="C:\apps\eclipse-workspace-gmf\trunk\org.eclipse.stp.bpmn.edit\icons\full\objsvg"
+   inkscape:export-filename="C:\apps\eclipse-workspace-gmf\trunk\org.eclipse.stp.bpmn.edit\icons\full\obj16\activities\gateway_complex.png"
+   inkscape:export-xdpi="60"
+   inkscape:export-ydpi="60">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="576"
+     inkscape:window-width="853"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="15.625"
+     inkscape:cx="12"
+     inkscape:cy="12"
+     inkscape:window-x="66"
+     inkscape:window-y="99"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs13" />
+  <rect
+     width="15.956599"
+     height="15.648066"
+     x="8.9877129"
+     y="-7.4384818"
+     transform="matrix(0.722989,0.69086,-0.690536,0.723298,0,0)"
+     style="opacity:1;fill:white;fill-opacity:1;stroke:black;stroke-width:0.59999994;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect4366" />
+  <g
+     transform="matrix(0.371419,0,0,0.371435,-30.34177,-19.94341)"
+     id="Layer_0">
+    <g
+       id="g5256">
+      <path
+         d="M 114,74 L 114,98"
+         style="fill:none;stroke:black;stroke-width:4;stroke-miterlimit:3.7320509"
+         id="path5258" />
+      <path
+         d="M 126,86 L 102,86"
+         style="fill:none;stroke:black;stroke-width:4;stroke-miterlimit:3.7320509"
+         id="path5260" />
+      <path
+         d="M 122.36301,94.60583 L 105.63699,77.39417"
+         style="fill:none;stroke:black;stroke-width:4;stroke-miterlimit:3.7320509"
+         id="path5262" />
+      <path
+         d="M 122.49474,77.524185 L 105.50526,94.475815"
+         style="fill:none;stroke:black;stroke-width:4;stroke-miterlimit:3.7320509"
+         id="path5264" />
+    </g>
+  </g>
+</svg>

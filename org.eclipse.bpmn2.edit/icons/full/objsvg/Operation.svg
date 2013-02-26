@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64px"
+   height="64px"
+   id="svg2029"
+   sodipodi:version="0.32"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="Operation.svg"
+   inkscape:export-filename="C:\Documents and Settings\hmalphettes\Desktop\moreicons\New Folder\obj48\WsdlOperation.png"
+   inkscape:export-xdpi="67.5"
+   inkscape:export-ydpi="67.5"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.1">
+  <defs
+     id="defs2031">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 32 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="64 : 32 : 1"
+       inkscape:persp3d-origin="32 : 21.333333 : 1"
+       id="perspective19" />
+    <linearGradient
+       id="linearGradient2770">
+      <stop
+         style="stop-color:black;stop-opacity:1;"
+         offset="0"
+         id="stop2772" />
+      <stop
+         id="stop2847"
+         offset="1"
+         style="stop-color:#567ce8;stop-opacity:1;" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2770"
+       id="radialGradient14821"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.017153,0,-0.552012)"
+       spreadMethod="pad"
+       cx="31.636364"
+       cy="32.18166"
+       fx="31.636364"
+       fy="32.18166"
+       r="31.809822" />
+    <linearGradient
+       y2="248.6311"
+       x2="153.0005"
+       y1="15.4238"
+       x1="99.7773"
+       gradientUnits="userSpaceOnUse"
+       id="aigrd1">
+      <stop
+         id="stop53300"
+         style="stop-color:#184375"
+         offset="0" />
+      <stop
+         id="stop53302"
+         style="stop-color:#C8BDDC"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#aigrd1"
+       id="linearGradient2795"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.276016,0,0,0.275995,-75.56864,-1.591888)"
+       x1="99.7773"
+       y1="15.4238"
+       x2="153.0005"
+       y2="248.6311" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.5"
+     inkscape:cx="32"
+     inkscape:cy="33.361179"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     inkscape:window-width="853"
+     inkscape:window-height="581"
+     inkscape:window-x="223"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata2034">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       id="path3243"
+       d="M 30.383299,1.1562499 C 29.732509,1.200775 29.099959,1.3015633 28.460737,1.3747065 L 28.417041,1.3747065 L 26.887731,9.7197486 C 24.395074,10.287372 22.049989,11.250681 19.940285,12.559684 L 13.08023,7.6225652 C 11.225776,9.0621991 9.5382428,10.74121 8.0553488,12.559684 L 12.818062,19.506605 C 11.371969,21.71636 10.284518,24.239564 9.6720498,26.890441 C 9.6719458,26.902971 9.6719638,26.931948 9.6720498,26.93413 L 1.3700721,28.24487 C 1.2182906,29.484493 1.151599,30.765601 1.151599,32.046018 C 1.151599,33.093629 1.1805273,34.127247 1.2826828,35.148101 L 9.5846618,36.633607 C 10.175103,39.516384 11.296733,42.208636 12.861758,44.585426 L 7.9242648,51.357583 C 9.3383298,53.11295 10.970852,54.71114 12.730673,56.119936 L 19.721812,51.31389 C 22.165121,52.872403 24.892575,53.965253 27.849011,54.503358 L 29.15985,62.761018 C 30.091324,62.845799 31.046548,62.848401 32,62.848401 C 33.346053,62.8484 34.631795,62.797394 35.932518,62.629943 L 37.505521,54.197517 C 40.312551,53.499016 42.94948,52.287279 45.239471,50.658521 L 51.968442,55.55195 C 53.713468,54.067426 55.309195,52.361075 56.68746,50.527448 L 51.793663,43.449453 C 53.118979,41.160741 54.037301,38.635521 54.502731,35.934544 L 62.761014,34.623806 C 62.833437,33.762076 62.848401,32.926363 62.848401,32.046018 C 62.848401,30.51617 62.670574,29.016168 62.455151,27.545809 L 54.065784,26.016615 C 53.408346,23.589159 52.329637,21.324373 50.963465,19.288151 L 55.900956,12.515994 C 54.370494,10.644458 52.62466,8.9155761 50.701298,7.4478008 L 43.579075,12.34123 C 41.532075,11.130683 39.329213,10.201847 36.937491,9.676057 L 35.626654,1.3747065 C 34.433547,1.2343695 33.230622,1.1562499 32,1.1562499 C 31.6674,1.1562499 31.325098,1.1457855 30.995023,1.1562499 C 30.834113,1.1613514 30.674878,1.1468895 30.514384,1.1562499 C 30.470914,1.158785 30.426686,1.1532817 30.383299,1.1562499 z M 31.51936,22.390234 C 31.678987,22.382136 31.838368,22.390234 32,22.390234 C 37.172222,22.390234 41.394343,26.612039 41.394343,31.783869 C 41.394344,36.955697 37.172221,41.133812 32,41.133812 C 26.827781,41.133813 22.649352,36.955697 22.649352,31.783869 C 22.649353,26.773658 26.570821,22.641327 31.51936,22.390234 z "
+       style="color:black;fill:url(#linearGradient2795);fill-opacity:1;fill-rule:nonzero;stroke:#3f4561;stroke-width:2.3031981;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
+       inkscape:r_cx="true"
+       inkscape:r_cy="true" />
+  </g>
+</svg>

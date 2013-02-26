@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="BoundaryEvent.svg"
+   inkscape:export-filename="/home/hmalphettes/proj/stp-europa/org.eclipse.stp.bpmn.edit/icons/full/obj16/activities/intermediate_multiple.png"
+   inkscape:export-xdpi="60"
+   inkscape:export-ydpi="60"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="663"
+     inkscape:window-width="789"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="15.75"
+     inkscape:cx="12"
+     inkscape:cy="12"
+     inkscape:window-x="230"
+     inkscape:window-y="0"
+     inkscape:current-layer="svg2"
+     showgrid="false"
+     inkscape:window-maximized="0" />
+  <defs
+     id="defs13">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 12 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="24 : 12 : 1"
+       inkscape:persp3d-origin="12 : 8 : 1"
+       id="perspective11" />
+  </defs>
+  <g
+     transform="matrix(0.4112279,0,0,0.4112279,-8.5931408,-17.135159)"
+     id="g2003">
+    <g
+       id="g1992">
+      <ellipse
+         cx="50"
+         cy="70"
+         rx="20"
+         ry="20"
+         style="fill:#ffffff;stroke:#000000"
+         id="ellipse1994"
+         d="M 70,70 C 70,81.045695 61.045695,90 50,90 38.954305,90 30,81.045695 30,70 30,58.954305 38.954305,50 50,50 c 11.045695,0 20,8.954305 20,20 z"
+         sodipodi:cx="50"
+         sodipodi:cy="70"
+         sodipodi:rx="20"
+         sodipodi:ry="20" />
+      <ellipse
+         cx="50"
+         cy="70"
+         rx="16"
+         ry="16"
+         style="fill:none;stroke:#000000"
+         id="ellipse1996"
+         d="m 66,70 c 0,8.836556 -7.163444,16 -16,16 -8.836556,0 -16,-7.163444 -16,-16 0,-8.836556 7.163444,-16 16,-16 8.836556,0 16,7.163444 16,16 z"
+         sodipodi:cx="50"
+         sodipodi:cy="70"
+         sodipodi:rx="16"
+         sodipodi:ry="16" />
+    </g>
+  </g>
+  <path
+     sodipodi:type="star"
+     style="fill:none;stroke:#000000;stroke-width:0.98036528;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path2276"
+     sodipodi:sides="5"
+     sodipodi:cx="-5.6960001"
+     sodipodi:cy="2.688"
+     sodipodi:r1="6.569593"
+     sodipodi:r2="5.3149123"
+     sodipodi:arg1="0.95847419"
+     sodipodi:arg2="1.5867927"
+     inkscape:flatsided="true"
+     inkscape:rounded="0"
+     inkscape:randomized="0"
+     d="M -1.9200001,8.0639999 -9.6420317,7.9404647 -11.910782,0.55820175 -5.5909148,-3.8807525 0.58372786,0.7580859 -1.9200001,8.0639999 z"
+     transform="matrix(0.75786305,-0.00776718,0.00746516,0.72839438,16.255518,9.4042715)" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:3.86418128px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 0.06405436,11.460317 c 3.74490714,0 3.74490714,0 3.74490714,0"
+     id="path2816" />
+  <path
+     id="path2818"
+     d="m 20.049426,11.714285 c 3.96464,0 3.96464,0 3.96464,0"
+     style="fill:none;stroke:#000000;stroke-width:3.97593141px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+</svg>
