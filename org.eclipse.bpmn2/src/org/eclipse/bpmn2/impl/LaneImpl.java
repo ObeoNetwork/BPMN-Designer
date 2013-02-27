@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -99,6 +100,16 @@ public class LaneImpl extends BaseElementImpl implements Lane {
      * @ordered
      */
     protected BaseElement partitionElement;
+
+    /**
+     * The cached value of the '{@link #getFlowNodeRefs() <em>Flow Node Refs</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getFlowNodeRefs()
+     * @generated NOT
+     * @ordered
+     */
+    protected EList<FlowNode> flowNodeRefs;
 
     /**
      * <!-- begin-user-doc -->
@@ -236,14 +247,20 @@ public class LaneImpl extends BaseElementImpl implements Lane {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated NOT
      */
     public EList<FlowNode> getFlowNodeRefs() {
         // TODO: implement this method to return the 'Flow Node Refs' reference list
         // Ensure that you remove @generated or mark it @generated NOT
         // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
         // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+
+        if (flowNodeRefs == null) {
+            flowNodeRefs = new EObjectWithInverseEList.ManyInverse<FlowNode>(FlowNode.class, this,
+                    Bpmn2Package.LANE__FLOW_NODE_REFS, Bpmn2Package.FLOW_NODE__LANES);
+        }
+        return flowNodeRefs;
+
     }
 
     /**

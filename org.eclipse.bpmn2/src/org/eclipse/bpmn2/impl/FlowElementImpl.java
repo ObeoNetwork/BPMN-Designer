@@ -233,7 +233,7 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated 
      */
     public EList<CategoryValue> getCategoryValueRef() {
         // TODO: implement this method to return the 'Category Value Ref' reference list
