@@ -51,7 +51,7 @@ public interface DiagramElement extends EObject {
      * @return the value of the '<em>Owning Diagram</em>' reference.
      * @see org.eclipse.dd.di.DiPackage#getDiagramElement_OwningDiagram()
      * @see org.eclipse.dd.di.Diagram#getRootElement
-     * @model opposite="rootElement" changeable="false" volatile="true" derived="true" ordered="false"
+     * @model opposite="rootElement" resolveProxies="false" transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
     Diagram getOwningDiagram();
@@ -68,7 +68,7 @@ public interface DiagramElement extends EObject {
      * @return the value of the '<em>Owning Element</em>' reference.
      * @see org.eclipse.dd.di.DiPackage#getDiagramElement_OwningElement()
      * @see org.eclipse.dd.di.DiagramElement#getOwnedElement
-     * @model opposite="ownedElement" changeable="false" volatile="true" derived="true" ordered="false"
+     * @model opposite="ownedElement" resolveProxies="false" transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
     DiagramElement getOwningElement();
@@ -86,7 +86,7 @@ public interface DiagramElement extends EObject {
      * @return the value of the '<em>Owned Element</em>' reference list.
      * @see org.eclipse.dd.di.DiPackage#getDiagramElement_OwnedElement()
      * @see org.eclipse.dd.di.DiagramElement#getOwningElement
-     * @model opposite="owningElement" changeable="false" volatile="true" derived="true" ordered="false"
+     * @model opposite="owningElement" resolveProxies="false" transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
     EList<DiagramElement> getOwnedElement();
@@ -101,7 +101,7 @@ public interface DiagramElement extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Model Element</em>' reference.
      * @see org.eclipse.dd.di.DiPackage#getDiagramElement_ModelElement()
-     * @model changeable="false" volatile="true" derived="true" ordered="false"
+     * @model transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
     EObject getModelElement();
@@ -116,7 +116,7 @@ public interface DiagramElement extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Style</em>' reference.
      * @see org.eclipse.dd.di.DiPackage#getDiagramElement_Style()
-     * @model changeable="false" volatile="true" derived="true" ordered="false"
+     * @model transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
     Style getStyle();

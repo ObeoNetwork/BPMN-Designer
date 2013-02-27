@@ -49,7 +49,7 @@ public interface InteractionNode extends EObject {
      * @return the value of the '<em>Incoming Conversation Links</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getInteractionNode_IncomingConversationLinks()
      * @see org.eclipse.bpmn2.ConversationLink#getTargetRef
-     * @model opposite="targetRef" volatile="true" derived="true" ordered="false"
+     * @model opposite="targetRef" transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
     EList<ConversationLink> getIncomingConversationLinks();
@@ -67,7 +67,7 @@ public interface InteractionNode extends EObject {
      * @return the value of the '<em>Outgoing Conversation Links</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getInteractionNode_OutgoingConversationLinks()
      * @see org.eclipse.bpmn2.ConversationLink#getSourceRef
-     * @model opposite="sourceRef" volatile="true" derived="true" ordered="false"
+     * @model opposite="sourceRef" transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
     EList<ConversationLink> getOutgoingConversationLinks();

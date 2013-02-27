@@ -44,7 +44,7 @@ public interface LabeledEdge extends Edge {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Owned Label</em>' reference list.
      * @see org.eclipse.dd.di.DiPackage#getLabeledEdge_OwnedLabel()
-     * @model changeable="false" volatile="true" derived="true" ordered="false"
+     * @model transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
     EList<Label> getOwnedLabel();

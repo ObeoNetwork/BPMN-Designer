@@ -128,7 +128,7 @@ public interface Lane extends BaseElement {
      * @return the value of the '<em>Flow Node Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getLane_FlowNodeRefs()
      * @see org.eclipse.bpmn2.FlowNode#getLanes
-     * @model opposite="lanes" volatile="true" derived="true" ordered="false"
+     * @model opposite="lanes" resolveProxies="false" ordered="false"
      * @generated
      */
     EList<FlowNode> getFlowNodeRefs();

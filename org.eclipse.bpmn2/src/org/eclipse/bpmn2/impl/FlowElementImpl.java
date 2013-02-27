@@ -31,6 +31,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -88,6 +90,16 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
      * @ordered
      */
     protected Monitoring monitoring;
+
+    /**
+     * The cached value of the '{@link #getCategoryValueRef() <em>Category Value Ref</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCategoryValueRef()
+     * @generated
+     * @ordered
+     */
+    protected EList<CategoryValue> categoryValueRef;
 
     /**
      * <!-- begin-user-doc -->
@@ -233,14 +245,32 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated 
+     * @generated
      */
     public EList<CategoryValue> getCategoryValueRef() {
-        // TODO: implement this method to return the 'Category Value Ref' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (categoryValueRef == null) {
+            categoryValueRef = new EObjectWithInverseEList.ManyInverse<CategoryValue>(
+                    CategoryValue.class, this, Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF,
+                    Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS);
+        }
+        return categoryValueRef;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getCategoryValueRef())
+                    .basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
     }
 
     /**
@@ -256,6 +286,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
             return basicSetAuditing(null, msgs);
         case Bpmn2Package.FLOW_ELEMENT__MONITORING:
             return basicSetMonitoring(null, msgs);
+        case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
+            return ((InternalEList<?>) getCategoryValueRef()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -345,7 +377,7 @@ public abstract class FlowElementImpl extends BaseElementImpl implements FlowEle
         case Bpmn2Package.FLOW_ELEMENT__MONITORING:
             return monitoring != null;
         case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
-            return !getCategoryValueRef().isEmpty();
+            return categoryValueRef != null && !categoryValueRef.isEmpty();
         }
         return super.eIsSet(featureID);
     }

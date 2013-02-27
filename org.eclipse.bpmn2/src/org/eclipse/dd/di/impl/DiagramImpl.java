@@ -21,6 +21,7 @@ import org.eclipse.dd.di.Style;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -106,6 +108,26 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
      * @ordered
      */
     protected float resolution = RESOLUTION_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getOwnedStyle() <em>Owned Style</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getOwnedStyle()
+     * @generated
+     * @ordered
+     */
+    protected EList<Style> ownedStyle;
+
+    /**
+     * The cached value of the '{@link #getRootElement() <em>Root Element</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getRootElement()
+     * @generated
+     * @ordered
+     */
+    protected DiagramElement rootElement;
 
     /**
      * <!-- begin-user-doc -->
@@ -198,11 +220,11 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
      * @generated
      */
     public EList<Style> getOwnedStyle() {
-        // TODO: implement this method to return the 'Owned Style' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (ownedStyle == null) {
+            ownedStyle = new EObjectResolvingEList<Style>(Style.class, this,
+                    DiPackage.DIAGRAM__OWNED_STYLE);
+        }
+        return ownedStyle;
     }
 
     /**
@@ -211,9 +233,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
      * @generated
      */
     public DiagramElement getRootElement() {
-        DiagramElement rootElement = basicGetRootElement();
-        return rootElement != null && rootElement.eIsProxy() ? (DiagramElement) eResolveProxy((InternalEObject) rootElement)
-                : rootElement;
+        return rootElement;
     }
 
     /**
@@ -221,11 +241,52 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
      * <!-- end-user-doc -->
      * @generated
      */
-    public DiagramElement basicGetRootElement() {
-        // TODO: implement this method to return the 'Root Element' reference
-        // -> do not perform proxy resolution
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+    public NotificationChain basicSetRootElement(DiagramElement newRootElement,
+            NotificationChain msgs) {
+        DiagramElement oldRootElement = rootElement;
+        rootElement = newRootElement;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    DiPackage.DIAGRAM__ROOT_ELEMENT, oldRootElement, newRootElement);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
+        switch (featureID) {
+        case DiPackage.DIAGRAM__ROOT_ELEMENT:
+            if (rootElement != null)
+                msgs = ((InternalEObject) rootElement).eInverseRemove(this,
+                        DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM, DiagramElement.class, msgs);
+            return basicSetRootElement((DiagramElement) otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
+        switch (featureID) {
+        case DiPackage.DIAGRAM__ROOT_ELEMENT:
+            return basicSetRootElement(null, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
@@ -245,9 +306,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
         case DiPackage.DIAGRAM__OWNED_STYLE:
             return getOwnedStyle();
         case DiPackage.DIAGRAM__ROOT_ELEMENT:
-            if (resolve)
-                return getRootElement();
-            return basicGetRootElement();
+            return getRootElement();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -310,9 +369,9 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
         case DiPackage.DIAGRAM__RESOLUTION:
             return resolution != RESOLUTION_EDEFAULT;
         case DiPackage.DIAGRAM__OWNED_STYLE:
-            return !getOwnedStyle().isEmpty();
+            return ownedStyle != null && !ownedStyle.isEmpty();
         case DiPackage.DIAGRAM__ROOT_ELEMENT:
-            return basicGetRootElement() != null;
+            return rootElement != null;
         }
         return super.eIsSet(featureID);
     }

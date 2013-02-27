@@ -134,14 +134,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataInputRefs" ordered="false"
-        upperBound="-1" eType="#//DataInput" volatile="true" derived="true" eOpposite="#//DataInput/inputSetRefs"/>
+        upperBound="-1" eType="#//DataInput" resolveProxies="false" eOpposite="#//DataInput/inputSetRefs"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="optionalInputRefs" ordered="false"
-        upperBound="-1" eType="#//DataInput" volatile="true" derived="true" eOpposite="#//DataInput/inputSetWithOptional"/>
+        upperBound="-1" eType="#//DataInput" resolveProxies="false" eOpposite="#//DataInput/inputSetWithOptional"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="whileExecutingInputRefs"
-        ordered="false" upperBound="-1" eType="#//DataInput" volatile="true" derived="true"
+        ordered="false" upperBound="-1" eType="#//DataInput" resolveProxies="false"
         eOpposite="#//DataInput/inputSetWithWhileExecuting"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputSetRefs" ordered="false"
-        upperBound="-1" eType="#//OutputSet" eOpposite="#//OutputSet/inputSetRefs"/>
+        upperBound="-1" eType="#//OutputSet" resolveProxies="false" eOpposite="#//OutputSet/inputSetRefs"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataInput" eSuperTypes="#//ItemAwareElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -149,12 +149,12 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputSetWithOptional" ordered="false"
-        upperBound="-1" eType="#//InputSet" volatile="true" derived="true" eOpposite="#//InputSet/optionalInputRefs"/>
+        upperBound="-1" eType="#//InputSet" transient="true" derived="true" eOpposite="#//InputSet/optionalInputRefs"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputSetWithWhileExecuting"
-        ordered="false" upperBound="-1" eType="#//InputSet" volatile="true" derived="true"
+        ordered="false" upperBound="-1" eType="#//InputSet" transient="true" derived="true"
         eOpposite="#//InputSet/whileExecutingInputRefs"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputSetRefs" ordered="false"
-        lowerBound="1" upperBound="-1" eType="#//InputSet" volatile="true" derived="true"
+        lowerBound="1" upperBound="-1" eType="#//InputSet" transient="true" derived="true"
         eOpposite="#//InputSet/dataInputRefs"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ItemAwareElement" eSuperTypes="#//BaseElement">
@@ -169,11 +169,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OutputSet" eSuperTypes="#//BaseElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataOutputRefs" ordered="false"
-        upperBound="-1" eType="#//DataOutput" volatile="true" derived="true" eOpposite="#//DataOutput/outputSetRefs"/>
+        upperBound="-1" eType="#//DataOutput" resolveProxies="false" eOpposite="#//DataOutput/outputSetRefs"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="optionalOutputRefs" ordered="false"
-        upperBound="-1" eType="#//DataOutput" volatile="true" derived="true" eOpposite="#//DataOutput/outputSetWithOptional"/>
+        upperBound="-1" eType="#//DataOutput" resolveProxies="false" eOpposite="#//DataOutput/outputSetWithOptional"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="whileExecutingOutputRefs"
-        ordered="false" upperBound="-1" eType="#//DataOutput" volatile="true" derived="true"
+        ordered="false" upperBound="-1" eType="#//DataOutput" derived="true" resolveProxies="false"
         eOpposite="#//DataOutput/outputSetWithWhileExecuting"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -186,13 +186,13 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputSetWithOptional"
-        ordered="false" upperBound="-1" eType="#//OutputSet" volatile="true" derived="true"
+        ordered="false" upperBound="-1" eType="#//OutputSet" transient="true" derived="true"
         eOpposite="#//OutputSet/optionalOutputRefs"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputSetWithWhileExecuting"
-        ordered="false" upperBound="-1" eType="#//OutputSet" volatile="true" derived="true"
+        ordered="false" upperBound="-1" eType="#//OutputSet" transient="true" derived="true"
         eOpposite="#//OutputSet/whileExecutingOutputRefs"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputSetRefs" ordered="false"
-        lowerBound="1" upperBound="-1" eType="#//OutputSet" volatile="true" derived="true"
+        lowerBound="1" upperBound="-1" eType="#//OutputSet" transient="true" derived="true"
         eOpposite="#//OutputSet/dataOutputRefs"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputOutputBinding">
@@ -278,14 +278,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="monitoring" ordered="false"
         eType="#//Monitoring" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="categoryValueRef" ordered="false"
-        upperBound="-1" eType="#//CategoryValue" volatile="true" derived="true" eOpposite="#//CategoryValue/categorizedFlowElements"/>
+        upperBound="-1" eType="#//CategoryValue" transient="true" resolveProxies="false"
+        eOpposite="#//CategoryValue/categorizedFlowElements"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CategoryValue" eSuperTypes="#//BaseElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="categorizedFlowElements"
-        ordered="false" upperBound="-1" eType="#//FlowElement" volatile="true" derived="true"
-        eOpposite="#//FlowElement/categoryValueRef"/>
+        ordered="false" upperBound="-1" eType="#//FlowElement" changeable="false"
+        transient="true" derived="true" resolveProxies="false" eOpposite="#//FlowElement/categoryValueRef"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LaneSet" eSuperTypes="#//BaseElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="lanes" ordered="false"
@@ -300,7 +301,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="partitionElementRef" ordered="false"
         eType="#//BaseElement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="flowNodeRefs" ordered="false"
-        upperBound="-1" eType="#//FlowNode" volatile="true" derived="true" eOpposite="#//FlowNode/lanes"/>
+        upperBound="-1" eType="#//FlowNode" resolveProxies="false" eOpposite="#//FlowNode/lanes"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="partitionElement" ordered="false"
         eType="#//BaseElement" containment="true"/>
   </eClassifiers>
@@ -310,7 +311,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" ordered="false"
         upperBound="-1" eType="#//SequenceFlow" eOpposite="#//SequenceFlow/targetRef"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lanes" ordered="false"
-        upperBound="-1" eType="#//Lane" volatile="true" derived="true" eOpposite="#//Lane/flowNodeRefs"/>
+        upperBound="-1" eType="#//Lane" transient="true" derived="true" eOpposite="#//Lane/flowNodeRefs"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SequenceFlow" eSuperTypes="#//FlowElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isImmediate" ordered="false"
@@ -379,18 +380,18 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InteractionNode" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="incomingConversationLinks"
-        ordered="false" upperBound="-1" eType="#//ConversationLink" volatile="true"
-        derived="true" eOpposite="#//ConversationLink/targetRef"/>
+        ordered="false" upperBound="-1" eType="#//ConversationLink" changeable="false"
+        transient="true" derived="true" eOpposite="#//ConversationLink/targetRef"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingConversationLinks"
-        ordered="false" upperBound="-1" eType="#//ConversationLink" volatile="true"
-        derived="true" eOpposite="#//ConversationLink/sourceRef"/>
+        ordered="false" upperBound="-1" eType="#//ConversationLink" changeable="false"
+        transient="true" derived="true" eOpposite="#//ConversationLink/sourceRef"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConversationLink" eSuperTypes="#//BaseElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRef" ordered="false"
-        lowerBound="1" eType="#//InteractionNode" volatile="true" derived="true" eOpposite="#//InteractionNode/outgoingConversationLinks"/>
+        lowerBound="1" eType="#//InteractionNode" transient="true" eOpposite="#//InteractionNode/outgoingConversationLinks"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetRef" ordered="false"
-        lowerBound="1" eType="#//InteractionNode" volatile="true" derived="true" eOpposite="#//InteractionNode/incomingConversationLinks"/>
+        lowerBound="1" eType="#//InteractionNode" transient="true" eOpposite="#//InteractionNode/incomingConversationLinks"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParticipantMultiplicity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minimum" ordered="false"

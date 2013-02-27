@@ -76,7 +76,7 @@ public interface InputSet extends BaseElement {
      * @return the value of the '<em>Data Input Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getInputSet_DataInputRefs()
      * @see org.eclipse.bpmn2.DataInput#getInputSetRefs
-     * @model opposite="inputSetRefs" volatile="true" derived="true" ordered="false"
+     * @model opposite="inputSetRefs" resolveProxies="false" ordered="false"
      * @generated
      */
     EList<DataInput> getDataInputRefs();
@@ -94,7 +94,7 @@ public interface InputSet extends BaseElement {
      * @return the value of the '<em>Optional Input Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getInputSet_OptionalInputRefs()
      * @see org.eclipse.bpmn2.DataInput#getInputSetWithOptional
-     * @model opposite="inputSetWithOptional" volatile="true" derived="true" ordered="false"
+     * @model opposite="inputSetWithOptional" resolveProxies="false" ordered="false"
      * @generated
      */
     EList<DataInput> getOptionalInputRefs();
@@ -112,7 +112,7 @@ public interface InputSet extends BaseElement {
      * @return the value of the '<em>While Executing Input Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getInputSet_WhileExecutingInputRefs()
      * @see org.eclipse.bpmn2.DataInput#getInputSetWithWhileExecuting
-     * @model opposite="inputSetWithWhileExecuting" volatile="true" derived="true" ordered="false"
+     * @model opposite="inputSetWithWhileExecuting" resolveProxies="false" ordered="false"
      * @generated
      */
     EList<DataInput> getWhileExecutingInputRefs();
@@ -130,7 +130,7 @@ public interface InputSet extends BaseElement {
      * @return the value of the '<em>Output Set Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getInputSet_OutputSetRefs()
      * @see org.eclipse.bpmn2.OutputSet#getInputSetRefs
-     * @model opposite="inputSetRefs" ordered="false"
+     * @model opposite="inputSetRefs" resolveProxies="false" ordered="false"
      * @generated
      */
     EList<OutputSet> getOutputSetRefs();

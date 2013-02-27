@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" 
-    copyrightText="&lt;copyright>&#xD;&#xA;&#xD;&#xA;Copyright (c) 2010 SAP AG.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;   Reiner Hille-Doering (SAP AG) - initial API and implementation and/or initial documentation&#xD;&#xA;&#xD;&#xA;&lt;/copyright>"
-    modelDirectory="/org.eclipse.bpmn2/src" 
-    creationIcons="false" 
-    modelPluginID="org.eclipse.bpmn2"
-    templateDirectory="org.eclipse.bpmn2/templates" 
-    dynamicTemplates="true" modelName="Bpmn2"
-    modelPluginClass="" 
-    codeFormatting="true" 
-    importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="5.0" 
-    copyrightFields="false" 
-    runtimeVersion="2.4">
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="&lt;copyright>&#xD;&#xA;&#xD;&#xA;Copyright (c) 2010 SAP AG.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;   Reiner Hille-Doering (SAP AG) - initial API and implementation and/or initial documentation&#xD;&#xA;&#xD;&#xA;&lt;/copyright>"
+    modelDirectory="/org.eclipse.bpmn2/src" creationIcons="false" modelPluginID="org.eclipse.bpmn2"
+    templateDirectory="org.eclipse.bpmn2/templates" dynamicTemplates="true" modelName="Bpmn2"
+    modelPluginClass="" codeFormatting="true" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" runtimeVersion="2.4">
   <foreignModel>BPMN20.ecore</foreignModel>
   <genPackages prefix="Bpmn2" basePackage="org.eclipse" resource="XML" disposableProviderFactory="true"
       loadInitialization="true" multipleEditorPages="false" ecorePackage="BPMN20.ecore#/">

@@ -128,7 +128,7 @@ public interface Diagram extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Owned Style</em>' reference list.
      * @see org.eclipse.dd.di.DiPackage#getDiagram_OwnedStyle()
-     * @model changeable="false" volatile="true" derived="true" ordered="false"
+     * @model transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
     EList<Style> getOwnedStyle();
@@ -145,7 +145,7 @@ public interface Diagram extends EObject {
      * @return the value of the '<em>Root Element</em>' reference.
      * @see org.eclipse.dd.di.DiPackage#getDiagram_RootElement()
      * @see org.eclipse.dd.di.DiagramElement#getOwningDiagram
-     * @model opposite="owningDiagram" required="true" changeable="false" volatile="true" derived="true" ordered="false"
+     * @model opposite="owningDiagram" resolveProxies="false" required="true" transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
     DiagramElement getRootElement();

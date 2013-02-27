@@ -47,7 +47,7 @@ public interface Edge extends DiagramElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Source</em>' reference.
      * @see org.eclipse.dd.di.DiPackage#getEdge_Source()
-     * @model changeable="false" volatile="true" derived="true" ordered="false"
+     * @model transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
     DiagramElement getSource();
@@ -62,7 +62,7 @@ public interface Edge extends DiagramElement {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Target</em>' reference.
      * @see org.eclipse.dd.di.DiPackage#getEdge_Target()
-     * @model changeable="false" volatile="true" derived="true" ordered="false"
+     * @model transient="true" changeable="false" derived="true" ordered="false"
      * @generated
      */
     DiagramElement getTarget();

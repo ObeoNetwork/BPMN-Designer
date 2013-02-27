@@ -103,7 +103,7 @@ public interface DataInput extends ItemAwareElement {
      * @return the value of the '<em>Input Set With Optional</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataInput_InputSetWithOptional()
      * @see org.eclipse.bpmn2.InputSet#getOptionalInputRefs
-     * @model opposite="optionalInputRefs" volatile="true" derived="true" ordered="false"
+     * @model opposite="optionalInputRefs" transient="true" derived="true" ordered="false"
      * @generated
      */
     EList<InputSet> getInputSetWithOptional();
@@ -121,7 +121,7 @@ public interface DataInput extends ItemAwareElement {
      * @return the value of the '<em>Input Set With While Executing</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataInput_InputSetWithWhileExecuting()
      * @see org.eclipse.bpmn2.InputSet#getWhileExecutingInputRefs
-     * @model opposite="whileExecutingInputRefs" volatile="true" derived="true" ordered="false"
+     * @model opposite="whileExecutingInputRefs" transient="true" derived="true" ordered="false"
      * @generated
      */
     EList<InputSet> getInputSetWithWhileExecuting();
@@ -139,7 +139,7 @@ public interface DataInput extends ItemAwareElement {
      * @return the value of the '<em>Input Set Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataInput_InputSetRefs()
      * @see org.eclipse.bpmn2.InputSet#getDataInputRefs
-     * @model opposite="dataInputRefs" required="true" volatile="true" derived="true" ordered="false"
+     * @model opposite="dataInputRefs" required="true" transient="true" derived="true" ordered="false"
      * @generated
      */
     EList<InputSet> getInputSetRefs();

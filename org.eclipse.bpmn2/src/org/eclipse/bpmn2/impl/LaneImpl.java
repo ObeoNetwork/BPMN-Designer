@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -92,16 +93,6 @@ public class LaneImpl extends BaseElementImpl implements Lane {
     protected BaseElement partitionElementRef;
 
     /**
-     * The cached value of the '{@link #getPartitionElement() <em>Partition Element</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getPartitionElement()
-     * @generated
-     * @ordered
-     */
-    protected BaseElement partitionElement;
-
-    /**
      * The cached value of the '{@link #getFlowNodeRefs() <em>Flow Node Refs</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -110,6 +101,16 @@ public class LaneImpl extends BaseElementImpl implements Lane {
      * @ordered
      */
     protected EList<FlowNode> flowNodeRefs;
+
+    /**
+     * The cached value of the '{@link #getPartitionElement() <em>Partition Element</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getPartitionElement()
+     * @generated
+     * @ordered
+     */
+    protected BaseElement partitionElement;
 
     /**
      * <!-- begin-user-doc -->
@@ -247,20 +248,14 @@ public class LaneImpl extends BaseElementImpl implements Lane {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated NOT
+     * @generated
      */
     public EList<FlowNode> getFlowNodeRefs() {
-        // TODO: implement this method to return the 'Flow Node Refs' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-
         if (flowNodeRefs == null) {
             flowNodeRefs = new EObjectWithInverseEList.ManyInverse<FlowNode>(FlowNode.class, this,
                     Bpmn2Package.LANE__FLOW_NODE_REFS, Bpmn2Package.FLOW_NODE__LANES);
         }
         return flowNodeRefs;
-
     }
 
     /**
@@ -319,12 +314,31 @@ public class LaneImpl extends BaseElementImpl implements Lane {
      * <!-- end-user-doc -->
      * @generated
      */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.LANE__FLOW_NODE_REFS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getFlowNodeRefs())
+                    .basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
         switch (featureID) {
         case Bpmn2Package.LANE__CHILD_LANE_SET:
             return basicSetChildLaneSet(null, msgs);
+        case Bpmn2Package.LANE__FLOW_NODE_REFS:
+            return ((InternalEList<?>) getFlowNodeRefs()).basicRemove(otherEnd, msgs);
         case Bpmn2Package.LANE__PARTITION_ELEMENT:
             return basicSetPartitionElement(null, msgs);
         }
@@ -426,7 +440,7 @@ public class LaneImpl extends BaseElementImpl implements Lane {
         case Bpmn2Package.LANE__PARTITION_ELEMENT_REF:
             return partitionElementRef != null;
         case Bpmn2Package.LANE__FLOW_NODE_REFS:
-            return !getFlowNodeRefs().isEmpty();
+            return flowNodeRefs != null && !flowNodeRefs.isEmpty();
         case Bpmn2Package.LANE__PARTITION_ELEMENT:
             return partitionElement != null;
         }

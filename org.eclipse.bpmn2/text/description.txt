@@ -93,9 +93,9 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
 
   Class InputSet -> BaseElement
     Attribute name : EString<<1..1>>
-    Reference /dataInputRefs : DataInput<<0..*>>
-    Reference /optionalInputRefs : DataInput<<0..*>>
-    Reference /whileExecutingInputRefs : DataInput<<0..*>>
+    Reference dataInputRefs : DataInput<<0..*>>
+    Reference optionalInputRefs : DataInput<<0..*>>
+    Reference whileExecutingInputRefs : DataInput<<0..*>>
     Reference outputSetRefs : OutputSet<<0..*>>
 
   Class DataInput -> ItemAwareElement
@@ -113,8 +113,8 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Attribute name : EString<<1..1>>
 
   Class OutputSet -> BaseElement
-    Reference /dataOutputRefs : DataOutput<<0..*>>
-    Reference /optionalOutputRefs : DataOutput<<0..*>>
+    Reference dataOutputRefs : DataOutput<<0..*>>
+    Reference optionalOutputRefs : DataOutput<<0..*>>
     Reference /whileExecutingOutputRefs : DataOutput<<0..*>>
     Attribute name : EString<<1..1>>
     Reference inputSetRefs : InputSet<<0..*>>
@@ -180,7 +180,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Attribute name : EString<<1..1>>
     Reference auditing : Auditing
     Reference monitoring : Monitoring
-    Reference /categoryValueRef : CategoryValue<<0..*>>
+    Reference categoryValueRef : CategoryValue<<0..*>>
 
   Class CategoryValue -> BaseElement
     Attribute value : EString<<1..1>>
@@ -194,7 +194,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Attribute name : EString<<1..1>>
     Reference childLaneSet : LaneSet
     Reference partitionElementRef : BaseElement
-    Reference /flowNodeRefs : FlowNode<<0..*>>
+    Reference flowNodeRefs : FlowNode<<0..*>>
     Reference partitionElement : BaseElement
 
   Class FlowNode -> FlowElement
@@ -245,9 +245,9 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference /outgoingConversationLinks : ConversationLink<<0..*>>
 
   Class ConversationLink -> BaseElement
-    Reference /sourceRef : InteractionNode<<1..1>>
+    Reference sourceRef : InteractionNode<<1..1>>
     Attribute name : EString
-    Reference /targetRef : InteractionNode<<1..1>>
+    Reference targetRef : InteractionNode<<1..1>>
 
   Class ParticipantMultiplicity
     Attribute minimum : EInt<<1..1>>

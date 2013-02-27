@@ -127,7 +127,7 @@ public interface FlowElement extends BaseElement {
      * @return the value of the '<em>Category Value Ref</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getFlowElement_CategoryValueRef()
      * @see org.eclipse.bpmn2.CategoryValue#getCategorizedFlowElements
-     * @model opposite="categorizedFlowElements" volatile="true" derived="true" ordered="false"
+     * @model opposite="categorizedFlowElements" resolveProxies="false" transient="true" ordered="false"
      * @generated
      */
     EList<CategoryValue> getCategoryValueRef();

@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -52,6 +53,36 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class OutputSetImpl extends BaseElementImpl implements OutputSet {
+    /**
+     * The cached value of the '{@link #getDataOutputRefs() <em>Data Output Refs</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getDataOutputRefs()
+     * @generated
+     * @ordered
+     */
+    protected EList<DataOutput> dataOutputRefs;
+
+    /**
+     * The cached value of the '{@link #getOptionalOutputRefs() <em>Optional Output Refs</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getOptionalOutputRefs()
+     * @generated
+     * @ordered
+     */
+    protected EList<DataOutput> optionalOutputRefs;
+
+    /**
+     * The cached value of the '{@link #getWhileExecutingOutputRefs() <em>While Executing Output Refs</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getWhileExecutingOutputRefs()
+     * @generated
+     * @ordered
+     */
+    protected EList<DataOutput> whileExecutingOutputRefs;
+
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -107,11 +138,12 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      * @generated
      */
     public EList<DataOutput> getDataOutputRefs() {
-        // TODO: implement this method to return the 'Data Output Refs' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (dataOutputRefs == null) {
+            dataOutputRefs = new EObjectWithInverseEList.ManyInverse<DataOutput>(DataOutput.class,
+                    this, Bpmn2Package.OUTPUT_SET__DATA_OUTPUT_REFS,
+                    Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_REFS);
+        }
+        return dataOutputRefs;
     }
 
     /**
@@ -120,11 +152,12 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      * @generated
      */
     public EList<DataOutput> getOptionalOutputRefs() {
-        // TODO: implement this method to return the 'Optional Output Refs' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (optionalOutputRefs == null) {
+            optionalOutputRefs = new EObjectWithInverseEList.ManyInverse<DataOutput>(
+                    DataOutput.class, this, Bpmn2Package.OUTPUT_SET__OPTIONAL_OUTPUT_REFS,
+                    Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_OPTIONAL);
+        }
+        return optionalOutputRefs;
     }
 
     /**
@@ -133,11 +166,12 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
      * @generated
      */
     public EList<DataOutput> getWhileExecutingOutputRefs() {
-        // TODO: implement this method to return the 'While Executing Output Refs' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (whileExecutingOutputRefs == null) {
+            whileExecutingOutputRefs = new EObjectWithInverseEList.ManyInverse<DataOutput>(
+                    DataOutput.class, this, Bpmn2Package.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS,
+                    Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_WHILE_EXECUTING);
+        }
+        return whileExecutingOutputRefs;
     }
 
     /**
@@ -186,6 +220,15 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
         switch (featureID) {
+        case Bpmn2Package.OUTPUT_SET__DATA_OUTPUT_REFS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getDataOutputRefs())
+                    .basicAdd(otherEnd, msgs);
+        case Bpmn2Package.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOptionalOutputRefs())
+                    .basicAdd(otherEnd, msgs);
+        case Bpmn2Package.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getWhileExecutingOutputRefs())
+                    .basicAdd(otherEnd, msgs);
         case Bpmn2Package.OUTPUT_SET__INPUT_SET_REFS:
             return ((InternalEList<InternalEObject>) (InternalEList<?>) getInputSetRefs())
                     .basicAdd(otherEnd, msgs);
@@ -202,6 +245,12 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
         switch (featureID) {
+        case Bpmn2Package.OUTPUT_SET__DATA_OUTPUT_REFS:
+            return ((InternalEList<?>) getDataOutputRefs()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
+            return ((InternalEList<?>) getOptionalOutputRefs()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
+            return ((InternalEList<?>) getWhileExecutingOutputRefs()).basicRemove(otherEnd, msgs);
         case Bpmn2Package.OUTPUT_SET__INPUT_SET_REFS:
             return ((InternalEList<?>) getInputSetRefs()).basicRemove(otherEnd, msgs);
         }
@@ -298,11 +347,11 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case Bpmn2Package.OUTPUT_SET__DATA_OUTPUT_REFS:
-            return !getDataOutputRefs().isEmpty();
+            return dataOutputRefs != null && !dataOutputRefs.isEmpty();
         case Bpmn2Package.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
-            return !getOptionalOutputRefs().isEmpty();
+            return optionalOutputRefs != null && !optionalOutputRefs.isEmpty();
         case Bpmn2Package.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
-            return !getWhileExecutingOutputRefs().isEmpty();
+            return whileExecutingOutputRefs != null && !whileExecutingOutputRefs.isEmpty();
         case Bpmn2Package.OUTPUT_SET__NAME:
             return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         case Bpmn2Package.OUTPUT_SET__INPUT_SET_REFS:

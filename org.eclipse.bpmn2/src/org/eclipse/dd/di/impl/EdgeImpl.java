@@ -22,6 +22,7 @@ import org.eclipse.dd.di.DiPackage;
 import org.eclipse.dd.di.DiagramElement;
 import org.eclipse.dd.di.Edge;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -29,6 +30,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -48,6 +50,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
+    /**
+     * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSource()
+     * @generated
+     * @ordered
+     */
+    protected DiagramElement source;
+    /**
+     * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getTarget()
+     * @generated
+     * @ordered
+     */
+    protected DiagramElement target;
     /**
      * The cached value of the '{@link #getWaypoint() <em>Waypoint</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -83,9 +103,16 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
      * @generated
      */
     public DiagramElement getSource() {
-        DiagramElement source = basicGetSource();
-        return source != null && source.eIsProxy() ? (DiagramElement) eResolveProxy((InternalEObject) source)
-                : source;
+        if (source != null && source.eIsProxy()) {
+            InternalEObject oldSource = (InternalEObject) source;
+            source = (DiagramElement) eResolveProxy(oldSource);
+            if (source != oldSource) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            DiPackage.EDGE__SOURCE, oldSource, source));
+            }
+        }
+        return source;
     }
 
     /**
@@ -94,10 +121,7 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
      * @generated
      */
     public DiagramElement basicGetSource() {
-        // TODO: implement this method to return the 'Source' reference
-        // -> do not perform proxy resolution
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return source;
     }
 
     /**
@@ -106,9 +130,16 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
      * @generated
      */
     public DiagramElement getTarget() {
-        DiagramElement target = basicGetTarget();
-        return target != null && target.eIsProxy() ? (DiagramElement) eResolveProxy((InternalEObject) target)
-                : target;
+        if (target != null && target.eIsProxy()) {
+            InternalEObject oldTarget = (InternalEObject) target;
+            target = (DiagramElement) eResolveProxy(oldTarget);
+            if (target != oldTarget) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            DiPackage.EDGE__TARGET, oldTarget, target));
+            }
+        }
+        return target;
     }
 
     /**
@@ -117,10 +148,7 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
      * @generated
      */
     public DiagramElement basicGetTarget() {
-        // TODO: implement this method to return the 'Target' reference
-        // -> do not perform proxy resolution
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return target;
     }
 
     /**
@@ -214,9 +242,9 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case DiPackage.EDGE__SOURCE:
-            return basicGetSource() != null;
+            return source != null;
         case DiPackage.EDGE__TARGET:
-            return basicGetTarget() != null;
+            return target != null;
         case DiPackage.EDGE__WAYPOINT:
             return waypoint != null && !waypoint.isEmpty();
         }

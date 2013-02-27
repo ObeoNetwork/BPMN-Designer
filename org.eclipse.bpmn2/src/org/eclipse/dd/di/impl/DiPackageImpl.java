@@ -584,22 +584,22 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getDiagramElement_OwningDiagram(), this.getDiagram(),
                 this.getDiagram_RootElement(), "owningDiagram", null, 0, 1, DiagramElement.class,
-                !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
         initEReference(getDiagramElement_OwningElement(), this.getDiagramElement(),
                 this.getDiagramElement_OwnedElement(), "owningElement", null, 0, 1,
-                DiagramElement.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
-                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+                DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
         initEReference(getDiagramElement_OwnedElement(), this.getDiagramElement(),
                 this.getDiagramElement_OwningElement(), "ownedElement", null, 0, -1,
-                DiagramElement.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
-                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+                DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
         initEReference(getDiagramElement_ModelElement(), ecorePackage.getEObject(), null,
-                "modelElement", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, IS_VOLATILE,
+                "modelElement", null, 0, 1, DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE,
                 !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
                 IS_DERIVED, !IS_ORDERED);
         initEReference(getDiagramElement_Style(), this.getStyle(), null, "style", null, 0, 1,
-                DiagramElement.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
         initEClass(diagramEClass, Diagram.class, "Diagram", IS_ABSTRACT, !IS_INTERFACE,
@@ -614,11 +614,11 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
                 Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
         initEReference(getDiagram_OwnedStyle(), this.getStyle(), null, "ownedStyle", null, 0, -1,
-                Diagram.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                Diagram.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
         initEReference(getDiagram_RootElement(), this.getDiagramElement(),
                 this.getDiagramElement_OwningDiagram(), "rootElement", null, 1, 1, Diagram.class,
-                !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
         initEClass(styleEClass, Style.class, "Style", IS_ABSTRACT, !IS_INTERFACE,
@@ -630,10 +630,10 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
         initEClass(edgeEClass, Edge.class, "Edge", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         initEReference(getEdge_Source(), this.getDiagramElement(), null, "source", null, 0, 1,
-                Edge.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                Edge.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
         initEReference(getEdge_Target(), this.getDiagramElement(), null, "target", null, 0, 1,
-                Edge.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                Edge.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
         initEReference(getEdge_Waypoint(), theDcPackage.getPoint(), null, "waypoint", null, 2, -1,
                 Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
@@ -648,7 +648,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
         initEClass(labeledEdgeEClass, LabeledEdge.class, "LabeledEdge", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         initEReference(getLabeledEdge_OwnedLabel(), this.getLabel(), null, "ownedLabel", null, 0,
-                -1, LabeledEdge.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                -1, LabeledEdge.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
         initEClass(labelEClass, Label.class, "Label", IS_ABSTRACT, !IS_INTERFACE,
@@ -660,7 +660,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
         initEClass(labeledShapeEClass, LabeledShape.class, "LabeledShape", IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getLabeledShape_OwnedLabel(), this.getLabel(), null, "ownedLabel", null, 0,
-                -1, LabeledShape.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+                -1, LabeledShape.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
         initEClass(planeEClass, Plane.class, "Plane", IS_ABSTRACT, !IS_INTERFACE,

@@ -50,7 +50,7 @@ public interface OutputSet extends BaseElement {
      * @return the value of the '<em>Data Output Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getOutputSet_DataOutputRefs()
      * @see org.eclipse.bpmn2.DataOutput#getOutputSetRefs
-     * @model opposite="outputSetRefs" volatile="true" derived="true" ordered="false"
+     * @model opposite="outputSetRefs" resolveProxies="false" ordered="false"
      * @generated
      */
     EList<DataOutput> getDataOutputRefs();
@@ -68,7 +68,7 @@ public interface OutputSet extends BaseElement {
      * @return the value of the '<em>Optional Output Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getOutputSet_OptionalOutputRefs()
      * @see org.eclipse.bpmn2.DataOutput#getOutputSetWithOptional
-     * @model opposite="outputSetWithOptional" volatile="true" derived="true" ordered="false"
+     * @model opposite="outputSetWithOptional" resolveProxies="false" ordered="false"
      * @generated
      */
     EList<DataOutput> getOptionalOutputRefs();
@@ -86,7 +86,7 @@ public interface OutputSet extends BaseElement {
      * @return the value of the '<em>While Executing Output Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getOutputSet_WhileExecutingOutputRefs()
      * @see org.eclipse.bpmn2.DataOutput#getOutputSetWithWhileExecuting
-     * @model opposite="outputSetWithWhileExecuting" volatile="true" derived="true" ordered="false"
+     * @model opposite="outputSetWithWhileExecuting" resolveProxies="false" derived="true" ordered="false"
      * @generated
      */
     EList<DataOutput> getWhileExecutingOutputRefs();

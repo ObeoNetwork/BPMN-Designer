@@ -21,9 +21,13 @@ import org.eclipse.bpmn2.ConversationLink;
 import org.eclipse.bpmn2.InteractionNode;
 import org.eclipse.bpmn2.Task;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,6 +44,25 @@ import org.eclipse.emf.ecore.EClass;
  * @generated
  */
 public class TaskImpl extends ActivityImpl implements Task {
+    /**
+     * The cached value of the '{@link #getIncomingConversationLinks() <em>Incoming Conversation Links</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getIncomingConversationLinks()
+     * @generated
+     * @ordered
+     */
+    protected EList<ConversationLink> incomingConversationLinks;
+    /**
+     * The cached value of the '{@link #getOutgoingConversationLinks() <em>Outgoing Conversation Links</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getOutgoingConversationLinks()
+     * @generated
+     * @ordered
+     */
+    protected EList<ConversationLink> outgoingConversationLinks;
+
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -65,11 +88,12 @@ public class TaskImpl extends ActivityImpl implements Task {
      * @generated
      */
     public EList<ConversationLink> getIncomingConversationLinks() {
-        // TODO: implement this method to return the 'Incoming Conversation Links' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (incomingConversationLinks == null) {
+            incomingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
+                    ConversationLink.class, this, Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS,
+                    Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
+        }
+        return incomingConversationLinks;
     }
 
     /**
@@ -78,11 +102,49 @@ public class TaskImpl extends ActivityImpl implements Task {
      * @generated
      */
     public EList<ConversationLink> getOutgoingConversationLinks() {
-        // TODO: implement this method to return the 'Outgoing Conversation Links' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (outgoingConversationLinks == null) {
+            outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
+                    ConversationLink.class, this, Bpmn2Package.TASK__OUTGOING_CONVERSATION_LINKS,
+                    Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
+        }
+        return outgoingConversationLinks;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks())
+                    .basicAdd(otherEnd, msgs);
+        case Bpmn2Package.TASK__OUTGOING_CONVERSATION_LINKS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoingConversationLinks())
+                    .basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS:
+            return ((InternalEList<?>) getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.TASK__OUTGOING_CONVERSATION_LINKS:
+            return ((InternalEList<?>) getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
@@ -106,54 +168,13 @@ public class TaskImpl extends ActivityImpl implements Task {
      * <!-- end-user-doc -->
      * @generated
      */
-    @SuppressWarnings("unchecked")
-    @Override
-    public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-        case Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS:
-            getIncomingConversationLinks().clear();
-            getIncomingConversationLinks()
-                    .addAll((Collection<? extends ConversationLink>) newValue);
-            return;
-        case Bpmn2Package.TASK__OUTGOING_CONVERSATION_LINKS:
-            getOutgoingConversationLinks().clear();
-            getOutgoingConversationLinks()
-                    .addAll((Collection<? extends ConversationLink>) newValue);
-            return;
-        }
-        super.eSet(featureID, newValue);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void eUnset(int featureID) {
-        switch (featureID) {
-        case Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS:
-            getIncomingConversationLinks().clear();
-            return;
-        case Bpmn2Package.TASK__OUTGOING_CONVERSATION_LINKS:
-            getOutgoingConversationLinks().clear();
-            return;
-        }
-        super.eUnset(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS:
-            return !getIncomingConversationLinks().isEmpty();
+            return incomingConversationLinks != null && !incomingConversationLinks.isEmpty();
         case Bpmn2Package.TASK__OUTGOING_CONVERSATION_LINKS:
-            return !getOutgoingConversationLinks().isEmpty();
+            return outgoingConversationLinks != null && !outgoingConversationLinks.isEmpty();
         }
         return super.eIsSet(featureID);
     }

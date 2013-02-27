@@ -68,6 +68,16 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
     protected EList<SequenceFlow> incoming;
 
     /**
+     * The cached value of the '{@link #getLanes() <em>Lanes</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLanes()
+     * @generated
+     * @ordered
+     */
+    protected EList<Lane> lanes;
+
+    /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -118,11 +128,11 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
      * @generated
      */
     public EList<Lane> getLanes() {
-        // TODO: implement this method to return the 'Lanes' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (lanes == null) {
+            lanes = new EObjectWithInverseResolvingEList.ManyInverse<Lane>(Lane.class, this,
+                    Bpmn2Package.FLOW_NODE__LANES, Bpmn2Package.LANE__FLOW_NODE_REFS);
+        }
+        return lanes;
     }
 
     /**
@@ -141,6 +151,9 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
         case Bpmn2Package.FLOW_NODE__INCOMING:
             return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncoming()).basicAdd(
                     otherEnd, msgs);
+        case Bpmn2Package.FLOW_NODE__LANES:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getLanes()).basicAdd(
+                    otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -158,6 +171,8 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
             return ((InternalEList<?>) getOutgoing()).basicRemove(otherEnd, msgs);
         case Bpmn2Package.FLOW_NODE__INCOMING:
             return ((InternalEList<?>) getIncoming()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.FLOW_NODE__LANES:
+            return ((InternalEList<?>) getLanes()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -239,7 +254,7 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
         case Bpmn2Package.FLOW_NODE__INCOMING:
             return incoming != null && !incoming.isEmpty();
         case Bpmn2Package.FLOW_NODE__LANES:
-            return !getLanes().isEmpty();
+            return lanes != null && !lanes.isEmpty();
         }
         return super.eIsSet(featureID);
     }

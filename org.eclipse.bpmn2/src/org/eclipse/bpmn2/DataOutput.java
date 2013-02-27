@@ -103,7 +103,7 @@ public interface DataOutput extends ItemAwareElement {
      * @return the value of the '<em>Output Set With Optional</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataOutput_OutputSetWithOptional()
      * @see org.eclipse.bpmn2.OutputSet#getOptionalOutputRefs
-     * @model opposite="optionalOutputRefs" volatile="true" derived="true" ordered="false"
+     * @model opposite="optionalOutputRefs" transient="true" derived="true" ordered="false"
      * @generated
      */
     EList<OutputSet> getOutputSetWithOptional();
@@ -121,7 +121,7 @@ public interface DataOutput extends ItemAwareElement {
      * @return the value of the '<em>Output Set With While Executing</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataOutput_OutputSetWithWhileExecuting()
      * @see org.eclipse.bpmn2.OutputSet#getWhileExecutingOutputRefs
-     * @model opposite="whileExecutingOutputRefs" volatile="true" derived="true" ordered="false"
+     * @model opposite="whileExecutingOutputRefs" transient="true" derived="true" ordered="false"
      * @generated
      */
     EList<OutputSet> getOutputSetWithWhileExecuting();
@@ -139,7 +139,7 @@ public interface DataOutput extends ItemAwareElement {
      * @return the value of the '<em>Output Set Refs</em>' reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataOutput_OutputSetRefs()
      * @see org.eclipse.bpmn2.OutputSet#getDataOutputRefs
-     * @model opposite="dataOutputRefs" required="true" volatile="true" derived="true" ordered="false"
+     * @model opposite="dataOutputRefs" required="true" transient="true" derived="true" ordered="false"
      * @generated
      */
     EList<OutputSet> getOutputSetRefs();

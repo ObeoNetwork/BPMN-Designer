@@ -22,11 +22,15 @@ import org.eclipse.bpmn2.OutputSet;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -85,6 +89,36 @@ public class DataOutputImpl extends ItemAwareElementImpl implements DataOutput {
      * @ordered
      */
     protected boolean isCollection = IS_COLLECTION_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getOutputSetWithOptional() <em>Output Set With Optional</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getOutputSetWithOptional()
+     * @generated
+     * @ordered
+     */
+    protected EList<OutputSet> outputSetWithOptional;
+
+    /**
+     * The cached value of the '{@link #getOutputSetWithWhileExecuting() <em>Output Set With While Executing</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getOutputSetWithWhileExecuting()
+     * @generated
+     * @ordered
+     */
+    protected EList<OutputSet> outputSetWithWhileExecuting;
+
+    /**
+     * The cached value of the '{@link #getOutputSetRefs() <em>Output Set Refs</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getOutputSetRefs()
+     * @generated
+     * @ordered
+     */
+    protected EList<OutputSet> outputSetRefs;
 
     /**
      * <!-- begin-user-doc -->
@@ -155,11 +189,12 @@ public class DataOutputImpl extends ItemAwareElementImpl implements DataOutput {
      * @generated
      */
     public EList<OutputSet> getOutputSetWithOptional() {
-        // TODO: implement this method to return the 'Output Set With Optional' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (outputSetWithOptional == null) {
+            outputSetWithOptional = new EObjectWithInverseResolvingEList.ManyInverse<OutputSet>(
+                    OutputSet.class, this, Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_OPTIONAL,
+                    Bpmn2Package.OUTPUT_SET__OPTIONAL_OUTPUT_REFS);
+        }
+        return outputSetWithOptional;
     }
 
     /**
@@ -168,11 +203,13 @@ public class DataOutputImpl extends ItemAwareElementImpl implements DataOutput {
      * @generated
      */
     public EList<OutputSet> getOutputSetWithWhileExecuting() {
-        // TODO: implement this method to return the 'Output Set With While Executing' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (outputSetWithWhileExecuting == null) {
+            outputSetWithWhileExecuting = new EObjectWithInverseResolvingEList.ManyInverse<OutputSet>(
+                    OutputSet.class, this,
+                    Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_WHILE_EXECUTING,
+                    Bpmn2Package.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS);
+        }
+        return outputSetWithWhileExecuting;
     }
 
     /**
@@ -181,11 +218,55 @@ public class DataOutputImpl extends ItemAwareElementImpl implements DataOutput {
      * @generated
      */
     public EList<OutputSet> getOutputSetRefs() {
-        // TODO: implement this method to return the 'Output Set Refs' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (outputSetRefs == null) {
+            outputSetRefs = new EObjectWithInverseResolvingEList.ManyInverse<OutputSet>(
+                    OutputSet.class, this, Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_REFS,
+                    Bpmn2Package.OUTPUT_SET__DATA_OUTPUT_REFS);
+        }
+        return outputSetRefs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_OPTIONAL:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutputSetWithOptional())
+                    .basicAdd(otherEnd, msgs);
+        case Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_WHILE_EXECUTING:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutputSetWithWhileExecuting())
+                    .basicAdd(otherEnd, msgs);
+        case Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_REFS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutputSetRefs())
+                    .basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_OPTIONAL:
+            return ((InternalEList<?>) getOutputSetWithOptional()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_WHILE_EXECUTING:
+            return ((InternalEList<?>) getOutputSetWithWhileExecuting())
+                    .basicRemove(otherEnd, msgs);
+        case Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_REFS:
+            return ((InternalEList<?>) getOutputSetRefs()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
@@ -281,11 +362,11 @@ public class DataOutputImpl extends ItemAwareElementImpl implements DataOutput {
         case Bpmn2Package.DATA_OUTPUT__IS_COLLECTION:
             return isCollection != IS_COLLECTION_EDEFAULT;
         case Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_OPTIONAL:
-            return !getOutputSetWithOptional().isEmpty();
+            return outputSetWithOptional != null && !outputSetWithOptional.isEmpty();
         case Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_WHILE_EXECUTING:
-            return !getOutputSetWithWhileExecuting().isEmpty();
+            return outputSetWithWhileExecuting != null && !outputSetWithWhileExecuting.isEmpty();
         case Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_REFS:
-            return !getOutputSetRefs().isEmpty();
+            return outputSetRefs != null && !outputSetRefs.isEmpty();
         }
         return super.eIsSet(featureID);
     }

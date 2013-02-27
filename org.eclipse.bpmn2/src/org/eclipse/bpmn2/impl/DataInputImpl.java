@@ -22,11 +22,15 @@ import org.eclipse.bpmn2.InputSet;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -85,6 +89,36 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
      * @ordered
      */
     protected boolean isCollection = IS_COLLECTION_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getInputSetWithOptional() <em>Input Set With Optional</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getInputSetWithOptional()
+     * @generated
+     * @ordered
+     */
+    protected EList<InputSet> inputSetWithOptional;
+
+    /**
+     * The cached value of the '{@link #getInputSetWithWhileExecuting() <em>Input Set With While Executing</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getInputSetWithWhileExecuting()
+     * @generated
+     * @ordered
+     */
+    protected EList<InputSet> inputSetWithWhileExecuting;
+
+    /**
+     * The cached value of the '{@link #getInputSetRefs() <em>Input Set Refs</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getInputSetRefs()
+     * @generated
+     * @ordered
+     */
+    protected EList<InputSet> inputSetRefs;
 
     /**
      * <!-- begin-user-doc -->
@@ -155,11 +189,12 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
      * @generated
      */
     public EList<InputSet> getInputSetWithOptional() {
-        // TODO: implement this method to return the 'Input Set With Optional' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (inputSetWithOptional == null) {
+            inputSetWithOptional = new EObjectWithInverseResolvingEList.ManyInverse<InputSet>(
+                    InputSet.class, this, Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL,
+                    Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS);
+        }
+        return inputSetWithOptional;
     }
 
     /**
@@ -168,11 +203,12 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
      * @generated
      */
     public EList<InputSet> getInputSetWithWhileExecuting() {
-        // TODO: implement this method to return the 'Input Set With While Executing' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (inputSetWithWhileExecuting == null) {
+            inputSetWithWhileExecuting = new EObjectWithInverseResolvingEList.ManyInverse<InputSet>(
+                    InputSet.class, this, Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING,
+                    Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS);
+        }
+        return inputSetWithWhileExecuting;
     }
 
     /**
@@ -181,11 +217,54 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
      * @generated
      */
     public EList<InputSet> getInputSetRefs() {
-        // TODO: implement this method to return the 'Input Set Refs' reference list
-        // Ensure that you remove @generated or mark it @generated NOT
-        // The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-        // so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-        throw new UnsupportedOperationException();
+        if (inputSetRefs == null) {
+            inputSetRefs = new EObjectWithInverseResolvingEList.ManyInverse<InputSet>(
+                    InputSet.class, this, Bpmn2Package.DATA_INPUT__INPUT_SET_REFS,
+                    Bpmn2Package.INPUT_SET__DATA_INPUT_REFS);
+        }
+        return inputSetRefs;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getInputSetWithOptional())
+                    .basicAdd(otherEnd, msgs);
+        case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getInputSetWithWhileExecuting())
+                    .basicAdd(otherEnd, msgs);
+        case Bpmn2Package.DATA_INPUT__INPUT_SET_REFS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getInputSetRefs())
+                    .basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
+            NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL:
+            return ((InternalEList<?>) getInputSetWithOptional()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING:
+            return ((InternalEList<?>) getInputSetWithWhileExecuting()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.DATA_INPUT__INPUT_SET_REFS:
+            return ((InternalEList<?>) getInputSetRefs()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
@@ -281,11 +360,11 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
         case Bpmn2Package.DATA_INPUT__IS_COLLECTION:
             return isCollection != IS_COLLECTION_EDEFAULT;
         case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL:
-            return !getInputSetWithOptional().isEmpty();
+            return inputSetWithOptional != null && !inputSetWithOptional.isEmpty();
         case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING:
-            return !getInputSetWithWhileExecuting().isEmpty();
+            return inputSetWithWhileExecuting != null && !inputSetWithWhileExecuting.isEmpty();
         case Bpmn2Package.DATA_INPUT__INPUT_SET_REFS:
-            return !getInputSetRefs().isEmpty();
+            return inputSetRefs != null && !inputSetRefs.isEmpty();
         }
         return super.eIsSet(featureID);
     }
