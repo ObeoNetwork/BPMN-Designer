@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -107,10 +108,11 @@ public abstract class BaseElementImpl extends EObjectImpl implements BaseElement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated NOT
      */
     protected BaseElementImpl() {
         super();
+        this.id = EcoreUtil.generateUUID();
     }
 
     /**
