@@ -189,8 +189,8 @@
                 </conditionnalStyles>
               </borderedNodeMappings>
               <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" showIcon="false" labelPosition="node" resizeKind="NSEW">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </subNodeMappings>
@@ -220,10 +220,10 @@
             <subNodeMappings name="DataObject " labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%eContainer(&quot;Process&quot;).flowElements.filter(&quot;DataObject&quot;)%> " domainClass="DataObject">
               <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/DataObject.png"/>
             </subNodeMappings>
-            <subNodeMappings name="DataInput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%eContainer(&quot;Process&quot;).flowElements.ioSpecification.dataInputs%> " domainClass="DataInput">
+            <subNodeMappings name="DataInput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%eContainer(&quot;Process&quot;).ioSpecification.dataInputs%> " domainClass="DataInput">
               <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/DataInput.png"/>
             </subNodeMappings>
-            <subNodeMappings name="DataOutput" semanticCandidatesExpression="&lt;%eContainer(&quot;Process&quot;).flowElements.ioSpecification.dataOutputs%> " domainClass="DataOutput">
+            <subNodeMappings name="DataOutput" semanticCandidatesExpression="&lt;%eContainer(&quot;Process&quot;).ioSpecification.dataOutputs%> " domainClass="DataOutput">
               <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/DataOutput.png"/>
             </subNodeMappings>
             <subNodeMappings name="DataStore" semanticCandidatesExpression="&lt;%eContainer(&quot;Definitions&quot;).rootElements.filter(&quot;DataStore&quot;)%>" domainClass="DataStore">
@@ -912,9 +912,12 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%eContainer(&quot;Process&quot;).flowElements.ioSpecification.trace()%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="DataInput" referenceName="dataInputs">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$container%>"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%eContainer(&quot;Process&quot;)%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eContainer(&quot;Process&quot;).ioSpecification.nSize()==0%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="InputOutputSpecification" referenceName="ioSpecification"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;Process&quot;).ioSpecification%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="DataInput" referenceName="dataInputs"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -923,9 +926,12 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%eContainer(&quot;Process&quot;).flowElements.ioSpecification.trace()%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="DataOutput" referenceName="dataOutputs">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$container%>"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%eContainer(&quot;Process&quot;)%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eContainer(&quot;Process&quot;).ioSpecification.nSize()==0%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="InputOutputSpecification" referenceName="ioSpecification"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;Process&quot;).ioSpecification%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="DataOutput" referenceName="dataOutputs"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
