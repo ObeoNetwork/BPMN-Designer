@@ -63,6 +63,15 @@
               <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;ParallelMultipleEventDefinition&quot;)!=null%>">
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/parallelmultiple2.png"/>
               </conditionnalStyles>
+              <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;LinkEventDefinition&quot;)!=null%>">
+                <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/catching/link2.png"/>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;CancelEventDefinition&quot;)!=null%>">
+                <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/catching/cancel.svg"/>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;TerminateEventDefinition&quot;)!=null%>">
+                <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/endevent/terminate2.png"/>
+              </conditionnalStyles>
             </subNodeMappings>
             <subNodeMappings name="ParallelGateway" label="Parallel Gateway" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="ParallelGateway">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/ParallelGateway.png"/>
@@ -205,9 +214,9 @@
                 </conditionnalStyles>
               </borderedNodeMappings>
               <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW" width="8" height="8">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
               </style>
             </subNodeMappings>
             <subNodeMappings name="TextAnnotation" semanticCandidatesExpression="&lt;%eContainer(&quot;Lane&quot;).extensionValues.value%> " domainClass="TextAnnotation">
@@ -382,8 +391,8 @@
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;EndEvent&quot;)!=null || $element.filter(&quot;IntermediateCatchEvent&quot;)!=null || $element.filter(&quot;ImplicitThrowEvent&quot;)!=null || $element.filter(&quot;BoundaryEvent&quot;)!=null%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.trace()%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.eventDefinitions.nSize()==0%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="MessageEventDefinition" referenceName="eventDefinitions"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -394,7 +403,7 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;IntermediateCatchEvent&quot;)!=null || $element.filter(&quot;BoundaryEvent&quot;)!=null%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.eventDefinitions.nSize()==0%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="TimerEventDefinition" referenceName="eventDefinitions"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -405,7 +414,7 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;EndEvent&quot;)!=null || $element.filter(&quot;ImplicitThrowEvent&quot;)!=null || $element.filter(&quot;BoundaryEvent&quot;)!=null%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.eventDefinitions.nSize()==0%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="EscalationEventDefinition" referenceName="eventDefinitions"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -416,7 +425,7 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;IntermediateCatchEvent&quot;)!=null || $element.filter(&quot;BoundaryEvent&quot;)!=null%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.eventDefinitions.nSize()==0%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="ConditionalEventDefinition" referenceName="eventDefinitions"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -427,7 +436,7 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;IntermediateCatchEvent&quot;)!=null || $element.filter(&quot;ImplicitThrowEvent&quot;)!=null%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.eventDefinitions.nSize()==0%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="LinkEventDefinition" referenceName="eventDefinitions"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -438,7 +447,7 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;EndEvent&quot;)!=null || $element.filter(&quot;BoundaryEvent&quot;)!=null%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.eventDefinitions.nSize()==0%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="ErrorEventDefinition" referenceName="eventDefinitions"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -449,7 +458,7 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;EndEvent&quot;)!=null || $element.filter(&quot;EndEvent&quot;)!=null || $element.filter(&quot;BoundaryEvent&quot;)!=null%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.eventDefinitions.nSize()==0%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="CancelEventDefinition" referenceName="eventDefinitions"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -460,7 +469,7 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;EndEvent&quot;)!=null || $element.filter(&quot;ImplicitThrowEvent&quot;)!=null || $element.filter(&quot;BoundaryEvent&quot;)!=null%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.eventDefinitions.nSize()==0%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="CompensateEventDefinition" referenceName="eventDefinitions"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -471,7 +480,7 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;EndEvent&quot;)!=null || $element.filter(&quot;IntermediateCatchEvent&quot;)!=null || $element.filter(&quot;ImplicitThrowEvent&quot;)!=null || $element.filter(&quot;BoundaryEvent&quot;)!=null%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.eventDefinitions.nSize()==0%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="SignalEventDefinition" referenceName="eventDefinitions"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -482,7 +491,7 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;EndEvent&quot;)!=null%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.eventDefinitions.nSize()==0%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="TerminateEventDefinition" referenceName="eventDefinitions"/>
                 </subModelOperations>
               </firstModelOperations>

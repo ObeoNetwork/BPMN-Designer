@@ -17,6 +17,8 @@ import java.util.HashMap;
 
 import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Bpmn2Package;
+import org.eclipse.bpmn2.Definitions;
+import org.eclipse.bpmn2.Process;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -31,6 +33,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.ui.PlatformUI;
@@ -130,7 +133,6 @@ public class Bpmn2ProjectWizard extends BasicNewResourceWizard {
 
 		/* Add the initial model object to the contents. */
 		final EObject rootObject = createInitialModel();
-
 		if (rootObject != null) {
 			resource.getContents().add(rootObject);
 		}
@@ -178,11 +180,16 @@ public class Bpmn2ProjectWizard extends BasicNewResourceWizard {
 	 * @return the semantic root {@link EObject}
 	 */
 	private EObject createInitialModel() {
+		Process process=Bpmn2Factory.eINSTANCE.createProcess();
 		EClassifier found = Bpmn2Package.eINSTANCE.getEClassifier(modelPage.getInitialObjectName());
-		if (found instanceof EClass) {
-			return Bpmn2Factory.eINSTANCE.create((EClass)found);
-		} else {
-			return Bpmn2Factory.eINSTANCE.createDefinitions();
+		if (found instanceof EClass) {	
+			Definitions definitions = (Definitions) Bpmn2Factory.eINSTANCE.create((EClass)found);
+			definitions.getRootElements().add(process);			 	 
+			return definitions;
+		} else {	
+			Definitions definitions = Bpmn2Factory.eINSTANCE.createDefinitions();
+			definitions.getRootElements().add(process);	
+			return definitions;
 		}
 	}
 
