@@ -162,7 +162,7 @@
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/throwing/multiple2.png"/>
               </conditionnalStyles>
             </subNodeMappings>
-            <subNodeMappings name="BoundaryEvent" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="BoundaryEvent">
+            <subNodeMappings name="BoundaryEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="BoundaryEvent">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/BoundaryEvent.png"/>
             </subNodeMappings>
             <subNodeMappings name="ComplexGateway" label="Complex Gateway" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="ComplexGateway">
@@ -240,13 +240,13 @@
             <subNodeMappings name="DataInput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%eContainer(&quot;Lane&quot;).partitionElement.dataInputs%> " domainClass="DataInput">
               <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/DataInput.png"/>
             </subNodeMappings>
-            <subNodeMappings name="DataOutput" semanticCandidatesExpression="&lt;%eContainer(&quot;Lane&quot;).partitionElement.dataOutputs%> " domainClass="DataOutput">
+            <subNodeMappings name="DataOutput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%eContainer(&quot;Lane&quot;).partitionElement.dataOutputs%> " domainClass="DataOutput">
               <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/DataOutput.png"/>
             </subNodeMappings>
-            <subNodeMappings name="DataStore" semanticCandidatesExpression="&lt;%eContainer(&quot;Lane&quot;).extensionValues.value%>" domainClass="DataStore">
+            <subNodeMappings name="DataStore" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%eContainer(&quot;Lane&quot;).extensionValues.value%>" domainClass="DataStore">
               <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/DataStore.png"/>
             </subNodeMappings>
-            <subNodeMappings name="Receive Task" semanticCandidatesExpression="&lt;%flowNode%>" domainClass="ReceiveTask">
+            <subNodeMappings name="Receive Task" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%flowNode%>" domainClass="ReceiveTask">
               <borderedNodeMappings name="ReceiveTaskBorder" semanticCandidatesExpression="&lt;%boundaryEventRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="BoundaryEvent">
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj16/BoundaryEvent.png"/>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
@@ -286,7 +286,7 @@
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="Send Task" semanticCandidatesExpression="&lt;%flowNode%>" domainClass="SendTask">
+            <subNodeMappings name="Send Task" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%flowNode%>" domainClass="SendTask">
               <borderedNodeMappings name="SendTaskBorder" semanticCandidatesExpression="&lt;%boundaryEventRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="BoundaryEvent">
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj16/BoundaryEvent.png"/>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
