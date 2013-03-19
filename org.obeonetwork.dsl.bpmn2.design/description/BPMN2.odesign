@@ -8,7 +8,7 @@
   <ownedViewpoints name="Process" label="BPMN 2.0 - Process" modelFileExtension="bpmn2">
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveToLane']" name="ProcessDiagram" domainClass="bpmn2.Process" enablePopupBars="true">
       <defaultLayer name="Default">
-        <edgeMappings name="SequenceFlow" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='LinkDirectEdit']" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ExclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='InclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='BoundaryEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ChoreographyTask'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ComplexGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EventBasedGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ImplicitThrowEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateCatchEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']" targetMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ExclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='InclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='BoundaryEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ComplexGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EventBasedGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ImplicitThrowEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateCatchEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']" targetFinderExpression="&lt;%targetRef%>" sourceFinderExpression="&lt;%sourceRef%>" domainClass="SequenceFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='ReconnectTargetSequenceFlow'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='ReconnectSourceSequenceFlow']">
+        <edgeMappings name="SequenceFlow" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='LinkDirectEdit']" semanticCandidatesExpression="&lt;%current.eAllContents%>" createElements="false" sourceMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ExclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='InclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='BoundaryEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ChoreographyTask'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ComplexGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EventBasedGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ImplicitThrowEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateCatchEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']" targetMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ExclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='InclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='BoundaryEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ComplexGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EventBasedGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ImplicitThrowEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateCatchEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']" targetFinderExpression="&lt;%targetRef%>" sourceFinderExpression="&lt;%sourceRef%>" domainClass="SequenceFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='ReconnectTargetSequenceFlow'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='ReconnectSourceSequenceFlow']">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="1" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription labelFormat="italic" showIcon="false" labelExpression="&lt;%name%>">
@@ -486,7 +486,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Timer Event Definition" label="Timer" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/timer.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Timer Event Definition" label="Timer" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null &amp;&amp; $element.filter(&quot;EndEvent&quot;)==null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/timer.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -508,7 +508,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Conditional Event Definition" label="Conditional" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/conditional.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Conditional Event Definition" label="Conditional" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null &amp;&amp; $element.filter(&quot;EndEvent&quot;)==null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/conditional.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -519,7 +519,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Link Event Definition" label="Link" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/catching/link.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Link Event Definition" label="Link" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null &amp;&amp; $element.filter(&quot;EndEvent&quot;)==null &amp;&amp; $element.filter(&quot;BoundaryEvent&quot;)==null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/catching/link.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -574,24 +574,13 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Terminate Event Definition" label="Terminate" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/endevent/terminate.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Terminate Event Definition" label="Terminate" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null &amp;&amp; $element.filter(&quot;BoundaryEvent&quot;)==null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/endevent/terminate.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.eventDefinitions.nSize()==0%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="TerminateEventDefinition" referenceName="eventDefinitions"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Multiple  Event Definition" label="Multiple" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/multiple.png">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.eventDefinitions.nSize()==0%>">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="MultipleEventDefinition" referenceName="eventDefinitions"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -768,12 +757,12 @@
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source.eContainer(&quot;Process&quot;)%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.trace().filter(&quot;DataObject&quot;)!= null%>">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$target.trace()!= null%> ">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.filter(&quot;DataObject&quot;)!= null  || $source.filter(&quot;DataInput&quot;)!= null || $source.filter(&quot;DataOutput&quot;)!= null || $source.filter(&quot;DataStore&quot;)!= null || $source.filter(&quot;TextAnnotation&quot;)!= null%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$target.filter(&quot;Task&quot;)!=null || $target.filter(&quot;ReceiveTask&quot;)!=null || $target.filter(&quot;SendTask&quot;)!=null || $target.filter(&quot;ChoreographyTask&quot;)!=null%>">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Association" referenceName="artifacts">
                       <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
                         <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$source%>"/>
-                        <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$target%>"/>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$target.trace()%>"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -791,7 +780,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectTargetSequenceFlow" forceRefresh="true">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectTargetSequenceFlow" precondition="&lt;%sourceRef.lanes.eContainer().id==$target.lanes.eContainer().id%>" forceRefresh="true">
             <source name="source"/>
             <target name="target"/>
             <sourceView name="sourceView"/>
@@ -804,21 +793,52 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectSourceSequenceFlow" forceRefresh="true" reconnectionKind="RECONNECT_SOURCE">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectSourceSequenceFlow" precondition="&lt;%sourceRef.lanes.eContainer().id==$target.lanes.eContainer().id%>" forceRefresh="true" reconnectionKind="RECONNECT_SOURCE">
             <source name="source"/>
             <target name="target"/>
             <sourceView name="sourceView"/>
             <targetView name="targetView"/>
             <element name="element"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.trace()%>">
-                <subModelOperations xsi:type="tool:Unset" featureName="sourceRef" elementExpression="&lt;%$source%>"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.lanes.eContainer().id==$target.lanes.eContainer().id%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="sourceRef" elementExpression="&lt;%$source%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$target%>"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.lanes.eContainer().id!=$target.lanes.eContainer().id%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$element.sourceRef%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectTargetMessageFlow" precondition="&lt;%sourceRef.lanes.eContainer().id!=$target.lanes.eContainer().id%>" forceRefresh="true">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectSourceMessageFlow" precondition="&lt;%targetRef.lanes.eContainer().id!=$target.lanes.eContainer().id%>" forceRefresh="true" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
                 <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$target%>"/>
               </firstModelOperations>
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectTargetMessageFlow" forceRefresh="true">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectTargetAssociationLink" precondition="&lt;%($source.filter(&quot;DataObject&quot;)!= null  || $source.filter(&quot;DataInput&quot;)!= null || $source.filter(&quot;DataOutput&quot;)!= null || $source.filter(&quot;DataStore&quot;)!= null || $source.filter(&quot;TextAnnotation&quot;)!= null)&amp;&amp;($target.filter(&quot;DataObject&quot;)!=null || $target.filter(&quot;DataInput&quot;)!=null || $target.filter(&quot;DataOutput&quot;) !=null|| $target.filter(&quot;DataStore&quot;)!=null || $target.filter(&quot;TextAnnotation&quot;)!=null)||($source.filter(&quot;Task&quot;)!=null || $source.filter(&quot;ReceiveTask&quot;)!=null || $source.filter(&quot;SendTask&quot;)!=null)&amp;&amp;($target.filter(&quot;Task&quot;)!=null || $target.filter(&quot;ReceiveTask&quot;)!=null || $target.filter(&quot;SendTask&quot;)!=null || $target.filter(&quot;ChoreographyTask&quot;)!=null)%>" forceRefresh="true">
             <source name="source"/>
             <target name="target"/>
             <sourceView name="sourceView"/>
@@ -831,33 +851,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectSourceMessageFlow" forceRefresh="true" reconnectionKind="RECONNECT_SOURCE">
-            <source name="source"/>
-            <target name="target"/>
-            <sourceView name="sourceView"/>
-            <targetView name="targetView"/>
-            <element name="element"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$target%>"/>
-              </firstModelOperations>
-            </initialOperation>
-            <edgeView name="edgeView"/>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectTargetAssociationLink" forceRefresh="true">
-            <source name="source"/>
-            <target name="target"/>
-            <sourceView name="sourceView"/>
-            <targetView name="targetView"/>
-            <element name="element"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$target%>"/>
-              </firstModelOperations>
-            </initialOperation>
-            <edgeView name="edgeView"/>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectSourceAssociationLink" forceRefresh="true" reconnectionKind="RECONNECT_SOURCE">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectSourceAssociationLink" precondition="&lt;%($source.filter(&quot;DataObject&quot;)!= null  || $source.filter(&quot;DataInput&quot;)!= null || $source.filter(&quot;DataOutput&quot;)!= null || $source.filter(&quot;DataStore&quot;)!= null || $source.filter(&quot;TextAnnotation&quot;)!= null)&amp;&amp;($target.filter(&quot;DataObject&quot;)!=null || $target.filter(&quot;DataInput&quot;)!=null || $target.filter(&quot;DataOutput&quot;) !=null|| $target.filter(&quot;DataStore&quot;)!=null || $target.filter(&quot;TextAnnotation&quot;)!=null)||($source.filter(&quot;Task&quot;)!=null || $source.filter(&quot;ReceiveTask&quot;)!=null || $source.filter(&quot;SendTask&quot;)!=null)&amp;&amp;($target.filter(&quot;Task&quot;)!=null || $target.filter(&quot;ReceiveTask&quot;)!=null || $target.filter(&quot;SendTask&quot;)!=null || $target.filter(&quot;ChoreographyTask&quot;)!=null)%>" forceRefresh="true" reconnectionKind="RECONNECT_SOURCE">
             <source name="source"/>
             <target name="target"/>
             <sourceView name="sourceView"/>
