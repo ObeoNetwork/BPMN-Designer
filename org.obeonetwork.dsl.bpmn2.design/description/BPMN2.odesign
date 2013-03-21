@@ -676,7 +676,7 @@
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;Task&quot;)==null%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.ChoreographyTask" referenceName="flowElements">
                     <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.trace()%>"/>
-                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Business Task"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Choreography Task"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
