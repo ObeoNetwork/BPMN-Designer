@@ -607,7 +607,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Activities">
-          <ownedTools xsi:type="tool:ToolDescription" name="Task" precondition="&lt;%$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/Task.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Task" precondition="&lt;%$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/Task.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -632,7 +632,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Business Rule Task" precondition="&lt;%$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Business Rule Task" precondition="&lt;%$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -657,7 +657,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="ChoreographyTask" precondition="&lt;%$element.filter(&quot;ChoreographyTask&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/Task.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="ChoreographyTask" precondition="&lt;%$element.filter(&quot;ChoreographyTask&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;Task&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/Task.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -682,7 +682,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Manual Task" precondition="&lt;%$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/ManualTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Manual Task" precondition="&lt;%$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/ManualTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -707,7 +707,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Receive Task" precondition="&lt;%$element.filter(&quot;ReceiveTask&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/ReceiveTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Receive Task" precondition="&lt;%$element.filter(&quot;ReceiveTask&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/receiveTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -732,7 +732,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Script Task" precondition="&lt;%$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/scriptTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Script Task" precondition="&lt;%$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/scriptTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -757,7 +757,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Send Task" precondition="&lt;%$element.filter(&quot;SendTask&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/SendTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Send Task" precondition="&lt;%$element.filter(&quot;ReceiveTask&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.filter(&quot;ChoreographyTask&quot;)!=null %>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/SendTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -782,7 +782,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Service Task" precondition="&lt;%$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/ServiceTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Service Task" precondition="&lt;%$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/ServiceTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -807,7 +807,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="User Task" precondition="&lt;%$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/UserTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="User Task" precondition="&lt;%$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/UserTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -993,101 +993,116 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Gateways">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="ParallelGatewayCreation" label="Parallel" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
+          <ownedTools xsi:type="tool:ToolDescription" name="ParallelGateway" precondition="&lt;%$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
+            <element name="element"/>
+            <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Lane&quot;).nSize==0%>">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="ParallelGateway" referenceName="flowElements"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.eContainer(&quot;Process&quot;)%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.ParallelGateway" referenceName="flowElements" variableName="gateway">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="SequenceFlow" referenceName="flowElements" variableName="sequenceFlow">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$element%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$gateway%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
+                  </subModelOperations>
                 </subModelOperations>
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Lane&quot;).nSize!=0%>">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer().eContainer()%>">
-                    <subModelOperations xsi:type="tool:CreateInstance" typeName="ParallelGateway" referenceName="flowElements">
-                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
-                        <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$container%>"/>
-                      </subModelOperations>
-                    </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ParallelGateway&quot;)==null &amp;&amp; $element.filter(&quot;ExclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;InclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;ComplexGateway&quot;)==null &amp;&amp; $element.filter(&quot;EventBasedGateway&quot;)==null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.ParallelGateway" referenceName="flowElements" variableName="gateway">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element%>"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="ExclusiveGatewayCreation" label="Exclusive" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ExclusiveGateway']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
+          <ownedTools xsi:type="tool:ToolDescription" name="ExclusiveGateway" precondition="&lt;%$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
+            <element name="element"/>
+            <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Lane&quot;).nSize==0%>">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="ExclusiveGateway" referenceName="flowElements"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.eContainer(&quot;Process&quot;)%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.ExclusiveGateway" referenceName="flowElements" variableName="gateway">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="SequenceFlow" referenceName="flowElements" variableName="sequenceFlow">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$element%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$gateway%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
+                  </subModelOperations>
                 </subModelOperations>
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Lane&quot;).nSize!=0%>">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer().eContainer()%>">
-                    <subModelOperations xsi:type="tool:CreateInstance" typeName="ExclusiveGateway" referenceName="flowElements">
-                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
-                        <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$container%>"/>
-                      </subModelOperations>
-                    </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ParallelGateway&quot;)==null &amp;&amp; $element.filter(&quot;ExclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;InclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;ComplexGateway&quot;)==null &amp;&amp; $element.filter(&quot;EventBasedGateway&quot;)==null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.ExclusiveGateway" referenceName="flowElements" variableName="gateway">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element%>"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="InclusiveGatewayCreation" label="Inclusive" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='InclusiveGateway']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
+          <ownedTools xsi:type="tool:ToolDescription" name="InclusiveGateway" precondition="&lt;%$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
+            <element name="element"/>
+            <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Lane&quot;).nSize==0%>">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="InclusiveGateway" referenceName="flowElements"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.eContainer(&quot;Process&quot;)%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.InclusiveGateway" referenceName="flowElements" variableName="gateway">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="SequenceFlow" referenceName="flowElements" variableName="sequenceFlow">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$element%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$gateway%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
+                  </subModelOperations>
                 </subModelOperations>
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Lane&quot;).nSize!=0%>">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer().eContainer()%>">
-                    <subModelOperations xsi:type="tool:CreateInstance" typeName="InclusiveGateway" referenceName="flowElements">
-                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
-                        <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$container%>"/>
-                      </subModelOperations>
-                    </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ParallelGateway&quot;)==null &amp;&amp; $element.filter(&quot;ExclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;InclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;ComplexGateway&quot;)==null &amp;&amp; $element.filter(&quot;EventBasedGateway&quot;)==null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.InclusiveGateway" referenceName="flowElements" variableName="gateway">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element%>"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="ComplexGatewayCreation" label="Complex" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ComplexGateway']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
+          <ownedTools xsi:type="tool:ToolDescription" name="ComplexGateway" precondition="&lt;%$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
+            <element name="element"/>
+            <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Lane&quot;).nSize==0%>">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="ComplexGateway" referenceName="flowElements"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.eContainer(&quot;Process&quot;)%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.ComplexGateway" referenceName="flowElements" variableName="gateway">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="SequenceFlow" referenceName="flowElements" variableName="sequenceFlow">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$element%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$gateway%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
+                  </subModelOperations>
                 </subModelOperations>
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Lane&quot;).nSize!=0%>">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer().eContainer()%>">
-                    <subModelOperations xsi:type="tool:CreateInstance" typeName="ComplexGateway" referenceName="flowElements">
-                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
-                        <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$container%>"/>
-                      </subModelOperations>
-                    </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ParallelGateway&quot;)==null &amp;&amp; $element.filter(&quot;ExclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;InclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;ComplexGateway&quot;)==null &amp;&amp; $element.filter(&quot;EventBasedGateway&quot;)==null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.ComplexGateway" referenceName="flowElements" variableName="gateway">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element%>"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="EventBasedGatewayCreation" label="Event Based" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EventBasedGateway']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
+          <ownedTools xsi:type="tool:ToolDescription" name="EventBasedGateway" precondition="&lt;%$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
+            <element name="element"/>
+            <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Lane&quot;).nSize==0%>">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="EventBasedGateway" referenceName="flowElements"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.eContainer(&quot;Process&quot;)%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.EventBasedGateway" referenceName="flowElements" variableName="gateway">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="SequenceFlow" referenceName="flowElements" variableName="sequenceFlow">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$element%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$gateway%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
+                  </subModelOperations>
                 </subModelOperations>
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Lane&quot;).nSize!=0%>">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer().eContainer()%>">
-                    <subModelOperations xsi:type="tool:CreateInstance" typeName="EventBasedGateway" referenceName="flowElements">
-                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
-                        <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$container%>"/>
-                      </subModelOperations>
-                    </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ParallelGateway&quot;)==null &amp;&amp; $element.filter(&quot;ExclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;InclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;ComplexGateway&quot;)==null &amp;&amp; $element.filter(&quot;EventBasedGateway&quot;)==null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.EventBasedGateway" referenceName="flowElements" variableName="gateway">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element%>"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
