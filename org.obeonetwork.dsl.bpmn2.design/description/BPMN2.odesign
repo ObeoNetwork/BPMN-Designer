@@ -628,12 +628,14 @@
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="Task" referenceName="flowElements" variableName="task">
                     <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
                     <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Task"/>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']" containerViewExpression="&lt;%$elementView.eContainer()%>"/>
                   </subModelOperations>
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="SequenceFlow" referenceName="flowElements" variableName="sequenceFlow">
                     <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$element%>"/>
                     <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$task%>"/>
                     <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
                   </subModelOperations>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$elementView.locateRelativeToCurrent($task.~target[eContainer() == $elementView.eContainer()])%>"/>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)==null &amp;&amp; $element.filter(&quot;IntermediateCatchEvent&quot;)==null &amp;&amp; $element.filter(&quot;EndEvent&quot;)==null &amp;&amp; $element.filter(&quot;StartEvent&quot;)==null &amp;&amp; $element.filter(&quot;Task&quot;)==null &amp;&amp; $element.filter(&quot;ParallelGateway&quot;)==null &amp;&amp; $element.filter(&quot;ExclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;InclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;ComplexGateway&quot;)==null &amp;&amp; $element.filter(&quot;EventBasedGateway&quot;)==null%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="Task" referenceName="flowElements">
@@ -1302,6 +1304,7 @@
       <ownedColumnMappings name="StartEventNb" headerLabelExpression="Number of start events" featureName="name" labelExpression="&lt;%eAllContents(&quot;StartEvent&quot;).nSize()%>"/>
       <ownedColumnMappings name="EndEventNb" headerLabelExpression="Number of end events" featureName="name" labelExpression="&lt;%eAllContents(&quot;EndEvent&quot;).nSize()%>"/>
     </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.DiagramServices"/>
   </ownedViewpoints>
   <userColorsPalettes name="Colors">
     <entries xsi:type="description:UserFixedColor" red="0" green="128" blue="192" name="Blue"/>
