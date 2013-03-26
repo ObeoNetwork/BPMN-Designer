@@ -11,35 +11,18 @@ import fr.obeo.dsl.viewpoint.diagram.business.api.view.ViewpointGMFHelper;
 
 public class DiagramServices {
 	
-	public void locateRelativeToCurrent(EObject currentNode, EObject newNode) {
+	public void location (EObject currentNode, EObject newNode) {
 		System.out.println("hello");
 		if (currentNode instanceof DNode && newNode instanceof DNode) {
 			DNode currentDNode = (DNode)currentNode;
 			DNode newDNode = (DNode)newNode;
-			
-			
-	
-			
 			// Retrieve GMF nodes associated with our graphical nodes
 			Node firstNode = ViewpointGMFHelper.getGmfNode(currentDNode);
-		
 			Node secondNode = ViewpointGMFHelper.getGmfNode(newDNode);
-			
-			
-			
-			
 			Bounds firstBounds= (Bounds)firstNode.getLayoutConstraint();
 			Bounds secondBounds= (Bounds)secondNode.getLayoutConstraint();
-						
-		
-			
-			
-			
-
-			
 			secondBounds.setX(firstBounds.getX() + 5);
-			secondBounds.setY(firstBounds.getY() + 5);
+			secondBounds.setY(firstBounds.getY());
 		}
-
 	}
-}
+ 	}
