@@ -635,7 +635,6 @@
                     <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$task%>"/>
                     <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$elementView.locateRelativeToCurrent($task.~target[eContainer() == $elementView.eContainer()])%>"/>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)==null &amp;&amp; $element.filter(&quot;IntermediateCatchEvent&quot;)==null &amp;&amp; $element.filter(&quot;EndEvent&quot;)==null &amp;&amp; $element.filter(&quot;StartEvent&quot;)==null &amp;&amp; $element.filter(&quot;Task&quot;)==null &amp;&amp; $element.filter(&quot;ParallelGateway&quot;)==null &amp;&amp; $element.filter(&quot;ExclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;InclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;ComplexGateway&quot;)==null &amp;&amp; $element.filter(&quot;EventBasedGateway&quot;)==null%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="Task" referenceName="flowElements">
