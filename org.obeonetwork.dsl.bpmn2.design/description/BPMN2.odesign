@@ -19,14 +19,14 @@
         <edgeMappings name="MessageFlow" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='LinkDirectEdit']" semanticCandidatesExpression="&lt;%eContainer(&quot;Definitions&quot;).rootElements.filter(&quot;Collaboration&quot;).messageFlows%>" sourceMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Receive%20Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Receive%20Task']/@borderedNodeMappings[name='ReceiveTaskBorder'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Send%20Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Send%20Task']/@borderedNodeMappings[name='SendTaskBorder'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']" targetMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Receive%20Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Send%20Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateCatchEvent']" targetFinderExpression="&lt;%targetRef%>" sourceFinderExpression="&lt;%sourceRef%>" domainClass="MessageFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='ReconnectTargetMessageFlow'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='ReconnectSourceMessageFlow']">
           <style lineStyle="dash" sourceArrow="OutputClosedArrow" targetArrow="InputFillClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <centerLabelStyleDescription labelFormat="italic" labelExpression="." iconPath="/org.eclipse.bpmn2.edit/icons/full/obj32/ReceiveTask.png">
+            <centerLabelStyleDescription labelFormat="italic" labelExpression="." iconPath="/org.obeonetwork.dsl.bpmn2.bpmn2.edit/icons/full/obj32/ReceiveTask.png">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </centerLabelStyleDescription>
           </style>
           <conditionnalStyles predicateExpression="&lt;%$view.sourceNode.target.filter(&quot;SendTask&quot;)%>">
             <style lineStyle="dash" sourceArrow="OutputClosedArrow" targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <centerLabelStyleDescription labelFormat="italic" labelExpression="." iconPath="/org.eclipse.bpmn2.edit/icons/full/obj32/SendTask.png">
+              <centerLabelStyleDescription labelFormat="italic" labelExpression="." iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/SendTask.png">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </centerLabelStyleDescription>
             </style>
@@ -43,7 +43,7 @@
         <containerMappings name="LaneSet" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%self.laneSets%>" domainClass="bpmn2.LaneSet">
           <subContainerMappings name="Lane" label="Lane" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%lanes%>" domainClass="Lane" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveToLane']">
             <subNodeMappings name="StartEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="StartEvent">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/StartEvent.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/StartEvent.png"/>
               <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/message2.png"/>
               </conditionnalStyles>
@@ -82,10 +82,10 @@
               </conditionnalStyles>
             </subNodeMappings>
             <subNodeMappings name="ParallelGateway" label="Parallel Gateway" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="ParallelGateway">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/ParallelGateway.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/ParallelGateway.png"/>
             </subNodeMappings>
             <subNodeMappings name="EndEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="EndEvent">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/EndEvent.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/EndEvent.png"/>
               <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/endevent/message2.png"/>
               </conditionnalStyles>
@@ -112,13 +112,13 @@
               </conditionnalStyles>
             </subNodeMappings>
             <subNodeMappings name="InclusiveGateway" label="Inclusive Gateway" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="InclusiveGateway">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/InclusiveGateway.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/InclusiveGateway.png"/>
             </subNodeMappings>
             <subNodeMappings name="ExclusiveGateway" label="Exclusive Gateway" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="ExclusiveGateway">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/ExclusiveGateway.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/ExclusiveGateway.png"/>
             </subNodeMappings>
             <subNodeMappings name="IntermediateCatchEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="IntermediateCatchEvent">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/IntermediateCatchEvent.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/IntermediateCatchEvent.png"/>
               <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/catching/message2.png"/>
               </conditionnalStyles>
@@ -142,7 +142,7 @@
               </conditionnalStyles>
             </subNodeMappings>
             <subNodeMappings name="ImplicitThrowEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="ImplicitThrowEvent">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/IntermediateThrowEvent.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/IntermediateThrowEvent.png"/>
               <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/throwing/message2.png"/>
               </conditionnalStyles>
@@ -163,17 +163,17 @@
               </conditionnalStyles>
             </subNodeMappings>
             <subNodeMappings name="BoundaryEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="BoundaryEvent">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/BoundaryEvent.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/BoundaryEvent.png"/>
             </subNodeMappings>
             <subNodeMappings name="ComplexGateway" label="Complex Gateway" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="ComplexGateway">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/ComplexGateway.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/ComplexGateway.png"/>
             </subNodeMappings>
             <subNodeMappings name="EventBasedGateway" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" domainClass="EventBasedGateway">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/EventBasedGateway.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/EventBasedGateway.png"/>
             </subNodeMappings>
             <subNodeMappings name="Task" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%flowNodeRefs%>" domainClass="bpmn2.Task">
               <borderedNodeMappings name="TaskBorder" semanticCandidatesExpression="&lt;%boundaryEventRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="BoundaryEvent">
-                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/BoundaryEvent.png"/>
+                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/BoundaryEvent.png"/>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
                   <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/boundary/message.png"/>
                 </conditionnalStyles>
@@ -213,7 +213,7 @@
             </subNodeMappings>
             <subNodeMappings name="ChoreographyTask" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%flowNodeRefs%>" domainClass="ChoreographyTask">
               <borderedNodeMappings name="TaskBorder" semanticCandidatesExpression="&lt;%boundaryEventRefs%>" domainClass="BoundaryEvent">
-                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj16/BoundaryEvent.png"/>
+                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BoundaryEvent.png"/>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;EscalationEventDefinition&quot;)!=null%>">
                   <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/escalation.boundary.png"/>
                 </conditionnalStyles>
@@ -235,20 +235,20 @@
               </style>
             </subNodeMappings>
             <subNodeMappings name="DataObject " labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%eContainer(&quot;Lane&quot;).extensionValues.value%> " domainClass="DataObject">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/DataObject.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/DataObject.png"/>
             </subNodeMappings>
             <subNodeMappings name="DataInput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%eContainer(&quot;Lane&quot;).partitionElement.dataInputs%> " domainClass="DataInput">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/DataInput.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/DataInput.png"/>
             </subNodeMappings>
             <subNodeMappings name="DataOutput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%eContainer(&quot;Lane&quot;).partitionElement.dataOutputs%> " domainClass="DataOutput">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/DataOutput.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/DataOutput.png"/>
             </subNodeMappings>
             <subNodeMappings name="DataStore" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%eContainer(&quot;Lane&quot;).extensionValues.value%>" domainClass="DataStore">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/DataStore.png"/>
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/DataStore.png"/>
             </subNodeMappings>
             <subNodeMappings name="Receive Task" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%flowNode%>" domainClass="ReceiveTask">
               <borderedNodeMappings name="ReceiveTaskBorder" semanticCandidatesExpression="&lt;%boundaryEventRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="BoundaryEvent">
-                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj16/BoundaryEvent.png"/>
+                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BoundaryEvent.png"/>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
                   <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/boundary/message.png"/>
                 </conditionnalStyles>
@@ -288,7 +288,7 @@
             </subNodeMappings>
             <subNodeMappings name="Send Task" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%flowNode%>" domainClass="SendTask">
               <borderedNodeMappings name="SendTaskBorder" semanticCandidatesExpression="&lt;%boundaryEventRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="BoundaryEvent">
-                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj16/BoundaryEvent.png"/>
+                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BoundaryEvent.png"/>
                 <conditionnalStyles predicateExpression="&lt;%eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
                   <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/boundary/message.png"/>
                 </conditionnalStyles>
@@ -385,7 +385,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Events">
-          <ownedTools xsi:type="tool:ToolDescription" name="Start" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/StartEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Start" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -408,7 +408,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="End" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/EndEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="End" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EndEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -431,7 +431,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -454,7 +454,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Implicit Throw" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Implicit Throw" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -477,7 +477,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="BoundaryEventCreation" label="Boundary" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/BoundaryEvent.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="BoundaryEventCreation" label="Boundary" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BoundaryEvent.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -619,7 +619,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Activities">
-          <ownedTools xsi:type="tool:ToolDescription" name="Task" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/Task.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Task" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -645,7 +645,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Business Rule Task" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Business Rule Task" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -670,7 +670,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="ChoreographyTask" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;ChoreographyTask&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;Task&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/Task.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="ChoreographyTask" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;ChoreographyTask&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;Task&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -695,7 +695,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Manual Task" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/ManualTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Manual Task" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -770,7 +770,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Send Task" precondition="&lt;% $element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;ReceiveTask&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.filter(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/SendTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Send Task" precondition="&lt;% $element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;ReceiveTask&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.filter(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -795,7 +795,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Service Task" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/ServiceTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Service Task" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -820,7 +820,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="User Task" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/UserTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="User Task" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -847,7 +847,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Connectors">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="SequenceFlowCreationTool" label="Sequence" edgeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/SequenceFlow.png">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="SequenceFlowCreationTool" label="Sequence" edgeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SequenceFlow.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -877,7 +877,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Message Flow Creation Tool" label="Message" edgeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/MessageFlow.png">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Message Flow Creation Tool" label="Message" edgeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/MessageFlow.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -902,7 +902,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Association Creation Tool" label="Association" edgeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='AssociationLink']" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/Association.png">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Association Creation Tool" label="Association" edgeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='AssociationLink']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Association.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1018,7 +1018,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Gateways">
-          <ownedTools xsi:type="tool:ToolDescription" name="Parallel Gateway" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null  || $element.filter(&quot;ReceiveTask&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Parallel Gateway" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null  || $element.filter(&quot;ReceiveTask&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -1041,7 +1041,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Exclusive Gateway" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null  || $element.filter(&quot;ReceiveTask&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Exclusive Gateway" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null  || $element.filter(&quot;ReceiveTask&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -1064,7 +1064,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Inclusive Gateway" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null  || $element.filter(&quot;ReceiveTask&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Inclusive Gateway" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null  || $element.filter(&quot;ReceiveTask&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -1087,7 +1087,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Complex Gateway" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null  || $element.filter(&quot;ReceiveTask&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Complex Gateway" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null  || $element.filter(&quot;ReceiveTask&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -1110,7 +1110,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Event Based Gateway" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null  || $element.filter(&quot;ReceiveTask&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Event Based Gateway" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null  || $element.filter(&quot;ReceiveTask&quot;)!=null || $element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;SendTask&quot;)!=null  || $element.eContainer(&quot;ChoreographyTask&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -1223,7 +1223,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="TextAnnotation" label="Text Annotation" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='TextAnnotation']" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/TextAnnotation.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="TextAnnotation" label="Text Annotation" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='TextAnnotation']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/TextAnnotation.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1257,7 +1257,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Group" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='Group']" iconPath="/org.eclipse.bpmn2.edit/icons/full/obj16/Group.png">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Group" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='Group']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Group.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1268,15 +1268,15 @@
           </ownedTools>
         </toolSections>
         <decorationDescriptionsSet>
-          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="ScriptTask" position="NORTH_WEST" decoratorPath="/org.eclipse.bpmn2.edit/icons/full/obj32/ScriptTask.png" preconditionExpression="&lt;%self.filter(&quot;ScriptTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
-          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="BusinessRuleTask" position="NORTH_WEST" decoratorPath="/org.eclipse.bpmn2.edit/icons/full/obj32/BusinessRuleTask.png" preconditionExpression="&lt;%self.filter(&quot;BusinessRuleTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
-          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="ChoreographyTask" position="NORTH_WEST" decoratorPath="/org.eclipse.bpmn2.edit/icons/full/obj32/Task.png" preconditionExpression="&lt;%self.filter(&quot;ChoreographyTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ChoreographyTask']"/>
-          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="ManualTask" position="NORTH_WEST" decoratorPath="/org.eclipse.bpmn2.edit/icons/full/obj32/ManualTask.png" preconditionExpression="&lt;%self.filter(&quot;ManualTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
-          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="ReceiveTask" position="NORTH_WEST" decoratorPath="/org.eclipse.bpmn2.edit/icons/full/obj32/ReceiveTask.png" preconditionExpression="&lt;%self.filter(&quot;ReceiveTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
-          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="SendTask" position="NORTH_WEST" decoratorPath="/org.eclipse.bpmn2.edit/icons/full/obj32/SendTask.png" preconditionExpression="&lt;%self.filter(&quot;SendTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
-          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="ServiceTask" position="NORTH_WEST" decoratorPath="/org.eclipse.bpmn2.edit/icons/full/obj32/ServiceTask.png" preconditionExpression="&lt;%self.filter(&quot;ServiceTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
-          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="UserTask" position="NORTH_WEST" decoratorPath="/org.eclipse.bpmn2.edit/icons/full/obj32/UserTask.png" preconditionExpression="&lt;%self.filter(&quot;UserTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
-          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="Task" position="NORTH_WEST" decoratorPath="/org.eclipse.bpmn2.edit/icons/full/obj32/Task.png" preconditionExpression="&lt;%self.filter(&quot;Task&quot;)!=null &amp;&amp; self.filter(&quot;UserTask&quot;)==null &amp;&amp; self.filter(&quot;ServiceTask&quot;)==null &amp;&amp; self.filter(&quot;SendTask&quot;)==null &amp;&amp; self.filter(&quot;ScriptTask&quot;)==null &amp;&amp; self.filter(&quot;ReceiveTask&quot;)==null &amp;&amp; self.filter(&quot;ManualTask&quot;)==null &amp;&amp; self.filter(&quot;BusinessRuleTask&quot;)==null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="ScriptTask" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/ScriptTask.png" preconditionExpression="&lt;%self.filter(&quot;ScriptTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="BusinessRuleTask" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/BusinessRuleTask.png" preconditionExpression="&lt;%self.filter(&quot;BusinessRuleTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="ChoreographyTask" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/Task.png" preconditionExpression="&lt;%self.filter(&quot;ChoreographyTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ChoreographyTask']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="ManualTask" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/ManualTask.png" preconditionExpression="&lt;%self.filter(&quot;ManualTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="ReceiveTask" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/ReceiveTask.png" preconditionExpression="&lt;%self.filter(&quot;ReceiveTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="SendTask" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/SendTask.png" preconditionExpression="&lt;%self.filter(&quot;SendTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="ServiceTask" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/ServiceTask.png" preconditionExpression="&lt;%self.filter(&quot;ServiceTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="UserTask" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/UserTask.png" preconditionExpression="&lt;%self.filter(&quot;UserTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="Task" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/Task.png" preconditionExpression="&lt;%self.filter(&quot;Task&quot;)!=null &amp;&amp; self.filter(&quot;UserTask&quot;)==null &amp;&amp; self.filter(&quot;ServiceTask&quot;)==null &amp;&amp; self.filter(&quot;SendTask&quot;)==null &amp;&amp; self.filter(&quot;ScriptTask&quot;)==null &amp;&amp; self.filter(&quot;ReceiveTask&quot;)==null &amp;&amp; self.filter(&quot;ManualTask&quot;)==null &amp;&amp; self.filter(&quot;BusinessRuleTask&quot;)==null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
         </decorationDescriptionsSet>
       </defaultLayer>
     </ownedRepresentations>
