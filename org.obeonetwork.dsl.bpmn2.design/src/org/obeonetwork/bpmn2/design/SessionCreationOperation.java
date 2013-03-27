@@ -15,8 +15,8 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
 
-import org.eclipse.bpmn2.Bpmn2Factory;
-import org.eclipse.bpmn2.Definitions;
+import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
+import org.obeonetwork.dsl.bpmn2.Definitions;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.expressions.EvaluationContext;
