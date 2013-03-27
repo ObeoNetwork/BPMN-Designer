@@ -28,8 +28,13 @@ public final class Messages extends NLS {
 
 	public static String Bpmn2TestSample_title;
 	public static String Bpmn2TestSample_desc;
+	
 	public static String Bpmn2TravelAgencySample_title;
 	public static String Bpmn2TravelAgencySample_desc;
+	
+	public static String Bpmn2NobelPrizeSample_title;
+	public static String Bpmn2NobelPrizeSample_desc;
+	
 
 	static {
 		NLS.initializeMessages(BUNDLE_NAME, Messages.class);

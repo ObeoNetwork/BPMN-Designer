@@ -1303,7 +1303,6 @@
       <ownedColumnMappings name="StartEventNb" headerLabelExpression="Number of start events" featureName="name" labelExpression="&lt;%eAllContents(&quot;StartEvent&quot;).nSize()%>"/>
       <ownedColumnMappings name="EndEventNb" headerLabelExpression="Number of end events" featureName="name" labelExpression="&lt;%eAllContents(&quot;EndEvent&quot;).nSize()%>"/>
     </ownedRepresentations>
-    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.DiagramServices"/>
   </ownedViewpoints>
   <userColorsPalettes name="Colors">
     <entries xsi:type="description:UserFixedColor" red="0" green="128" blue="192" name="Blue"/>

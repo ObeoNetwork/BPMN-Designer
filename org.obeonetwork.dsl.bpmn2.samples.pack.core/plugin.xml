@@ -26,5 +26,10 @@
             id="org.obeonetwork.dsl.bpmn2.samples.pack.core.Bpmn2Sample2"
             name="oorg.obeonetwork.dsl.bpmn2.samples.pack.core.Bpmn2Sample2">
       </Bpmn2Sample>
+            <Bpmn2Sample
+                  class="org.obeonetwork.dsl.bpmn2.samples.pack.core.NobelPrizeSample"
+                  id="org.obeonetwork.dsl.bpmn2.samples.pack.core.Bpmn2Sample1"
+                  name="org.obeonetwork.dsl.bpmn2.samples.pack.core.Bpmn2Sample1">
+            </Bpmn2Sample>
    </extension>
 </plugin>

@@ -1,14 +1,14 @@
 /**
  * <copyright>
  * 
- * Copyright (c) 2010 SAP AG.
+ * Copyright (c) 2011-2013 Obeo.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  * 
  * Contributors:
- *    Reiner Hille-Doering (SAP AG) - initial API and implementation and/or initial documentation
+ *    Obeo - initial API and implementation
  * 
  * </copyright>
  */
@@ -58,6 +58,7 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
      * @ordered
      */
     protected EList<ConversationLink> incomingConversationLinks;
+
     /**
      * The cached value of the '{@link #getOutgoingConversationLinks() <em>Outgoing Conversation Links</em>}' reference list.
      * <!-- begin-user-doc -->
@@ -67,6 +68,7 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
      * @ordered
      */
     protected EList<ConversationLink> outgoingConversationLinks;
+
     /**
      * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
      * <!-- begin-user-doc -->

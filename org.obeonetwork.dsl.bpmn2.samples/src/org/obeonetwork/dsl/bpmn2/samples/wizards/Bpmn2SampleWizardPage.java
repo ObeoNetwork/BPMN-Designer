@@ -88,6 +88,8 @@ public class Bpmn2SampleWizardPage extends WizardPage {
 			}
 		});
 
+		
+			
 		TableItem tableItem = null;
 		for (Bpmn2Sample bpmn2Sample : ((ProjectUnzipperNewWizard) this
 				.getWizard()).getBpmn2Samples()) {
