@@ -231,35 +231,35 @@ litigation.
    </requires>
 
    <plugin
-         id="org.eclipse.bpmn2"
+         id="org.obeonetwork.bpmn2"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.bpmn2.edit"
+         id="org.obeonetwork.bpmn2.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.bpmn2.editor"
+         id="org.obeonetwork.bpmn2.editor"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.bpmn2.tools.ecoremerger"
+         id="org.obeonetwork.bpmn2.tools.ecoremerger"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.bpmn2.tools.xsltFromEcore"
+         id="org.obeonetwork.bpmn2.tools.xsltFromEcore"
          download-size="0"
          install-size="0"
          version="0.0.0"
