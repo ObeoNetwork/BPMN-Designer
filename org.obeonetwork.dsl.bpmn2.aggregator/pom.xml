@@ -9,8 +9,6 @@
   <module>../org.obeonetwork.dsl.bpmn2</module>
   <module>../org.obeonetwork.dsl.bpmn2.edit</module>
   <module>../org.obeonetwork.dsl.bpmn2.editor</module>
-  <module>../org.obeonetwork.dsl.bpmn2.tools.ecoremerger</module>
-  <module>../org.obeonetwork.dsl.bpmn2.tools.xsltFromEcore</module>
   <module>../org.obeonetwork.dsl.bpmn2.design</module>
   <module>../org.obeonetwork.dsl.bpmn2.design.doc</module>
   <module>../org.obeonetwork.dsl.bpmn2.samples</module>
