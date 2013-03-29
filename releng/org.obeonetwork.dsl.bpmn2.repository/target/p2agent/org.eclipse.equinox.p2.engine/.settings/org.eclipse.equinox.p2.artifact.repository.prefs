@@ -1,0 +1,11 @@
+#Thu Mar 28 18:22:27 CET 2013
+repositories/file\:_home_atakarabt_git_BPMN-Designer_releng_org.obeonetwork.dsl.bpmn2.repository_target_p2agent_org.eclipse.equinox.p2.core_cache/type=org.eclipse.equinox.p2.artifact.repository.simpleRepository
+repositories/file\:_home_atakarabt_git_BPMN-Designer_releng_org.obeonetwork.dsl.bpmn2.repository_target_p2agent_org.eclipse.equinox.p2.core_cache/isSystem=true
+repositories/file\:_home_atakarabt_git_BPMN-Designer_releng_org.obeonetwork.dsl.bpmn2.repository_target_p2agent_org.eclipse.equinox.p2.core_cache/provider=
+repositories/file\:_home_atakarabt_git_BPMN-Designer_releng_org.obeonetwork.dsl.bpmn2.repository_target_p2agent_org.eclipse.equinox.p2.core_cache/suffix=artifacts.xml
+repositories/file\:_home_atakarabt_git_BPMN-Designer_releng_org.obeonetwork.dsl.bpmn2.repository_target_p2agent_org.eclipse.equinox.p2.core_cache/name=download cache
+repositories/file\:_home_atakarabt_git_BPMN-Designer_releng_org.obeonetwork.dsl.bpmn2.repository_target_p2agent_org.eclipse.equinox.p2.core_cache/description=
+eclipse.preferences.version=1
+repositories/file\:_home_atakarabt_git_BPMN-Designer_releng_org.obeonetwork.dsl.bpmn2.repository_target_p2agent_org.eclipse.equinox.p2.core_cache/enabled=true
+repositories/file\:_home_atakarabt_git_BPMN-Designer_releng_org.obeonetwork.dsl.bpmn2.repository_target_p2agent_org.eclipse.equinox.p2.core_cache/version=1.0.0
+repositories/file\:_home_atakarabt_git_BPMN-Designer_releng_org.obeonetwork.dsl.bpmn2.repository_target_p2agent_org.eclipse.equinox.p2.core_cache/uri=file\:/home/atakarabt/git/BPMN-Designer/releng/org.obeonetwork.dsl.bpmn2.repository/target/p2agent/org.eclipse.equinox.p2.core/cache/
