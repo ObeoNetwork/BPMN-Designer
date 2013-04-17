@@ -14,7 +14,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="RootElement" abstract="true" eSuperTypes="#//BaseElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="BaseElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionDefinitions" ordered="false"
         upperBound="-1" eType="#//ExtensionDefinition"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionValues" ordered="false"
