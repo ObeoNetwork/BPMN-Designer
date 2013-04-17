@@ -2,4 +2,4 @@ bin/
 *.class
 */*/target/
 /target/
-/.setting/
+/.settings/
