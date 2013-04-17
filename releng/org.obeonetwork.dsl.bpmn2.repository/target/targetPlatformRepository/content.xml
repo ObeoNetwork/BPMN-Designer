@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?metadataRepository version='1.1.0'?>
 <repository name='TychoTargetPlatform' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='0.0.1'>
-  <units size='247'>
+  <units size='256'>
     <unit id='fr.obeo.dsl.viewpoint.tree.ui' version='1.1.0.201205111413'>
       <update id='fr.obeo.dsl.viewpoint.tree.ui' range='[0.0.0,1.1.0.201205111413)' severity='0'/>
       <properties size='8'>
@@ -271,6 +271,45 @@
         <instructions size='1'>
           <instruction key='manifest'>
             Bundle-SymbolicName: org.apache.lucene.snowball&#xA;Bundle-Version: 2.9.1.v20100421-0704
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.obeonetwork.dsl.bpmn2.edit' version='1.0.0.201304171806'>
+      <update id='org.obeonetwork.dsl.bpmn2.edit' range='[0.0.0,1.0.0.201304171806)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='www.example.org'/>
+        <property name='df_LT.pluginName' value='Bpmn2 Edit Support'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='BPMN2'/>
+        <property name='maven-artifactId' value='org.obeonetwork.dsl.bpmn2.edit'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='8'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.edit' version='1.0.0.201304171806'/>
+        <provided namespace='osgi.bundle' name='org.obeonetwork.dsl.bpmn2.edit' version='1.0.0.201304171806'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.bpmn2.bpmdi.provider' version='0.0.0'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.bpmn2.provider' version='0.0.0'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.dd.dc.provider' version='0.0.0'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.dd.di.provider' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.obeonetwork.dsl.bpmn2' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.edit' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.obeonetwork.dsl.bpmn2.edit' version='1.0.0.201304171806'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-Version: 1.0.0.201304171806&#xA;Build-Jdk: 1.6.0_27&#xA;Bundle-ActivationPolicy: lazy&#xA;Export-Package: org.obeonetwork.dsl.bpmn2.bpmdi.provider,org.obeonetwork.dsl.bpmn2.provider,org.obeonetwork.dsl.dd.dc.provider,org.obeonetwork.dsl.dd.di.provider&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: .&#xA;Bundle-Activator: org.obeonetwork.dsl.bpmn2.provider.Bpmn2EditPlugin$Implementation&#xA;Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Require-Bundle: org.eclipse.core.runtime,org.obeonetwork.dsl.bpmn2;visibility:=reexport,org.eclipse.emf.edit;visibility:=reexport&#xA;Bundle-Localization: plugin&#xA;Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.edit;singleton:=true&#xA;Created-By: Apache Maven&#xA;Built-By: atakarabt&#xA;Bundle-Vendor: %providerName&#xA;Bundle-Name: %pluginName&#xA;Archiver-Version: Plexus Archiver&#xA;Bundle-ManifestVersion: 2
           </instruction>
         </instructions>
       </touchpointData>
@@ -2718,6 +2757,55 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='org.obeonetwork.dsl.bpmn2.feature.feature.group' version='1.0.0.201304171806' singleton='false'>
+      <update id='org.obeonetwork.dsl.bpmn2.feature.feature.group' range='[0.0.0,1.0.0.201304171806)' severity='0'/>
+      <properties size='8'>
+        <property name='org.eclipse.equinox.p2.name' value='BPMN-Designer'/>
+        <property name='org.eclipse.equinox.p2.description' value='BPMN Designer is compatible with the version 2.0 of the OMG standard &quot;Business Process Model and Notation&quot;.&#xA;It&apos;s based on the BPMN Domain Model of Eclipse Modeling MDT project.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://marketplace.obeonetwork.com/module/bpmn'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Obeo'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+        <property name='maven-groupId' value='BPMN2'/>
+        <property name='maven-artifactId' value='org.obeonetwork.dsl.bpmn2.feature'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.feature.feature.group' version='1.0.0.201304171806'/>
+      </provides>
+      <requires size='18'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.dsl.feature.designer.architect.feature.group' range='6.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.dsl.viewpoint.runtime.feature.group' range='6.4.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.dsl.viewpoint.runtime.acceleo2.feature.group' range='6.4.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.dsl.viewpoint.runtime.ocl.feature.group' range='6.4.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.dsl.viewpoint.runtime.acceleo.feature.group' range='6.4.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.dsl.viewpoint.runtime.ide.ui.feature.group' range='6.4.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.dsl.viewpoint.runtime.ide.ui.acceleo.feature.group' range='6.4.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.dsl.viewpoint.specifier.ide.ui.feature.group' range='6.4.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.dsl.viewpoint.specifier.ide.ui.acceleo.feature.group' range='6.4.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.mda.license' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.design' range='[1.0.0.201304171806,1.0.0.201304171806]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.samples' range='[1.0.0.201304171806,1.0.0.201304171806]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.samples.pack.core' range='[1.0.0.201304171806,1.0.0.201304171806]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.design.doc' range='[1.0.0.201304171806,1.0.0.201304171806]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2' range='[1.0.0.201304171806,1.0.0.201304171806]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.edit' range='[1.0.0.201304171806,1.0.0.201304171806]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.editor' range='[1.0.0.201304171806,1.0.0.201304171806]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.feature.feature.jar' range='[1.0.0.201304171806,1.0.0.201304171806]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='http://www.eclipse.org/legal/epl-v10.html' url='http://www.eclipse.org/legal/epl-v10.html'>
+          Eclipse Public License - v 1.0&#xA;THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS&#xA;ECLIPSE PUBLIC LICENSE (&quot;AGREEMENT&quot;). ANY USE, REPRODUCTION OR&#xA;DISTRIBUTION OF THE PROGRAM CONSTITUTES RECIPIENT&apos;S ACCEPTANCE&#xA;OF THIS AGREEMENT.&#xA;1. DEFINITIONS&#xA;&quot;Contribution&quot; means:&#xA;a) in the case of the initial Contributor, the initial code and&#xA;documentation distributed under this Agreement, and&#xA;b) in the case of each subsequent Contributor:&#xA;i) changes to the Program, and&#xA;ii) additions to the Program;&#xA;where such changes and/or additions to the Program originate&#xA;from and are distributed by that particular Contributor. A Contribution&#xA;&apos;originates&apos; from a Contributor if it was added to the Program&#xA;by such Contributor itself or anyone acting on such Contributor&apos;s&#xA;behalf. Contributions do not include additions to the Program&#xA;which: (i) are separate modules of software distributed in conjunction&#xA;with the Program under their own license agreement, and (ii)&#xA;are not derivative works of the Program.&#xA;&quot;Contributor&quot; means any person or entity that distributes the&#xA;Program.&#xA;&quot;Licensed Patents &quot; mean patent claims licensable by a Contributor&#xA;which are necessarily infringed by the use or sale of its Contribution&#xA;alone or when combined with the Program.&#xA;&quot;Program&quot; means the Contributions distributed in accordance with&#xA;this Agreement.&#xA;&quot;Recipient&quot; means anyone who receives the Program under this&#xA;Agreement, including all Contributors.&#xA;2. GRANT OF RIGHTS&#xA;a) Subject to the terms of this Agreement, each Contributor hereby&#xA;grants Recipient a non-exclusive, worldwide, royalty-free copyright&#xA;license to reproduce, prepare derivative works of, publicly display,&#xA;publicly perform, distribute and sublicense the Contribution&#xA;of such Contributor, if any, and such derivative works, in source&#xA;code and object code form.&#xA;b) Subject to the terms of this Agreement, each Contributor hereby&#xA;grants Recipient a non-exclusive, worldwide, royalty-free patent&#xA;license under Licensed Patents to make, use, sell, offer to sell,&#xA;import and otherwise transfer the Contribution of such Contributor,&#xA;if any, in source code and object code form. This patent license&#xA;shall apply to the combination of the Contribution and the Program&#xA;if, at the time the Contribution is added by the Contributor,&#xA;such addition of the Contribution causes such combination to&#xA;be covered by the Licensed Patents. The patent license shall&#xA;not apply to any other combinations which include the Contribution.&#xA;No hardware per se is licensed hereunder.&#xA;c) Recipient understands that although each Contributor grants&#xA;the licenses to its Contributions set forth herein, no assurances&#xA;are provided by any Contributor that the Program does not infringe&#xA;the patent or other intellectual property rights of any other&#xA;entity. Each Contributor disclaims any liability to Recipient&#xA;for claims brought by any other entity based on infringement&#xA;of intellectual property rights or otherwise. As a condition&#xA;to exercising the rights and licenses granted hereunder, each&#xA;Recipient hereby assumes sole responsibility to secure any other&#xA;intellectual property rights needed, if any. For example, if&#xA;a third party patent license is required to allow Recipient to&#xA;distribute the Program, it is Recipient&apos;s responsibility to acquire&#xA;that license before distributing the Program.&#xA;d) Each Contributor represents that to its knowledge it has sufficient&#xA;copyright rights in its Contribution, if any, to grant the copyright&#xA;license set forth in this Agreement.&#xA;3. REQUIREMENTS&#xA;A Contributor may choose to distribute the Program in object&#xA;code form under its own license agreement, provided that:&#xA;a) it complies with the terms and conditions of this Agreement;&#xA;and&#xA;b) its license agreement:&#xA;i) effectively disclaims on behalf of all Contributors all warranties&#xA;and conditions, express and implied, including warranties or&#xA;conditions of title and non-infringement, and implied warranties&#xA;or conditions of merchantability and fitness for a particular&#xA;purpose;&#xA;ii) effectively excludes on behalf of all Contributors all liability&#xA;for damages, including direct, indirect, special, incidental&#xA;and consequential damages, such as lost profits;&#xA;iii) states that any provisions which differ from this Agreement&#xA;are offered by that Contributor alone and not by any other party;&#xA;and&#xA;iv) states that source code for the Program is available from&#xA;such Contributor, and informs licensees how to obtain it in a&#xA;reasonable manner on or through a medium customarily used for&#xA;software exchange.&#xA;When the Program is made available in source code form:&#xA;a) it must be made available under this Agreement; and&#xA;b) a copy of this Agreement must be included with each copy of&#xA;the Program.&#xA;Contributors may not remove or alter any copyright notices contained&#xA;within the Program.&#xA;Each Contributor must identify itself as the originator of its&#xA;Contribution, if any, in a manner that reasonably allows subsequent&#xA;Recipients to identify the originator of the Contribution.&#xA;4. COMMERCIAL DISTRIBUTION&#xA;Commercial distributors of software may accept certain responsibilities&#xA;with respect to end users, business partners and the like. While&#xA;this license is intended to facilitate the commercial use of&#xA;the Program, the Contributor who includes the Program in a commercial&#xA;product offering should do so in a manner which does not create&#xA;potential liability for other Contributors. Therefore, if a Contributor&#xA;includes the Program in a commercial product offering, such Contributor&#xA;(&quot;Commercial Contributor&quot;) hereby agrees to defend and indemnify&#xA;every other Contributor (&quot;Indemnified Contributor&quot;) against any&#xA;losses, damages and costs (collectively &quot;Losses&quot;) arising from&#xA;claims, lawsuits and other legal actions brought by a third party&#xA;against the Indemnified Contributor to the extent caused by the&#xA;acts or omissions of such Commercial Contributor in connection&#xA;with its distribution of the Program in a commercial product&#xA;offering. The obligations in this section do not apply to any&#xA;claims or Losses relating to any actual or alleged intellectual&#xA;property infringement. In order to qualify, an Indemnified Contributor&#xA;must: a) promptly notify the Commercial Contributor in writing&#xA;of such claim, and b) allow the Commercial Contributor to control,&#xA;and cooperate with the Commercial Contributor in, the defense&#xA;and any related settlement negotiations. The Indemnified Contributor&#xA;may participate in any such claim at its own expense.&#xA;For example, a Contributor might include the Program in a commercial&#xA;product offering, Product X. That Contributor is then a Commercial&#xA;Contributor. If that Commercial Contributor then makes performance&#xA;claims, or offers warranties related to Product X, those performance&#xA;claims and warranties are such Commercial Contributor&apos;s responsibility&#xA;alone. Under this section, the Commercial Contributor would have&#xA;to defend claims against the other Contributors related to those&#xA;performance claims and warranties, and if a court requires any&#xA;other Contributor to pay any damages as a result, the Commercial&#xA;Contributor must pay those damages.&#xA;5. NO WARRANTY&#xA;EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM&#xA;IS PROVIDED ON AN &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS&#xA;OF ANY KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION,&#xA;ANY WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY&#xA;OR FITNESS FOR A PARTICULAR PURPOSE. Each Recipient is solely&#xA;responsible for determining the appropriateness of using and&#xA;distributing the Program and assumes all risks associated with&#xA;its exercise of rights under this Agreement , including but not&#xA;limited to the risks and costs of program errors, compliance&#xA;with applicable laws, damage to or loss of data, programs or&#xA;equipment, and unavailability or interruption of operations.&#xA;6. DISCLAIMER OF LIABILITY&#xA;EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT&#xA;NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,&#xA;INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES&#xA;(INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED AND&#xA;ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,&#xA;OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY&#xA;OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE EXERCISE&#xA;OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE POSSIBILITY&#xA;OF SUCH DAMAGES.&#xA;7. GENERAL&#xA;If any provision of this Agreement is invalid or unenforceable&#xA;under applicable law, it shall not affect the validity or enforceability&#xA;of the remainder of the terms of this Agreement, and without&#xA;further action by the parties hereto, such provision shall be&#xA;reformed to the minimum extent necessary to make such provision&#xA;valid and enforceable.&#xA;If Recipient institutes patent litigation against any entity&#xA;(including a cross-claim or counterclaim in a lawsuit) alleging&#xA;that the Program itself (excluding combinations of the Program&#xA;with other software or hardware) infringes such Recipient&apos;s patent(s),&#xA;then such Recipient&apos;s rights granted under Section 2(b) shall&#xA;terminate as of the date such litigation is filed.&#xA;All Recipient&apos;s rights under this Agreement shall terminate if&#xA;it fails to comply with any of the material terms or conditions&#xA;of this Agreement and does not cure such failure in a reasonable&#xA;period of time after becoming aware of such noncompliance. If&#xA;all Recipient&apos;s rights under this Agreement terminate, Recipient&#xA;agrees to cease use and distribution of the Program as soon as&#xA;reasonably practicable. However, Recipient&apos;s obligations under&#xA;this Agreement and any licenses granted by Recipient relating&#xA;to the Program shall continue and survive.&#xA;Everyone is permitted to copy and distribute copies of this Agreement,&#xA;but in order to avoid inconsistency the Agreement is copyrighted&#xA;and may only be modified in the following manner. The Agreement&#xA;Steward reserves the right to publish new versions (including&#xA;revisions) of this Agreement from time to time. No one other&#xA;than the Agreement Steward has the right to modify this Agreement.&#xA;The Eclipse Foundation is the initial Agreement Steward. The&#xA;Eclipse Foundation may assign the responsibility to serve as&#xA;the Agreement Steward to a suitable separate entity. Each new&#xA;version of the Agreement will be given a distinguishing version&#xA;number. The Program (including Contributions) may always be distributed&#xA;subject to the version of the Agreement under which it was received.&#xA;In addition, after a new version of the Agreement is published,&#xA;Contributor may elect to distribute the Program (including its&#xA;Contributions) under the new version. Except as expressly stated&#xA;in Sections 2(a) and 2(b) above, Recipient receives no rights&#xA;or licenses to the intellectual property of any Contributor under&#xA;this Agreement, whether expressly, by implication, estoppel or&#xA;otherwise. All rights in the Program not expressly granted under&#xA;this Agreement are reserved.&#xA;This Agreement is governed by the laws of the State of New York&#xA;and the intellectual property laws of the United States of America.&#xA;No party to this Agreement will bring a legal action under this&#xA;Agreement more than one year after the cause of action arose.&#xA;Each party waives its rights to a jury trial in any resulting&#xA;litigation.
+        </license>
+      </licenses>
+      <copyright uri='http://www.obeo.fr/legal.php' url='http://www.obeo.fr/legal.php'>
+        Copyright (c) 2010-2012 Obeo.&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License&#xA;v1.0 which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html
+      </copyright>
+    </unit>
     <unit id='fr.obeo.dsl.viewpoint.editor' version='1.0.0.201205111413'>
       <update id='fr.obeo.dsl.viewpoint.editor' range='[0.0.0,1.0.0.201205111413)' severity='0'/>
       <properties size='8'>
@@ -2937,6 +3025,44 @@
           </instruction>
         </instructions>
       </touchpointData>
+    </unit>
+    <unit id='org.obeonetwork.dsl.bpmn2.feature.feature.jar' version='1.0.0.201304171806'>
+      <properties size='7'>
+        <property name='org.eclipse.equinox.p2.name' value='BPMN-Designer'/>
+        <property name='org.eclipse.equinox.p2.description' value='BPMN Designer is compatible with the version 2.0 of the OMG standard &quot;Business Process Model and Notation&quot;.&#xA;It&apos;s based on the BPMN Domain Model of Eclipse Modeling MDT project.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://marketplace.obeonetwork.com/module/bpmn'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Obeo'/>
+        <property name='maven-groupId' value='BPMN2'/>
+        <property name='maven-artifactId' value='org.obeonetwork.dsl.bpmn2.feature'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.feature.feature.jar' version='1.0.0.201304171806'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.obeonetwork.dsl.bpmn2.feature' version='1.0.0.201304171806'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.obeonetwork.dsl.bpmn2.feature' version='1.0.0.201304171806'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='http://www.eclipse.org/legal/epl-v10.html' url='http://www.eclipse.org/legal/epl-v10.html'>
+          Eclipse Public License - v 1.0&#xA;THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS&#xA;ECLIPSE PUBLIC LICENSE (&quot;AGREEMENT&quot;). ANY USE, REPRODUCTION OR&#xA;DISTRIBUTION OF THE PROGRAM CONSTITUTES RECIPIENT&apos;S ACCEPTANCE&#xA;OF THIS AGREEMENT.&#xA;1. DEFINITIONS&#xA;&quot;Contribution&quot; means:&#xA;a) in the case of the initial Contributor, the initial code and&#xA;documentation distributed under this Agreement, and&#xA;b) in the case of each subsequent Contributor:&#xA;i) changes to the Program, and&#xA;ii) additions to the Program;&#xA;where such changes and/or additions to the Program originate&#xA;from and are distributed by that particular Contributor. A Contribution&#xA;&apos;originates&apos; from a Contributor if it was added to the Program&#xA;by such Contributor itself or anyone acting on such Contributor&apos;s&#xA;behalf. Contributions do not include additions to the Program&#xA;which: (i) are separate modules of software distributed in conjunction&#xA;with the Program under their own license agreement, and (ii)&#xA;are not derivative works of the Program.&#xA;&quot;Contributor&quot; means any person or entity that distributes the&#xA;Program.&#xA;&quot;Licensed Patents &quot; mean patent claims licensable by a Contributor&#xA;which are necessarily infringed by the use or sale of its Contribution&#xA;alone or when combined with the Program.&#xA;&quot;Program&quot; means the Contributions distributed in accordance with&#xA;this Agreement.&#xA;&quot;Recipient&quot; means anyone who receives the Program under this&#xA;Agreement, including all Contributors.&#xA;2. GRANT OF RIGHTS&#xA;a) Subject to the terms of this Agreement, each Contributor hereby&#xA;grants Recipient a non-exclusive, worldwide, royalty-free copyright&#xA;license to reproduce, prepare derivative works of, publicly display,&#xA;publicly perform, distribute and sublicense the Contribution&#xA;of such Contributor, if any, and such derivative works, in source&#xA;code and object code form.&#xA;b) Subject to the terms of this Agreement, each Contributor hereby&#xA;grants Recipient a non-exclusive, worldwide, royalty-free patent&#xA;license under Licensed Patents to make, use, sell, offer to sell,&#xA;import and otherwise transfer the Contribution of such Contributor,&#xA;if any, in source code and object code form. This patent license&#xA;shall apply to the combination of the Contribution and the Program&#xA;if, at the time the Contribution is added by the Contributor,&#xA;such addition of the Contribution causes such combination to&#xA;be covered by the Licensed Patents. The patent license shall&#xA;not apply to any other combinations which include the Contribution.&#xA;No hardware per se is licensed hereunder.&#xA;c) Recipient understands that although each Contributor grants&#xA;the licenses to its Contributions set forth herein, no assurances&#xA;are provided by any Contributor that the Program does not infringe&#xA;the patent or other intellectual property rights of any other&#xA;entity. Each Contributor disclaims any liability to Recipient&#xA;for claims brought by any other entity based on infringement&#xA;of intellectual property rights or otherwise. As a condition&#xA;to exercising the rights and licenses granted hereunder, each&#xA;Recipient hereby assumes sole responsibility to secure any other&#xA;intellectual property rights needed, if any. For example, if&#xA;a third party patent license is required to allow Recipient to&#xA;distribute the Program, it is Recipient&apos;s responsibility to acquire&#xA;that license before distributing the Program.&#xA;d) Each Contributor represents that to its knowledge it has sufficient&#xA;copyright rights in its Contribution, if any, to grant the copyright&#xA;license set forth in this Agreement.&#xA;3. REQUIREMENTS&#xA;A Contributor may choose to distribute the Program in object&#xA;code form under its own license agreement, provided that:&#xA;a) it complies with the terms and conditions of this Agreement;&#xA;and&#xA;b) its license agreement:&#xA;i) effectively disclaims on behalf of all Contributors all warranties&#xA;and conditions, express and implied, including warranties or&#xA;conditions of title and non-infringement, and implied warranties&#xA;or conditions of merchantability and fitness for a particular&#xA;purpose;&#xA;ii) effectively excludes on behalf of all Contributors all liability&#xA;for damages, including direct, indirect, special, incidental&#xA;and consequential damages, such as lost profits;&#xA;iii) states that any provisions which differ from this Agreement&#xA;are offered by that Contributor alone and not by any other party;&#xA;and&#xA;iv) states that source code for the Program is available from&#xA;such Contributor, and informs licensees how to obtain it in a&#xA;reasonable manner on or through a medium customarily used for&#xA;software exchange.&#xA;When the Program is made available in source code form:&#xA;a) it must be made available under this Agreement; and&#xA;b) a copy of this Agreement must be included with each copy of&#xA;the Program.&#xA;Contributors may not remove or alter any copyright notices contained&#xA;within the Program.&#xA;Each Contributor must identify itself as the originator of its&#xA;Contribution, if any, in a manner that reasonably allows subsequent&#xA;Recipients to identify the originator of the Contribution.&#xA;4. COMMERCIAL DISTRIBUTION&#xA;Commercial distributors of software may accept certain responsibilities&#xA;with respect to end users, business partners and the like. While&#xA;this license is intended to facilitate the commercial use of&#xA;the Program, the Contributor who includes the Program in a commercial&#xA;product offering should do so in a manner which does not create&#xA;potential liability for other Contributors. Therefore, if a Contributor&#xA;includes the Program in a commercial product offering, such Contributor&#xA;(&quot;Commercial Contributor&quot;) hereby agrees to defend and indemnify&#xA;every other Contributor (&quot;Indemnified Contributor&quot;) against any&#xA;losses, damages and costs (collectively &quot;Losses&quot;) arising from&#xA;claims, lawsuits and other legal actions brought by a third party&#xA;against the Indemnified Contributor to the extent caused by the&#xA;acts or omissions of such Commercial Contributor in connection&#xA;with its distribution of the Program in a commercial product&#xA;offering. The obligations in this section do not apply to any&#xA;claims or Losses relating to any actual or alleged intellectual&#xA;property infringement. In order to qualify, an Indemnified Contributor&#xA;must: a) promptly notify the Commercial Contributor in writing&#xA;of such claim, and b) allow the Commercial Contributor to control,&#xA;and cooperate with the Commercial Contributor in, the defense&#xA;and any related settlement negotiations. The Indemnified Contributor&#xA;may participate in any such claim at its own expense.&#xA;For example, a Contributor might include the Program in a commercial&#xA;product offering, Product X. That Contributor is then a Commercial&#xA;Contributor. If that Commercial Contributor then makes performance&#xA;claims, or offers warranties related to Product X, those performance&#xA;claims and warranties are such Commercial Contributor&apos;s responsibility&#xA;alone. Under this section, the Commercial Contributor would have&#xA;to defend claims against the other Contributors related to those&#xA;performance claims and warranties, and if a court requires any&#xA;other Contributor to pay any damages as a result, the Commercial&#xA;Contributor must pay those damages.&#xA;5. NO WARRANTY&#xA;EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM&#xA;IS PROVIDED ON AN &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS&#xA;OF ANY KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION,&#xA;ANY WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY&#xA;OR FITNESS FOR A PARTICULAR PURPOSE. Each Recipient is solely&#xA;responsible for determining the appropriateness of using and&#xA;distributing the Program and assumes all risks associated with&#xA;its exercise of rights under this Agreement , including but not&#xA;limited to the risks and costs of program errors, compliance&#xA;with applicable laws, damage to or loss of data, programs or&#xA;equipment, and unavailability or interruption of operations.&#xA;6. DISCLAIMER OF LIABILITY&#xA;EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT&#xA;NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,&#xA;INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES&#xA;(INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED AND&#xA;ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,&#xA;OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY&#xA;OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE EXERCISE&#xA;OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE POSSIBILITY&#xA;OF SUCH DAMAGES.&#xA;7. GENERAL&#xA;If any provision of this Agreement is invalid or unenforceable&#xA;under applicable law, it shall not affect the validity or enforceability&#xA;of the remainder of the terms of this Agreement, and without&#xA;further action by the parties hereto, such provision shall be&#xA;reformed to the minimum extent necessary to make such provision&#xA;valid and enforceable.&#xA;If Recipient institutes patent litigation against any entity&#xA;(including a cross-claim or counterclaim in a lawsuit) alleging&#xA;that the Program itself (excluding combinations of the Program&#xA;with other software or hardware) infringes such Recipient&apos;s patent(s),&#xA;then such Recipient&apos;s rights granted under Section 2(b) shall&#xA;terminate as of the date such litigation is filed.&#xA;All Recipient&apos;s rights under this Agreement shall terminate if&#xA;it fails to comply with any of the material terms or conditions&#xA;of this Agreement and does not cure such failure in a reasonable&#xA;period of time after becoming aware of such noncompliance. If&#xA;all Recipient&apos;s rights under this Agreement terminate, Recipient&#xA;agrees to cease use and distribution of the Program as soon as&#xA;reasonably practicable. However, Recipient&apos;s obligations under&#xA;this Agreement and any licenses granted by Recipient relating&#xA;to the Program shall continue and survive.&#xA;Everyone is permitted to copy and distribute copies of this Agreement,&#xA;but in order to avoid inconsistency the Agreement is copyrighted&#xA;and may only be modified in the following manner. The Agreement&#xA;Steward reserves the right to publish new versions (including&#xA;revisions) of this Agreement from time to time. No one other&#xA;than the Agreement Steward has the right to modify this Agreement.&#xA;The Eclipse Foundation is the initial Agreement Steward. The&#xA;Eclipse Foundation may assign the responsibility to serve as&#xA;the Agreement Steward to a suitable separate entity. Each new&#xA;version of the Agreement will be given a distinguishing version&#xA;number. The Program (including Contributions) may always be distributed&#xA;subject to the version of the Agreement under which it was received.&#xA;In addition, after a new version of the Agreement is published,&#xA;Contributor may elect to distribute the Program (including its&#xA;Contributions) under the new version. Except as expressly stated&#xA;in Sections 2(a) and 2(b) above, Recipient receives no rights&#xA;or licenses to the intellectual property of any Contributor under&#xA;this Agreement, whether expressly, by implication, estoppel or&#xA;otherwise. All rights in the Program not expressly granted under&#xA;this Agreement are reserved.&#xA;This Agreement is governed by the laws of the State of New York&#xA;and the intellectual property laws of the United States of America.&#xA;No party to this Agreement will bring a legal action under this&#xA;Agreement more than one year after the cause of action arose.&#xA;Each party waives its rights to a jury trial in any resulting&#xA;litigation.
+        </license>
+      </licenses>
+      <copyright uri='http://www.obeo.fr/legal.php' url='http://www.obeo.fr/legal.php'>
+        Copyright (c) 2010-2012 Obeo.&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License&#xA;v1.0 which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html
+      </copyright>
     </unit>
     <unit id='fr.obeo.dsl.viewpoint.runtime.ide.ui.feature.group' version='6.4.0.201205111413' singleton='false'>
       <update id='fr.obeo.dsl.viewpoint.runtime.ide.ui.feature.group' range='[0.0.0,6.4.0.201205111413)' severity='0'/>
@@ -4543,6 +4669,41 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='org.obeonetwork.dsl.bpmn2.samples.pack.core' version='1.0.0.201304171806'>
+      <update id='org.obeonetwork.dsl.bpmn2.samples.pack.core' range='[0.0.0,1.0.0.201304171806)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='Obeo'/>
+        <property name='df_LT.pluginName' value='BPMN2 Samples'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='BPMN2'/>
+        <property name='maven-artifactId' value='org.obeonetwork.dsl.bpmn2.samples.pack.core'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.samples.pack.core' version='1.0.0.201304171806'/>
+        <provided namespace='osgi.bundle' name='org.obeonetwork.dsl.bpmn2.samples.pack.core' version='1.0.0.201304171806'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.obeonetwork.dsl.bpmn2.samples' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.obeonetwork.dsl.bpmn2.samples.pack.core' version='1.0.0.201304171806'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-Name: %pluginName&#xA;Archiver-Version: Plexus Archiver&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.obeonetwork.dsl.bpmn2.samples&#xA;Build-Jdk: 1.6.0_27&#xA;Bundle-Activator: org.obeonetwork.dsl.bpmn2.samples.pack.core.CoreSamplePlugin&#xA;Bundle-Vendor: %providerName&#xA;Created-By: Apache Maven&#xA;Manifest-Version: 1.0&#xA;Bundle-Version: 1.0.0.201304171806&#xA;Bundle-Localization: plugin&#xA;Built-By: atakarabt&#xA;Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.samples.pack.core;singleton:=true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
     <unit id='org.eclipse.equinox.p2.garbagecollector' version='1.0.200.v20110815-1419'>
       <update id='org.eclipse.equinox.p2.garbagecollector' range='[0.0.0,1.0.200.v20110815-1419)' severity='0'/>
       <properties size='5'>
@@ -5420,6 +5581,49 @@
         <instructions size='1'>
           <instruction key='manifest'>
             Bundle-SymbolicName: org.eclipse.equinox.p2.repository.tools;singleton:=true&#xA;Bundle-Version: 2.0.100.v20110815-1438
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.obeonetwork.dsl.bpmn2.design' version='1.0.0.201304171806'>
+      <update id='org.obeonetwork.dsl.bpmn2.design' range='[0.0.0,1.0.0.201304171806)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='BPMN-Designer Viewpoint'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Obeo'/>
+        <property name='maven-groupId' value='BPMN2'/>
+        <property name='maven-artifactId' value='org.obeonetwork.dsl.bpmn2.design'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.design' version='1.0.0.201304171806'/>
+        <provided namespace='osgi.bundle' name='org.obeonetwork.dsl.bpmn2.design' version='1.0.0.201304171806'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.bpmn2.design' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='14'>
+        <required namespace='osgi.bundle' name='fr.obeo.acceleo.gen' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='fr.obeo.dsl.viewpoint' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='fr.obeo.dsl.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='fr.obeo.dsl.viewpoint.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.expressions' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.transaction' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.google.guava' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.obeonetwork.dsl.bpmn2' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='fr.obeo.dsl.viewpoint.diagram' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.gmf.runtime.notation' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.obeonetwork.dsl.bpmn2.design' version='1.0.0.201304171806'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Bundle-ActivationPolicy: lazy&#xA;Provide-Package: org.obeonetwork.dsl.bpmn2.design&#xA;Bundle-Name: BPMN-Designer Viewpoint&#xA;Archiver-Version: Plexus Archiver&#xA;Require-Bundle: fr.obeo.acceleo.gen,org.eclipse.ui,org.eclipse.core.runtime,fr.obeo.dsl.viewpoint,org.eclipse.ui.ide,org.eclipse.core.resources,fr.obeo.dsl.common,fr.obeo.dsl.viewpoint.ui,org.eclipse.core.expressions,org.eclipse.emf.transaction,com.google.guava,org.obeonetwork.dsl.bpmn2,fr.obeo.dsl.viewpoint.diagram&#xA;Build-Jdk: 1.6.0_27&#xA;Bundle-Activator: org.obeonetwork.bpmn2.design.Activator&#xA;Bundle-Vendor: Obeo&#xA;Created-By: Apache Maven&#xA;Manifest-Version: 1.0&#xA;Bundle-Version: 1.0.0.201304171806&#xA;Built-By: atakarabt&#xA;Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.design;singleton=true&#xA;Import-Package: org.eclipse.gmf.runtime.notation
           </instruction>
         </instructions>
       </touchpointData>
@@ -7373,6 +7577,36 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='org.obeonetwork.dsl.bpmn2.design.doc' version='1.0.0.201304171806'>
+      <update id='org.obeonetwork.dsl.bpmn2.design.doc' range='[0.0.0,1.0.0.201304171806)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='BPMN2 Designer Documentation'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Obeo Network'/>
+        <property name='maven-groupId' value='BPMN2'/>
+        <property name='maven-artifactId' value='org.obeonetwork.dsl.bpmn2.design.doc'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.design.doc' version='1.0.0.201304171806'/>
+        <provided namespace='osgi.bundle' name='org.obeonetwork.dsl.bpmn2.design.doc' version='1.0.0.201304171806'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='org.eclipse.help' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.intro' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.obeonetwork.dsl.bpmn2.design.doc' version='1.0.0.201304171806'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Archiver-Version: Plexus Archiver&#xA;Bundle-Vendor: Obeo Network&#xA;Bundle-ManifestVersion: 2&#xA;Built-By: atakarabt&#xA;Require-Bundle: org.eclipse.help,org.eclipse.ui.intro&#xA;Bundle-Name: BPMN2 Designer Documentation&#xA;Manifest-Version: 1.0&#xA;Build-Jdk: 1.6.0_27&#xA;Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.design.doc;singleton:=true&#xA;Bundle-Version: 1.0.0.201304171806&#xA;Created-By: Apache Maven
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
     <unit id='org.eclipse.equinox.frameworkadmin.equinox' version='1.0.300.v20110815-1438'>
       <update id='org.eclipse.equinox.frameworkadmin.equinox' range='[0.0.0,1.0.300.v20110815-1438)' severity='0'/>
       <properties size='5'>
@@ -8675,6 +8909,47 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='org.obeonetwork.dsl.bpmn2.editor' version='1.0.0.201304171806'>
+      <update id='org.obeonetwork.dsl.bpmn2.editor' range='[0.0.0,1.0.0.201304171806)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='www.example.org'/>
+        <property name='df_LT.pluginName' value='Bpmn2 Editor'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='BPMN2'/>
+        <property name='maven-artifactId' value='org.obeonetwork.dsl.bpmn2.editor'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.editor' version='1.0.0.201304171806'/>
+        <provided namespace='osgi.bundle' name='org.obeonetwork.dsl.bpmn2.editor' version='1.0.0.201304171806'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.bpmn2.bpmdi.presentation' version='0.0.0'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.bpmn2.presentation' version='0.0.0'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.dd.dc.presentation' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='6'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.obeonetwork.dsl.bpmn2.edit' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.ecore.xmi' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.edit.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.obeonetwork.dsl.bpmn2.editor' version='1.0.0.201304171806'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-Version: 1.0.0.201304171806&#xA;Build-Jdk: 1.6.0_27&#xA;Bundle-ActivationPolicy: lazy&#xA;Export-Package: org.obeonetwork.dsl.bpmn2.bpmdi.presentation,org.obeonetwork.dsl.bpmn2.presentation,org.obeonetwork.dsl.dd.dc.presentation&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: .&#xA;Bundle-Activator: org.obeonetwork.dsl.bpmn2.presentation.Bpmn2EditorPlugin$Implementation&#xA;Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Require-Bundle: org.eclipse.core.runtime,org.eclipse.core.resources;visibility:=reexport,org.obeonetwork.dsl.bpmn2.edit;visibility:=reexport,org.eclipse.emf.ecore.xmi;visibility:=reexport,org.eclipse.emf.edit.ui;visibility:=reexport,org.eclipse.ui.ide;visibility:=reexport&#xA;Bundle-Localization: plugin&#xA;Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.editor;singleton:=true&#xA;Created-By: Apache Maven&#xA;Built-By: atakarabt&#xA;Bundle-Vendor: %providerName&#xA;Bundle-Name: %pluginName&#xA;Archiver-Version: Plexus Archiver&#xA;Bundle-ManifestVersion: 2
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
     <unit id='org.eclipse.equinox.p2.updatesite' version='1.0.300.v20110815-1419'>
       <update id='org.eclipse.equinox.p2.updatesite' range='[0.0.0,1.0.300.v20110815-1419)' severity='0'/>
       <properties size='5'>
@@ -8861,6 +9136,49 @@
         <instructions size='1'>
           <instruction key='manifest'>
             Bundle-SymbolicName: org.eclipse.emf.ecore; singleton:=true&#xA;Bundle-Version: 2.7.0.v20120127-1122
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.obeonetwork.dsl.bpmn2' version='1.0.0.201304171806'>
+      <update id='org.obeonetwork.dsl.bpmn2' range='[0.0.0,1.0.0.201304171806)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='www.example.org'/>
+        <property name='df_LT.pluginName' value='bpmn2 Model'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='BPMN2'/>
+        <property name='maven-artifactId' value='org.obeonetwork.dsl.bpmn2'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='12'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2' version='1.0.0.201304171806'/>
+        <provided namespace='osgi.bundle' name='org.obeonetwork.dsl.bpmn2' version='1.0.0.201304171806'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.bpmn2' version='0.0.0'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.bpmn2.bpmdi' version='0.0.0'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.bpmn2.bpmdi.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.bpmn2.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.dd.dc' version='0.0.0'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.dd.dc.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.dd.di' version='0.0.0'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.dd.di.util' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.ecore.xmi' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.obeonetwork.dsl.bpmn2' version='1.0.0.201304171806'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Created-By: Apache Maven&#xA;Archiver-Version: Plexus Archiver&#xA;Manifest-Version: 1.0&#xA;Bundle-Name: %pluginName&#xA;Bundle-Vendor: %providerName&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-ClassPath: .&#xA;Build-Jdk: 1.6.0_27&#xA;Bundle-Version: 1.0.0.201304171806&#xA;Export-Package: org.obeonetwork.dsl.bpmn2,org.obeonetwork.dsl.bpmn2.bpmdi,org.obeonetwork.dsl.bpmn2.bpmdi.util,org.obeonetwork.dsl.bpmn2.util,org.obeonetwork.dsl.dd.dc,org.obeonetwork.dsl.dd.dc.util,org.obeonetwork.dsl.dd.di,org.obeonetwork.dsl.dd.di.util&#xA;Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibility:=reexport,org.eclipse.emf.ecore.xmi;visibility:=reexport&#xA;Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2;singleton:=true&#xA;Built-By: atakarabt&#xA;Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Bundle-Localization: plugin
           </instruction>
         </instructions>
       </touchpointData>
@@ -10732,6 +11050,43 @@
         <instructions size='1'>
           <instruction key='manifest'>
             Bundle-ManifestVersion: 2&#xA;Bundle-RequiredExecutionEnvironment: J2SE-1.4,J2SE-1.3,CDC-1.0/Foundation-1.0&#xA;Manifest-Version: 1.0&#xA;Bundle-Version: 1.0.1.v200903091627&#xA;Export-Package: org.w3c.dom.smil;version=&quot;1.0.0&quot;;provenance=W3C&#xA;Bundle-SymbolicName: org.w3c.dom.smil&#xA;Import-Package: org.w3c.dom,org.w3c.dom.events;version=&quot;[3.0.0,4.0.0)&quot;&#xA;Bundle-Localization: plugin&#xA;Bundle-Name: %pluginName&#xA;Bundle-Vendor: %providerName
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.obeonetwork.dsl.bpmn2.samples' version='1.0.0.201304171806'>
+      <update id='org.obeonetwork.dsl.bpmn2.samples' range='[0.0.0,1.0.0.201304171806)' severity='0'/>
+      <properties size='7'>
+        <property name='df_LT.providerName' value='Obeo'/>
+        <property name='org.eclipse.equinox.p2.name' value='Samples'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='BPMN2'/>
+        <property name='maven-artifactId' value='org.obeonetwork.dsl.bpmn2.samples'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.samples' version='1.0.0.201304171806'/>
+        <provided namespace='osgi.bundle' name='org.obeonetwork.dsl.bpmn2.samples' version='1.0.0.201304171806'/>
+        <provided namespace='java.package' name='org.obeonetwork.dsl.bpmn2.samples.wizards' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.forms' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.obeonetwork.dsl.bpmn2.samples' version='1.0.0.201304171806'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Created-By: Apache Maven&#xA;Archiver-Version: Plexus Archiver&#xA;Manifest-Version: 1.0&#xA;Bundle-Name: Samples&#xA;Bundle-Vendor: %providerName&#xA;Bundle-ActivationPolicy: lazy&#xA;Build-Jdk: 1.6.0_27&#xA;Bundle-Version: 1.0.0.201304171806&#xA;Export-Package: org.obeonetwork.dsl.bpmn2.samples.wizards&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui.ide,org.eclipse.core.resources,org.eclipse.ui.forms&#xA;Bundle-Activator: org.obeonetwork.dsl.bpmn2.samples.Bpmn2SamplesPlugin&#xA;Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.samples;singleton:=true&#xA;Built-By: atakarabt&#xA;Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Bundle-Localization: plugin
           </instruction>
         </instructions>
       </touchpointData>

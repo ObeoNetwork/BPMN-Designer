@@ -2,21 +2,21 @@
 <?metadataRepository version='1.1.0'?>
 <repository name='publisher repository' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1364491346907'/>
+    <property name='p2.timestamp' value='1366216423940'/>
     <property name='p2.compressed' value='false'/>
   </properties>
   <units size='1'>
-    <unit id='201303281822.BPMN Designer' version='1.0.0.2--cNFIA677359397I5I77'>
+    <unit id='201304171833.BPMN Designer' version='1.0.0.2--cNFIA6773593A5G5I3E'>
       <properties size='3'>
         <property name='org.eclipse.equinox.p2.name' value='BPMN Designer'/>
         <property name='org.eclipse.equinox.p2.description' value='BPMN Designer is compatible with the version 2.0 of the OMG standard &quot;Business Process Model and Notation&quot;.&#xA;&#xA;It&apos;s based on the BPMN Domain Model of Eclipse Modeling MDT project.'/>
         <property name='org.eclipse.equinox.p2.type.category' value='true'/>
       </properties>
       <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='201303281822.BPMN Designer' version='1.0.0.2--cNFIA677359397I5I77'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='201304171833.BPMN Designer' version='1.0.0.2--cNFIA6773593A5G5I3E'/>
       </provides>
       <requires size='1'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.feature.feature.group' range='[1.0.0.201303281822,1.0.0.201303281822]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.obeonetwork.dsl.bpmn2.feature.feature.group' range='[1.0.0.201304171806,1.0.0.201304171806]'/>
       </requires>
       <touchpoint id='null' version='0.0.0'/>
     </unit>

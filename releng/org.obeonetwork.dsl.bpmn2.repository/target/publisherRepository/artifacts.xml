@@ -2,7 +2,7 @@
 <?artifactRepository version='1.1.0'?>
 <repository name='publisher repository' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1364491346906'/>
+    <property name='p2.timestamp' value='1366216423940'/>
     <property name='p2.compressed' value='false'/>
   </properties>
   <mappings size='3'>
