@@ -1,2 +1,5 @@
 bin/
-
+*.class
+*/*/target/
+/target/
+/.setting/

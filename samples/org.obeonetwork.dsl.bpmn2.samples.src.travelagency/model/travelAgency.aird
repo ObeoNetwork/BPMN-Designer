@@ -996,7 +996,7 @@
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-            <ownedStyle xmi:type="viewpoint:WorkspaceImage" xmi:id="_0yyEIKMbEeGHD-bQ1bdFIw" showIcon="false" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/StartEvent.png">
+            <ownedStyle xmi:type="viewpoint:WorkspaceImage" xmi:id="_0yyEIKMbEeGHD-bQ1bdFIw" showIcon="false" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/StartEvent.png">
               <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent']/@style"/>
             </ownedStyle>
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent']"/>
@@ -1007,7 +1007,7 @@
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-            <ownedStyle xmi:type="viewpoint:WorkspaceImage" xmi:id="_0y1HcKMbEeGHD-bQ1bdFIw" showIcon="false" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/EndEvent.png">
+            <ownedStyle xmi:type="viewpoint:WorkspaceImage" xmi:id="_0y1HcKMbEeGHD-bQ1bdFIw" showIcon="false" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/EndEvent.png">
               <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent']/@style"/>
             </ownedStyle>
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent']"/>
@@ -1182,7 +1182,7 @@
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-            <ownedStyle xmi:type="viewpoint:WorkspaceImage" xmi:id="_0zFmIKMbEeGHD-bQ1bdFIw" showIcon="false" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/ParallelGateway.png">
+            <ownedStyle xmi:type="viewpoint:WorkspaceImage" xmi:id="_0zFmIKMbEeGHD-bQ1bdFIw" showIcon="false" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/ParallelGateway.png">
               <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway']/@style"/>
             </ownedStyle>
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway']"/>
@@ -1193,7 +1193,7 @@
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-            <ownedStyle xmi:type="viewpoint:WorkspaceImage" xmi:id="_0zGNMKMbEeGHD-bQ1bdFIw" showIcon="false" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/ParallelGateway.png">
+            <ownedStyle xmi:type="viewpoint:WorkspaceImage" xmi:id="_0zGNMKMbEeGHD-bQ1bdFIw" showIcon="false" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/ParallelGateway.png">
               <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway']/@style"/>
             </ownedStyle>
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway']"/>
@@ -1204,7 +1204,7 @@
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-            <ownedStyle xmi:type="viewpoint:WorkspaceImage" xmi:id="_0zICYKMbEeGHD-bQ1bdFIw" showIcon="false" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/EndEvent.png">
+            <ownedStyle xmi:type="viewpoint:WorkspaceImage" xmi:id="_0zICYKMbEeGHD-bQ1bdFIw" showIcon="false" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/EndEvent.png">
               <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent']/@style"/>
             </ownedStyle>
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent']"/>
@@ -1263,7 +1263,7 @@
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-            <ownedStyle xmi:type="viewpoint:WorkspaceImage" xmi:id="_0zNh8aMbEeGHD-bQ1bdFIw" showIcon="false" workspacePath="/org.eclipse.bpmn2.edit/icons/full/obj32/EventBasedGateway.png">
+            <ownedStyle xmi:type="viewpoint:WorkspaceImage" xmi:id="_0zNh8aMbEeGHD-bQ1bdFIw" showIcon="false" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/EventBasedGateway.png">
               <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EventBasedGateway']/@style"/>
             </ownedStyle>
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EventBasedGateway']"/>
