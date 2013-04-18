@@ -43,7 +43,7 @@ public interface ScriptTask extends Task {
 	 * @return the value of the '<em>Script Format</em>' attribute.
 	 * @see #setScriptFormat(String)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getScriptTask_ScriptFormat()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	String getScriptFormat();
@@ -69,7 +69,7 @@ public interface ScriptTask extends Task {
 	 * @return the value of the '<em>Script</em>' attribute.
 	 * @see #setScript(String)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getScriptTask_Script()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	String getScript();

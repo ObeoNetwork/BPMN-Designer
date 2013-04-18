@@ -524,7 +524,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Attribute name : EString<<1..1>>
 
   Class ServiceTask -> Task
-    Attribute implementation : EString<<1..1>>
+    Attribute implementation : EString
     Reference operationRef : Operation
 
   Class SubProcess -> Activity, FlowElementsContainer
@@ -568,11 +568,11 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference messageRef : Message
 
   Class ScriptTask -> Task
-    Attribute scriptFormat : EString<<1..1>>
-    Attribute script : EString<<1..1>>
+    Attribute scriptFormat : EString
+    Attribute script : EString
 
   Class BusinessRuleTask -> Task
-    Attribute implementation : EString<<1..1>>
+    Attribute implementation : EString
 
   Class AdHocSubProcess -> SubProcess
     Reference completionCondition : Expression<<1..1>>
