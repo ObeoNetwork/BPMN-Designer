@@ -73,7 +73,7 @@ public interface Association extends Artifact {
 	 * @return the value of the '<em>Source Ref</em>' reference.
 	 * @see #setSourceRef(BaseElement)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getAssociation_SourceRef()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	BaseElement getSourceRef();
@@ -99,7 +99,7 @@ public interface Association extends Artifact {
 	 * @return the value of the '<em>Target Ref</em>' reference.
 	 * @see #setTargetRef(BaseElement)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getAssociation_TargetRef()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	BaseElement getTargetRef();

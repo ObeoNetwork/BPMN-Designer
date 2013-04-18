@@ -71,7 +71,7 @@ public interface MessageFlow extends BaseElement {
 	 * @return the value of the '<em>Source Ref</em>' reference.
 	 * @see #setSourceRef(InteractionNode)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getMessageFlow_SourceRef()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	InteractionNode getSourceRef();
@@ -97,7 +97,7 @@ public interface MessageFlow extends BaseElement {
 	 * @return the value of the '<em>Target Ref</em>' reference.
 	 * @see #setTargetRef(InteractionNode)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getMessageFlow_TargetRef()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	InteractionNode getTargetRef();

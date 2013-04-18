@@ -47,7 +47,7 @@ public interface InputOutputSpecification extends BaseElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input Sets</em>' containment reference list.
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getInputOutputSpecification_InputSets()
-	 * @model containment="true" required="true" ordered="false"
+	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	EList<InputSet> getInputSets();
@@ -63,7 +63,7 @@ public interface InputOutputSpecification extends BaseElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output Sets</em>' containment reference list.
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getInputOutputSpecification_OutputSets()
-	 * @model containment="true" required="true" ordered="false"
+	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	EList<OutputSet> getOutputSets();

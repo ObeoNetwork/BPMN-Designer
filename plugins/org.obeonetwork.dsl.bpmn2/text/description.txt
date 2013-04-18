@@ -86,8 +86,8 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference ioBinding : InputOutputBinding<<0..*>>
 
   Class InputOutputSpecification -> BaseElement
-    Reference inputSets : InputSet<<1..*>>
-    Reference outputSets : OutputSet<<1..*>>
+    Reference inputSets : InputSet<<0..*>>
+    Reference outputSets : OutputSet<<0..*>>
     Reference dataInputs : DataInput<<0..*>>
     Reference dataOutputs : DataOutput<<0..*>>
 
@@ -103,7 +103,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Attribute isCollection : EBoolean<<1..1>>
     Reference /inputSetWithOptional : InputSet<<0..*>>
     Reference /inputSetWithWhileExecuting : InputSet<<0..*>>
-    Reference /inputSetRefs : InputSet<<1..*>>
+    Reference /inputSetRefs : InputSet<<0..*>>
 
   Class ItemAwareElement -> BaseElement
     Reference itemSubjectRef : ItemDefinition
@@ -205,8 +205,8 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
   Class SequenceFlow -> FlowElement
     Attribute isImmediate : EBoolean
     Reference conditionExpression : Expression
-    Reference targetRef : FlowNode<<1..1>>
-    Reference sourceRef : FlowNode<<1..1>>
+    Reference targetRef : FlowNode
+    Reference sourceRef : FlowNode
 
   Class Property -> ItemAwareElement
     Attribute name : EString<<1..1>>
@@ -259,8 +259,8 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
 
   Class MessageFlow -> BaseElement
     Attribute name : EString
-    Reference sourceRef : InteractionNode<<1..1>>
-    Reference targetRef : InteractionNode<<1..1>>
+    Reference sourceRef : InteractionNode
+    Reference targetRef : InteractionNode
     Reference messageRef : Message
 
   Class ConversationAssociation -> BaseElement
@@ -516,8 +516,8 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
 
   Class Association -> Artifact
     Attribute associationDirection : AssociationDirection<<1..1>>
-    Reference sourceRef : BaseElement<<1..1>>
-    Reference targetRef : BaseElement<<1..1>>
+    Reference sourceRef : BaseElement
+    Reference targetRef : BaseElement
 
   Class Category -> RootElement
     Reference categoryValue : CategoryValue<<0..*>>

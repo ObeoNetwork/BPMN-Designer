@@ -139,7 +139,7 @@ public interface DataInput extends ItemAwareElement {
 	 * @return the value of the '<em>Input Set Refs</em>' reference list.
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getDataInput_InputSetRefs()
 	 * @see org.obeonetwork.dsl.bpmn2.InputSet#getDataInputRefs
-	 * @model opposite="dataInputRefs" required="true" transient="true" derived="true" ordered="false"
+	 * @model opposite="dataInputRefs" transient="true" derived="true" ordered="false"
 	 * @generated
 	 */
 	EList<InputSet> getInputSetRefs();

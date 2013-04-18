@@ -120,9 +120,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputOutputSpecification" eSuperTypes="#//BaseElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputSets" ordered="false"
-        lowerBound="1" upperBound="-1" eType="#//InputSet" containment="true"/>
+        upperBound="-1" eType="#//InputSet" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputSets" ordered="false"
-        lowerBound="1" upperBound="-1" eType="#//OutputSet" containment="true"/>
+        upperBound="-1" eType="#//OutputSet" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataInputs" ordered="false"
         upperBound="-1" eType="#//DataInput" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataOutputs" ordered="false"
@@ -152,8 +152,7 @@
         ordered="false" upperBound="-1" eType="#//InputSet" transient="true" derived="true"
         eOpposite="#//InputSet/whileExecutingInputRefs"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputSetRefs" ordered="false"
-        lowerBound="1" upperBound="-1" eType="#//InputSet" transient="true" derived="true"
-        eOpposite="#//InputSet/dataInputRefs"/>
+        upperBound="-1" eType="#//InputSet" transient="true" derived="true" eOpposite="#//InputSet/dataInputRefs"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ItemAwareElement" eSuperTypes="#//BaseElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="itemSubjectRef" ordered="false"
@@ -315,9 +314,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="conditionExpression" ordered="false"
         eType="#//Expression" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetRef" ordered="false"
-        lowerBound="1" eType="#//FlowNode" eOpposite="#//FlowNode/incoming"/>
+        eType="#//FlowNode" eOpposite="#//FlowNode/incoming"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRef" ordered="false"
-        lowerBound="1" eType="#//FlowNode" eOpposite="#//FlowNode/outgoing"/>
+        eType="#//FlowNode" eOpposite="#//FlowNode/outgoing"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ProcessType">
     <eLiterals name="None"/>
@@ -404,9 +403,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="MessageFlow" eSuperTypes="#//BaseElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRef" ordered="false"
-        lowerBound="1" eType="#//InteractionNode"/>
+        eType="#//InteractionNode"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetRef" ordered="false"
-        lowerBound="1" eType="#//InteractionNode"/>
+        eType="#//InteractionNode"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="messageRef" ordered="false"
         eType="#//Message"/>
   </eClassifiers>
@@ -793,9 +792,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="associationDirection" ordered="false"
         lowerBound="1" eType="#//AssociationDirection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRef" ordered="false"
-        lowerBound="1" eType="#//BaseElement"/>
+        eType="#//BaseElement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetRef" ordered="false"
-        lowerBound="1" eType="#//BaseElement"/>
+        eType="#//BaseElement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AssociationDirection">
     <eLiterals name="None"/>

@@ -99,7 +99,7 @@ public interface SequenceFlow extends FlowElement {
 	 * @see #setTargetRef(FlowNode)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getSequenceFlow_TargetRef()
 	 * @see org.obeonetwork.dsl.bpmn2.FlowNode#getIncoming
-	 * @model opposite="incoming" required="true" ordered="false"
+	 * @model opposite="incoming" ordered="false"
 	 * @generated
 	 */
 	FlowNode getTargetRef();
@@ -127,7 +127,7 @@ public interface SequenceFlow extends FlowElement {
 	 * @see #setSourceRef(FlowNode)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getSequenceFlow_SourceRef()
 	 * @see org.obeonetwork.dsl.bpmn2.FlowNode#getOutgoing
-	 * @model opposite="outgoing" required="true" ordered="false"
+	 * @model opposite="outgoing" ordered="false"
 	 * @generated
 	 */
 	FlowNode getSourceRef();
