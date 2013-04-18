@@ -19,7 +19,7 @@
 	<property name="dest.dir" value="examples" />
 	<property name="src.base.dir" value=".." />
 
-	<!--<property name="test.dir" value="${src.base.dir}/org.obeonetwork.dsl.bpmn2.samples.src.test" /> -->
+	<property name="nobelprize.dir" value="${src.base.dir}/org.obeonetwork.dsl.bpmn2.samples.src.nobelprize" />
 	<property name="travelagency.dir" value="${src.base.dir}/org.obeonetwork.dsl.bpmn2.samples.src.travelagency" />
 
 	<!-- Clean -->
@@ -31,14 +31,18 @@
 
 	<!-- Build zip files -->
 	<target name="buildZips" depends="clean">
-		<!--<zip
-		destfile="${dest.dir}/test.zip"
-		basedir="${test.dir}/" 
-		excludes=".svn/**, target/**"/>-->
+		<zip
+		destfile="${dest.dir}/nobelprize.zip"
+		basedir="${nobelprize.dir}/" 
+		excludes=".svn/**, target/**"/>
 		<zip
 		destfile="${dest.dir}/travelagency.zip"
 		basedir="${travelagency.dir}/" 
 		excludes=".svn/**, target/**"/>
 	</target>
+	
+	
+	
+	
 
 </project>
