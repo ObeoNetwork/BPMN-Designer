@@ -670,6 +670,8 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+        
+        <!--
           <ownedTools xsi:type="tool:ToolDescription" name="ChoreographyTask" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;ChoreographyTask&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;Task&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
             <element name="element"/>
             <elementView name="elementView"/>
@@ -695,6 +697,9 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          -->
+          
+          
           <ownedTools xsi:type="tool:ToolDescription" name="Manual Task" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
@@ -1257,7 +1262,8 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Group" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='Group']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Group.png">
+          
+   <!--       <ownedTools xsi:type="tool:ContainerCreationDescription" name="Group" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='Group']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Group.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1266,6 +1272,9 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          
+          -->
+          
         </toolSections>
         <decorationDescriptionsSet>
           <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="ScriptTask" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/ScriptTask.png" preconditionExpression="&lt;%self.filter(&quot;ScriptTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
