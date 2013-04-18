@@ -43,7 +43,7 @@ public interface TextAnnotation extends Artifact {
 	 * @return the value of the '<em>Text</em>' attribute.
 	 * @see #setText(String)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getTextAnnotation_Text()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	String getText();

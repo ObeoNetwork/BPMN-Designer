@@ -47,7 +47,7 @@ public interface ChoreographyActivity extends FlowNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Participant Refs</em>' reference list.
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getChoreographyActivity_ParticipantRefs()
-	 * @model lower="2" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	EList<Participant> getParticipantRefs();
@@ -63,7 +63,7 @@ public interface ChoreographyActivity extends FlowNode {
 	 * @return the value of the '<em>Initiating Participant Ref</em>' reference.
 	 * @see #setInitiatingParticipantRef(Participant)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getChoreographyActivity_InitiatingParticipantRef()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	Participant getInitiatingParticipantRef();

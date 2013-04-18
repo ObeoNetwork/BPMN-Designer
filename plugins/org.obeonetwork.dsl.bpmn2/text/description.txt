@@ -92,7 +92,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference dataOutputs : DataOutput<<0..*>>
 
   Class InputSet -> BaseElement
-    Attribute name : EString<<1..1>>
+    Attribute name : EString
     Reference dataInputRefs : DataInput<<0..*>>
     Reference optionalInputRefs : DataInput<<0..*>>
     Reference whileExecutingInputRefs : DataInput<<0..*>>
@@ -116,7 +116,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference dataOutputRefs : DataOutput<<0..*>>
     Reference optionalOutputRefs : DataOutput<<0..*>>
     Reference /whileExecutingOutputRefs : DataOutput<<0..*>>
-    Attribute name : EString<<1..1>>
+    Attribute name : EString
     Reference inputSetRefs : InputSet<<0..*>>
 
   Class DataOutput -> ItemAwareElement
@@ -124,7 +124,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Attribute isCollection : EBoolean<<1..1>>
     Reference /outputSetWithOptional : OutputSet<<0..*>>
     Reference /outputSetWithWhileExecuting : OutputSet<<0..*>>
-    Reference /outputSetRefs : OutputSet<<1..*>>
+    Reference /outputSetRefs : OutputSet<<0..*>>
 
   Class InputOutputBinding
     Reference inputDataRef : InputSet<<1..1>>
@@ -234,7 +234,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference outerParticipantRef : Participant<<1..1>>
 
   Class Participant -> BaseElement, InteractionNode
-    Attribute name : EString<<1..1>>
+    Attribute name : EString
     Reference interfaceRefs : Interface<<0..*>>
     Reference participantMultiplicity : ParticipantMultiplicity
     Reference endPointRefs : EndPoint<<0..*>>
@@ -435,7 +435,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference timeDuration : Expression
 
   Class LinkEventDefinition -> EventDefinition
-    Attribute name : EString<<1..1>>
+    Attribute name : EString
     Reference target : LinkEventDefinition
     Reference source : LinkEventDefinition<<0..*>>
 
@@ -489,8 +489,8 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference participantRef : Participant<<0..*>>
 
   Class ChoreographyActivity -> FlowNode
-    Reference participantRefs : Participant<<2..*>>
-    Reference initiatingParticipantRef : Participant<<1..1>>
+    Reference participantRefs : Participant<<0..*>>
+    Reference initiatingParticipantRef : Participant
     Reference correlationKeys : CorrelationKey<<0..*>>
     Attribute loopType : ChoreographyLoopType<<1..1>>
 
@@ -502,13 +502,13 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference artifacts : Artifact<<0..*>>
 
   Class ChoreographyTask -> ChoreographyActivity
-    Reference messageFlowRef : MessageFlow<<1..2>>
+    Reference messageFlowRef : MessageFlow<<0..2>>
 
   Class GlobalChoreographyTask -> Choreography
     Reference initiatingParticipantRef : Participant<<1..1>>
 
   Class TextAnnotation -> Artifact
-    Attribute text : EString<<1..1>>
+    Attribute text : EString
     Attribute textFormat : EString<<1..1>>
 
   Class Group -> Artifact

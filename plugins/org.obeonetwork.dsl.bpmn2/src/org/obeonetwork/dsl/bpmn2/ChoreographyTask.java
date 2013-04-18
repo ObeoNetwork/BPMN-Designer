@@ -44,7 +44,7 @@ public interface ChoreographyTask extends ChoreographyActivity {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Message Flow Ref</em>' reference list.
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getChoreographyTask_MessageFlowRef()
-	 * @model required="true" upper="2" ordered="false"
+	 * @model upper="2" ordered="false"
 	 * @generated
 	 */
 	EList<MessageFlow> getMessageFlowRef();

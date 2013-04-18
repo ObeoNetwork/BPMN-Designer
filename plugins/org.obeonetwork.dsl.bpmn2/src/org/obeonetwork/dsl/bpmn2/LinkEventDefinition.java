@@ -46,7 +46,7 @@ public interface LinkEventDefinition extends EventDefinition {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getLinkEventDefinition_Name()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	String getName();

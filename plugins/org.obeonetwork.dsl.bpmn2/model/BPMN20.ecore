@@ -129,8 +129,7 @@
         upperBound="-1" eType="#//DataOutput" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputSet" eSuperTypes="#//BaseElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataInputRefs" ordered="false"
         upperBound="-1" eType="#//DataInput" resolveProxies="false" eOpposite="#//DataInput/inputSetRefs"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="optionalInputRefs" ordered="false"
@@ -172,8 +171,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="whileExecutingOutputRefs"
         ordered="false" upperBound="-1" eType="#//DataOutput" derived="true" resolveProxies="false"
         eOpposite="#//DataOutput/outputSetWithWhileExecuting"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputSetRefs" ordered="false"
         upperBound="-1" eType="#//InputSet" eOpposite="#//InputSet/outputSetRefs"/>
   </eClassifiers>
@@ -189,8 +187,7 @@
         ordered="false" upperBound="-1" eType="#//OutputSet" transient="true" derived="true"
         eOpposite="#//OutputSet/whileExecutingOutputRefs"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputSetRefs" ordered="false"
-        lowerBound="1" upperBound="-1" eType="#//OutputSet" transient="true" derived="true"
-        eOpposite="#//OutputSet/dataOutputRefs"/>
+        upperBound="-1" eType="#//OutputSet" transient="true" derived="true" eOpposite="#//OutputSet/dataOutputRefs"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputOutputBinding">
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputDataRef" ordered="false"
@@ -361,8 +358,7 @@
         lowerBound="1" eType="#//Participant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Participant" eSuperTypes="#//BaseElement #//InteractionNode">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceRefs" ordered="false"
         upperBound="-1" eType="#//Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="participantMultiplicity"
@@ -669,8 +665,7 @@
         eType="#//Expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LinkEventDefinition" eSuperTypes="#//EventDefinition">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" ordered="false"
         eType="#//LinkEventDefinition" eOpposite="#//LinkEventDefinition/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" ordered="false"
@@ -745,9 +740,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="ChoreographyActivity" abstract="true"
       eSuperTypes="#//FlowNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="participantRefs" ordered="false"
-        lowerBound="2" upperBound="-1" eType="#//Participant"/>
+        upperBound="-1" eType="#//Participant"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="initiatingParticipantRef"
-        ordered="false" lowerBound="1" eType="#//Participant"/>
+        ordered="false" eType="#//Participant"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="correlationKeys" ordered="false"
         upperBound="-1" eType="#//CorrelationKey" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="loopType" ordered="false"
@@ -771,15 +766,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ChoreographyTask" eSuperTypes="#//ChoreographyActivity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="messageFlowRef" ordered="false"
-        lowerBound="1" upperBound="2" eType="#//MessageFlow"/>
+        upperBound="2" eType="#//MessageFlow"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GlobalChoreographyTask" eSuperTypes="#//Choreography">
     <eStructuralFeatures xsi:type="ecore:EReference" name="initiatingParticipantRef"
         ordered="false" lowerBound="1" eType="#//Participant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TextAnnotation" eSuperTypes="#//Artifact">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="textFormat" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="text/plain"/>

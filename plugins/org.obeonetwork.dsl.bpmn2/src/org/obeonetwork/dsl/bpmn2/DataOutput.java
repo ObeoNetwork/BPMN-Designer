@@ -139,7 +139,7 @@ public interface DataOutput extends ItemAwareElement {
 	 * @return the value of the '<em>Output Set Refs</em>' reference list.
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getDataOutput_OutputSetRefs()
 	 * @see org.obeonetwork.dsl.bpmn2.OutputSet#getDataOutputRefs
-	 * @model opposite="dataOutputRefs" required="true" transient="true" derived="true" ordered="false"
+	 * @model opposite="dataOutputRefs" transient="true" derived="true" ordered="false"
 	 * @generated
 	 */
 	EList<OutputSet> getOutputSetRefs();
