@@ -20,6 +20,7 @@
 	<property name="src.base.dir" value=".." />
 
 	<property name="nobelprize.dir" value="${src.base.dir}/org.obeonetwork.dsl.bpmn2.samples.src.nobelprize" />
+	
 	<property name="travelagency.dir" value="${src.base.dir}/org.obeonetwork.dsl.bpmn2.samples.src.travelagency" />
 
 	<!-- Clean -->
@@ -32,13 +33,14 @@
 	<!-- Build zip files -->
 	<target name="buildZips" depends="clean">
 		<zip
+				destfile="${dest.dir}/travelagency.zip"
+				basedir="${travelagency.dir}/" 
+				excludes=".svn/**, target/**"/>
+		<zip
 		destfile="${dest.dir}/nobelprize.zip"
 		basedir="${nobelprize.dir}/" 
 		excludes=".svn/**, target/**"/>
-		<zip
-		destfile="${dest.dir}/travelagency.zip"
-		basedir="${travelagency.dir}/" 
-		excludes=".svn/**, target/**"/>
+		
 	</target>
 	
 	
