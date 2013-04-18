@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="di"
+    nsURI="http://www.omg.org/spec/DD/20100524/DI-XMI" nsPrefix="di">
+  <eClassifiers xsi:type="ecore:EClass" name="DiagramElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owningDiagram" ordered="false"
+        eType="#//Diagram" changeable="false" transient="true" derived="true" resolveProxies="false"
+        eOpposite="#//Diagram/rootElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owningElement" ordered="false"
+        eType="#//DiagramElement" changeable="false" transient="true" derived="true"
+        resolveProxies="false" eOpposite="#//DiagramElement/ownedElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedElement" ordered="false"
+        upperBound="-1" eType="#//DiagramElement" changeable="false" transient="true"
+        derived="true" resolveProxies="false" eOpposite="#//DiagramElement/owningElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modelElement" ordered="false"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" changeable="false"
+        transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="style" ordered="false"
+        eType="#//Style" changeable="false" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Diagram" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="documentation" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resolution" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedStyle" ordered="false"
+        upperBound="-1" eType="#//Style" changeable="false" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rootElement" ordered="false"
+        lowerBound="1" eType="#//DiagramElement" changeable="false" transient="true"
+        derived="true" resolveProxies="false" eOpposite="#//DiagramElement/owningDiagram"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Style" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true" eSuperTypes="#//DiagramElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Edge" abstract="true" eSuperTypes="#//DiagramElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" ordered="false"
+        eType="#//DiagramElement" changeable="false" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" ordered="false"
+        eType="#//DiagramElement" changeable="false" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="waypoint" lowerBound="2"
+        upperBound="-1" eType="ecore:EClass DC.ecore#//Point" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Shape" abstract="true" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bounds" ordered="false"
+        lowerBound="1" eType="ecore:EClass DC.ecore#//Bounds" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LabeledEdge" abstract="true" eSuperTypes="#//Edge">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedLabel" ordered="false"
+        upperBound="-1" eType="#//Label" changeable="false" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Label" abstract="true" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bounds" ordered="false"
+        eType="ecore:EClass DC.ecore#//Bounds" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LabeledShape" abstract="true" eSuperTypes="#//Shape">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedLabel" ordered="false"
+        upperBound="-1" eType="#//Label" changeable="false" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Plane" abstract="true" eSuperTypes="#//Node">
+    <eOperations name="plane_element_type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="planeElement->forAll(oclIsKindOf(Shape) or oclIsKindOf(Edge))"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="planeElement" upperBound="-1"
+        eType="#//DiagramElement" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

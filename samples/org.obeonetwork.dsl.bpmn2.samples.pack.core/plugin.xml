@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!--
+ <copyright>
+  Copyright (c) 2011-2012 Obeo
+  
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+ 
+  Contributors:
+     Obeo - initial API and implementation
+ </copyright>
+-->
+<plugin>
+   <extension
+         point="org.obeonetwork.dsl.bpmn2.samples.Bpmn2Sample">
+    <!--  <Bpmn2Sample
+            class="org.obeonetwork.dsl.bpmn2.samples.pack.core.TestSample"
+            id="org.obeonetwork.dsl.bpmn2.samples.pack.core.Bpmn2Sample1"
+            name="oorg.obeonetwork.dsl.bpmn2.samples.pack.core.Bpmn2Sample1">
+      </Bpmn2Sample>-->
+            <Bpmn2Sample
+            class="org.obeonetwork.dsl.bpmn2.samples.pack.core.TravelAgencySample"
+            id="org.obeonetwork.dsl.bpmn2.samples.pack.core.Bpmn2Sample2"
+            name="oorg.obeonetwork.dsl.bpmn2.samples.pack.core.Bpmn2Sample2">
+      </Bpmn2Sample>
+            <Bpmn2Sample
+                  class="org.obeonetwork.dsl.bpmn2.samples.pack.core.NobelPrizeSample"
+                  id="org.obeonetwork.dsl.bpmn2.samples.pack.core.Bpmn2Sample1"
+                  name="org.obeonetwork.dsl.bpmn2.samples.pack.core.Bpmn2Sample1">
+            </Bpmn2Sample>
+   </extension>
+</plugin>
