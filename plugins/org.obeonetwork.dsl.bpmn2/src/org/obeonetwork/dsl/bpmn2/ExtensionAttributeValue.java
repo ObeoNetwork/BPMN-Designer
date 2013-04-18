@@ -98,7 +98,7 @@ public interface ExtensionAttributeValue extends EObject {
 	 * @return the value of the '<em>Extension Attribute Definition</em>' reference.
 	 * @see #setExtensionAttributeDefinition(ExtensionAttributeDefinition)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getExtensionAttributeValue_ExtensionAttributeDefinition()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	ExtensionAttributeDefinition getExtensionAttributeDefinition();

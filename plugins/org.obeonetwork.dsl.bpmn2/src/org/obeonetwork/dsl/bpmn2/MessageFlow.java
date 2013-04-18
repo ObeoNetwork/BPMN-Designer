@@ -45,7 +45,7 @@ public interface MessageFlow extends BaseElement {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getMessageFlow_Name()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	String getName();

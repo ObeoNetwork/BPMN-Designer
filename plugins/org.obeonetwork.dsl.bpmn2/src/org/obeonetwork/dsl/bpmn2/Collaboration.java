@@ -55,7 +55,7 @@ public interface Collaboration extends RootElement {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getCollaboration_Name()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	String getName();
@@ -171,7 +171,7 @@ public interface Collaboration extends RootElement {
 	 * @return the value of the '<em>Conversation Associations</em>' containment reference.
 	 * @see #setConversationAssociations(ConversationAssociation)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getCollaboration_ConversationAssociations()
-	 * @model containment="true" required="true" ordered="false"
+	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	ConversationAssociation getConversationAssociations();

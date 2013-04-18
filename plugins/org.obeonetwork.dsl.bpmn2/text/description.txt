@@ -39,7 +39,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
   Class ExtensionAttributeValue
     Reference valueRef : EObject
     Reference value : EObject
-    Reference extensionAttributeDefinition : ExtensionAttributeDefinition<<1..1>>
+    Reference extensionAttributeDefinition : ExtensionAttributeDefinition
 
   Class Documentation -> BaseElement
     Attribute text : EString<<1..1>>
@@ -53,7 +53,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference implementationRef : EObject
 
   Class Message -> RootElement
-    Attribute name : EString<<1..1>>
+    Attribute name : EString
     Reference itemRef : ItemDefinition
 
   Class ItemDefinition -> RootElement
@@ -191,7 +191,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Attribute name : EString
 
   Class Lane -> BaseElement
-    Attribute name : EString<<1..1>>
+    Attribute name : EString
     Reference childLaneSet : LaneSet
     Reference partitionElementRef : BaseElement
     Reference flowNodeRefs : FlowNode<<0..*>>
@@ -212,13 +212,13 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Attribute name : EString<<1..1>>
 
   Class Collaboration -> RootElement
-    Attribute name : EString<<1..1>>
+    Attribute name : EString
     Attribute isClosed : EBoolean<<1..1>>
     Reference choreographyRef : Choreography<<0..*>>
     Reference artifacts : Artifact<<0..*>>
     Reference participantAssociations : ParticipantAssociation<<0..*>>
     Reference messageFlowAssociations : MessageFlowAssociation<<0..*>>
-    Reference conversationAssociations : ConversationAssociation<<1..1>>
+    Reference conversationAssociations : ConversationAssociation
     Reference participants : Participant<<0..*>>
     Reference messageFlows : MessageFlow<<0..*>>
     Reference correlationKeys : CorrelationKey<<0..*>>
@@ -258,7 +258,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference outerMessageFlowRef : MessageFlow<<1..1>>
 
   Class MessageFlow -> BaseElement
-    Attribute name : EString<<1..1>>
+    Attribute name : EString
     Reference sourceRef : InteractionNode<<1..1>>
     Reference targetRef : InteractionNode<<1..1>>
     Reference messageRef : Message
@@ -459,7 +459,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Attribute isCollection : EBoolean<<1..1>>
 
   Class DataStore -> ItemAwareElement, RootElement
-    Attribute name : EString<<1..1>>
+    Attribute name : EString
     Attribute capacity : EInt<<1..1>>
     Attribute isUnlimited : EBoolean<<1..1>>
 

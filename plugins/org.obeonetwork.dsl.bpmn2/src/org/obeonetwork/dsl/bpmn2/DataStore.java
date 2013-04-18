@@ -44,7 +44,7 @@ public interface DataStore extends ItemAwareElement, RootElement {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getDataStore_Name()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	String getName();

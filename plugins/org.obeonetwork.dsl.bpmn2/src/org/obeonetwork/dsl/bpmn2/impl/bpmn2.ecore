@@ -46,7 +46,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" ordered="false"
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionAttributeDefinition"
-        ordered="false" lowerBound="1" eType="#//ExtensionAttributeDefinition"/>
+        ordered="false" eType="#//ExtensionAttributeDefinition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Documentation" eSuperTypes="#//BaseElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" ordered="false" lowerBound="1"
@@ -68,8 +68,7 @@
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="#//RootElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="itemRef" ordered="false"
         eType="#//ItemDefinition"/>
   </eClassifiers>
@@ -292,8 +291,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Lane" eSuperTypes="#//BaseElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="childLaneSet" ordered="false"
         eType="#//LaneSet" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="partitionElementRef" ordered="false"
@@ -331,8 +329,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Collaboration" eSuperTypes="#//RootElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isClosed" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="choreographyRef" ordered="false"
@@ -344,7 +341,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="messageFlowAssociations"
         ordered="false" upperBound="-1" eType="#//MessageFlowAssociation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="conversationAssociations"
-        ordered="false" lowerBound="1" eType="#//ConversationAssociation" containment="true"/>
+        ordered="false" eType="#//ConversationAssociation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="participants" ordered="false"
         upperBound="-1" eType="#//Participant" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="messageFlows" ordered="false"
@@ -405,8 +402,7 @@
         lowerBound="1" eType="#//MessageFlow"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MessageFlow" eSuperTypes="#//BaseElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRef" ordered="false"
         lowerBound="1" eType="#//InteractionNode"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetRef" ordered="false"
@@ -708,8 +704,7 @@
         defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataStore" eSuperTypes="#//ItemAwareElement #//RootElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isUnlimited" ordered="false"
