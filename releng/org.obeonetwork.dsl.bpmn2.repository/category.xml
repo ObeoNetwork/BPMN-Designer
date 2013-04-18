@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.obeonetwork.dsl.bpmn2.feature_1.0.0.qualifier.jar" id="org.obeonetwork.dsl.bpmn2.feature" version="1.0.0.qualifier">
+   <feature url="features/org.obeonetwork.dsl.bpmn2.feature_1.1.0.qualifier.jar" id="org.obeonetwork.dsl.bpmn2.feature" version="1.0.0.qualifier">
       <category name="BPMN Designer"/>
    </feature>
    <category-def name="BPMN Designer" label="BPMN Designer">
