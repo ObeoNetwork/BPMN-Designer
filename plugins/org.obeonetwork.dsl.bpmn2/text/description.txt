@@ -80,7 +80,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference resources : ResourceRole<<0..*>>
 
   Class CallableElement -> RootElement
-    Attribute name : EString<<1..1>>
+    Attribute name : EString
     Reference ioSpecification : InputOutputSpecification
     Reference supportedInterfaceRefs : Interface<<0..*>>
     Reference ioBinding : InputOutputBinding<<0..*>>
@@ -177,7 +177,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference laneSets : LaneSet<<0..*>>
 
   Class FlowElement -> BaseElement
-    Attribute name : EString<<1..1>>
+    Attribute name : EString
     Reference auditing : Auditing
     Reference monitoring : Monitoring
     Reference categoryValueRef : CategoryValue<<0..*>>
@@ -353,7 +353,7 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
 
   Class UserTask -> Task
     Reference renderings : Rendering<<0..*>>
-    Attribute implementation : EString<<1..1>>
+    Attribute implementation : EString
 
   Class Rendering -> BaseElement
 
@@ -557,12 +557,12 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference calledElementRef : CallableElement
 
   Class SendTask -> Task
-    Attribute implementation : EString<<1..1>>
+    Attribute implementation : EString
     Reference operationRef : Operation
     Reference messageRef : Message
 
   Class ReceiveTask -> Task
-    Attribute implementation : EString<<1..1>>
+    Attribute implementation : EString
     Attribute instantiate : EBoolean<<1..1>>
     Reference operationRef : Operation
     Reference messageRef : Message
@@ -591,8 +591,8 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Attribute implementation : EString<<1..1>>
 
   Class Definitions -> BaseElement
-    Attribute name : EString<<1..1>>
-    Attribute targetNamespace : EString<<1..1>>
+    Attribute name : EString
+    Attribute targetNamespace : EString
     Attribute expressionLanguage : EString<<1..1>>
     Attribute typeLanguage : EString<<1..1>>
     Reference imports : Import<<0..*>>
@@ -600,8 +600,8 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference relationships : Relationship<<0..*>>
     Reference rootElements : RootElement<<0..*>>
     Reference diagrams : BPMNDiagram<<0..*>>
-    Attribute exporter : EString<<1..1>>
-    Attribute exporterVersion : EString<<1..1>>
+    Attribute exporter : EString
+    Attribute exporterVersion : EString
 
   Enum ItemKind
     Literal Physical = 0

@@ -45,7 +45,7 @@ public interface ReceiveTask extends Task {
 	 * @return the value of the '<em>Implementation</em>' attribute.
 	 * @see #setImplementation(String)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getReceiveTask_Implementation()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	String getImplementation();

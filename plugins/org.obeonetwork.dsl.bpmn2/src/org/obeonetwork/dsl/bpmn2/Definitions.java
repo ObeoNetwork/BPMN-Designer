@@ -56,7 +56,7 @@ public interface Definitions extends BaseElement {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getDefinitions_Name()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	String getName();
@@ -82,7 +82,7 @@ public interface Definitions extends BaseElement {
 	 * @return the value of the '<em>Target Namespace</em>' attribute.
 	 * @see #setTargetNamespace(String)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getDefinitions_TargetNamespace()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	String getTargetNamespace();
@@ -242,7 +242,7 @@ public interface Definitions extends BaseElement {
 	 * @return the value of the '<em>Exporter</em>' attribute.
 	 * @see #setExporter(String)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getDefinitions_Exporter()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	String getExporter();
@@ -268,7 +268,7 @@ public interface Definitions extends BaseElement {
 	 * @return the value of the '<em>Exporter Version</em>' attribute.
 	 * @see #setExporterVersion(String)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getDefinitions_ExporterVersion()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	String getExporterVersion();

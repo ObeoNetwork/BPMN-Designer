@@ -111,8 +111,7 @@
         upperBound="-1" eType="#//ResourceRole" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CallableElement" abstract="true" eSuperTypes="#//RootElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ioSpecification" ordered="false"
         eType="#//InputOutputSpecification" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="supportedInterfaceRefs"
@@ -271,8 +270,7 @@
         upperBound="-1" eType="#//LaneSet" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FlowElement" abstract="true" eSuperTypes="#//BaseElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="auditing" ordered="false"
         eType="#//Auditing" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="monitoring" ordered="false"
@@ -553,7 +551,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="renderings" ordered="false"
         upperBound="-1" eType="#//Rendering" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementation" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rendering" eSuperTypes="#//BaseElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="HumanPerformer" eSuperTypes="#//Performer"/>
@@ -880,7 +878,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SendTask" eSuperTypes="#//Task">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementation" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operationRef" ordered="false"
         eType="#//Operation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="messageRef" ordered="false"
@@ -888,7 +886,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ReceiveTask" eSuperTypes="#//Task">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementation" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="instantiate" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
@@ -937,10 +935,9 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Definitions" eSuperTypes="#//BaseElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetNamespace" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expressionLanguage" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="http://www.w3.org/1999/XPath"/>
@@ -959,8 +956,8 @@
         upperBound="-1" eType="ecore:EClass http://www.omg.org/spec/BPMN/20100524/DI-XMI#//BPMNDiagram"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="exporter" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="exporterVersion" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>
