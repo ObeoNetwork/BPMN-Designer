@@ -16,17 +16,17 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="MessageFlow" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='LinkDirectEdit']" semanticCandidatesExpression="&lt;%eContainer(&quot;Definitions&quot;).rootElements.filter(&quot;Collaboration&quot;).messageFlows%>" sourceMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Receive%20Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Receive%20Task']/@borderedNodeMappings[name='ReceiveTaskBorder'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Send%20Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Send%20Task']/@borderedNodeMappings[name='SendTaskBorder'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']" targetMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Receive%20Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Send%20Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateCatchEvent']" targetFinderExpression="&lt;%targetRef%>" sourceFinderExpression="&lt;%sourceRef%>" domainClass="MessageFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='ReconnectTargetMessageFlow'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='ReconnectSourceMessageFlow']">
-          <style lineStyle="dash" sourceArrow="OutputClosedArrow" targetArrow="InputFillClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+        <edgeMappings name="MessageFlow" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='LinkDirectEdit']" semanticCandidatesExpression="&lt;%eContainer(&quot;Definitions&quot;).rootElements.filter(&quot;Collaboration&quot;).messageFlows%>" sourceMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Receive%20Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Receive%20Task']/@borderedNodeMappings[name='ReceiveTaskBorder'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Send%20Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Send%20Task']/@borderedNodeMappings[name='SendTaskBorder'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']" targetMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Receive%20Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Send%20Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateCatchEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='BoundaryEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']" targetFinderExpression="&lt;%targetRef%>" sourceFinderExpression="&lt;%sourceRef%>" domainClass="MessageFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='ReconnectTargetMessageFlow'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='ReconnectSourceMessageFlow']">
+          <style lineStyle="dash" targetArrow="InputFillClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription labelFormat="italic" labelExpression="." iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/ReceiveTask.png">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </centerLabelStyleDescription>
           </style>
-          <conditionnalStyles predicateExpression="&lt;%$view.sourceNode.target.filter(&quot;SendTask&quot;)%>">
+          <conditionnalStyles predicateExpression="&lt;%$view.sourceNode.target.filter(&quot;SendTask&quot;) %>">
             <style lineStyle="dash" sourceArrow="OutputClosedArrow" targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <centerLabelStyleDescription labelFormat="italic" labelExpression="." iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/SendTask.png">
+              <centerLabelStyleDescription labelSize="0" labelExpression="." iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/SendTask.png">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </centerLabelStyleDescription>
             </style>
@@ -670,36 +670,6 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-        
-        <!--
-          <ownedTools xsi:type="tool:ToolDescription" name="ChoreographyTask" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;ChoreographyTask&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;Task&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.eContainer(&quot;Process&quot;)%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.ChoreographyTask" referenceName="flowElements" variableName="task">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
-                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Choreography Task"/>
-                  </subModelOperations>
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="SequenceFlow" referenceName="flowElements" variableName="sequenceFlow">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$element%>"/>
-                    <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$task%>"/>
-                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.lanes%>"/>
-                  </subModelOperations>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)==null &amp;&amp; $element.filter(&quot;IntermediateCatchEvent&quot;)==null &amp;&amp; $element.filter(&quot;EndEvent&quot;)==null &amp;&amp; $element.filter(&quot;StartEvent&quot;)==null &amp;&amp; $element.filter(&quot;Task&quot;)==null &amp;&amp; $element.filter(&quot;ParallelGateway&quot;)==null &amp;&amp; $element.filter(&quot;ExclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;InclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;ComplexGateway&quot;)==null &amp;&amp; $element.filter(&quot;EventBasedGateway&quot;)==null%>">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.ChoreographyTask" referenceName="flowElements">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.trace()%>"/>
-                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Choreography Task"/>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          -->
-          
-          
           <ownedTools xsi:type="tool:ToolDescription" name="Manual Task" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
@@ -1262,19 +1232,6 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          
-   <!--       <ownedTools xsi:type="tool:ContainerCreationDescription" name="Group" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='Group']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Group.png">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Group" referenceName="artifacts"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          
-          -->
-          
         </toolSections>
         <decorationDescriptionsSet>
           <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="ScriptTask" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/ScriptTask.png" preconditionExpression="&lt;%self.filter(&quot;ScriptTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
