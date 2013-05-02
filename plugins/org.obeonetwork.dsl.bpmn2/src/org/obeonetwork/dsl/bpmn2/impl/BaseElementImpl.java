@@ -109,11 +109,10 @@ public abstract class BaseElementImpl extends EObjectImpl implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	protected BaseElementImpl() {
 		super();
-		this.id = EcoreUtil.generateUUID();
 	}
 
 	/**
