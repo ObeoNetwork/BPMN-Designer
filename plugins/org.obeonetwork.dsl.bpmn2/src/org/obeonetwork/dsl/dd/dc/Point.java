@@ -14,7 +14,6 @@
  */
 package org.obeonetwork.dsl.dd.dc;
 
-import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -32,10 +31,9 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.obeonetwork.dsl.dd.dc.DcPackage#getPoint()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Point extends CDOObject {
+public interface Point extends EObject {
 	/**
 	 * Returns the value of the '<em><b>X</b></em>' attribute.
 	 * The default value is <code>"0"</code>.

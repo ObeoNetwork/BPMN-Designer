@@ -15,10 +15,7 @@
 package org.obeonetwork.dsl.dd.di.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.obeonetwork.dsl.dd.di.DiPackage;
 import org.obeonetwork.dsl.dd.di.Style;
 
@@ -31,7 +28,7 @@ import org.obeonetwork.dsl.dd.di.Style;
  *
  * @generated
  */
-public abstract class StyleImpl extends CDOObjectImpl implements Style {
+public abstract class StyleImpl extends EObjectImpl implements Style {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,16 +46,6 @@ public abstract class StyleImpl extends CDOObjectImpl implements Style {
 	@Override
 	protected EClass eStaticClass() {
 		return DiPackage.Literals.STYLE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 } //StyleImpl

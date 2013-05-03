@@ -18,17 +18,12 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.DataInput;
 import org.obeonetwork.dsl.bpmn2.InputSet;
@@ -51,6 +46,70 @@ import org.obeonetwork.dsl.bpmn2.InputSet;
  * @generated
  */
 public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+	/**
+	 * The default value of the '{@link #isIsCollection() <em>Is Collection</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsCollection()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_COLLECTION_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isIsCollection() <em>Is Collection</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsCollection()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isCollection = IS_COLLECTION_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getInputSetWithOptional() <em>Input Set With Optional</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputSetWithOptional()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<InputSet> inputSetWithOptional;
+	/**
+	 * The cached value of the '{@link #getInputSetWithWhileExecuting() <em>Input Set With While Executing</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputSetWithWhileExecuting()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<InputSet> inputSetWithWhileExecuting;
+	/**
+	 * The cached value of the '{@link #getInputSetRefs() <em>Input Set Refs</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputSetRefs()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<InputSet> inputSetRefs;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,7 +135,7 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eGet(Bpmn2Package.Literals.DATA_INPUT__NAME, true);
+		return name;
 	}
 
 	/**
@@ -85,7 +144,11 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eSet(Bpmn2Package.Literals.DATA_INPUT__NAME, newName);
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.DATA_INPUT__NAME, oldName, name));
 	}
 
 	/**
@@ -94,8 +157,7 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 * @generated
 	 */
 	public boolean isIsCollection() {
-		return (Boolean) eGet(Bpmn2Package.Literals.DATA_INPUT__IS_COLLECTION,
-				true);
+		return isCollection;
 	}
 
 	/**
@@ -104,7 +166,12 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 * @generated
 	 */
 	public void setIsCollection(boolean newIsCollection) {
-		eSet(Bpmn2Package.Literals.DATA_INPUT__IS_COLLECTION, newIsCollection);
+		boolean oldIsCollection = isCollection;
+		isCollection = newIsCollection;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.DATA_INPUT__IS_COLLECTION, oldIsCollection,
+					isCollection));
 	}
 
 	/**
@@ -114,8 +181,13 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<InputSet> getInputSetWithOptional() {
-		return (EList<InputSet>) eGet(
-				Bpmn2Package.Literals.DATA_INPUT__INPUT_SET_WITH_OPTIONAL, true);
+		if (inputSetWithOptional == null) {
+			inputSetWithOptional = new EObjectWithInverseResolvingEList.ManyInverse<InputSet>(
+					InputSet.class, this,
+					Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL,
+					Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS);
+		}
+		return inputSetWithOptional;
 	}
 
 	/**
@@ -125,9 +197,13 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<InputSet> getInputSetWithWhileExecuting() {
-		return (EList<InputSet>) eGet(
-				Bpmn2Package.Literals.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING,
-				true);
+		if (inputSetWithWhileExecuting == null) {
+			inputSetWithWhileExecuting = new EObjectWithInverseResolvingEList.ManyInverse<InputSet>(
+					InputSet.class, this,
+					Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING,
+					Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS);
+		}
+		return inputSetWithWhileExecuting;
 	}
 
 	/**
@@ -137,8 +213,184 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<InputSet> getInputSetRefs() {
-		return (EList<InputSet>) eGet(
-				Bpmn2Package.Literals.DATA_INPUT__INPUT_SET_REFS, true);
+		if (inputSetRefs == null) {
+			inputSetRefs = new EObjectWithInverseResolvingEList.ManyInverse<InputSet>(
+					InputSet.class, this,
+					Bpmn2Package.DATA_INPUT__INPUT_SET_REFS,
+					Bpmn2Package.INPUT_SET__DATA_INPUT_REFS);
+		}
+		return inputSetRefs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getInputSetWithOptional())
+					.basicAdd(otherEnd, msgs);
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getInputSetWithWhileExecuting())
+					.basicAdd(otherEnd, msgs);
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_REFS:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getInputSetRefs())
+					.basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL:
+			return ((InternalEList<?>) getInputSetWithOptional()).basicRemove(
+					otherEnd, msgs);
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING:
+			return ((InternalEList<?>) getInputSetWithWhileExecuting())
+					.basicRemove(otherEnd, msgs);
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_REFS:
+			return ((InternalEList<?>) getInputSetRefs()).basicRemove(otherEnd,
+					msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case Bpmn2Package.DATA_INPUT__NAME:
+			return getName();
+		case Bpmn2Package.DATA_INPUT__IS_COLLECTION:
+			return isIsCollection();
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL:
+			return getInputSetWithOptional();
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING:
+			return getInputSetWithWhileExecuting();
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_REFS:
+			return getInputSetRefs();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case Bpmn2Package.DATA_INPUT__NAME:
+			setName((String) newValue);
+			return;
+		case Bpmn2Package.DATA_INPUT__IS_COLLECTION:
+			setIsCollection((Boolean) newValue);
+			return;
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL:
+			getInputSetWithOptional().clear();
+			getInputSetWithOptional().addAll(
+					(Collection<? extends InputSet>) newValue);
+			return;
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING:
+			getInputSetWithWhileExecuting().clear();
+			getInputSetWithWhileExecuting().addAll(
+					(Collection<? extends InputSet>) newValue);
+			return;
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_REFS:
+			getInputSetRefs().clear();
+			getInputSetRefs().addAll((Collection<? extends InputSet>) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.DATA_INPUT__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case Bpmn2Package.DATA_INPUT__IS_COLLECTION:
+			setIsCollection(IS_COLLECTION_EDEFAULT);
+			return;
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL:
+			getInputSetWithOptional().clear();
+			return;
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING:
+			getInputSetWithWhileExecuting().clear();
+			return;
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_REFS:
+			getInputSetRefs().clear();
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.DATA_INPUT__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+					.equals(name);
+		case Bpmn2Package.DATA_INPUT__IS_COLLECTION:
+			return isCollection != IS_COLLECTION_EDEFAULT;
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL:
+			return inputSetWithOptional != null
+					&& !inputSetWithOptional.isEmpty();
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING:
+			return inputSetWithWhileExecuting != null
+					&& !inputSetWithWhileExecuting.isEmpty();
+		case Bpmn2Package.DATA_INPUT__INPUT_SET_REFS:
+			return inputSetRefs != null && !inputSetRefs.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", isCollection: ");
+		result.append(isCollection);
+		result.append(')');
+		return result.toString();
 	}
 
 } //DataInputImpl

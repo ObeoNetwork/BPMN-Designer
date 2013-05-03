@@ -7,9 +7,7 @@
 package org.obeonetwork.dsl.dd.di.validation;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.obeonetwork.dsl.dd.dc.Point;
-
 import org.obeonetwork.dsl.dd.di.DiagramElement;
 
 /**

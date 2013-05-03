@@ -15,13 +15,9 @@
 package org.obeonetwork.dsl.dd.dc.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.obeonetwork.dsl.dd.dc.Bounds;
 import org.obeonetwork.dsl.dd.dc.DcPackage;
 
@@ -41,7 +37,80 @@ import org.obeonetwork.dsl.dd.dc.DcPackage;
  *
  * @generated
  */
-public class BoundsImpl extends CDOObjectImpl implements Bounds {
+public class BoundsImpl extends EObjectImpl implements Bounds {
+	/**
+	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getX()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float X_EDEFAULT = 0.0F;
+	/**
+	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getX()
+	 * @generated
+	 * @ordered
+	 */
+	protected float x = X_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getY()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float Y_EDEFAULT = 0.0F;
+	/**
+	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getY()
+	 * @generated
+	 * @ordered
+	 */
+	protected float y = Y_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float WIDTH_EDEFAULT = 0.0F;
+	/**
+	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected float width = WIDTH_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float HEIGHT_EDEFAULT = 0.0F;
+	/**
+	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected float height = HEIGHT_EDEFAULT;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,18 +135,8 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public float getX() {
-		return (Float) eGet(DcPackage.Literals.BOUNDS__X, true);
+		return x;
 	}
 
 	/**
@@ -86,7 +145,11 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * @generated
 	 */
 	public void setX(float newX) {
-		eSet(DcPackage.Literals.BOUNDS__X, newX);
+		float oldX = x;
+		x = newX;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					DcPackage.BOUNDS__X, oldX, x));
 	}
 
 	/**
@@ -95,7 +158,7 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * @generated
 	 */
 	public float getY() {
-		return (Float) eGet(DcPackage.Literals.BOUNDS__Y, true);
+		return y;
 	}
 
 	/**
@@ -104,7 +167,11 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * @generated
 	 */
 	public void setY(float newY) {
-		eSet(DcPackage.Literals.BOUNDS__Y, newY);
+		float oldY = y;
+		y = newY;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					DcPackage.BOUNDS__Y, oldY, y));
 	}
 
 	/**
@@ -113,7 +180,7 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * @generated
 	 */
 	public float getWidth() {
-		return (Float) eGet(DcPackage.Literals.BOUNDS__WIDTH, true);
+		return width;
 	}
 
 	/**
@@ -122,7 +189,11 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * @generated
 	 */
 	public void setWidth(float newWidth) {
-		eSet(DcPackage.Literals.BOUNDS__WIDTH, newWidth);
+		float oldWidth = width;
+		width = newWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					DcPackage.BOUNDS__WIDTH, oldWidth, width));
 	}
 
 	/**
@@ -131,7 +202,7 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * @generated
 	 */
 	public float getHeight() {
-		return (Float) eGet(DcPackage.Literals.BOUNDS__HEIGHT, true);
+		return height;
 	}
 
 	/**
@@ -140,7 +211,122 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * @generated
 	 */
 	public void setHeight(float newHeight) {
-		eSet(DcPackage.Literals.BOUNDS__HEIGHT, newHeight);
+		float oldHeight = height;
+		height = newHeight;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					DcPackage.BOUNDS__HEIGHT, oldHeight, height));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case DcPackage.BOUNDS__X:
+			return getX();
+		case DcPackage.BOUNDS__Y:
+			return getY();
+		case DcPackage.BOUNDS__WIDTH:
+			return getWidth();
+		case DcPackage.BOUNDS__HEIGHT:
+			return getHeight();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case DcPackage.BOUNDS__X:
+			setX((Float) newValue);
+			return;
+		case DcPackage.BOUNDS__Y:
+			setY((Float) newValue);
+			return;
+		case DcPackage.BOUNDS__WIDTH:
+			setWidth((Float) newValue);
+			return;
+		case DcPackage.BOUNDS__HEIGHT:
+			setHeight((Float) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case DcPackage.BOUNDS__X:
+			setX(X_EDEFAULT);
+			return;
+		case DcPackage.BOUNDS__Y:
+			setY(Y_EDEFAULT);
+			return;
+		case DcPackage.BOUNDS__WIDTH:
+			setWidth(WIDTH_EDEFAULT);
+			return;
+		case DcPackage.BOUNDS__HEIGHT:
+			setHeight(HEIGHT_EDEFAULT);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case DcPackage.BOUNDS__X:
+			return x != X_EDEFAULT;
+		case DcPackage.BOUNDS__Y:
+			return y != Y_EDEFAULT;
+		case DcPackage.BOUNDS__WIDTH:
+			return width != WIDTH_EDEFAULT;
+		case DcPackage.BOUNDS__HEIGHT:
+			return height != HEIGHT_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (x: ");
+		result.append(x);
+		result.append(", y: ");
+		result.append(y);
+		result.append(", width: ");
+		result.append(width);
+		result.append(", height: ");
+		result.append(height);
+		result.append(')');
+		return result.toString();
 	}
 
 } //BoundsImpl

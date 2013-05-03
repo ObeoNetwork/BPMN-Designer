@@ -7,7 +7,6 @@
 package org.obeonetwork.dsl.bpmn2.bpmdi.validation;
 
 import org.obeonetwork.dsl.bpmn2.BaseElement;
-
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabel;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNShape;
 import org.obeonetwork.dsl.bpmn2.bpmdi.ParticipantBandKind;

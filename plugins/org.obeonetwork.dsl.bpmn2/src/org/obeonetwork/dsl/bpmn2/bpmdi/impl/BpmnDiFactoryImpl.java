@@ -18,12 +18,18 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
-import org.obeonetwork.dsl.bpmn2.bpmdi.*;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNDiagram;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNEdge;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabel;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabelStyle;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNPlane;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNShape;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiFactory;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage;
+import org.obeonetwork.dsl.bpmn2.bpmdi.MessageVisibleKind;
+import org.obeonetwork.dsl.bpmn2.bpmdi.ParticipantBandKind;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,17 +76,17 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 		case BpmnDiPackage.BPMN_PLANE:
-			return (EObject) createBPMNPlane();
+			return createBPMNPlane();
 		case BpmnDiPackage.BPMN_SHAPE:
-			return (EObject) createBPMNShape();
+			return createBPMNShape();
 		case BpmnDiPackage.BPMN_LABEL:
-			return (EObject) createBPMNLabel();
+			return createBPMNLabel();
 		case BpmnDiPackage.BPMN_LABEL_STYLE:
-			return (EObject) createBPMNLabelStyle();
+			return createBPMNLabelStyle();
 		case BpmnDiPackage.BPMN_EDGE:
-			return (EObject) createBPMNEdge();
+			return createBPMNEdge();
 		case BpmnDiPackage.BPMN_DIAGRAM:
-			return (EObject) createBPMNDiagram();
+			return createBPMNDiagram();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName()
 					+ "' is not a valid classifier");

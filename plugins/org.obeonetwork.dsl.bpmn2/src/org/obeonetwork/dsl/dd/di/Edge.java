@@ -15,7 +15,6 @@
 package org.obeonetwork.dsl.dd.di;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.obeonetwork.dsl.dd.dc.Point;
 
 /**

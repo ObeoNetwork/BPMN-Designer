@@ -14,9 +14,7 @@
  */
 package org.obeonetwork.dsl.bpmn2;
 
-import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -36,10 +34,9 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getBaseElement()
  * @model abstract="true"
- * @extends CDOObject
  * @generated
  */
-public interface BaseElement extends CDOObject {
+public interface BaseElement extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->

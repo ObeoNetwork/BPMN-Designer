@@ -14,9 +14,7 @@
  */
 package org.obeonetwork.dsl.dd.di;
 
-import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -37,10 +35,9 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagram()
  * @model abstract="true"
- * @extends CDOObject
  * @generated
  */
-public interface Diagram extends CDOObject {
+public interface Diagram extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

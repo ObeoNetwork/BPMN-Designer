@@ -7,9 +7,7 @@
 package org.obeonetwork.dsl.dd.di.validation;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.obeonetwork.dsl.dd.di.Diagram;
 import org.obeonetwork.dsl.dd.di.DiagramElement;
 import org.obeonetwork.dsl.dd.di.Style;

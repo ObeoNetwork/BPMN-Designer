@@ -19,11 +19,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
-
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNDiagram;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNEdge;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabel;
@@ -34,15 +31,10 @@ import org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiFactory;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage;
 import org.obeonetwork.dsl.bpmn2.bpmdi.MessageVisibleKind;
 import org.obeonetwork.dsl.bpmn2.bpmdi.ParticipantBandKind;
-
 import org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl;
-
 import org.obeonetwork.dsl.dd.dc.DcPackage;
-
 import org.obeonetwork.dsl.dd.dc.impl.DcPackageImpl;
-
 import org.obeonetwork.dsl.dd.di.DiPackage;
-
 import org.obeonetwork.dsl.dd.di.impl.DiPackageImpl;
 
 /**

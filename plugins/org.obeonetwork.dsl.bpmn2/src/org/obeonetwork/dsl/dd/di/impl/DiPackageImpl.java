@@ -21,21 +21,13 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
-
 import org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage;
-
 import org.obeonetwork.dsl.bpmn2.bpmdi.impl.BpmnDiPackageImpl;
-
 import org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl;
-
 import org.obeonetwork.dsl.dd.dc.DcPackage;
-
 import org.obeonetwork.dsl.dd.dc.impl.DcPackageImpl;
-
 import org.obeonetwork.dsl.dd.di.DiFactory;
 import org.obeonetwork.dsl.dd.di.DiPackage;
 import org.obeonetwork.dsl.dd.di.Diagram;
@@ -48,7 +40,6 @@ import org.obeonetwork.dsl.dd.di.Node;
 import org.obeonetwork.dsl.dd.di.Plane;
 import org.obeonetwork.dsl.dd.di.Shape;
 import org.obeonetwork.dsl.dd.di.Style;
-
 import org.obeonetwork.dsl.dd.di.util.DiValidator;
 
 /**

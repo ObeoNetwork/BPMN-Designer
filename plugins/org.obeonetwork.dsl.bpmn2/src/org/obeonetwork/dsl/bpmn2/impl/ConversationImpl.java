@@ -15,7 +15,6 @@
 package org.obeonetwork.dsl.bpmn2.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.Conversation;
 

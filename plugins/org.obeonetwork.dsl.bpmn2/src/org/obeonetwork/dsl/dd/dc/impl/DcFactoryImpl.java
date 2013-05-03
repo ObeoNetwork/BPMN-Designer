@@ -17,12 +17,13 @@ package org.obeonetwork.dsl.dd.dc.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
-import org.obeonetwork.dsl.dd.dc.*;
+import org.obeonetwork.dsl.dd.dc.Bounds;
+import org.obeonetwork.dsl.dd.dc.DcFactory;
+import org.obeonetwork.dsl.dd.dc.DcPackage;
+import org.obeonetwork.dsl.dd.dc.Font;
+import org.obeonetwork.dsl.dd.dc.Point;
 
 /**
  * <!-- begin-user-doc -->
@@ -69,11 +70,11 @@ public class DcFactoryImpl extends EFactoryImpl implements DcFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 		case DcPackage.FONT:
-			return (EObject) createFont();
+			return createFont();
 		case DcPackage.POINT:
-			return (EObject) createPoint();
+			return createPoint();
 		case DcPackage.BOUNDS:
-			return (EObject) createBounds();
+			return createBounds();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName()
 					+ "' is not a valid classifier");

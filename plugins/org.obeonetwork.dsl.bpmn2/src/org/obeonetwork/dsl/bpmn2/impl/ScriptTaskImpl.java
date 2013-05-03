@@ -15,11 +15,8 @@
 package org.obeonetwork.dsl.bpmn2.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.ScriptTask;
 
@@ -38,6 +35,43 @@ import org.obeonetwork.dsl.bpmn2.ScriptTask;
  * @generated
  */
 public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
+	/**
+	 * The default value of the '{@link #getScriptFormat() <em>Script Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScriptFormat()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SCRIPT_FORMAT_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getScriptFormat() <em>Script Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScriptFormat()
+	 * @generated
+	 * @ordered
+	 */
+	protected String scriptFormat = SCRIPT_FORMAT_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getScript() <em>Script</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScript()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SCRIPT_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getScript() <em>Script</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScript()
+	 * @generated
+	 * @ordered
+	 */
+	protected String script = SCRIPT_EDEFAULT;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,8 +97,7 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	 * @generated
 	 */
 	public String getScriptFormat() {
-		return (String) eGet(Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT_FORMAT,
-				true);
+		return scriptFormat;
 	}
 
 	/**
@@ -73,7 +106,12 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	 * @generated
 	 */
 	public void setScriptFormat(String newScriptFormat) {
-		eSet(Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT_FORMAT, newScriptFormat);
+		String oldScriptFormat = scriptFormat;
+		scriptFormat = newScriptFormat;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT, oldScriptFormat,
+					scriptFormat));
 	}
 
 	/**
@@ -82,7 +120,7 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	 * @generated
 	 */
 	public String getScript() {
-		return (String) eGet(Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT, true);
+		return script;
 	}
 
 	/**
@@ -91,7 +129,100 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	 * @generated
 	 */
 	public void setScript(String newScript) {
-		eSet(Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT, newScript);
+		String oldScript = script;
+		script = newScript;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.SCRIPT_TASK__SCRIPT, oldScript, script));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
+			return getScriptFormat();
+		case Bpmn2Package.SCRIPT_TASK__SCRIPT:
+			return getScript();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
+			setScriptFormat((String) newValue);
+			return;
+		case Bpmn2Package.SCRIPT_TASK__SCRIPT:
+			setScript((String) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
+			setScriptFormat(SCRIPT_FORMAT_EDEFAULT);
+			return;
+		case Bpmn2Package.SCRIPT_TASK__SCRIPT:
+			setScript(SCRIPT_EDEFAULT);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
+			return SCRIPT_FORMAT_EDEFAULT == null ? scriptFormat != null
+					: !SCRIPT_FORMAT_EDEFAULT.equals(scriptFormat);
+		case Bpmn2Package.SCRIPT_TASK__SCRIPT:
+			return SCRIPT_EDEFAULT == null ? script != null : !SCRIPT_EDEFAULT
+					.equals(script);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (scriptFormat: ");
+		result.append(scriptFormat);
+		result.append(", script: ");
+		result.append(script);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ScriptTaskImpl

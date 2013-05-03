@@ -17,15 +17,10 @@ package org.obeonetwork.dsl.bpmn2.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.CorrelationKey;
 import org.obeonetwork.dsl.bpmn2.CorrelationProperty;
@@ -46,6 +41,34 @@ import org.obeonetwork.dsl.bpmn2.CorrelationProperty;
  */
 public class CorrelationKeyImpl extends BaseElementImpl implements
 		CorrelationKey {
+	/**
+	 * The cached value of the '{@link #getCorrelationPropertyRef() <em>Correlation Property Ref</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCorrelationPropertyRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CorrelationProperty> correlationPropertyRef;
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -72,9 +95,12 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<CorrelationProperty> getCorrelationPropertyRef() {
-		return (EList<CorrelationProperty>) eGet(
-				Bpmn2Package.Literals.CORRELATION_KEY__CORRELATION_PROPERTY_REF,
-				true);
+		if (correlationPropertyRef == null) {
+			correlationPropertyRef = new EObjectResolvingEList<CorrelationProperty>(
+					CorrelationProperty.class, this,
+					Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF);
+		}
+		return correlationPropertyRef;
 	}
 
 	/**
@@ -83,7 +109,7 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eGet(Bpmn2Package.Literals.CORRELATION_KEY__NAME, true);
+		return name;
 	}
 
 	/**
@@ -92,7 +118,101 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eSet(Bpmn2Package.Literals.CORRELATION_KEY__NAME, newName);
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.CORRELATION_KEY__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
+			return getCorrelationPropertyRef();
+		case Bpmn2Package.CORRELATION_KEY__NAME:
+			return getName();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
+			getCorrelationPropertyRef().clear();
+			getCorrelationPropertyRef().addAll(
+					(Collection<? extends CorrelationProperty>) newValue);
+			return;
+		case Bpmn2Package.CORRELATION_KEY__NAME:
+			setName((String) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
+			getCorrelationPropertyRef().clear();
+			return;
+		case Bpmn2Package.CORRELATION_KEY__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
+			return correlationPropertyRef != null
+					&& !correlationPropertyRef.isEmpty();
+		case Bpmn2Package.CORRELATION_KEY__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+					.equals(name);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //CorrelationKeyImpl

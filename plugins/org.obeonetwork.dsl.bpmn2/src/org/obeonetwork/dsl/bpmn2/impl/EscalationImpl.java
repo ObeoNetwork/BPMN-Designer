@@ -15,14 +15,10 @@
 package org.obeonetwork.dsl.bpmn2.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.Escalation;
 import org.obeonetwork.dsl.bpmn2.ItemDefinition;
@@ -42,7 +38,53 @@ import org.obeonetwork.dsl.bpmn2.ItemDefinition;
  *
  * @generated
  */
-public class EscalationImpl extends CDOObjectImpl implements Escalation {
+public class EscalationImpl extends EObjectImpl implements Escalation {
+	/**
+	 * The cached value of the '{@link #getStructureRef() <em>Structure Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStructureRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected ItemDefinition structureRef;
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getEscalationCode() <em>Escalation Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEscalationCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ESCALATION_CODE_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getEscalationCode() <em>Escalation Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEscalationCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected String escalationCode = ESCALATION_CODE_EDEFAULT;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,9 +109,18 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
+	public ItemDefinition getStructureRef() {
+		if (structureRef != null && structureRef.eIsProxy()) {
+			InternalEObject oldStructureRef = (InternalEObject) structureRef;
+			structureRef = (ItemDefinition) eResolveProxy(oldStructureRef);
+			if (structureRef != oldStructureRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							Bpmn2Package.ESCALATION__STRUCTURE_REF,
+							oldStructureRef, structureRef));
+			}
+		}
+		return structureRef;
 	}
 
 	/**
@@ -77,9 +128,8 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ItemDefinition getStructureRef() {
-		return (ItemDefinition) eGet(
-				Bpmn2Package.Literals.ESCALATION__STRUCTURE_REF, true);
+	public ItemDefinition basicGetStructureRef() {
+		return structureRef;
 	}
 
 	/**
@@ -88,7 +138,12 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	 * @generated
 	 */
 	public void setStructureRef(ItemDefinition newStructureRef) {
-		eSet(Bpmn2Package.Literals.ESCALATION__STRUCTURE_REF, newStructureRef);
+		ItemDefinition oldStructureRef = structureRef;
+		structureRef = newStructureRef;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.ESCALATION__STRUCTURE_REF, oldStructureRef,
+					structureRef));
 	}
 
 	/**
@@ -97,7 +152,7 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eGet(Bpmn2Package.Literals.ESCALATION__NAME, true);
+		return name;
 	}
 
 	/**
@@ -106,7 +161,11 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eSet(Bpmn2Package.Literals.ESCALATION__NAME, newName);
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.ESCALATION__NAME, oldName, name));
 	}
 
 	/**
@@ -115,8 +174,7 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	 * @generated
 	 */
 	public String getEscalationCode() {
-		return (String) eGet(Bpmn2Package.Literals.ESCALATION__ESCALATION_CODE,
-				true);
+		return escalationCode;
 	}
 
 	/**
@@ -125,8 +183,113 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	 * @generated
 	 */
 	public void setEscalationCode(String newEscalationCode) {
-		eSet(Bpmn2Package.Literals.ESCALATION__ESCALATION_CODE,
-				newEscalationCode);
+		String oldEscalationCode = escalationCode;
+		escalationCode = newEscalationCode;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.ESCALATION__ESCALATION_CODE,
+					oldEscalationCode, escalationCode));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case Bpmn2Package.ESCALATION__STRUCTURE_REF:
+			if (resolve)
+				return getStructureRef();
+			return basicGetStructureRef();
+		case Bpmn2Package.ESCALATION__NAME:
+			return getName();
+		case Bpmn2Package.ESCALATION__ESCALATION_CODE:
+			return getEscalationCode();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case Bpmn2Package.ESCALATION__STRUCTURE_REF:
+			setStructureRef((ItemDefinition) newValue);
+			return;
+		case Bpmn2Package.ESCALATION__NAME:
+			setName((String) newValue);
+			return;
+		case Bpmn2Package.ESCALATION__ESCALATION_CODE:
+			setEscalationCode((String) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.ESCALATION__STRUCTURE_REF:
+			setStructureRef((ItemDefinition) null);
+			return;
+		case Bpmn2Package.ESCALATION__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case Bpmn2Package.ESCALATION__ESCALATION_CODE:
+			setEscalationCode(ESCALATION_CODE_EDEFAULT);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.ESCALATION__STRUCTURE_REF:
+			return structureRef != null;
+		case Bpmn2Package.ESCALATION__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+					.equals(name);
+		case Bpmn2Package.ESCALATION__ESCALATION_CODE:
+			return ESCALATION_CODE_EDEFAULT == null ? escalationCode != null
+					: !ESCALATION_CODE_EDEFAULT.equals(escalationCode);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", escalationCode: ");
+		result.append(escalationCode);
+		result.append(')');
+		return result.toString();
 	}
 
 } //EscalationImpl

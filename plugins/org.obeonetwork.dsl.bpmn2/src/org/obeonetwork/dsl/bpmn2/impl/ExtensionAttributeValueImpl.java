@@ -16,15 +16,11 @@ package org.obeonetwork.dsl.bpmn2.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.ExtensionAttributeDefinition;
 import org.obeonetwork.dsl.bpmn2.ExtensionAttributeValue;
@@ -44,8 +40,36 @@ import org.obeonetwork.dsl.bpmn2.ExtensionAttributeValue;
  *
  * @generated
  */
-public class ExtensionAttributeValueImpl extends CDOObjectImpl implements
+public class ExtensionAttributeValueImpl extends EObjectImpl implements
 		ExtensionAttributeValue {
+	/**
+	 * The cached value of the '{@link #getValueRef() <em>Value Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValueRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected EObject valueRef;
+	/**
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected EObject value;
+	/**
+	 * The cached value of the '{@link #getExtensionAttributeDefinition() <em>Extension Attribute Definition</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExtensionAttributeDefinition()
+	 * @generated
+	 * @ordered
+	 */
+	protected ExtensionAttributeDefinition extensionAttributeDefinition;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,9 +94,18 @@ public class ExtensionAttributeValueImpl extends CDOObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
+	public EObject getValueRef() {
+		if (valueRef != null && valueRef.eIsProxy()) {
+			InternalEObject oldValueRef = (InternalEObject) valueRef;
+			valueRef = eResolveProxy(oldValueRef);
+			if (valueRef != oldValueRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF,
+							oldValueRef, valueRef));
+			}
+		}
+		return valueRef;
 	}
 
 	/**
@@ -80,10 +113,8 @@ public class ExtensionAttributeValueImpl extends CDOObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObject getValueRef() {
-		return (EObject) eGet(
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF,
-				true);
+	public EObject basicGetValueRef() {
+		return valueRef;
 	}
 
 	/**
@@ -92,8 +123,12 @@ public class ExtensionAttributeValueImpl extends CDOObjectImpl implements
 	 * @generated
 	 */
 	public void setValueRef(EObject newValueRef) {
-		eSet(Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF,
-				newValueRef);
+		EObject oldValueRef = valueRef;
+		valueRef = newValueRef;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF,
+					oldValueRef, valueRef));
 	}
 
 	/**
@@ -102,8 +137,29 @@ public class ExtensionAttributeValueImpl extends CDOObjectImpl implements
 	 * @generated
 	 */
 	public EObject getValue() {
-		return (EObject) eGet(
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, true);
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetValue(EObject newValue,
+			NotificationChain msgs) {
+		EObject oldValue = value;
+		value = newValue;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this,
+					Notification.SET,
+					Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, oldValue,
+					newValue);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -112,7 +168,29 @@ public class ExtensionAttributeValueImpl extends CDOObjectImpl implements
 	 * @generated
 	 */
 	public void setValue(EObject newValue) {
-		eSet(Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE, newValue);
+		if (newValue != value) {
+			NotificationChain msgs = null;
+			if (value != null)
+				msgs = ((InternalEObject) value)
+						.eInverseRemove(
+								this,
+								EOPPOSITE_FEATURE_BASE
+										- Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE,
+								null, msgs);
+			if (newValue != null)
+				msgs = ((InternalEObject) newValue)
+						.eInverseAdd(
+								this,
+								EOPPOSITE_FEATURE_BASE
+										- Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE,
+								null, msgs);
+			msgs = basicSetValue(newValue, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE, newValue,
+					newValue));
 	}
 
 	/**
@@ -121,9 +199,30 @@ public class ExtensionAttributeValueImpl extends CDOObjectImpl implements
 	 * @generated
 	 */
 	public ExtensionAttributeDefinition getExtensionAttributeDefinition() {
-		return (ExtensionAttributeDefinition) eGet(
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION,
-				true);
+		if (extensionAttributeDefinition != null
+				&& extensionAttributeDefinition.eIsProxy()) {
+			InternalEObject oldExtensionAttributeDefinition = (InternalEObject) extensionAttributeDefinition;
+			extensionAttributeDefinition = (ExtensionAttributeDefinition) eResolveProxy(oldExtensionAttributeDefinition);
+			if (extensionAttributeDefinition != oldExtensionAttributeDefinition) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(
+							this,
+							Notification.RESOLVE,
+							Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION,
+							oldExtensionAttributeDefinition,
+							extensionAttributeDefinition));
+			}
+		}
+		return extensionAttributeDefinition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExtensionAttributeDefinition basicGetExtensionAttributeDefinition() {
+		return extensionAttributeDefinition;
 	}
 
 	/**
@@ -133,8 +232,112 @@ public class ExtensionAttributeValueImpl extends CDOObjectImpl implements
 	 */
 	public void setExtensionAttributeDefinition(
 			ExtensionAttributeDefinition newExtensionAttributeDefinition) {
-		eSet(Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION,
-				newExtensionAttributeDefinition);
+		ExtensionAttributeDefinition oldExtensionAttributeDefinition = extensionAttributeDefinition;
+		extensionAttributeDefinition = newExtensionAttributeDefinition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(
+					this,
+					Notification.SET,
+					Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION,
+					oldExtensionAttributeDefinition,
+					extensionAttributeDefinition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
+			return basicSetValue(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
+			if (resolve)
+				return getValueRef();
+			return basicGetValueRef();
+		case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
+			return getValue();
+		case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
+			if (resolve)
+				return getExtensionAttributeDefinition();
+			return basicGetExtensionAttributeDefinition();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
+			setValueRef((EObject) newValue);
+			return;
+		case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
+			setValue((EObject) newValue);
+			return;
+		case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
+			setExtensionAttributeDefinition((ExtensionAttributeDefinition) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
+			setValueRef((EObject) null);
+			return;
+		case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
+			setValue((EObject) null);
+			return;
+		case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
+			setExtensionAttributeDefinition((ExtensionAttributeDefinition) null);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF:
+			return valueRef != null;
+		case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__VALUE:
+			return value != null;
+		case Bpmn2Package.EXTENSION_ATTRIBUTE_VALUE__EXTENSION_ATTRIBUTE_DEFINITION:
+			return extensionAttributeDefinition != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //ExtensionAttributeValueImpl

@@ -15,11 +15,8 @@
 package org.obeonetwork.dsl.dd.di.impl;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
 import org.obeonetwork.dsl.dd.di.DiPackage;
 import org.obeonetwork.dsl.dd.di.Label;
 import org.obeonetwork.dsl.dd.di.LabeledShape;
@@ -39,6 +36,16 @@ import org.obeonetwork.dsl.dd.di.LabeledShape;
  */
 public abstract class LabeledShapeImpl extends ShapeImpl implements
 		LabeledShape {
+	/**
+	 * The cached value of the '{@link #getOwnedLabel() <em>Owned Label</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwnedLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Label> ownedLabel;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,8 +72,39 @@ public abstract class LabeledShapeImpl extends ShapeImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Label> getOwnedLabel() {
-		return (EList<Label>) eGet(
-				DiPackage.Literals.LABELED_SHAPE__OWNED_LABEL, true);
+		if (ownedLabel == null) {
+			ownedLabel = new EObjectResolvingEList<Label>(Label.class, this,
+					DiPackage.LABELED_SHAPE__OWNED_LABEL);
+		}
+		return ownedLabel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case DiPackage.LABELED_SHAPE__OWNED_LABEL:
+			return getOwnedLabel();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case DiPackage.LABELED_SHAPE__OWNED_LABEL:
+			return ownedLabel != null && !ownedLabel.isEmpty();
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //LabeledShapeImpl

@@ -15,12 +15,9 @@
 package org.obeonetwork.dsl.bpmn2.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.obeonetwork.dsl.bpmn2.Activity;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.CompensateEventDefinition;
@@ -41,6 +38,34 @@ import org.obeonetwork.dsl.bpmn2.CompensateEventDefinition;
  */
 public class CompensateEventDefinitionImpl extends EventDefinitionImpl
 		implements CompensateEventDefinition {
+	/**
+	 * The default value of the '{@link #isWaitForCompletion() <em>Wait For Completion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isWaitForCompletion()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean WAIT_FOR_COMPLETION_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isWaitForCompletion() <em>Wait For Completion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isWaitForCompletion()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean waitForCompletion = WAIT_FOR_COMPLETION_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getActivityRef() <em>Activity Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActivityRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected Activity activityRef;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,9 +91,7 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public boolean isWaitForCompletion() {
-		return (Boolean) eGet(
-				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
-				true);
+		return waitForCompletion;
 	}
 
 	/**
@@ -77,8 +100,14 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public void setWaitForCompletion(boolean newWaitForCompletion) {
-		eSet(Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
-				newWaitForCompletion);
+		boolean oldWaitForCompletion = waitForCompletion;
+		waitForCompletion = newWaitForCompletion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(
+					this,
+					Notification.SET,
+					Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
+					oldWaitForCompletion, waitForCompletion));
 	}
 
 	/**
@@ -87,9 +116,28 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public Activity getActivityRef() {
-		return (Activity) eGet(
-				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
-				true);
+		if (activityRef != null && activityRef.eIsProxy()) {
+			InternalEObject oldActivityRef = (InternalEObject) activityRef;
+			activityRef = (Activity) eResolveProxy(oldActivityRef);
+			if (activityRef != oldActivityRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(
+							this,
+							Notification.RESOLVE,
+							Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
+							oldActivityRef, activityRef));
+			}
+		}
+		return activityRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Activity basicGetActivityRef() {
+		return activityRef;
 	}
 
 	/**
@@ -98,8 +146,99 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public void setActivityRef(Activity newActivityRef) {
-		eSet(Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
-				newActivityRef);
+		Activity oldActivityRef = activityRef;
+		activityRef = newActivityRef;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
+					oldActivityRef, activityRef));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+			return isWaitForCompletion();
+		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+			if (resolve)
+				return getActivityRef();
+			return basicGetActivityRef();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+			setWaitForCompletion((Boolean) newValue);
+			return;
+		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+			setActivityRef((Activity) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+			setWaitForCompletion(WAIT_FOR_COMPLETION_EDEFAULT);
+			return;
+		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+			setActivityRef((Activity) null);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+			return waitForCompletion != WAIT_FOR_COMPLETION_EDEFAULT;
+		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+			return activityRef != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (waitForCompletion: ");
+		result.append(waitForCompletion);
+		result.append(')');
+		return result.toString();
 	}
 
 } //CompensateEventDefinitionImpl

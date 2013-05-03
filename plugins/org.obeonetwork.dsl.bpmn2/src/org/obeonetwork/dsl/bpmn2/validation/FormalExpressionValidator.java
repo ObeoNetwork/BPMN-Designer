@@ -7,7 +7,6 @@
 package org.obeonetwork.dsl.bpmn2.validation;
 
 import org.eclipse.emf.ecore.EObject;
-
 import org.obeonetwork.dsl.bpmn2.ItemDefinition;
 
 /**

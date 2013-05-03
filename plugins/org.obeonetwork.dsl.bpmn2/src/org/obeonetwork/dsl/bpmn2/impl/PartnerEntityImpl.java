@@ -17,15 +17,10 @@ package org.obeonetwork.dsl.bpmn2.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.Participant;
 import org.obeonetwork.dsl.bpmn2.PartnerEntity;
@@ -45,6 +40,34 @@ import org.obeonetwork.dsl.bpmn2.PartnerEntity;
  * @generated
  */
 public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getParticipantRef() <em>Participant Ref</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParticipantRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Participant> participantRef;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,7 +93,7 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eGet(Bpmn2Package.Literals.PARTNER_ENTITY__NAME, true);
+		return name;
 	}
 
 	/**
@@ -79,7 +102,11 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eSet(Bpmn2Package.Literals.PARTNER_ENTITY__NAME, newName);
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.PARTNER_ENTITY__NAME, oldName, name));
 	}
 
 	/**
@@ -89,8 +116,101 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Participant> getParticipantRef() {
-		return (EList<Participant>) eGet(
-				Bpmn2Package.Literals.PARTNER_ENTITY__PARTICIPANT_REF, true);
+		if (participantRef == null) {
+			participantRef = new EObjectResolvingEList<Participant>(
+					Participant.class, this,
+					Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF);
+		}
+		return participantRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case Bpmn2Package.PARTNER_ENTITY__NAME:
+			return getName();
+		case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
+			return getParticipantRef();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case Bpmn2Package.PARTNER_ENTITY__NAME:
+			setName((String) newValue);
+			return;
+		case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
+			getParticipantRef().clear();
+			getParticipantRef().addAll(
+					(Collection<? extends Participant>) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.PARTNER_ENTITY__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
+			getParticipantRef().clear();
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.PARTNER_ENTITY__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+					.equals(name);
+		case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
+			return participantRef != null && !participantRef.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //PartnerEntityImpl

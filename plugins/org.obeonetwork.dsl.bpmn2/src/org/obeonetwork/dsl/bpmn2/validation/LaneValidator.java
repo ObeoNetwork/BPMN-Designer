@@ -7,7 +7,6 @@
 package org.obeonetwork.dsl.bpmn2.validation;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.obeonetwork.dsl.bpmn2.BaseElement;
 import org.obeonetwork.dsl.bpmn2.FlowNode;
 import org.obeonetwork.dsl.bpmn2.LaneSet;

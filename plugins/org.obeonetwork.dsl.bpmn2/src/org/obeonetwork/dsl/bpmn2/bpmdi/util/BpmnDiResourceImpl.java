@@ -15,7 +15,6 @@
 package org.obeonetwork.dsl.bpmn2.bpmdi.util;
 
 import org.eclipse.emf.common.util.URI;
-
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 
 /**

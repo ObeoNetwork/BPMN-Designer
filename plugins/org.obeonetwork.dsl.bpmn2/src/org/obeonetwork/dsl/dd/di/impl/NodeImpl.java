@@ -15,7 +15,6 @@
 package org.obeonetwork.dsl.dd.di.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.obeonetwork.dsl.dd.di.DiPackage;
 import org.obeonetwork.dsl.dd.di.Node;
 

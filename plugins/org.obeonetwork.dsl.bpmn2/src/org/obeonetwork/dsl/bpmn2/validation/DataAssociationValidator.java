@@ -7,7 +7,6 @@
 package org.obeonetwork.dsl.bpmn2.validation;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.obeonetwork.dsl.bpmn2.Assignment;
 import org.obeonetwork.dsl.bpmn2.FormalExpression;
 import org.obeonetwork.dsl.bpmn2.ItemAwareElement;

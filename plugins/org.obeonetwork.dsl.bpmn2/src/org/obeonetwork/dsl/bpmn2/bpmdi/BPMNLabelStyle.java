@@ -15,7 +15,6 @@
 package org.obeonetwork.dsl.bpmn2.bpmdi;
 
 import org.obeonetwork.dsl.dd.dc.Font;
-
 import org.obeonetwork.dsl.dd.di.Style;
 
 /**

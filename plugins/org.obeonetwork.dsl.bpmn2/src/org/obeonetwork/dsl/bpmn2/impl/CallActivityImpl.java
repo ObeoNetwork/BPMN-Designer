@@ -15,12 +15,9 @@
 package org.obeonetwork.dsl.bpmn2.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.CallActivity;
 import org.obeonetwork.dsl.bpmn2.CallableElement;
@@ -39,6 +36,16 @@ import org.obeonetwork.dsl.bpmn2.CallableElement;
  * @generated
  */
 public class CallActivityImpl extends ActivityImpl implements CallActivity {
+	/**
+	 * The cached value of the '{@link #getCalledElementRef() <em>Called Element Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCalledElementRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected CallableElement calledElementRef;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,8 +71,26 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
 	 * @generated
 	 */
 	public CallableElement getCalledElementRef() {
-		return (CallableElement) eGet(
-				Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, true);
+		if (calledElementRef != null && calledElementRef.eIsProxy()) {
+			InternalEObject oldCalledElementRef = (InternalEObject) calledElementRef;
+			calledElementRef = (CallableElement) eResolveProxy(oldCalledElementRef);
+			if (calledElementRef != oldCalledElementRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
+							oldCalledElementRef, calledElementRef));
+			}
+		}
+		return calledElementRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CallableElement basicGetCalledElementRef() {
+		return calledElementRef;
 	}
 
 	/**
@@ -74,8 +99,72 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
 	 * @generated
 	 */
 	public void setCalledElementRef(CallableElement newCalledElementRef) {
-		eSet(Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF,
-				newCalledElementRef);
+		CallableElement oldCalledElementRef = calledElementRef;
+		calledElementRef = newCalledElementRef;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
+					oldCalledElementRef, calledElementRef));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
+			if (resolve)
+				return getCalledElementRef();
+			return basicGetCalledElementRef();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
+			setCalledElementRef((CallableElement) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
+			setCalledElementRef((CallableElement) null);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
+			return calledElementRef != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //CallActivityImpl

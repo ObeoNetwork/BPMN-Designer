@@ -15,7 +15,6 @@
 package org.obeonetwork.dsl.bpmn2.bpmdi;
 
 import org.obeonetwork.dsl.bpmn2.BaseElement;
-
 import org.obeonetwork.dsl.dd.di.DiagramElement;
 import org.obeonetwork.dsl.dd.di.LabeledEdge;
 

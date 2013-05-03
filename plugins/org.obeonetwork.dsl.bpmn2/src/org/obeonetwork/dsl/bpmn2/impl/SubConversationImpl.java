@@ -17,15 +17,11 @@ package org.obeonetwork.dsl.bpmn2.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.ConversationNode;
 import org.obeonetwork.dsl.bpmn2.SubConversation;
@@ -45,6 +41,16 @@ import org.obeonetwork.dsl.bpmn2.SubConversation;
  */
 public class SubConversationImpl extends ConversationNodeImpl implements
 		SubConversation {
+	/**
+	 * The cached value of the '{@link #getConversationNodes() <em>Conversation Nodes</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConversationNodes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ConversationNode> conversationNodes;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -71,9 +77,89 @@ public class SubConversationImpl extends ConversationNodeImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationNode> getConversationNodes() {
-		return (EList<ConversationNode>) eGet(
-				Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
-				true);
+		if (conversationNodes == null) {
+			conversationNodes = new EObjectContainmentEList<ConversationNode>(
+					ConversationNode.class, this,
+					Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES);
+		}
+		return conversationNodes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
+			return ((InternalEList<?>) getConversationNodes()).basicRemove(
+					otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
+			return getConversationNodes();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
+			getConversationNodes().clear();
+			getConversationNodes().addAll(
+					(Collection<? extends ConversationNode>) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
+			getConversationNodes().clear();
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
+			return conversationNodes != null && !conversationNodes.isEmpty();
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //SubConversationImpl

@@ -15,7 +15,6 @@
 package org.obeonetwork.dsl.bpmn2;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**

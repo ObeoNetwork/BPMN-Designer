@@ -20,27 +20,18 @@ import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EValidator;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
-
 import org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage;
-
 import org.obeonetwork.dsl.bpmn2.bpmdi.impl.BpmnDiPackageImpl;
-
 import org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl;
-
 import org.obeonetwork.dsl.dd.dc.Bounds;
 import org.obeonetwork.dsl.dd.dc.DcFactory;
 import org.obeonetwork.dsl.dd.dc.DcPackage;
 import org.obeonetwork.dsl.dd.dc.Font;
 import org.obeonetwork.dsl.dd.dc.Point;
-
 import org.obeonetwork.dsl.dd.dc.util.DcValidator;
-
 import org.obeonetwork.dsl.dd.di.DiPackage;
-
 import org.obeonetwork.dsl.dd.di.impl.DiPackageImpl;
 
 /**

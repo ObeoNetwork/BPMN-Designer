@@ -7,10 +7,8 @@
 package org.obeonetwork.dsl.bpmn2.bpmdi.validation;
 
 import org.obeonetwork.dsl.bpmn2.BaseElement;
-
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabel;
 import org.obeonetwork.dsl.bpmn2.bpmdi.MessageVisibleKind;
-
 import org.obeonetwork.dsl.dd.di.DiagramElement;
 
 /**

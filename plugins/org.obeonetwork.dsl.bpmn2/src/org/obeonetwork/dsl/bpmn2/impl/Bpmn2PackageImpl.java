@@ -15,38 +15,26 @@
 package org.obeonetwork.dsl.bpmn2.impl;
 
 import java.io.IOException;
-
 import java.net.URL;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.common.util.WrappedException;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.emf.ecore.resource.Resource;
-
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
-
 import org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage;
-
 import org.obeonetwork.dsl.bpmn2.bpmdi.impl.BpmnDiPackageImpl;
-
 import org.obeonetwork.dsl.dd.dc.DcPackage;
-
 import org.obeonetwork.dsl.dd.dc.impl.DcPackageImpl;
-
 import org.obeonetwork.dsl.dd.di.DiPackage;
-
 import org.obeonetwork.dsl.dd.di.impl.DiPackageImpl;
 
 /**

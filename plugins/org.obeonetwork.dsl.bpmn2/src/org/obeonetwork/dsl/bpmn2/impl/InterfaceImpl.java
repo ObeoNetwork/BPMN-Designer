@@ -18,18 +18,13 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.Interface;
 import org.obeonetwork.dsl.bpmn2.Operation;
@@ -50,6 +45,43 @@ import org.obeonetwork.dsl.bpmn2.Operation;
  * @generated
  */
 public class InterfaceImpl extends RootElementImpl implements Interface {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getOperations() <em>Operations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Operation> operations;
+	/**
+	 * The cached value of the '{@link #getImplementationRef() <em>Implementation Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplementationRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected EObject implementationRef;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,7 +107,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eGet(Bpmn2Package.Literals.INTERFACE__NAME, true);
+		return name;
 	}
 
 	/**
@@ -84,7 +116,11 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eSet(Bpmn2Package.Literals.INTERFACE__NAME, newName);
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.INTERFACE__NAME, oldName, name));
 	}
 
 	/**
@@ -94,8 +130,11 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Operation> getOperations() {
-		return (EList<Operation>) eGet(
-				Bpmn2Package.Literals.INTERFACE__OPERATIONS, true);
+		if (operations == null) {
+			operations = new EObjectContainmentEList<Operation>(
+					Operation.class, this, Bpmn2Package.INTERFACE__OPERATIONS);
+		}
+		return operations;
 	}
 
 	/**
@@ -104,8 +143,26 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public EObject getImplementationRef() {
-		return (EObject) eGet(
-				Bpmn2Package.Literals.INTERFACE__IMPLEMENTATION_REF, true);
+		if (implementationRef != null && implementationRef.eIsProxy()) {
+			InternalEObject oldImplementationRef = (InternalEObject) implementationRef;
+			implementationRef = eResolveProxy(oldImplementationRef);
+			if (implementationRef != oldImplementationRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							Bpmn2Package.INTERFACE__IMPLEMENTATION_REF,
+							oldImplementationRef, implementationRef));
+			}
+		}
+		return implementationRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject basicGetImplementationRef() {
+		return implementationRef;
 	}
 
 	/**
@@ -114,8 +171,128 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public void setImplementationRef(EObject newImplementationRef) {
-		eSet(Bpmn2Package.Literals.INTERFACE__IMPLEMENTATION_REF,
-				newImplementationRef);
+		EObject oldImplementationRef = implementationRef;
+		implementationRef = newImplementationRef;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Bpmn2Package.INTERFACE__IMPLEMENTATION_REF,
+					oldImplementationRef, implementationRef));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Bpmn2Package.INTERFACE__OPERATIONS:
+			return ((InternalEList<?>) getOperations()).basicRemove(otherEnd,
+					msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case Bpmn2Package.INTERFACE__NAME:
+			return getName();
+		case Bpmn2Package.INTERFACE__OPERATIONS:
+			return getOperations();
+		case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
+			if (resolve)
+				return getImplementationRef();
+			return basicGetImplementationRef();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case Bpmn2Package.INTERFACE__NAME:
+			setName((String) newValue);
+			return;
+		case Bpmn2Package.INTERFACE__OPERATIONS:
+			getOperations().clear();
+			getOperations().addAll((Collection<? extends Operation>) newValue);
+			return;
+		case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
+			setImplementationRef((EObject) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.INTERFACE__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case Bpmn2Package.INTERFACE__OPERATIONS:
+			getOperations().clear();
+			return;
+		case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
+			setImplementationRef((EObject) null);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case Bpmn2Package.INTERFACE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
+					.equals(name);
+		case Bpmn2Package.INTERFACE__OPERATIONS:
+			return operations != null && !operations.isEmpty();
+		case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
+			return implementationRef != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //InterfaceImpl

@@ -18,13 +18,12 @@ import java.util.Map;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.EObjectValidator;
-
-import org.obeonetwork.dsl.dd.dc.*;
+import org.obeonetwork.dsl.dd.dc.Bounds;
+import org.obeonetwork.dsl.dd.dc.DcPackage;
+import org.obeonetwork.dsl.dd.dc.Font;
+import org.obeonetwork.dsl.dd.dc.Point;
 
 /**
  * <!-- begin-user-doc -->
@@ -125,25 +124,22 @@ public class DcValidator extends EObjectValidator {
 	 */
 	public boolean validateFont(Font font, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		boolean result = validate_EveryMultiplicityConforms((EObject) font,
-				diagnostics, context);
+		boolean result = validate_EveryMultiplicityConforms(font, diagnostics,
+				context);
 		if (result || diagnostics != null)
-			result &= validate_EveryDataValueConforms((EObject) font,
-					diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validate_EveryReferenceIsContained((EObject) font,
-					diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validate_EveryProxyResolves((EObject) font, diagnostics,
+			result &= validate_EveryDataValueConforms(font, diagnostics,
 					context);
 		if (result || diagnostics != null)
-			result &= validate_UniqueID((EObject) font, diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validate_EveryKeyUnique((EObject) font, diagnostics,
+			result &= validate_EveryReferenceIsContained(font, diagnostics,
 					context);
 		if (result || diagnostics != null)
-			result &= validate_EveryMapEntryUnique((EObject) font, diagnostics,
-					context);
+			result &= validate_EveryProxyResolves(font, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_UniqueID(font, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryKeyUnique(font, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryMapEntryUnique(font, diagnostics, context);
 		if (result || diagnostics != null)
 			result &= validateFont_non_negative_size(font, diagnostics, context);
 		return result;
@@ -167,8 +163,7 @@ public class DcValidator extends EObjectValidator {
 	 */
 	public boolean validatePoint(Point point, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject) point, diagnostics,
-				context);
+		return validate_EveryDefaultConstraint(point, diagnostics, context);
 	}
 
 	/**
@@ -178,8 +173,7 @@ public class DcValidator extends EObjectValidator {
 	 */
 	public boolean validateBounds(Bounds bounds, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject) bounds, diagnostics,
-				context);
+		return validate_EveryDefaultConstraint(bounds, diagnostics, context);
 	}
 
 	/**

@@ -16,12 +16,19 @@ package org.obeonetwork.dsl.dd.di.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
-import org.obeonetwork.dsl.dd.di.*;
+import org.obeonetwork.dsl.dd.di.DiPackage;
+import org.obeonetwork.dsl.dd.di.Diagram;
+import org.obeonetwork.dsl.dd.di.DiagramElement;
+import org.obeonetwork.dsl.dd.di.Edge;
+import org.obeonetwork.dsl.dd.di.Label;
+import org.obeonetwork.dsl.dd.di.LabeledEdge;
+import org.obeonetwork.dsl.dd.di.LabeledShape;
+import org.obeonetwork.dsl.dd.di.Node;
+import org.obeonetwork.dsl.dd.di.Plane;
+import org.obeonetwork.dsl.dd.di.Shape;
+import org.obeonetwork.dsl.dd.di.Style;
 
 /**
  * <!-- begin-user-doc -->

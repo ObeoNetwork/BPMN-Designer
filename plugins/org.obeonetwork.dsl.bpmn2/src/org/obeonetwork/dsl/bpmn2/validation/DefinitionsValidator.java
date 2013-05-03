@@ -7,12 +7,10 @@
 package org.obeonetwork.dsl.bpmn2.validation;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.obeonetwork.dsl.bpmn2.Extension;
 import org.obeonetwork.dsl.bpmn2.Import;
 import org.obeonetwork.dsl.bpmn2.Relationship;
 import org.obeonetwork.dsl.bpmn2.RootElement;
-
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNDiagram;
 
 /**

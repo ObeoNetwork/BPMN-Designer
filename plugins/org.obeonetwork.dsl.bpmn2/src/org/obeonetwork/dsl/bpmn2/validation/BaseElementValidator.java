@@ -7,7 +7,6 @@
 package org.obeonetwork.dsl.bpmn2.validation;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.obeonetwork.dsl.bpmn2.Documentation;
 import org.obeonetwork.dsl.bpmn2.ExtensionAttributeValue;
 import org.obeonetwork.dsl.bpmn2.ExtensionDefinition;

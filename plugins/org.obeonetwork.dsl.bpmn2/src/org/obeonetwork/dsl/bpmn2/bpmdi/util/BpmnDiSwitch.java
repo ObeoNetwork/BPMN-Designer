@@ -18,9 +18,13 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-
-import org.obeonetwork.dsl.bpmn2.bpmdi.*;
-
+import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNDiagram;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNEdge;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabel;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabelStyle;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNPlane;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNShape;
+import org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage;
 import org.obeonetwork.dsl.dd.di.Diagram;
 import org.obeonetwork.dsl.dd.di.DiagramElement;
 import org.obeonetwork.dsl.dd.di.Edge;

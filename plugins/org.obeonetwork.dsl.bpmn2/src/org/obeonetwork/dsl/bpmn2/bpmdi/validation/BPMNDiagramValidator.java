@@ -7,7 +7,6 @@
 package org.obeonetwork.dsl.bpmn2.bpmdi.validation;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabelStyle;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNPlane;
 
