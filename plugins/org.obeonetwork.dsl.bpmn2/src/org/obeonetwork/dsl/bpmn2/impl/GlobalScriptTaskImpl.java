@@ -40,46 +40,6 @@ import org.obeonetwork.dsl.bpmn2.GlobalScriptTask;
 public class GlobalScriptTaskImpl extends GlobalTaskImpl implements
 		GlobalScriptTask {
 	/**
-	 * The default value of the '{@link #getScriptLanguage() <em>Script Language</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getScriptLanguage()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SCRIPT_LANGUAGE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getScriptLanguage() <em>Script Language</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getScriptLanguage()
-	 * @generated
-	 * @ordered
-	 */
-	protected String scriptLanguage = SCRIPT_LANGUAGE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getScript() <em>Script</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getScript()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SCRIPT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getScript() <em>Script</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getScript()
-	 * @generated
-	 * @ordered
-	 */
-	protected String script = SCRIPT_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -104,7 +64,8 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	public String getScriptLanguage() {
-		return scriptLanguage;
+		return (String) eGet(
+				Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE, true);
 	}
 
 	/**
@@ -113,12 +74,8 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	public void setScriptLanguage(String newScriptLanguage) {
-		String oldScriptLanguage = scriptLanguage;
-		scriptLanguage = newScriptLanguage;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE,
-					oldScriptLanguage, scriptLanguage));
+		eSet(Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE,
+				newScriptLanguage);
 	}
 
 	/**
@@ -127,7 +84,8 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	public String getScript() {
-		return script;
+		return (String) eGet(Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT,
+				true);
 	}
 
 	/**
@@ -136,100 +94,7 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	public void setScript(String newScript) {
-		String oldScript = script;
-		script = newScript;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT, oldScript, script));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-			return getScriptLanguage();
-		case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
-			return getScript();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-			setScriptLanguage((String) newValue);
-			return;
-		case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
-			setScript((String) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-			setScriptLanguage(SCRIPT_LANGUAGE_EDEFAULT);
-			return;
-		case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
-			setScript(SCRIPT_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-			return SCRIPT_LANGUAGE_EDEFAULT == null ? scriptLanguage != null
-					: !SCRIPT_LANGUAGE_EDEFAULT.equals(scriptLanguage);
-		case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
-			return SCRIPT_EDEFAULT == null ? script != null : !SCRIPT_EDEFAULT
-					.equals(script);
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (scriptLanguage: ");
-		result.append(scriptLanguage);
-		result.append(", script: ");
-		result.append(script);
-		result.append(')');
-		return result.toString();
+		eSet(Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT, newScript);
 	}
 
 } //GlobalScriptTaskImpl

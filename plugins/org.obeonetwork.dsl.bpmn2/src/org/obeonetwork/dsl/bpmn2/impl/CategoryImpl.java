@@ -49,36 +49,6 @@ import org.obeonetwork.dsl.bpmn2.CategoryValue;
  */
 public class CategoryImpl extends RootElementImpl implements Category {
 	/**
-	 * The cached value of the '{@link #getCategoryValue() <em>Category Value</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCategoryValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CategoryValue> categoryValue;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -102,13 +72,10 @@ public class CategoryImpl extends RootElementImpl implements Category {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<CategoryValue> getCategoryValue() {
-		if (categoryValue == null) {
-			categoryValue = new EObjectContainmentEList<CategoryValue>(
-					CategoryValue.class, this,
-					Bpmn2Package.CATEGORY__CATEGORY_VALUE);
-		}
-		return categoryValue;
+		return (EList<CategoryValue>) eGet(
+				Bpmn2Package.Literals.CATEGORY__CATEGORY_VALUE, true);
 	}
 
 	/**
@@ -117,7 +84,7 @@ public class CategoryImpl extends RootElementImpl implements Category {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eGet(Bpmn2Package.Literals.CATEGORY__NAME, true);
 	}
 
 	/**
@@ -126,116 +93,7 @@ public class CategoryImpl extends RootElementImpl implements Category {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CATEGORY__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-			return ((InternalEList<?>) getCategoryValue()).basicRemove(
-					otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-			return getCategoryValue();
-		case Bpmn2Package.CATEGORY__NAME:
-			return getName();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-			getCategoryValue().clear();
-			getCategoryValue().addAll(
-					(Collection<? extends CategoryValue>) newValue);
-			return;
-		case Bpmn2Package.CATEGORY__NAME:
-			setName((String) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-			getCategoryValue().clear();
-			return;
-		case Bpmn2Package.CATEGORY__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-			return categoryValue != null && !categoryValue.isEmpty();
-		case Bpmn2Package.CATEGORY__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
+		eSet(Bpmn2Package.Literals.CATEGORY__NAME, newName);
 	}
 
 } //CategoryImpl

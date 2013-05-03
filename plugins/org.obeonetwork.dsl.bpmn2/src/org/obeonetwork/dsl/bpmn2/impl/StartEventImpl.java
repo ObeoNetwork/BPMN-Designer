@@ -38,26 +38,6 @@ import org.obeonetwork.dsl.bpmn2.StartEvent;
  */
 public class StartEventImpl extends CatchEventImpl implements StartEvent {
 	/**
-	 * The default value of the '{@link #isIsInterrupting() <em>Is Interrupting</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsInterrupting()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_INTERRUPTING_EDEFAULT = true;
-
-	/**
-	 * The cached value of the '{@link #isIsInterrupting() <em>Is Interrupting</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsInterrupting()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isInterrupting = IS_INTERRUPTING_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -82,7 +62,8 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
 	 * @generated
 	 */
 	public boolean isIsInterrupting() {
-		return isInterrupting;
+		return (Boolean) eGet(
+				Bpmn2Package.Literals.START_EVENT__IS_INTERRUPTING, true);
 	}
 
 	/**
@@ -91,87 +72,8 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
 	 * @generated
 	 */
 	public void setIsInterrupting(boolean newIsInterrupting) {
-		boolean oldIsInterrupting = isInterrupting;
-		isInterrupting = newIsInterrupting;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.START_EVENT__IS_INTERRUPTING,
-					oldIsInterrupting, isInterrupting));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.START_EVENT__IS_INTERRUPTING:
-			return isIsInterrupting();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.START_EVENT__IS_INTERRUPTING:
-			setIsInterrupting((Boolean) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.START_EVENT__IS_INTERRUPTING:
-			setIsInterrupting(IS_INTERRUPTING_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.START_EVENT__IS_INTERRUPTING:
-			return isInterrupting != IS_INTERRUPTING_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (isInterrupting: ");
-		result.append(isInterrupting);
-		result.append(')');
-		return result.toString();
+		eSet(Bpmn2Package.Literals.START_EVENT__IS_INTERRUPTING,
+				newIsInterrupting);
 	}
 
 } //StartEventImpl

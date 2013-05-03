@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import org.eclipse.emf.ecore.util.EObjectValidator;
 
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.obeonetwork.dsl.dd.dc.DcPackage;
 import org.obeonetwork.dsl.dd.dc.Font;
 
@@ -54,127 +55,7 @@ import org.obeonetwork.dsl.dd.dc.util.DcValidator;
  *
  * @generated
  */
-public class FontImpl extends EObjectImpl implements Font {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final float SIZE_EDEFAULT = 0.0F;
-
-	/**
-	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected float size = SIZE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isIsBold() <em>Is Bold</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsBold()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_BOLD_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isIsBold() <em>Is Bold</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsBold()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isBold = IS_BOLD_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isIsItalic() <em>Is Italic</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsItalic()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_ITALIC_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isIsItalic() <em>Is Italic</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsItalic()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isItalic = IS_ITALIC_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isIsUnderline() <em>Is Underline</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsUnderline()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_UNDERLINE_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isIsUnderline() <em>Is Underline</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsUnderline()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isUnderline = IS_UNDERLINE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isIsStrikeThrough() <em>Is Strike Through</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsStrikeThrough()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_STRIKE_THROUGH_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isIsStrikeThrough() <em>Is Strike Through</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsStrikeThrough()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isStrikeThrough = IS_STRIKE_THROUGH_EDEFAULT;
-
+public class FontImpl extends CDOObjectImpl implements Font {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -199,8 +80,18 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getName() {
-		return name;
+		return (String) eGet(DcPackage.Literals.FONT__NAME, true);
 	}
 
 	/**
@@ -209,11 +100,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					DcPackage.FONT__NAME, oldName, name));
+		eSet(DcPackage.Literals.FONT__NAME, newName);
 	}
 
 	/**
@@ -222,7 +109,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 */
 	public float getSize() {
-		return size;
+		return (Float) eGet(DcPackage.Literals.FONT__SIZE, true);
 	}
 
 	/**
@@ -231,11 +118,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 */
 	public void setSize(float newSize) {
-		float oldSize = size;
-		size = newSize;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					DcPackage.FONT__SIZE, oldSize, size));
+		eSet(DcPackage.Literals.FONT__SIZE, newSize);
 	}
 
 	/**
@@ -244,7 +127,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 */
 	public boolean isIsBold() {
-		return isBold;
+		return (Boolean) eGet(DcPackage.Literals.FONT__IS_BOLD, true);
 	}
 
 	/**
@@ -253,11 +136,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 */
 	public void setIsBold(boolean newIsBold) {
-		boolean oldIsBold = isBold;
-		isBold = newIsBold;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					DcPackage.FONT__IS_BOLD, oldIsBold, isBold));
+		eSet(DcPackage.Literals.FONT__IS_BOLD, newIsBold);
 	}
 
 	/**
@@ -266,7 +145,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 */
 	public boolean isIsItalic() {
-		return isItalic;
+		return (Boolean) eGet(DcPackage.Literals.FONT__IS_ITALIC, true);
 	}
 
 	/**
@@ -275,11 +154,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 */
 	public void setIsItalic(boolean newIsItalic) {
-		boolean oldIsItalic = isItalic;
-		isItalic = newIsItalic;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					DcPackage.FONT__IS_ITALIC, oldIsItalic, isItalic));
+		eSet(DcPackage.Literals.FONT__IS_ITALIC, newIsItalic);
 	}
 
 	/**
@@ -288,7 +163,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 */
 	public boolean isIsUnderline() {
-		return isUnderline;
+		return (Boolean) eGet(DcPackage.Literals.FONT__IS_UNDERLINE, true);
 	}
 
 	/**
@@ -297,11 +172,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 */
 	public void setIsUnderline(boolean newIsUnderline) {
-		boolean oldIsUnderline = isUnderline;
-		isUnderline = newIsUnderline;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					DcPackage.FONT__IS_UNDERLINE, oldIsUnderline, isUnderline));
+		eSet(DcPackage.Literals.FONT__IS_UNDERLINE, newIsUnderline);
 	}
 
 	/**
@@ -310,7 +181,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 */
 	public boolean isIsStrikeThrough() {
-		return isStrikeThrough;
+		return (Boolean) eGet(DcPackage.Literals.FONT__IS_STRIKE_THROUGH, true);
 	}
 
 	/**
@@ -319,12 +190,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 */
 	public void setIsStrikeThrough(boolean newIsStrikeThrough) {
-		boolean oldIsStrikeThrough = isStrikeThrough;
-		isStrikeThrough = newIsStrikeThrough;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					DcPackage.FONT__IS_STRIKE_THROUGH, oldIsStrikeThrough,
-					isStrikeThrough));
+		eSet(DcPackage.Literals.FONT__IS_STRIKE_THROUGH, newIsStrikeThrough);
 	}
 
 	/**
@@ -354,142 +220,6 @@ public class FontImpl extends EObjectImpl implements Font {
 			return false;
 		}
 		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case DcPackage.FONT__NAME:
-			return getName();
-		case DcPackage.FONT__SIZE:
-			return getSize();
-		case DcPackage.FONT__IS_BOLD:
-			return isIsBold();
-		case DcPackage.FONT__IS_ITALIC:
-			return isIsItalic();
-		case DcPackage.FONT__IS_UNDERLINE:
-			return isIsUnderline();
-		case DcPackage.FONT__IS_STRIKE_THROUGH:
-			return isIsStrikeThrough();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case DcPackage.FONT__NAME:
-			setName((String) newValue);
-			return;
-		case DcPackage.FONT__SIZE:
-			setSize((Float) newValue);
-			return;
-		case DcPackage.FONT__IS_BOLD:
-			setIsBold((Boolean) newValue);
-			return;
-		case DcPackage.FONT__IS_ITALIC:
-			setIsItalic((Boolean) newValue);
-			return;
-		case DcPackage.FONT__IS_UNDERLINE:
-			setIsUnderline((Boolean) newValue);
-			return;
-		case DcPackage.FONT__IS_STRIKE_THROUGH:
-			setIsStrikeThrough((Boolean) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case DcPackage.FONT__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case DcPackage.FONT__SIZE:
-			setSize(SIZE_EDEFAULT);
-			return;
-		case DcPackage.FONT__IS_BOLD:
-			setIsBold(IS_BOLD_EDEFAULT);
-			return;
-		case DcPackage.FONT__IS_ITALIC:
-			setIsItalic(IS_ITALIC_EDEFAULT);
-			return;
-		case DcPackage.FONT__IS_UNDERLINE:
-			setIsUnderline(IS_UNDERLINE_EDEFAULT);
-			return;
-		case DcPackage.FONT__IS_STRIKE_THROUGH:
-			setIsStrikeThrough(IS_STRIKE_THROUGH_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case DcPackage.FONT__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
-		case DcPackage.FONT__SIZE:
-			return size != SIZE_EDEFAULT;
-		case DcPackage.FONT__IS_BOLD:
-			return isBold != IS_BOLD_EDEFAULT;
-		case DcPackage.FONT__IS_ITALIC:
-			return isItalic != IS_ITALIC_EDEFAULT;
-		case DcPackage.FONT__IS_UNDERLINE:
-			return isUnderline != IS_UNDERLINE_EDEFAULT;
-		case DcPackage.FONT__IS_STRIKE_THROUGH:
-			return isStrikeThrough != IS_STRIKE_THROUGH_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", size: ");
-		result.append(size);
-		result.append(", isBold: ");
-		result.append(isBold);
-		result.append(", isItalic: ");
-		result.append(isItalic);
-		result.append(", isUnderline: ");
-		result.append(isUnderline);
-		result.append(", isStrikeThrough: ");
-		result.append(isStrikeThrough);
-		result.append(')');
-		return result.toString();
 	}
 
 } //FontImpl

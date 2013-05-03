@@ -14,6 +14,7 @@
  */
 package org.obeonetwork.dsl.bpmn2;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -32,9 +33,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getEscalation()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Escalation extends EObject {
+public interface Escalation extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Structure Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->

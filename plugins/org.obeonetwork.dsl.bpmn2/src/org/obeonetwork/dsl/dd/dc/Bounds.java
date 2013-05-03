@@ -14,6 +14,7 @@
  */
 package org.obeonetwork.dsl.dd.dc;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -33,9 +34,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.obeonetwork.dsl.dd.dc.DcPackage#getBounds()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Bounds extends EObject {
+public interface Bounds extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>X</b></em>' attribute.
 	 * The default value is <code>"0"</code>.

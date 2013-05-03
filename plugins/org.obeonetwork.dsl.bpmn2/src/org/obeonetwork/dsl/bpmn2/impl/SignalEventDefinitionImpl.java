@@ -41,16 +41,6 @@ import org.obeonetwork.dsl.bpmn2.SignalEventDefinition;
 public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
 		SignalEventDefinition {
 	/**
-	 * The cached value of the '{@link #getSignalRef() <em>Signal Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSignalRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Signal signalRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -75,26 +65,8 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Signal getSignalRef() {
-		if (signalRef != null && signalRef.eIsProxy()) {
-			InternalEObject oldSignalRef = (InternalEObject) signalRef;
-			signalRef = (Signal) eResolveProxy(oldSignalRef);
-			if (signalRef != oldSignalRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
-							oldSignalRef, signalRef));
-			}
-		}
-		return signalRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Signal basicGetSignalRef() {
-		return signalRef;
+		return (Signal) eGet(
+				Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF, true);
 	}
 
 	/**
@@ -103,72 +75,8 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public void setSignalRef(Signal newSignalRef) {
-		Signal oldSignalRef = signalRef;
-		signalRef = newSignalRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
-					oldSignalRef, signalRef));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
-			if (resolve)
-				return getSignalRef();
-			return basicGetSignalRef();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
-			setSignalRef((Signal) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
-			setSignalRef((Signal) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
-			return signalRef != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
+				newSignalRef);
 	}
 
 } //SignalEventDefinitionImpl

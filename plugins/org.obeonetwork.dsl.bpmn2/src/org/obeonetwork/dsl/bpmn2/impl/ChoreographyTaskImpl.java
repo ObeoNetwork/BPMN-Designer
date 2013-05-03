@@ -42,16 +42,6 @@ import org.obeonetwork.dsl.bpmn2.MessageFlow;
 public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements
 		ChoreographyTask {
 	/**
-	 * The cached value of the '{@link #getMessageFlowRef() <em>Message Flow Ref</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMessageFlowRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MessageFlow> messageFlowRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -75,74 +65,10 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MessageFlow> getMessageFlowRef() {
-		if (messageFlowRef == null) {
-			messageFlowRef = new EObjectResolvingEList<MessageFlow>(
-					MessageFlow.class, this,
-					Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF);
-		}
-		return messageFlowRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-			return getMessageFlowRef();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-			getMessageFlowRef().clear();
-			getMessageFlowRef().addAll(
-					(Collection<? extends MessageFlow>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-			getMessageFlowRef().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-			return messageFlowRef != null && !messageFlowRef.isEmpty();
-		}
-		return super.eIsSet(featureID);
+	public EList<MessageFlow> getMessageFlowRef() {
+		return (EList<MessageFlow>) eGet(
+				Bpmn2Package.Literals.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF, true);
 	}
 
 } //ChoreographyTaskImpl

@@ -41,16 +41,6 @@ import org.obeonetwork.dsl.bpmn2.SequenceFlow;
 public class ExclusiveGatewayImpl extends GatewayImpl implements
 		ExclusiveGateway {
 	/**
-	 * The cached value of the '{@link #getDefault() <em>Default</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefault()
-	 * @generated
-	 * @ordered
-	 */
-	protected SequenceFlow default_;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -75,26 +65,8 @@ public class ExclusiveGatewayImpl extends GatewayImpl implements
 	 * @generated
 	 */
 	public SequenceFlow getDefault() {
-		if (default_ != null && default_.eIsProxy()) {
-			InternalEObject oldDefault = (InternalEObject) default_;
-			default_ = (SequenceFlow) eResolveProxy(oldDefault);
-			if (default_ != oldDefault) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT,
-							oldDefault, default_));
-			}
-		}
-		return default_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SequenceFlow basicGetDefault() {
-		return default_;
+		return (SequenceFlow) eGet(
+				Bpmn2Package.Literals.EXCLUSIVE_GATEWAY__DEFAULT, true);
 	}
 
 	/**
@@ -103,72 +75,7 @@ public class ExclusiveGatewayImpl extends GatewayImpl implements
 	 * @generated
 	 */
 	public void setDefault(SequenceFlow newDefault) {
-		SequenceFlow oldDefault = default_;
-		default_ = newDefault;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT, oldDefault,
-					default_));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT:
-			if (resolve)
-				return getDefault();
-			return basicGetDefault();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT:
-			setDefault((SequenceFlow) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT:
-			setDefault((SequenceFlow) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT:
-			return default_ != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(Bpmn2Package.Literals.EXCLUSIVE_GATEWAY__DEFAULT, newDefault);
 	}
 
 } //ExclusiveGatewayImpl

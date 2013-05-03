@@ -40,16 +40,6 @@ import org.obeonetwork.dsl.bpmn2.ErrorEventDefinition;
 public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
 		ErrorEventDefinition {
 	/**
-	 * The cached value of the '{@link #getErrorRef() <em>Error Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getErrorRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected org.obeonetwork.dsl.bpmn2.Error errorRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -74,26 +64,8 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public org.obeonetwork.dsl.bpmn2.Error getErrorRef() {
-		if (errorRef != null && errorRef.eIsProxy()) {
-			InternalEObject oldErrorRef = (InternalEObject) errorRef;
-			errorRef = (org.obeonetwork.dsl.bpmn2.Error) eResolveProxy(oldErrorRef);
-			if (errorRef != oldErrorRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
-							oldErrorRef, errorRef));
-			}
-		}
-		return errorRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public org.obeonetwork.dsl.bpmn2.Error basicGetErrorRef() {
-		return errorRef;
+		return (org.obeonetwork.dsl.bpmn2.Error) eGet(
+				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, true);
 	}
 
 	/**
@@ -102,72 +74,8 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public void setErrorRef(org.obeonetwork.dsl.bpmn2.Error newErrorRef) {
-		org.obeonetwork.dsl.bpmn2.Error oldErrorRef = errorRef;
-		errorRef = newErrorRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
-					oldErrorRef, errorRef));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF:
-			if (resolve)
-				return getErrorRef();
-			return basicGetErrorRef();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF:
-			setErrorRef((org.obeonetwork.dsl.bpmn2.Error) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF:
-			setErrorRef((org.obeonetwork.dsl.bpmn2.Error) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF:
-			return errorRef != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF,
+				newErrorRef);
 	}
 
 } //ErrorEventDefinitionImpl

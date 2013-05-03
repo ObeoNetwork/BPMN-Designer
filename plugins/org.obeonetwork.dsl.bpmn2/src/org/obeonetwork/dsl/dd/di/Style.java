@@ -14,6 +14,7 @@
  */
 package org.obeonetwork.dsl.dd.di;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -24,7 +25,8 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.obeonetwork.dsl.dd.di.DiPackage#getStyle()
  * @model abstract="true"
+ * @extends CDOObject
  * @generated
  */
-public interface Style extends EObject {
+public interface Style extends CDOObject {
 } // Style

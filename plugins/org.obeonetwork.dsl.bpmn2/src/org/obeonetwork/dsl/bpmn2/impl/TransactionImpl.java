@@ -39,46 +39,6 @@ import org.obeonetwork.dsl.bpmn2.Transaction;
  */
 public class TransactionImpl extends SubProcessImpl implements Transaction {
 	/**
-	 * The default value of the '{@link #getProtocol() <em>Protocol</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProtocol()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PROTOCOL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getProtocol() <em>Protocol</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProtocol()
-	 * @generated
-	 * @ordered
-	 */
-	protected String protocol = PROTOCOL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getMethod() <em>Method</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMethod()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String METHOD_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getMethod() <em>Method</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMethod()
-	 * @generated
-	 * @ordered
-	 */
-	protected String method = METHOD_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -103,7 +63,7 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
 	 * @generated
 	 */
 	public String getProtocol() {
-		return protocol;
+		return (String) eGet(Bpmn2Package.Literals.TRANSACTION__PROTOCOL, true);
 	}
 
 	/**
@@ -112,11 +72,7 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
 	 * @generated
 	 */
 	public void setProtocol(String newProtocol) {
-		String oldProtocol = protocol;
-		protocol = newProtocol;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.TRANSACTION__PROTOCOL, oldProtocol, protocol));
+		eSet(Bpmn2Package.Literals.TRANSACTION__PROTOCOL, newProtocol);
 	}
 
 	/**
@@ -125,7 +81,7 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
 	 * @generated
 	 */
 	public String getMethod() {
-		return method;
+		return (String) eGet(Bpmn2Package.Literals.TRANSACTION__METHOD, true);
 	}
 
 	/**
@@ -134,100 +90,7 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
 	 * @generated
 	 */
 	public void setMethod(String newMethod) {
-		String oldMethod = method;
-		method = newMethod;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.TRANSACTION__METHOD, oldMethod, method));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.TRANSACTION__PROTOCOL:
-			return getProtocol();
-		case Bpmn2Package.TRANSACTION__METHOD:
-			return getMethod();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.TRANSACTION__PROTOCOL:
-			setProtocol((String) newValue);
-			return;
-		case Bpmn2Package.TRANSACTION__METHOD:
-			setMethod((String) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.TRANSACTION__PROTOCOL:
-			setProtocol(PROTOCOL_EDEFAULT);
-			return;
-		case Bpmn2Package.TRANSACTION__METHOD:
-			setMethod(METHOD_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.TRANSACTION__PROTOCOL:
-			return PROTOCOL_EDEFAULT == null ? protocol != null
-					: !PROTOCOL_EDEFAULT.equals(protocol);
-		case Bpmn2Package.TRANSACTION__METHOD:
-			return METHOD_EDEFAULT == null ? method != null : !METHOD_EDEFAULT
-					.equals(method);
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (protocol: ");
-		result.append(protocol);
-		result.append(", method: ");
-		result.append(method);
-		result.append(')');
-		return result.toString();
+		eSet(Bpmn2Package.Literals.TRANSACTION__METHOD, newMethod);
 	}
 
 } //TransactionImpl

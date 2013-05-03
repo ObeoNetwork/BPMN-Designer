@@ -19,6 +19,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.EObjectImpl;
@@ -44,28 +45,8 @@ import org.obeonetwork.dsl.bpmn2.InteractionNode;
  *
  * @generated
  */
-public abstract class InteractionNodeImpl extends EObjectImpl implements
+public abstract class InteractionNodeImpl extends CDOObjectImpl implements
 		InteractionNode {
-	/**
-	 * The cached value of the '{@link #getIncomingConversationLinks() <em>Incoming Conversation Links</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIncomingConversationLinks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ConversationLink> incomingConversationLinks;
-
-	/**
-	 * The cached value of the '{@link #getOutgoingConversationLinks() <em>Outgoing Conversation Links</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutgoingConversationLinks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ConversationLink> outgoingConversationLinks;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -90,29 +71,9 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ConversationLink> getIncomingConversationLinks() {
-		if (incomingConversationLinks == null) {
-			incomingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
-					ConversationLink.class, this,
-					Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
-					Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
-		}
-		return incomingConversationLinks;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ConversationLink> getOutgoingConversationLinks() {
-		if (outgoingConversationLinks == null) {
-			outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
-					ConversationLink.class, this,
-					Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
-					Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
-		}
-		return outgoingConversationLinks;
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 	/**
@@ -121,18 +82,10 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks())
-					.basicAdd(otherEnd, msgs);
-		case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoingConversationLinks())
-					.basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
+	public EList<ConversationLink> getIncomingConversationLinks() {
+		return (EList<ConversationLink>) eGet(
+				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
+				true);
 	}
 
 	/**
@@ -140,52 +93,11 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-			return ((InternalEList<?>) getIncomingConversationLinks())
-					.basicRemove(otherEnd, msgs);
-		case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-			return ((InternalEList<?>) getOutgoingConversationLinks())
-					.basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-			return getIncomingConversationLinks();
-		case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-			return getOutgoingConversationLinks();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-			return incomingConversationLinks != null
-					&& !incomingConversationLinks.isEmpty();
-		case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-			return outgoingConversationLinks != null
-					&& !outgoingConversationLinks.isEmpty();
-		}
-		return super.eIsSet(featureID);
+	@SuppressWarnings("unchecked")
+	public EList<ConversationLink> getOutgoingConversationLinks() {
+		return (EList<ConversationLink>) eGet(
+				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
+				true);
 	}
 
 } //InteractionNodeImpl

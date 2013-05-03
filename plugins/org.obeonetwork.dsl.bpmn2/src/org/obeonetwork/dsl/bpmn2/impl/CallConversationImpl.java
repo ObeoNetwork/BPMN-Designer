@@ -51,26 +51,6 @@ import org.obeonetwork.dsl.bpmn2.ParticipantAssociation;
 public class CallConversationImpl extends ConversationNodeImpl implements
 		CallConversation {
 	/**
-	 * The cached value of the '{@link #getCalledCollaborationRef() <em>Called Collaboration Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCalledCollaborationRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Collaboration calledCollaborationRef;
-
-	/**
-	 * The cached value of the '{@link #getParticipantAssociations() <em>Participant Associations</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParticipantAssociations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ParticipantAssociation> participantAssociations;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -95,28 +75,9 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 	 * @generated
 	 */
 	public Collaboration getCalledCollaborationRef() {
-		if (calledCollaborationRef != null && calledCollaborationRef.eIsProxy()) {
-			InternalEObject oldCalledCollaborationRef = (InternalEObject) calledCollaborationRef;
-			calledCollaborationRef = (Collaboration) eResolveProxy(oldCalledCollaborationRef);
-			if (calledCollaborationRef != oldCalledCollaborationRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
-							oldCalledCollaborationRef, calledCollaborationRef));
-			}
-		}
-		return calledCollaborationRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Collaboration basicGetCalledCollaborationRef() {
-		return calledCollaborationRef;
+		return (Collaboration) eGet(
+				Bpmn2Package.Literals.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
+				true);
 	}
 
 	/**
@@ -126,60 +87,8 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 	 */
 	public void setCalledCollaborationRef(
 			Collaboration newCalledCollaborationRef) {
-		Collaboration oldCalledCollaborationRef = calledCollaborationRef;
-		calledCollaborationRef = newCalledCollaborationRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
-					oldCalledCollaborationRef, calledCollaborationRef));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ParticipantAssociation> getParticipantAssociations() {
-		if (participantAssociations == null) {
-			participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(
-					ParticipantAssociation.class, this,
-					Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS);
-		}
-		return participantAssociations;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS:
-			return ((InternalEList<?>) getParticipantAssociations())
-					.basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF:
-			if (resolve)
-				return getCalledCollaborationRef();
-			return basicGetCalledCollaborationRef();
-		case Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS:
-			return getParticipantAssociations();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		eSet(Bpmn2Package.Literals.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
+				newCalledCollaborationRef);
 	}
 
 	/**
@@ -188,54 +97,10 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF:
-			setCalledCollaborationRef((Collaboration) newValue);
-			return;
-		case Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS:
-			getParticipantAssociations().clear();
-			getParticipantAssociations().addAll(
-					(Collection<? extends ParticipantAssociation>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF:
-			setCalledCollaborationRef((Collaboration) null);
-			return;
-		case Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS:
-			getParticipantAssociations().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF:
-			return calledCollaborationRef != null;
-		case Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS:
-			return participantAssociations != null
-					&& !participantAssociations.isEmpty();
-		}
-		return super.eIsSet(featureID);
+	public EList<ParticipantAssociation> getParticipantAssociations() {
+		return (EList<ParticipantAssociation>) eGet(
+				Bpmn2Package.Literals.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS,
+				true);
 	}
 
 } //CallConversationImpl

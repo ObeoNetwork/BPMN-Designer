@@ -18,6 +18,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
@@ -38,47 +39,7 @@ import org.obeonetwork.dsl.dd.dc.Point;
  *
  * @generated
  */
-public class PointImpl extends EObjectImpl implements Point {
-	/**
-	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getX()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final float X_EDEFAULT = 0.0F;
-
-	/**
-	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getX()
-	 * @generated
-	 * @ordered
-	 */
-	protected float x = X_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getY()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final float Y_EDEFAULT = 0.0F;
-
-	/**
-	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getY()
-	 * @generated
-	 * @ordered
-	 */
-	protected float y = Y_EDEFAULT;
-
+public class PointImpl extends CDOObjectImpl implements Point {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,8 +64,18 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public float getX() {
-		return x;
+		return (Float) eGet(DcPackage.Literals.POINT__X, true);
 	}
 
 	/**
@@ -113,11 +84,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 */
 	public void setX(float newX) {
-		float oldX = x;
-		x = newX;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					DcPackage.POINT__X, oldX, x));
+		eSet(DcPackage.Literals.POINT__X, newX);
 	}
 
 	/**
@@ -126,7 +93,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 */
 	public float getY() {
-		return y;
+		return (Float) eGet(DcPackage.Literals.POINT__Y, true);
 	}
 
 	/**
@@ -135,98 +102,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 */
 	public void setY(float newY) {
-		float oldY = y;
-		y = newY;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					DcPackage.POINT__Y, oldY, y));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case DcPackage.POINT__X:
-			return getX();
-		case DcPackage.POINT__Y:
-			return getY();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case DcPackage.POINT__X:
-			setX((Float) newValue);
-			return;
-		case DcPackage.POINT__Y:
-			setY((Float) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case DcPackage.POINT__X:
-			setX(X_EDEFAULT);
-			return;
-		case DcPackage.POINT__Y:
-			setY(Y_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case DcPackage.POINT__X:
-			return x != X_EDEFAULT;
-		case DcPackage.POINT__Y:
-			return y != Y_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (x: ");
-		result.append(x);
-		result.append(", y: ");
-		result.append(y);
-		result.append(')');
-		return result.toString();
+		eSet(DcPackage.Literals.POINT__Y, newY);
 	}
 
 } //PointImpl

@@ -54,16 +54,6 @@ import org.obeonetwork.dsl.dd.di.util.DiValidator;
  */
 public abstract class PlaneImpl extends NodeImpl implements Plane {
 	/**
-	 * The cached value of the '{@link #getPlaneElement() <em>Plane Element</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPlaneElement()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DiagramElement> planeElement;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -87,12 +77,10 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<DiagramElement> getPlaneElement() {
-		if (planeElement == null) {
-			planeElement = new EObjectContainmentEList<DiagramElement>(
-					DiagramElement.class, this, DiPackage.PLANE__PLANE_ELEMENT);
-		}
-		return planeElement;
+		return (EList<DiagramElement>) eGet(
+				DiPackage.Literals.PLANE__PLANE_ELEMENT, true);
 	}
 
 	/**
@@ -122,83 +110,6 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
 			return false;
 		}
 		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case DiPackage.PLANE__PLANE_ELEMENT:
-			return ((InternalEList<?>) getPlaneElement()).basicRemove(otherEnd,
-					msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case DiPackage.PLANE__PLANE_ELEMENT:
-			return getPlaneElement();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case DiPackage.PLANE__PLANE_ELEMENT:
-			getPlaneElement().clear();
-			getPlaneElement().addAll(
-					(Collection<? extends DiagramElement>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case DiPackage.PLANE__PLANE_ELEMENT:
-			getPlaneElement().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case DiPackage.PLANE__PLANE_ELEMENT:
-			return planeElement != null && !planeElement.isEmpty();
-		}
-		return super.eIsSet(featureID);
 	}
 
 } //PlaneImpl

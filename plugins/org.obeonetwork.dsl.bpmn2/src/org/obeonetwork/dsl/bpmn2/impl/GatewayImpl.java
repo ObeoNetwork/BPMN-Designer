@@ -39,26 +39,6 @@ import org.obeonetwork.dsl.bpmn2.GatewayDirection;
  */
 public abstract class GatewayImpl extends FlowNodeImpl implements Gateway {
 	/**
-	 * The default value of the '{@link #getGatewayDirection() <em>Gateway Direction</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGatewayDirection()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final GatewayDirection GATEWAY_DIRECTION_EDEFAULT = GatewayDirection.UNSPECIFIED;
-
-	/**
-	 * The cached value of the '{@link #getGatewayDirection() <em>Gateway Direction</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGatewayDirection()
-	 * @generated
-	 * @ordered
-	 */
-	protected GatewayDirection gatewayDirection = GATEWAY_DIRECTION_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -83,7 +63,8 @@ public abstract class GatewayImpl extends FlowNodeImpl implements Gateway {
 	 * @generated
 	 */
 	public GatewayDirection getGatewayDirection() {
-		return gatewayDirection;
+		return (GatewayDirection) eGet(
+				Bpmn2Package.Literals.GATEWAY__GATEWAY_DIRECTION, true);
 	}
 
 	/**
@@ -92,88 +73,8 @@ public abstract class GatewayImpl extends FlowNodeImpl implements Gateway {
 	 * @generated
 	 */
 	public void setGatewayDirection(GatewayDirection newGatewayDirection) {
-		GatewayDirection oldGatewayDirection = gatewayDirection;
-		gatewayDirection = newGatewayDirection == null ? GATEWAY_DIRECTION_EDEFAULT
-				: newGatewayDirection;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.GATEWAY__GATEWAY_DIRECTION,
-					oldGatewayDirection, gatewayDirection));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.GATEWAY__GATEWAY_DIRECTION:
-			return getGatewayDirection();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.GATEWAY__GATEWAY_DIRECTION:
-			setGatewayDirection((GatewayDirection) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.GATEWAY__GATEWAY_DIRECTION:
-			setGatewayDirection(GATEWAY_DIRECTION_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.GATEWAY__GATEWAY_DIRECTION:
-			return gatewayDirection != GATEWAY_DIRECTION_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (gatewayDirection: ");
-		result.append(gatewayDirection);
-		result.append(')');
-		return result.toString();
+		eSet(Bpmn2Package.Literals.GATEWAY__GATEWAY_DIRECTION,
+				newGatewayDirection);
 	}
 
 } //GatewayImpl

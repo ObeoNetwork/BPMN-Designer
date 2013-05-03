@@ -19,6 +19,7 @@ import java.util.Map;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.EObjectValidator;
@@ -141,8 +142,8 @@ public class DiValidator extends EObjectValidator {
 	 */
 	public boolean validateDiagramElement(DiagramElement diagramElement,
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(diagramElement, diagnostics,
-				context);
+		return validate_EveryDefaultConstraint((EObject) diagramElement,
+				diagnostics, context);
 	}
 
 	/**
@@ -152,7 +153,8 @@ public class DiValidator extends EObjectValidator {
 	 */
 	public boolean validateDiagram(Diagram diagram,
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(diagram, diagnostics, context);
+		return validate_EveryDefaultConstraint((EObject) diagram, diagnostics,
+				context);
 	}
 
 	/**
@@ -162,7 +164,8 @@ public class DiValidator extends EObjectValidator {
 	 */
 	public boolean validateStyle(Style style, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(style, diagnostics, context);
+		return validate_EveryDefaultConstraint((EObject) style, diagnostics,
+				context);
 	}
 
 	/**
@@ -172,7 +175,8 @@ public class DiValidator extends EObjectValidator {
 	 */
 	public boolean validateNode(Node node, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(node, diagnostics, context);
+		return validate_EveryDefaultConstraint((EObject) node, diagnostics,
+				context);
 	}
 
 	/**
@@ -182,7 +186,8 @@ public class DiValidator extends EObjectValidator {
 	 */
 	public boolean validateEdge(Edge edge, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(edge, diagnostics, context);
+		return validate_EveryDefaultConstraint((EObject) edge, diagnostics,
+				context);
 	}
 
 	/**
@@ -192,7 +197,8 @@ public class DiValidator extends EObjectValidator {
 	 */
 	public boolean validateShape(Shape shape, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(shape, diagnostics, context);
+		return validate_EveryDefaultConstraint((EObject) shape, diagnostics,
+				context);
 	}
 
 	/**
@@ -202,8 +208,8 @@ public class DiValidator extends EObjectValidator {
 	 */
 	public boolean validateLabeledEdge(LabeledEdge labeledEdge,
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(labeledEdge, diagnostics,
-				context);
+		return validate_EveryDefaultConstraint((EObject) labeledEdge,
+				diagnostics, context);
 	}
 
 	/**
@@ -213,7 +219,8 @@ public class DiValidator extends EObjectValidator {
 	 */
 	public boolean validateLabel(Label label, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(label, diagnostics, context);
+		return validate_EveryDefaultConstraint((EObject) label, diagnostics,
+				context);
 	}
 
 	/**
@@ -223,8 +230,8 @@ public class DiValidator extends EObjectValidator {
 	 */
 	public boolean validateLabeledShape(LabeledShape labeledShape,
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(labeledShape, diagnostics,
-				context);
+		return validate_EveryDefaultConstraint((EObject) labeledShape,
+				diagnostics, context);
 	}
 
 	/**
@@ -234,22 +241,25 @@ public class DiValidator extends EObjectValidator {
 	 */
 	public boolean validatePlane(Plane plane, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		boolean result = validate_EveryMultiplicityConforms(plane, diagnostics,
-				context);
+		boolean result = validate_EveryMultiplicityConforms((EObject) plane,
+				diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryDataValueConforms(plane, diagnostics,
+			result &= validate_EveryDataValueConforms((EObject) plane,
+					diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryReferenceIsContained((EObject) plane,
+					diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryProxyResolves((EObject) plane, diagnostics,
 					context);
 		if (result || diagnostics != null)
-			result &= validate_EveryReferenceIsContained(plane, diagnostics,
+			result &= validate_UniqueID((EObject) plane, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryKeyUnique((EObject) plane, diagnostics,
 					context);
 		if (result || diagnostics != null)
-			result &= validate_EveryProxyResolves(plane, diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validate_UniqueID(plane, diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validate_EveryKeyUnique(plane, diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validate_EveryMapEntryUnique(plane, diagnostics, context);
+			result &= validate_EveryMapEntryUnique((EObject) plane,
+					diagnostics, context);
 		if (result || diagnostics != null)
 			result &= validatePlane_plane_element_type(plane, diagnostics,
 					context);

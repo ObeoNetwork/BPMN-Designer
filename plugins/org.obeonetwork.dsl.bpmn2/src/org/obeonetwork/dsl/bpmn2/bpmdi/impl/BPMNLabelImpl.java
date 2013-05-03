@@ -42,16 +42,6 @@ import org.obeonetwork.dsl.dd.di.impl.LabelImpl;
  */
 public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
 	/**
-	 * The cached value of the '{@link #getLabelStyle() <em>Label Style</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLabelStyle()
-	 * @generated
-	 * @ordered
-	 */
-	protected BPMNLabelStyle labelStyle;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -76,26 +66,8 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
 	 * @generated
 	 */
 	public BPMNLabelStyle getLabelStyle() {
-		if (labelStyle != null && labelStyle.eIsProxy()) {
-			InternalEObject oldLabelStyle = (InternalEObject) labelStyle;
-			labelStyle = (BPMNLabelStyle) eResolveProxy(oldLabelStyle);
-			if (labelStyle != oldLabelStyle) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							BpmnDiPackage.BPMN_LABEL__LABEL_STYLE,
-							oldLabelStyle, labelStyle));
-			}
-		}
-		return labelStyle;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BPMNLabelStyle basicGetLabelStyle() {
-		return labelStyle;
+		return (BPMNLabelStyle) eGet(
+				BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE, true);
 	}
 
 	/**
@@ -104,72 +76,7 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
 	 * @generated
 	 */
 	public void setLabelStyle(BPMNLabelStyle newLabelStyle) {
-		BPMNLabelStyle oldLabelStyle = labelStyle;
-		labelStyle = newLabelStyle;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BpmnDiPackage.BPMN_LABEL__LABEL_STYLE, oldLabelStyle,
-					labelStyle));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
-			if (resolve)
-				return getLabelStyle();
-			return basicGetLabelStyle();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
-			setLabelStyle((BPMNLabelStyle) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
-			setLabelStyle((BPMNLabelStyle) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
-			return labelStyle != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE, newLabelStyle);
 	}
 
 } //BPMNLabelImpl
