@@ -506,7 +506,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Timer Event Definition" label="Timer" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null &amp;&amp; $element.filter(&quot;EndEvent&quot;)==null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/timer.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Timer Event Definition" label="Timer" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null &amp;&amp; $element.filter(&quot;EndEvent&quot;)==null &amp;&amp; $element.filter(&quot;ImplicitThrowEvent&quot;)==null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/timer.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -528,7 +528,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Conditional Event Definition" label="Conditional" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null &amp;&amp; $element.filter(&quot;EndEvent&quot;)==null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/conditional.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Conditional Event Definition" label="Conditional" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null &amp;&amp; $element.filter(&quot;EndEvent&quot;)==null &amp;&amp; $element.filter(&quot;ImplicitThrowEvent&quot;)==null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/conditional.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -550,7 +550,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Error Event Definition" label="Error" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/error.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Error Event Definition" label="Error" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null &amp;&amp; $element.filter(&quot;ImplicitThrowEvent&quot;)==null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/startevent/error.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -561,7 +561,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Cancel Event Definition" label="Cancel" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/catching/cancel.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Cancel Event Definition" label="Cancel" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null &amp;&amp; $element.filter(&quot;ImplicitThrowEvent&quot;)==null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/catching/cancel.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -594,7 +594,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Terminate Event Definition" label="Terminate" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null &amp;&amp; $element.filter(&quot;BoundaryEvent&quot;)==null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/endevent/terminate.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Terminate Event Definition" label="Terminate" precondition="&lt;%$element.filter(&quot;Event&quot;)!=null &amp;&amp; $element.filter(&quot;BoundaryEvent&quot;)==null &amp;&amp; $element.filter(&quot;ImplicitThrowEvent&quot;)==null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/endevent/terminate.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
