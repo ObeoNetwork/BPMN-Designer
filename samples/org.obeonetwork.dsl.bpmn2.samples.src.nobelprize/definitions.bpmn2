@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ASCII"?>
+<bpmn:Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="_lYwdsJMvEeKGz_kv5DLbCg">
+  <rootElements xsi:type="bpmn:Process" id="_lYv2oJMvEeKGz_kv5DLbCg">
+    <flowElements xsi:type="bpmn:SendTask" id="_6TLCIJMvEeKGz_kv5DLbCg" name="Send Nomination Form" outgoing="_7Tq10JMvEeKGz_kv5DLbCg" incoming="_6TMQQJMvEeKGz_kv5DLbCg _QFWqIJMyEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_6TMQQJMvEeKGz_kv5DLbCg" targetRef="_6TLCIJMvEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:ReceiveTask" id="_7TqOwJMvEeKGz_kv5DLbCg" name="Collect Completed form" outgoing="_98_BcJMvEeKGz_kv5DLbCg" incoming="_7Tq10JMvEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_7Tq10JMvEeKGz_kv5DLbCg" targetRef="_7TqOwJMvEeKGz_kv5DLbCg" sourceRef="_6TLCIJMvEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:UserTask" id="_98-aYJMvEeKGz_kv5DLbCg" name="Screen &amp; Select Preliminary Candidates" outgoing="__CDMEJMvEeKGz_kv5DLbCg" incoming="_98_BcJMvEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_98_BcJMvEeKGz_kv5DLbCg" targetRef="_98-aYJMvEeKGz_kv5DLbCg" sourceRef="_7TqOwJMvEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:UserTask" id="__CClAJMvEeKGz_kv5DLbCg" name="Determine Need for Expert Assistance" outgoing="_0izUEJMxEeKGz_kv5DLbCg" incoming="__CDMEJMvEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="__CDMEJMvEeKGz_kv5DLbCg" targetRef="__CClAJMvEeKGz_kv5DLbCg" sourceRef="_98-aYJMvEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:UserTask" id="_i2xzsJMwEeKGz_kv5DLbCg" name="Identify Potentiel Nominee(s)" outgoing="_oH1doJMwEeKGz_kv5DLbCg" incoming="_teojMJMwEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SendTask" id="_oH02kJMwEeKGz_kv5DLbCg" name="Send Nominee Completed Form(s)" outgoing="_pKhCoJMwEeKGz_kv5DLbCg" incoming="_oH1doJMwEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_oH1doJMwEeKGz_kv5DLbCg" targetRef="_oH02kJMwEeKGz_kv5DLbCg" sourceRef="_i2xzsJMwEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:EndEvent" id="_pKgbkJMwEeKGz_kv5DLbCg" name="Nomination form(s) Sent" incoming="_pKhCoJMwEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_pKhCoJMwEeKGz_kv5DLbCg" targetRef="_pKgbkJMwEeKGz_kv5DLbCg" sourceRef="_oH02kJMwEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:StartEvent" id="_rfsKQJMwEeKGz_kv5DLbCg" outgoing="_teojMJMwEeKGz_kv5DLbCg">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_r9ECwJMwEeKGz_kv5DLbCg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_teojMJMwEeKGz_kv5DLbCg" targetRef="_i2xzsJMwEeKGz_kv5DLbCg" sourceRef="_rfsKQJMwEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:StartEvent" id="_z-5yQJMwEeKGz_kv5DLbCg" outgoing="_1cUygJMwEeKGz_kv5DLbCg">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_0zhtIJMwEeKGz_kv5DLbCg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SendTask" id="_1cULcJMwEeKGz_kv5DLbCg" name="Send candidates Assessments Report" outgoing="_4YuSMJMwEeKGz_kv5DLbCg" incoming="__ZHvEJUuEeKSM8dNXYpfyA"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_1cUygJMwEeKGz_kv5DLbCg" targetRef="_3AwZsJMwEeKGz_kv5DLbCg" sourceRef="_z-5yQJMwEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:UserTask" id="_3AwZsJMwEeKGz_kv5DLbCg" name="Assess Candidates work" outgoing="__ZHvEJUuEeKSM8dNXYpfyA" incoming="_1cUygJMwEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:EndEvent" id="_4YtrIJMwEeKGz_kv5DLbCg" name="End Assesments" incoming="_4YuSMJMwEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_4YuSMJMwEeKGz_kv5DLbCg" targetRef="_4YtrIJMwEeKGz_kv5DLbCg" sourceRef="_1cULcJMwEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:StartEvent" id="_Ag7IYJMxEeKGz_kv5DLbCg" outgoing="_GEKugJMxEeKGz_kv5DLbCg">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_DyK2sJMxEeKGz_kv5DLbCg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:UserTask" id="_GEKHcJMxEeKGz_kv5DLbCg" name="Discuss Nominations (Meeting 1)" outgoing="_HiEP4JMxEeKGz_kv5DLbCg" incoming="_GEKugJMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_GEKugJMxEeKGz_kv5DLbCg" targetRef="_GEKHcJMxEeKGz_kv5DLbCg" sourceRef="_Ag7IYJMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:UserTask" id="_HiDo0JMxEeKGz_kv5DLbCg" name="Select Laureates (Meeting 2)" outgoing="_JccR4JMxEeKGz_kv5DLbCg" incoming="_HiEP4JMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_HiEP4JMxEeKGz_kv5DLbCg" targetRef="_HiDo0JMxEeKGz_kv5DLbCg" sourceRef="_GEKHcJMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:UserTask" id="_Jcbq0JMxEeKGz_kv5DLbCg" name="Announce Nobel Prize Laureates" outgoing="_PExzYJMxEeKGz_kv5DLbCg" incoming="_JccR4JMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_JccR4JMxEeKGz_kv5DLbCg" targetRef="_Jcbq0JMxEeKGz_kv5DLbCg" sourceRef="_HiDo0JMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:EndEvent" id="_PExMUJMxEeKGz_kv5DLbCg" incoming="_PExzYJMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_PExzYJMxEeKGz_kv5DLbCg" targetRef="_PExMUJMxEeKGz_kv5DLbCg" sourceRef="_Jcbq0JMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:ExclusiveGateway" id="_0iytAJMxEeKGz_kv5DLbCg" name="Expert Assistance?" outgoing="_3JykcJMxEeKGz_kv5DLbCg _x59XoJMzEeKGz_kv5DLbCg" incoming="_0izUEJMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_0izUEJMxEeKGz_kv5DLbCg" targetRef="_0iytAJMxEeKGz_kv5DLbCg" sourceRef="__CClAJMvEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SendTask" id="_3Jx9YJMxEeKGz_kv5DLbCg" name="Send List of preliminary Candidates" outgoing="_5NorgJMxEeKGz_kv5DLbCg" incoming="_3JykcJMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_3JykcJMxEeKGz_kv5DLbCg" name="yes" targetRef="_3Jx9YJMxEeKGz_kv5DLbCg" sourceRef="_0iytAJMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:ReceiveTask" id="_5NndYJMxEeKGz_kv5DLbCg" name="Collect Candidates Work Assesment Report" outgoing="_72UlAJMxEeKGz_kv5DLbCg" incoming="_5NorgJMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_5NorgJMxEeKGz_kv5DLbCg" targetRef="_5NndYJMxEeKGz_kv5DLbCg" sourceRef="_3Jx9YJMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:UserTask" id="_72TW4JMxEeKGz_kv5DLbCg" name="Select Final Candidates and their Works" outgoing="_9n9hwJMxEeKGz_kv5DLbCg" incoming="_72UlAJMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_72UlAJMxEeKGz_kv5DLbCg" targetRef="_72TW4JMxEeKGz_kv5DLbCg" sourceRef="_5NndYJMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:Task" id="_9n86sJMxEeKGz_kv5DLbCg" name="Write Recommendation Report" outgoing="_VynH4JMyEeKGz_kv5DLbCg" incoming="_9n9hwJMxEeKGz_kv5DLbCg _x59XoJMzEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_9n9hwJMxEeKGz_kv5DLbCg" targetRef="_9n86sJMxEeKGz_kv5DLbCg" sourceRef="_72TW4JMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:StartEvent" id="_N6Z1gJMyEeKGz_kv5DLbCg" outgoing="_QFWqIJMyEeKGz_kv5DLbCg">
+      <eventDefinitions xsi:type="bpmn:TimerEventDefinition" id="_PDoHYJMyEeKGz_kv5DLbCg"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_QFWqIJMyEeKGz_kv5DLbCg" name="" targetRef="_6TLCIJMvEeKGz_kv5DLbCg" sourceRef="_N6Z1gJMyEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SendTask" id="_Vymg0JMyEeKGz_kv5DLbCg" name="Submit Report with Reconmmendations" outgoing="_YxmBgZMyEeKGz_kv5DLbCg" incoming="_VynH4JMyEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_VynH4JMyEeKGz_kv5DLbCg" targetRef="_Vymg0JMyEeKGz_kv5DLbCg" sourceRef="_9n86sJMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:UserTask" id="_YxmBgJMyEeKGz_kv5DLbCg" name="Hold Nobel Prize" outgoing="_gyIwgZMyEeKGz_kv5DLbCg" incoming="_YxmBgZMyEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_YxmBgZMyEeKGz_kv5DLbCg" targetRef="_YxmBgJMyEeKGz_kv5DLbCg" sourceRef="_Vymg0JMyEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:EndEvent" id="_gyIwgJMyEeKGz_kv5DLbCg" incoming="_gyIwgZMyEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_gyIwgZMyEeKGz_kv5DLbCg" targetRef="_gyIwgJMyEeKGz_kv5DLbCg" sourceRef="_YxmBgJMyEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:ReceiveTask" id="_QSM94JMzEeKGz_kv5DLbCg" name="Receive Nomination" outgoing="_0bxp0KOqEeKWPL0NwOif5A"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_x59XoJMzEeKGz_kv5DLbCg" name="No" targetRef="_9n86sJMxEeKGz_kv5DLbCg" sourceRef="_0iytAJMxEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="__ZHvEJUuEeKSM8dNXYpfyA" targetRef="_1cULcJMwEeKGz_kv5DLbCg" sourceRef="_3AwZsJMwEeKGz_kv5DLbCg"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_B0GegJYFEeKOGPdNF5Ql-Q"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_0bxp0KOqEeKWPL0NwOif5A" sourceRef="_QSM94JMzEeKGz_kv5DLbCg"/>
+    <laneSets id="_tFVu4JMvEeKGz_kv5DLbCg" name="Nobel commitee for Medecine">
+      <lanes id="_tFXkEJMvEeKGz_kv5DLbCg" flowNodeRefs="_6TLCIJMvEeKGz_kv5DLbCg _7TqOwJMvEeKGz_kv5DLbCg _98-aYJMvEeKGz_kv5DLbCg __CClAJMvEeKGz_kv5DLbCg _0iytAJMxEeKGz_kv5DLbCg _3Jx9YJMxEeKGz_kv5DLbCg _5NndYJMxEeKGz_kv5DLbCg _72TW4JMxEeKGz_kv5DLbCg _9n86sJMxEeKGz_kv5DLbCg _N6Z1gJMyEeKGz_kv5DLbCg _Vymg0JMyEeKGz_kv5DLbCg _YxmBgJMyEeKGz_kv5DLbCg _gyIwgJMyEeKGz_kv5DLbCg">
+        <extensionValues>
+          <value xsi:type="bpmn:DataStore" id="_nfEtIJMzEeKGz_kv5DLbCg" name=""/>
+        </extensionValues>
+        <extensionValues>
+          <value xsi:type="bpmn:DataStore" id="_r4Gi4JMzEeKGz_kv5DLbCg"/>
+        </extensionValues>
+        <extensionValues>
+          <value xsi:type="bpmn:DataStore" id="_tSQMsJMzEeKGz_kv5DLbCg"/>
+        </extensionValues>
+        <extensionValues>
+          <value xsi:type="bpmn:DataStore" id="_tfbGAJMzEeKGz_kv5DLbCg"/>
+        </extensionValues>
+        <extensionValues>
+          <value xsi:type="bpmn:DataObject" id="_1C6soJMzEeKGz_kv5DLbCg" name="Report with Recommendations"/>
+        </extensionValues>
+        <extensionValues>
+          <value xsi:type="bpmn:TextAnnotation" id="_sRn88JUyEeKCl81VVvO1pQ" text="Around 3000 invitations/confidential nomination forms are sent to selected Nominators"/>
+        </extensionValues>
+      </lanes>
+    </laneSets>
+    <laneSets id="_DEZnMJMwEeKGz_kv5DLbCg" name="Nominator">
+      <lanes id="_DEaOQJMwEeKGz_kv5DLbCg" name=" " flowNodeRefs="_i2xzsJMwEeKGz_kv5DLbCg _oH02kJMwEeKGz_kv5DLbCg _pKgbkJMwEeKGz_kv5DLbCg _rfsKQJMwEeKGz_kv5DLbCg">
+        <extensionValues>
+          <value xsi:type="bpmn:TextAnnotation" id="_Ur4M8JUtEeKSM8dNXYpfyA" text="Nominator may nominate one or more Nominees"/>
+        </extensionValues>
+        <extensionValues/>
+      </lanes>
+    </laneSets>
+    <laneSets id="_LBI0QJMwEeKGz_kv5DLbCg" name="Expert">
+      <lanes id="_LBJbUJMwEeKGz_kv5DLbCg" name="" flowNodeRefs="_z-5yQJMwEeKGz_kv5DLbCg _1cULcJMwEeKGz_kv5DLbCg _3AwZsJMwEeKGz_kv5DLbCg _4YtrIJMwEeKGz_kv5DLbCg">
+        <extensionValues>
+          <value xsi:type="bpmn:TextAnnotation" id="_GzIUcJUtEeKSM8dNXYpfyA" text="A selected expert is asked to asses the work of the Preliminary Candidates in the list"/>
+        </extensionValues>
+      </lanes>
+    </laneSets>
+    <laneSets id="_NQXr8JMwEeKGz_kv5DLbCg" name="Nobel Assembly">
+      <lanes id="_NQYTAJMwEeKGz_kv5DLbCg" name="" flowNodeRefs="_Ag7IYJMxEeKGz_kv5DLbCg _GEKHcJMxEeKGz_kv5DLbCg _HiDo0JMxEeKGz_kv5DLbCg _Jcbq0JMxEeKGz_kv5DLbCg _PExMUJMxEeKGz_kv5DLbCg"/>
+    </laneSets>
+    <laneSets id="_d3cWcJMxEeKGz_kv5DLbCg" name="Noble Prize Laureat">
+      <lanes id="_d3cWcZMxEeKGz_kv5DLbCg" name="" flowNodeRefs="_QSM94JMzEeKGz_kv5DLbCg"/>
+    </laneSets>
+    <artifacts xsi:type="bpmn:Association" id="_3YSBgJMzEeKGz_kv5DLbCg" sourceRef="_9n86sJMxEeKGz_kv5DLbCg" targetRef="_1C6soJMzEeKGz_kv5DLbCg"/>
+    <artifacts xsi:type="bpmn:Association" id="_4Td3YJMzEeKGz_kv5DLbCg" sourceRef="_1C6soJMzEeKGz_kv5DLbCg" targetRef="_Vymg0JMyEeKGz_kv5DLbCg"/>
+    <artifacts xsi:type="bpmn:Association" id="_Rz2zwJUpEeKHo-HauyzVXA" sourceRef="_nfEtIJMzEeKGz_kv5DLbCg" targetRef="_6TLCIJMvEeKGz_kv5DLbCg"/>
+    <artifacts xsi:type="bpmn:Association" id="_e4kAMJUpEeKHo-HauyzVXA" sourceRef="_7TqOwJMvEeKGz_kv5DLbCg" targetRef="_r4Gi4JMzEeKGz_kv5DLbCg"/>
+    <artifacts xsi:type="bpmn:Association" id="_hXhV8JUpEeKHo-HauyzVXA" sourceRef="_r4Gi4JMzEeKGz_kv5DLbCg" targetRef="_98-aYJMvEeKGz_kv5DLbCg"/>
+    <artifacts xsi:type="bpmn:Association" id="_kV4kgJUpEeKHo-HauyzVXA" sourceRef="_98-aYJMvEeKGz_kv5DLbCg" targetRef="_tfbGAJMzEeKGz_kv5DLbCg"/>
+    <artifacts xsi:type="bpmn:Association" id="_lLXbAJUpEeKHo-HauyzVXA" sourceRef="_tfbGAJMzEeKGz_kv5DLbCg" targetRef="_3Jx9YJMxEeKGz_kv5DLbCg"/>
+    <artifacts xsi:type="bpmn:Association" id="_rtY9kJUpEeKHo-HauyzVXA" sourceRef="_5NndYJMxEeKGz_kv5DLbCg" targetRef="_tSQMsJMzEeKGz_kv5DLbCg"/>
+    <artifacts xsi:type="bpmn:Association" id="_sw5pAJUpEeKHo-HauyzVXA" sourceRef="_tSQMsJMzEeKGz_kv5DLbCg" targetRef="_72TW4JMxEeKGz_kv5DLbCg"/>
+    <artifacts xsi:type="bpmn:Association" id="_Q6lsoJUtEeKSM8dNXYpfyA" sourceRef="_GzIUcJUtEeKSM8dNXYpfyA" targetRef="_3AwZsJMwEeKGz_kv5DLbCg"/>
+    <artifacts xsi:type="bpmn:Association" id="_YOVnEJUtEeKSM8dNXYpfyA" sourceRef="_Ur4M8JUtEeKSM8dNXYpfyA" targetRef="_i2xzsJMwEeKGz_kv5DLbCg"/>
+    <artifacts xsi:type="bpmn:Association" id="_6rnhUJUyEeKCl81VVvO1pQ" sourceRef="_sRn88JUyEeKCl81VVvO1pQ" targetRef="_6TLCIJMvEeKGz_kv5DLbCg"/>
+  </rootElements>
+  <rootElements xsi:type="bpmn:Collaboration" id="_2XpgYJMyEeKGz_kv5DLbCg">
+    <messageFlows id="_2XpgYZMyEeKGz_kv5DLbCg" sourceRef="_6TLCIJMvEeKGz_kv5DLbCg" targetRef="_rfsKQJMwEeKGz_kv5DLbCg"/>
+    <messageFlows id="_5stXsJMyEeKGz_kv5DLbCg" sourceRef="_oH02kJMwEeKGz_kv5DLbCg" targetRef="_7TqOwJMvEeKGz_kv5DLbCg"/>
+    <messageFlows id="_BaPrIJMzEeKGz_kv5DLbCg" sourceRef="_3Jx9YJMxEeKGz_kv5DLbCg" targetRef="_z-5yQJMwEeKGz_kv5DLbCg"/>
+    <messageFlows id="_FZS6oJMzEeKGz_kv5DLbCg" sourceRef="_1cULcJMwEeKGz_kv5DLbCg" targetRef="_5NndYJMxEeKGz_kv5DLbCg"/>
+    <messageFlows id="_KtLPEJMzEeKGz_kv5DLbCg" sourceRef="_Vymg0JMyEeKGz_kv5DLbCg" targetRef="_Ag7IYJMxEeKGz_kv5DLbCg"/>
+    <messageFlows id="_TWvF4JMzEeKGz_kv5DLbCg" name="" sourceRef="_Jcbq0JMxEeKGz_kv5DLbCg" targetRef="_QSM94JMzEeKGz_kv5DLbCg"/>
+  </rootElements>
+</bpmn:Definitions>

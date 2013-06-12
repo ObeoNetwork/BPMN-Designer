@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ASCII"?>
+<bpmn:Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="_VgLhQajBEeK_xvwrSf5u4w">
+  <rootElements xsi:type="bpmn:Process" id="_VgLhQKjBEeK_xvwrSf5u4w">
+    <flowElements xsi:type="bpmn:Task" id="_yJjVcKjBEeK_xvwrSf5u4w" name="Chose alternative" boundaryEventRefs="_7e0soKjKEeKSNoCYL5SGfQ"/>
+    <flowElements xsi:type="bpmn:SendTask" id="_yp_JAKjBEeK_xvwrSf5u4w" name="Send credit card information" boundaryEventRefs="_mePoEKjFEeKByZYE3SKnNQ"/>
+    <flowElements xsi:type="bpmn:StartEvent" id="_5F1LEKjBEeK_xvwrSf5u4w" outgoing="_6Y-N8KjBEeK_xvwrSf5u4w _9drVEKjBEeK_xvwrSf5u4w">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_5lGhAKjBEeK_xvwrSf5u4w"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_6Y-N8KjBEeK_xvwrSf5u4w" sourceRef="_5F1LEKjBEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:ParallelGateway" id="_9dquAKjBEeK_xvwrSf5u4w" outgoing="__M1lkKjBEeK_xvwrSf5u4w __vF-EKjBEeK_xvwrSf5u4w" incoming="_9drVEKjBEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_9drVEKjBEeK_xvwrSf5u4w" targetRef="_9dquAKjBEeK_xvwrSf5u4w" sourceRef="_5F1LEKjBEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:ManualTask" id="__M0-gKjBEeK_xvwrSf5u4w" name="Search hotel room" outgoing="_JAR1kKjCEeK_xvwrSf5u4w" incoming="__M1lkKjBEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="__M1lkKjBEeK_xvwrSf5u4w" targetRef="__M0-gKjBEeK_xvwrSf5u4w" sourceRef="_9dquAKjBEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:ManualTask" id="__vFXAKjBEeK_xvwrSf5u4w" name="Search Flight" outgoing="_GvYJ8KjCEeK_xvwrSf5u4w" incoming="__vF-EKjBEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="__vF-EKjBEeK_xvwrSf5u4w" targetRef="__vFXAKjBEeK_xvwrSf5u4w" sourceRef="_9dquAKjBEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:ManualTask" id="_GvXi4KjCEeK_xvwrSf5u4w" name="Evaluate Flight within customer critaria" outgoing="_H5jeEKjCEeK_xvwrSf5u4w" incoming="_GvYJ8KjCEeK_xvwrSf5u4w" boundaryEventRefs="_9F0foKjKEeKSNoCYL5SGfQ"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_GvYJ8KjCEeK_xvwrSf5u4w" targetRef="_GvXi4KjCEeK_xvwrSf5u4w" sourceRef="__vFXAKjBEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:ParallelGateway" id="_H5i3AKjCEeK_xvwrSf5u4w" outgoing="_QD8FkKjCEeK_xvwrSf5u4w" incoming="_H5jeEKjCEeK_xvwrSf5u4w _Lmr3IKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_H5jeEKjCEeK_xvwrSf5u4w" targetRef="_H5i3AKjCEeK_xvwrSf5u4w" sourceRef="_GvXi4KjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:ManualTask" id="_JAQncKjCEeK_xvwrSf5u4w" name="Evaluate hotels within customer critaria" outgoing="_Lmr3IKjCEeK_xvwrSf5u4w" incoming="_JAR1kKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_JAR1kKjCEeK_xvwrSf5u4w" targetRef="_JAQncKjCEeK_xvwrSf5u4w" sourceRef="__M0-gKjBEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_Lmr3IKjCEeK_xvwrSf5u4w" targetRef="_H5i3AKjCEeK_xvwrSf5u4w" sourceRef="_JAQncKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:ManualTask" id="_QD63cKjCEeK_xvwrSf5u4w" name="Package flights and hotels for customer review" outgoing="_REj1EKjCEeK_xvwrSf5u4w" incoming="_QD8FkKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_QD8FkKjCEeK_xvwrSf5u4w" targetRef="_QD63cKjCEeK_xvwrSf5u4w" sourceRef="_H5i3AKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:ManualTask" id="_REim8KjCEeK_xvwrSf5u4w" name="Present flights and hotels to customer" outgoing="_VNq_gajCEeK_xvwrSf5u4w _nVHtEKjCEeK_xvwrSf5u4w" incoming="_REj1EKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_REj1EKjCEeK_xvwrSf5u4w" targetRef="_REim8KjCEeK_xvwrSf5u4w" sourceRef="_QD63cKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_VNq_gajCEeK_xvwrSf5u4w" sourceRef="_REim8KjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:StartEvent" id="_fl4wgKjCEeK_xvwrSf5u4w" outgoing="_wHPqAKjCEeK_xvwrSf5u4w" incoming="_fl5XkKjCEeK_xvwrSf5u4w _n03kIKjCEeK_xvwrSf5u4w">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_1pBQgKjCEeK_xvwrSf5u4w"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_fl5XkKjCEeK_xvwrSf5u4w" targetRef="_fl4wgKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:StartEvent" id="_gLpI8KjCEeK_xvwrSf5u4w" outgoing="_zJMYEKjCEeK_xvwrSf5u4w" incoming="_gLpwAKjCEeK_xvwrSf5u4w _onOOIKjCEeK_xvwrSf5u4w">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_2nV58KjCEeK_xvwrSf5u4w"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_gLpwAKjCEeK_xvwrSf5u4w" targetRef="_gLpI8KjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:StartEvent" id="_gsrZcKjCEeK_xvwrSf5u4w" outgoing="_xgIvkKjCEeK_xvwrSf5u4w" incoming="_gssAgKjCEeK_xvwrSf5u4w _oNSrMKjCEeK_xvwrSf5u4w">
+      <eventDefinitions xsi:type="bpmn:TimerEventDefinition" id="_2KgM8KjCEeK_xvwrSf5u4w"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_gssAgKjCEeK_xvwrSf5u4w" targetRef="_gsrZcKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:EventBasedGateway" id="_mKHSgKjCEeK_xvwrSf5u4w" outgoing="_n03kIKjCEeK_xvwrSf5u4w _oNSrMKjCEeK_xvwrSf5u4w _onOOIKjCEeK_xvwrSf5u4w" incoming="_nVHtEKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_nVHtEKjCEeK_xvwrSf5u4w" targetRef="_mKHSgKjCEeK_xvwrSf5u4w" sourceRef="_REim8KjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_n03kIKjCEeK_xvwrSf5u4w" targetRef="_fl4wgKjCEeK_xvwrSf5u4w" sourceRef="_mKHSgKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_oNSrMKjCEeK_xvwrSf5u4w" targetRef="_gsrZcKjCEeK_xvwrSf5u4w" sourceRef="_mKHSgKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_onOOIKjCEeK_xvwrSf5u4w" targetRef="_gLpI8KjCEeK_xvwrSf5u4w" sourceRef="_mKHSgKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:ManualTask" id="_wHPC8KjCEeK_xvwrSf5u4w" name="Request credit card information" outgoing="_6bgIEKjCEeK_xvwrSf5u4w" incoming="_wHPqAKjCEeK_xvwrSf5u4w" boundaryEventRefs="_G5c2gKjDEeK_xvwrSf5u4w _vjRoAKjHEeKfxP_htjREQQ"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_wHPqAKjCEeK_xvwrSf5u4w" targetRef="_wHPC8KjCEeK_xvwrSf5u4w" sourceRef="_fl4wgKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:ServiceTask" id="_xgIIgKjCEeK_xvwrSf5u4w" name="Notify customer to start again" outgoing="_LKKcwKjOEeKSNoCYL5SGfQ" incoming="_xgIvkKjCEeK_xvwrSf5u4w _NNqmkKjDEeK_xvwrSf5u4w" boundaryEventRefs="_e_FH0KjFEeKByZYE3SKnNQ"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_xgIvkKjCEeK_xvwrSf5u4w" targetRef="_xgIIgKjCEeK_xvwrSf5u4w" sourceRef="_gsrZcKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:ScriptTask" id="_zJLxAKjCEeK_xvwrSf5u4w" name="Update  record customer" outgoing="_4iGWcKjCEeK_xvwrSf5u4w" incoming="_zJMYEKjCEeK_xvwrSf5u4w _LKKcwKjOEeKSNoCYL5SGfQ"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_zJMYEKjCEeK_xvwrSf5u4w" targetRef="_zJLxAKjCEeK_xvwrSf5u4w" sourceRef="_gLpI8KjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:EndEvent" id="_4iFvYKjCEeK_xvwrSf5u4w" incoming="_4iGWcKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_4iGWcKjCEeK_xvwrSf5u4w" targetRef="_4iFvYKjCEeK_xvwrSf5u4w" sourceRef="_zJLxAKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:StartEvent" id="_6bfhAKjCEeK_xvwrSf5u4w" incoming="_6bgIEKjCEeK_xvwrSf5u4w">
+      <eventDefinitions xsi:type="bpmn:LinkEventDefinition" id="_7pEucKjCEeK_xvwrSf5u4w"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_6bgIEKjCEeK_xvwrSf5u4w" targetRef="_6bfhAKjCEeK_xvwrSf5u4w" sourceRef="_wHPC8KjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:EndEvent" id="__GfQgKjCEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:BoundaryEvent" id="_G5c2gKjDEeK_xvwrSf5u4w" outgoing="_NNqmkKjDEeK_xvwrSf5u4w" attachedToRef="_wHPC8KjCEeK_xvwrSf5u4w">
+      <eventDefinitions xsi:type="bpmn:TimerEventDefinition" id="_KEJ38KjDEeK_xvwrSf5u4w"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_NNqmkKjDEeK_xvwrSf5u4w" targetRef="_xgIIgKjCEeK_xvwrSf5u4w" sourceRef="_G5c2gKjDEeK_xvwrSf5u4w"/>
+    <flowElements xsi:type="bpmn:BoundaryEvent" id="_e_FH0KjFEeKByZYE3SKnNQ" attachedToRef="_xgIIgKjCEeK_xvwrSf5u4w">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_f9mlkKjFEeKByZYE3SKnNQ"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:BoundaryEvent" id="_mePoEKjFEeKByZYE3SKnNQ" attachedToRef="_yp_JAKjBEeK_xvwrSf5u4w">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_oUjXgKjHEeKfxP_htjREQQ"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:BoundaryEvent" id="_vjRoAKjHEeKfxP_htjREQQ" attachedToRef="_wHPC8KjCEeK_xvwrSf5u4w">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_wZXigKjHEeKfxP_htjREQQ"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:BoundaryEvent" id="_7e0soKjKEeKSNoCYL5SGfQ" attachedToRef="_yJjVcKjBEeK_xvwrSf5u4w">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_8Yp3oKjKEeKSNoCYL5SGfQ"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:BoundaryEvent" id="_9F0foKjKEeKSNoCYL5SGfQ" attachedToRef="_GvXi4KjCEeK_xvwrSf5u4w">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_91khkKjKEeKSNoCYL5SGfQ"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:StartEvent" id="_5Jf-kKjLEeKSNoCYL5SGfQ" outgoing="_52aH4KjLEeKSNoCYL5SGfQ"/>
+    <flowElements xsi:type="bpmn:Task" id="_52XEkKjLEeKSNoCYL5SGfQ" name="Request a trip" incoming="_52aH4KjLEeKSNoCYL5SGfQ" boundaryEventRefs="_9_kVoKjLEeKSNoCYL5SGfQ"/>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_52aH4KjLEeKSNoCYL5SGfQ" targetRef="_52XEkKjLEeKSNoCYL5SGfQ" sourceRef="_5Jf-kKjLEeKSNoCYL5SGfQ"/>
+    <flowElements xsi:type="bpmn:BoundaryEvent" id="_9_kVoKjLEeKSNoCYL5SGfQ" attachedToRef="_52XEkKjLEeKSNoCYL5SGfQ">
+      <eventDefinitions xsi:type="bpmn:MessageEventDefinition" id="_-ZlYIKjLEeKSNoCYL5SGfQ"/>
+    </flowElements>
+    <flowElements xsi:type="bpmn:SequenceFlow" id="_LKKcwKjOEeKSNoCYL5SGfQ" targetRef="_zJLxAKjCEeK_xvwrSf5u4w" sourceRef="_xgIIgKjCEeK_xvwrSf5u4w"/>
+    <laneSets id="_bnUeoKjBEeK_xvwrSf5u4w" name="Customer">
+      <lanes id="_bnYJAKjBEeK_xvwrSf5u4w" name="Travel booking" flowNodeRefs="_yJjVcKjBEeK_xvwrSf5u4w _yp_JAKjBEeK_xvwrSf5u4w __GfQgKjCEeK_xvwrSf5u4w _5Jf-kKjLEeKSNoCYL5SGfQ _52XEkKjLEeKSNoCYL5SGfQ"/>
+    </laneSets>
+    <laneSets id="_gxuG8KjBEeK_xvwrSf5u4w" name="Travel Agency">
+      <lanes id="_gxuuAKjBEeK_xvwrSf5u4w" name="Travel" flowNodeRefs="_5F1LEKjBEeK_xvwrSf5u4w _9dquAKjBEeK_xvwrSf5u4w __M0-gKjBEeK_xvwrSf5u4w __vFXAKjBEeK_xvwrSf5u4w _GvXi4KjCEeK_xvwrSf5u4w _H5i3AKjCEeK_xvwrSf5u4w _JAQncKjCEeK_xvwrSf5u4w _QD63cKjCEeK_xvwrSf5u4w _REim8KjCEeK_xvwrSf5u4w _fl4wgKjCEeK_xvwrSf5u4w _gLpI8KjCEeK_xvwrSf5u4w _gsrZcKjCEeK_xvwrSf5u4w _mKHSgKjCEeK_xvwrSf5u4w _wHPC8KjCEeK_xvwrSf5u4w _xgIIgKjCEeK_xvwrSf5u4w _zJLxAKjCEeK_xvwrSf5u4w _4iFvYKjCEeK_xvwrSf5u4w _6bfhAKjCEeK_xvwrSf5u4w"/>
+    </laneSets>
+  </rootElements>
+  <rootElements xsi:type="bpmn:Collaboration" id="_mzUyIKjDEeK_xvwrSf5u4w">
+    <messageFlows id="_7LA_0KjKEeKSNoCYL5SGfQ" sourceRef="_9F0foKjKEeKSNoCYL5SGfQ" targetRef="_yJjVcKjBEeK_xvwrSf5u4w"/>
+    <messageFlows id="_CF0OwKjLEeKSNoCYL5SGfQ" sourceRef="_7e0soKjKEeKSNoCYL5SGfQ" targetRef="_GvXi4KjCEeK_xvwrSf5u4w"/>
+    <messageFlows id="_Ns60wKjLEeKSNoCYL5SGfQ" sourceRef="_vjRoAKjHEeKfxP_htjREQQ" targetRef="_yp_JAKjBEeK_xvwrSf5u4w"/>
+    <messageFlows id="_Oci64KjLEeKSNoCYL5SGfQ" sourceRef="_mePoEKjFEeKByZYE3SKnNQ" targetRef="_wHPC8KjCEeK_xvwrSf5u4w"/>
+    <messageFlows id="_YXW-MKjLEeKSNoCYL5SGfQ" sourceRef="_e_FH0KjFEeKByZYE3SKnNQ" targetRef="__GfQgKjCEeK_xvwrSf5u4w"/>
+    <messageFlows id="__TvTQKjLEeKSNoCYL5SGfQ" sourceRef="_9_kVoKjLEeKSNoCYL5SGfQ" targetRef="_5F1LEKjBEeK_xvwrSf5u4w"/>
+  </rootElements>
+</bpmn:Definitions>
