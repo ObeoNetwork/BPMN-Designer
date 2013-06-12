@@ -22,8 +22,10 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
+import org.eclipse.ui.PlatformUI;
 
 /**
  * 
@@ -111,10 +113,10 @@ public class Bpmn2SampleWizardPage extends WizardPage {
 
 		canvas = new ImageCanvas(container, SWT.NONE);
 		canvas.setImage(null);
-		GridData gdImage = new GridData(GridData.HORIZONTAL_ALIGN_FILL
+		final GridData gdImage = new GridData(GridData.HORIZONTAL_ALIGN_FILL
 				| GridData.FILL_VERTICAL);
 		gdImage.heightHint = 100;
-		gdImage.widthHint = 450;
+		gdImage.widthHint = 800;
 		canvas.setLayoutData(gdImage);
 
 		setControl(container);
