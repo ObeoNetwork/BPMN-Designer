@@ -23,4 +23,7 @@ public class NobelPrizeSample extends Bpmn2Sample {
 								"/org.obeonetwork.dsl.bpmn2.samples.pack.core/images/nobelprize-logo.png")); //$NON-NLS-1$
 	}
 	
+	
+	
+	
 }

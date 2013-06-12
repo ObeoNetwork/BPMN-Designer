@@ -69,7 +69,9 @@ public class Bpmn2SampleWizardPage extends WizardPage {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.eclipse.jface.dialogs.IDialogPage#createControl(org.eclipse.swt.widgets.Composite)
+	 * @see
+	 * org.eclipse.jface.dialogs.IDialogPage#createControl(org.eclipse.swt.widgets
+	 * .Composite)
 	 */
 	public void createControl(Composite parent) {
 		browser = new FormBrowser(SWT.BORDER | SWT.V_SCROLL);
@@ -78,7 +80,7 @@ public class Bpmn2SampleWizardPage extends WizardPage {
 		GridLayout layout = new GridLayout();
 		container.setLayout(layout);
 		layout.numColumns = 3;
-		table = new Table(container, SWT.SINGLE);
+		table = new Table(container, SWT.SINGLE | SWT.BORDER);
 		table.addListener(SWT.SELECTED, new Listener() {
 			public void handleEvent(Event event) {
 				Bpmn2SampleWizardPage.this.handleEvent();
@@ -90,8 +92,6 @@ public class Bpmn2SampleWizardPage extends WizardPage {
 			}
 		});
 
-		
-			
 		TableItem tableItem = null;
 		for (Bpmn2Sample bpmn2Sample : ((ProjectUnzipperNewWizard) this
 				.getWizard()).getBpmn2Samples()) {
@@ -139,8 +139,8 @@ public class Bpmn2SampleWizardPage extends WizardPage {
 					.getBpmn2Samples().get(table.getSelectionIndex())
 					.getDescription());
 			ImageDescriptor imageDescriptor = ((ProjectUnzipperNewWizard) this
-					.getWizard()).getBpmn2Samples().get(
-					table.getSelectionIndex()).getImageDesc();
+					.getWizard()).getBpmn2Samples()
+					.get(table.getSelectionIndex()).getImageDesc();
 			Image image = imageDescriptor.createImage();
 			this.canvas.setImage(image);
 		}
