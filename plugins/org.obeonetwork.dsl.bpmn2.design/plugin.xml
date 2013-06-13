@@ -17,31 +17,31 @@
   <extension point="fr.obeo.dsl.viewpoint.componentization">
     <component class="org.obeonetwork.bpmn2.design.Activator"
                id="org.obeonetwork.bpmn2.design"
-	       name="BPMN2">
+	       name="BPMN">
     </component>
   </extension>
   <extension
         point="org.eclipse.ui.newWizards">
      <wizard
-           category="fr.obeo.dsl.viewpoint.category/org.obeonetwork.dsl.bpmn2.designer.category"
+           category="org.obeonetwork.dsl.bpmn2.designer.category"
            class="org.obeonetwork.bpmn2.design.ui.wizards.newmodel.Bpmn2ModelWizard"
            icon="icons/Bpmn2ModelFile.gif"
            id="org.obeonetwork.dsl.bpmn2.wizard.newBpmn2Model"
-           name="BPMN2 Model"
+           name="BPMN Model"
            preferredPerspectives="fr.obeo.dsl.viewpoint.ui.tools.perspective.modeling"
            project="false">
      </wizard>
      <category
            id="org.obeonetwork.dsl.bpmn2.designer.category"
-           name="BPMN2 Designer"
-           parentCategory="fr.obeo.dsl.viewpoint.category">
+           name="BPMN Designer"
+          >
      </category>
      <wizard
-           category="fr.obeo.dsl.viewpoint.category/org.obeonetwork.dsl.bpmn2.designer.category"
+           category="org.obeonetwork.dsl.bpmn2.designer.category"
            class="org.obeonetwork.bpmn2.design.ui.wizards.newmodel.Bpmn2ProjectWizard"
            icon="icons/Bpmn2ModelFile.gif"
            id="org.obeonetwork.dsl.bpmn2.wizard.newBpmn2Project"
-           name="BPMN2 Project"
+           name="BPMN Project"
            project="true">
      </wizard>
   </extension>

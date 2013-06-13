@@ -38,7 +38,7 @@
             id="org.obeonetwork.dsl.bpmn2.presentation.Bpmn2EditorID"
             name="%_UI_Bpmn2Editor_label"
             icon="icons/full/obj16/Bpmn2ModelFile.gif"
-            extensions="bpmn2"
+            extensions="bpmn"
             class="org.obeonetwork.dsl.bpmn2.presentation.Bpmn2Editor"
             contributorClass="org.obeonetwork.dsl.bpmn2.presentation.Bpmn2ActionBarContributor">
       </editor>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:table="http://www.obeo.fr/dsl/viewpoint/table/1.1.0" xmlns:viewpoint="http://www.obeo.fr/dsl/viewpoint/1.1.0" xsi:schemaLocation="http://www.obeo.fr/dsl/viewpoint/description/1.1.0 http://www.obeo.fr/dsl/viewpoint/1.1.0#//description http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0 http://www.obeo.fr/dsl/viewpoint/table/1.1.0#//description http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0 http://www.obeo.fr/dsl/viewpoint/1.1.0#//description/style" xmi:id="_VfMCwKjBEeK_xvwrSf5u4w" selectedViews="_ViGz4KjBEeK_xvwrSf5u4w">
-  <models xmi:type="bpmn:Definitions" href="definitions.bpmn2#_VgLhQajBEeK_xvwrSf5u4w"/>
+  <models xmi:type="bpmn:Definitions" href="definitions.bpmn#_VgLhQajBEeK_xvwrSf5u4w"/>
   <eAnnotations xmi:type="description:DAnnotationEntry" xmi:id="_VfMp0KjBEeK_xvwrSf5u4w" source="Migration">
     <details>style</details>
     <details>someViewsAreHiddenDeactivation</details>
@@ -14,30 +14,30 @@
   </eAnnotations>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_ViGz4KjBEeK_xvwrSf5u4w" initialized="true">
     <ownedRepresentations xmi:type="table:DTable" xmi:id="_ViPWwKjBEeK_xvwrSf5u4w" name="Process Definitions" headerColumnWidth="98">
-      <target xmi:type="bpmn:Definitions" href="definitions.bpmn2#_VgLhQajBEeK_xvwrSf5u4w"/>
+      <target xmi:type="bpmn:Definitions" href="definitions.bpmn#_VgLhQajBEeK_xvwrSf5u4w"/>
       <lines xmi:type="table:DLine" xmi:id="_ViPWwajBEeK_xvwrSf5u4w" label="Process">
-        <target xmi:type="bpmn:Process" href="definitions.bpmn2#_VgLhQKjBEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn2#_VgLhQKjBEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='Process%20Definitions']/@ownedLineMappings[name='Process']"/>
         <cells xmi:type="table:DCell" xmi:id="_ViPWwqjBEeK_xvwrSf5u4w" column="_ViPWx6jBEeK_xvwrSf5u4w">
-          <target xmi:type="bpmn:Process" href="definitions.bpmn2#_VgLhQKjBEeK_xvwrSf5u4w"/>
-          <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn2#_VgLhQKjBEeK_xvwrSf5u4w"/>
+          <target xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
+          <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
         </cells>
         <cells xmi:type="table:DCell" xmi:id="_ViPWw6jBEeK_xvwrSf5u4w" label="[Customer, Travel Agency]" column="_ViPWyKjBEeK_xvwrSf5u4w">
-          <target xmi:type="bpmn:Process" href="definitions.bpmn2#_VgLhQKjBEeK_xvwrSf5u4w"/>
-          <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn2#_VgLhQKjBEeK_xvwrSf5u4w"/>
+          <target xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
+          <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
         </cells>
         <cells xmi:type="table:DCell" xmi:id="_ViPWxKjBEeK_xvwrSf5u4w" label="12" column="_ViPWyajBEeK_xvwrSf5u4w">
-          <target xmi:type="bpmn:Process" href="definitions.bpmn2#_VgLhQKjBEeK_xvwrSf5u4w"/>
-          <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn2#_VgLhQKjBEeK_xvwrSf5u4w"/>
+          <target xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
+          <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
         </cells>
         <cells xmi:type="table:DCell" xmi:id="_ViPWxajBEeK_xvwrSf5u4w" label="6" column="_ViPWyqjBEeK_xvwrSf5u4w">
-          <target xmi:type="bpmn:Process" href="definitions.bpmn2#_VgLhQKjBEeK_xvwrSf5u4w"/>
-          <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn2#_VgLhQKjBEeK_xvwrSf5u4w"/>
+          <target xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
+          <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
         </cells>
         <cells xmi:type="table:DCell" xmi:id="_ViPWxqjBEeK_xvwrSf5u4w" label="2" column="_ViPWy6jBEeK_xvwrSf5u4w">
-          <target xmi:type="bpmn:Process" href="definitions.bpmn2#_VgLhQKjBEeK_xvwrSf5u4w"/>
-          <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn2#_VgLhQKjBEeK_xvwrSf5u4w"/>
+          <target xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
+          <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
         </cells>
       </lines>
       <columns xmi:type="table:DFeatureColumn" xmi:id="_ViPWx6jBEeK_xvwrSf5u4w" label="Name" cells="_ViPWwqjBEeK_xvwrSf5u4w" width="196" featureName="name">
@@ -852,8 +852,8 @@
         </data>
       </ownedAnnotationEntries>
       <ownedDiagramElements xmi:type="viewpoint:DNodeContainer" xmi:id="_bnYwEKjBEeK_xvwrSf5u4w" name="Customer">
-        <target xmi:type="bpmn:LaneSet" href="definitions.bpmn2#_bnUeoKjBEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:LaneSet" href="definitions.bpmn2#_bnUeoKjBEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:LaneSet" href="definitions.bpmn#_bnUeoKjBEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:LaneSet" href="definitions.bpmn#_bnUeoKjBEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:FlatContainerStyle" xmi:id="_bnZXIKjBEeK_xvwrSf5u4w" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="GradientTopToBottom">
           <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_bnZ-MKjBEeK_xvwrSf5u4w"/>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@style"/>
@@ -863,8 +863,8 @@
         </ownedStyle>
         <actualMapping xmi:type="description:ContainerMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']"/>
         <ownedDiagramElements xmi:type="viewpoint:DNodeContainer" xmi:id="_bngr4KjBEeK_xvwrSf5u4w" name="Travel booking">
-          <target xmi:type="bpmn:Lane" href="definitions.bpmn2#_bnYJAKjBEeK_xvwrSf5u4w"/>
-          <semanticElements xmi:type="bpmn:Lane" href="definitions.bpmn2#_bnYJAKjBEeK_xvwrSf5u4w"/>
+          <target xmi:type="bpmn:Lane" href="definitions.bpmn#_bnYJAKjBEeK_xvwrSf5u4w"/>
+          <semanticElements xmi:type="bpmn:Lane" href="definitions.bpmn#_bnYJAKjBEeK_xvwrSf5u4w"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -877,15 +877,15 @@
           </ownedStyle>
           <actualMapping xmi:type="description:ContainerMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']"/>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_yJ-zQKjBEeK_xvwrSf5u4w" name="Chose alternative" incomingEdges="_7LJisKjKEeKSNoCYL5SGfQ" width="8" height="8" resizeKind="NSEW">
-            <target xmi:type="bpmn:Task" href="definitions.bpmn2#_yJjVcKjBEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:Task" href="definitions.bpmn2#_yJjVcKjBEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:Task" href="definitions.bpmn#_yJjVcKjBEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:Task" href="definitions.bpmn#_yJjVcKjBEeK_xvwrSf5u4w"/>
             <decorations xmi:type="viewpoint:Decoration" xmi:id="_yKLnkKjBEeK_xvwrSf5u4w">
               <description xmi:type="description:MappingBasedDecoration" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='Task']"/>
             </decorations>
             <ownedBorderedNodes xmi:type="viewpoint:DNode" xmi:id="_7e4XAKjKEeKSNoCYL5SGfQ" outgoingEdges="_CF68cKjLEeKSNoCYL5SGfQ" width="-1" height="-1">
-              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_7e0soKjKEeKSNoCYL5SGfQ"/>
-              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_7e0soKjKEeKSNoCYL5SGfQ"/>
-              <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn2#_8Yp3oKjKEeKSNoCYL5SGfQ"/>
+              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_7e0soKjKEeKSNoCYL5SGfQ"/>
+              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_7e0soKjKEeKSNoCYL5SGfQ"/>
+              <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn#_8Yp3oKjKEeKSNoCYL5SGfQ"/>
               <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
               <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
               <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -906,15 +906,15 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_yqW8cKjBEeK_xvwrSf5u4w" name="Send credit card information" incomingEdges="_NtAUUKjLEeKSNoCYL5SGfQ" width="8" height="8" resizeKind="NSEW">
-            <target xmi:type="bpmn:SendTask" href="definitions.bpmn2#_yp_JAKjBEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:SendTask" href="definitions.bpmn2#_yp_JAKjBEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:SendTask" href="definitions.bpmn#_yp_JAKjBEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:SendTask" href="definitions.bpmn#_yp_JAKjBEeK_xvwrSf5u4w"/>
             <decorations xmi:type="viewpoint:Decoration" xmi:id="_yqe4QKjBEeK_xvwrSf5u4w">
               <description xmi:type="description:MappingBasedDecoration" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='SendTask']"/>
             </decorations>
             <ownedBorderedNodes xmi:type="viewpoint:DNode" xmi:id="_meT5gKjFEeKByZYE3SKnNQ" outgoingEdges="_OcsE0KjLEeKSNoCYL5SGfQ" width="-1" height="-1">
-              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_mePoEKjFEeKByZYE3SKnNQ"/>
-              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_mePoEKjFEeKByZYE3SKnNQ"/>
-              <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn2#_oUjXgKjHEeKfxP_htjREQQ"/>
+              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_mePoEKjFEeKByZYE3SKnNQ"/>
+              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_mePoEKjFEeKByZYE3SKnNQ"/>
+              <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn#_oUjXgKjHEeKfxP_htjREQQ"/>
               <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
               <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
               <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -935,15 +935,15 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_52Y5wKjLEeKSNoCYL5SGfQ" name="Request a trip" incomingEdges="_53POUKjLEeKSNoCYL5SGfQ" width="8" height="8" resizeKind="NSEW">
-            <target xmi:type="bpmn:Task" href="definitions.bpmn2#_52XEkKjLEeKSNoCYL5SGfQ"/>
-            <semanticElements xmi:type="bpmn:Task" href="definitions.bpmn2#_52XEkKjLEeKSNoCYL5SGfQ"/>
+            <target xmi:type="bpmn:Task" href="definitions.bpmn#_52XEkKjLEeKSNoCYL5SGfQ"/>
+            <semanticElements xmi:type="bpmn:Task" href="definitions.bpmn#_52XEkKjLEeKSNoCYL5SGfQ"/>
             <decorations xmi:type="viewpoint:Decoration" xmi:id="_53JHsKjLEeKSNoCYL5SGfQ">
               <description xmi:type="description:MappingBasedDecoration" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='Task']"/>
             </decorations>
             <ownedBorderedNodes xmi:type="viewpoint:DNode" xmi:id="_9_mK0KjLEeKSNoCYL5SGfQ" outgoingEdges="__T65cKjLEeKSNoCYL5SGfQ" width="-1" height="-1">
-              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_9_kVoKjLEeKSNoCYL5SGfQ"/>
-              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_9_kVoKjLEeKSNoCYL5SGfQ"/>
-              <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn2#_-ZlYIKjLEeKSNoCYL5SGfQ"/>
+              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_9_kVoKjLEeKSNoCYL5SGfQ"/>
+              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_9_kVoKjLEeKSNoCYL5SGfQ"/>
+              <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn#_-ZlYIKjLEeKSNoCYL5SGfQ"/>
               <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
               <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
               <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -964,8 +964,8 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="__GyLcKjCEeK_xvwrSf5u4w" incomingEdges="_YXgIIKjLEeKSNoCYL5SGfQ" width="-1" height="-1">
-            <target xmi:type="bpmn:EndEvent" href="definitions.bpmn2#__GfQgKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:EndEvent" href="definitions.bpmn2#__GfQgKjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:EndEvent" href="definitions.bpmn#__GfQgKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:EndEvent" href="definitions.bpmn#__GfQgKjCEeK_xvwrSf5u4w"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -975,8 +975,8 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_5JyScKjLEeKSNoCYL5SGfQ" outgoingEdges="_53POUKjLEeKSNoCYL5SGfQ" width="-1" height="-1">
-            <target xmi:type="bpmn:StartEvent" href="definitions.bpmn2#_5Jf-kKjLEeKSNoCYL5SGfQ"/>
-            <semanticElements xmi:type="bpmn:StartEvent" href="definitions.bpmn2#_5Jf-kKjLEeKSNoCYL5SGfQ"/>
+            <target xmi:type="bpmn:StartEvent" href="definitions.bpmn#_5Jf-kKjLEeKSNoCYL5SGfQ"/>
+            <semanticElements xmi:type="bpmn:StartEvent" href="definitions.bpmn#_5Jf-kKjLEeKSNoCYL5SGfQ"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -988,8 +988,8 @@
         </ownedDiagramElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DNodeContainer" xmi:id="_gxvVEKjBEeK_xvwrSf5u4w" name="Travel Agency">
-        <target xmi:type="bpmn:LaneSet" href="definitions.bpmn2#_gxuG8KjBEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:LaneSet" href="definitions.bpmn2#_gxuG8KjBEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:LaneSet" href="definitions.bpmn#_gxuG8KjBEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:LaneSet" href="definitions.bpmn#_gxuG8KjBEeK_xvwrSf5u4w"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1002,8 +1002,8 @@
         </ownedStyle>
         <actualMapping xmi:type="description:ContainerMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']"/>
         <ownedDiagramElements xmi:type="viewpoint:DNodeContainer" xmi:id="_gx_MsKjBEeK_xvwrSf5u4w" name="Travel">
-          <target xmi:type="bpmn:Lane" href="definitions.bpmn2#_gxuuAKjBEeK_xvwrSf5u4w"/>
-          <semanticElements xmi:type="bpmn:Lane" href="definitions.bpmn2#_gxuuAKjBEeK_xvwrSf5u4w"/>
+          <target xmi:type="bpmn:Lane" href="definitions.bpmn#_gxuuAKjBEeK_xvwrSf5u4w"/>
+          <semanticElements xmi:type="bpmn:Lane" href="definitions.bpmn#_gxuuAKjBEeK_xvwrSf5u4w"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1016,9 +1016,9 @@
           </ownedStyle>
           <actualMapping xmi:type="description:ContainerMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']"/>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_5GOzsKjBEeK_xvwrSf5u4w" outgoingEdges="_9eSZEKjBEeK_xvwrSf5u4w" incomingEdges="__T65cKjLEeKSNoCYL5SGfQ" width="-1" height="-1">
-            <target xmi:type="bpmn:StartEvent" href="definitions.bpmn2#_5F1LEKjBEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:StartEvent" href="definitions.bpmn2#_5F1LEKjBEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn2#_5lGhAKjBEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:StartEvent" href="definitions.bpmn#_5F1LEKjBEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:StartEvent" href="definitions.bpmn#_5F1LEKjBEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn#_5lGhAKjBEeK_xvwrSf5u4w"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1028,9 +1028,9 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_fmWDgKjCEeK_xvwrSf5u4w" outgoingEdges="_wH7mgKjCEeK_xvwrSf5u4w" incomingEdges="_n1DxYKjCEeK_xvwrSf5u4w" width="-1" height="-1">
-            <target xmi:type="bpmn:StartEvent" href="definitions.bpmn2#_fl4wgKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:StartEvent" href="definitions.bpmn2#_fl4wgKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn2#_1pBQgKjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:StartEvent" href="definitions.bpmn#_fl4wgKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:StartEvent" href="definitions.bpmn#_fl4wgKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn#_1pBQgKjCEeK_xvwrSf5u4w"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1040,9 +1040,9 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_gMJfQKjCEeK_xvwrSf5u4w" outgoingEdges="_zJ6w0KjCEeK_xvwrSf5u4w" incomingEdges="_onZNQKjCEeK_xvwrSf5u4w" width="-1" height="-1">
-            <target xmi:type="bpmn:StartEvent" href="definitions.bpmn2#_gLpI8KjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:StartEvent" href="definitions.bpmn2#_gLpI8KjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn2#_2nV58KjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:StartEvent" href="definitions.bpmn#_gLpI8KjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:StartEvent" href="definitions.bpmn#_gLpI8KjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn#_2nV58KjCEeK_xvwrSf5u4w"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1052,9 +1052,9 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_gtJTgKjCEeK_xvwrSf5u4w" outgoingEdges="_xg2hQKjCEeK_xvwrSf5u4w" incomingEdges="_oNgGkKjCEeK_xvwrSf5u4w" width="-1" height="-1">
-            <target xmi:type="bpmn:StartEvent" href="definitions.bpmn2#_gsrZcKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:StartEvent" href="definitions.bpmn2#_gsrZcKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:TimerEventDefinition" href="definitions.bpmn2#_2KgM8KjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:StartEvent" href="definitions.bpmn#_gsrZcKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:StartEvent" href="definitions.bpmn#_gsrZcKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:TimerEventDefinition" href="definitions.bpmn#_2KgM8KjCEeK_xvwrSf5u4w"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1064,9 +1064,9 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_6b_QQKjCEeK_xvwrSf5u4w" incomingEdges="_6cQWAKjCEeK_xvwrSf5u4w" width="-1" height="-1" resizeKind="NSEW">
-            <target xmi:type="bpmn:StartEvent" href="definitions.bpmn2#_6bfhAKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:StartEvent" href="definitions.bpmn2#_6bfhAKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:LinkEventDefinition" href="definitions.bpmn2#_7pEucKjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:StartEvent" href="definitions.bpmn#_6bfhAKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:StartEvent" href="definitions.bpmn#_6bfhAKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:LinkEventDefinition" href="definitions.bpmn#_7pEucKjCEeK_xvwrSf5u4w"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1076,8 +1076,8 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_9eOHoKjBEeK_xvwrSf5u4w" outgoingEdges="__NSRgKjBEeK_xvwrSf5u4w __vnigKjBEeK_xvwrSf5u4w" incomingEdges="_9eSZEKjBEeK_xvwrSf5u4w" width="-1" height="-1">
-            <target xmi:type="bpmn:ParallelGateway" href="definitions.bpmn2#_9dquAKjBEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:ParallelGateway" href="definitions.bpmn2#_9dquAKjBEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:ParallelGateway" href="definitions.bpmn#_9dquAKjBEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:ParallelGateway" href="definitions.bpmn#_9dquAKjBEeK_xvwrSf5u4w"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1087,8 +1087,8 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_H5_i8KjCEeK_xvwrSf5u4w" outgoingEdges="_QEhUYKjCEeK_xvwrSf5u4w" incomingEdges="_H6JT8KjCEeK_xvwrSf5u4w _Lm4rcKjCEeK_xvwrSf5u4w" width="-1" height="-1">
-            <target xmi:type="bpmn:ParallelGateway" href="definitions.bpmn2#_H5i3AKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:ParallelGateway" href="definitions.bpmn2#_H5i3AKjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:ParallelGateway" href="definitions.bpmn#_H5i3AKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:ParallelGateway" href="definitions.bpmn#_H5i3AKjCEeK_xvwrSf5u4w"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1098,8 +1098,8 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="__NNZAKjBEeK_xvwrSf5u4w" name="Search hotel room" outgoingEdges="_JA7V0KjCEeK_xvwrSf5u4w" incomingEdges="__NSRgKjBEeK_xvwrSf5u4w" width="8" height="8" resizeKind="NSEW">
-            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn2#__M0-gKjBEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn2#__M0-gKjBEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn#__M0-gKjBEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn#__M0-gKjBEeK_xvwrSf5u4w"/>
             <decorations xmi:type="viewpoint:Decoration" xmi:id="__NQcUKjBEeK_xvwrSf5u4w">
               <description xmi:type="description:MappingBasedDecoration" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='ManualTask']"/>
             </decorations>
@@ -1115,8 +1115,8 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="__vhb4KjBEeK_xvwrSf5u4w" name="Search Flight" outgoingEdges="_Gv7jkKjCEeK_xvwrSf5u4w" incomingEdges="__vnigKjBEeK_xvwrSf5u4w" width="8" height="8" resizeKind="NSEW">
-            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn2#__vFXAKjBEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn2#__vFXAKjBEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn#__vFXAKjBEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn#__vFXAKjBEeK_xvwrSf5u4w"/>
             <decorations xmi:type="viewpoint:Decoration" xmi:id="__vkfMKjBEeK_xvwrSf5u4w">
               <description xmi:type="description:MappingBasedDecoration" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='ManualTask']"/>
             </decorations>
@@ -1132,15 +1132,15 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_Gv0O0KjCEeK_xvwrSf5u4w" name="Evaluate Flight within customer critaria" outgoingEdges="_H6JT8KjCEeK_xvwrSf5u4w" incomingEdges="_Gv7jkKjCEeK_xvwrSf5u4w _CF68cKjLEeKSNoCYL5SGfQ" width="8" height="8" resizeKind="NSEW">
-            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn2#_GvXi4KjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn2#_GvXi4KjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn#_GvXi4KjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn#_GvXi4KjCEeK_xvwrSf5u4w"/>
             <decorations xmi:type="viewpoint:Decoration" xmi:id="_Gv3SIKjCEeK_xvwrSf5u4w">
               <description xmi:type="description:MappingBasedDecoration" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='ManualTask']"/>
             </decorations>
             <ownedBorderedNodes xmi:type="viewpoint:DNode" xmi:id="_9F274KjKEeKSNoCYL5SGfQ" outgoingEdges="_7LJisKjKEeKSNoCYL5SGfQ" width="-1" height="-1">
-              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_9F0foKjKEeKSNoCYL5SGfQ"/>
-              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_9F0foKjKEeKSNoCYL5SGfQ"/>
-              <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn2#_91khkKjKEeKSNoCYL5SGfQ"/>
+              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_9F0foKjKEeKSNoCYL5SGfQ"/>
+              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_9F0foKjKEeKSNoCYL5SGfQ"/>
+              <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn#_91khkKjKEeKSNoCYL5SGfQ"/>
               <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
               <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
               <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1161,8 +1161,8 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_JAxk0KjCEeK_xvwrSf5u4w" name="Evaluate hotels within customer critaria" outgoingEdges="_Lm4rcKjCEeK_xvwrSf5u4w" incomingEdges="_JA7V0KjCEeK_xvwrSf5u4w" width="8" height="8" resizeKind="NSEW">
-            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn2#_JAQncKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn2#_JAQncKjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn#_JAQncKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn#_JAQncKjCEeK_xvwrSf5u4w"/>
             <decorations xmi:type="viewpoint:Decoration" xmi:id="_JA12QKjCEeK_xvwrSf5u4w">
               <description xmi:type="description:MappingBasedDecoration" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='ManualTask']"/>
             </decorations>
@@ -1178,8 +1178,8 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_QEYxgKjCEeK_xvwrSf5u4w" name="Package flights and hotels for customer review" outgoingEdges="_RFLgIKjCEeK_xvwrSf5u4w" incomingEdges="_QEhUYKjCEeK_xvwrSf5u4w" width="8" height="8" resizeKind="NSEW">
-            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn2#_QD63cKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn2#_QD63cKjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn#_QD63cKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn#_QD63cKjCEeK_xvwrSf5u4w"/>
             <decorations xmi:type="viewpoint:Decoration" xmi:id="_QEcb4KjCEeK_xvwrSf5u4w">
               <description xmi:type="description:MappingBasedDecoration" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='ManualTask']"/>
             </decorations>
@@ -1195,8 +1195,8 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_RFCWMKjCEeK_xvwrSf5u4w" name="Present flights and hotels to customer" outgoingEdges="_nVPo4KjCEeK_xvwrSf5u4w" incomingEdges="_RFLgIKjCEeK_xvwrSf5u4w" width="8" height="8" resizeKind="NSEW">
-            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn2#_REim8KjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn2#_REim8KjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn#_REim8KjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn#_REim8KjCEeK_xvwrSf5u4w"/>
             <decorations xmi:type="viewpoint:Decoration" xmi:id="_RFGAkKjCEeK_xvwrSf5u4w">
               <description xmi:type="description:MappingBasedDecoration" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='ManualTask']"/>
             </decorations>
@@ -1212,15 +1212,15 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_wHxOcKjCEeK_xvwrSf5u4w" name="Request credit card information" outgoingEdges="_6cQWAKjCEeK_xvwrSf5u4w" incomingEdges="_wH7mgKjCEeK_xvwrSf5u4w _OcsE0KjLEeKSNoCYL5SGfQ" width="8" height="8" resizeKind="NSEW">
-            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn2#_wHPC8KjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn2#_wHPC8KjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:ManualTask" href="definitions.bpmn#_wHPC8KjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:ManualTask" href="definitions.bpmn#_wHPC8KjCEeK_xvwrSf5u4w"/>
             <decorations xmi:type="viewpoint:Decoration" xmi:id="_wH040KjCEeK_xvwrSf5u4w">
               <description xmi:type="description:MappingBasedDecoration" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='ManualTask']"/>
             </decorations>
             <ownedBorderedNodes xmi:type="viewpoint:DNode" xmi:id="_G5gg4KjDEeK_xvwrSf5u4w" outgoingEdges="_NN2z0KjDEeK_xvwrSf5u4w" width="-1" height="-1">
-              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_G5c2gKjDEeK_xvwrSf5u4w"/>
-              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_G5c2gKjDEeK_xvwrSf5u4w"/>
-              <semanticElements xmi:type="bpmn:TimerEventDefinition" href="definitions.bpmn2#_KEJ38KjDEeK_xvwrSf5u4w"/>
+              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_G5c2gKjDEeK_xvwrSf5u4w"/>
+              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_G5c2gKjDEeK_xvwrSf5u4w"/>
+              <semanticElements xmi:type="bpmn:TimerEventDefinition" href="definitions.bpmn#_KEJ38KjDEeK_xvwrSf5u4w"/>
               <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
               <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
               <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1230,9 +1230,9 @@
               <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']"/>
             </ownedBorderedNodes>
             <ownedBorderedNodes xmi:type="viewpoint:DNode" xmi:id="_vjUEQKjHEeKfxP_htjREQQ" outgoingEdges="_NtAUUKjLEeKSNoCYL5SGfQ" width="-1" height="-1">
-              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_vjRoAKjHEeKfxP_htjREQQ"/>
-              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_vjRoAKjHEeKfxP_htjREQQ"/>
-              <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn2#_wZXigKjHEeKfxP_htjREQQ"/>
+              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_vjRoAKjHEeKfxP_htjREQQ"/>
+              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_vjRoAKjHEeKfxP_htjREQQ"/>
+              <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn#_wZXigKjHEeKfxP_htjREQQ"/>
               <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
               <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
               <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1253,15 +1253,15 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_xgriIKjCEeK_xvwrSf5u4w" name="Notify customer to start again" outgoingEdges="_LKWC8KjOEeKSNoCYL5SGfQ" incomingEdges="_xg2hQKjCEeK_xvwrSf5u4w _NN2z0KjDEeK_xvwrSf5u4w" width="8" height="8" resizeKind="NSEW">
-            <target xmi:type="bpmn:ServiceTask" href="definitions.bpmn2#_xgIIgKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:ServiceTask" href="definitions.bpmn2#_xgIIgKjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:ServiceTask" href="definitions.bpmn#_xgIIgKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:ServiceTask" href="definitions.bpmn#_xgIIgKjCEeK_xvwrSf5u4w"/>
             <decorations xmi:type="viewpoint:Decoration" xmi:id="_xgwaoKjCEeK_xvwrSf5u4w">
               <description xmi:type="description:MappingBasedDecoration" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='ServiceTask']"/>
             </decorations>
             <ownedBorderedNodes xmi:type="viewpoint:DNode" xmi:id="_e_LOcKjFEeKByZYE3SKnNQ" outgoingEdges="_YXgIIKjLEeKSNoCYL5SGfQ" width="-1" height="-1">
-              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_e_FH0KjFEeKByZYE3SKnNQ"/>
-              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn2#_e_FH0KjFEeKByZYE3SKnNQ"/>
-              <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn2#_f9mlkKjFEeKByZYE3SKnNQ"/>
+              <target xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_e_FH0KjFEeKByZYE3SKnNQ"/>
+              <semanticElements xmi:type="bpmn:BoundaryEvent" href="definitions.bpmn#_e_FH0KjFEeKByZYE3SKnNQ"/>
+              <semanticElements xmi:type="bpmn:MessageEventDefinition" href="definitions.bpmn#_f9mlkKjFEeKByZYE3SKnNQ"/>
               <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
               <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
               <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1282,8 +1282,8 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_zJvKoKjCEeK_xvwrSf5u4w" name="Update  record customer" outgoingEdges="_4i5nsKjCEeK_xvwrSf5u4w" incomingEdges="_zJ6w0KjCEeK_xvwrSf5u4w _LKWC8KjOEeKSNoCYL5SGfQ" width="8" height="8" resizeKind="NSEW">
-            <target xmi:type="bpmn:ScriptTask" href="definitions.bpmn2#_zJLxAKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:ScriptTask" href="definitions.bpmn2#_zJLxAKjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:ScriptTask" href="definitions.bpmn#_zJLxAKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:ScriptTask" href="definitions.bpmn#_zJLxAKjCEeK_xvwrSf5u4w"/>
             <decorations xmi:type="viewpoint:Decoration" xmi:id="_zJyN8KjCEeK_xvwrSf5u4w">
               <description xmi:type="description:MappingBasedDecoration" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='ScriptTask']"/>
             </decorations>
@@ -1299,8 +1299,8 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_mKtvcKjCEeK_xvwrSf5u4w" outgoingEdges="_n1DxYKjCEeK_xvwrSf5u4w _oNgGkKjCEeK_xvwrSf5u4w _onZNQKjCEeK_xvwrSf5u4w" incomingEdges="_nVPo4KjCEeK_xvwrSf5u4w" width="-1" height="-1">
-            <target xmi:type="bpmn:EventBasedGateway" href="definitions.bpmn2#_mKHSgKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:EventBasedGateway" href="definitions.bpmn2#_mKHSgKjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:EventBasedGateway" href="definitions.bpmn#_mKHSgKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:EventBasedGateway" href="definitions.bpmn#_mKHSgKjCEeK_xvwrSf5u4w"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1310,8 +1310,8 @@
             <actualMapping xmi:type="description:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EventBasedGateway']"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="viewpoint:DNode" xmi:id="_4iew8KjCEeK_xvwrSf5u4w" incomingEdges="_4i5nsKjCEeK_xvwrSf5u4w" width="-1" height="-1">
-            <target xmi:type="bpmn:EndEvent" href="definitions.bpmn2#_4iFvYKjCEeK_xvwrSf5u4w"/>
-            <semanticElements xmi:type="bpmn:EndEvent" href="definitions.bpmn2#_4iFvYKjCEeK_xvwrSf5u4w"/>
+            <target xmi:type="bpmn:EndEvent" href="definitions.bpmn#_4iFvYKjCEeK_xvwrSf5u4w"/>
+            <semanticElements xmi:type="bpmn:EndEvent" href="definitions.bpmn#_4iFvYKjCEeK_xvwrSf5u4w"/>
             <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
             <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
             <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1323,8 +1323,8 @@
         </ownedDiagramElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_9eSZEKjBEeK_xvwrSf5u4w" sourceNode="_5GOzsKjBEeK_xvwrSf5u4w" targetNode="_9eOHoKjBEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_9drVEKjBEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_9drVEKjBEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_9drVEKjBEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_9drVEKjBEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_9eTAIKjBEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_9eTAIajBEeK_xvwrSf5u4w"/>
@@ -1335,8 +1335,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="__NSRgKjBEeK_xvwrSf5u4w" sourceNode="_9eOHoKjBEeK_xvwrSf5u4w" targetNode="__NNZAKjBEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#__M1lkKjBEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#__M1lkKjBEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#__M1lkKjBEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#__M1lkKjBEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="__NSRgajBEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="__NSRgqjBEeK_xvwrSf5u4w"/>
@@ -1347,8 +1347,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="__vnigKjBEeK_xvwrSf5u4w" sourceNode="_9eOHoKjBEeK_xvwrSf5u4w" targetNode="__vhb4KjBEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#__vF-EKjBEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#__vF-EKjBEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#__vF-EKjBEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#__vF-EKjBEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="__vnigajBEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="__vnigqjBEeK_xvwrSf5u4w"/>
@@ -1359,8 +1359,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_Gv7jkKjCEeK_xvwrSf5u4w" sourceNode="__vhb4KjBEeK_xvwrSf5u4w" targetNode="_Gv0O0KjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_GvYJ8KjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_GvYJ8KjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_GvYJ8KjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_GvYJ8KjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_Gv7jkajCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_Gv7jkqjCEeK_xvwrSf5u4w"/>
@@ -1371,8 +1371,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_H6JT8KjCEeK_xvwrSf5u4w" sourceNode="_Gv0O0KjCEeK_xvwrSf5u4w" targetNode="_H5_i8KjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_H5jeEKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_H5jeEKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_H5jeEKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_H5jeEKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_H6JT8ajCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_H6JT8qjCEeK_xvwrSf5u4w"/>
@@ -1383,8 +1383,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_JA7V0KjCEeK_xvwrSf5u4w" sourceNode="__NNZAKjBEeK_xvwrSf5u4w" targetNode="_JAxk0KjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_JAR1kKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_JAR1kKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_JAR1kKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_JAR1kKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_JA7V0ajCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_JA7V0qjCEeK_xvwrSf5u4w"/>
@@ -1395,8 +1395,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_Lm4rcKjCEeK_xvwrSf5u4w" sourceNode="_JAxk0KjCEeK_xvwrSf5u4w" targetNode="_H5_i8KjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_Lmr3IKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_Lmr3IKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_Lmr3IKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_Lmr3IKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_Lm4rcajCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_Lm4rcqjCEeK_xvwrSf5u4w"/>
@@ -1407,8 +1407,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_QEhUYKjCEeK_xvwrSf5u4w" sourceNode="_H5_i8KjCEeK_xvwrSf5u4w" targetNode="_QEYxgKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_QD8FkKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_QD8FkKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_QD8FkKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_QD8FkKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_QEhUYajCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_QEhUYqjCEeK_xvwrSf5u4w"/>
@@ -1419,8 +1419,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_RFLgIKjCEeK_xvwrSf5u4w" sourceNode="_QEYxgKjCEeK_xvwrSf5u4w" targetNode="_RFCWMKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_REj1EKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_REj1EKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_REj1EKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_REj1EKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_RFLgIajCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_RFLgIqjCEeK_xvwrSf5u4w"/>
@@ -1431,8 +1431,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_nVPo4KjCEeK_xvwrSf5u4w" sourceNode="_RFCWMKjCEeK_xvwrSf5u4w" targetNode="_mKtvcKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_nVHtEKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_nVHtEKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_nVHtEKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_nVHtEKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_nVPo4ajCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_nVPo4qjCEeK_xvwrSf5u4w"/>
@@ -1443,8 +1443,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_n1DxYKjCEeK_xvwrSf5u4w" sourceNode="_mKtvcKjCEeK_xvwrSf5u4w" targetNode="_fmWDgKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_n03kIKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_n03kIKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_n03kIKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_n03kIKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_n1DxYajCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_n1DxYqjCEeK_xvwrSf5u4w"/>
@@ -1455,8 +1455,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_oNgGkKjCEeK_xvwrSf5u4w" sourceNode="_mKtvcKjCEeK_xvwrSf5u4w" targetNode="_gtJTgKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_oNSrMKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_oNSrMKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_oNSrMKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_oNSrMKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_oNgGkajCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_oNgGkqjCEeK_xvwrSf5u4w"/>
@@ -1467,8 +1467,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_onZNQKjCEeK_xvwrSf5u4w" sourceNode="_mKtvcKjCEeK_xvwrSf5u4w" targetNode="_gMJfQKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_onOOIKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_onOOIKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_onOOIKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_onOOIKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_onZNQajCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_onZNQqjCEeK_xvwrSf5u4w"/>
@@ -1479,8 +1479,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_wH7mgKjCEeK_xvwrSf5u4w" sourceNode="_fmWDgKjCEeK_xvwrSf5u4w" targetNode="_wHxOcKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_wHPqAKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_wHPqAKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_wHPqAKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_wHPqAKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_wH7mgajCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_wH7mgqjCEeK_xvwrSf5u4w"/>
@@ -1491,8 +1491,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_xg2hQKjCEeK_xvwrSf5u4w" sourceNode="_gtJTgKjCEeK_xvwrSf5u4w" targetNode="_xgriIKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_xgIvkKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_xgIvkKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_xgIvkKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_xgIvkKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_xg2hQajCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_xg2hQqjCEeK_xvwrSf5u4w"/>
@@ -1503,8 +1503,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_zJ6w0KjCEeK_xvwrSf5u4w" sourceNode="_gMJfQKjCEeK_xvwrSf5u4w" targetNode="_zJvKoKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_zJMYEKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_zJMYEKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_zJMYEKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_zJMYEKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_zJ6w0ajCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_zJ6w0qjCEeK_xvwrSf5u4w"/>
@@ -1515,8 +1515,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_4i5nsKjCEeK_xvwrSf5u4w" sourceNode="_zJvKoKjCEeK_xvwrSf5u4w" targetNode="_4iew8KjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_4iGWcKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_4iGWcKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_4iGWcKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_4iGWcKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_4i6OwKjCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_4i6OwajCEeK_xvwrSf5u4w"/>
@@ -1527,8 +1527,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_6cQWAKjCEeK_xvwrSf5u4w" sourceNode="_wHxOcKjCEeK_xvwrSf5u4w" targetNode="_6b_QQKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_6bgIEKjCEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_6bgIEKjCEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_6bgIEKjCEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_6bgIEKjCEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_6cQ9EKjCEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_6cQ9EajCEeK_xvwrSf5u4w"/>
@@ -1539,8 +1539,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_NN2z0KjDEeK_xvwrSf5u4w" sourceNode="_G5gg4KjDEeK_xvwrSf5u4w" targetNode="_xgriIKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_NNqmkKjDEeK_xvwrSf5u4w"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_NNqmkKjDEeK_xvwrSf5u4w"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_NNqmkKjDEeK_xvwrSf5u4w"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_NNqmkKjDEeK_xvwrSf5u4w"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_NN2z0ajDEeK_xvwrSf5u4w" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_NN2z0qjDEeK_xvwrSf5u4w"/>
@@ -1551,8 +1551,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_7LJisKjKEeKSNoCYL5SGfQ" name="." sourceNode="_9F274KjKEeKSNoCYL5SGfQ" targetNode="_yJ-zQKjBEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:MessageFlow" href="definitions.bpmn2#_7LA_0KjKEeKSNoCYL5SGfQ"/>
-        <semanticElements xmi:type="bpmn:MessageFlow" href="definitions.bpmn2#_7LA_0KjKEeKSNoCYL5SGfQ"/>
+        <target xmi:type="bpmn:MessageFlow" href="definitions.bpmn#_7LA_0KjKEeKSNoCYL5SGfQ"/>
+        <semanticElements xmi:type="bpmn:MessageFlow" href="definitions.bpmn#_7LA_0KjKEeKSNoCYL5SGfQ"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_7LJisajKEeKSNoCYL5SGfQ" lineStyle="dash" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_7LJisqjKEeKSNoCYL5SGfQ"/>
@@ -1563,8 +1563,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_CF68cKjLEeKSNoCYL5SGfQ" name="." sourceNode="_7e4XAKjKEeKSNoCYL5SGfQ" targetNode="_Gv0O0KjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:MessageFlow" href="definitions.bpmn2#_CF0OwKjLEeKSNoCYL5SGfQ"/>
-        <semanticElements xmi:type="bpmn:MessageFlow" href="definitions.bpmn2#_CF0OwKjLEeKSNoCYL5SGfQ"/>
+        <target xmi:type="bpmn:MessageFlow" href="definitions.bpmn#_CF0OwKjLEeKSNoCYL5SGfQ"/>
+        <semanticElements xmi:type="bpmn:MessageFlow" href="definitions.bpmn#_CF0OwKjLEeKSNoCYL5SGfQ"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_CF68cajLEeKSNoCYL5SGfQ" lineStyle="dash" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_CF68cqjLEeKSNoCYL5SGfQ"/>
@@ -1575,8 +1575,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_NtAUUKjLEeKSNoCYL5SGfQ" name="." sourceNode="_vjUEQKjHEeKfxP_htjREQQ" targetNode="_yqW8cKjBEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:MessageFlow" href="definitions.bpmn2#_Ns60wKjLEeKSNoCYL5SGfQ"/>
-        <semanticElements xmi:type="bpmn:MessageFlow" href="definitions.bpmn2#_Ns60wKjLEeKSNoCYL5SGfQ"/>
+        <target xmi:type="bpmn:MessageFlow" href="definitions.bpmn#_Ns60wKjLEeKSNoCYL5SGfQ"/>
+        <semanticElements xmi:type="bpmn:MessageFlow" href="definitions.bpmn#_Ns60wKjLEeKSNoCYL5SGfQ"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_NtAUUajLEeKSNoCYL5SGfQ" lineStyle="dash" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_NtA7YKjLEeKSNoCYL5SGfQ"/>
@@ -1587,8 +1587,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_OcsE0KjLEeKSNoCYL5SGfQ" name="." sourceNode="_meT5gKjFEeKByZYE3SKnNQ" targetNode="_wHxOcKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:MessageFlow" href="definitions.bpmn2#_Oci64KjLEeKSNoCYL5SGfQ"/>
-        <semanticElements xmi:type="bpmn:MessageFlow" href="definitions.bpmn2#_Oci64KjLEeKSNoCYL5SGfQ"/>
+        <target xmi:type="bpmn:MessageFlow" href="definitions.bpmn#_Oci64KjLEeKSNoCYL5SGfQ"/>
+        <semanticElements xmi:type="bpmn:MessageFlow" href="definitions.bpmn#_Oci64KjLEeKSNoCYL5SGfQ"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_OcsE0ajLEeKSNoCYL5SGfQ" lineStyle="dash" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_OcsE0qjLEeKSNoCYL5SGfQ"/>
@@ -1599,8 +1599,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_YXgIIKjLEeKSNoCYL5SGfQ" name="." sourceNode="_e_LOcKjFEeKByZYE3SKnNQ" targetNode="__GyLcKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:MessageFlow" href="definitions.bpmn2#_YXW-MKjLEeKSNoCYL5SGfQ"/>
-        <semanticElements xmi:type="bpmn:MessageFlow" href="definitions.bpmn2#_YXW-MKjLEeKSNoCYL5SGfQ"/>
+        <target xmi:type="bpmn:MessageFlow" href="definitions.bpmn#_YXW-MKjLEeKSNoCYL5SGfQ"/>
+        <semanticElements xmi:type="bpmn:MessageFlow" href="definitions.bpmn#_YXW-MKjLEeKSNoCYL5SGfQ"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_YXgIIajLEeKSNoCYL5SGfQ" lineStyle="dash" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_YXgIIqjLEeKSNoCYL5SGfQ"/>
@@ -1611,8 +1611,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_53POUKjLEeKSNoCYL5SGfQ" sourceNode="_5JyScKjLEeKSNoCYL5SGfQ" targetNode="_52Y5wKjLEeKSNoCYL5SGfQ">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_52aH4KjLEeKSNoCYL5SGfQ"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_52aH4KjLEeKSNoCYL5SGfQ"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_52aH4KjLEeKSNoCYL5SGfQ"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_52aH4KjLEeKSNoCYL5SGfQ"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_53POUajLEeKSNoCYL5SGfQ" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_53POUqjLEeKSNoCYL5SGfQ"/>
@@ -1623,8 +1623,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="__T65cKjLEeKSNoCYL5SGfQ" name="." sourceNode="_9_mK0KjLEeKSNoCYL5SGfQ" targetNode="_5GOzsKjBEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:MessageFlow" href="definitions.bpmn2#__TvTQKjLEeKSNoCYL5SGfQ"/>
-        <semanticElements xmi:type="bpmn:MessageFlow" href="definitions.bpmn2#__TvTQKjLEeKSNoCYL5SGfQ"/>
+        <target xmi:type="bpmn:MessageFlow" href="definitions.bpmn#__TvTQKjLEeKSNoCYL5SGfQ"/>
+        <semanticElements xmi:type="bpmn:MessageFlow" href="definitions.bpmn#__TvTQKjLEeKSNoCYL5SGfQ"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="__T65cajLEeKSNoCYL5SGfQ" lineStyle="dash" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="__T65cqjLEeKSNoCYL5SGfQ"/>
@@ -1635,8 +1635,8 @@
         <actualMapping xmi:type="description:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='MessageFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="_LKWC8KjOEeKSNoCYL5SGfQ" sourceNode="_xgriIKjCEeK_xvwrSf5u4w" targetNode="_zJvKoKjCEeK_xvwrSf5u4w">
-        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_LKKcwKjOEeKSNoCYL5SGfQ"/>
-        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn2#_LKKcwKjOEeKSNoCYL5SGfQ"/>
+        <target xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_LKKcwKjOEeKSNoCYL5SGfQ"/>
+        <semanticElements xmi:type="bpmn:SequenceFlow" href="definitions.bpmn#_LKKcwKjOEeKSNoCYL5SGfQ"/>
         <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="_LKWqAKjOEeKSNoCYL5SGfQ" targetArrow="InputFillClosedArrow" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_LKWqAajOEeKSNoCYL5SGfQ"/>
@@ -1649,7 +1649,7 @@
       <description xmi:type="description:DiagramDescription" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']"/>
       <filterVariableHistory xmi:type="viewpoint:FilterVariableHistory" xmi:id="_Y-4cwajBEeK_xvwrSf5u4w"/>
       <activatedLayers xmi:type="description:Layer" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer"/>
-      <target xmi:type="bpmn:Process" href="definitions.bpmn2#_VgLhQKjBEeK_xvwrSf5u4w"/>
+      <target xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
     </ownedRepresentations>
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']"/>
   </ownedViews>

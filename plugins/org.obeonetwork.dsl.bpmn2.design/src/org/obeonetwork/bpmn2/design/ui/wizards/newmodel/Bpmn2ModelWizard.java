@@ -42,7 +42,7 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
 	/**
 	 * The UML file extension.
 	 */
-	public static final String MODEL_FILE_EXTENSION = "bpmn2"; //$NON-NLS-1$
+	public static final String MODEL_FILE_EXTENSION = "bpmn"; //$NON-NLS-1$
 
 	/**
 	 * The session file extension.

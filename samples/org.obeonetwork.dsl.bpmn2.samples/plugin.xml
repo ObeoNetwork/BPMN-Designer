@@ -20,20 +20,20 @@
 <extension
          point="org.eclipse.ui.newWizards">
       <category
-            name="BPMN2"
+            name="BPMN"
             parentCategory="org.eclipse.ui.Examples"
             id="org.obeonetwork.dsl.bpmn2.samples.Bpmn2Samples.plugin">
       </category>
       
       <wizard
-            name="BPMN2 Samples"
+            name="BPMN Samples"
             icon="icons/bpmn2_logo.gif"
             category="org.eclipse.ui.Examples/org.obeonetwork.dsl.bpmn2.samples.Bpmn2Samples.plugin"
             class="org.obeonetwork.dsl.bpmn2.samples.wizards.ProjectUnzipperNewWizard"
             project="true"
             id="org.obeonetwork.dsl.bpmn2.samples.wizards.bpmn2Samples">
          <description>
-            Create a project with a BPMN2 sample.
+            Create a project with a BPMN sample.
          </description>
       </wizard>
 </extension>

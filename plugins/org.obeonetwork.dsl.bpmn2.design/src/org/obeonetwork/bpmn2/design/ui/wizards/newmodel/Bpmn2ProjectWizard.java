@@ -64,7 +64,7 @@ public class Bpmn2ProjectWizard extends BasicNewResourceWizard {
 	/**
 	 * The UML file extension.
 	 */
-	public static final String MODEL_FILE_EXTENSION = "bpmn2"; //$NON-NLS-1$
+	public static final String MODEL_FILE_EXTENSION = "bpmn"; //$NON-NLS-1$
 
 	private Bpmn2ModelWizardInitModelPage modelPage;
 
@@ -76,7 +76,7 @@ public class Bpmn2ProjectWizard extends BasicNewResourceWizard {
 
 		newProjectPage = new WizardNewProjectCreationPage("Project"); //$NON-NLS-1$
 		newProjectPage.setInitialProjectName("");
-		newProjectPage.setTitle("Create a BPMN2 Modeling project");
+		newProjectPage.setTitle("Create a BPMN Modeling project");
 		newProjectPage.setDescription("Enter a project name"); //$NON-NLS-1$
 		addPage(newProjectPage);
 
