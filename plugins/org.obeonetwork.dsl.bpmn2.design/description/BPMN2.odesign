@@ -830,7 +830,7 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source.eContainer()%>">
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.eContainer(&quot;BoundaryEvent&quot;)!=null &amp;&amp; ($target.eContainer(&quot;Task&quot;)!=null ||$target.eContainer(&quot;Event&quot;)!=null $target.eContainer(&quot;Gateway&quot;)!=null)%>">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.attachedToRef.lanes.eContainer().id==$target.lanes.eContainer().id%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.attachedToRef.lanes.eContainer()==$target.lanes.eContainer()%>">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="SequenceFlow" referenceName="flowElements">
                       <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
                         <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$source%>"/>
@@ -840,7 +840,7 @@
                   </subModelOperations>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.eContainer(&quot;BoundaryEvent&quot;)==null%>">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.lanes.eContainer().id==$target.lanes.eContainer().id%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.lanes.eContainer()==$target.lanes.eContainer()%>">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="SequenceFlow" referenceName="flowElements">
                       <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
                         <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$source%>"/>
@@ -859,7 +859,7 @@
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source.eContainer(&quot;Definitions&quot;)%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.lanes.eContainer().id!=$target.lanes.eContainer().id%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.lanes.eContainer()!=$target.lanes.eContainer()%>">
                   <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%rootElements.filter(&quot;Collaboration&quot;)==null%>">
                     <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source.eContainer(&quot;Definitions&quot;)%>">
                       <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Collaboration" referenceName="rootElements" variableName="collaboration"/>
