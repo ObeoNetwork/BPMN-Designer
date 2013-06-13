@@ -907,7 +907,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectTargetSequenceFlow" precondition="&lt;%sourceRef.lanes.eContainer().id==$target.lanes.eContainer().id || sourceRef.attachedToRef.lanes.eContainer().id==$target.lanes.eContainer().id %>" forceRefresh="true">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectTargetSequenceFlow" precondition="&lt;%sourceRef.lanes.eContainer()==$target.lanes.eContainer() || sourceRef.attachedToRef.lanes.eContainer()==$target.lanes.eContainer()%>" forceRefresh="true">
             <source name="source"/>
             <target name="target"/>
             <sourceView name="sourceView"/>
@@ -920,7 +920,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectSourceSequenceFlow" precondition="&lt;%sourceRef.lanes.eContainer().id==$target.lanes.eContainer().id || sourceRef.trace().attachedToRef.trace().lanes.trace().eContainer().id==$target.lanes.eContainer().id%>" forceRefresh="true" reconnectionKind="RECONNECT_SOURCE">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectSourceSequenceFlow" precondition="&lt;%sourceRef.lanes.eContainer()==$target.lanes.eContainer() || sourceRef.trace().attachedToRef.trace().lanes.trace().eContainer()==$target.lanes.eContainer()%>" forceRefresh="true" reconnectionKind="RECONNECT_SOURCE">
             <source name="source"/>
             <target name="target"/>
             <sourceView name="sourceView"/>
@@ -928,18 +928,18 @@
             <element name="element"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.lanes.eContainer().id==$target.lanes.eContainer().id%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.lanes.eContainer()==$target.lanes.eContainer()%>">
                   <subModelOperations xsi:type="tool:Unset" featureName="sourceRef" elementExpression="&lt;%$source%>"/>
                   <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$target%>"/>
                 </subModelOperations>
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.lanes.eContainer().id!=$target.lanes.eContainer().id%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.lanes.eContainer()!=$target.lanes.eContainer()%>">
                   <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$element.sourceRef%>"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectTargetMessageFlow" precondition="&lt;%sourceRef.lanes.eContainer().id!=$target.lanes.eContainer().id%>" forceRefresh="true">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectTargetMessageFlow" precondition="&lt;%sourceRef.lanes.eContainer()!=$target.lanes.eContainer()%>" forceRefresh="true">
             <source name="source"/>
             <target name="target"/>
             <sourceView name="sourceView"/>
@@ -952,7 +952,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectSourceMessageFlow" precondition="&lt;%targetRef.lanes.eContainer().id!=$target.lanes.eContainer().id%>" forceRefresh="true" reconnectionKind="RECONNECT_SOURCE">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectSourceMessageFlow" precondition="&lt;%targetRef.lanes.eContainer()!=$target.lanes.eContainer()%>" forceRefresh="true" reconnectionKind="RECONNECT_SOURCE">
             <source name="source"/>
             <target name="target"/>
             <sourceView name="sourceView"/>
