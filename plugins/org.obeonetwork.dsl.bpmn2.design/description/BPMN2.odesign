@@ -885,16 +885,16 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source.eContainer(&quot;Process&quot;)%>">
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.filter(&quot;DataObject&quot;)!= null  || $source.filter(&quot;DataInput&quot;)!= null || $source.filter(&quot;DataOutput&quot;)!= null || $source.filter(&quot;DataStore&quot;)!= null || $source.filter(&quot;TextAnnotation&quot;)!= null%>">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$target.filter(&quot;Task&quot;)!=null || $target.filter(&quot;ReceiveTask&quot;)!=null || $target.filter(&quot;SendTask&quot;)!=null || $target.filter(&quot;ChoreographyTask&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$target.filter(&quot;Task&quot;)!=null || $target.filter(&quot;ReceiveTask&quot;)!=null || $target.filter(&quot;SendTask&quot;)!=null || $target.filter(&quot;ChoreographyTask&quot;)!=null || $target.filter(&quot;Gateway&quot;)!=null %>">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Association" referenceName="artifacts">
                       <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
                         <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="&lt;%$source%>"/>
-                        <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$target.trace()%>"/>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="&lt;%$target%>"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.filter(&quot;Task&quot;)!=null || $source.filter(&quot;ReceiveTask&quot;)!=null || $source.filter(&quot;SendTask&quot;)!=null%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.filter(&quot;Task&quot;)!=null || $source.filter(&quot;ReceiveTask&quot;)!=null || $source.filter(&quot;SendTask&quot;)!=null %>">
                   <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$target.filter(&quot;DataObject&quot;)!=null || $target.filter(&quot;DataInput&quot;)!=null || $target.filter(&quot;DataOutput&quot;) !=null|| $target.filter(&quot;DataStore&quot;)!=null || $target.filter(&quot;TextAnnotation&quot;)!=null%>">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Association" referenceName="artifacts">
                       <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
