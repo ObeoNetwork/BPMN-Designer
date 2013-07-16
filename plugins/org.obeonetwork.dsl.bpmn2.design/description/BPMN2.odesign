@@ -342,7 +342,7 @@
             <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.0"/>
           </style>
         </containerMappings>
-        <containerMappings name="Group" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%artifacts.filter(&quot;Group&quot;)%> " domainClass="bpmn2.Group">
+        <containerMappings name="Group" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='LinkDirectEdit']" semanticCandidatesExpression="&lt;%artifacts.filter(&quot;Group&quot;)%> " domainClass="bpmn2.Group">
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" backgroundStyle="GradientTopToBottom">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -674,7 +674,7 @@
                 </subModelOperations>
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)==null &amp;&amp; $element.filter(&quot;IntermediateCatchEvent&quot;)==null &amp;&amp; $element.filter(&quot;EndEvent&quot;)==null &amp;&amp; $element.filter(&quot;StartEvent&quot;)==null &amp;&amp; $element.filter(&quot;Task&quot;)==null &amp;&amp; $element.filter(&quot;ParallelGateway&quot;)==null &amp;&amp; $element.filter(&quot;ExclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;InclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;ComplexGateway&quot;)==null &amp;&amp; $element.filter(&quot;EventBasedGateway&quot;)==null%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.BusinessRuleTask" referenceName="flowElements">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.trace()%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element%>"/>
                     <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Business Rule Task"/>
                   </subModelOperations>
                 </subModelOperations>
@@ -701,7 +701,7 @@
                 </subModelOperations>
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)==null &amp;&amp; $element.filter(&quot;IntermediateCatchEvent&quot;)==null &amp;&amp; $element.filter(&quot;EndEvent&quot;)==null &amp;&amp; $element.filter(&quot;StartEvent&quot;)==null &amp;&amp; $element.filter(&quot;Task&quot;)==null &amp;&amp; $element.filter(&quot;ParallelGateway&quot;)==null &amp;&amp; $element.filter(&quot;ExclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;InclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;ComplexGateway&quot;)==null &amp;&amp; $element.filter(&quot;EventBasedGateway&quot;)==null%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.ManualTask" referenceName="flowElements">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.trace()%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element%>"/>
                     <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Manual Task"/>
                   </subModelOperations>
                 </subModelOperations>
@@ -728,7 +728,7 @@
                 </subModelOperations>
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)==null &amp;&amp; $element.filter(&quot;IntermediateCatchEvent&quot;)==null &amp;&amp; $element.filter(&quot;EndEvent&quot;)==null &amp;&amp; $element.filter(&quot;StartEvent&quot;)==null &amp;&amp; $element.filter(&quot;Task&quot;)==null &amp;&amp; $element.filter(&quot;ParallelGateway&quot;)==null &amp;&amp; $element.filter(&quot;ExclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;InclusiveGateway&quot;)==null &amp;&amp; $element.filter(&quot;ComplexGateway&quot;)==null &amp;&amp; $element.filter(&quot;EventBasedGateway&quot;)==null%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.ReceiveTask" referenceName="flowElements">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element.trace()%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element%>"/>
                     <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Receive Task"/>
                   </subModelOperations>
                 </subModelOperations>
@@ -852,7 +852,7 @@
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source.eContainer()%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.eContainer(&quot;BoundaryEvent&quot;)!=null &amp;&amp; ($target.eContainer(&quot;Task&quot;)!=null ||$target.eContainer(&quot;Event&quot;)!=null $target.eContainer(&quot;Gateway&quot;)!=null)%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.eContainer(&quot;BoundaryEvent&quot;)!=null &amp;&amp; ($target.eContainer(&quot;Task&quot;)!=null ||$target.eContainer(&quot;Event&quot;)!=null || $target.eContainer(&quot;Gateway&quot;)!=null)%>">
                   <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$source.attachedToRef.lanes.eContainer()==$target.lanes.eContainer()%>">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="SequenceFlow" referenceName="flowElements">
                       <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
@@ -943,7 +943,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectSourceSequenceFlow" precondition="&lt;%sourceRef.lanes.eContainer()==$target.lanes.eContainer() || sourceRef.trace().attachedToRef.trace().lanes.trace().eContainer()==$target.lanes.eContainer()%>" forceRefresh="true" reconnectionKind="RECONNECT_SOURCE">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectSourceSequenceFlow" precondition="&lt;%sourceRef.lanes.eContainer()==$target.lanes.eContainer() || sourceRef.attachedToRef.lanes.eContainer()==$target.lanes.eContainer()%>" forceRefresh="true" reconnectionKind="RECONNECT_SOURCE">
             <source name="source"/>
             <target name="target"/>
             <sourceView name="sourceView"/>
@@ -1213,7 +1213,7 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.trace()%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.LaneSet" referenceName="laneSets">
                   <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Lane" referenceName="lanes"/>
