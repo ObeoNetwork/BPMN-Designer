@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
-<bpmn:Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="_lYwdsJMvEeKGz_kv5DLbCg">
-  <rootElements xsi:type="bpmn:Process" id="_lYv2oJMvEeKGz_kv5DLbCg">
+<bpmn:Definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="_lYwdsJMvEeKGz_kv5DLbCg">
+  <rootElements xsi:type="bpmn:Process" id="_lYv2oJMvEeKGz_kv5DLbCg" name="Nobel Prize">
     <flowElements xsi:type="bpmn:SendTask" id="_6TLCIJMvEeKGz_kv5DLbCg" name="Send Nomination Form" outgoing="_7Tq10JMvEeKGz_kv5DLbCg" incoming="_6TMQQJMvEeKGz_kv5DLbCg _QFWqIJMyEeKGz_kv5DLbCg"/>
     <flowElements xsi:type="bpmn:SequenceFlow" id="_6TMQQJMvEeKGz_kv5DLbCg" targetRef="_6TLCIJMvEeKGz_kv5DLbCg"/>
     <flowElements xsi:type="bpmn:ReceiveTask" id="_7TqOwJMvEeKGz_kv5DLbCg" name="Collect Completed form" outgoing="_98_BcJMvEeKGz_kv5DLbCg" incoming="_7Tq10JMvEeKGz_kv5DLbCg"/>

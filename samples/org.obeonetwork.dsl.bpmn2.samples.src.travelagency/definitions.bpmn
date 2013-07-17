@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
-<bpmn:Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="_VgLhQajBEeK_xvwrSf5u4w">
-  <rootElements xsi:type="bpmn:Process" id="_VgLhQKjBEeK_xvwrSf5u4w">
+<bpmn:Definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="_VgLhQajBEeK_xvwrSf5u4w">
+  <rootElements xsi:type="bpmn:Process" id="_VgLhQKjBEeK_xvwrSf5u4w" name="TravelAgency">
     <flowElements xsi:type="bpmn:Task" id="_yJjVcKjBEeK_xvwrSf5u4w" name="Chose alternative" boundaryEventRefs="_7e0soKjKEeKSNoCYL5SGfQ"/>
     <flowElements xsi:type="bpmn:SendTask" id="_yp_JAKjBEeK_xvwrSf5u4w" name="Send credit card information" boundaryEventRefs="_mePoEKjFEeKByZYE3SKnNQ"/>
     <flowElements xsi:type="bpmn:StartEvent" id="_5F1LEKjBEeK_xvwrSf5u4w" outgoing="_6Y-N8KjBEeK_xvwrSf5u4w _9drVEKjBEeK_xvwrSf5u4w">

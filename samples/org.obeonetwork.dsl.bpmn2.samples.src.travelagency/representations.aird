@@ -15,11 +15,11 @@
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_ViGz4KjBEeK_xvwrSf5u4w" initialized="true">
     <ownedRepresentations xmi:type="table:DTable" xmi:id="_ViPWwKjBEeK_xvwrSf5u4w" name="Process Definitions" headerColumnWidth="98">
       <target xmi:type="bpmn:Definitions" href="definitions.bpmn#_VgLhQajBEeK_xvwrSf5u4w"/>
-      <lines xmi:type="table:DLine" xmi:id="_ViPWwajBEeK_xvwrSf5u4w" label="Process">
+      <lines xmi:type="table:DLine" xmi:id="_ViPWwajBEeK_xvwrSf5u4w" label="Process TravelAgency">
         <target xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
         <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='Process%20Definitions']/@ownedLineMappings[name='Process']"/>
-        <cells xmi:type="table:DCell" xmi:id="_ViPWwqjBEeK_xvwrSf5u4w" column="_ViPWx6jBEeK_xvwrSf5u4w">
+        <cells xmi:type="table:DCell" xmi:id="_ViPWwqjBEeK_xvwrSf5u4w" label="TravelAgency" column="_ViPWx6jBEeK_xvwrSf5u4w">
           <target xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
           <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn#_VgLhQKjBEeK_xvwrSf5u4w"/>
         </cells>

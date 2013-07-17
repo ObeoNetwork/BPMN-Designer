@@ -15,11 +15,11 @@
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_lagKIJMvEeKGz_kv5DLbCg" initialized="true">
     <ownedRepresentations xmi:type="table:DTable" xmi:id="_las-cJMvEeKGz_kv5DLbCg" name="Process Definitions" headerColumnWidth="98">
       <target xmi:type="bpmn:Definitions" href="definitions.bpmn#_lYwdsJMvEeKGz_kv5DLbCg"/>
-      <lines xmi:type="table:DLine" xmi:id="_las-cZMvEeKGz_kv5DLbCg" label="Process">
+      <lines xmi:type="table:DLine" xmi:id="_las-cZMvEeKGz_kv5DLbCg" label="Process Nobel Prize">
         <target xmi:type="bpmn:Process" href="definitions.bpmn#_lYv2oJMvEeKGz_kv5DLbCg"/>
         <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn#_lYv2oJMvEeKGz_kv5DLbCg"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/plugin/org.obeonetwork.dsl.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='Process%20Definitions']/@ownedLineMappings[name='Process']"/>
-        <cells xmi:type="table:DCell" xmi:id="_las-cpMvEeKGz_kv5DLbCg" column="_las-d5MvEeKGz_kv5DLbCg">
+        <cells xmi:type="table:DCell" xmi:id="_las-cpMvEeKGz_kv5DLbCg" label="Nobel Prize" column="_las-d5MvEeKGz_kv5DLbCg">
           <target xmi:type="bpmn:Process" href="definitions.bpmn#_lYv2oJMvEeKGz_kv5DLbCg"/>
           <semanticElements xmi:type="bpmn:Process" href="definitions.bpmn#_lYv2oJMvEeKGz_kv5DLbCg"/>
         </cells>
