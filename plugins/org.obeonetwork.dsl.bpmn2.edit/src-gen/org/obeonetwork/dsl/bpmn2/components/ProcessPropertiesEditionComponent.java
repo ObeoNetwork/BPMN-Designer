@@ -66,7 +66,6 @@ import org.obeonetwork.dsl.bpmn2.ProcessType;
 import org.obeonetwork.dsl.bpmn2.Property;
 import org.obeonetwork.dsl.bpmn2.ResourceRole;
 import org.obeonetwork.dsl.bpmn2.Process;
-
 import org.obeonetwork.dsl.bpmn2.parts.Bpmn2ViewsRepository;
 import org.obeonetwork.dsl.bpmn2.parts.ProcessPropertiesEditionPart;
 

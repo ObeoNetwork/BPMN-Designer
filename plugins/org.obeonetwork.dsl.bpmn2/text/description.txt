@@ -5,12 +5,6 @@ org.eclipse.emf.examples.generator.validator plug-in to illustrate how EMF's
 code generator can be extended.
 This can be disabled with -vmargs -Dorg.eclipse.emf.examples.generator.validator=false.
 
-Contains packages:
-  bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
-  bpmdi <http://www.omg.org/spec/BPMN/20100524/DI-XMI>
-  di <http://www.omg.org/spec/DD/20100524/DI-XMI>
-  dc <http://www.omg.org/spec/DD/20100524/DC-XMI>
-
 Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
 
   Class Interface -> RootElement
@@ -599,7 +593,6 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference extensions : Extension<<0..*>>
     Reference relationships : Relationship<<0..*>>
     Reference rootElements : RootElement<<0..*>>
-    Reference diagrams : BPMNDiagram<<0..*>>
     Attribute exporter : EString
     Attribute exporterVersion : EString
 
@@ -648,109 +641,3 @@ Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
   Enum AdHocOrdering
     Literal Parallel = 0
     Literal Sequential = 1
-
-Package bpmdi <http://www.omg.org/spec/BPMN/20100524/DI-XMI>
-
-  Class BPMNPlane -> Plane
-    Reference bpmnElement : BaseElement
-
-  Class BPMNShape -> LabeledShape
-    Reference bpmnElement : BaseElement
-    Attribute isHorizontal : EBoolean
-    Attribute isExpanded : EBoolean
-    Attribute isMarkerVisible : EBoolean
-    Reference label : BPMNLabel
-    Attribute isMessageVisible : EBoolean
-    Attribute participantBandKind : ParticipantBandKind
-    Reference choreographyActivityShape : BPMNShape
-
-  Class BPMNLabel -> Label
-    Reference labelStyle : BPMNLabelStyle
-
-  Class BPMNLabelStyle -> Style
-    Reference font : Font<<1..1>>
-
-  Class BPMNEdge -> LabeledEdge
-    Reference label : BPMNLabel
-    Reference bpmnElement : BaseElement
-    Reference sourceElement : DiagramElement
-    Reference targetElement : DiagramElement
-    Attribute messageVisibleKind : MessageVisibleKind
-
-  Class BPMNDiagram -> Diagram
-    Reference plane : BPMNPlane<<1..1>>
-    Reference labelStyle : BPMNLabelStyle<<0..*>>
-
-  Enum ParticipantBandKind
-    Literal top_initiating = 0
-    Literal middle_initiating = 1
-    Literal bottom_initiating = 2
-    Literal top_non_initiating = 3
-    Literal middle_non_initiating = 4
-    Literal bottom_non_initiating = 5
-
-  Enum MessageVisibleKind
-    Literal initiating = 0
-    Literal non_initiating = 1
-
-Package di <http://www.omg.org/spec/DD/20100524/DI-XMI>
-
-  Class DiagramElement
-    Reference /owningDiagram : Diagram
-    Reference /owningElement : DiagramElement
-    Reference /ownedElement : DiagramElement<<0..*>>
-    Reference /modelElement : EObject
-    Reference /style : Style
-
-  Class Diagram
-    Attribute name : EString
-    Attribute documentation : EString
-    Attribute resolution : EFloat
-    Reference /ownedStyle : Style<<0..*>>
-    Reference /rootElement : DiagramElement<<1..1>>
-
-  Class Style
-
-  Class Node -> DiagramElement
-
-  Class Edge -> DiagramElement
-    Reference /source : DiagramElement
-    Reference /target : DiagramElement
-    Reference waypoint : Point<<2..*>>
-
-  Class Shape -> Node
-    Reference bounds : Bounds<<1..1>>
-
-  Class LabeledEdge -> Edge
-    Reference /ownedLabel : Label<<0..*>>
-
-  Class Label -> Node
-    Reference bounds : Bounds
-
-  Class LabeledShape -> Shape
-    Reference /ownedLabel : Label<<0..*>>
-
-  Class Plane -> Node
-    Reference planeElement : DiagramElement<<0..*>>
-    Operation plane_element_type(EDiagnosticChain, EMap) : EBoolean
-
-Package dc <http://www.omg.org/spec/DD/20100524/DC-XMI>
-
-  Class Font
-    Attribute name : EString
-    Attribute size : EFloat
-    Attribute isBold : EBoolean
-    Attribute isItalic : EBoolean
-    Attribute isUnderline : EBoolean
-    Attribute isStrikeThrough : EBoolean
-    Operation non_negative_size(EDiagnosticChain, EMap) : EBoolean
-
-  Class Point
-    Attribute x : EFloat<<1..1>>
-    Attribute y : EFloat<<1..1>>
-
-  Class Bounds
-    Attribute x : EFloat<<1..1>>
-    Attribute y : EFloat<<1..1>>
-    Attribute width : EFloat<<1..1>>
-    Attribute height : EFloat<<1..1>>

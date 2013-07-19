@@ -12,10 +12,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Export-Package: org.obeonetwork.dsl.bpmn2,
- org.obeonetwork.dsl.bpmn2.bpmdi,
- org.obeonetwork.dsl.bpmn2.bpmdi.util,
- org.obeonetwork.dsl.bpmn2.util,
- org.obeonetwork.dsl.dd.dc,
- org.obeonetwork.dsl.dd.dc.util,
- org.obeonetwork.dsl.dd.di,
- org.obeonetwork.dsl.dd.di.util
+ org.obeonetwork.dsl.bpmn2.util
+

@@ -21,7 +21,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
-            contributorId="fr.obeo.dsl.viewpoint.diagram"
+            contributorId="org.obeonetwork.dsl.bpmn2.properties"
             labelProvider="org.eclipse.emf.eef.runtime.ui.utils.EEFLabelProvider">
          <propertyCategory
                category="default">
@@ -37,7 +37,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="fr.obeo.dsl.viewpoint.diagram">
+            contributorId="org.obeonetwork.dsl.bpmn2.properties">
          <propertyTab
                id="Base"
                label="Base"
@@ -49,7 +49,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="fr.obeo.dsl.viewpoint.diagram">
+            contributorId="org.obeonetwork.dsl.bpmn2.properties">
          <propertySection
                class="org.obeonetwork.dsl.bpmn2.parts.forms.Interface_PropertiesEditionPartForm"
                filter="org.obeonetwork.dsl.bpmn2.providers.Interface_PropertiesEditionProvider$EditionFilter"

@@ -56,7 +56,6 @@ import org.obeonetwork.dsl.bpmn2.ExtensionAttributeValue;
 import org.obeonetwork.dsl.bpmn2.ExtensionDefinition;
 import org.obeonetwork.dsl.bpmn2.HumanPerformer;
 import org.obeonetwork.dsl.bpmn2.ResourceParameterBinding;
-
 import org.obeonetwork.dsl.bpmn2.Resource;
 
 import org.obeonetwork.dsl.bpmn2.parts.Bpmn2ViewsRepository;

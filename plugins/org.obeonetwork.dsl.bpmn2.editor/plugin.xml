@@ -44,26 +44,6 @@
       </editor>
    </extension>
 
-   <extension point="org.eclipse.ui.editors">
-      <editor
-            id="org.obeonetwork.dsl.bpmn2.bpmdi.presentation.BpmnDiEditorID"
-            name="%_UI_BpmnDiEditor_label"
-            icon="icons/full/obj16/BpmnDiModelFile.gif"
-            extensions="bpmndi"
-            class="org.obeonetwork.dsl.bpmn2.bpmdi.presentation.BpmnDiEditor"
-            contributorClass="org.obeonetwork.dsl.bpmn2.bpmdi.presentation.BpmnDiActionBarContributor">
-      </editor>
-   </extension>
 
-   <extension point="org.eclipse.ui.editors">
-      <editor
-            id="org.obeonetwork.dsl.dd.dc.presentation.DcEditorID"
-            name="%_UI_DcEditor_label"
-            icon="icons/full/obj16/DcModelFile.gif"
-            extensions="dc"
-            class="org.obeonetwork.dsl.dd.dc.presentation.DcEditor"
-            contributorClass="org.obeonetwork.dsl.dd.dc.presentation.DcActionBarContributor">
-      </editor>
-   </extension>
 
 </plugin>

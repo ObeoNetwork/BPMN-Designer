@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 
-import org.obeonetwork.dsl.bpmn2.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
 import org.eclipse.emf.ecore.util.Diagnostician;
@@ -57,6 +56,7 @@ import org.obeonetwork.dsl.bpmn2.ExtensionAttributeValue;
 import org.obeonetwork.dsl.bpmn2.ExtensionDefinition;
 import org.obeonetwork.dsl.bpmn2.ResourceParameterBinding;
 import org.obeonetwork.dsl.bpmn2.ResourceRole;
+import org.obeonetwork.dsl.bpmn2.Resource;
 
 import org.obeonetwork.dsl.bpmn2.parts.Bpmn2ViewsRepository;
 import org.obeonetwork.dsl.bpmn2.parts.ResourceRolePropertiesEditionPart;

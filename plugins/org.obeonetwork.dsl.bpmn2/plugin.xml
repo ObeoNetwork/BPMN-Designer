@@ -24,49 +24,4 @@
             genModel="model/BPMN20.genmodel"/>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.extension_parser">
-      <parser
-            type="bpmn2"
-            class="org.obeonetwork.dsl.bpmn2.util.Bpmn2ResourceFactoryImpl"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <package
-            uri="http://www.omg.org/spec/BPMN/20100524/DI-XMI"
-            class="org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage"
-            genModel="model/BPMN20.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.extension_parser">
-      <parser
-            type="bpmndi"
-            class="org.obeonetwork.dsl.bpmn2.bpmdi.util.BpmnDiResourceFactoryImpl"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <package
-            uri="http://www.omg.org/spec/DD/20100524/DI-XMI"
-            class="org.obeonetwork.dsl.dd.di.DiPackage"
-            genModel="model/BPMN20.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.extension_parser">
-      <parser
-            type="di"
-            class="org.obeonetwork.dsl.dd.di.util.DiResourceFactoryImpl"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <package
-            uri="http://www.omg.org/spec/DD/20100524/DC-XMI"
-            class="org.obeonetwork.dsl.dd.dc.DcPackage"
-            genModel="model/BPMN20.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.extension_parser">
-      <parser
-            type="dc"
-            class="org.obeonetwork.dsl.dd.dc.util.DcResourceFactoryImpl"/>
-   </extension>
-
 </plugin>
