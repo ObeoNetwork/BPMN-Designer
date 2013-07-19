@@ -628,15 +628,6 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Activities">
-          <ownedTools xsi:type="tool:ToolDescription" name="Loop" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/activity/list/looptype.standard.png">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.StandardLoopCharacteristics" referenceName="loopCharacteristics"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
           <ownedTools xsi:type="tool:ToolDescription" name="Task" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
             <element name="element"/>
             <elementView name="elementView"/>
@@ -852,6 +843,26 @@
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolGroup">
+            <tools xsi:type="tool:ToolDescription" name="LoopMarker" label="Loop Marker" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/activity/list/looptype.standard.png">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.StandardLoopCharacteristics" referenceName="loopCharacteristics"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:ToolDescription" name="CompensationMarker" label="Compensation Marker" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/activity/list/event.compensation.png">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="isForCompensation" valueExpression="true"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
           </ownedTools>
         </toolSections>
         <toolSections name="Connectors">
@@ -1286,7 +1297,8 @@
           <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="ServiceTask" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/ServiceTask.png" preconditionExpression="&lt;%self.filter(&quot;ServiceTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="UserTask" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/UserTask.png" preconditionExpression="&lt;%self.filter(&quot;UserTask&quot;)!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="Task" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/Task.png" preconditionExpression="&lt;%self.filter(&quot;Task&quot;)!=null &amp;&amp; self.filter(&quot;UserTask&quot;)==null &amp;&amp; self.filter(&quot;ServiceTask&quot;)==null &amp;&amp; self.filter(&quot;SendTask&quot;)==null &amp;&amp; self.filter(&quot;ScriptTask&quot;)==null &amp;&amp; self.filter(&quot;ReceiveTask&quot;)==null &amp;&amp; self.filter(&quot;ManualTask&quot;)==null &amp;&amp; self.filter(&quot;BusinessRuleTask&quot;)==null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
-          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="loop" position="SOUTH_EAST" decoratorPath="/org.obeonetwork.dsl.bpmn2.design/icons/activity/list/looptype.standard.png" preconditionExpression="&lt;%self.filter(&quot;Task&quot;).eContents()!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="TaskLoopMarker" position="SOUTH_EAST" decoratorPath="/org.obeonetwork.dsl.bpmn2.design/icons/activity/list/looptype.standard.png" preconditionExpression="&lt;%self.filter(&quot;Task&quot;).eContents()!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="TaskConpensationMarker" decoratorPath="/org.obeonetwork.dsl.bpmn2.design/icons/activity/list/event.compensation.png" preconditionExpression="&lt;%self.oclAsType(bpmn::Task).trace().isForCompensation=true%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
         </decorationDescriptionsSet>
       </defaultLayer>
     </ownedRepresentations>
