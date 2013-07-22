@@ -863,6 +863,13 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
+            <tools xsi:type="tool:ToolDescription" name="MutliInstanceMarker" label="Mutli Instance Marker" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/activity/list/mi.parallel.png">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext"/>
+              </initialOperation>
+            </tools>
           </ownedTools>
         </toolSections>
         <toolSections name="Connectors">
@@ -1299,6 +1306,7 @@
           <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="Task" position="NORTH_WEST" decoratorPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/Task.png" preconditionExpression="&lt;%self.filter(&quot;Task&quot;)!=null &amp;&amp; self.filter(&quot;UserTask&quot;)==null &amp;&amp; self.filter(&quot;ServiceTask&quot;)==null &amp;&amp; self.filter(&quot;SendTask&quot;)==null &amp;&amp; self.filter(&quot;ScriptTask&quot;)==null &amp;&amp; self.filter(&quot;ReceiveTask&quot;)==null &amp;&amp; self.filter(&quot;ManualTask&quot;)==null &amp;&amp; self.filter(&quot;BusinessRuleTask&quot;)==null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="TaskLoopMarker" position="SOUTH_EAST" decoratorPath="/org.obeonetwork.dsl.bpmn2.design/icons/activity/list/looptype.standard.png" preconditionExpression="&lt;%self.filter(&quot;Task&quot;).eContents()!=null%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
           <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="TaskConpensationMarker" decoratorPath="/org.obeonetwork.dsl.bpmn2.design/icons/activity/list/event.compensation.png" preconditionExpression="&lt;%self.oclAsType(bpmn::Task).trace().isForCompensation=true%>" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="MultiInstanceMarker" decoratorPath="/org.obeonetwork.dsl.bpmn2.design/icons/activity/list/mi.parallel.png" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='LaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='Task']"/>
         </decorationDescriptionsSet>
       </defaultLayer>
     </ownedRepresentations>
