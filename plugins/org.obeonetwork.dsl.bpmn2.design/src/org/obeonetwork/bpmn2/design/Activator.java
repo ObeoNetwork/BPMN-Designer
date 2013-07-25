@@ -29,7 +29,7 @@ public class Activator extends AbstractUIPlugin {
 	public static final String PLUGIN_ID = "org.obeonetwork.dsl.bpmn2.design";
 
 	// The shared instance
-	private static Activator plugin;
+	public static Activator plugin;
 
 	private static Set<Viewpoint> viewpoints;
 
