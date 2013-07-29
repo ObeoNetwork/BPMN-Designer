@@ -53,6 +53,11 @@ public class DiagramUIPluginImagesEx extends AbstractUIPlugin{
     public  final String IMG_HANDLE_OUTGOING_FLOW_EAST = PREFIX_ROOT + "handle_outgoing_flow_east.gif"; //$NON-NLS-1$
     public  final String IMG_HANDLE_OUTGOING_FLOW_WEST = PREFIX_ROOT + "handle_outgoing_flow_west.gif"; //$NON-NLS-1$
     
+    
+    //TODO me
+    public final String IMG_HANDLE_TASK=PREFIX_ROOT+"Taks.png"; //$NON-NLS-1$
+    
+    
 	/** 
 	 * @param imageName
 	 *            the full filename of the image

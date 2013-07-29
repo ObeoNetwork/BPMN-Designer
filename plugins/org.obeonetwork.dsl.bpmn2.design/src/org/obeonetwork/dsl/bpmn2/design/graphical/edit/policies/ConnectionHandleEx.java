@@ -35,8 +35,6 @@ public class ConnectionHandleEx extends ConnectionHandle {
 	protected Image getImage(int side) {
 		DiagramUIPluginImagesEx diagramUIPluginImagesEx= new DiagramUIPluginImagesEx();
         if (side == PositionConstants.WEST) {
-        	
-        	
             return isIncoming() ? diagramUIPluginImagesEx
                     .get(diagramUIPluginImagesEx.IMG_HANDLE_INCOMING_FLOW_WEST)
                     : diagramUIPluginImagesEx
@@ -81,20 +79,16 @@ public class ConnectionHandleEx extends ConnectionHandle {
 	public void validate() {
 		if (isValid())
 			return;
-
 		removeAll();
 		int side = ((ConnectionHandleLocator) getLocator())
 			.getBorderSide();
 		Image image = getImage(side);
-
 		ImageFigure imageFigure = new ImageFigure(image);
 		imageFigure.setSize(image.getBounds().width, image.getBounds().height);
+		
 		add(imageFigure);
-
+		
 		setSize(imageFigure.getSize().getUnioned(ERROR_IMAGE.getSize()));
-
 		super.validate();
 	}
-    
-
 }

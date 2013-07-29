@@ -107,7 +107,6 @@ public class CoreSamplePlugin extends AbstractUIPlugin {
 		try {
 			result = FileLocator.toFileURL(url);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;

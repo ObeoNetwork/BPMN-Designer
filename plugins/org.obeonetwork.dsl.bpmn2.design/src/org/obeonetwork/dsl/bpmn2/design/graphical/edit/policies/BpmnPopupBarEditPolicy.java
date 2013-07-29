@@ -12,7 +12,6 @@ import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gef.LayerConstants;
 import org.eclipse.gef.Tool;
 import org.eclipse.gmf.runtime.diagram.ui.handles.ConnectionHandle;
@@ -140,26 +139,23 @@ public class BpmnPopupBarEditPolicy extends DiagramAssistantEditPolicy {
 	 * @param srcEltTypes
 	 * @param tgtEltTypes
 	 */
-	protected void setMessagingEdgeHandleFigures(int borderSide,
-			List<ConnectionHandle> list, List<IElementType> srcEltTypes,
-			List<IElementType> tgtEltTypes) {
-		switch (borderSide) {
-		case PositionConstants.SOUTH:
-		case PositionConstants.NORTH:
-			if (tgtEltTypes.contains(Bpmn2Package.MESSAGE_FLOW)) {
-				list.addAll((Collection<? extends ConnectionHandle>) new ConnectionHandleEx(
-						(IGraphicalEditPart) getHost(),
-						HandleDirection.INCOMING,
-						buildTooltip(HandleDirection.INCOMING)));
-			}
-			if (srcEltTypes.contains(Bpmn2Package.MESSAGE_FLOW)) {
-				list.addAll((Collection<? extends ConnectionHandle>) new ConnectionHandleEx(
-						(IGraphicalEditPart) getHost(),
-						HandleDirection.OUTGOING,
-						buildTooltip(HandleDirection.OUTGOING)));
-			}
-		}
-	}
+	protected void setMessagingEdgeHandleFigures(int borderSide, List<ConnectionHandle> list,
+            List<IElementType> srcEltTypes, List<IElementType> tgtEltTypes) {
+        switch (borderSide) {
+        case PositionConstants.SOUTH:
+        case PositionConstants.NORTH:
+            //if (tgtEltTypes.contains(Bpmn2Package.MESSAGE_FLOW)) {
+                list.add(new ConnectionHandleEx((IGraphicalEditPart) getHost(),
+                        HandleDirection.INCOMING, 
+                        buildTooltip(HandleDirection.INCOMING)));
+          ///  }
+            //if (srcEltTypes.contains(Bpmn2Package.MESSAGE_FLOW)) {
+                list.add(new ConnectionHandleEx((IGraphicalEditPart) getHost(),
+                        HandleDirection.OUTGOING, 
+                        buildTooltip(HandleDirection.OUTGOING)));
+            //}
+        }
+    }
 
 	/**
 	 * Adds to the list of handles the handles for the different types of
@@ -172,25 +168,24 @@ public class BpmnPopupBarEditPolicy extends DiagramAssistantEditPolicy {
 	 * @param srcEltTypes
 	 * @param tgtEltTypes
 	 */
-	protected void setAssociationHandleFigures(int borderSide,
-			List<ConnectionHandle> list, List<IElementType> srcEltTypes,
-			List<IElementType> tgtEltTypes) {
-
-		// only add one of the two to avoid having
-		// two similar handles on the associations.
-		if (srcEltTypes.contains(Bpmn2Package.ASSOCIATION)) {
-			// add the outgoing association
-			list.addAll((Collection<? extends ConnectionHandle>) new ConnectionHandleForAssociation(
-					(IGraphicalEditPart) getHost(), HandleDirection.OUTGOING,
-					"Association")); //$NON-NLS-1$
-		} else if (tgtEltTypes.contains(Bpmn2Package.ASSOCIATION)) {
-			// add the incoming association
-			list.addAll((Collection<? extends ConnectionHandle>) new ConnectionHandleForAssociation(
-					(IGraphicalEditPart) getHost(), HandleDirection.INCOMING,
-					"Association")); //$NON-NLS-1$
-		}
+	protected void setAssociationHandleFigures(int borderSide, List<ConnectionHandle> list,
+	        List<IElementType> srcEltTypes, List<IElementType> tgtEltTypes) {
+        
+        // only add one of the two to avoid having
+        // two similar handles on the associations.
+       // if (srcEltTypes.contains(Bpmn2Package.ASSOCIATION)) {
+            //add the outgoing association
+            list.add(new ConnectionHandleForAssociation(
+                    (IGraphicalEditPart) getHost(),
+                    HandleDirection.OUTGOING, "Association")); //$NON-NLS-1$
+    //    }
+	//else if (tgtEltTypes.contains(Bpmn2Package.ASSOCIATION)) {
+            //add the incoming association
+            list.add(new ConnectionHandleForAssociation(
+                    (IGraphicalEditPart) getHost(),
+                    HandleDirection.INCOMING, "Association")); //$NON-NLS-1$
+      //  }
 	}
-
 	/**
 	 * Builds the applicable tooltip string based on whether the Modeling
 	 * Assistant Service supports handle gestures on this element. If no
@@ -281,14 +276,14 @@ public class BpmnPopupBarEditPolicy extends DiagramAssistantEditPolicy {
 		// only show if in the top, bottom, left or right quarter
 		Point mouse = getMouseLocation().getCopy();
 		Rectangle bounds = getOwnerBounds(getHostFigure());
-//		if (getHost() instanceof GroupEditPart ||
-//		        getHost() instanceof Group2EditPart) {
-//            boolean onX = Math.abs(mouse.x - bounds.x) < 5 ||
-//                Math.abs(mouse.x - (bounds.x + bounds.width)) < 5;
-//            boolean onY = Math.abs(mouse.y - bounds.y) < 5 ||
-//                Math.abs(mouse.y - (bounds.y + bounds.height)) < 5;
-//            return ((onX || onY));
-//		}
+	//		if (getHost() instanceof GroupEditPart ||
+	//		        getHost() instanceof Group2EditPart) {
+	//            boolean onX = Math.abs(mouse.x - bounds.x) < 5 ||
+	//                Math.abs(mouse.x - (bounds.x + bounds.width)) < 5;
+	//            boolean onY = Math.abs(mouse.y - bounds.y) < 5 ||
+	//                Math.abs(mouse.y - (bounds.y + bounds.height)) < 5;
+	//            return ((onX || onY));
+	//		}
 		return bounds.contains(mouse);
 	}
 	private boolean isSelectionToolActive()
@@ -344,7 +339,6 @@ public class BpmnPopupBarEditPolicy extends DiagramAssistantEditPolicy {
 		IGraphicalEditPart gap = (IGraphicalEditPart) getHost();
 		// for now only event from task shape
 		if (getHost() instanceof SquareEditPart) {
-			System.out.println("event from task" + getHost());
 			SquareEditPart aep = (SquareEditPart) getHost();
 			handleBoundFig = aep.getFigure();
 		}
