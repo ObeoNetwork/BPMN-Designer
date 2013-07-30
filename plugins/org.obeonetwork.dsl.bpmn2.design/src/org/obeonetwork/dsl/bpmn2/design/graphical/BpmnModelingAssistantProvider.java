@@ -1,4 +1,4 @@
-package org.obeonetwork.dsl.bpmn2.design.graphical.edit.policies;
+package org.obeonetwork.dsl.bpmn2.design.graphical;
 
 import org.eclipse.gmf.runtime.emf.ui.services.modelingassistant.ModelingAssistantProvider;
 

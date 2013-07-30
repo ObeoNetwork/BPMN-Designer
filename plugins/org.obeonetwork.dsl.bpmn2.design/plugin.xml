@@ -69,7 +69,7 @@
   <extension
         point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders">
      <modelingAssistantProvider
-           class="org.obeonetwork.dsl.bpmn2.design.graphical.edit.policies.BpmnModelingAssistantProvider">
+           class="org.obeonetwork.dsl.bpmn2.design.graphical.BpmnModelingAssistantProvider">
         <Priority
               name="Medium">
         </Priority>

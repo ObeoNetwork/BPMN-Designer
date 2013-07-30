@@ -1,4 +1,4 @@
-package org.obeonetwork.dsl.bpmn2.design.graphical.edit.policies;
+package org.obeonetwork.dsl.bpmn2.design.graphical;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,36 +27,20 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.widgets.Display;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 
-/**
- * Avoid direct edit at the end of the creation of the connection.
- * Prevent sequence connection from being created when they cross the boundary 
- * of a sub-process.
- * 
- * @author hmalphettes extends the internal tool to avoid to perform a direct edit
- * at the end of the creation. We could make it a preference.
- * @author <a href="http://www.intalio.com">&copy; Intalio, Inc.</a>
- */
-public class ConnectionHandleToolEx extends ConnectionHandleTool {
+public class BpmnConnectionHandleTool extends ConnectionHandleTool {
 
     /**
      * @param connectionHandle
      */
-    public ConnectionHandleToolEx(ConnectionHandle connectionHandle) {
+    public BpmnConnectionHandleTool(ConnectionHandle connectionHandle) {
         super(connectionHandle);
     }
 
-    /**
-     * Override to filter the rel-types provided by the assistant service that
-     * are the "attach-note" type of connection.
-     * 
-     * @see org.eclipse.gef.tools.TargetingTool#createTargetRequest()
-     */
     @SuppressWarnings("unchecked") //$NON-NLS-1$
     protected Request createTargetRequest() {
         List<IElementType> relTypes = null;
         ConnectionHandle connHandle = getConnectionHandle();
         if (connHandle.isIncoming()) {
-            //reversed direction.
             relTypes = ModelingAssistantService.getInstance().getRelTypesOnTarget(
                     connHandle.getOwner());
         } else {
@@ -91,7 +75,6 @@ public class ConnectionHandleToolEx extends ConnectionHandleTool {
                 break;
             }
         }
-        //this replaces : relTypes.remove(DiagramNotationType.NOTE_ATTACHMENT);
         for (ListIterator<IElementType> it = relTypes.listIterator();
                     it.hasNext(); ) {
             IElementType elem = it.next();
@@ -113,36 +96,18 @@ public class ConnectionHandleToolEx extends ConnectionHandleTool {
             return request;
     }
     
-    /**
-     * When creating a CreateUnspecifiedTypeConnectionRequest
-     * Should the modeling assistant be used?
-     * @return false
-     */
     protected boolean useModelingAssistantService() {
         return false;
     }
 
-    /**
-     * Removes and add relationship types when the connection handles specifies
-     * that the type of connection being created is only for bpmn associations.
-     * 
-     * In this implementation, it simply removes the message and 
-     * sequence relationships.
-     * 
-     * @param connHandle
-     */
     protected void setRelationTypesForAssociation(ConnectionHandleForAssociation connHandle,
             List<IElementType> relationTypesCollector, int borderSide) {
-        // removing those element types when we drag an association
         relationTypesCollector.remove(Bpmn2Package.MESSAGE_FLOW);
         relationTypesCollector.remove(Bpmn2Package.SEQUENCE_FLOW);        
     }
     
     
-    /**
-     * Modified so that only the shapes are put in
-     * direct mode when being created with a connection.
-     */
+   
     protected void selectAddedObject(EditPartViewer viewer, Collection objects) {
         final EditPart[] primaryEP = new EditPart[1];
         List editparts = new ArrayList();
@@ -154,24 +119,16 @@ public class ConnectionHandleToolEx extends ConnectionHandleTool {
                 if (editPart instanceof IPrimaryEditPart) {
                     editparts.add(editPart);
                 }
-                // Priority is to put a shape into direct edit mode.
                 if (editPart instanceof ShapeEditPart) {
                     primaryEP[0] = (ShapeEditPart) editPart;
                 }
             }
         }
-
         if (primaryEP[0] != null) {
             viewer.setSelection(new StructuredSelection(editparts));
-
-            // automatically put the first shape into edit-mode
             Display.getCurrent().asyncExec(new Runnable() {
 
                 public void run() {
-                    //
-                    // add active test since test scripts are failing on this
-                    // basically, the editpart has been deleted when this
-                    // code is being executed. (see RATLC00527114)
                     if (primaryEP[0].isActive()) {
                         primaryEP[0].performRequest(new Request(
                             RequestConstants.REQ_DIRECT_EDIT));
@@ -181,11 +138,6 @@ public class ConnectionHandleToolEx extends ConnectionHandleTool {
         }
     }
     
-    /**
-     * Overridden for groups. We only select them when the cursor
-     * is placed at less than 5 pixels from the border of the groups,
-     * otherwise the parent of the group is selected.
-     */
     @Override
     protected Conditional getTargetingConditional() {
         return new EditPartViewer.Conditional() {

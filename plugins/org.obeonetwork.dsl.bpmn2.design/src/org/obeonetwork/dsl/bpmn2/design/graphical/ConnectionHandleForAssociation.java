@@ -1,15 +1,10 @@
-package org.obeonetwork.dsl.bpmn2.design.graphical.edit.policies;
+package org.obeonetwork.dsl.bpmn2.design.graphical;
 
 import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.swt.graphics.Image;
 
-/**
- * Connection handle for the association
- * 
- * @author hmalphettes
- * @author <a href="http://www.intalio.com">&copy; Intalio, Inc.</a>
- */
+
 public class ConnectionHandleForAssociation extends ConnectionHandleEx {
 
     public ConnectionHandleForAssociation(IGraphicalEditPart ownerEditPart,
