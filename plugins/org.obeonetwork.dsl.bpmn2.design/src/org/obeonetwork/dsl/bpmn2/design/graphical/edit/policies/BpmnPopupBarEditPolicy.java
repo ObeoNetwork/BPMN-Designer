@@ -25,7 +25,6 @@ import org.eclipse.gmf.runtime.diagram.ui.handles.ConnectionHandleLocator;
 import org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.ui.services.modelingassistant.ModelingAssistantService;
-import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 
 import fr.obeo.dsl.viewpoint.ViewpointPackage;
 import fr.obeo.dsl.viewpoint.description.tool.AbstractToolDescription;
@@ -35,9 +34,7 @@ import fr.obeo.dsl.viewpoint.description.tool.NodeCreationDescription;
 import fr.obeo.dsl.viewpoint.description.tool.PaneBasedSelectionWizardDescription;
 import fr.obeo.dsl.viewpoint.description.tool.SelectionWizardDescription;
 import fr.obeo.dsl.viewpoint.description.tool.ToolDescription;
-import fr.obeo.dsl.viewpoint.diagram.graphical.edit.policies.ViewPointPopupBarEditPolicy;
 import fr.obeo.dsl.viewpoint.diagram.internal.edit.parts.SquareEditPart;
-import fr.obeo.dsl.viewpoint.provider.ViewpointEditPlugin;
 
 public class BpmnPopupBarEditPolicy extends DiagramAssistantEditPolicy {
 	/**

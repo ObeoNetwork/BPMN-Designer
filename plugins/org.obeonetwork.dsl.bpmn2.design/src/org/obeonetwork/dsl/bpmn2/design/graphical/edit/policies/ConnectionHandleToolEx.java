@@ -8,13 +8,10 @@ import java.util.ListIterator;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.draw2d.PositionConstants;
-import org.eclipse.draw2d.geometry.Point;
-import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPartViewer;
-import org.eclipse.gef.Request;
 import org.eclipse.gef.EditPartViewer.Conditional;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gef.Request;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.handles.ConnectionHandle;
@@ -27,7 +24,6 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.ui.services.modelingassistant.ModelingAssistantService;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.jface.viewers.StructuredSelection;
-
 import org.eclipse.swt.widgets.Display;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 
@@ -66,6 +62,8 @@ public class ConnectionHandleToolEx extends ConnectionHandleTool {
         } else {
             relTypes = ModelingAssistantService.getInstance().
                 getRelTypesOnSource(connHandle.getOwner());
+            ModelingAssistantService mas = ModelingAssistantService.getInstance();
+            mas.getRelTypesOnSource(connHandle.getOwner());
         }
         int borderSide = ((ConnectionHandleLocator)connHandle.
                 getLocator()).getBorderSide();
@@ -105,9 +103,7 @@ public class ConnectionHandleToolEx extends ConnectionHandleTool {
         CreateUnspecifiedTypeConnectionRequest request = 
             new CreateUnspecifiedTypeConnectionRequest(
                     relTypes, useModelingAssistantService(), getPreferencesHint()) {
-            
             public void setTargetEditPart(EditPart part) {
-               
                 super.setTargetEditPart(part);
             }};
             
@@ -155,7 +151,6 @@ public class ConnectionHandleToolEx extends ConnectionHandleTool {
             if (object instanceof IAdaptable) {
                 Object editPart = viewer.getEditPartRegistry().get(
                     ((IAdaptable) object).getAdapter(View.class));
-
                 if (editPart instanceof IPrimaryEditPart) {
                     editparts.add(editPart);
                 }
@@ -195,8 +190,6 @@ public class ConnectionHandleToolEx extends ConnectionHandleTool {
     protected Conditional getTargetingConditional() {
         return new EditPartViewer.Conditional() {
             public boolean evaluate(EditPart editpart) {
-               
-                
                 return editpart.isSelectable();
             }
         };
