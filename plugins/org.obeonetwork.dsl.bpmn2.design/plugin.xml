@@ -60,7 +60,7 @@
   <extension
         point="org.eclipse.gmf.runtime.diagram.ui.editpolicyProviders">
      <editpolicyProvider
-           class="org.obeonetwork.dsl.bpmn2.design.graphical.edit.policies.BpmnPopupBarEditpolicyProvider">
+           class="org.obeonetwork.dsl.bpmn2.design.graphical.BpmnPopupBarEditpolicyProvider">
         <Priority
               name="Medium">
         </Priority>
@@ -71,7 +71,7 @@
      <modelingAssistantProvider
            class="org.obeonetwork.dsl.bpmn2.design.graphical.BpmnModelingAssistantProvider">
         <Priority
-              name="Medium">
+              name="Highest">
         </Priority>
      </modelingAssistantProvider>
   </extension>

@@ -20,11 +20,13 @@ import org.eclipse.gmf.runtime.diagram.ui.internal.tools.ConnectionHandleTool;
 import org.eclipse.gmf.runtime.diagram.ui.requests.CreateUnspecifiedTypeConnectionRequest;
 import org.eclipse.gmf.runtime.diagram.ui.requests.RequestConstants;
 import org.eclipse.gmf.runtime.diagram.ui.util.INotationType;
+import org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.ui.services.modelingassistant.ModelingAssistantService;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.widgets.Display;
+import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 
 public class BpmnConnectionHandleTool extends ConnectionHandleTool {
@@ -36,6 +38,13 @@ public class BpmnConnectionHandleTool extends ConnectionHandleTool {
         super(connectionHandle);
     }
 
+    
+    /**
+	 * Override to filter the rel-types provided by the assistant service that
+	 * are the "attach-note" type of connection.
+	 * 
+	 * @see org.eclipse.gef.tools.TargetingTool#createTargetRequest()
+	 */
     @SuppressWarnings("unchecked") //$NON-NLS-1$
     protected Request createTargetRequest() {
         List<IElementType> relTypes = null;
@@ -46,8 +55,7 @@ public class BpmnConnectionHandleTool extends ConnectionHandleTool {
         } else {
             relTypes = ModelingAssistantService.getInstance().
                 getRelTypesOnSource(connHandle.getOwner());
-            ModelingAssistantService mas = ModelingAssistantService.getInstance();
-            mas.getRelTypesOnSource(connHandle.getOwner());
+           
         }
         int borderSide = ((ConnectionHandleLocator)connHandle.
                 getLocator()).getBorderSide();
@@ -56,10 +64,13 @@ public class BpmnConnectionHandleTool extends ConnectionHandleTool {
                     (ConnectionHandleForAssociation)connHandle,
                             relTypes, borderSide);
         } else {
-            relTypes.remove(Bpmn2Package.ASSOCIATION);
+        	IElementType et=ElementTypeRegistry.getInstance().getElementType(Bpmn2Factory.eINSTANCE.createMessageFlow());
+            relTypes.remove(et);
             List<IElementType> toRemove = new ArrayList<IElementType>();
             for (IElementType eltType : relTypes) {
-                if (Integer.toString(Bpmn2Package.ASSOCIATION__ID).equals(eltType.getId())) {
+            	
+
+                if (et.getId().equals(eltType.getId())) {
                     toRemove.add(eltType);
                 }
             }
@@ -71,7 +82,7 @@ public class BpmnConnectionHandleTool extends ConnectionHandleTool {
                 break;
             case PositionConstants.WEST:
             case PositionConstants.EAST:
-                relTypes.remove(Bpmn2Package.MESSAGE_FLOW);
+                relTypes.remove(et);
                 break;
             }
         }
@@ -82,14 +93,13 @@ public class BpmnConnectionHandleTool extends ConnectionHandleTool {
                 it.remove();
             }
         }
+        CreateUnspecifiedTypeConnectionRequest request = new CreateUnspecifiedTypeConnectionRequest(
+				relTypes, useModelingAssistantService(), getPreferencesHint()) {
+			public void setTargetEditPart(EditPart part) {
+				super.setTargetEditPart(part);
+			}
+		};
 
-        CreateUnspecifiedTypeConnectionRequest request = 
-            new CreateUnspecifiedTypeConnectionRequest(
-                    relTypes, useModelingAssistantService(), getPreferencesHint()) {
-            public void setTargetEditPart(EditPart part) {
-                super.setTargetEditPart(part);
-            }};
-            
             if (connHandle.isIncoming()) {
                 request.setDirectionReversed(true);
             }
