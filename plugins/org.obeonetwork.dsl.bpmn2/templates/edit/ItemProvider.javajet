@@ -1,22 +1,5 @@
-<%@ jet package="org.eclipse.emf.codegen.ecore.templates.edit" imports="java.util.* org.eclipse.emf.codegen.ecore.genmodel.*" class="ItemProvider" version="$Id: ItemProvider.javajet,v 1.2 2010/01/02 09:02:04 atoulme Exp $" %>
-<%
-/**
- * <copyright>
- *
- * Copyright (c) 2002-2007 IBM Corporation and others.
- * Copyright (c) 2009      Intalio, Inc.
- * All rights reserved.   This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *   IBM - Initial API and implementation
- *   Intalio, Antoine Toulme- used .png file extension instead of relying on default gif.
- *
- * </copyright>
- */
-%>
+<%@ jet package="org.eclipse.emf.codegen.ecore.templates.edit" imports="java.util.* org.eclipse.emf.codegen.ecore.genmodel.*" class="ItemProvider" version="$Id: ItemProvider.javajet,v 1.2 2010/01/02 09:02:04 a Exp $" %>
+
 <%GenClass genClass = (GenClass)argument; GenPackage genPackage = genClass.getGenPackage(); GenModel genModel=genPackage.getGenModel();%>
 <%@ include file="../Header.javajetinc"%>
 package <%=genPackage.getProviderPackageName()%>;
