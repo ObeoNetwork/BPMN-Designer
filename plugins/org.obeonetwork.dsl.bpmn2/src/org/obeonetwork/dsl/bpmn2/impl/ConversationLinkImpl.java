@@ -41,15 +41,6 @@ import org.obeonetwork.dsl.bpmn2.InteractionNode;
 public class ConversationLinkImpl extends BaseElementImpl implements
 		ConversationLink {
 	/**
-	 * The cached value of the '{@link #getSourceRef() <em>Source Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSourceRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected InteractionNode sourceRef;
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -58,24 +49,6 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getTargetRef() <em>Target Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected InteractionNode targetRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -102,17 +75,9 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public InteractionNode getSourceRef() {
-		if (sourceRef != null && sourceRef.eIsProxy()) {
-			InternalEObject oldSourceRef = (InternalEObject) sourceRef;
-			sourceRef = (InteractionNode) eResolveProxy(oldSourceRef);
-			if (sourceRef != oldSourceRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.CONVERSATION_LINK__SOURCE_REF,
-							oldSourceRef, sourceRef));
-			}
-		}
-		return sourceRef;
+		return (InteractionNode) eDynamicGet(
+				Bpmn2Package.CONVERSATION_LINK__SOURCE_REF,
+				Bpmn2Package.Literals.CONVERSATION_LINK__SOURCE_REF, true, true);
 	}
 
 	/**
@@ -121,7 +86,10 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public InteractionNode basicGetSourceRef() {
-		return sourceRef;
+		return (InteractionNode) eDynamicGet(
+				Bpmn2Package.CONVERSATION_LINK__SOURCE_REF,
+				Bpmn2Package.Literals.CONVERSATION_LINK__SOURCE_REF, false,
+				true);
 	}
 
 	/**
@@ -131,18 +99,8 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 	 */
 	public NotificationChain basicSetSourceRef(InteractionNode newSourceRef,
 			NotificationChain msgs) {
-		InteractionNode oldSourceRef = sourceRef;
-		sourceRef = newSourceRef;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					Bpmn2Package.CONVERSATION_LINK__SOURCE_REF, oldSourceRef,
-					newSourceRef);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newSourceRef,
+				Bpmn2Package.CONVERSATION_LINK__SOURCE_REF, msgs);
 		return msgs;
 	}
 
@@ -152,27 +110,9 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setSourceRef(InteractionNode newSourceRef) {
-		if (newSourceRef != sourceRef) {
-			NotificationChain msgs = null;
-			if (sourceRef != null)
-				msgs = ((InternalEObject) sourceRef)
-						.eInverseRemove(
-								this,
-								Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
-								InteractionNode.class, msgs);
-			if (newSourceRef != null)
-				msgs = ((InternalEObject) newSourceRef)
-						.eInverseAdd(
-								this,
-								Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
-								InteractionNode.class, msgs);
-			msgs = basicSetSourceRef(newSourceRef, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CONVERSATION_LINK__SOURCE_REF, newSourceRef,
-					newSourceRef));
+		eDynamicSet(Bpmn2Package.CONVERSATION_LINK__SOURCE_REF,
+				Bpmn2Package.Literals.CONVERSATION_LINK__SOURCE_REF,
+				newSourceRef);
 	}
 
 	/**
@@ -181,7 +121,8 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.CONVERSATION_LINK__NAME,
+				Bpmn2Package.Literals.CONVERSATION_LINK__NAME, true, true);
 	}
 
 	/**
@@ -190,11 +131,8 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CONVERSATION_LINK__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.CONVERSATION_LINK__NAME,
+				Bpmn2Package.Literals.CONVERSATION_LINK__NAME, newName);
 	}
 
 	/**
@@ -203,17 +141,9 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public InteractionNode getTargetRef() {
-		if (targetRef != null && targetRef.eIsProxy()) {
-			InternalEObject oldTargetRef = (InternalEObject) targetRef;
-			targetRef = (InteractionNode) eResolveProxy(oldTargetRef);
-			if (targetRef != oldTargetRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.CONVERSATION_LINK__TARGET_REF,
-							oldTargetRef, targetRef));
-			}
-		}
-		return targetRef;
+		return (InteractionNode) eDynamicGet(
+				Bpmn2Package.CONVERSATION_LINK__TARGET_REF,
+				Bpmn2Package.Literals.CONVERSATION_LINK__TARGET_REF, true, true);
 	}
 
 	/**
@@ -222,7 +152,10 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public InteractionNode basicGetTargetRef() {
-		return targetRef;
+		return (InteractionNode) eDynamicGet(
+				Bpmn2Package.CONVERSATION_LINK__TARGET_REF,
+				Bpmn2Package.Literals.CONVERSATION_LINK__TARGET_REF, false,
+				true);
 	}
 
 	/**
@@ -232,18 +165,8 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 	 */
 	public NotificationChain basicSetTargetRef(InteractionNode newTargetRef,
 			NotificationChain msgs) {
-		InteractionNode oldTargetRef = targetRef;
-		targetRef = newTargetRef;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					Bpmn2Package.CONVERSATION_LINK__TARGET_REF, oldTargetRef,
-					newTargetRef);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newTargetRef,
+				Bpmn2Package.CONVERSATION_LINK__TARGET_REF, msgs);
 		return msgs;
 	}
 
@@ -253,27 +176,9 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setTargetRef(InteractionNode newTargetRef) {
-		if (newTargetRef != targetRef) {
-			NotificationChain msgs = null;
-			if (targetRef != null)
-				msgs = ((InternalEObject) targetRef)
-						.eInverseRemove(
-								this,
-								Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
-								InteractionNode.class, msgs);
-			if (newTargetRef != null)
-				msgs = ((InternalEObject) newTargetRef)
-						.eInverseAdd(
-								this,
-								Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
-								InteractionNode.class, msgs);
-			msgs = basicSetTargetRef(newTargetRef, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CONVERSATION_LINK__TARGET_REF, newTargetRef,
-					newTargetRef));
+		eDynamicSet(Bpmn2Package.CONVERSATION_LINK__TARGET_REF,
+				Bpmn2Package.Literals.CONVERSATION_LINK__TARGET_REF,
+				newTargetRef);
 	}
 
 	/**
@@ -286,6 +191,7 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.CONVERSATION_LINK__SOURCE_REF:
+			InteractionNode sourceRef = basicGetSourceRef();
 			if (sourceRef != null)
 				msgs = ((InternalEObject) sourceRef)
 						.eInverseRemove(
@@ -294,6 +200,7 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 								InteractionNode.class, msgs);
 			return basicSetSourceRef((InteractionNode) otherEnd, msgs);
 		case Bpmn2Package.CONVERSATION_LINK__TARGET_REF:
+			InteractionNode targetRef = basicGetTargetRef();
 			if (targetRef != null)
 				msgs = ((InternalEObject) targetRef)
 						.eInverseRemove(
@@ -395,31 +302,14 @@ public class ConversationLinkImpl extends BaseElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CONVERSATION_LINK__SOURCE_REF:
-			return sourceRef != null;
+			return basicGetSourceRef() != null;
 		case Bpmn2Package.CONVERSATION_LINK__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.CONVERSATION_LINK__TARGET_REF:
-			return targetRef != null;
+			return basicGetTargetRef() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ConversationLinkImpl

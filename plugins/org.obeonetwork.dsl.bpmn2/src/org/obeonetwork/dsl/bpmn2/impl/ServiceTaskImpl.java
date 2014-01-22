@@ -46,24 +46,6 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
 	 * @ordered
 	 */
 	protected static final String IMPLEMENTATION_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getImplementation() <em>Implementation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImplementation()
-	 * @generated
-	 * @ordered
-	 */
-	protected String implementation = IMPLEMENTATION_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getOperationRef() <em>Operation Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOperationRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Operation operationRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,7 +72,8 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
 	 * @generated
 	 */
 	public String getImplementation() {
-		return implementation;
+		return (String) eDynamicGet(Bpmn2Package.SERVICE_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.SERVICE_TASK__IMPLEMENTATION, true, true);
 	}
 
 	/**
@@ -99,12 +82,9 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
 	 * @generated
 	 */
 	public void setImplementation(String newImplementation) {
-		String oldImplementation = implementation;
-		implementation = newImplementation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.SERVICE_TASK__IMPLEMENTATION,
-					oldImplementation, implementation));
+		eDynamicSet(Bpmn2Package.SERVICE_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.SERVICE_TASK__IMPLEMENTATION,
+				newImplementation);
 	}
 
 	/**
@@ -113,17 +93,9 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
 	 * @generated
 	 */
 	public Operation getOperationRef() {
-		if (operationRef != null && operationRef.eIsProxy()) {
-			InternalEObject oldOperationRef = (InternalEObject) operationRef;
-			operationRef = (Operation) eResolveProxy(oldOperationRef);
-			if (operationRef != oldOperationRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.SERVICE_TASK__OPERATION_REF,
-							oldOperationRef, operationRef));
-			}
-		}
-		return operationRef;
+		return (Operation) eDynamicGet(
+				Bpmn2Package.SERVICE_TASK__OPERATION_REF,
+				Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF, true, true);
 	}
 
 	/**
@@ -132,7 +104,9 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
 	 * @generated
 	 */
 	public Operation basicGetOperationRef() {
-		return operationRef;
+		return (Operation) eDynamicGet(
+				Bpmn2Package.SERVICE_TASK__OPERATION_REF,
+				Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF, false, true);
 	}
 
 	/**
@@ -141,12 +115,9 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
 	 * @generated
 	 */
 	public void setOperationRef(Operation newOperationRef) {
-		Operation oldOperationRef = operationRef;
-		operationRef = newOperationRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.SERVICE_TASK__OPERATION_REF, oldOperationRef,
-					operationRef));
+		eDynamicSet(Bpmn2Package.SERVICE_TASK__OPERATION_REF,
+				Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF,
+				newOperationRef);
 	}
 
 	/**
@@ -212,29 +183,12 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
-			return IMPLEMENTATION_EDEFAULT == null ? implementation != null
-					: !IMPLEMENTATION_EDEFAULT.equals(implementation);
+			return IMPLEMENTATION_EDEFAULT == null ? getImplementation() != null
+					: !IMPLEMENTATION_EDEFAULT.equals(getImplementation());
 		case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
-			return operationRef != null;
+			return basicGetOperationRef() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (implementation: ");
-		result.append(implementation);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ServiceTaskImpl

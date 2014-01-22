@@ -36,16 +36,6 @@ import org.obeonetwork.dsl.dd.di.LabeledEdge;
  */
 public abstract class LabeledEdgeImpl extends EdgeImpl implements LabeledEdge {
 	/**
-	 * The cached value of the '{@link #getOwnedLabel() <em>Owned Label</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOwnedLabel()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Label> ownedLabel;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -71,11 +61,8 @@ public abstract class LabeledEdgeImpl extends EdgeImpl implements LabeledEdge {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Label> getOwnedLabel() {
-		if (ownedLabel == null) {
-			ownedLabel = new EObjectResolvingEList<Label>(Label.class, this,
-					DiPackage.LABELED_EDGE__OWNED_LABEL);
-		}
-		return ownedLabel;
+		return (EList<Label>) eDynamicGet(DiPackage.LABELED_EDGE__OWNED_LABEL,
+				DiPackage.Literals.LABELED_EDGE__OWNED_LABEL, true, true);
 	}
 
 	/**
@@ -101,7 +88,7 @@ public abstract class LabeledEdgeImpl extends EdgeImpl implements LabeledEdge {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case DiPackage.LABELED_EDGE__OWNED_LABEL:
-			return ownedLabel != null && !ownedLabel.isEmpty();
+			return !getOwnedLabel().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

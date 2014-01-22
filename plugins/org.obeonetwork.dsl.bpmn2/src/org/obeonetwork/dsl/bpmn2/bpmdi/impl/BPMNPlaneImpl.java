@@ -38,16 +38,6 @@ import org.obeonetwork.dsl.dd.di.impl.PlaneImpl;
  */
 public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
 	/**
-	 * The cached value of the '{@link #getBpmnElement() <em>Bpmn Element</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBpmnElement()
-	 * @generated
-	 * @ordered
-	 */
-	protected BaseElement bpmnElement;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -72,17 +62,9 @@ public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
 	 * @generated
 	 */
 	public BaseElement getBpmnElement() {
-		if (bpmnElement != null && bpmnElement.eIsProxy()) {
-			InternalEObject oldBpmnElement = (InternalEObject) bpmnElement;
-			bpmnElement = (BaseElement) eResolveProxy(oldBpmnElement);
-			if (bpmnElement != oldBpmnElement) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT,
-							oldBpmnElement, bpmnElement));
-			}
-		}
-		return bpmnElement;
+		return (BaseElement) eDynamicGet(
+				BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT,
+				BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, true, true);
 	}
 
 	/**
@@ -91,7 +73,9 @@ public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
 	 * @generated
 	 */
 	public BaseElement basicGetBpmnElement() {
-		return bpmnElement;
+		return (BaseElement) eDynamicGet(
+				BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT,
+				BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, false, true);
 	}
 
 	/**
@@ -100,12 +84,8 @@ public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
 	 * @generated
 	 */
 	public void setBpmnElement(BaseElement newBpmnElement) {
-		BaseElement oldBpmnElement = bpmnElement;
-		bpmnElement = newBpmnElement;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT, oldBpmnElement,
-					bpmnElement));
+		eDynamicSet(BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT,
+				BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, newBpmnElement);
 	}
 
 	/**
@@ -163,7 +143,7 @@ public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
-			return bpmnElement != null;
+			return basicGetBpmnElement() != null;
 		}
 		return super.eIsSet(featureID);
 	}

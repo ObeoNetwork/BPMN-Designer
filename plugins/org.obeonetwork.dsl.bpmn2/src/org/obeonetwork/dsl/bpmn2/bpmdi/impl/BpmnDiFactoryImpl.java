@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.obeonetwork.dsl.bpmn2.bpmdi.*;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNDiagram;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNEdge;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabel;
@@ -76,17 +77,17 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 		case BpmnDiPackage.BPMN_PLANE:
-			return createBPMNPlane();
+			return (EObject) createBPMNPlane();
 		case BpmnDiPackage.BPMN_SHAPE:
-			return createBPMNShape();
+			return (EObject) createBPMNShape();
 		case BpmnDiPackage.BPMN_LABEL:
-			return createBPMNLabel();
+			return (EObject) createBPMNLabel();
 		case BpmnDiPackage.BPMN_LABEL_STYLE:
-			return createBPMNLabelStyle();
+			return (EObject) createBPMNLabelStyle();
 		case BpmnDiPackage.BPMN_EDGE:
-			return createBPMNEdge();
+			return (EObject) createBPMNEdge();
 		case BpmnDiPackage.BPMN_DIAGRAM:
-			return createBPMNDiagram();
+			return (EObject) createBPMNDiagram();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName()
 					+ "' is not a valid classifier");

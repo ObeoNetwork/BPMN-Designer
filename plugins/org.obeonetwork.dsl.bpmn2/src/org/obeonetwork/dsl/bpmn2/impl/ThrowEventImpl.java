@@ -51,52 +51,6 @@ import org.obeonetwork.dsl.bpmn2.ThrowEvent;
  */
 public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
 	/**
-	 * The cached value of the '{@link #getInputSet() <em>Input Set</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputSet()
-	 * @generated
-	 * @ordered
-	 */
-	protected InputSet inputSet;
-	/**
-	 * The cached value of the '{@link #getEventDefinitionRefs() <em>Event Definition Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEventDefinitionRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EventDefinition> eventDefinitionRefs;
-	/**
-	 * The cached value of the '{@link #getDataInputAssociation() <em>Data Input Association</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDataInputAssociation()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataInputAssociation> dataInputAssociation;
-	/**
-	 * The cached value of the '{@link #getDataInputs() <em>Data Inputs</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDataInputs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataInput> dataInputs;
-	/**
-	 * The cached value of the '{@link #getEventDefinitions() <em>Event Definitions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEventDefinitions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EventDefinition> eventDefinitions;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +75,8 @@ public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
 	 * @generated
 	 */
 	public InputSet getInputSet() {
-		return inputSet;
+		return (InputSet) eDynamicGet(Bpmn2Package.THROW_EVENT__INPUT_SET,
+				Bpmn2Package.Literals.THROW_EVENT__INPUT_SET, true, true);
 	}
 
 	/**
@@ -131,17 +86,8 @@ public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
 	 */
 	public NotificationChain basicSetInputSet(InputSet newInputSet,
 			NotificationChain msgs) {
-		InputSet oldInputSet = inputSet;
-		inputSet = newInputSet;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, Bpmn2Package.THROW_EVENT__INPUT_SET,
-					oldInputSet, newInputSet);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newInputSet,
+				Bpmn2Package.THROW_EVENT__INPUT_SET, msgs);
 		return msgs;
 	}
 
@@ -151,25 +97,8 @@ public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
 	 * @generated
 	 */
 	public void setInputSet(InputSet newInputSet) {
-		if (newInputSet != inputSet) {
-			NotificationChain msgs = null;
-			if (inputSet != null)
-				msgs = ((InternalEObject) inputSet).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.THROW_EVENT__INPUT_SET, null,
-						msgs);
-			if (newInputSet != null)
-				msgs = ((InternalEObject) newInputSet).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.THROW_EVENT__INPUT_SET, null,
-						msgs);
-			msgs = basicSetInputSet(newInputSet, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.THROW_EVENT__INPUT_SET, newInputSet,
-					newInputSet));
+		eDynamicSet(Bpmn2Package.THROW_EVENT__INPUT_SET,
+				Bpmn2Package.Literals.THROW_EVENT__INPUT_SET, newInputSet);
 	}
 
 	/**
@@ -179,12 +108,10 @@ public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<EventDefinition> getEventDefinitionRefs() {
-		if (eventDefinitionRefs == null) {
-			eventDefinitionRefs = new EObjectResolvingEList<EventDefinition>(
-					EventDefinition.class, this,
-					Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS);
-		}
-		return eventDefinitionRefs;
+		return (EList<EventDefinition>) eDynamicGet(
+				Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS,
+				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITION_REFS, true,
+				true);
 	}
 
 	/**
@@ -194,12 +121,10 @@ public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataInputAssociation> getDataInputAssociation() {
-		if (dataInputAssociation == null) {
-			dataInputAssociation = new EObjectContainmentEList<DataInputAssociation>(
-					DataInputAssociation.class, this,
-					Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION);
-		}
-		return dataInputAssociation;
+		return (EList<DataInputAssociation>) eDynamicGet(
+				Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION,
+				Bpmn2Package.Literals.THROW_EVENT__DATA_INPUT_ASSOCIATION,
+				true, true);
 	}
 
 	/**
@@ -209,12 +134,9 @@ public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataInput> getDataInputs() {
-		if (dataInputs == null) {
-			dataInputs = new EObjectContainmentEList<DataInput>(
-					DataInput.class, this,
-					Bpmn2Package.THROW_EVENT__DATA_INPUTS);
-		}
-		return dataInputs;
+		return (EList<DataInput>) eDynamicGet(
+				Bpmn2Package.THROW_EVENT__DATA_INPUTS,
+				Bpmn2Package.Literals.THROW_EVENT__DATA_INPUTS, true, true);
 	}
 
 	/**
@@ -224,12 +146,10 @@ public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<EventDefinition> getEventDefinitions() {
-		if (eventDefinitions == null) {
-			eventDefinitions = new EObjectContainmentEList<EventDefinition>(
-					EventDefinition.class, this,
-					Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS);
-		}
-		return eventDefinitions;
+		return (EList<EventDefinition>) eDynamicGet(
+				Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS,
+				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS, true,
+				true);
 	}
 
 	/**
@@ -349,17 +269,15 @@ public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.THROW_EVENT__INPUT_SET:
-			return inputSet != null;
+			return getInputSet() != null;
 		case Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS:
-			return eventDefinitionRefs != null
-					&& !eventDefinitionRefs.isEmpty();
+			return !getEventDefinitionRefs().isEmpty();
 		case Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION:
-			return dataInputAssociation != null
-					&& !dataInputAssociation.isEmpty();
+			return !getDataInputAssociation().isEmpty();
 		case Bpmn2Package.THROW_EVENT__DATA_INPUTS:
-			return dataInputs != null && !dataInputs.isEmpty();
+			return !getDataInputs().isEmpty();
 		case Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS:
-			return eventDefinitions != null && !eventDefinitions.isEmpty();
+			return !getEventDefinitions().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

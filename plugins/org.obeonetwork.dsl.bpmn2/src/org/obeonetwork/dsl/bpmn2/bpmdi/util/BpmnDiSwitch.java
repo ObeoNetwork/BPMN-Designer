@@ -18,6 +18,7 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.obeonetwork.dsl.bpmn2.bpmdi.*;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNDiagram;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNEdge;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabel;

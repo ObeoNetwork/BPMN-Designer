@@ -47,34 +47,6 @@ import org.obeonetwork.dsl.bpmn2.SubChoreography;
 public class SubChoreographyImpl extends ChoreographyActivityImpl implements
 		SubChoreography {
 	/**
-	 * The cached value of the '{@link #getFlowElements() <em>Flow Elements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFlowElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<FlowElement> flowElements;
-	/**
-	 * The cached value of the '{@link #getLaneSets() <em>Lane Sets</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLaneSets()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<LaneSet> laneSets;
-	/**
-	 * The cached value of the '{@link #getArtifacts() <em>Artifacts</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArtifacts()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Artifact> artifacts;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -100,12 +72,10 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<FlowElement> getFlowElements() {
-		if (flowElements == null) {
-			flowElements = new EObjectContainmentEList<FlowElement>(
-					FlowElement.class, this,
-					Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS);
-		}
-		return flowElements;
+		return (EList<FlowElement>) eDynamicGet(
+				Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS,
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+				true, true);
 	}
 
 	/**
@@ -115,11 +85,10 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<LaneSet> getLaneSets() {
-		if (laneSets == null) {
-			laneSets = new EObjectContainmentEList<LaneSet>(LaneSet.class,
-					this, Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS);
-		}
-		return laneSets;
+		return (EList<LaneSet>) eDynamicGet(
+				Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS,
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS, true,
+				true);
 	}
 
 	/**
@@ -129,11 +98,9 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Artifact> getArtifacts() {
-		if (artifacts == null) {
-			artifacts = new EObjectContainmentEList<Artifact>(Artifact.class,
-					this, Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS);
-		}
-		return artifacts;
+		return (EList<Artifact>) eDynamicGet(
+				Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS,
+				Bpmn2Package.Literals.SUB_CHOREOGRAPHY__ARTIFACTS, true, true);
 	}
 
 	/**
@@ -232,11 +199,11 @@ public class SubChoreographyImpl extends ChoreographyActivityImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.SUB_CHOREOGRAPHY__FLOW_ELEMENTS:
-			return flowElements != null && !flowElements.isEmpty();
+			return !getFlowElements().isEmpty();
 		case Bpmn2Package.SUB_CHOREOGRAPHY__LANE_SETS:
-			return laneSets != null && !laneSets.isEmpty();
+			return !getLaneSets().isEmpty();
 		case Bpmn2Package.SUB_CHOREOGRAPHY__ARTIFACTS:
-			return artifacts != null && !artifacts.isEmpty();
+			return !getArtifacts().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

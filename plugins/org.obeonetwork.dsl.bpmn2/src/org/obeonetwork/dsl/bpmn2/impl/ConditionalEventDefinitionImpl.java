@@ -39,16 +39,6 @@ import org.obeonetwork.dsl.bpmn2.Expression;
 public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
 		implements ConditionalEventDefinition {
 	/**
-	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCondition()
-	 * @generated
-	 * @ordered
-	 */
-	protected Expression condition;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -73,7 +63,10 @@ public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public Expression getCondition() {
-		return condition;
+		return (Expression) eDynamicGet(
+				Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION,
+				Bpmn2Package.Literals.CONDITIONAL_EVENT_DEFINITION__CONDITION,
+				true, true);
 	}
 
 	/**
@@ -83,18 +76,8 @@ public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
 	 */
 	public NotificationChain basicSetCondition(Expression newCondition,
 			NotificationChain msgs) {
-		Expression oldCondition = condition;
-		condition = newCondition;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION,
-					oldCondition, newCondition);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newCondition,
+				Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION, msgs);
 		return msgs;
 	}
 
@@ -104,29 +87,9 @@ public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public void setCondition(Expression newCondition) {
-		if (newCondition != condition) {
-			NotificationChain msgs = null;
-			if (condition != null)
-				msgs = ((InternalEObject) condition)
-						.eInverseRemove(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION,
-								null, msgs);
-			if (newCondition != null)
-				msgs = ((InternalEObject) newCondition)
-						.eInverseAdd(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION,
-								null, msgs);
-			msgs = basicSetCondition(newCondition, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION,
-					newCondition, newCondition));
+		eDynamicSet(Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION,
+				Bpmn2Package.Literals.CONDITIONAL_EVENT_DEFINITION__CONDITION,
+				newCondition);
 	}
 
 	/**
@@ -197,7 +160,7 @@ public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION:
-			return condition != null;
+			return getCondition() != null;
 		}
 		return super.eIsSet(featureID);
 	}

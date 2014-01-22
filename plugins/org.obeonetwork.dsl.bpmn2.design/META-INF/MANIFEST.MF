@@ -15,7 +15,8 @@ Require-Bundle: fr.obeo.acceleo.gen,
  org.eclipse.emf.transaction,
  com.google.guava,
  org.obeonetwork.dsl.bpmn2,
- fr.obeo.dsl.viewpoint.diagram
+ fr.obeo.dsl.viewpoint.diagram,
+ org.eclipse.emf.cdo;bundle-version="4.0.1"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Provide-Package: org.obeonetwork.dsl.bpmn2.design

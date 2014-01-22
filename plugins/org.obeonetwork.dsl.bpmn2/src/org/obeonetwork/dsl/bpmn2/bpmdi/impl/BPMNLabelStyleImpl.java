@@ -39,16 +39,6 @@ import org.obeonetwork.dsl.dd.di.impl.StyleImpl;
  */
 public class BPMNLabelStyleImpl extends StyleImpl implements BPMNLabelStyle {
 	/**
-	 * The cached value of the '{@link #getFont() <em>Font</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFont()
-	 * @generated
-	 * @ordered
-	 */
-	protected Font font;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -73,7 +63,8 @@ public class BPMNLabelStyleImpl extends StyleImpl implements BPMNLabelStyle {
 	 * @generated
 	 */
 	public Font getFont() {
-		return font;
+		return (Font) eDynamicGet(BpmnDiPackage.BPMN_LABEL_STYLE__FONT,
+				BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT, true, true);
 	}
 
 	/**
@@ -82,17 +73,8 @@ public class BPMNLabelStyleImpl extends StyleImpl implements BPMNLabelStyle {
 	 * @generated
 	 */
 	public NotificationChain basicSetFont(Font newFont, NotificationChain msgs) {
-		Font oldFont = font;
-		font = newFont;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, BpmnDiPackage.BPMN_LABEL_STYLE__FONT,
-					oldFont, newFont);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newFont,
+				BpmnDiPackage.BPMN_LABEL_STYLE__FONT, msgs);
 		return msgs;
 	}
 
@@ -102,24 +84,8 @@ public class BPMNLabelStyleImpl extends StyleImpl implements BPMNLabelStyle {
 	 * @generated
 	 */
 	public void setFont(Font newFont) {
-		if (newFont != font) {
-			NotificationChain msgs = null;
-			if (font != null)
-				msgs = ((InternalEObject) font).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE
-								- BpmnDiPackage.BPMN_LABEL_STYLE__FONT, null,
-						msgs);
-			if (newFont != null)
-				msgs = ((InternalEObject) newFont).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE
-								- BpmnDiPackage.BPMN_LABEL_STYLE__FONT, null,
-						msgs);
-			msgs = basicSetFont(newFont, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BpmnDiPackage.BPMN_LABEL_STYLE__FONT, newFont, newFont));
+		eDynamicSet(BpmnDiPackage.BPMN_LABEL_STYLE__FONT,
+				BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT, newFont);
 	}
 
 	/**
@@ -190,7 +156,7 @@ public class BPMNLabelStyleImpl extends StyleImpl implements BPMNLabelStyle {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
-			return font != null;
+			return getFont() != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -57,42 +57,6 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getAuditing() <em>Auditing</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAuditing()
-	 * @generated
-	 * @ordered
-	 */
-	protected Auditing auditing;
-	/**
-	 * The cached value of the '{@link #getMonitoring() <em>Monitoring</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMonitoring()
-	 * @generated
-	 * @ordered
-	 */
-	protected Monitoring monitoring;
-	/**
-	 * The cached value of the '{@link #getCategoryValueRef() <em>Category Value Ref</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCategoryValueRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CategoryValue> categoryValueRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -119,7 +83,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.FLOW_ELEMENT__NAME,
+				Bpmn2Package.Literals.FLOW_ELEMENT__NAME, true, true);
 	}
 
 	/**
@@ -128,11 +93,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.FLOW_ELEMENT__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.FLOW_ELEMENT__NAME,
+				Bpmn2Package.Literals.FLOW_ELEMENT__NAME, newName);
 	}
 
 	/**
@@ -141,7 +103,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public Auditing getAuditing() {
-		return auditing;
+		return (Auditing) eDynamicGet(Bpmn2Package.FLOW_ELEMENT__AUDITING,
+				Bpmn2Package.Literals.FLOW_ELEMENT__AUDITING, true, true);
 	}
 
 	/**
@@ -151,17 +114,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 */
 	public NotificationChain basicSetAuditing(Auditing newAuditing,
 			NotificationChain msgs) {
-		Auditing oldAuditing = auditing;
-		auditing = newAuditing;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, Bpmn2Package.FLOW_ELEMENT__AUDITING,
-					oldAuditing, newAuditing);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newAuditing,
+				Bpmn2Package.FLOW_ELEMENT__AUDITING, msgs);
 		return msgs;
 	}
 
@@ -171,25 +125,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setAuditing(Auditing newAuditing) {
-		if (newAuditing != auditing) {
-			NotificationChain msgs = null;
-			if (auditing != null)
-				msgs = ((InternalEObject) auditing).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.FLOW_ELEMENT__AUDITING, null,
-						msgs);
-			if (newAuditing != null)
-				msgs = ((InternalEObject) newAuditing).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.FLOW_ELEMENT__AUDITING, null,
-						msgs);
-			msgs = basicSetAuditing(newAuditing, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.FLOW_ELEMENT__AUDITING, newAuditing,
-					newAuditing));
+		eDynamicSet(Bpmn2Package.FLOW_ELEMENT__AUDITING,
+				Bpmn2Package.Literals.FLOW_ELEMENT__AUDITING, newAuditing);
 	}
 
 	/**
@@ -198,7 +135,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public Monitoring getMonitoring() {
-		return monitoring;
+		return (Monitoring) eDynamicGet(Bpmn2Package.FLOW_ELEMENT__MONITORING,
+				Bpmn2Package.Literals.FLOW_ELEMENT__MONITORING, true, true);
 	}
 
 	/**
@@ -208,17 +146,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 */
 	public NotificationChain basicSetMonitoring(Monitoring newMonitoring,
 			NotificationChain msgs) {
-		Monitoring oldMonitoring = monitoring;
-		monitoring = newMonitoring;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, Bpmn2Package.FLOW_ELEMENT__MONITORING,
-					oldMonitoring, newMonitoring);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newMonitoring,
+				Bpmn2Package.FLOW_ELEMENT__MONITORING, msgs);
 		return msgs;
 	}
 
@@ -228,25 +157,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setMonitoring(Monitoring newMonitoring) {
-		if (newMonitoring != monitoring) {
-			NotificationChain msgs = null;
-			if (monitoring != null)
-				msgs = ((InternalEObject) monitoring).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.FLOW_ELEMENT__MONITORING, null,
-						msgs);
-			if (newMonitoring != null)
-				msgs = ((InternalEObject) newMonitoring).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.FLOW_ELEMENT__MONITORING, null,
-						msgs);
-			msgs = basicSetMonitoring(newMonitoring, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.FLOW_ELEMENT__MONITORING, newMonitoring,
-					newMonitoring));
+		eDynamicSet(Bpmn2Package.FLOW_ELEMENT__MONITORING,
+				Bpmn2Package.Literals.FLOW_ELEMENT__MONITORING, newMonitoring);
 	}
 
 	/**
@@ -256,13 +168,10 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<CategoryValue> getCategoryValueRef() {
-		if (categoryValueRef == null) {
-			categoryValueRef = new EObjectWithInverseEList.ManyInverse<CategoryValue>(
-					CategoryValue.class, this,
-					Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF,
-					Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS);
-		}
-		return categoryValueRef;
+		return (EList<CategoryValue>) eDynamicGet(
+				Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF,
+				Bpmn2Package.Literals.FLOW_ELEMENT__CATEGORY_VALUE_REF, true,
+				true);
 	}
 
 	/**
@@ -382,33 +291,16 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.FLOW_ELEMENT__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.FLOW_ELEMENT__AUDITING:
-			return auditing != null;
+			return getAuditing() != null;
 		case Bpmn2Package.FLOW_ELEMENT__MONITORING:
-			return monitoring != null;
+			return getMonitoring() != null;
 		case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
-			return categoryValueRef != null && !categoryValueRef.isEmpty();
+			return !getCategoryValueRef().isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //FlowElementImpl

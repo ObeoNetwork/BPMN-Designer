@@ -38,16 +38,6 @@ import org.obeonetwork.dsl.bpmn2.Participant;
 public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements
 		GlobalChoreographyTask {
 	/**
-	 * The cached value of the '{@link #getInitiatingParticipantRef() <em>Initiating Participant Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInitiatingParticipantRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Participant initiatingParticipantRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -72,21 +62,10 @@ public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements
 	 * @generated
 	 */
 	public Participant getInitiatingParticipantRef() {
-		if (initiatingParticipantRef != null
-				&& initiatingParticipantRef.eIsProxy()) {
-			InternalEObject oldInitiatingParticipantRef = (InternalEObject) initiatingParticipantRef;
-			initiatingParticipantRef = (Participant) eResolveProxy(oldInitiatingParticipantRef);
-			if (initiatingParticipantRef != oldInitiatingParticipantRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
-							oldInitiatingParticipantRef,
-							initiatingParticipantRef));
-			}
-		}
-		return initiatingParticipantRef;
+		return (Participant) eDynamicGet(
+				Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
+				Bpmn2Package.Literals.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
+				true, true);
 	}
 
 	/**
@@ -95,7 +74,10 @@ public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements
 	 * @generated
 	 */
 	public Participant basicGetInitiatingParticipantRef() {
-		return initiatingParticipantRef;
+		return (Participant) eDynamicGet(
+				Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
+				Bpmn2Package.Literals.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
+				false, true);
 	}
 
 	/**
@@ -105,14 +87,10 @@ public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements
 	 */
 	public void setInitiatingParticipantRef(
 			Participant newInitiatingParticipantRef) {
-		Participant oldInitiatingParticipantRef = initiatingParticipantRef;
-		initiatingParticipantRef = newInitiatingParticipantRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(
-					this,
-					Notification.SET,
-					Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
-					oldInitiatingParticipantRef, initiatingParticipantRef));
+		eDynamicSet(
+				Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
+				Bpmn2Package.Literals.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
+				newInitiatingParticipantRef);
 	}
 
 	/**
@@ -170,7 +148,7 @@ public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF:
-			return initiatingParticipantRef != null;
+			return basicGetInitiatingParticipantRef() != null;
 		}
 		return super.eIsSet(featureID);
 	}

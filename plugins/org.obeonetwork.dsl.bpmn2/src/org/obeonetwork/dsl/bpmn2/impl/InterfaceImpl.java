@@ -54,33 +54,6 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getOperations() <em>Operations</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOperations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Operation> operations;
-	/**
-	 * The cached value of the '{@link #getImplementationRef() <em>Implementation Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImplementationRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected EObject implementationRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,7 +80,8 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.INTERFACE__NAME,
+				Bpmn2Package.Literals.INTERFACE__NAME, true, true);
 	}
 
 	/**
@@ -116,11 +90,8 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.INTERFACE__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.INTERFACE__NAME,
+				Bpmn2Package.Literals.INTERFACE__NAME, newName);
 	}
 
 	/**
@@ -130,11 +101,9 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Operation> getOperations() {
-		if (operations == null) {
-			operations = new EObjectContainmentEList<Operation>(
-					Operation.class, this, Bpmn2Package.INTERFACE__OPERATIONS);
-		}
-		return operations;
+		return (EList<Operation>) eDynamicGet(
+				Bpmn2Package.INTERFACE__OPERATIONS,
+				Bpmn2Package.Literals.INTERFACE__OPERATIONS, true, true);
 	}
 
 	/**
@@ -143,17 +112,9 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public EObject getImplementationRef() {
-		if (implementationRef != null && implementationRef.eIsProxy()) {
-			InternalEObject oldImplementationRef = (InternalEObject) implementationRef;
-			implementationRef = eResolveProxy(oldImplementationRef);
-			if (implementationRef != oldImplementationRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.INTERFACE__IMPLEMENTATION_REF,
-							oldImplementationRef, implementationRef));
-			}
-		}
-		return implementationRef;
+		return (EObject) eDynamicGet(
+				Bpmn2Package.INTERFACE__IMPLEMENTATION_REF,
+				Bpmn2Package.Literals.INTERFACE__IMPLEMENTATION_REF, true, true);
 	}
 
 	/**
@@ -162,7 +123,10 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public EObject basicGetImplementationRef() {
-		return implementationRef;
+		return (EObject) eDynamicGet(
+				Bpmn2Package.INTERFACE__IMPLEMENTATION_REF,
+				Bpmn2Package.Literals.INTERFACE__IMPLEMENTATION_REF, false,
+				true);
 	}
 
 	/**
@@ -171,12 +135,9 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public void setImplementationRef(EObject newImplementationRef) {
-		EObject oldImplementationRef = implementationRef;
-		implementationRef = newImplementationRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.INTERFACE__IMPLEMENTATION_REF,
-					oldImplementationRef, implementationRef));
+		eDynamicSet(Bpmn2Package.INTERFACE__IMPLEMENTATION_REF,
+				Bpmn2Package.Literals.INTERFACE__IMPLEMENTATION_REF,
+				newImplementationRef);
 	}
 
 	/**
@@ -268,31 +229,14 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.INTERFACE__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.INTERFACE__OPERATIONS:
-			return operations != null && !operations.isEmpty();
+			return !getOperations().isEmpty();
 		case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:
-			return implementationRef != null;
+			return basicGetImplementationRef() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //InterfaceImpl

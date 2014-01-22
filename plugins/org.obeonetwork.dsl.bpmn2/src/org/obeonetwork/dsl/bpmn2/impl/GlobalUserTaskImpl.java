@@ -53,24 +53,6 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements
 	 * @ordered
 	 */
 	protected static final String IMPLEMENTATION_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getImplementation() <em>Implementation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImplementation()
-	 * @generated
-	 * @ordered
-	 */
-	protected String implementation = IMPLEMENTATION_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getRenderings() <em>Renderings</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRenderings()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Rendering> renderings;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -97,7 +79,10 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	public String getImplementation() {
-		return implementation;
+		return (String) eDynamicGet(
+				Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.GLOBAL_USER_TASK__IMPLEMENTATION, true,
+				true);
 	}
 
 	/**
@@ -106,12 +91,9 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	public void setImplementation(String newImplementation) {
-		String oldImplementation = implementation;
-		implementation = newImplementation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION,
-					oldImplementation, implementation));
+		eDynamicSet(Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.GLOBAL_USER_TASK__IMPLEMENTATION,
+				newImplementation);
 	}
 
 	/**
@@ -121,12 +103,9 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Rendering> getRenderings() {
-		if (renderings == null) {
-			renderings = new EObjectContainmentEList<Rendering>(
-					Rendering.class, this,
-					Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS);
-		}
-		return renderings;
+		return (EList<Rendering>) eDynamicGet(
+				Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS,
+				Bpmn2Package.Literals.GLOBAL_USER_TASK__RENDERINGS, true, true);
 	}
 
 	/**
@@ -208,29 +187,12 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION:
-			return IMPLEMENTATION_EDEFAULT == null ? implementation != null
-					: !IMPLEMENTATION_EDEFAULT.equals(implementation);
+			return IMPLEMENTATION_EDEFAULT == null ? getImplementation() != null
+					: !IMPLEMENTATION_EDEFAULT.equals(getImplementation());
 		case Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS:
-			return renderings != null && !renderings.isEmpty();
+			return !getRenderings().isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (implementation: ");
-		result.append(implementation);
-		result.append(')');
-		return result.toString();
 	}
 
 } //GlobalUserTaskImpl

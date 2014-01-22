@@ -37,16 +37,6 @@ import org.obeonetwork.dsl.bpmn2.ErrorEventDefinition;
 public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
 		ErrorEventDefinition {
 	/**
-	 * The cached value of the '{@link #getErrorRef() <em>Error Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getErrorRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected org.obeonetwork.dsl.bpmn2.Error errorRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -71,17 +61,10 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public org.obeonetwork.dsl.bpmn2.Error getErrorRef() {
-		if (errorRef != null && errorRef.eIsProxy()) {
-			InternalEObject oldErrorRef = (InternalEObject) errorRef;
-			errorRef = (org.obeonetwork.dsl.bpmn2.Error) eResolveProxy(oldErrorRef);
-			if (errorRef != oldErrorRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
-							oldErrorRef, errorRef));
-			}
-		}
-		return errorRef;
+		return (org.obeonetwork.dsl.bpmn2.Error) eDynamicGet(
+				Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
+				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, true,
+				true);
 	}
 
 	/**
@@ -90,7 +73,10 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public org.obeonetwork.dsl.bpmn2.Error basicGetErrorRef() {
-		return errorRef;
+		return (org.obeonetwork.dsl.bpmn2.Error) eDynamicGet(
+				Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
+				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, false,
+				true);
 	}
 
 	/**
@@ -99,12 +85,9 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public void setErrorRef(org.obeonetwork.dsl.bpmn2.Error newErrorRef) {
-		org.obeonetwork.dsl.bpmn2.Error oldErrorRef = errorRef;
-		errorRef = newErrorRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
-					oldErrorRef, errorRef));
+		eDynamicSet(Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
+				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF,
+				newErrorRef);
 	}
 
 	/**
@@ -162,7 +145,7 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF:
-			return errorRef != null;
+			return basicGetErrorRef() != null;
 		}
 		return super.eIsSet(featureID);
 	}

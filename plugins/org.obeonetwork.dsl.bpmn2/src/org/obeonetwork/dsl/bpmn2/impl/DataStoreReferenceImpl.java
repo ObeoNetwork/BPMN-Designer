@@ -44,34 +44,6 @@ import org.obeonetwork.dsl.bpmn2.ItemDefinition;
 public class DataStoreReferenceImpl extends FlowElementImpl implements
 		DataStoreReference {
 	/**
-	 * The cached value of the '{@link #getItemSubjectRef() <em>Item Subject Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getItemSubjectRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected ItemDefinition itemSubjectRef;
-	/**
-	 * The cached value of the '{@link #getDataState() <em>Data State</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDataState()
-	 * @generated
-	 * @ordered
-	 */
-	protected DataState dataState;
-	/**
-	 * The cached value of the '{@link #getDataStoreRef() <em>Data Store Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDataStoreRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected DataStore dataStoreRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -96,19 +68,10 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	public ItemDefinition getItemSubjectRef() {
-		if (itemSubjectRef != null && itemSubjectRef.eIsProxy()) {
-			InternalEObject oldItemSubjectRef = (InternalEObject) itemSubjectRef;
-			itemSubjectRef = (ItemDefinition) eResolveProxy(oldItemSubjectRef);
-			if (itemSubjectRef != oldItemSubjectRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF,
-							oldItemSubjectRef, itemSubjectRef));
-			}
-		}
-		return itemSubjectRef;
+		return (ItemDefinition) eDynamicGet(
+				Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF,
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
+				true, true);
 	}
 
 	/**
@@ -117,7 +80,10 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	public ItemDefinition basicGetItemSubjectRef() {
-		return itemSubjectRef;
+		return (ItemDefinition) eDynamicGet(
+				Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF,
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
+				false, true);
 	}
 
 	/**
@@ -126,12 +92,9 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	public void setItemSubjectRef(ItemDefinition newItemSubjectRef) {
-		ItemDefinition oldItemSubjectRef = itemSubjectRef;
-		itemSubjectRef = newItemSubjectRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF,
-					oldItemSubjectRef, itemSubjectRef));
+		eDynamicSet(Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF,
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
+				newItemSubjectRef);
 	}
 
 	/**
@@ -140,7 +103,10 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	public DataState getDataState() {
-		return dataState;
+		return (DataState) eDynamicGet(
+				Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE,
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE, true,
+				true);
 	}
 
 	/**
@@ -150,18 +116,8 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
 	 */
 	public NotificationChain basicSetDataState(DataState newDataState,
 			NotificationChain msgs) {
-		DataState oldDataState = dataState;
-		dataState = newDataState;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE,
-					oldDataState, newDataState);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newDataState,
+				Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE, msgs);
 		return msgs;
 	}
 
@@ -171,29 +127,9 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	public void setDataState(DataState newDataState) {
-		if (newDataState != dataState) {
-			NotificationChain msgs = null;
-			if (dataState != null)
-				msgs = ((InternalEObject) dataState)
-						.eInverseRemove(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE,
-								null, msgs);
-			if (newDataState != null)
-				msgs = ((InternalEObject) newDataState)
-						.eInverseAdd(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE,
-								null, msgs);
-			msgs = basicSetDataState(newDataState, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE,
-					newDataState, newDataState));
+		eDynamicSet(Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE,
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE,
+				newDataState);
 	}
 
 	/**
@@ -202,17 +138,10 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	public DataStore getDataStoreRef() {
-		if (dataStoreRef != null && dataStoreRef.eIsProxy()) {
-			InternalEObject oldDataStoreRef = (InternalEObject) dataStoreRef;
-			dataStoreRef = (DataStore) eResolveProxy(oldDataStoreRef);
-			if (dataStoreRef != oldDataStoreRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF,
-							oldDataStoreRef, dataStoreRef));
-			}
-		}
-		return dataStoreRef;
+		return (DataStore) eDynamicGet(
+				Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF,
+				Bpmn2Package.Literals.DATA_STORE_REFERENCE__DATA_STORE_REF,
+				true, true);
 	}
 
 	/**
@@ -221,7 +150,10 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	public DataStore basicGetDataStoreRef() {
-		return dataStoreRef;
+		return (DataStore) eDynamicGet(
+				Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF,
+				Bpmn2Package.Literals.DATA_STORE_REFERENCE__DATA_STORE_REF,
+				false, true);
 	}
 
 	/**
@@ -230,12 +162,9 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	public void setDataStoreRef(DataStore newDataStoreRef) {
-		DataStore oldDataStoreRef = dataStoreRef;
-		dataStoreRef = newDataStoreRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF,
-					oldDataStoreRef, dataStoreRef));
+		eDynamicSet(Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF,
+				Bpmn2Package.Literals.DATA_STORE_REFERENCE__DATA_STORE_REF,
+				newDataStoreRef);
 	}
 
 	/**
@@ -326,11 +255,11 @@ public class DataStoreReferenceImpl extends FlowElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.DATA_STORE_REFERENCE__ITEM_SUBJECT_REF:
-			return itemSubjectRef != null;
+			return basicGetItemSubjectRef() != null;
 		case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STATE:
-			return dataState != null;
+			return getDataState() != null;
 		case Bpmn2Package.DATA_STORE_REFERENCE__DATA_STORE_REF:
-			return dataStoreRef != null;
+			return basicGetDataStoreRef() != null;
 		}
 		return super.eIsSet(featureID);
 	}

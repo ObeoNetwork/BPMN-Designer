@@ -50,15 +50,6 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 */
 	protected static final String IMPLEMENTATION_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getImplementation() <em>Implementation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImplementation()
-	 * @generated
-	 * @ordered
-	 */
-	protected String implementation = IMPLEMENTATION_EDEFAULT;
-	/**
 	 * The default value of the '{@link #isInstantiate() <em>Instantiate</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,33 +58,6 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @ordered
 	 */
 	protected static final boolean INSTANTIATE_EDEFAULT = false;
-	/**
-	 * The cached value of the '{@link #isInstantiate() <em>Instantiate</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isInstantiate()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean instantiate = INSTANTIATE_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getOperationRef() <em>Operation Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOperationRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Operation operationRef;
-	/**
-	 * The cached value of the '{@link #getMessageRef() <em>Message Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMessageRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Message messageRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,7 +84,8 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public String getImplementation() {
-		return implementation;
+		return (String) eDynamicGet(Bpmn2Package.RECEIVE_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.RECEIVE_TASK__IMPLEMENTATION, true, true);
 	}
 
 	/**
@@ -129,12 +94,9 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public void setImplementation(String newImplementation) {
-		String oldImplementation = implementation;
-		implementation = newImplementation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.RECEIVE_TASK__IMPLEMENTATION,
-					oldImplementation, implementation));
+		eDynamicSet(Bpmn2Package.RECEIVE_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.RECEIVE_TASK__IMPLEMENTATION,
+				newImplementation);
 	}
 
 	/**
@@ -143,7 +105,8 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public boolean isInstantiate() {
-		return instantiate;
+		return (Boolean) eDynamicGet(Bpmn2Package.RECEIVE_TASK__INSTANTIATE,
+				Bpmn2Package.Literals.RECEIVE_TASK__INSTANTIATE, true, true);
 	}
 
 	/**
@@ -152,12 +115,8 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public void setInstantiate(boolean newInstantiate) {
-		boolean oldInstantiate = instantiate;
-		instantiate = newInstantiate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.RECEIVE_TASK__INSTANTIATE, oldInstantiate,
-					instantiate));
+		eDynamicSet(Bpmn2Package.RECEIVE_TASK__INSTANTIATE,
+				Bpmn2Package.Literals.RECEIVE_TASK__INSTANTIATE, newInstantiate);
 	}
 
 	/**
@@ -166,17 +125,9 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public Operation getOperationRef() {
-		if (operationRef != null && operationRef.eIsProxy()) {
-			InternalEObject oldOperationRef = (InternalEObject) operationRef;
-			operationRef = (Operation) eResolveProxy(oldOperationRef);
-			if (operationRef != oldOperationRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.RECEIVE_TASK__OPERATION_REF,
-							oldOperationRef, operationRef));
-			}
-		}
-		return operationRef;
+		return (Operation) eDynamicGet(
+				Bpmn2Package.RECEIVE_TASK__OPERATION_REF,
+				Bpmn2Package.Literals.RECEIVE_TASK__OPERATION_REF, true, true);
 	}
 
 	/**
@@ -185,7 +136,9 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public Operation basicGetOperationRef() {
-		return operationRef;
+		return (Operation) eDynamicGet(
+				Bpmn2Package.RECEIVE_TASK__OPERATION_REF,
+				Bpmn2Package.Literals.RECEIVE_TASK__OPERATION_REF, false, true);
 	}
 
 	/**
@@ -194,12 +147,9 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public void setOperationRef(Operation newOperationRef) {
-		Operation oldOperationRef = operationRef;
-		operationRef = newOperationRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.RECEIVE_TASK__OPERATION_REF, oldOperationRef,
-					operationRef));
+		eDynamicSet(Bpmn2Package.RECEIVE_TASK__OPERATION_REF,
+				Bpmn2Package.Literals.RECEIVE_TASK__OPERATION_REF,
+				newOperationRef);
 	}
 
 	/**
@@ -208,17 +158,8 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public Message getMessageRef() {
-		if (messageRef != null && messageRef.eIsProxy()) {
-			InternalEObject oldMessageRef = (InternalEObject) messageRef;
-			messageRef = (Message) eResolveProxy(oldMessageRef);
-			if (messageRef != oldMessageRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.RECEIVE_TASK__MESSAGE_REF,
-							oldMessageRef, messageRef));
-			}
-		}
-		return messageRef;
+		return (Message) eDynamicGet(Bpmn2Package.RECEIVE_TASK__MESSAGE_REF,
+				Bpmn2Package.Literals.RECEIVE_TASK__MESSAGE_REF, true, true);
 	}
 
 	/**
@@ -227,7 +168,8 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public Message basicGetMessageRef() {
-		return messageRef;
+		return (Message) eDynamicGet(Bpmn2Package.RECEIVE_TASK__MESSAGE_REF,
+				Bpmn2Package.Literals.RECEIVE_TASK__MESSAGE_REF, false, true);
 	}
 
 	/**
@@ -236,12 +178,8 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public void setMessageRef(Message newMessageRef) {
-		Message oldMessageRef = messageRef;
-		messageRef = newMessageRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.RECEIVE_TASK__MESSAGE_REF, oldMessageRef,
-					messageRef));
+		eDynamicSet(Bpmn2Package.RECEIVE_TASK__MESSAGE_REF,
+				Bpmn2Package.Literals.RECEIVE_TASK__MESSAGE_REF, newMessageRef);
 	}
 
 	/**
@@ -325,35 +263,16 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.RECEIVE_TASK__IMPLEMENTATION:
-			return IMPLEMENTATION_EDEFAULT == null ? implementation != null
-					: !IMPLEMENTATION_EDEFAULT.equals(implementation);
+			return IMPLEMENTATION_EDEFAULT == null ? getImplementation() != null
+					: !IMPLEMENTATION_EDEFAULT.equals(getImplementation());
 		case Bpmn2Package.RECEIVE_TASK__INSTANTIATE:
-			return instantiate != INSTANTIATE_EDEFAULT;
+			return isInstantiate() != INSTANTIATE_EDEFAULT;
 		case Bpmn2Package.RECEIVE_TASK__OPERATION_REF:
-			return operationRef != null;
+			return basicGetOperationRef() != null;
 		case Bpmn2Package.RECEIVE_TASK__MESSAGE_REF:
-			return messageRef != null;
+			return basicGetMessageRef() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (implementation: ");
-		result.append(implementation);
-		result.append(", instantiate: ");
-		result.append(instantiate);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ReceiveTaskImpl

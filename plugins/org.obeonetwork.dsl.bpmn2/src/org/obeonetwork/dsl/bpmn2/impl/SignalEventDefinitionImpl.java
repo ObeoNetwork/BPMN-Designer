@@ -38,16 +38,6 @@ import org.obeonetwork.dsl.bpmn2.SignalEventDefinition;
 public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
 		SignalEventDefinition {
 	/**
-	 * The cached value of the '{@link #getSignalRef() <em>Signal Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSignalRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Signal signalRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -72,17 +62,10 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Signal getSignalRef() {
-		if (signalRef != null && signalRef.eIsProxy()) {
-			InternalEObject oldSignalRef = (InternalEObject) signalRef;
-			signalRef = (Signal) eResolveProxy(oldSignalRef);
-			if (signalRef != oldSignalRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
-							oldSignalRef, signalRef));
-			}
-		}
-		return signalRef;
+		return (Signal) eDynamicGet(
+				Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
+				Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
+				true, true);
 	}
 
 	/**
@@ -91,7 +74,10 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Signal basicGetSignalRef() {
-		return signalRef;
+		return (Signal) eDynamicGet(
+				Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
+				Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
+				false, true);
 	}
 
 	/**
@@ -100,12 +86,9 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public void setSignalRef(Signal newSignalRef) {
-		Signal oldSignalRef = signalRef;
-		signalRef = newSignalRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
-					oldSignalRef, signalRef));
+		eDynamicSet(Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
+				Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
+				newSignalRef);
 	}
 
 	/**
@@ -163,7 +146,7 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF:
-			return signalRef != null;
+			return basicGetSignalRef() != null;
 		}
 		return super.eIsSet(featureID);
 	}

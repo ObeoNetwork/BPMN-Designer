@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.obeonetwork.dsl.bpmn2.BaseElement;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.Documentation;
@@ -48,7 +49,7 @@ import org.obeonetwork.dsl.bpmn2.ExtensionDefinition;
  *
  * @generated
  */
-public abstract class BaseElementImpl extends EObjectImpl implements
+public abstract class BaseElementImpl extends CDOObjectImpl implements
 		BaseElement {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -59,42 +60,6 @@ public abstract class BaseElementImpl extends EObjectImpl implements
 	 * @ordered
 	 */
 	protected static final String ID_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getExtensionDefinitions() <em>Extension Definitions</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExtensionDefinitions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ExtensionDefinition> extensionDefinitions;
-	/**
-	 * The cached value of the '{@link #getExtensionValues() <em>Extension Values</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExtensionValues()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ExtensionAttributeValue> extensionValues;
-	/**
-	 * The cached value of the '{@link #getDocumentation() <em>Documentation</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDocumentation()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Documentation> documentation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,8 +85,19 @@ public abstract class BaseElementImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getId() {
-		return id;
+		return (String) eDynamicGet(Bpmn2Package.BASE_ELEMENT__ID,
+				Bpmn2Package.Literals.BASE_ELEMENT__ID, true, true);
 	}
 
 	/**
@@ -130,11 +106,8 @@ public abstract class BaseElementImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.BASE_ELEMENT__ID, oldId, id));
+		eDynamicSet(Bpmn2Package.BASE_ELEMENT__ID,
+				Bpmn2Package.Literals.BASE_ELEMENT__ID, newId);
 	}
 
 	/**
@@ -144,12 +117,10 @@ public abstract class BaseElementImpl extends EObjectImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ExtensionDefinition> getExtensionDefinitions() {
-		if (extensionDefinitions == null) {
-			extensionDefinitions = new EObjectResolvingEList<ExtensionDefinition>(
-					ExtensionDefinition.class, this,
-					Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS);
-		}
-		return extensionDefinitions;
+		return (EList<ExtensionDefinition>) eDynamicGet(
+				Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS,
+				Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_DEFINITIONS,
+				true, true);
 	}
 
 	/**
@@ -159,12 +130,10 @@ public abstract class BaseElementImpl extends EObjectImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ExtensionAttributeValue> getExtensionValues() {
-		if (extensionValues == null) {
-			extensionValues = new EObjectContainmentEList<ExtensionAttributeValue>(
-					ExtensionAttributeValue.class, this,
-					Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES);
-		}
-		return extensionValues;
+		return (EList<ExtensionAttributeValue>) eDynamicGet(
+				Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES,
+				Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_VALUES, true,
+				true);
 	}
 
 	/**
@@ -174,12 +143,9 @@ public abstract class BaseElementImpl extends EObjectImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Documentation> getDocumentation() {
-		if (documentation == null) {
-			documentation = new EObjectContainmentEList<Documentation>(
-					Documentation.class, this,
-					Bpmn2Package.BASE_ELEMENT__DOCUMENTATION);
-		}
-		return documentation;
+		return (EList<Documentation>) eDynamicGet(
+				Bpmn2Package.BASE_ELEMENT__DOCUMENTATION,
+				Bpmn2Package.Literals.BASE_ELEMENT__DOCUMENTATION, true, true);
 	}
 
 	/**
@@ -285,33 +251,16 @@ public abstract class BaseElementImpl extends EObjectImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.BASE_ELEMENT__ID:
-			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT
+					.equals(getId());
 		case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
-			return extensionDefinitions != null
-					&& !extensionDefinitions.isEmpty();
+			return !getExtensionDefinitions().isEmpty();
 		case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-			return extensionValues != null && !extensionValues.isEmpty();
+			return !getExtensionValues().isEmpty();
 		case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
-			return documentation != null && !documentation.isEmpty();
+			return !getDocumentation().isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(')');
-		return result.toString();
 	}
 
 } //BaseElementImpl

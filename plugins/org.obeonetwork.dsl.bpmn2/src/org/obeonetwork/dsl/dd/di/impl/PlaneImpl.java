@@ -48,16 +48,6 @@ import org.obeonetwork.dsl.dd.di.util.DiValidator;
  */
 public abstract class PlaneImpl extends NodeImpl implements Plane {
 	/**
-	 * The cached value of the '{@link #getPlaneElement() <em>Plane Element</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPlaneElement()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DiagramElement> planeElement;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -83,11 +73,9 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DiagramElement> getPlaneElement() {
-		if (planeElement == null) {
-			planeElement = new EObjectContainmentEList<DiagramElement>(
-					DiagramElement.class, this, DiPackage.PLANE__PLANE_ELEMENT);
-		}
-		return planeElement;
+		return (EList<DiagramElement>) eDynamicGet(
+				DiPackage.PLANE__PLANE_ELEMENT,
+				DiPackage.Literals.PLANE__PLANE_ELEMENT, true, true);
 	}
 
 	/**
@@ -191,7 +179,7 @@ public abstract class PlaneImpl extends NodeImpl implements Plane {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case DiPackage.PLANE__PLANE_ELEMENT:
-			return planeElement != null && !planeElement.isEmpty();
+			return !getPlaneElement().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

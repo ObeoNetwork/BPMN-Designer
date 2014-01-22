@@ -49,24 +49,6 @@ import org.obeonetwork.dsl.bpmn2.SubProcess;
  */
 public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	/**
-	 * The cached value of the '{@link #getFlowElements() <em>Flow Elements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFlowElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<FlowElement> flowElements;
-	/**
-	 * The cached value of the '{@link #getLaneSets() <em>Lane Sets</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLaneSets()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<LaneSet> laneSets;
-	/**
 	 * The default value of the '{@link #isTriggeredByEvent() <em>Triggered By Event</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,24 +57,6 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	 * @ordered
 	 */
 	protected static final boolean TRIGGERED_BY_EVENT_EDEFAULT = false;
-	/**
-	 * The cached value of the '{@link #isTriggeredByEvent() <em>Triggered By Event</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isTriggeredByEvent()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean triggeredByEvent = TRIGGERED_BY_EVENT_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getArtifacts() <em>Artifacts</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArtifacts()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Artifact> artifacts;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,12 +84,10 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<FlowElement> getFlowElements() {
-		if (flowElements == null) {
-			flowElements = new EObjectContainmentEList<FlowElement>(
-					FlowElement.class, this,
-					Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS);
-		}
-		return flowElements;
+		return (EList<FlowElement>) eDynamicGet(
+				Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS,
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+				true, true);
 	}
 
 	/**
@@ -135,11 +97,10 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<LaneSet> getLaneSets() {
-		if (laneSets == null) {
-			laneSets = new EObjectContainmentEList<LaneSet>(LaneSet.class,
-					this, Bpmn2Package.SUB_PROCESS__LANE_SETS);
-		}
-		return laneSets;
+		return (EList<LaneSet>) eDynamicGet(
+				Bpmn2Package.SUB_PROCESS__LANE_SETS,
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS, true,
+				true);
 	}
 
 	/**
@@ -148,7 +109,10 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	 * @generated
 	 */
 	public boolean isTriggeredByEvent() {
-		return triggeredByEvent;
+		return (Boolean) eDynamicGet(
+				Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT,
+				Bpmn2Package.Literals.SUB_PROCESS__TRIGGERED_BY_EVENT, true,
+				true);
 	}
 
 	/**
@@ -157,12 +121,9 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	 * @generated
 	 */
 	public void setTriggeredByEvent(boolean newTriggeredByEvent) {
-		boolean oldTriggeredByEvent = triggeredByEvent;
-		triggeredByEvent = newTriggeredByEvent;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT,
-					oldTriggeredByEvent, triggeredByEvent));
+		eDynamicSet(Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT,
+				Bpmn2Package.Literals.SUB_PROCESS__TRIGGERED_BY_EVENT,
+				newTriggeredByEvent);
 	}
 
 	/**
@@ -172,11 +133,9 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Artifact> getArtifacts() {
-		if (artifacts == null) {
-			artifacts = new EObjectContainmentEList<Artifact>(Artifact.class,
-					this, Bpmn2Package.SUB_PROCESS__ARTIFACTS);
-		}
-		return artifacts;
+		return (EList<Artifact>) eDynamicGet(
+				Bpmn2Package.SUB_PROCESS__ARTIFACTS,
+				Bpmn2Package.Literals.SUB_PROCESS__ARTIFACTS, true, true);
 	}
 
 	/**
@@ -283,13 +242,13 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
-			return flowElements != null && !flowElements.isEmpty();
+			return !getFlowElements().isEmpty();
 		case Bpmn2Package.SUB_PROCESS__LANE_SETS:
-			return laneSets != null && !laneSets.isEmpty();
+			return !getLaneSets().isEmpty();
 		case Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT:
-			return triggeredByEvent != TRIGGERED_BY_EVENT_EDEFAULT;
+			return isTriggeredByEvent() != TRIGGERED_BY_EVENT_EDEFAULT;
 		case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
-			return artifacts != null && !artifacts.isEmpty();
+			return !getArtifacts().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -332,23 +291,6 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (triggeredByEvent: ");
-		result.append(triggeredByEvent);
-		result.append(')');
-		return result.toString();
 	}
 
 } //SubProcessImpl

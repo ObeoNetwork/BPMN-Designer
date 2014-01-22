@@ -47,15 +47,6 @@ import org.obeonetwork.dsl.bpmn2.ItemDefinition;
 public class CorrelationPropertyImpl extends RootElementImpl implements
 		CorrelationProperty {
 	/**
-	 * The cached value of the '{@link #getCorrelationPropertyRetrievalExpression() <em>Correlation Property Retrieval Expression</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCorrelationPropertyRetrievalExpression()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CorrelationPropertyRetrievalExpression> correlationPropertyRetrievalExpression;
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,24 +55,6 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected ItemDefinition type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,13 +82,10 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression() {
-		if (correlationPropertyRetrievalExpression == null) {
-			correlationPropertyRetrievalExpression = new EObjectContainmentEList<CorrelationPropertyRetrievalExpression>(
-					CorrelationPropertyRetrievalExpression.class,
-					this,
-					Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION);
-		}
-		return correlationPropertyRetrievalExpression;
+		return (EList<CorrelationPropertyRetrievalExpression>) eDynamicGet(
+				Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION,
+				true, true);
 	}
 
 	/**
@@ -124,7 +94,8 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY__NAME,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY__NAME, true, true);
 	}
 
 	/**
@@ -133,11 +104,8 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CORRELATION_PROPERTY__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY__NAME,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY__NAME, newName);
 	}
 
 	/**
@@ -146,17 +114,9 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public ItemDefinition getType() {
-		if (type != null && type.eIsProxy()) {
-			InternalEObject oldType = (InternalEObject) type;
-			type = (ItemDefinition) eResolveProxy(oldType);
-			if (type != oldType) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.CORRELATION_PROPERTY__TYPE, oldType,
-							type));
-			}
-		}
-		return type;
+		return (ItemDefinition) eDynamicGet(
+				Bpmn2Package.CORRELATION_PROPERTY__TYPE,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY__TYPE, true, true);
 	}
 
 	/**
@@ -165,7 +125,9 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public ItemDefinition basicGetType() {
-		return type;
+		return (ItemDefinition) eDynamicGet(
+				Bpmn2Package.CORRELATION_PROPERTY__TYPE,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY__TYPE, false, true);
 	}
 
 	/**
@@ -174,11 +136,8 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public void setType(ItemDefinition newType) {
-		ItemDefinition oldType = type;
-		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CORRELATION_PROPERTY__TYPE, oldType, type));
+		eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY__TYPE,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY__TYPE, newType);
 	}
 
 	/**
@@ -271,32 +230,14 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-			return correlationPropertyRetrievalExpression != null
-					&& !correlationPropertyRetrievalExpression.isEmpty();
+			return !getCorrelationPropertyRetrievalExpression().isEmpty();
 		case Bpmn2Package.CORRELATION_PROPERTY__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.CORRELATION_PROPERTY__TYPE:
-			return type != null;
+			return basicGetType() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //CorrelationPropertyImpl

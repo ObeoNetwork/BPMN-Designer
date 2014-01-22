@@ -18,6 +18,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
@@ -37,18 +38,8 @@ import org.obeonetwork.dsl.bpmn2.ResourceAssignmentExpression;
  *
  * @generated
  */
-public class ResourceAssignmentExpressionImpl extends EObjectImpl implements
+public class ResourceAssignmentExpressionImpl extends CDOObjectImpl implements
 		ResourceAssignmentExpression {
-	/**
-	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpression()
-	 * @generated
-	 * @ordered
-	 */
-	protected Expression expression;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -73,8 +64,21 @@ public class ResourceAssignmentExpressionImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Expression getExpression() {
-		return expression;
+		return (Expression) eDynamicGet(
+				Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
+				Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
+				true, true);
 	}
 
 	/**
@@ -84,18 +88,8 @@ public class ResourceAssignmentExpressionImpl extends EObjectImpl implements
 	 */
 	public NotificationChain basicSetExpression(Expression newExpression,
 			NotificationChain msgs) {
-		Expression oldExpression = expression;
-		expression = newExpression;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
-					oldExpression, newExpression);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newExpression,
+				Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION, msgs);
 		return msgs;
 	}
 
@@ -105,29 +99,10 @@ public class ResourceAssignmentExpressionImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public void setExpression(Expression newExpression) {
-		if (newExpression != expression) {
-			NotificationChain msgs = null;
-			if (expression != null)
-				msgs = ((InternalEObject) expression)
-						.eInverseRemove(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
-								null, msgs);
-			if (newExpression != null)
-				msgs = ((InternalEObject) newExpression)
-						.eInverseAdd(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
-								null, msgs);
-			msgs = basicSetExpression(newExpression, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
-					newExpression, newExpression));
+		eDynamicSet(
+				Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
+				Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
+				newExpression);
 	}
 
 	/**
@@ -198,7 +173,7 @@ public class ResourceAssignmentExpressionImpl extends EObjectImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
-			return expression != null;
+			return getExpression() != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -42,15 +42,6 @@ import org.obeonetwork.dsl.bpmn2.CorrelationProperty;
 public class CorrelationKeyImpl extends BaseElementImpl implements
 		CorrelationKey {
 	/**
-	 * The cached value of the '{@link #getCorrelationPropertyRef() <em>Correlation Property Ref</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCorrelationPropertyRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CorrelationProperty> correlationPropertyRef;
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -59,15 +50,6 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -95,12 +77,10 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<CorrelationProperty> getCorrelationPropertyRef() {
-		if (correlationPropertyRef == null) {
-			correlationPropertyRef = new EObjectResolvingEList<CorrelationProperty>(
-					CorrelationProperty.class, this,
-					Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF);
-		}
-		return correlationPropertyRef;
+		return (EList<CorrelationProperty>) eDynamicGet(
+				Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF,
+				Bpmn2Package.Literals.CORRELATION_KEY__CORRELATION_PROPERTY_REF,
+				true, true);
 	}
 
 	/**
@@ -109,7 +89,8 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.CORRELATION_KEY__NAME,
+				Bpmn2Package.Literals.CORRELATION_KEY__NAME, true, true);
 	}
 
 	/**
@@ -118,11 +99,8 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CORRELATION_KEY__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.CORRELATION_KEY__NAME,
+				Bpmn2Package.Literals.CORRELATION_KEY__NAME, newName);
 	}
 
 	/**
@@ -189,30 +167,12 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
-			return correlationPropertyRef != null
-					&& !correlationPropertyRef.isEmpty();
+			return !getCorrelationPropertyRef().isEmpty();
 		case Bpmn2Package.CORRELATION_KEY__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //CorrelationKeyImpl

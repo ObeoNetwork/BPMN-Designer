@@ -37,16 +37,6 @@ import org.obeonetwork.dsl.bpmn2.CallableElement;
  */
 public class CallActivityImpl extends ActivityImpl implements CallActivity {
 	/**
-	 * The cached value of the '{@link #getCalledElementRef() <em>Called Element Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCalledElementRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected CallableElement calledElementRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -71,17 +61,10 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
 	 * @generated
 	 */
 	public CallableElement getCalledElementRef() {
-		if (calledElementRef != null && calledElementRef.eIsProxy()) {
-			InternalEObject oldCalledElementRef = (InternalEObject) calledElementRef;
-			calledElementRef = (CallableElement) eResolveProxy(oldCalledElementRef);
-			if (calledElementRef != oldCalledElementRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
-							oldCalledElementRef, calledElementRef));
-			}
-		}
-		return calledElementRef;
+		return (CallableElement) eDynamicGet(
+				Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
+				Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, true,
+				true);
 	}
 
 	/**
@@ -90,7 +73,10 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
 	 * @generated
 	 */
 	public CallableElement basicGetCalledElementRef() {
-		return calledElementRef;
+		return (CallableElement) eDynamicGet(
+				Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
+				Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, false,
+				true);
 	}
 
 	/**
@@ -99,12 +85,9 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
 	 * @generated
 	 */
 	public void setCalledElementRef(CallableElement newCalledElementRef) {
-		CallableElement oldCalledElementRef = calledElementRef;
-		calledElementRef = newCalledElementRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
-					oldCalledElementRef, calledElementRef));
+		eDynamicSet(Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
+				Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF,
+				newCalledElementRef);
 	}
 
 	/**
@@ -162,7 +145,7 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
-			return calledElementRef != null;
+			return basicGetCalledElementRef() != null;
 		}
 		return super.eIsSet(featureID);
 	}

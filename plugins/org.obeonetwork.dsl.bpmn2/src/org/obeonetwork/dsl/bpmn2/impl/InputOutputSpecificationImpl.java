@@ -48,43 +48,6 @@ import org.obeonetwork.dsl.bpmn2.OutputSet;
 public class InputOutputSpecificationImpl extends BaseElementImpl implements
 		InputOutputSpecification {
 	/**
-	 * The cached value of the '{@link #getInputSets() <em>Input Sets</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputSets()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<InputSet> inputSets;
-	/**
-	 * The cached value of the '{@link #getOutputSets() <em>Output Sets</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutputSets()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<OutputSet> outputSets;
-	/**
-	 * The cached value of the '{@link #getDataInputs() <em>Data Inputs</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDataInputs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataInput> dataInputs;
-	/**
-	 * The cached value of the '{@link #getDataOutputs() <em>Data Outputs</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDataOutputs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataOutput> dataOutputs;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -110,11 +73,10 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<InputSet> getInputSets() {
-		if (inputSets == null) {
-			inputSets = new EObjectContainmentEList<InputSet>(InputSet.class,
-					this, Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS);
-		}
-		return inputSets;
+		return (EList<InputSet>) eDynamicGet(
+				Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS,
+				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS,
+				true, true);
 	}
 
 	/**
@@ -124,12 +86,10 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<OutputSet> getOutputSets() {
-		if (outputSets == null) {
-			outputSets = new EObjectContainmentEList<OutputSet>(
-					OutputSet.class, this,
-					Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS);
-		}
-		return outputSets;
+		return (EList<OutputSet>) eDynamicGet(
+				Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS,
+				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS,
+				true, true);
 	}
 
 	/**
@@ -139,12 +99,10 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataInput> getDataInputs() {
-		if (dataInputs == null) {
-			dataInputs = new EObjectContainmentEList<DataInput>(
-					DataInput.class, this,
-					Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS);
-		}
-		return dataInputs;
+		return (EList<DataInput>) eDynamicGet(
+				Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS,
+				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS,
+				true, true);
 	}
 
 	/**
@@ -154,12 +112,10 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataOutput> getDataOutputs() {
-		if (dataOutputs == null) {
-			dataOutputs = new EObjectContainmentEList<DataOutput>(
-					DataOutput.class, this,
-					Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS);
-		}
-		return dataOutputs;
+		return (EList<DataOutput>) eDynamicGet(
+				Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS,
+				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS,
+				true, true);
 	}
 
 	/**
@@ -270,13 +226,13 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
-			return inputSets != null && !inputSets.isEmpty();
+			return !getInputSets().isEmpty();
 		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
-			return outputSets != null && !outputSets.isEmpty();
+			return !getOutputSets().isEmpty();
 		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
-			return dataInputs != null && !dataInputs.isEmpty();
+			return !getDataInputs().isEmpty();
 		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
-			return dataOutputs != null && !dataOutputs.isEmpty();
+			return !getDataOutputs().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

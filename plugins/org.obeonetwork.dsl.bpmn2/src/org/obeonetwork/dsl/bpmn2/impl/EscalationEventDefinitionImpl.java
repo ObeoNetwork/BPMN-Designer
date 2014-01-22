@@ -38,16 +38,6 @@ import org.obeonetwork.dsl.bpmn2.EscalationEventDefinition;
 public class EscalationEventDefinitionImpl extends EventDefinitionImpl
 		implements EscalationEventDefinition {
 	/**
-	 * The cached value of the '{@link #getEscalationRef() <em>Escalation Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEscalationRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Escalation escalationRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -72,19 +62,10 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public Escalation getEscalationRef() {
-		if (escalationRef != null && escalationRef.eIsProxy()) {
-			InternalEObject oldEscalationRef = (InternalEObject) escalationRef;
-			escalationRef = (Escalation) eResolveProxy(oldEscalationRef);
-			if (escalationRef != oldEscalationRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
-							oldEscalationRef, escalationRef));
-			}
-		}
-		return escalationRef;
+		return (Escalation) eDynamicGet(
+				Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
+				Bpmn2Package.Literals.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
+				true, true);
 	}
 
 	/**
@@ -93,7 +74,10 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public Escalation basicGetEscalationRef() {
-		return escalationRef;
+		return (Escalation) eDynamicGet(
+				Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
+				Bpmn2Package.Literals.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
+				false, true);
 	}
 
 	/**
@@ -102,12 +86,10 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public void setEscalationRef(Escalation newEscalationRef) {
-		Escalation oldEscalationRef = escalationRef;
-		escalationRef = newEscalationRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
-					oldEscalationRef, escalationRef));
+		eDynamicSet(
+				Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
+				Bpmn2Package.Literals.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
+				newEscalationRef);
 	}
 
 	/**
@@ -165,7 +147,7 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF:
-			return escalationRef != null;
+			return basicGetEscalationRef() != null;
 		}
 		return super.eIsSet(featureID);
 	}

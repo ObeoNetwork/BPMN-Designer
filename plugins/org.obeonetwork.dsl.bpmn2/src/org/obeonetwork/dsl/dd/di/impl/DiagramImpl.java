@@ -19,6 +19,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
@@ -44,7 +45,7 @@ import org.obeonetwork.dsl.dd.di.Style;
  *
  * @generated
  */
-public abstract class DiagramImpl extends EObjectImpl implements Diagram {
+public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -55,15 +56,6 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 */
 	protected static final String NAME_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
 	 * The default value of the '{@link #getDocumentation() <em>Documentation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -73,15 +65,6 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 */
 	protected static final String DOCUMENTATION_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getDocumentation() <em>Documentation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDocumentation()
-	 * @generated
-	 * @ordered
-	 */
-	protected String documentation = DOCUMENTATION_EDEFAULT;
-	/**
 	 * The default value of the '{@link #getResolution() <em>Resolution</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -90,33 +73,6 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * @ordered
 	 */
 	protected static final float RESOLUTION_EDEFAULT = 0.0F;
-	/**
-	 * The cached value of the '{@link #getResolution() <em>Resolution</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResolution()
-	 * @generated
-	 * @ordered
-	 */
-	protected float resolution = RESOLUTION_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getOwnedStyle() <em>Owned Style</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOwnedStyle()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Style> ownedStyle;
-	/**
-	 * The cached value of the '{@link #getRootElement() <em>Root Element</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRootElement()
-	 * @generated
-	 * @ordered
-	 */
-	protected DiagramElement rootElement;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -142,8 +98,19 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(DiPackage.DIAGRAM__NAME,
+				DiPackage.Literals.DIAGRAM__NAME, true, true);
 	}
 
 	/**
@@ -152,11 +119,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					DiPackage.DIAGRAM__NAME, oldName, name));
+		eDynamicSet(DiPackage.DIAGRAM__NAME, DiPackage.Literals.DIAGRAM__NAME,
+				newName);
 	}
 
 	/**
@@ -165,7 +129,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * @generated
 	 */
 	public String getDocumentation() {
-		return documentation;
+		return (String) eDynamicGet(DiPackage.DIAGRAM__DOCUMENTATION,
+				DiPackage.Literals.DIAGRAM__DOCUMENTATION, true, true);
 	}
 
 	/**
@@ -174,12 +139,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * @generated
 	 */
 	public void setDocumentation(String newDocumentation) {
-		String oldDocumentation = documentation;
-		documentation = newDocumentation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					DiPackage.DIAGRAM__DOCUMENTATION, oldDocumentation,
-					documentation));
+		eDynamicSet(DiPackage.DIAGRAM__DOCUMENTATION,
+				DiPackage.Literals.DIAGRAM__DOCUMENTATION, newDocumentation);
 	}
 
 	/**
@@ -188,7 +149,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * @generated
 	 */
 	public float getResolution() {
-		return resolution;
+		return (Float) eDynamicGet(DiPackage.DIAGRAM__RESOLUTION,
+				DiPackage.Literals.DIAGRAM__RESOLUTION, true, true);
 	}
 
 	/**
@@ -197,11 +159,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * @generated
 	 */
 	public void setResolution(float newResolution) {
-		float oldResolution = resolution;
-		resolution = newResolution;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					DiPackage.DIAGRAM__RESOLUTION, oldResolution, resolution));
+		eDynamicSet(DiPackage.DIAGRAM__RESOLUTION,
+				DiPackage.Literals.DIAGRAM__RESOLUTION, newResolution);
 	}
 
 	/**
@@ -211,11 +170,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Style> getOwnedStyle() {
-		if (ownedStyle == null) {
-			ownedStyle = new EObjectResolvingEList<Style>(Style.class, this,
-					DiPackage.DIAGRAM__OWNED_STYLE);
-		}
-		return ownedStyle;
+		return (EList<Style>) eDynamicGet(DiPackage.DIAGRAM__OWNED_STYLE,
+				DiPackage.Literals.DIAGRAM__OWNED_STYLE, true, true);
 	}
 
 	/**
@@ -224,7 +180,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * @generated
 	 */
 	public DiagramElement getRootElement() {
-		return rootElement;
+		return (DiagramElement) eDynamicGet(DiPackage.DIAGRAM__ROOT_ELEMENT,
+				DiPackage.Literals.DIAGRAM__ROOT_ELEMENT, true, true);
 	}
 
 	/**
@@ -234,17 +191,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 */
 	public NotificationChain basicSetRootElement(DiagramElement newRootElement,
 			NotificationChain msgs) {
-		DiagramElement oldRootElement = rootElement;
-		rootElement = newRootElement;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, DiPackage.DIAGRAM__ROOT_ELEMENT,
-					oldRootElement, newRootElement);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newRootElement,
+				DiPackage.DIAGRAM__ROOT_ELEMENT, msgs);
 		return msgs;
 	}
 
@@ -258,6 +206,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case DiPackage.DIAGRAM__ROOT_ELEMENT:
+			DiagramElement rootElement = getRootElement();
 			if (rootElement != null)
 				msgs = ((InternalEObject) rootElement).eInverseRemove(this,
 						DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM,
@@ -355,40 +304,19 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case DiPackage.DIAGRAM__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case DiPackage.DIAGRAM__DOCUMENTATION:
-			return DOCUMENTATION_EDEFAULT == null ? documentation != null
-					: !DOCUMENTATION_EDEFAULT.equals(documentation);
+			return DOCUMENTATION_EDEFAULT == null ? getDocumentation() != null
+					: !DOCUMENTATION_EDEFAULT.equals(getDocumentation());
 		case DiPackage.DIAGRAM__RESOLUTION:
-			return resolution != RESOLUTION_EDEFAULT;
+			return getResolution() != RESOLUTION_EDEFAULT;
 		case DiPackage.DIAGRAM__OWNED_STYLE:
-			return ownedStyle != null && !ownedStyle.isEmpty();
+			return !getOwnedStyle().isEmpty();
 		case DiPackage.DIAGRAM__ROOT_ELEMENT:
-			return rootElement != null;
+			return getRootElement() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", documentation: ");
-		result.append(documentation);
-		result.append(", resolution: ");
-		result.append(resolution);
-		result.append(')');
-		return result.toString();
 	}
 
 } //DiagramImpl

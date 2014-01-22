@@ -45,15 +45,6 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	 */
 	protected static final String SCRIPT_FORMAT_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getScriptFormat() <em>Script Format</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getScriptFormat()
-	 * @generated
-	 * @ordered
-	 */
-	protected String scriptFormat = SCRIPT_FORMAT_EDEFAULT;
-	/**
 	 * The default value of the '{@link #getScript() <em>Script</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,15 +53,6 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	 * @ordered
 	 */
 	protected static final String SCRIPT_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getScript() <em>Script</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getScript()
-	 * @generated
-	 * @ordered
-	 */
-	protected String script = SCRIPT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -97,7 +79,8 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	 * @generated
 	 */
 	public String getScriptFormat() {
-		return scriptFormat;
+		return (String) eDynamicGet(Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT,
+				Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT_FORMAT, true, true);
 	}
 
 	/**
@@ -106,12 +89,9 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	 * @generated
 	 */
 	public void setScriptFormat(String newScriptFormat) {
-		String oldScriptFormat = scriptFormat;
-		scriptFormat = newScriptFormat;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT, oldScriptFormat,
-					scriptFormat));
+		eDynamicSet(Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT,
+				Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT_FORMAT,
+				newScriptFormat);
 	}
 
 	/**
@@ -120,7 +100,8 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	 * @generated
 	 */
 	public String getScript() {
-		return script;
+		return (String) eDynamicGet(Bpmn2Package.SCRIPT_TASK__SCRIPT,
+				Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT, true, true);
 	}
 
 	/**
@@ -129,11 +110,8 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	 * @generated
 	 */
 	public void setScript(String newScript) {
-		String oldScript = script;
-		script = newScript;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.SCRIPT_TASK__SCRIPT, oldScript, script));
+		eDynamicSet(Bpmn2Package.SCRIPT_TASK__SCRIPT,
+				Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT, newScript);
 	}
 
 	/**
@@ -197,32 +175,13 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
-			return SCRIPT_FORMAT_EDEFAULT == null ? scriptFormat != null
-					: !SCRIPT_FORMAT_EDEFAULT.equals(scriptFormat);
+			return SCRIPT_FORMAT_EDEFAULT == null ? getScriptFormat() != null
+					: !SCRIPT_FORMAT_EDEFAULT.equals(getScriptFormat());
 		case Bpmn2Package.SCRIPT_TASK__SCRIPT:
-			return SCRIPT_EDEFAULT == null ? script != null : !SCRIPT_EDEFAULT
-					.equals(script);
+			return SCRIPT_EDEFAULT == null ? getScript() != null
+					: !SCRIPT_EDEFAULT.equals(getScript());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (scriptFormat: ");
-		result.append(scriptFormat);
-		result.append(", script: ");
-		result.append(script);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ScriptTaskImpl

@@ -44,25 +44,6 @@ import org.obeonetwork.dsl.bpmn2.LaneSet;
 public abstract class FlowElementsContainerImpl extends BaseElementImpl
 		implements FlowElementsContainer {
 	/**
-	 * The cached value of the '{@link #getFlowElements() <em>Flow Elements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFlowElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<FlowElement> flowElements;
-	/**
-	 * The cached value of the '{@link #getLaneSets() <em>Lane Sets</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLaneSets()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<LaneSet> laneSets;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -88,12 +69,10 @@ public abstract class FlowElementsContainerImpl extends BaseElementImpl
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<FlowElement> getFlowElements() {
-		if (flowElements == null) {
-			flowElements = new EObjectContainmentEList<FlowElement>(
-					FlowElement.class, this,
-					Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS);
-		}
-		return flowElements;
+		return (EList<FlowElement>) eDynamicGet(
+				Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+				true, true);
 	}
 
 	/**
@@ -103,11 +82,10 @@ public abstract class FlowElementsContainerImpl extends BaseElementImpl
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<LaneSet> getLaneSets() {
-		if (laneSets == null) {
-			laneSets = new EObjectContainmentEList<LaneSet>(LaneSet.class,
-					this, Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS);
-		}
-		return laneSets;
+		return (EList<LaneSet>) eDynamicGet(
+				Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS,
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS, true,
+				true);
 	}
 
 	/**
@@ -194,9 +172,9 @@ public abstract class FlowElementsContainerImpl extends BaseElementImpl
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS:
-			return flowElements != null && !flowElements.isEmpty();
+			return !getFlowElements().isEmpty();
 		case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS:
-			return laneSets != null && !laneSets.isEmpty();
+			return !getLaneSets().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

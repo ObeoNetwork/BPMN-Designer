@@ -49,33 +49,6 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 * @ordered
 	 */
 	protected static final String LANGUAGE_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getLanguage() <em>Language</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLanguage()
-	 * @generated
-	 * @ordered
-	 */
-	protected String language = LANGUAGE_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getBody() <em>Body</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBody()
-	 * @generated
-	 * @ordered
-	 */
-	protected EObject body;
-	/**
-	 * The cached value of the '{@link #getEvaluatesToTypeRef() <em>Evaluates To Type Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEvaluatesToTypeRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected ItemDefinition evaluatesToTypeRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -102,7 +75,8 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	public String getLanguage() {
-		return language;
+		return (String) eDynamicGet(Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE,
+				Bpmn2Package.Literals.FORMAL_EXPRESSION__LANGUAGE, true, true);
 	}
 
 	/**
@@ -111,12 +85,8 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	public void setLanguage(String newLanguage) {
-		String oldLanguage = language;
-		language = newLanguage;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE, oldLanguage,
-					language));
+		eDynamicSet(Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE,
+				Bpmn2Package.Literals.FORMAL_EXPRESSION__LANGUAGE, newLanguage);
 	}
 
 	/**
@@ -125,16 +95,8 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	public EObject getBody() {
-		if (body != null && body.eIsProxy()) {
-			InternalEObject oldBody = (InternalEObject) body;
-			body = eResolveProxy(oldBody);
-			if (body != oldBody) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.FORMAL_EXPRESSION__BODY, oldBody, body));
-			}
-		}
-		return body;
+		return (EObject) eDynamicGet(Bpmn2Package.FORMAL_EXPRESSION__BODY,
+				Bpmn2Package.Literals.FORMAL_EXPRESSION__BODY, true, true);
 	}
 
 	/**
@@ -143,7 +105,8 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	public EObject basicGetBody() {
-		return body;
+		return (EObject) eDynamicGet(Bpmn2Package.FORMAL_EXPRESSION__BODY,
+				Bpmn2Package.Literals.FORMAL_EXPRESSION__BODY, false, true);
 	}
 
 	/**
@@ -152,11 +115,8 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	public void setBody(EObject newBody) {
-		EObject oldBody = body;
-		body = newBody;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.FORMAL_EXPRESSION__BODY, oldBody, body));
+		eDynamicSet(Bpmn2Package.FORMAL_EXPRESSION__BODY,
+				Bpmn2Package.Literals.FORMAL_EXPRESSION__BODY, newBody);
 	}
 
 	/**
@@ -165,19 +125,10 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	public ItemDefinition getEvaluatesToTypeRef() {
-		if (evaluatesToTypeRef != null && evaluatesToTypeRef.eIsProxy()) {
-			InternalEObject oldEvaluatesToTypeRef = (InternalEObject) evaluatesToTypeRef;
-			evaluatesToTypeRef = (ItemDefinition) eResolveProxy(oldEvaluatesToTypeRef);
-			if (evaluatesToTypeRef != oldEvaluatesToTypeRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
-							oldEvaluatesToTypeRef, evaluatesToTypeRef));
-			}
-		}
-		return evaluatesToTypeRef;
+		return (ItemDefinition) eDynamicGet(
+				Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
+				Bpmn2Package.Literals.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
+				true, true);
 	}
 
 	/**
@@ -186,7 +137,10 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	public ItemDefinition basicGetEvaluatesToTypeRef() {
-		return evaluatesToTypeRef;
+		return (ItemDefinition) eDynamicGet(
+				Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
+				Bpmn2Package.Literals.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
+				false, true);
 	}
 
 	/**
@@ -195,12 +149,9 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	public void setEvaluatesToTypeRef(ItemDefinition newEvaluatesToTypeRef) {
-		ItemDefinition oldEvaluatesToTypeRef = evaluatesToTypeRef;
-		evaluatesToTypeRef = newEvaluatesToTypeRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
-					oldEvaluatesToTypeRef, evaluatesToTypeRef));
+		eDynamicSet(Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
+				Bpmn2Package.Literals.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
+				newEvaluatesToTypeRef);
 	}
 
 	/**
@@ -276,31 +227,14 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE:
-			return LANGUAGE_EDEFAULT == null ? language != null
-					: !LANGUAGE_EDEFAULT.equals(language);
+			return LANGUAGE_EDEFAULT == null ? getLanguage() != null
+					: !LANGUAGE_EDEFAULT.equals(getLanguage());
 		case Bpmn2Package.FORMAL_EXPRESSION__BODY:
-			return body != null;
+			return basicGetBody() != null;
 		case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:
-			return evaluatesToTypeRef != null;
+			return basicGetEvaluatesToTypeRef() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (language: ");
-		result.append(language);
-		result.append(')');
-		return result.toString();
 	}
 
 } //FormalExpressionImpl

@@ -49,33 +49,6 @@ import org.obeonetwork.dsl.bpmn2.OutputSet;
  */
 public class OutputSetImpl extends BaseElementImpl implements OutputSet {
 	/**
-	 * The cached value of the '{@link #getDataOutputRefs() <em>Data Output Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDataOutputRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataOutput> dataOutputRefs;
-	/**
-	 * The cached value of the '{@link #getOptionalOutputRefs() <em>Optional Output Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOptionalOutputRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataOutput> optionalOutputRefs;
-	/**
-	 * The cached value of the '{@link #getWhileExecutingOutputRefs() <em>While Executing Output Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getWhileExecutingOutputRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataOutput> whileExecutingOutputRefs;
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,24 +57,6 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getInputSetRefs() <em>Input Set Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputSetRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<InputSet> inputSetRefs;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,13 +84,9 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataOutput> getDataOutputRefs() {
-		if (dataOutputRefs == null) {
-			dataOutputRefs = new EObjectWithInverseEList.ManyInverse<DataOutput>(
-					DataOutput.class, this,
-					Bpmn2Package.OUTPUT_SET__DATA_OUTPUT_REFS,
-					Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_REFS);
-		}
-		return dataOutputRefs;
+		return (EList<DataOutput>) eDynamicGet(
+				Bpmn2Package.OUTPUT_SET__DATA_OUTPUT_REFS,
+				Bpmn2Package.Literals.OUTPUT_SET__DATA_OUTPUT_REFS, true, true);
 	}
 
 	/**
@@ -145,13 +96,10 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataOutput> getOptionalOutputRefs() {
-		if (optionalOutputRefs == null) {
-			optionalOutputRefs = new EObjectWithInverseEList.ManyInverse<DataOutput>(
-					DataOutput.class, this,
-					Bpmn2Package.OUTPUT_SET__OPTIONAL_OUTPUT_REFS,
-					Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_OPTIONAL);
-		}
-		return optionalOutputRefs;
+		return (EList<DataOutput>) eDynamicGet(
+				Bpmn2Package.OUTPUT_SET__OPTIONAL_OUTPUT_REFS,
+				Bpmn2Package.Literals.OUTPUT_SET__OPTIONAL_OUTPUT_REFS, true,
+				true);
 	}
 
 	/**
@@ -161,13 +109,10 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataOutput> getWhileExecutingOutputRefs() {
-		if (whileExecutingOutputRefs == null) {
-			whileExecutingOutputRefs = new EObjectWithInverseEList.ManyInverse<DataOutput>(
-					DataOutput.class, this,
-					Bpmn2Package.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS,
-					Bpmn2Package.DATA_OUTPUT__OUTPUT_SET_WITH_WHILE_EXECUTING);
-		}
-		return whileExecutingOutputRefs;
+		return (EList<DataOutput>) eDynamicGet(
+				Bpmn2Package.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS,
+				Bpmn2Package.Literals.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS,
+				true, true);
 	}
 
 	/**
@@ -176,7 +121,8 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.OUTPUT_SET__NAME,
+				Bpmn2Package.Literals.OUTPUT_SET__NAME, true, true);
 	}
 
 	/**
@@ -185,11 +131,8 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.OUTPUT_SET__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.OUTPUT_SET__NAME,
+				Bpmn2Package.Literals.OUTPUT_SET__NAME, newName);
 	}
 
 	/**
@@ -199,13 +142,9 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<InputSet> getInputSetRefs() {
-		if (inputSetRefs == null) {
-			inputSetRefs = new EObjectWithInverseResolvingEList.ManyInverse<InputSet>(
-					InputSet.class, this,
-					Bpmn2Package.OUTPUT_SET__INPUT_SET_REFS,
-					Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS);
-		}
-		return inputSetRefs;
+		return (EList<InputSet>) eDynamicGet(
+				Bpmn2Package.OUTPUT_SET__INPUT_SET_REFS,
+				Bpmn2Package.Literals.OUTPUT_SET__INPUT_SET_REFS, true, true);
 	}
 
 	/**
@@ -352,36 +291,18 @@ public class OutputSetImpl extends BaseElementImpl implements OutputSet {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.OUTPUT_SET__DATA_OUTPUT_REFS:
-			return dataOutputRefs != null && !dataOutputRefs.isEmpty();
+			return !getDataOutputRefs().isEmpty();
 		case Bpmn2Package.OUTPUT_SET__OPTIONAL_OUTPUT_REFS:
-			return optionalOutputRefs != null && !optionalOutputRefs.isEmpty();
+			return !getOptionalOutputRefs().isEmpty();
 		case Bpmn2Package.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS:
-			return whileExecutingOutputRefs != null
-					&& !whileExecutingOutputRefs.isEmpty();
+			return !getWhileExecutingOutputRefs().isEmpty();
 		case Bpmn2Package.OUTPUT_SET__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.OUTPUT_SET__INPUT_SET_REFS:
-			return inputSetRefs != null && !inputSetRefs.isEmpty();
+			return !getInputSetRefs().isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //OutputSetImpl

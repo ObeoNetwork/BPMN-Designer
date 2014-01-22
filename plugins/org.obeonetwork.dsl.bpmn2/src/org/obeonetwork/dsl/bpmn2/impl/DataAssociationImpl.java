@@ -50,43 +50,6 @@ import org.obeonetwork.dsl.bpmn2.ItemAwareElement;
 public class DataAssociationImpl extends BaseElementImpl implements
 		DataAssociation {
 	/**
-	 * The cached value of the '{@link #getTransformation() <em>Transformation</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTransformation()
-	 * @generated
-	 * @ordered
-	 */
-	protected FormalExpression transformation;
-	/**
-	 * The cached value of the '{@link #getAssignment() <em>Assignment</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAssignment()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Assignment> assignment;
-	/**
-	 * The cached value of the '{@link #getTargetRef() <em>Target Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected ItemAwareElement targetRef;
-	/**
-	 * The cached value of the '{@link #getSourceRef() <em>Source Ref</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSourceRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ItemAwareElement> sourceRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -111,7 +74,10 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public FormalExpression getTransformation() {
-		return transformation;
+		return (FormalExpression) eDynamicGet(
+				Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION,
+				Bpmn2Package.Literals.DATA_ASSOCIATION__TRANSFORMATION, true,
+				true);
 	}
 
 	/**
@@ -121,18 +87,8 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 */
 	public NotificationChain basicSetTransformation(
 			FormalExpression newTransformation, NotificationChain msgs) {
-		FormalExpression oldTransformation = transformation;
-		transformation = newTransformation;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION,
-					oldTransformation, newTransformation);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newTransformation,
+				Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION, msgs);
 		return msgs;
 	}
 
@@ -142,29 +98,9 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setTransformation(FormalExpression newTransformation) {
-		if (newTransformation != transformation) {
-			NotificationChain msgs = null;
-			if (transformation != null)
-				msgs = ((InternalEObject) transformation)
-						.eInverseRemove(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION,
-								null, msgs);
-			if (newTransformation != null)
-				msgs = ((InternalEObject) newTransformation)
-						.eInverseAdd(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION,
-								null, msgs);
-			msgs = basicSetTransformation(newTransformation, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION,
-					newTransformation, newTransformation));
+		eDynamicSet(Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION,
+				Bpmn2Package.Literals.DATA_ASSOCIATION__TRANSFORMATION,
+				newTransformation);
 	}
 
 	/**
@@ -174,12 +110,9 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Assignment> getAssignment() {
-		if (assignment == null) {
-			assignment = new EObjectContainmentEList<Assignment>(
-					Assignment.class, this,
-					Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT);
-		}
-		return assignment;
+		return (EList<Assignment>) eDynamicGet(
+				Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT,
+				Bpmn2Package.Literals.DATA_ASSOCIATION__ASSIGNMENT, true, true);
 	}
 
 	/**
@@ -188,17 +121,9 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public ItemAwareElement getTargetRef() {
-		if (targetRef != null && targetRef.eIsProxy()) {
-			InternalEObject oldTargetRef = (InternalEObject) targetRef;
-			targetRef = (ItemAwareElement) eResolveProxy(oldTargetRef);
-			if (targetRef != oldTargetRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.DATA_ASSOCIATION__TARGET_REF,
-							oldTargetRef, targetRef));
-			}
-		}
-		return targetRef;
+		return (ItemAwareElement) eDynamicGet(
+				Bpmn2Package.DATA_ASSOCIATION__TARGET_REF,
+				Bpmn2Package.Literals.DATA_ASSOCIATION__TARGET_REF, true, true);
 	}
 
 	/**
@@ -207,7 +132,9 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public ItemAwareElement basicGetTargetRef() {
-		return targetRef;
+		return (ItemAwareElement) eDynamicGet(
+				Bpmn2Package.DATA_ASSOCIATION__TARGET_REF,
+				Bpmn2Package.Literals.DATA_ASSOCIATION__TARGET_REF, false, true);
 	}
 
 	/**
@@ -216,12 +143,9 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setTargetRef(ItemAwareElement newTargetRef) {
-		ItemAwareElement oldTargetRef = targetRef;
-		targetRef = newTargetRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.DATA_ASSOCIATION__TARGET_REF, oldTargetRef,
-					targetRef));
+		eDynamicSet(Bpmn2Package.DATA_ASSOCIATION__TARGET_REF,
+				Bpmn2Package.Literals.DATA_ASSOCIATION__TARGET_REF,
+				newTargetRef);
 	}
 
 	/**
@@ -231,12 +155,9 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ItemAwareElement> getSourceRef() {
-		if (sourceRef == null) {
-			sourceRef = new EObjectResolvingEList<ItemAwareElement>(
-					ItemAwareElement.class, this,
-					Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF);
-		}
-		return sourceRef;
+		return (EList<ItemAwareElement>) eDynamicGet(
+				Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF,
+				Bpmn2Package.Literals.DATA_ASSOCIATION__SOURCE_REF, true, true);
 	}
 
 	/**
@@ -340,13 +261,13 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION:
-			return transformation != null;
+			return getTransformation() != null;
 		case Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT:
-			return assignment != null && !assignment.isEmpty();
+			return !getAssignment().isEmpty();
 		case Bpmn2Package.DATA_ASSOCIATION__TARGET_REF:
-			return targetRef != null;
+			return basicGetTargetRef() != null;
 		case Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF:
-			return sourceRef != null && !sourceRef.isEmpty();
+			return !getSourceRef().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

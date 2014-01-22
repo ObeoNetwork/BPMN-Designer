@@ -43,15 +43,6 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
 	 * @ordered
 	 */
 	protected static final boolean IS_INTERRUPTING_EDEFAULT = true;
-	/**
-	 * The cached value of the '{@link #isIsInterrupting() <em>Is Interrupting</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsInterrupting()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isInterrupting = IS_INTERRUPTING_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,7 +69,8 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
 	 * @generated
 	 */
 	public boolean isIsInterrupting() {
-		return isInterrupting;
+		return (Boolean) eDynamicGet(Bpmn2Package.START_EVENT__IS_INTERRUPTING,
+				Bpmn2Package.Literals.START_EVENT__IS_INTERRUPTING, true, true);
 	}
 
 	/**
@@ -87,12 +79,9 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
 	 * @generated
 	 */
 	public void setIsInterrupting(boolean newIsInterrupting) {
-		boolean oldIsInterrupting = isInterrupting;
-		isInterrupting = newIsInterrupting;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.START_EVENT__IS_INTERRUPTING,
-					oldIsInterrupting, isInterrupting));
+		eDynamicSet(Bpmn2Package.START_EVENT__IS_INTERRUPTING,
+				Bpmn2Package.Literals.START_EVENT__IS_INTERRUPTING,
+				newIsInterrupting);
 	}
 
 	/**
@@ -148,26 +137,9 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.START_EVENT__IS_INTERRUPTING:
-			return isInterrupting != IS_INTERRUPTING_EDEFAULT;
+			return isIsInterrupting() != IS_INTERRUPTING_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (isInterrupting: ");
-		result.append(isInterrupting);
-		result.append(')');
-		return result.toString();
 	}
 
 } //StartEventImpl

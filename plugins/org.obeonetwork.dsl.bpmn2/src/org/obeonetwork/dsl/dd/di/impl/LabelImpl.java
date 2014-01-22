@@ -38,16 +38,6 @@ import org.obeonetwork.dsl.dd.di.Label;
  */
 public abstract class LabelImpl extends NodeImpl implements Label {
 	/**
-	 * The cached value of the '{@link #getBounds() <em>Bounds</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBounds()
-	 * @generated
-	 * @ordered
-	 */
-	protected Bounds bounds;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -72,7 +62,8 @@ public abstract class LabelImpl extends NodeImpl implements Label {
 	 * @generated
 	 */
 	public Bounds getBounds() {
-		return bounds;
+		return (Bounds) eDynamicGet(DiPackage.LABEL__BOUNDS,
+				DiPackage.Literals.LABEL__BOUNDS, true, true);
 	}
 
 	/**
@@ -82,17 +73,8 @@ public abstract class LabelImpl extends NodeImpl implements Label {
 	 */
 	public NotificationChain basicSetBounds(Bounds newBounds,
 			NotificationChain msgs) {
-		Bounds oldBounds = bounds;
-		bounds = newBounds;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, DiPackage.LABEL__BOUNDS, oldBounds,
-					newBounds);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newBounds,
+				DiPackage.LABEL__BOUNDS, msgs);
 		return msgs;
 	}
 
@@ -102,22 +84,8 @@ public abstract class LabelImpl extends NodeImpl implements Label {
 	 * @generated
 	 */
 	public void setBounds(Bounds newBounds) {
-		if (newBounds != bounds) {
-			NotificationChain msgs = null;
-			if (bounds != null)
-				msgs = ((InternalEObject) bounds).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - DiPackage.LABEL__BOUNDS, null,
-						msgs);
-			if (newBounds != null)
-				msgs = ((InternalEObject) newBounds).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - DiPackage.LABEL__BOUNDS, null,
-						msgs);
-			msgs = basicSetBounds(newBounds, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					DiPackage.LABEL__BOUNDS, newBounds, newBounds));
+		eDynamicSet(DiPackage.LABEL__BOUNDS, DiPackage.Literals.LABEL__BOUNDS,
+				newBounds);
 	}
 
 	/**
@@ -188,7 +156,7 @@ public abstract class LabelImpl extends NodeImpl implements Label {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case DiPackage.LABEL__BOUNDS:
-			return bounds != null;
+			return getBounds() != null;
 		}
 		return super.eIsSet(featureID);
 	}

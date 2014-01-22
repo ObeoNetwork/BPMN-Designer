@@ -16,6 +16,7 @@ package org.obeonetwork.dsl.dd.dc;
 
 import java.util.Map;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.ecore.EObject;
 
@@ -38,9 +39,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.obeonetwork.dsl.dd.dc.DcPackage#getFont()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Font extends EObject {
+public interface Font extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

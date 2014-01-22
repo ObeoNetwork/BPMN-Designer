@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.ConversationLink;
 import org.obeonetwork.dsl.bpmn2.InteractionNode;
@@ -39,27 +40,8 @@ import org.obeonetwork.dsl.bpmn2.InteractionNode;
  *
  * @generated
  */
-public abstract class InteractionNodeImpl extends EObjectImpl implements
+public abstract class InteractionNodeImpl extends CDOObjectImpl implements
 		InteractionNode {
-	/**
-	 * The cached value of the '{@link #getIncomingConversationLinks() <em>Incoming Conversation Links</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIncomingConversationLinks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ConversationLink> incomingConversationLinks;
-	/**
-	 * The cached value of the '{@link #getOutgoingConversationLinks() <em>Outgoing Conversation Links</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutgoingConversationLinks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ConversationLink> outgoingConversationLinks;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,15 +66,22 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getIncomingConversationLinks() {
-		if (incomingConversationLinks == null) {
-			incomingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
-					ConversationLink.class, this,
-					Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
-					Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
-		}
-		return incomingConversationLinks;
+		return (EList<ConversationLink>) eDynamicGet(
+				Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
+				true, true);
 	}
 
 	/**
@@ -102,13 +91,10 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getOutgoingConversationLinks() {
-		if (outgoingConversationLinks == null) {
-			outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
-					ConversationLink.class, this,
-					Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
-					Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
-		}
-		return outgoingConversationLinks;
+		return (EList<ConversationLink>) eDynamicGet(
+				Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
+				true, true);
 	}
 
 	/**
@@ -175,11 +161,9 @@ public abstract class InteractionNodeImpl extends EObjectImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-			return incomingConversationLinks != null
-					&& !incomingConversationLinks.isEmpty();
+			return !getIncomingConversationLinks().isEmpty();
 		case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-			return outgoingConversationLinks != null
-					&& !outgoingConversationLinks.isEmpty();
+			return !getOutgoingConversationLinks().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

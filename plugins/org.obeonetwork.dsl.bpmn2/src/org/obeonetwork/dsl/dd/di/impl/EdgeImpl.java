@@ -46,34 +46,6 @@ import org.obeonetwork.dsl.dd.di.Edge;
  */
 public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
 	/**
-	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSource()
-	 * @generated
-	 * @ordered
-	 */
-	protected DiagramElement source;
-	/**
-	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTarget()
-	 * @generated
-	 * @ordered
-	 */
-	protected DiagramElement target;
-	/**
-	 * The cached value of the '{@link #getWaypoint() <em>Waypoint</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getWaypoint()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Point> waypoint;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -98,16 +70,8 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
 	 * @generated
 	 */
 	public DiagramElement getSource() {
-		if (source != null && source.eIsProxy()) {
-			InternalEObject oldSource = (InternalEObject) source;
-			source = (DiagramElement) eResolveProxy(oldSource);
-			if (source != oldSource) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							DiPackage.EDGE__SOURCE, oldSource, source));
-			}
-		}
-		return source;
+		return (DiagramElement) eDynamicGet(DiPackage.EDGE__SOURCE,
+				DiPackage.Literals.EDGE__SOURCE, true, true);
 	}
 
 	/**
@@ -116,7 +80,8 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
 	 * @generated
 	 */
 	public DiagramElement basicGetSource() {
-		return source;
+		return (DiagramElement) eDynamicGet(DiPackage.EDGE__SOURCE,
+				DiPackage.Literals.EDGE__SOURCE, false, true);
 	}
 
 	/**
@@ -125,16 +90,8 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
 	 * @generated
 	 */
 	public DiagramElement getTarget() {
-		if (target != null && target.eIsProxy()) {
-			InternalEObject oldTarget = (InternalEObject) target;
-			target = (DiagramElement) eResolveProxy(oldTarget);
-			if (target != oldTarget) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							DiPackage.EDGE__TARGET, oldTarget, target));
-			}
-		}
-		return target;
+		return (DiagramElement) eDynamicGet(DiPackage.EDGE__TARGET,
+				DiPackage.Literals.EDGE__TARGET, true, true);
 	}
 
 	/**
@@ -143,7 +100,8 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
 	 * @generated
 	 */
 	public DiagramElement basicGetTarget() {
-		return target;
+		return (DiagramElement) eDynamicGet(DiPackage.EDGE__TARGET,
+				DiPackage.Literals.EDGE__TARGET, false, true);
 	}
 
 	/**
@@ -153,11 +111,8 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Point> getWaypoint() {
-		if (waypoint == null) {
-			waypoint = new EObjectContainmentEList<Point>(Point.class, this,
-					DiPackage.EDGE__WAYPOINT);
-		}
-		return waypoint;
+		return (EList<Point>) eDynamicGet(DiPackage.EDGE__WAYPOINT,
+				DiPackage.Literals.EDGE__WAYPOINT, true, true);
 	}
 
 	/**
@@ -239,11 +194,11 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case DiPackage.EDGE__SOURCE:
-			return source != null;
+			return basicGetSource() != null;
 		case DiPackage.EDGE__TARGET:
-			return target != null;
+			return basicGetTarget() != null;
 		case DiPackage.EDGE__WAYPOINT:
-			return waypoint != null && !waypoint.isEmpty();
+			return !getWaypoint().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

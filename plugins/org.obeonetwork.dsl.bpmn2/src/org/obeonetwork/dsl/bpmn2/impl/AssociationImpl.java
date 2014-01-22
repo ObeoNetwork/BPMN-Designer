@@ -48,33 +48,6 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	 * @ordered
 	 */
 	protected static final AssociationDirection ASSOCIATION_DIRECTION_EDEFAULT = AssociationDirection.NONE;
-	/**
-	 * The cached value of the '{@link #getAssociationDirection() <em>Association Direction</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAssociationDirection()
-	 * @generated
-	 * @ordered
-	 */
-	protected AssociationDirection associationDirection = ASSOCIATION_DIRECTION_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getSourceRef() <em>Source Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSourceRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected BaseElement sourceRef;
-	/**
-	 * The cached value of the '{@link #getTargetRef() <em>Target Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected BaseElement targetRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -101,7 +74,10 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	 * @generated
 	 */
 	public AssociationDirection getAssociationDirection() {
-		return associationDirection;
+		return (AssociationDirection) eDynamicGet(
+				Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION,
+				Bpmn2Package.Literals.ASSOCIATION__ASSOCIATION_DIRECTION, true,
+				true);
 	}
 
 	/**
@@ -111,13 +87,9 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	 */
 	public void setAssociationDirection(
 			AssociationDirection newAssociationDirection) {
-		AssociationDirection oldAssociationDirection = associationDirection;
-		associationDirection = newAssociationDirection == null ? ASSOCIATION_DIRECTION_EDEFAULT
-				: newAssociationDirection;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION,
-					oldAssociationDirection, associationDirection));
+		eDynamicSet(Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION,
+				Bpmn2Package.Literals.ASSOCIATION__ASSOCIATION_DIRECTION,
+				newAssociationDirection);
 	}
 
 	/**
@@ -126,17 +98,8 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	 * @generated
 	 */
 	public BaseElement getSourceRef() {
-		if (sourceRef != null && sourceRef.eIsProxy()) {
-			InternalEObject oldSourceRef = (InternalEObject) sourceRef;
-			sourceRef = (BaseElement) eResolveProxy(oldSourceRef);
-			if (sourceRef != oldSourceRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.ASSOCIATION__SOURCE_REF, oldSourceRef,
-							sourceRef));
-			}
-		}
-		return sourceRef;
+		return (BaseElement) eDynamicGet(Bpmn2Package.ASSOCIATION__SOURCE_REF,
+				Bpmn2Package.Literals.ASSOCIATION__SOURCE_REF, true, true);
 	}
 
 	/**
@@ -145,7 +108,8 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	 * @generated
 	 */
 	public BaseElement basicGetSourceRef() {
-		return sourceRef;
+		return (BaseElement) eDynamicGet(Bpmn2Package.ASSOCIATION__SOURCE_REF,
+				Bpmn2Package.Literals.ASSOCIATION__SOURCE_REF, false, true);
 	}
 
 	/**
@@ -154,12 +118,8 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	 * @generated
 	 */
 	public void setSourceRef(BaseElement newSourceRef) {
-		BaseElement oldSourceRef = sourceRef;
-		sourceRef = newSourceRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.ASSOCIATION__SOURCE_REF, oldSourceRef,
-					sourceRef));
+		eDynamicSet(Bpmn2Package.ASSOCIATION__SOURCE_REF,
+				Bpmn2Package.Literals.ASSOCIATION__SOURCE_REF, newSourceRef);
 	}
 
 	/**
@@ -168,17 +128,8 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	 * @generated
 	 */
 	public BaseElement getTargetRef() {
-		if (targetRef != null && targetRef.eIsProxy()) {
-			InternalEObject oldTargetRef = (InternalEObject) targetRef;
-			targetRef = (BaseElement) eResolveProxy(oldTargetRef);
-			if (targetRef != oldTargetRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.ASSOCIATION__TARGET_REF, oldTargetRef,
-							targetRef));
-			}
-		}
-		return targetRef;
+		return (BaseElement) eDynamicGet(Bpmn2Package.ASSOCIATION__TARGET_REF,
+				Bpmn2Package.Literals.ASSOCIATION__TARGET_REF, true, true);
 	}
 
 	/**
@@ -187,7 +138,8 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	 * @generated
 	 */
 	public BaseElement basicGetTargetRef() {
-		return targetRef;
+		return (BaseElement) eDynamicGet(Bpmn2Package.ASSOCIATION__TARGET_REF,
+				Bpmn2Package.Literals.ASSOCIATION__TARGET_REF, false, true);
 	}
 
 	/**
@@ -196,12 +148,8 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	 * @generated
 	 */
 	public void setTargetRef(BaseElement newTargetRef) {
-		BaseElement oldTargetRef = targetRef;
-		targetRef = newTargetRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.ASSOCIATION__TARGET_REF, oldTargetRef,
-					targetRef));
+		eDynamicSet(Bpmn2Package.ASSOCIATION__TARGET_REF,
+				Bpmn2Package.Literals.ASSOCIATION__TARGET_REF, newTargetRef);
 	}
 
 	/**
@@ -277,30 +225,13 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION:
-			return associationDirection != ASSOCIATION_DIRECTION_EDEFAULT;
+			return getAssociationDirection() != ASSOCIATION_DIRECTION_EDEFAULT;
 		case Bpmn2Package.ASSOCIATION__SOURCE_REF:
-			return sourceRef != null;
+			return basicGetSourceRef() != null;
 		case Bpmn2Package.ASSOCIATION__TARGET_REF:
-			return targetRef != null;
+			return basicGetTargetRef() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (associationDirection: ");
-		result.append(associationDirection);
-		result.append(')');
-		return result.toString();
 	}
 
 } //AssociationImpl

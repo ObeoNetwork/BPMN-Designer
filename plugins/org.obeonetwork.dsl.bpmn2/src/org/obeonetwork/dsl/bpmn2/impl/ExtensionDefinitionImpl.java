@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.ExtensionAttributeDefinition;
 import org.obeonetwork.dsl.bpmn2.ExtensionDefinition;
@@ -43,7 +44,7 @@ import org.obeonetwork.dsl.bpmn2.ExtensionDefinition;
  *
  * @generated
  */
-public class ExtensionDefinitionImpl extends EObjectImpl implements
+public class ExtensionDefinitionImpl extends CDOObjectImpl implements
 		ExtensionDefinition {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -54,24 +55,6 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getExtensionAttributeDefinitions() <em>Extension Attribute Definitions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExtensionAttributeDefinitions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ExtensionAttributeDefinition> extensionAttributeDefinitions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -97,8 +80,19 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.EXTENSION_DEFINITION__NAME,
+				Bpmn2Package.Literals.EXTENSION_DEFINITION__NAME, true, true);
 	}
 
 	/**
@@ -107,11 +101,8 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.EXTENSION_DEFINITION__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.EXTENSION_DEFINITION__NAME,
+				Bpmn2Package.Literals.EXTENSION_DEFINITION__NAME, newName);
 	}
 
 	/**
@@ -121,14 +112,10 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ExtensionAttributeDefinition> getExtensionAttributeDefinitions() {
-		if (extensionAttributeDefinitions == null) {
-			extensionAttributeDefinitions = new EObjectContainmentWithInverseEList<ExtensionAttributeDefinition>(
-					ExtensionAttributeDefinition.class,
-					this,
-					Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS,
-					Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION);
-		}
-		return extensionAttributeDefinitions;
+		return (EList<ExtensionAttributeDefinition>) eDynamicGet(
+				Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS,
+				Bpmn2Package.Literals.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS,
+				true, true);
 	}
 
 	/**
@@ -228,30 +215,12 @@ public class ExtensionDefinitionImpl extends EObjectImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.EXTENSION_DEFINITION__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
-			return extensionAttributeDefinitions != null
-					&& !extensionAttributeDefinitions.isEmpty();
+			return !getExtensionAttributeDefinitions().isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ExtensionDefinitionImpl

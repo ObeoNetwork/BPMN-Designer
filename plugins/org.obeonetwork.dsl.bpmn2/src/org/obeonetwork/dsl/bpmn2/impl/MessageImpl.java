@@ -46,24 +46,6 @@ public class MessageImpl extends RootElementImpl implements Message {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getItemRef() <em>Item Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getItemRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected ItemDefinition itemRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,7 +72,8 @@ public class MessageImpl extends RootElementImpl implements Message {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.MESSAGE__NAME,
+				Bpmn2Package.Literals.MESSAGE__NAME, true, true);
 	}
 
 	/**
@@ -99,11 +82,8 @@ public class MessageImpl extends RootElementImpl implements Message {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.MESSAGE__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.MESSAGE__NAME,
+				Bpmn2Package.Literals.MESSAGE__NAME, newName);
 	}
 
 	/**
@@ -112,16 +92,8 @@ public class MessageImpl extends RootElementImpl implements Message {
 	 * @generated
 	 */
 	public ItemDefinition getItemRef() {
-		if (itemRef != null && itemRef.eIsProxy()) {
-			InternalEObject oldItemRef = (InternalEObject) itemRef;
-			itemRef = (ItemDefinition) eResolveProxy(oldItemRef);
-			if (itemRef != oldItemRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.MESSAGE__ITEM_REF, oldItemRef, itemRef));
-			}
-		}
-		return itemRef;
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.MESSAGE__ITEM_REF,
+				Bpmn2Package.Literals.MESSAGE__ITEM_REF, true, true);
 	}
 
 	/**
@@ -130,7 +102,8 @@ public class MessageImpl extends RootElementImpl implements Message {
 	 * @generated
 	 */
 	public ItemDefinition basicGetItemRef() {
-		return itemRef;
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.MESSAGE__ITEM_REF,
+				Bpmn2Package.Literals.MESSAGE__ITEM_REF, false, true);
 	}
 
 	/**
@@ -139,11 +112,8 @@ public class MessageImpl extends RootElementImpl implements Message {
 	 * @generated
 	 */
 	public void setItemRef(ItemDefinition newItemRef) {
-		ItemDefinition oldItemRef = itemRef;
-		itemRef = newItemRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.MESSAGE__ITEM_REF, oldItemRef, itemRef));
+		eDynamicSet(Bpmn2Package.MESSAGE__ITEM_REF,
+				Bpmn2Package.Literals.MESSAGE__ITEM_REF, newItemRef);
 	}
 
 	/**
@@ -209,29 +179,12 @@ public class MessageImpl extends RootElementImpl implements Message {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.MESSAGE__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.MESSAGE__ITEM_REF:
-			return itemRef != null;
+			return basicGetItemRef() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //MessageImpl

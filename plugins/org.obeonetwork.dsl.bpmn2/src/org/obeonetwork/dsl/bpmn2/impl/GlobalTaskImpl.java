@@ -41,16 +41,6 @@ import org.obeonetwork.dsl.bpmn2.ResourceRole;
  */
 public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
 	/**
-	 * The cached value of the '{@link #getResources() <em>Resources</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResources()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ResourceRole> resources;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -76,12 +66,9 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ResourceRole> getResources() {
-		if (resources == null) {
-			resources = new EObjectContainmentEList<ResourceRole>(
-					ResourceRole.class, this,
-					Bpmn2Package.GLOBAL_TASK__RESOURCES);
-		}
-		return resources;
+		return (EList<ResourceRole>) eDynamicGet(
+				Bpmn2Package.GLOBAL_TASK__RESOURCES,
+				Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES, true, true);
 	}
 
 	/**
@@ -156,7 +143,7 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.GLOBAL_TASK__RESOURCES:
-			return resources != null && !resources.isEmpty();
+			return !getResources().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

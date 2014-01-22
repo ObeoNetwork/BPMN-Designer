@@ -44,15 +44,6 @@ import org.obeonetwork.dsl.bpmn2.UserTask;
  */
 public class UserTaskImpl extends TaskImpl implements UserTask {
 	/**
-	 * The cached value of the '{@link #getRenderings() <em>Renderings</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRenderings()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Rendering> renderings;
-	/**
 	 * The default value of the '{@link #getImplementation() <em>Implementation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,15 +52,6 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
 	 * @ordered
 	 */
 	protected static final String IMPLEMENTATION_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getImplementation() <em>Implementation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImplementation()
-	 * @generated
-	 * @ordered
-	 */
-	protected String implementation = IMPLEMENTATION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -97,11 +79,9 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Rendering> getRenderings() {
-		if (renderings == null) {
-			renderings = new EObjectContainmentEList<Rendering>(
-					Rendering.class, this, Bpmn2Package.USER_TASK__RENDERINGS);
-		}
-		return renderings;
+		return (EList<Rendering>) eDynamicGet(
+				Bpmn2Package.USER_TASK__RENDERINGS,
+				Bpmn2Package.Literals.USER_TASK__RENDERINGS, true, true);
 	}
 
 	/**
@@ -110,7 +90,8 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
 	 * @generated
 	 */
 	public String getImplementation() {
-		return implementation;
+		return (String) eDynamicGet(Bpmn2Package.USER_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.USER_TASK__IMPLEMENTATION, true, true);
 	}
 
 	/**
@@ -119,12 +100,9 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
 	 * @generated
 	 */
 	public void setImplementation(String newImplementation) {
-		String oldImplementation = implementation;
-		implementation = newImplementation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.USER_TASK__IMPLEMENTATION, oldImplementation,
-					implementation));
+		eDynamicSet(Bpmn2Package.USER_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.USER_TASK__IMPLEMENTATION,
+				newImplementation);
 	}
 
 	/**
@@ -206,29 +184,12 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.USER_TASK__RENDERINGS:
-			return renderings != null && !renderings.isEmpty();
+			return !getRenderings().isEmpty();
 		case Bpmn2Package.USER_TASK__IMPLEMENTATION:
-			return IMPLEMENTATION_EDEFAULT == null ? implementation != null
-					: !IMPLEMENTATION_EDEFAULT.equals(implementation);
+			return IMPLEMENTATION_EDEFAULT == null ? getImplementation() != null
+					: !IMPLEMENTATION_EDEFAULT.equals(getImplementation());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (implementation: ");
-		result.append(implementation);
-		result.append(')');
-		return result.toString();
 	}
 
 } //UserTaskImpl

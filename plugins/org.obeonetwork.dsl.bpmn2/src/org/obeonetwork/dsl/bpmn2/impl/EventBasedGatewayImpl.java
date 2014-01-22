@@ -47,15 +47,6 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
 	 */
 	protected static final boolean INSTANTIATE_EDEFAULT = false;
 	/**
-	 * The cached value of the '{@link #isInstantiate() <em>Instantiate</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isInstantiate()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean instantiate = INSTANTIATE_EDEFAULT;
-	/**
 	 * The default value of the '{@link #getEventGatewayType() <em>Event Gateway Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,15 +55,6 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
 	 * @ordered
 	 */
 	protected static final EventBasedGatewayType EVENT_GATEWAY_TYPE_EDEFAULT = EventBasedGatewayType.PARALLEL;
-	/**
-	 * The cached value of the '{@link #getEventGatewayType() <em>Event Gateway Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEventGatewayType()
-	 * @generated
-	 * @ordered
-	 */
-	protected EventBasedGatewayType eventGatewayType = EVENT_GATEWAY_TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -99,7 +81,10 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
 	 * @generated
 	 */
 	public boolean isInstantiate() {
-		return instantiate;
+		return (Boolean) eDynamicGet(
+				Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE,
+				Bpmn2Package.Literals.EVENT_BASED_GATEWAY__INSTANTIATE, true,
+				true);
 	}
 
 	/**
@@ -108,12 +93,9 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
 	 * @generated
 	 */
 	public void setInstantiate(boolean newInstantiate) {
-		boolean oldInstantiate = instantiate;
-		instantiate = newInstantiate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE,
-					oldInstantiate, instantiate));
+		eDynamicSet(Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE,
+				Bpmn2Package.Literals.EVENT_BASED_GATEWAY__INSTANTIATE,
+				newInstantiate);
 	}
 
 	/**
@@ -122,7 +104,10 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
 	 * @generated
 	 */
 	public EventBasedGatewayType getEventGatewayType() {
-		return eventGatewayType;
+		return (EventBasedGatewayType) eDynamicGet(
+				Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
+				Bpmn2Package.Literals.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
+				true, true);
 	}
 
 	/**
@@ -131,13 +116,9 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
 	 * @generated
 	 */
 	public void setEventGatewayType(EventBasedGatewayType newEventGatewayType) {
-		EventBasedGatewayType oldEventGatewayType = eventGatewayType;
-		eventGatewayType = newEventGatewayType == null ? EVENT_GATEWAY_TYPE_EDEFAULT
-				: newEventGatewayType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
-					oldEventGatewayType, eventGatewayType));
+		eDynamicSet(Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
+				Bpmn2Package.Literals.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
+				newEventGatewayType);
 	}
 
 	/**
@@ -201,30 +182,11 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE:
-			return instantiate != INSTANTIATE_EDEFAULT;
+			return isInstantiate() != INSTANTIATE_EDEFAULT;
 		case Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE:
-			return eventGatewayType != EVENT_GATEWAY_TYPE_EDEFAULT;
+			return getEventGatewayType() != EVENT_GATEWAY_TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (instantiate: ");
-		result.append(instantiate);
-		result.append(", eventGatewayType: ");
-		result.append(eventGatewayType);
-		result.append(')');
-		return result.toString();
 	}
 
 } //EventBasedGatewayImpl

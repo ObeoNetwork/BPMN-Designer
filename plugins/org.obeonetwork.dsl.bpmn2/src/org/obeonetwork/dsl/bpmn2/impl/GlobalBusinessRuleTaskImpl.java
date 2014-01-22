@@ -44,15 +44,6 @@ public class GlobalBusinessRuleTaskImpl extends GlobalTaskImpl implements
 	 * @ordered
 	 */
 	protected static final String IMPLEMENTATION_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getImplementation() <em>Implementation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImplementation()
-	 * @generated
-	 * @ordered
-	 */
-	protected String implementation = IMPLEMENTATION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -79,7 +70,10 @@ public class GlobalBusinessRuleTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	public String getImplementation() {
-		return implementation;
+		return (String) eDynamicGet(
+				Bpmn2Package.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION,
+				true, true);
 	}
 
 	/**
@@ -88,12 +82,10 @@ public class GlobalBusinessRuleTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	public void setImplementation(String newImplementation) {
-		String oldImplementation = implementation;
-		implementation = newImplementation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION,
-					oldImplementation, implementation));
+		eDynamicSet(
+				Bpmn2Package.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION,
+				newImplementation);
 	}
 
 	/**
@@ -149,27 +141,10 @@ public class GlobalBusinessRuleTaskImpl extends GlobalTaskImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION:
-			return IMPLEMENTATION_EDEFAULT == null ? implementation != null
-					: !IMPLEMENTATION_EDEFAULT.equals(implementation);
+			return IMPLEMENTATION_EDEFAULT == null ? getImplementation() != null
+					: !IMPLEMENTATION_EDEFAULT.equals(getImplementation());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (implementation: ");
-		result.append(implementation);
-		result.append(')');
-		return result.toString();
 	}
 
 } //GlobalBusinessRuleTaskImpl

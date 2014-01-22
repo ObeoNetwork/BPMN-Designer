@@ -53,15 +53,6 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	 */
 	protected static final String TYPE_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String type = TYPE_EDEFAULT;
-	/**
 	 * The default value of the '{@link #getDirection() <em>Direction</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,33 +61,6 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	 * @ordered
 	 */
 	protected static final RelationshipDirection DIRECTION_EDEFAULT = RelationshipDirection.NONE;
-	/**
-	 * The cached value of the '{@link #getDirection() <em>Direction</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDirection()
-	 * @generated
-	 * @ordered
-	 */
-	protected RelationshipDirection direction = DIRECTION_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getSources() <em>Sources</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSources()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EObject> sources;
-	/**
-	 * The cached value of the '{@link #getTargets() <em>Targets</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargets()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EObject> targets;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,7 +87,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	 * @generated
 	 */
 	public String getType() {
-		return type;
+		return (String) eDynamicGet(Bpmn2Package.RELATIONSHIP__TYPE,
+				Bpmn2Package.Literals.RELATIONSHIP__TYPE, true, true);
 	}
 
 	/**
@@ -132,11 +97,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	 * @generated
 	 */
 	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.RELATIONSHIP__TYPE, oldType, type));
+		eDynamicSet(Bpmn2Package.RELATIONSHIP__TYPE,
+				Bpmn2Package.Literals.RELATIONSHIP__TYPE, newType);
 	}
 
 	/**
@@ -145,7 +107,9 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	 * @generated
 	 */
 	public RelationshipDirection getDirection() {
-		return direction;
+		return (RelationshipDirection) eDynamicGet(
+				Bpmn2Package.RELATIONSHIP__DIRECTION,
+				Bpmn2Package.Literals.RELATIONSHIP__DIRECTION, true, true);
 	}
 
 	/**
@@ -154,12 +118,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	 * @generated
 	 */
 	public void setDirection(RelationshipDirection newDirection) {
-		RelationshipDirection oldDirection = direction;
-		direction = newDirection == null ? DIRECTION_EDEFAULT : newDirection;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.RELATIONSHIP__DIRECTION, oldDirection,
-					direction));
+		eDynamicSet(Bpmn2Package.RELATIONSHIP__DIRECTION,
+				Bpmn2Package.Literals.RELATIONSHIP__DIRECTION, newDirection);
 	}
 
 	/**
@@ -169,11 +129,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<EObject> getSources() {
-		if (sources == null) {
-			sources = new EObjectResolvingEList<EObject>(EObject.class, this,
-					Bpmn2Package.RELATIONSHIP__SOURCES);
-		}
-		return sources;
+		return (EList<EObject>) eDynamicGet(Bpmn2Package.RELATIONSHIP__SOURCES,
+				Bpmn2Package.Literals.RELATIONSHIP__SOURCES, true, true);
 	}
 
 	/**
@@ -183,11 +140,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<EObject> getTargets() {
-		if (targets == null) {
-			targets = new EObjectResolvingEList<EObject>(EObject.class, this,
-					Bpmn2Package.RELATIONSHIP__TARGETS);
-		}
-		return targets;
+		return (EList<EObject>) eDynamicGet(Bpmn2Package.RELATIONSHIP__TARGETS,
+				Bpmn2Package.Literals.RELATIONSHIP__TARGETS, true, true);
 	}
 
 	/**
@@ -270,35 +224,16 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.RELATIONSHIP__TYPE:
-			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT
-					.equals(type);
+			return TYPE_EDEFAULT == null ? getType() != null : !TYPE_EDEFAULT
+					.equals(getType());
 		case Bpmn2Package.RELATIONSHIP__DIRECTION:
-			return direction != DIRECTION_EDEFAULT;
+			return getDirection() != DIRECTION_EDEFAULT;
 		case Bpmn2Package.RELATIONSHIP__SOURCES:
-			return sources != null && !sources.isEmpty();
+			return !getSources().isEmpty();
 		case Bpmn2Package.RELATIONSHIP__TARGETS:
-			return targets != null && !targets.isEmpty();
+			return !getTargets().isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (type: ");
-		result.append(type);
-		result.append(", direction: ");
-		result.append(direction);
-		result.append(')');
-		return result.toString();
 	}
 
 } //RelationshipImpl

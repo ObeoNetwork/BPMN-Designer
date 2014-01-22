@@ -52,24 +52,6 @@ public class ResourceImpl extends RootElementImpl implements Resource {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getResourceParameters() <em>Resource Parameters</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResourceParameters()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ResourceParameter> resourceParameters;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,7 +78,8 @@ public class ResourceImpl extends RootElementImpl implements Resource {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.RESOURCE__NAME,
+				Bpmn2Package.Literals.RESOURCE__NAME, true, true);
 	}
 
 	/**
@@ -105,11 +88,8 @@ public class ResourceImpl extends RootElementImpl implements Resource {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.RESOURCE__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.RESOURCE__NAME,
+				Bpmn2Package.Literals.RESOURCE__NAME, newName);
 	}
 
 	/**
@@ -119,12 +99,9 @@ public class ResourceImpl extends RootElementImpl implements Resource {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ResourceParameter> getResourceParameters() {
-		if (resourceParameters == null) {
-			resourceParameters = new EObjectContainmentEList<ResourceParameter>(
-					ResourceParameter.class, this,
-					Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS);
-		}
-		return resourceParameters;
+		return (EList<ResourceParameter>) eDynamicGet(
+				Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS,
+				Bpmn2Package.Literals.RESOURCE__RESOURCE_PARAMETERS, true, true);
 	}
 
 	/**
@@ -207,29 +184,12 @@ public class ResourceImpl extends RootElementImpl implements Resource {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.RESOURCE__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
-			return resourceParameters != null && !resourceParameters.isEmpty();
+			return !getResourceParameters().isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ResourceImpl

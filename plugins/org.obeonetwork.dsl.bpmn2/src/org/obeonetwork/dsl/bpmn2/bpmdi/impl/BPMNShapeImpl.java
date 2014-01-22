@@ -48,15 +48,6 @@ import org.obeonetwork.dsl.dd.di.impl.LabeledShapeImpl;
  */
 public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	/**
-	 * The cached value of the '{@link #getBpmnElement() <em>Bpmn Element</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBpmnElement()
-	 * @generated
-	 * @ordered
-	 */
-	protected BaseElement bpmnElement;
-	/**
 	 * The default value of the '{@link #isIsHorizontal() <em>Is Horizontal</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,15 +56,6 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @ordered
 	 */
 	protected static final boolean IS_HORIZONTAL_EDEFAULT = false;
-	/**
-	 * The cached value of the '{@link #isIsHorizontal() <em>Is Horizontal</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsHorizontal()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isHorizontal = IS_HORIZONTAL_EDEFAULT;
 	/**
 	 * The default value of the '{@link #isIsExpanded() <em>Is Expanded</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -84,15 +66,6 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 */
 	protected static final boolean IS_EXPANDED_EDEFAULT = false;
 	/**
-	 * The cached value of the '{@link #isIsExpanded() <em>Is Expanded</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsExpanded()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isExpanded = IS_EXPANDED_EDEFAULT;
-	/**
 	 * The default value of the '{@link #isIsMarkerVisible() <em>Is Marker Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,24 +74,6 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @ordered
 	 */
 	protected static final boolean IS_MARKER_VISIBLE_EDEFAULT = false;
-	/**
-	 * The cached value of the '{@link #isIsMarkerVisible() <em>Is Marker Visible</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsMarkerVisible()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isMarkerVisible = IS_MARKER_VISIBLE_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getLabel() <em>Label</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLabel()
-	 * @generated
-	 * @ordered
-	 */
-	protected BPMNLabel label;
 	/**
 	 * The default value of the '{@link #isIsMessageVisible() <em>Is Message Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -129,15 +84,6 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 */
 	protected static final boolean IS_MESSAGE_VISIBLE_EDEFAULT = false;
 	/**
-	 * The cached value of the '{@link #isIsMessageVisible() <em>Is Message Visible</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsMessageVisible()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isMessageVisible = IS_MESSAGE_VISIBLE_EDEFAULT;
-	/**
 	 * The default value of the '{@link #getParticipantBandKind() <em>Participant Band Kind</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,24 +92,6 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @ordered
 	 */
 	protected static final ParticipantBandKind PARTICIPANT_BAND_KIND_EDEFAULT = ParticipantBandKind.TOP_INITIATING;
-	/**
-	 * The cached value of the '{@link #getParticipantBandKind() <em>Participant Band Kind</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParticipantBandKind()
-	 * @generated
-	 * @ordered
-	 */
-	protected ParticipantBandKind participantBandKind = PARTICIPANT_BAND_KIND_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getChoreographyActivityShape() <em>Choreography Activity Shape</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChoreographyActivityShape()
-	 * @generated
-	 * @ordered
-	 */
-	protected BPMNShape choreographyActivityShape;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -190,17 +118,9 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public BaseElement getBpmnElement() {
-		if (bpmnElement != null && bpmnElement.eIsProxy()) {
-			InternalEObject oldBpmnElement = (InternalEObject) bpmnElement;
-			bpmnElement = (BaseElement) eResolveProxy(oldBpmnElement);
-			if (bpmnElement != oldBpmnElement) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							BpmnDiPackage.BPMN_SHAPE__BPMN_ELEMENT,
-							oldBpmnElement, bpmnElement));
-			}
-		}
-		return bpmnElement;
+		return (BaseElement) eDynamicGet(
+				BpmnDiPackage.BPMN_SHAPE__BPMN_ELEMENT,
+				BpmnDiPackage.Literals.BPMN_SHAPE__BPMN_ELEMENT, true, true);
 	}
 
 	/**
@@ -209,7 +129,9 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public BaseElement basicGetBpmnElement() {
-		return bpmnElement;
+		return (BaseElement) eDynamicGet(
+				BpmnDiPackage.BPMN_SHAPE__BPMN_ELEMENT,
+				BpmnDiPackage.Literals.BPMN_SHAPE__BPMN_ELEMENT, false, true);
 	}
 
 	/**
@@ -218,12 +140,8 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public void setBpmnElement(BaseElement newBpmnElement) {
-		BaseElement oldBpmnElement = bpmnElement;
-		bpmnElement = newBpmnElement;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BpmnDiPackage.BPMN_SHAPE__BPMN_ELEMENT, oldBpmnElement,
-					bpmnElement));
+		eDynamicSet(BpmnDiPackage.BPMN_SHAPE__BPMN_ELEMENT,
+				BpmnDiPackage.Literals.BPMN_SHAPE__BPMN_ELEMENT, newBpmnElement);
 	}
 
 	/**
@@ -232,7 +150,8 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public boolean isIsHorizontal() {
-		return isHorizontal;
+		return (Boolean) eDynamicGet(BpmnDiPackage.BPMN_SHAPE__IS_HORIZONTAL,
+				BpmnDiPackage.Literals.BPMN_SHAPE__IS_HORIZONTAL, true, true);
 	}
 
 	/**
@@ -241,12 +160,9 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public void setIsHorizontal(boolean newIsHorizontal) {
-		boolean oldIsHorizontal = isHorizontal;
-		isHorizontal = newIsHorizontal;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BpmnDiPackage.BPMN_SHAPE__IS_HORIZONTAL, oldIsHorizontal,
-					isHorizontal));
+		eDynamicSet(BpmnDiPackage.BPMN_SHAPE__IS_HORIZONTAL,
+				BpmnDiPackage.Literals.BPMN_SHAPE__IS_HORIZONTAL,
+				newIsHorizontal);
 	}
 
 	/**
@@ -255,7 +171,8 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public boolean isIsExpanded() {
-		return isExpanded;
+		return (Boolean) eDynamicGet(BpmnDiPackage.BPMN_SHAPE__IS_EXPANDED,
+				BpmnDiPackage.Literals.BPMN_SHAPE__IS_EXPANDED, true, true);
 	}
 
 	/**
@@ -264,12 +181,8 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public void setIsExpanded(boolean newIsExpanded) {
-		boolean oldIsExpanded = isExpanded;
-		isExpanded = newIsExpanded;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BpmnDiPackage.BPMN_SHAPE__IS_EXPANDED, oldIsExpanded,
-					isExpanded));
+		eDynamicSet(BpmnDiPackage.BPMN_SHAPE__IS_EXPANDED,
+				BpmnDiPackage.Literals.BPMN_SHAPE__IS_EXPANDED, newIsExpanded);
 	}
 
 	/**
@@ -278,7 +191,10 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public boolean isIsMarkerVisible() {
-		return isMarkerVisible;
+		return (Boolean) eDynamicGet(
+				BpmnDiPackage.BPMN_SHAPE__IS_MARKER_VISIBLE,
+				BpmnDiPackage.Literals.BPMN_SHAPE__IS_MARKER_VISIBLE, true,
+				true);
 	}
 
 	/**
@@ -287,12 +203,9 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public void setIsMarkerVisible(boolean newIsMarkerVisible) {
-		boolean oldIsMarkerVisible = isMarkerVisible;
-		isMarkerVisible = newIsMarkerVisible;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BpmnDiPackage.BPMN_SHAPE__IS_MARKER_VISIBLE,
-					oldIsMarkerVisible, isMarkerVisible));
+		eDynamicSet(BpmnDiPackage.BPMN_SHAPE__IS_MARKER_VISIBLE,
+				BpmnDiPackage.Literals.BPMN_SHAPE__IS_MARKER_VISIBLE,
+				newIsMarkerVisible);
 	}
 
 	/**
@@ -301,7 +214,8 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public BPMNLabel getLabel() {
-		return label;
+		return (BPMNLabel) eDynamicGet(BpmnDiPackage.BPMN_SHAPE__LABEL,
+				BpmnDiPackage.Literals.BPMN_SHAPE__LABEL, true, true);
 	}
 
 	/**
@@ -311,17 +225,8 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 */
 	public NotificationChain basicSetLabel(BPMNLabel newLabel,
 			NotificationChain msgs) {
-		BPMNLabel oldLabel = label;
-		label = newLabel;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, BpmnDiPackage.BPMN_SHAPE__LABEL,
-					oldLabel, newLabel);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newLabel,
+				BpmnDiPackage.BPMN_SHAPE__LABEL, msgs);
 		return msgs;
 	}
 
@@ -331,22 +236,8 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public void setLabel(BPMNLabel newLabel) {
-		if (newLabel != label) {
-			NotificationChain msgs = null;
-			if (label != null)
-				msgs = ((InternalEObject) label).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE
-								- BpmnDiPackage.BPMN_SHAPE__LABEL, null, msgs);
-			if (newLabel != null)
-				msgs = ((InternalEObject) newLabel).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE
-								- BpmnDiPackage.BPMN_SHAPE__LABEL, null, msgs);
-			msgs = basicSetLabel(newLabel, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BpmnDiPackage.BPMN_SHAPE__LABEL, newLabel, newLabel));
+		eDynamicSet(BpmnDiPackage.BPMN_SHAPE__LABEL,
+				BpmnDiPackage.Literals.BPMN_SHAPE__LABEL, newLabel);
 	}
 
 	/**
@@ -355,7 +246,10 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public boolean isIsMessageVisible() {
-		return isMessageVisible;
+		return (Boolean) eDynamicGet(
+				BpmnDiPackage.BPMN_SHAPE__IS_MESSAGE_VISIBLE,
+				BpmnDiPackage.Literals.BPMN_SHAPE__IS_MESSAGE_VISIBLE, true,
+				true);
 	}
 
 	/**
@@ -364,12 +258,9 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public void setIsMessageVisible(boolean newIsMessageVisible) {
-		boolean oldIsMessageVisible = isMessageVisible;
-		isMessageVisible = newIsMessageVisible;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BpmnDiPackage.BPMN_SHAPE__IS_MESSAGE_VISIBLE,
-					oldIsMessageVisible, isMessageVisible));
+		eDynamicSet(BpmnDiPackage.BPMN_SHAPE__IS_MESSAGE_VISIBLE,
+				BpmnDiPackage.Literals.BPMN_SHAPE__IS_MESSAGE_VISIBLE,
+				newIsMessageVisible);
 	}
 
 	/**
@@ -378,7 +269,10 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public ParticipantBandKind getParticipantBandKind() {
-		return participantBandKind;
+		return (ParticipantBandKind) eDynamicGet(
+				BpmnDiPackage.BPMN_SHAPE__PARTICIPANT_BAND_KIND,
+				BpmnDiPackage.Literals.BPMN_SHAPE__PARTICIPANT_BAND_KIND, true,
+				true);
 	}
 
 	/**
@@ -388,13 +282,9 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 */
 	public void setParticipantBandKind(
 			ParticipantBandKind newParticipantBandKind) {
-		ParticipantBandKind oldParticipantBandKind = participantBandKind;
-		participantBandKind = newParticipantBandKind == null ? PARTICIPANT_BAND_KIND_EDEFAULT
-				: newParticipantBandKind;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BpmnDiPackage.BPMN_SHAPE__PARTICIPANT_BAND_KIND,
-					oldParticipantBandKind, participantBandKind));
+		eDynamicSet(BpmnDiPackage.BPMN_SHAPE__PARTICIPANT_BAND_KIND,
+				BpmnDiPackage.Literals.BPMN_SHAPE__PARTICIPANT_BAND_KIND,
+				newParticipantBandKind);
 	}
 
 	/**
@@ -403,21 +293,10 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public BPMNShape getChoreographyActivityShape() {
-		if (choreographyActivityShape != null
-				&& choreographyActivityShape.eIsProxy()) {
-			InternalEObject oldChoreographyActivityShape = (InternalEObject) choreographyActivityShape;
-			choreographyActivityShape = (BPMNShape) eResolveProxy(oldChoreographyActivityShape);
-			if (choreographyActivityShape != oldChoreographyActivityShape) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							BpmnDiPackage.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE,
-							oldChoreographyActivityShape,
-							choreographyActivityShape));
-			}
-		}
-		return choreographyActivityShape;
+		return (BPMNShape) eDynamicGet(
+				BpmnDiPackage.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE,
+				BpmnDiPackage.Literals.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE,
+				true, true);
 	}
 
 	/**
@@ -426,7 +305,10 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * @generated
 	 */
 	public BPMNShape basicGetChoreographyActivityShape() {
-		return choreographyActivityShape;
+		return (BPMNShape) eDynamicGet(
+				BpmnDiPackage.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE,
+				BpmnDiPackage.Literals.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE,
+				false, true);
 	}
 
 	/**
@@ -436,12 +318,9 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 */
 	public void setChoreographyActivityShape(
 			BPMNShape newChoreographyActivityShape) {
-		BPMNShape oldChoreographyActivityShape = choreographyActivityShape;
-		choreographyActivityShape = newChoreographyActivityShape;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BpmnDiPackage.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE,
-					oldChoreographyActivityShape, choreographyActivityShape));
+		eDynamicSet(BpmnDiPackage.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE,
+				BpmnDiPackage.Literals.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE,
+				newChoreographyActivityShape);
 	}
 
 	/**
@@ -572,48 +451,23 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case BpmnDiPackage.BPMN_SHAPE__BPMN_ELEMENT:
-			return bpmnElement != null;
+			return basicGetBpmnElement() != null;
 		case BpmnDiPackage.BPMN_SHAPE__IS_HORIZONTAL:
-			return isHorizontal != IS_HORIZONTAL_EDEFAULT;
+			return isIsHorizontal() != IS_HORIZONTAL_EDEFAULT;
 		case BpmnDiPackage.BPMN_SHAPE__IS_EXPANDED:
-			return isExpanded != IS_EXPANDED_EDEFAULT;
+			return isIsExpanded() != IS_EXPANDED_EDEFAULT;
 		case BpmnDiPackage.BPMN_SHAPE__IS_MARKER_VISIBLE:
-			return isMarkerVisible != IS_MARKER_VISIBLE_EDEFAULT;
+			return isIsMarkerVisible() != IS_MARKER_VISIBLE_EDEFAULT;
 		case BpmnDiPackage.BPMN_SHAPE__LABEL:
-			return label != null;
+			return getLabel() != null;
 		case BpmnDiPackage.BPMN_SHAPE__IS_MESSAGE_VISIBLE:
-			return isMessageVisible != IS_MESSAGE_VISIBLE_EDEFAULT;
+			return isIsMessageVisible() != IS_MESSAGE_VISIBLE_EDEFAULT;
 		case BpmnDiPackage.BPMN_SHAPE__PARTICIPANT_BAND_KIND:
-			return participantBandKind != PARTICIPANT_BAND_KIND_EDEFAULT;
+			return getParticipantBandKind() != PARTICIPANT_BAND_KIND_EDEFAULT;
 		case BpmnDiPackage.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE:
-			return choreographyActivityShape != null;
+			return basicGetChoreographyActivityShape() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (isHorizontal: ");
-		result.append(isHorizontal);
-		result.append(", isExpanded: ");
-		result.append(isExpanded);
-		result.append(", isMarkerVisible: ");
-		result.append(isMarkerVisible);
-		result.append(", isMessageVisible: ");
-		result.append(isMessageVisible);
-		result.append(", participantBandKind: ");
-		result.append(participantBandKind);
-		result.append(')');
-		return result.toString();
 	}
 
 } //BPMNShapeImpl

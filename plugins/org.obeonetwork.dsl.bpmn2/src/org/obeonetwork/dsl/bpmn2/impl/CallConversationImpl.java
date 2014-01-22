@@ -46,25 +46,6 @@ import org.obeonetwork.dsl.bpmn2.ParticipantAssociation;
 public class CallConversationImpl extends ConversationNodeImpl implements
 		CallConversation {
 	/**
-	 * The cached value of the '{@link #getCalledCollaborationRef() <em>Called Collaboration Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCalledCollaborationRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Collaboration calledCollaborationRef;
-	/**
-	 * The cached value of the '{@link #getParticipantAssociations() <em>Participant Associations</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParticipantAssociations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ParticipantAssociation> participantAssociations;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -89,19 +70,10 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 	 * @generated
 	 */
 	public Collaboration getCalledCollaborationRef() {
-		if (calledCollaborationRef != null && calledCollaborationRef.eIsProxy()) {
-			InternalEObject oldCalledCollaborationRef = (InternalEObject) calledCollaborationRef;
-			calledCollaborationRef = (Collaboration) eResolveProxy(oldCalledCollaborationRef);
-			if (calledCollaborationRef != oldCalledCollaborationRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
-							oldCalledCollaborationRef, calledCollaborationRef));
-			}
-		}
-		return calledCollaborationRef;
+		return (Collaboration) eDynamicGet(
+				Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
+				Bpmn2Package.Literals.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
+				true, true);
 	}
 
 	/**
@@ -110,7 +82,10 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 	 * @generated
 	 */
 	public Collaboration basicGetCalledCollaborationRef() {
-		return calledCollaborationRef;
+		return (Collaboration) eDynamicGet(
+				Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
+				Bpmn2Package.Literals.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
+				false, true);
 	}
 
 	/**
@@ -120,12 +95,10 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 	 */
 	public void setCalledCollaborationRef(
 			Collaboration newCalledCollaborationRef) {
-		Collaboration oldCalledCollaborationRef = calledCollaborationRef;
-		calledCollaborationRef = newCalledCollaborationRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
-					oldCalledCollaborationRef, calledCollaborationRef));
+		eDynamicSet(
+				Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
+				Bpmn2Package.Literals.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
+				newCalledCollaborationRef);
 	}
 
 	/**
@@ -135,12 +108,10 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ParticipantAssociation> getParticipantAssociations() {
-		if (participantAssociations == null) {
-			participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(
-					ParticipantAssociation.class, this,
-					Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS);
-		}
-		return participantAssociations;
+		return (EList<ParticipantAssociation>) eDynamicGet(
+				Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS,
+				Bpmn2Package.Literals.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS,
+				true, true);
 	}
 
 	/**
@@ -225,10 +196,9 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF:
-			return calledCollaborationRef != null;
+			return basicGetCalledCollaborationRef() != null;
 		case Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS:
-			return participantAssociations != null
-					&& !participantAssociations.isEmpty();
+			return !getParticipantAssociations().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -46,25 +46,6 @@ import org.obeonetwork.dsl.dd.di.impl.DiagramImpl;
  */
 public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
 	/**
-	 * The cached value of the '{@link #getPlane() <em>Plane</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPlane()
-	 * @generated
-	 * @ordered
-	 */
-	protected BPMNPlane plane;
-	/**
-	 * The cached value of the '{@link #getLabelStyle() <em>Label Style</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLabelStyle()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<BPMNLabelStyle> labelStyle;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -89,7 +70,8 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
 	 * @generated
 	 */
 	public BPMNPlane getPlane() {
-		return plane;
+		return (BPMNPlane) eDynamicGet(BpmnDiPackage.BPMN_DIAGRAM__PLANE,
+				BpmnDiPackage.Literals.BPMN_DIAGRAM__PLANE, true, true);
 	}
 
 	/**
@@ -99,17 +81,8 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
 	 */
 	public NotificationChain basicSetPlane(BPMNPlane newPlane,
 			NotificationChain msgs) {
-		BPMNPlane oldPlane = plane;
-		plane = newPlane;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, BpmnDiPackage.BPMN_DIAGRAM__PLANE,
-					oldPlane, newPlane);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newPlane,
+				BpmnDiPackage.BPMN_DIAGRAM__PLANE, msgs);
 		return msgs;
 	}
 
@@ -119,22 +92,8 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
 	 * @generated
 	 */
 	public void setPlane(BPMNPlane newPlane) {
-		if (newPlane != plane) {
-			NotificationChain msgs = null;
-			if (plane != null)
-				msgs = ((InternalEObject) plane)
-						.eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-								- BpmnDiPackage.BPMN_DIAGRAM__PLANE, null, msgs);
-			if (newPlane != null)
-				msgs = ((InternalEObject) newPlane)
-						.eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-								- BpmnDiPackage.BPMN_DIAGRAM__PLANE, null, msgs);
-			msgs = basicSetPlane(newPlane, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BpmnDiPackage.BPMN_DIAGRAM__PLANE, newPlane, newPlane));
+		eDynamicSet(BpmnDiPackage.BPMN_DIAGRAM__PLANE,
+				BpmnDiPackage.Literals.BPMN_DIAGRAM__PLANE, newPlane);
 	}
 
 	/**
@@ -144,12 +103,9 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<BPMNLabelStyle> getLabelStyle() {
-		if (labelStyle == null) {
-			labelStyle = new EObjectContainmentEList<BPMNLabelStyle>(
-					BPMNLabelStyle.class, this,
-					BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE);
-		}
-		return labelStyle;
+		return (EList<BPMNLabelStyle>) eDynamicGet(
+				BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE,
+				BpmnDiPackage.Literals.BPMN_DIAGRAM__LABEL_STYLE, true, true);
 	}
 
 	/**
@@ -234,9 +190,9 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
-			return plane != null;
+			return getPlane() != null;
 		case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-			return labelStyle != null && !labelStyle.isEmpty();
+			return !getLabelStyle().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

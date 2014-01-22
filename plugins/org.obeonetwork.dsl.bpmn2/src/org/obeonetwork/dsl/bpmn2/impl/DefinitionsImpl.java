@@ -66,15 +66,6 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 */
 	protected static final String NAME_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
 	 * The default value of the '{@link #getTargetNamespace() <em>Target Namespace</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,15 +74,6 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @ordered
 	 */
 	protected static final String TARGET_NAMESPACE_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getTargetNamespace() <em>Target Namespace</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetNamespace()
-	 * @generated
-	 * @ordered
-	 */
-	protected String targetNamespace = TARGET_NAMESPACE_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getExpressionLanguage() <em>Expression Language</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -102,15 +84,6 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 */
 	protected static final String EXPRESSION_LANGUAGE_EDEFAULT = "http://www.w3.org/1999/XPath";
 	/**
-	 * The cached value of the '{@link #getExpressionLanguage() <em>Expression Language</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpressionLanguage()
-	 * @generated
-	 * @ordered
-	 */
-	protected String expressionLanguage = EXPRESSION_LANGUAGE_EDEFAULT;
-	/**
 	 * The default value of the '{@link #getTypeLanguage() <em>Type Language</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,60 +92,6 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @ordered
 	 */
 	protected static final String TYPE_LANGUAGE_EDEFAULT = "http://www.w3.org/2001/XMLSchema";
-	/**
-	 * The cached value of the '{@link #getTypeLanguage() <em>Type Language</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTypeLanguage()
-	 * @generated
-	 * @ordered
-	 */
-	protected String typeLanguage = TYPE_LANGUAGE_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImports()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Import> imports;
-	/**
-	 * The cached value of the '{@link #getExtensions() <em>Extensions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExtensions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Extension> extensions;
-	/**
-	 * The cached value of the '{@link #getRelationships() <em>Relationships</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRelationships()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Relationship> relationships;
-	/**
-	 * The cached value of the '{@link #getRootElements() <em>Root Elements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRootElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<RootElement> rootElements;
-	/**
-	 * The cached value of the '{@link #getDiagrams() <em>Diagrams</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDiagrams()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<BPMNDiagram> diagrams;
 	/**
 	 * The default value of the '{@link #getExporter() <em>Exporter</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -183,15 +102,6 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 */
 	protected static final String EXPORTER_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getExporter() <em>Exporter</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExporter()
-	 * @generated
-	 * @ordered
-	 */
-	protected String exporter = EXPORTER_EDEFAULT;
-	/**
 	 * The default value of the '{@link #getExporterVersion() <em>Exporter Version</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -200,15 +110,6 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @ordered
 	 */
 	protected static final String EXPORTER_VERSION_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getExporterVersion() <em>Exporter Version</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExporterVersion()
-	 * @generated
-	 * @ordered
-	 */
-	protected String exporterVersion = EXPORTER_VERSION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -235,7 +136,8 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.DEFINITIONS__NAME,
+				Bpmn2Package.Literals.DEFINITIONS__NAME, true, true);
 	}
 
 	/**
@@ -244,11 +146,8 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.DEFINITIONS__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.DEFINITIONS__NAME,
+				Bpmn2Package.Literals.DEFINITIONS__NAME, newName);
 	}
 
 	/**
@@ -257,7 +156,8 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public String getTargetNamespace() {
-		return targetNamespace;
+		return (String) eDynamicGet(Bpmn2Package.DEFINITIONS__TARGET_NAMESPACE,
+				Bpmn2Package.Literals.DEFINITIONS__TARGET_NAMESPACE, true, true);
 	}
 
 	/**
@@ -266,12 +166,9 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public void setTargetNamespace(String newTargetNamespace) {
-		String oldTargetNamespace = targetNamespace;
-		targetNamespace = newTargetNamespace;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.DEFINITIONS__TARGET_NAMESPACE,
-					oldTargetNamespace, targetNamespace));
+		eDynamicSet(Bpmn2Package.DEFINITIONS__TARGET_NAMESPACE,
+				Bpmn2Package.Literals.DEFINITIONS__TARGET_NAMESPACE,
+				newTargetNamespace);
 	}
 
 	/**
@@ -280,7 +177,10 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public String getExpressionLanguage() {
-		return expressionLanguage;
+		return (String) eDynamicGet(
+				Bpmn2Package.DEFINITIONS__EXPRESSION_LANGUAGE,
+				Bpmn2Package.Literals.DEFINITIONS__EXPRESSION_LANGUAGE, true,
+				true);
 	}
 
 	/**
@@ -289,12 +189,9 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public void setExpressionLanguage(String newExpressionLanguage) {
-		String oldExpressionLanguage = expressionLanguage;
-		expressionLanguage = newExpressionLanguage;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.DEFINITIONS__EXPRESSION_LANGUAGE,
-					oldExpressionLanguage, expressionLanguage));
+		eDynamicSet(Bpmn2Package.DEFINITIONS__EXPRESSION_LANGUAGE,
+				Bpmn2Package.Literals.DEFINITIONS__EXPRESSION_LANGUAGE,
+				newExpressionLanguage);
 	}
 
 	/**
@@ -303,7 +200,8 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public String getTypeLanguage() {
-		return typeLanguage;
+		return (String) eDynamicGet(Bpmn2Package.DEFINITIONS__TYPE_LANGUAGE,
+				Bpmn2Package.Literals.DEFINITIONS__TYPE_LANGUAGE, true, true);
 	}
 
 	/**
@@ -312,12 +210,9 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public void setTypeLanguage(String newTypeLanguage) {
-		String oldTypeLanguage = typeLanguage;
-		typeLanguage = newTypeLanguage;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.DEFINITIONS__TYPE_LANGUAGE, oldTypeLanguage,
-					typeLanguage));
+		eDynamicSet(Bpmn2Package.DEFINITIONS__TYPE_LANGUAGE,
+				Bpmn2Package.Literals.DEFINITIONS__TYPE_LANGUAGE,
+				newTypeLanguage);
 	}
 
 	/**
@@ -327,11 +222,8 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Import> getImports() {
-		if (imports == null) {
-			imports = new EObjectContainmentEList<Import>(Import.class, this,
-					Bpmn2Package.DEFINITIONS__IMPORTS);
-		}
-		return imports;
+		return (EList<Import>) eDynamicGet(Bpmn2Package.DEFINITIONS__IMPORTS,
+				Bpmn2Package.Literals.DEFINITIONS__IMPORTS, true, true);
 	}
 
 	/**
@@ -341,11 +233,9 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Extension> getExtensions() {
-		if (extensions == null) {
-			extensions = new EObjectContainmentEList<Extension>(
-					Extension.class, this, Bpmn2Package.DEFINITIONS__EXTENSIONS);
-		}
-		return extensions;
+		return (EList<Extension>) eDynamicGet(
+				Bpmn2Package.DEFINITIONS__EXTENSIONS,
+				Bpmn2Package.Literals.DEFINITIONS__EXTENSIONS, true, true);
 	}
 
 	/**
@@ -355,12 +245,9 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Relationship> getRelationships() {
-		if (relationships == null) {
-			relationships = new EObjectContainmentEList<Relationship>(
-					Relationship.class, this,
-					Bpmn2Package.DEFINITIONS__RELATIONSHIPS);
-		}
-		return relationships;
+		return (EList<Relationship>) eDynamicGet(
+				Bpmn2Package.DEFINITIONS__RELATIONSHIPS,
+				Bpmn2Package.Literals.DEFINITIONS__RELATIONSHIPS, true, true);
 	}
 
 	/**
@@ -370,12 +257,9 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<RootElement> getRootElements() {
-		if (rootElements == null) {
-			rootElements = new EObjectContainmentEList<RootElement>(
-					RootElement.class, this,
-					Bpmn2Package.DEFINITIONS__ROOT_ELEMENTS);
-		}
-		return rootElements;
+		return (EList<RootElement>) eDynamicGet(
+				Bpmn2Package.DEFINITIONS__ROOT_ELEMENTS,
+				Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, true, true);
 	}
 
 	/**
@@ -385,11 +269,9 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<BPMNDiagram> getDiagrams() {
-		if (diagrams == null) {
-			diagrams = new EObjectContainmentEList<BPMNDiagram>(
-					BPMNDiagram.class, this, Bpmn2Package.DEFINITIONS__DIAGRAMS);
-		}
-		return diagrams;
+		return (EList<BPMNDiagram>) eDynamicGet(
+				Bpmn2Package.DEFINITIONS__DIAGRAMS,
+				Bpmn2Package.Literals.DEFINITIONS__DIAGRAMS, true, true);
 	}
 
 	/**
@@ -398,7 +280,8 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public String getExporter() {
-		return exporter;
+		return (String) eDynamicGet(Bpmn2Package.DEFINITIONS__EXPORTER,
+				Bpmn2Package.Literals.DEFINITIONS__EXPORTER, true, true);
 	}
 
 	/**
@@ -407,11 +290,8 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public void setExporter(String newExporter) {
-		String oldExporter = exporter;
-		exporter = newExporter;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.DEFINITIONS__EXPORTER, oldExporter, exporter));
+		eDynamicSet(Bpmn2Package.DEFINITIONS__EXPORTER,
+				Bpmn2Package.Literals.DEFINITIONS__EXPORTER, newExporter);
 	}
 
 	/**
@@ -420,7 +300,8 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public String getExporterVersion() {
-		return exporterVersion;
+		return (String) eDynamicGet(Bpmn2Package.DEFINITIONS__EXPORTER_VERSION,
+				Bpmn2Package.Literals.DEFINITIONS__EXPORTER_VERSION, true, true);
 	}
 
 	/**
@@ -429,12 +310,9 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public void setExporterVersion(String newExporterVersion) {
-		String oldExporterVersion = exporterVersion;
-		exporterVersion = newExporterVersion;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.DEFINITIONS__EXPORTER_VERSION,
-					oldExporterVersion, exporterVersion));
+		eDynamicSet(Bpmn2Package.DEFINITIONS__EXPORTER_VERSION,
+				Bpmn2Package.Literals.DEFINITIONS__EXPORTER_VERSION,
+				newExporterVersion);
 	}
 
 	/**
@@ -606,62 +484,36 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.DEFINITIONS__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.DEFINITIONS__TARGET_NAMESPACE:
-			return TARGET_NAMESPACE_EDEFAULT == null ? targetNamespace != null
-					: !TARGET_NAMESPACE_EDEFAULT.equals(targetNamespace);
+			return TARGET_NAMESPACE_EDEFAULT == null ? getTargetNamespace() != null
+					: !TARGET_NAMESPACE_EDEFAULT.equals(getTargetNamespace());
 		case Bpmn2Package.DEFINITIONS__EXPRESSION_LANGUAGE:
-			return EXPRESSION_LANGUAGE_EDEFAULT == null ? expressionLanguage != null
-					: !EXPRESSION_LANGUAGE_EDEFAULT.equals(expressionLanguage);
+			return EXPRESSION_LANGUAGE_EDEFAULT == null ? getExpressionLanguage() != null
+					: !EXPRESSION_LANGUAGE_EDEFAULT
+							.equals(getExpressionLanguage());
 		case Bpmn2Package.DEFINITIONS__TYPE_LANGUAGE:
-			return TYPE_LANGUAGE_EDEFAULT == null ? typeLanguage != null
-					: !TYPE_LANGUAGE_EDEFAULT.equals(typeLanguage);
+			return TYPE_LANGUAGE_EDEFAULT == null ? getTypeLanguage() != null
+					: !TYPE_LANGUAGE_EDEFAULT.equals(getTypeLanguage());
 		case Bpmn2Package.DEFINITIONS__IMPORTS:
-			return imports != null && !imports.isEmpty();
+			return !getImports().isEmpty();
 		case Bpmn2Package.DEFINITIONS__EXTENSIONS:
-			return extensions != null && !extensions.isEmpty();
+			return !getExtensions().isEmpty();
 		case Bpmn2Package.DEFINITIONS__RELATIONSHIPS:
-			return relationships != null && !relationships.isEmpty();
+			return !getRelationships().isEmpty();
 		case Bpmn2Package.DEFINITIONS__ROOT_ELEMENTS:
-			return rootElements != null && !rootElements.isEmpty();
+			return !getRootElements().isEmpty();
 		case Bpmn2Package.DEFINITIONS__DIAGRAMS:
-			return diagrams != null && !diagrams.isEmpty();
+			return !getDiagrams().isEmpty();
 		case Bpmn2Package.DEFINITIONS__EXPORTER:
-			return EXPORTER_EDEFAULT == null ? exporter != null
-					: !EXPORTER_EDEFAULT.equals(exporter);
+			return EXPORTER_EDEFAULT == null ? getExporter() != null
+					: !EXPORTER_EDEFAULT.equals(getExporter());
 		case Bpmn2Package.DEFINITIONS__EXPORTER_VERSION:
-			return EXPORTER_VERSION_EDEFAULT == null ? exporterVersion != null
-					: !EXPORTER_VERSION_EDEFAULT.equals(exporterVersion);
+			return EXPORTER_VERSION_EDEFAULT == null ? getExporterVersion() != null
+					: !EXPORTER_VERSION_EDEFAULT.equals(getExporterVersion());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", targetNamespace: ");
-		result.append(targetNamespace);
-		result.append(", expressionLanguage: ");
-		result.append(expressionLanguage);
-		result.append(", typeLanguage: ");
-		result.append(typeLanguage);
-		result.append(", exporter: ");
-		result.append(exporter);
-		result.append(", exporterVersion: ");
-		result.append(exporterVersion);
-		result.append(')');
-		return result.toString();
 	}
 
 } //DefinitionsImpl

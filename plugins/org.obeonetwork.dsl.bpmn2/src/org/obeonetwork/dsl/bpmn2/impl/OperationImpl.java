@@ -54,51 +54,6 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getInMessageRef() <em>In Message Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInMessageRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Message inMessageRef;
-	/**
-	 * The cached value of the '{@link #getOutMessageRef() <em>Out Message Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutMessageRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Message outMessageRef;
-	/**
-	 * The cached value of the '{@link #getErrorRefs() <em>Error Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getErrorRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<org.obeonetwork.dsl.bpmn2.Error> errorRefs;
-	/**
-	 * The cached value of the '{@link #getImplementationRef() <em>Implementation Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImplementationRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected EObject implementationRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,7 +80,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.OPERATION__NAME,
+				Bpmn2Package.Literals.OPERATION__NAME, true, true);
 	}
 
 	/**
@@ -134,11 +90,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.OPERATION__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.OPERATION__NAME,
+				Bpmn2Package.Literals.OPERATION__NAME, newName);
 	}
 
 	/**
@@ -147,17 +100,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public Message getInMessageRef() {
-		if (inMessageRef != null && inMessageRef.eIsProxy()) {
-			InternalEObject oldInMessageRef = (InternalEObject) inMessageRef;
-			inMessageRef = (Message) eResolveProxy(oldInMessageRef);
-			if (inMessageRef != oldInMessageRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.OPERATION__IN_MESSAGE_REF,
-							oldInMessageRef, inMessageRef));
-			}
-		}
-		return inMessageRef;
+		return (Message) eDynamicGet(Bpmn2Package.OPERATION__IN_MESSAGE_REF,
+				Bpmn2Package.Literals.OPERATION__IN_MESSAGE_REF, true, true);
 	}
 
 	/**
@@ -166,7 +110,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public Message basicGetInMessageRef() {
-		return inMessageRef;
+		return (Message) eDynamicGet(Bpmn2Package.OPERATION__IN_MESSAGE_REF,
+				Bpmn2Package.Literals.OPERATION__IN_MESSAGE_REF, false, true);
 	}
 
 	/**
@@ -175,12 +120,9 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public void setInMessageRef(Message newInMessageRef) {
-		Message oldInMessageRef = inMessageRef;
-		inMessageRef = newInMessageRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.OPERATION__IN_MESSAGE_REF, oldInMessageRef,
-					inMessageRef));
+		eDynamicSet(Bpmn2Package.OPERATION__IN_MESSAGE_REF,
+				Bpmn2Package.Literals.OPERATION__IN_MESSAGE_REF,
+				newInMessageRef);
 	}
 
 	/**
@@ -189,17 +131,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public Message getOutMessageRef() {
-		if (outMessageRef != null && outMessageRef.eIsProxy()) {
-			InternalEObject oldOutMessageRef = (InternalEObject) outMessageRef;
-			outMessageRef = (Message) eResolveProxy(oldOutMessageRef);
-			if (outMessageRef != oldOutMessageRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.OPERATION__OUT_MESSAGE_REF,
-							oldOutMessageRef, outMessageRef));
-			}
-		}
-		return outMessageRef;
+		return (Message) eDynamicGet(Bpmn2Package.OPERATION__OUT_MESSAGE_REF,
+				Bpmn2Package.Literals.OPERATION__OUT_MESSAGE_REF, true, true);
 	}
 
 	/**
@@ -208,7 +141,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public Message basicGetOutMessageRef() {
-		return outMessageRef;
+		return (Message) eDynamicGet(Bpmn2Package.OPERATION__OUT_MESSAGE_REF,
+				Bpmn2Package.Literals.OPERATION__OUT_MESSAGE_REF, false, true);
 	}
 
 	/**
@@ -217,12 +151,9 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public void setOutMessageRef(Message newOutMessageRef) {
-		Message oldOutMessageRef = outMessageRef;
-		outMessageRef = newOutMessageRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.OPERATION__OUT_MESSAGE_REF, oldOutMessageRef,
-					outMessageRef));
+		eDynamicSet(Bpmn2Package.OPERATION__OUT_MESSAGE_REF,
+				Bpmn2Package.Literals.OPERATION__OUT_MESSAGE_REF,
+				newOutMessageRef);
 	}
 
 	/**
@@ -232,12 +163,9 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<org.obeonetwork.dsl.bpmn2.Error> getErrorRefs() {
-		if (errorRefs == null) {
-			errorRefs = new EObjectResolvingEList<org.obeonetwork.dsl.bpmn2.Error>(
-					org.obeonetwork.dsl.bpmn2.Error.class, this,
-					Bpmn2Package.OPERATION__ERROR_REFS);
-		}
-		return errorRefs;
+		return (EList<org.obeonetwork.dsl.bpmn2.Error>) eDynamicGet(
+				Bpmn2Package.OPERATION__ERROR_REFS,
+				Bpmn2Package.Literals.OPERATION__ERROR_REFS, true, true);
 	}
 
 	/**
@@ -246,17 +174,9 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public EObject getImplementationRef() {
-		if (implementationRef != null && implementationRef.eIsProxy()) {
-			InternalEObject oldImplementationRef = (InternalEObject) implementationRef;
-			implementationRef = eResolveProxy(oldImplementationRef);
-			if (implementationRef != oldImplementationRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.OPERATION__IMPLEMENTATION_REF,
-							oldImplementationRef, implementationRef));
-			}
-		}
-		return implementationRef;
+		return (EObject) eDynamicGet(
+				Bpmn2Package.OPERATION__IMPLEMENTATION_REF,
+				Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF, true, true);
 	}
 
 	/**
@@ -265,7 +185,10 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public EObject basicGetImplementationRef() {
-		return implementationRef;
+		return (EObject) eDynamicGet(
+				Bpmn2Package.OPERATION__IMPLEMENTATION_REF,
+				Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF, false,
+				true);
 	}
 
 	/**
@@ -274,12 +197,9 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public void setImplementationRef(EObject newImplementationRef) {
-		EObject oldImplementationRef = implementationRef;
-		implementationRef = newImplementationRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.OPERATION__IMPLEMENTATION_REF,
-					oldImplementationRef, implementationRef));
+		eDynamicSet(Bpmn2Package.OPERATION__IMPLEMENTATION_REF,
+				Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF,
+				newImplementationRef);
 	}
 
 	/**
@@ -376,35 +296,18 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.OPERATION__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
-			return inMessageRef != null;
+			return basicGetInMessageRef() != null;
 		case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
-			return outMessageRef != null;
+			return basicGetOutMessageRef() != null;
 		case Bpmn2Package.OPERATION__ERROR_REFS:
-			return errorRefs != null && !errorRefs.isEmpty();
+			return !getErrorRefs().isEmpty();
 		case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
-			return implementationRef != null;
+			return basicGetImplementationRef() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //OperationImpl

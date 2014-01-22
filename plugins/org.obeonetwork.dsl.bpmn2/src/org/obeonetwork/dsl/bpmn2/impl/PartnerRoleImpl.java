@@ -49,24 +49,6 @@ public class PartnerRoleImpl extends RootElementImpl implements PartnerRole {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getParticipantRef() <em>Participant Ref</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParticipantRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Participant> participantRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -93,7 +75,8 @@ public class PartnerRoleImpl extends RootElementImpl implements PartnerRole {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.PARTNER_ROLE__NAME,
+				Bpmn2Package.Literals.PARTNER_ROLE__NAME, true, true);
 	}
 
 	/**
@@ -102,11 +85,8 @@ public class PartnerRoleImpl extends RootElementImpl implements PartnerRole {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.PARTNER_ROLE__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.PARTNER_ROLE__NAME,
+				Bpmn2Package.Literals.PARTNER_ROLE__NAME, newName);
 	}
 
 	/**
@@ -116,12 +96,9 @@ public class PartnerRoleImpl extends RootElementImpl implements PartnerRole {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Participant> getParticipantRef() {
-		if (participantRef == null) {
-			participantRef = new EObjectResolvingEList<Participant>(
-					Participant.class, this,
-					Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF);
-		}
-		return participantRef;
+		return (EList<Participant>) eDynamicGet(
+				Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF,
+				Bpmn2Package.Literals.PARTNER_ROLE__PARTICIPANT_REF, true, true);
 	}
 
 	/**
@@ -188,29 +165,12 @@ public class PartnerRoleImpl extends RootElementImpl implements PartnerRole {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.PARTNER_ROLE__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF:
-			return participantRef != null && !participantRef.isEmpty();
+			return !getParticipantRef().isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //PartnerRoleImpl

@@ -49,42 +49,6 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getSourceRef() <em>Source Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSourceRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected InteractionNode sourceRef;
-	/**
-	 * The cached value of the '{@link #getTargetRef() <em>Target Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected InteractionNode targetRef;
-	/**
-	 * The cached value of the '{@link #getMessageRef() <em>Message Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMessageRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Message messageRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,7 +75,8 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.MESSAGE_FLOW__NAME,
+				Bpmn2Package.Literals.MESSAGE_FLOW__NAME, true, true);
 	}
 
 	/**
@@ -120,11 +85,8 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.MESSAGE_FLOW__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.MESSAGE_FLOW__NAME,
+				Bpmn2Package.Literals.MESSAGE_FLOW__NAME, newName);
 	}
 
 	/**
@@ -133,17 +95,9 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public InteractionNode getSourceRef() {
-		if (sourceRef != null && sourceRef.eIsProxy()) {
-			InternalEObject oldSourceRef = (InternalEObject) sourceRef;
-			sourceRef = (InteractionNode) eResolveProxy(oldSourceRef);
-			if (sourceRef != oldSourceRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.MESSAGE_FLOW__SOURCE_REF,
-							oldSourceRef, sourceRef));
-			}
-		}
-		return sourceRef;
+		return (InteractionNode) eDynamicGet(
+				Bpmn2Package.MESSAGE_FLOW__SOURCE_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW__SOURCE_REF, true, true);
 	}
 
 	/**
@@ -152,7 +106,9 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public InteractionNode basicGetSourceRef() {
-		return sourceRef;
+		return (InteractionNode) eDynamicGet(
+				Bpmn2Package.MESSAGE_FLOW__SOURCE_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW__SOURCE_REF, false, true);
 	}
 
 	/**
@@ -161,12 +117,8 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public void setSourceRef(InteractionNode newSourceRef) {
-		InteractionNode oldSourceRef = sourceRef;
-		sourceRef = newSourceRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.MESSAGE_FLOW__SOURCE_REF, oldSourceRef,
-					sourceRef));
+		eDynamicSet(Bpmn2Package.MESSAGE_FLOW__SOURCE_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW__SOURCE_REF, newSourceRef);
 	}
 
 	/**
@@ -175,17 +127,9 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public InteractionNode getTargetRef() {
-		if (targetRef != null && targetRef.eIsProxy()) {
-			InternalEObject oldTargetRef = (InternalEObject) targetRef;
-			targetRef = (InteractionNode) eResolveProxy(oldTargetRef);
-			if (targetRef != oldTargetRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.MESSAGE_FLOW__TARGET_REF,
-							oldTargetRef, targetRef));
-			}
-		}
-		return targetRef;
+		return (InteractionNode) eDynamicGet(
+				Bpmn2Package.MESSAGE_FLOW__TARGET_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW__TARGET_REF, true, true);
 	}
 
 	/**
@@ -194,7 +138,9 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public InteractionNode basicGetTargetRef() {
-		return targetRef;
+		return (InteractionNode) eDynamicGet(
+				Bpmn2Package.MESSAGE_FLOW__TARGET_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW__TARGET_REF, false, true);
 	}
 
 	/**
@@ -203,12 +149,8 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public void setTargetRef(InteractionNode newTargetRef) {
-		InteractionNode oldTargetRef = targetRef;
-		targetRef = newTargetRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.MESSAGE_FLOW__TARGET_REF, oldTargetRef,
-					targetRef));
+		eDynamicSet(Bpmn2Package.MESSAGE_FLOW__TARGET_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW__TARGET_REF, newTargetRef);
 	}
 
 	/**
@@ -217,17 +159,8 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public Message getMessageRef() {
-		if (messageRef != null && messageRef.eIsProxy()) {
-			InternalEObject oldMessageRef = (InternalEObject) messageRef;
-			messageRef = (Message) eResolveProxy(oldMessageRef);
-			if (messageRef != oldMessageRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF,
-							oldMessageRef, messageRef));
-			}
-		}
-		return messageRef;
+		return (Message) eDynamicGet(Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW__MESSAGE_REF, true, true);
 	}
 
 	/**
@@ -236,7 +169,8 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public Message basicGetMessageRef() {
-		return messageRef;
+		return (Message) eDynamicGet(Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW__MESSAGE_REF, false, true);
 	}
 
 	/**
@@ -245,12 +179,8 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public void setMessageRef(Message newMessageRef) {
-		Message oldMessageRef = messageRef;
-		messageRef = newMessageRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF, oldMessageRef,
-					messageRef));
+		eDynamicSet(Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW__MESSAGE_REF, newMessageRef);
 	}
 
 	/**
@@ -336,33 +266,16 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.MESSAGE_FLOW__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.MESSAGE_FLOW__SOURCE_REF:
-			return sourceRef != null;
+			return basicGetSourceRef() != null;
 		case Bpmn2Package.MESSAGE_FLOW__TARGET_REF:
-			return targetRef != null;
+			return basicGetTargetRef() != null;
 		case Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF:
-			return messageRef != null;
+			return basicGetMessageRef() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //MessageFlowImpl

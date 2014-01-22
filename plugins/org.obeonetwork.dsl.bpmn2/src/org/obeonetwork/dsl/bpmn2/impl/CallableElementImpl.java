@@ -58,42 +58,6 @@ public abstract class CallableElementImpl extends RootElementImpl implements
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getIoSpecification() <em>Io Specification</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIoSpecification()
-	 * @generated
-	 * @ordered
-	 */
-	protected InputOutputSpecification ioSpecification;
-	/**
-	 * The cached value of the '{@link #getSupportedInterfaceRefs() <em>Supported Interface Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSupportedInterfaceRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Interface> supportedInterfaceRefs;
-	/**
-	 * The cached value of the '{@link #getIoBinding() <em>Io Binding</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIoBinding()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<InputOutputBinding> ioBinding;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,7 +84,8 @@ public abstract class CallableElementImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.CALLABLE_ELEMENT__NAME,
+				Bpmn2Package.Literals.CALLABLE_ELEMENT__NAME, true, true);
 	}
 
 	/**
@@ -129,11 +94,8 @@ public abstract class CallableElementImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CALLABLE_ELEMENT__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.CALLABLE_ELEMENT__NAME,
+				Bpmn2Package.Literals.CALLABLE_ELEMENT__NAME, newName);
 	}
 
 	/**
@@ -142,7 +104,10 @@ public abstract class CallableElementImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public InputOutputSpecification getIoSpecification() {
-		return ioSpecification;
+		return (InputOutputSpecification) eDynamicGet(
+				Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION,
+				Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_SPECIFICATION, true,
+				true);
 	}
 
 	/**
@@ -152,18 +117,8 @@ public abstract class CallableElementImpl extends RootElementImpl implements
 	 */
 	public NotificationChain basicSetIoSpecification(
 			InputOutputSpecification newIoSpecification, NotificationChain msgs) {
-		InputOutputSpecification oldIoSpecification = ioSpecification;
-		ioSpecification = newIoSpecification;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION,
-					oldIoSpecification, newIoSpecification);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newIoSpecification,
+				Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION, msgs);
 		return msgs;
 	}
 
@@ -173,29 +128,9 @@ public abstract class CallableElementImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public void setIoSpecification(InputOutputSpecification newIoSpecification) {
-		if (newIoSpecification != ioSpecification) {
-			NotificationChain msgs = null;
-			if (ioSpecification != null)
-				msgs = ((InternalEObject) ioSpecification)
-						.eInverseRemove(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION,
-								null, msgs);
-			if (newIoSpecification != null)
-				msgs = ((InternalEObject) newIoSpecification)
-						.eInverseAdd(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION,
-								null, msgs);
-			msgs = basicSetIoSpecification(newIoSpecification, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION,
-					newIoSpecification, newIoSpecification));
+		eDynamicSet(Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION,
+				Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_SPECIFICATION,
+				newIoSpecification);
 	}
 
 	/**
@@ -205,12 +140,10 @@ public abstract class CallableElementImpl extends RootElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Interface> getSupportedInterfaceRefs() {
-		if (supportedInterfaceRefs == null) {
-			supportedInterfaceRefs = new EObjectResolvingEList<Interface>(
-					Interface.class, this,
-					Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS);
-		}
-		return supportedInterfaceRefs;
+		return (EList<Interface>) eDynamicGet(
+				Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS,
+				Bpmn2Package.Literals.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS,
+				true, true);
 	}
 
 	/**
@@ -220,12 +153,9 @@ public abstract class CallableElementImpl extends RootElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<InputOutputBinding> getIoBinding() {
-		if (ioBinding == null) {
-			ioBinding = new EObjectContainmentEList<InputOutputBinding>(
-					InputOutputBinding.class, this,
-					Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING);
-		}
-		return ioBinding;
+		return (EList<InputOutputBinding>) eDynamicGet(
+				Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING,
+				Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_BINDING, true, true);
 	}
 
 	/**
@@ -328,34 +258,16 @@ public abstract class CallableElementImpl extends RootElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CALLABLE_ELEMENT__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
-			return ioSpecification != null;
+			return getIoSpecification() != null;
 		case Bpmn2Package.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS:
-			return supportedInterfaceRefs != null
-					&& !supportedInterfaceRefs.isEmpty();
+			return !getSupportedInterfaceRefs().isEmpty();
 		case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
-			return ioBinding != null && !ioBinding.isEmpty();
+			return !getIoBinding().isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //CallableElementImpl

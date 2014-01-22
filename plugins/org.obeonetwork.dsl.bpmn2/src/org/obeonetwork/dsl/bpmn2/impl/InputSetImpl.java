@@ -56,51 +56,6 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getDataInputRefs() <em>Data Input Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDataInputRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataInput> dataInputRefs;
-	/**
-	 * The cached value of the '{@link #getOptionalInputRefs() <em>Optional Input Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOptionalInputRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataInput> optionalInputRefs;
-	/**
-	 * The cached value of the '{@link #getWhileExecutingInputRefs() <em>While Executing Input Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getWhileExecutingInputRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataInput> whileExecutingInputRefs;
-	/**
-	 * The cached value of the '{@link #getOutputSetRefs() <em>Output Set Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutputSetRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<OutputSet> outputSetRefs;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,7 +82,8 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.INPUT_SET__NAME,
+				Bpmn2Package.Literals.INPUT_SET__NAME, true, true);
 	}
 
 	/**
@@ -136,11 +92,8 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.INPUT_SET__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.INPUT_SET__NAME,
+				Bpmn2Package.Literals.INPUT_SET__NAME, newName);
 	}
 
 	/**
@@ -150,13 +103,9 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataInput> getDataInputRefs() {
-		if (dataInputRefs == null) {
-			dataInputRefs = new EObjectWithInverseEList.ManyInverse<DataInput>(
-					DataInput.class, this,
-					Bpmn2Package.INPUT_SET__DATA_INPUT_REFS,
-					Bpmn2Package.DATA_INPUT__INPUT_SET_REFS);
-		}
-		return dataInputRefs;
+		return (EList<DataInput>) eDynamicGet(
+				Bpmn2Package.INPUT_SET__DATA_INPUT_REFS,
+				Bpmn2Package.Literals.INPUT_SET__DATA_INPUT_REFS, true, true);
 	}
 
 	/**
@@ -166,13 +115,10 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataInput> getOptionalInputRefs() {
-		if (optionalInputRefs == null) {
-			optionalInputRefs = new EObjectWithInverseEList.ManyInverse<DataInput>(
-					DataInput.class, this,
-					Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS,
-					Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL);
-		}
-		return optionalInputRefs;
+		return (EList<DataInput>) eDynamicGet(
+				Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS,
+				Bpmn2Package.Literals.INPUT_SET__OPTIONAL_INPUT_REFS, true,
+				true);
 	}
 
 	/**
@@ -182,13 +128,10 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataInput> getWhileExecutingInputRefs() {
-		if (whileExecutingInputRefs == null) {
-			whileExecutingInputRefs = new EObjectWithInverseEList.ManyInverse<DataInput>(
-					DataInput.class, this,
-					Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS,
-					Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING);
-		}
-		return whileExecutingInputRefs;
+		return (EList<DataInput>) eDynamicGet(
+				Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS,
+				Bpmn2Package.Literals.INPUT_SET__WHILE_EXECUTING_INPUT_REFS,
+				true, true);
 	}
 
 	/**
@@ -198,13 +141,9 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<OutputSet> getOutputSetRefs() {
-		if (outputSetRefs == null) {
-			outputSetRefs = new EObjectWithInverseEList.ManyInverse<OutputSet>(
-					OutputSet.class, this,
-					Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS,
-					Bpmn2Package.OUTPUT_SET__INPUT_SET_REFS);
-		}
-		return outputSetRefs;
+		return (EList<OutputSet>) eDynamicGet(
+				Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS,
+				Bpmn2Package.Literals.INPUT_SET__OUTPUT_SET_REFS, true, true);
 	}
 
 	/**
@@ -352,36 +291,18 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.INPUT_SET__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
-			return dataInputRefs != null && !dataInputRefs.isEmpty();
+			return !getDataInputRefs().isEmpty();
 		case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
-			return optionalInputRefs != null && !optionalInputRefs.isEmpty();
+			return !getOptionalInputRefs().isEmpty();
 		case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-			return whileExecutingInputRefs != null
-					&& !whileExecutingInputRefs.isEmpty();
+			return !getWhileExecutingInputRefs().isEmpty();
 		case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
-			return outputSetRefs != null && !outputSetRefs.isEmpty();
+			return !getOutputSetRefs().isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //InputSetImpl

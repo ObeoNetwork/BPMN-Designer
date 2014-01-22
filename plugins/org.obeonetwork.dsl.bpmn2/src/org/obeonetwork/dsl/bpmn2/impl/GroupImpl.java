@@ -37,16 +37,6 @@ import org.obeonetwork.dsl.bpmn2.Group;
  */
 public class GroupImpl extends ArtifactImpl implements Group {
 	/**
-	 * The cached value of the '{@link #getCategoryValueRef() <em>Category Value Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCategoryValueRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected CategoryValue categoryValueRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -71,17 +61,9 @@ public class GroupImpl extends ArtifactImpl implements Group {
 	 * @generated
 	 */
 	public CategoryValue getCategoryValueRef() {
-		if (categoryValueRef != null && categoryValueRef.eIsProxy()) {
-			InternalEObject oldCategoryValueRef = (InternalEObject) categoryValueRef;
-			categoryValueRef = (CategoryValue) eResolveProxy(oldCategoryValueRef);
-			if (categoryValueRef != oldCategoryValueRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.GROUP__CATEGORY_VALUE_REF,
-							oldCategoryValueRef, categoryValueRef));
-			}
-		}
-		return categoryValueRef;
+		return (CategoryValue) eDynamicGet(
+				Bpmn2Package.GROUP__CATEGORY_VALUE_REF,
+				Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF, true, true);
 	}
 
 	/**
@@ -90,7 +72,9 @@ public class GroupImpl extends ArtifactImpl implements Group {
 	 * @generated
 	 */
 	public CategoryValue basicGetCategoryValueRef() {
-		return categoryValueRef;
+		return (CategoryValue) eDynamicGet(
+				Bpmn2Package.GROUP__CATEGORY_VALUE_REF,
+				Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF, false, true);
 	}
 
 	/**
@@ -99,12 +83,9 @@ public class GroupImpl extends ArtifactImpl implements Group {
 	 * @generated
 	 */
 	public void setCategoryValueRef(CategoryValue newCategoryValueRef) {
-		CategoryValue oldCategoryValueRef = categoryValueRef;
-		categoryValueRef = newCategoryValueRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.GROUP__CATEGORY_VALUE_REF,
-					oldCategoryValueRef, categoryValueRef));
+		eDynamicSet(Bpmn2Package.GROUP__CATEGORY_VALUE_REF,
+				Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF,
+				newCategoryValueRef);
 	}
 
 	/**
@@ -162,7 +143,7 @@ public class GroupImpl extends ArtifactImpl implements Group {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
-			return categoryValueRef != null;
+			return basicGetCategoryValueRef() != null;
 		}
 		return super.eIsSet(featureID);
 	}

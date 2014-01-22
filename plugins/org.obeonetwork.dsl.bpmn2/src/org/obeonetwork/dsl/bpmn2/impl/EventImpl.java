@@ -46,34 +46,6 @@ import org.obeonetwork.dsl.bpmn2.Property;
  */
 public abstract class EventImpl extends FlowNodeImpl implements Event {
 	/**
-	 * The cached value of the '{@link #getIncomingConversationLinks() <em>Incoming Conversation Links</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIncomingConversationLinks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ConversationLink> incomingConversationLinks;
-	/**
-	 * The cached value of the '{@link #getOutgoingConversationLinks() <em>Outgoing Conversation Links</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutgoingConversationLinks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ConversationLink> outgoingConversationLinks;
-	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProperties()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Property> properties;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -99,13 +71,10 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getIncomingConversationLinks() {
-		if (incomingConversationLinks == null) {
-			incomingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
-					ConversationLink.class, this,
-					Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS,
-					Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
-		}
-		return incomingConversationLinks;
+		return (EList<ConversationLink>) eDynamicGet(
+				Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
+				true, true);
 	}
 
 	/**
@@ -115,13 +84,10 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getOutgoingConversationLinks() {
-		if (outgoingConversationLinks == null) {
-			outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
-					ConversationLink.class, this,
-					Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS,
-					Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
-		}
-		return outgoingConversationLinks;
+		return (EList<ConversationLink>) eDynamicGet(
+				Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
+				true, true);
 	}
 
 	/**
@@ -131,11 +97,8 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Property> getProperties() {
-		if (properties == null) {
-			properties = new EObjectContainmentEList<Property>(Property.class,
-					this, Bpmn2Package.EVENT__PROPERTIES);
-		}
-		return properties;
+		return (EList<Property>) eDynamicGet(Bpmn2Package.EVENT__PROPERTIES,
+				Bpmn2Package.Literals.EVENT__PROPERTIES, true, true);
 	}
 
 	/**
@@ -239,13 +202,11 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-			return incomingConversationLinks != null
-					&& !incomingConversationLinks.isEmpty();
+			return !getIncomingConversationLinks().isEmpty();
 		case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-			return outgoingConversationLinks != null
-					&& !outgoingConversationLinks.isEmpty();
+			return !getOutgoingConversationLinks().isEmpty();
 		case Bpmn2Package.EVENT__PROPERTIES:
-			return properties != null && !properties.isEmpty();
+			return !getProperties().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

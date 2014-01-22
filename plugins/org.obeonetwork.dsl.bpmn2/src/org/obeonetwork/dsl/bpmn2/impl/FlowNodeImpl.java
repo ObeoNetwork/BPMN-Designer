@@ -44,34 +44,6 @@ import org.obeonetwork.dsl.bpmn2.SequenceFlow;
  */
 public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
 	/**
-	 * The cached value of the '{@link #getOutgoing() <em>Outgoing</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutgoing()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SequenceFlow> outgoing;
-	/**
-	 * The cached value of the '{@link #getIncoming() <em>Incoming</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIncoming()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SequenceFlow> incoming;
-	/**
-	 * The cached value of the '{@link #getLanes() <em>Lanes</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLanes()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Lane> lanes;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -97,12 +69,9 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<SequenceFlow> getOutgoing() {
-		if (outgoing == null) {
-			outgoing = new EObjectWithInverseResolvingEList<SequenceFlow>(
-					SequenceFlow.class, this, Bpmn2Package.FLOW_NODE__OUTGOING,
-					Bpmn2Package.SEQUENCE_FLOW__SOURCE_REF);
-		}
-		return outgoing;
+		return (EList<SequenceFlow>) eDynamicGet(
+				Bpmn2Package.FLOW_NODE__OUTGOING,
+				Bpmn2Package.Literals.FLOW_NODE__OUTGOING, true, true);
 	}
 
 	/**
@@ -112,12 +81,9 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<SequenceFlow> getIncoming() {
-		if (incoming == null) {
-			incoming = new EObjectWithInverseResolvingEList<SequenceFlow>(
-					SequenceFlow.class, this, Bpmn2Package.FLOW_NODE__INCOMING,
-					Bpmn2Package.SEQUENCE_FLOW__TARGET_REF);
-		}
-		return incoming;
+		return (EList<SequenceFlow>) eDynamicGet(
+				Bpmn2Package.FLOW_NODE__INCOMING,
+				Bpmn2Package.Literals.FLOW_NODE__INCOMING, true, true);
 	}
 
 	/**
@@ -127,12 +93,8 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Lane> getLanes() {
-		if (lanes == null) {
-			lanes = new EObjectWithInverseResolvingEList.ManyInverse<Lane>(
-					Lane.class, this, Bpmn2Package.FLOW_NODE__LANES,
-					Bpmn2Package.LANE__FLOW_NODE_REFS);
-		}
-		return lanes;
+		return (EList<Lane>) eDynamicGet(Bpmn2Package.FLOW_NODE__LANES,
+				Bpmn2Package.Literals.FLOW_NODE__LANES, true, true);
 	}
 
 	/**
@@ -252,11 +214,11 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.FLOW_NODE__OUTGOING:
-			return outgoing != null && !outgoing.isEmpty();
+			return !getOutgoing().isEmpty();
 		case Bpmn2Package.FLOW_NODE__INCOMING:
-			return incoming != null && !incoming.isEmpty();
+			return !getIncoming().isEmpty();
 		case Bpmn2Package.FLOW_NODE__LANES:
-			return lanes != null && !lanes.isEmpty();
+			return !getLanes().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

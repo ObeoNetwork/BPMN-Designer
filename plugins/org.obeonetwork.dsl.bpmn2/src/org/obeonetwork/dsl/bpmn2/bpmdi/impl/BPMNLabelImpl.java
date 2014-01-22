@@ -38,16 +38,6 @@ import org.obeonetwork.dsl.dd.di.impl.LabelImpl;
  */
 public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
 	/**
-	 * The cached value of the '{@link #getLabelStyle() <em>Label Style</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLabelStyle()
-	 * @generated
-	 * @ordered
-	 */
-	protected BPMNLabelStyle labelStyle;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -72,17 +62,9 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
 	 * @generated
 	 */
 	public BPMNLabelStyle getLabelStyle() {
-		if (labelStyle != null && labelStyle.eIsProxy()) {
-			InternalEObject oldLabelStyle = (InternalEObject) labelStyle;
-			labelStyle = (BPMNLabelStyle) eResolveProxy(oldLabelStyle);
-			if (labelStyle != oldLabelStyle) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							BpmnDiPackage.BPMN_LABEL__LABEL_STYLE,
-							oldLabelStyle, labelStyle));
-			}
-		}
-		return labelStyle;
+		return (BPMNLabelStyle) eDynamicGet(
+				BpmnDiPackage.BPMN_LABEL__LABEL_STYLE,
+				BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE, true, true);
 	}
 
 	/**
@@ -91,7 +73,9 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
 	 * @generated
 	 */
 	public BPMNLabelStyle basicGetLabelStyle() {
-		return labelStyle;
+		return (BPMNLabelStyle) eDynamicGet(
+				BpmnDiPackage.BPMN_LABEL__LABEL_STYLE,
+				BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE, false, true);
 	}
 
 	/**
@@ -100,12 +84,8 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
 	 * @generated
 	 */
 	public void setLabelStyle(BPMNLabelStyle newLabelStyle) {
-		BPMNLabelStyle oldLabelStyle = labelStyle;
-		labelStyle = newLabelStyle;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					BpmnDiPackage.BPMN_LABEL__LABEL_STYLE, oldLabelStyle,
-					labelStyle));
+		eDynamicSet(BpmnDiPackage.BPMN_LABEL__LABEL_STYLE,
+				BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE, newLabelStyle);
 	}
 
 	/**
@@ -163,7 +143,7 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
-			return labelStyle != null;
+			return basicGetLabelStyle() != null;
 		}
 		return super.eIsSet(featureID);
 	}

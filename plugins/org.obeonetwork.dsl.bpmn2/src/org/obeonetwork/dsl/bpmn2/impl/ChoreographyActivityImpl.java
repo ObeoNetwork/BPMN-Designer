@@ -50,33 +50,6 @@ import org.obeonetwork.dsl.bpmn2.Participant;
 public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
 		ChoreographyActivity {
 	/**
-	 * The cached value of the '{@link #getParticipantRefs() <em>Participant Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParticipantRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Participant> participantRefs;
-	/**
-	 * The cached value of the '{@link #getInitiatingParticipantRef() <em>Initiating Participant Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInitiatingParticipantRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Participant initiatingParticipantRef;
-	/**
-	 * The cached value of the '{@link #getCorrelationKeys() <em>Correlation Keys</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCorrelationKeys()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CorrelationKey> correlationKeys;
-	/**
 	 * The default value of the '{@link #getLoopType() <em>Loop Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,15 +58,6 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
 	 * @ordered
 	 */
 	protected static final ChoreographyLoopType LOOP_TYPE_EDEFAULT = ChoreographyLoopType.NONE;
-	/**
-	 * The cached value of the '{@link #getLoopType() <em>Loop Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLoopType()
-	 * @generated
-	 * @ordered
-	 */
-	protected ChoreographyLoopType loopType = LOOP_TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -121,12 +85,10 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Participant> getParticipantRefs() {
-		if (participantRefs == null) {
-			participantRefs = new EObjectResolvingEList<Participant>(
-					Participant.class, this,
-					Bpmn2Package.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS);
-		}
-		return participantRefs;
+		return (EList<Participant>) eDynamicGet(
+				Bpmn2Package.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS,
+				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS,
+				true, true);
 	}
 
 	/**
@@ -135,21 +97,10 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
 	 * @generated
 	 */
 	public Participant getInitiatingParticipantRef() {
-		if (initiatingParticipantRef != null
-				&& initiatingParticipantRef.eIsProxy()) {
-			InternalEObject oldInitiatingParticipantRef = (InternalEObject) initiatingParticipantRef;
-			initiatingParticipantRef = (Participant) eResolveProxy(oldInitiatingParticipantRef);
-			if (initiatingParticipantRef != oldInitiatingParticipantRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							Bpmn2Package.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF,
-							oldInitiatingParticipantRef,
-							initiatingParticipantRef));
-			}
-		}
-		return initiatingParticipantRef;
+		return (Participant) eDynamicGet(
+				Bpmn2Package.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF,
+				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF,
+				true, true);
 	}
 
 	/**
@@ -158,7 +109,10 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
 	 * @generated
 	 */
 	public Participant basicGetInitiatingParticipantRef() {
-		return initiatingParticipantRef;
+		return (Participant) eDynamicGet(
+				Bpmn2Package.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF,
+				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF,
+				false, true);
 	}
 
 	/**
@@ -168,14 +122,10 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
 	 */
 	public void setInitiatingParticipantRef(
 			Participant newInitiatingParticipantRef) {
-		Participant oldInitiatingParticipantRef = initiatingParticipantRef;
-		initiatingParticipantRef = newInitiatingParticipantRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(
-					this,
-					Notification.SET,
-					Bpmn2Package.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF,
-					oldInitiatingParticipantRef, initiatingParticipantRef));
+		eDynamicSet(
+				Bpmn2Package.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF,
+				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF,
+				newInitiatingParticipantRef);
 	}
 
 	/**
@@ -185,12 +135,10 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<CorrelationKey> getCorrelationKeys() {
-		if (correlationKeys == null) {
-			correlationKeys = new EObjectContainmentEList<CorrelationKey>(
-					CorrelationKey.class, this,
-					Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS);
-		}
-		return correlationKeys;
+		return (EList<CorrelationKey>) eDynamicGet(
+				Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS,
+				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS,
+				true, true);
 	}
 
 	/**
@@ -199,7 +147,10 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
 	 * @generated
 	 */
 	public ChoreographyLoopType getLoopType() {
-		return loopType;
+		return (ChoreographyLoopType) eDynamicGet(
+				Bpmn2Package.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE,
+				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE, true,
+				true);
 	}
 
 	/**
@@ -208,12 +159,9 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
 	 * @generated
 	 */
 	public void setLoopType(ChoreographyLoopType newLoopType) {
-		ChoreographyLoopType oldLoopType = loopType;
-		loopType = newLoopType == null ? LOOP_TYPE_EDEFAULT : newLoopType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE, oldLoopType,
-					loopType));
+		eDynamicSet(Bpmn2Package.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE,
+				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE,
+				newLoopType);
 	}
 
 	/**
@@ -316,32 +264,15 @@ public abstract class ChoreographyActivityImpl extends FlowNodeImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS:
-			return participantRefs != null && !participantRefs.isEmpty();
+			return !getParticipantRefs().isEmpty();
 		case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF:
-			return initiatingParticipantRef != null;
+			return basicGetInitiatingParticipantRef() != null;
 		case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS:
-			return correlationKeys != null && !correlationKeys.isEmpty();
+			return !getCorrelationKeys().isEmpty();
 		case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE:
-			return loopType != LOOP_TYPE_EDEFAULT;
+			return getLoopType() != LOOP_TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (loopType: ");
-		result.append(loopType);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ChoreographyActivityImpl

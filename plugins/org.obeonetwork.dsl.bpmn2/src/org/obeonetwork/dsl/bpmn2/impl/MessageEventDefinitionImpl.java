@@ -40,25 +40,6 @@ import org.obeonetwork.dsl.bpmn2.Operation;
 public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 		MessageEventDefinition {
 	/**
-	 * The cached value of the '{@link #getMessageRef() <em>Message Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMessageRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Message messageRef;
-	/**
-	 * The cached value of the '{@link #getOperationRef() <em>Operation Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOperationRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Operation operationRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -83,17 +64,10 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Message getMessageRef() {
-		if (messageRef != null && messageRef.eIsProxy()) {
-			InternalEObject oldMessageRef = (InternalEObject) messageRef;
-			messageRef = (Message) eResolveProxy(oldMessageRef);
-			if (messageRef != oldMessageRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
-							oldMessageRef, messageRef));
-			}
-		}
-		return messageRef;
+		return (Message) eDynamicGet(
+				Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
+				true, true);
 	}
 
 	/**
@@ -102,7 +76,10 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Message basicGetMessageRef() {
-		return messageRef;
+		return (Message) eDynamicGet(
+				Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
+				false, true);
 	}
 
 	/**
@@ -111,12 +88,9 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public void setMessageRef(Message newMessageRef) {
-		Message oldMessageRef = messageRef;
-		messageRef = newMessageRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
-					oldMessageRef, messageRef));
+		eDynamicSet(Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
+				newMessageRef);
 	}
 
 	/**
@@ -125,19 +99,10 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Operation getOperationRef() {
-		if (operationRef != null && operationRef.eIsProxy()) {
-			InternalEObject oldOperationRef = (InternalEObject) operationRef;
-			operationRef = (Operation) eResolveProxy(oldOperationRef);
-			if (operationRef != oldOperationRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
-							oldOperationRef, operationRef));
-			}
-		}
-		return operationRef;
+		return (Operation) eDynamicGet(
+				Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
+				true, true);
 	}
 
 	/**
@@ -146,7 +111,10 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Operation basicGetOperationRef() {
-		return operationRef;
+		return (Operation) eDynamicGet(
+				Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
+				false, true);
 	}
 
 	/**
@@ -155,12 +123,9 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public void setOperationRef(Operation newOperationRef) {
-		Operation oldOperationRef = operationRef;
-		operationRef = newOperationRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
-					oldOperationRef, operationRef));
+		eDynamicSet(Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
+				newOperationRef);
 	}
 
 	/**
@@ -228,9 +193,9 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF:
-			return messageRef != null;
+			return basicGetMessageRef() != null;
 		case Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF:
-			return operationRef != null;
+			return basicGetOperationRef() != null;
 		}
 		return super.eIsSet(featureID);
 	}

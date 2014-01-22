@@ -54,24 +54,6 @@ import org.obeonetwork.dsl.bpmn2.ParticipantMultiplicity;
  */
 public class ParticipantImpl extends BaseElementImpl implements Participant {
 	/**
-	 * The cached value of the '{@link #getIncomingConversationLinks() <em>Incoming Conversation Links</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIncomingConversationLinks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ConversationLink> incomingConversationLinks;
-	/**
-	 * The cached value of the '{@link #getOutgoingConversationLinks() <em>Outgoing Conversation Links</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutgoingConversationLinks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ConversationLink> outgoingConversationLinks;
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -80,51 +62,6 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getInterfaceRefs() <em>Interface Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInterfaceRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Interface> interfaceRefs;
-	/**
-	 * The cached value of the '{@link #getParticipantMultiplicity() <em>Participant Multiplicity</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParticipantMultiplicity()
-	 * @generated
-	 * @ordered
-	 */
-	protected ParticipantMultiplicity participantMultiplicity;
-	/**
-	 * The cached value of the '{@link #getEndPointRefs() <em>End Point Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEndPointRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EndPoint> endPointRefs;
-	/**
-	 * The cached value of the '{@link #getProcessRef() <em>Process Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProcessRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected org.obeonetwork.dsl.bpmn2.Process processRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,13 +89,10 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getIncomingConversationLinks() {
-		if (incomingConversationLinks == null) {
-			incomingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
-					ConversationLink.class, this,
-					Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS,
-					Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
-		}
-		return incomingConversationLinks;
+		return (EList<ConversationLink>) eDynamicGet(
+				Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
+				true, true);
 	}
 
 	/**
@@ -168,13 +102,10 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getOutgoingConversationLinks() {
-		if (outgoingConversationLinks == null) {
-			outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
-					ConversationLink.class, this,
-					Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS,
-					Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
-		}
-		return outgoingConversationLinks;
+		return (EList<ConversationLink>) eDynamicGet(
+				Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
+				true, true);
 	}
 
 	/**
@@ -183,7 +114,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.PARTICIPANT__NAME,
+				Bpmn2Package.Literals.PARTICIPANT__NAME, true, true);
 	}
 
 	/**
@@ -192,11 +124,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.PARTICIPANT__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.PARTICIPANT__NAME,
+				Bpmn2Package.Literals.PARTICIPANT__NAME, newName);
 	}
 
 	/**
@@ -206,12 +135,9 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Interface> getInterfaceRefs() {
-		if (interfaceRefs == null) {
-			interfaceRefs = new EObjectResolvingEList<Interface>(
-					Interface.class, this,
-					Bpmn2Package.PARTICIPANT__INTERFACE_REFS);
-		}
-		return interfaceRefs;
+		return (EList<Interface>) eDynamicGet(
+				Bpmn2Package.PARTICIPANT__INTERFACE_REFS,
+				Bpmn2Package.Literals.PARTICIPANT__INTERFACE_REFS, true, true);
 	}
 
 	/**
@@ -220,7 +146,10 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @generated
 	 */
 	public ParticipantMultiplicity getParticipantMultiplicity() {
-		return participantMultiplicity;
+		return (ParticipantMultiplicity) eDynamicGet(
+				Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
+				Bpmn2Package.Literals.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
+				true, true);
 	}
 
 	/**
@@ -231,18 +160,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	public NotificationChain basicSetParticipantMultiplicity(
 			ParticipantMultiplicity newParticipantMultiplicity,
 			NotificationChain msgs) {
-		ParticipantMultiplicity oldParticipantMultiplicity = participantMultiplicity;
-		participantMultiplicity = newParticipantMultiplicity;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
-					oldParticipantMultiplicity, newParticipantMultiplicity);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newParticipantMultiplicity,
+				Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY, msgs);
 		return msgs;
 	}
 
@@ -253,30 +172,9 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 */
 	public void setParticipantMultiplicity(
 			ParticipantMultiplicity newParticipantMultiplicity) {
-		if (newParticipantMultiplicity != participantMultiplicity) {
-			NotificationChain msgs = null;
-			if (participantMultiplicity != null)
-				msgs = ((InternalEObject) participantMultiplicity)
-						.eInverseRemove(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
-								null, msgs);
-			if (newParticipantMultiplicity != null)
-				msgs = ((InternalEObject) newParticipantMultiplicity)
-						.eInverseAdd(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
-								null, msgs);
-			msgs = basicSetParticipantMultiplicity(newParticipantMultiplicity,
-					msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
-					newParticipantMultiplicity, newParticipantMultiplicity));
+		eDynamicSet(Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
+				Bpmn2Package.Literals.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
+				newParticipantMultiplicity);
 	}
 
 	/**
@@ -286,11 +184,9 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<EndPoint> getEndPointRefs() {
-		if (endPointRefs == null) {
-			endPointRefs = new EObjectResolvingEList<EndPoint>(EndPoint.class,
-					this, Bpmn2Package.PARTICIPANT__END_POINT_REFS);
-		}
-		return endPointRefs;
+		return (EList<EndPoint>) eDynamicGet(
+				Bpmn2Package.PARTICIPANT__END_POINT_REFS,
+				Bpmn2Package.Literals.PARTICIPANT__END_POINT_REFS, true, true);
 	}
 
 	/**
@@ -299,17 +195,9 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @generated
 	 */
 	public org.obeonetwork.dsl.bpmn2.Process getProcessRef() {
-		if (processRef != null && processRef.eIsProxy()) {
-			InternalEObject oldProcessRef = (InternalEObject) processRef;
-			processRef = (org.obeonetwork.dsl.bpmn2.Process) eResolveProxy(oldProcessRef);
-			if (processRef != oldProcessRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.PARTICIPANT__PROCESS_REF,
-							oldProcessRef, processRef));
-			}
-		}
-		return processRef;
+		return (org.obeonetwork.dsl.bpmn2.Process) eDynamicGet(
+				Bpmn2Package.PARTICIPANT__PROCESS_REF,
+				Bpmn2Package.Literals.PARTICIPANT__PROCESS_REF, true, true);
 	}
 
 	/**
@@ -318,7 +206,9 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @generated
 	 */
 	public org.obeonetwork.dsl.bpmn2.Process basicGetProcessRef() {
-		return processRef;
+		return (org.obeonetwork.dsl.bpmn2.Process) eDynamicGet(
+				Bpmn2Package.PARTICIPANT__PROCESS_REF,
+				Bpmn2Package.Literals.PARTICIPANT__PROCESS_REF, false, true);
 	}
 
 	/**
@@ -327,12 +217,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @generated
 	 */
 	public void setProcessRef(org.obeonetwork.dsl.bpmn2.Process newProcessRef) {
-		org.obeonetwork.dsl.bpmn2.Process oldProcessRef = processRef;
-		processRef = newProcessRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.PARTICIPANT__PROCESS_REF, oldProcessRef,
-					processRef));
+		eDynamicSet(Bpmn2Package.PARTICIPANT__PROCESS_REF,
+				Bpmn2Package.Literals.PARTICIPANT__PROCESS_REF, newProcessRef);
 	}
 
 	/**
@@ -471,22 +357,20 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
-			return incomingConversationLinks != null
-					&& !incomingConversationLinks.isEmpty();
+			return !getIncomingConversationLinks().isEmpty();
 		case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
-			return outgoingConversationLinks != null
-					&& !outgoingConversationLinks.isEmpty();
+			return !getOutgoingConversationLinks().isEmpty();
 		case Bpmn2Package.PARTICIPANT__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
-			return interfaceRefs != null && !interfaceRefs.isEmpty();
+			return !getInterfaceRefs().isEmpty();
 		case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-			return participantMultiplicity != null;
+			return getParticipantMultiplicity() != null;
 		case Bpmn2Package.PARTICIPANT__END_POINT_REFS:
-			return endPointRefs != null && !endPointRefs.isEmpty();
+			return !getEndPointRefs().isEmpty();
 		case Bpmn2Package.PARTICIPANT__PROCESS_REF:
-			return processRef != null;
+			return basicGetProcessRef() != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -529,23 +413,6 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ParticipantImpl

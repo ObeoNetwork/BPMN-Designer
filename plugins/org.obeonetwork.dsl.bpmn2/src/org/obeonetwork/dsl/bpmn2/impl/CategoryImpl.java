@@ -44,15 +44,6 @@ import org.obeonetwork.dsl.bpmn2.CategoryValue;
  */
 public class CategoryImpl extends RootElementImpl implements Category {
 	/**
-	 * The cached value of the '{@link #getCategoryValue() <em>Category Value</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCategoryValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CategoryValue> categoryValue;
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,15 +52,6 @@ public class CategoryImpl extends RootElementImpl implements Category {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -97,12 +79,9 @@ public class CategoryImpl extends RootElementImpl implements Category {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<CategoryValue> getCategoryValue() {
-		if (categoryValue == null) {
-			categoryValue = new EObjectContainmentEList<CategoryValue>(
-					CategoryValue.class, this,
-					Bpmn2Package.CATEGORY__CATEGORY_VALUE);
-		}
-		return categoryValue;
+		return (EList<CategoryValue>) eDynamicGet(
+				Bpmn2Package.CATEGORY__CATEGORY_VALUE,
+				Bpmn2Package.Literals.CATEGORY__CATEGORY_VALUE, true, true);
 	}
 
 	/**
@@ -111,7 +90,8 @@ public class CategoryImpl extends RootElementImpl implements Category {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.CATEGORY__NAME,
+				Bpmn2Package.Literals.CATEGORY__NAME, true, true);
 	}
 
 	/**
@@ -120,11 +100,8 @@ public class CategoryImpl extends RootElementImpl implements Category {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CATEGORY__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.CATEGORY__NAME,
+				Bpmn2Package.Literals.CATEGORY__NAME, newName);
 	}
 
 	/**
@@ -207,29 +184,12 @@ public class CategoryImpl extends RootElementImpl implements Category {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-			return categoryValue != null && !categoryValue.isEmpty();
+			return !getCategoryValue().isEmpty();
 		case Bpmn2Package.CATEGORY__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //CategoryImpl

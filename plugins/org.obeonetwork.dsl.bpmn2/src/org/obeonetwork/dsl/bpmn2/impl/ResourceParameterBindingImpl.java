@@ -18,6 +18,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
@@ -39,27 +40,8 @@ import org.obeonetwork.dsl.bpmn2.ResourceParameterBinding;
  *
  * @generated
  */
-public class ResourceParameterBindingImpl extends EObjectImpl implements
+public class ResourceParameterBindingImpl extends CDOObjectImpl implements
 		ResourceParameterBinding {
-	/**
-	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpression()
-	 * @generated
-	 * @ordered
-	 */
-	protected Expression expression;
-	/**
-	 * The cached value of the '{@link #getParameterRef() <em>Parameter Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParameterRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected ResourceParameter parameterRef;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,8 +66,21 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Expression getExpression() {
-		return expression;
+		return (Expression) eDynamicGet(
+				Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION,
+				Bpmn2Package.Literals.RESOURCE_PARAMETER_BINDING__EXPRESSION,
+				true, true);
 	}
 
 	/**
@@ -95,18 +90,8 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements
 	 */
 	public NotificationChain basicSetExpression(Expression newExpression,
 			NotificationChain msgs) {
-		Expression oldExpression = expression;
-		expression = newExpression;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION,
-					oldExpression, newExpression);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newExpression,
+				Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION, msgs);
 		return msgs;
 	}
 
@@ -116,29 +101,9 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public void setExpression(Expression newExpression) {
-		if (newExpression != expression) {
-			NotificationChain msgs = null;
-			if (expression != null)
-				msgs = ((InternalEObject) expression)
-						.eInverseRemove(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION,
-								null, msgs);
-			if (newExpression != null)
-				msgs = ((InternalEObject) newExpression)
-						.eInverseAdd(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION,
-								null, msgs);
-			msgs = basicSetExpression(newExpression, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION,
-					newExpression, newExpression));
+		eDynamicSet(Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION,
+				Bpmn2Package.Literals.RESOURCE_PARAMETER_BINDING__EXPRESSION,
+				newExpression);
 	}
 
 	/**
@@ -147,19 +112,10 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public ResourceParameter getParameterRef() {
-		if (parameterRef != null && parameterRef.eIsProxy()) {
-			InternalEObject oldParameterRef = (InternalEObject) parameterRef;
-			parameterRef = (ResourceParameter) eResolveProxy(oldParameterRef);
-			if (parameterRef != oldParameterRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF,
-							oldParameterRef, parameterRef));
-			}
-		}
-		return parameterRef;
+		return (ResourceParameter) eDynamicGet(
+				Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF,
+				Bpmn2Package.Literals.RESOURCE_PARAMETER_BINDING__PARAMETER_REF,
+				true, true);
 	}
 
 	/**
@@ -168,7 +124,10 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public ResourceParameter basicGetParameterRef() {
-		return parameterRef;
+		return (ResourceParameter) eDynamicGet(
+				Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF,
+				Bpmn2Package.Literals.RESOURCE_PARAMETER_BINDING__PARAMETER_REF,
+				false, true);
 	}
 
 	/**
@@ -177,12 +136,10 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public void setParameterRef(ResourceParameter newParameterRef) {
-		ResourceParameter oldParameterRef = parameterRef;
-		parameterRef = newParameterRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF,
-					oldParameterRef, parameterRef));
+		eDynamicSet(
+				Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF,
+				Bpmn2Package.Literals.RESOURCE_PARAMETER_BINDING__PARAMETER_REF,
+				newParameterRef);
 	}
 
 	/**
@@ -263,9 +220,9 @@ public class ResourceParameterBindingImpl extends EObjectImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.RESOURCE_PARAMETER_BINDING__EXPRESSION:
-			return expression != null;
+			return getExpression() != null;
 		case Bpmn2Package.RESOURCE_PARAMETER_BINDING__PARAMETER_REF:
-			return parameterRef != null;
+			return basicGetParameterRef() != null;
 		}
 		return super.eIsSet(featureID);
 	}

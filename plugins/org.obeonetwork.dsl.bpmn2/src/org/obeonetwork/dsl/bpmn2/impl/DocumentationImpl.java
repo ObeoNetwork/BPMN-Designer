@@ -45,15 +45,6 @@ public class DocumentationImpl extends BaseElementImpl implements Documentation 
 	 */
 	protected static final String TEXT_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getText()
-	 * @generated
-	 * @ordered
-	 */
-	protected String text = TEXT_EDEFAULT;
-	/**
 	 * The default value of the '{@link #getTextFormat() <em>Text Format</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,15 +53,6 @@ public class DocumentationImpl extends BaseElementImpl implements Documentation 
 	 * @ordered
 	 */
 	protected static final String TEXT_FORMAT_EDEFAULT = "text/plain";
-	/**
-	 * The cached value of the '{@link #getTextFormat() <em>Text Format</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTextFormat()
-	 * @generated
-	 * @ordered
-	 */
-	protected String textFormat = TEXT_FORMAT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -97,7 +79,8 @@ public class DocumentationImpl extends BaseElementImpl implements Documentation 
 	 * @generated
 	 */
 	public String getText() {
-		return text;
+		return (String) eDynamicGet(Bpmn2Package.DOCUMENTATION__TEXT,
+				Bpmn2Package.Literals.DOCUMENTATION__TEXT, true, true);
 	}
 
 	/**
@@ -106,11 +89,8 @@ public class DocumentationImpl extends BaseElementImpl implements Documentation 
 	 * @generated
 	 */
 	public void setText(String newText) {
-		String oldText = text;
-		text = newText;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.DOCUMENTATION__TEXT, oldText, text));
+		eDynamicSet(Bpmn2Package.DOCUMENTATION__TEXT,
+				Bpmn2Package.Literals.DOCUMENTATION__TEXT, newText);
 	}
 
 	/**
@@ -119,7 +99,8 @@ public class DocumentationImpl extends BaseElementImpl implements Documentation 
 	 * @generated
 	 */
 	public String getTextFormat() {
-		return textFormat;
+		return (String) eDynamicGet(Bpmn2Package.DOCUMENTATION__TEXT_FORMAT,
+				Bpmn2Package.Literals.DOCUMENTATION__TEXT_FORMAT, true, true);
 	}
 
 	/**
@@ -128,12 +109,8 @@ public class DocumentationImpl extends BaseElementImpl implements Documentation 
 	 * @generated
 	 */
 	public void setTextFormat(String newTextFormat) {
-		String oldTextFormat = textFormat;
-		textFormat = newTextFormat;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.DOCUMENTATION__TEXT_FORMAT, oldTextFormat,
-					textFormat));
+		eDynamicSet(Bpmn2Package.DOCUMENTATION__TEXT_FORMAT,
+				Bpmn2Package.Literals.DOCUMENTATION__TEXT_FORMAT, newTextFormat);
 	}
 
 	/**
@@ -197,32 +174,13 @@ public class DocumentationImpl extends BaseElementImpl implements Documentation 
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.DOCUMENTATION__TEXT:
-			return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT
-					.equals(text);
+			return TEXT_EDEFAULT == null ? getText() != null : !TEXT_EDEFAULT
+					.equals(getText());
 		case Bpmn2Package.DOCUMENTATION__TEXT_FORMAT:
-			return TEXT_FORMAT_EDEFAULT == null ? textFormat != null
-					: !TEXT_FORMAT_EDEFAULT.equals(textFormat);
+			return TEXT_FORMAT_EDEFAULT == null ? getTextFormat() != null
+					: !TEXT_FORMAT_EDEFAULT.equals(getTextFormat());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (text: ");
-		result.append(text);
-		result.append(", textFormat: ");
-		result.append(textFormat);
-		result.append(')');
-		return result.toString();
 	}
 
 } //DocumentationImpl

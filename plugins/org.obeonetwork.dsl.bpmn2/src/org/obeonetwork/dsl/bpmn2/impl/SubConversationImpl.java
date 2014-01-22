@@ -42,16 +42,6 @@ import org.obeonetwork.dsl.bpmn2.SubConversation;
 public class SubConversationImpl extends ConversationNodeImpl implements
 		SubConversation {
 	/**
-	 * The cached value of the '{@link #getConversationNodes() <em>Conversation Nodes</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getConversationNodes()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ConversationNode> conversationNodes;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -77,12 +67,10 @@ public class SubConversationImpl extends ConversationNodeImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationNode> getConversationNodes() {
-		if (conversationNodes == null) {
-			conversationNodes = new EObjectContainmentEList<ConversationNode>(
-					ConversationNode.class, this,
-					Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES);
-		}
-		return conversationNodes;
+		return (EList<ConversationNode>) eDynamicGet(
+				Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES,
+				Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
+				true, true);
 	}
 
 	/**
@@ -157,7 +145,7 @@ public class SubConversationImpl extends ConversationNodeImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
-			return conversationNodes != null && !conversationNodes.isEmpty();
+			return !getConversationNodes().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

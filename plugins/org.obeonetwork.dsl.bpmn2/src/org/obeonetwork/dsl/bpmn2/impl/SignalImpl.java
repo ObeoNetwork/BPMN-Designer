@@ -38,15 +38,6 @@ import org.obeonetwork.dsl.bpmn2.Signal;
  */
 public class SignalImpl extends RootElementImpl implements Signal {
 	/**
-	 * The cached value of the '{@link #getStructureRef() <em>Structure Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStructureRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected ItemDefinition structureRef;
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -55,15 +46,6 @@ public class SignalImpl extends RootElementImpl implements Signal {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,17 +72,8 @@ public class SignalImpl extends RootElementImpl implements Signal {
 	 * @generated
 	 */
 	public ItemDefinition getStructureRef() {
-		if (structureRef != null && structureRef.eIsProxy()) {
-			InternalEObject oldStructureRef = (InternalEObject) structureRef;
-			structureRef = (ItemDefinition) eResolveProxy(oldStructureRef);
-			if (structureRef != oldStructureRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.SIGNAL__STRUCTURE_REF,
-							oldStructureRef, structureRef));
-			}
-		}
-		return structureRef;
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.SIGNAL__STRUCTURE_REF,
+				Bpmn2Package.Literals.SIGNAL__STRUCTURE_REF, true, true);
 	}
 
 	/**
@@ -109,7 +82,8 @@ public class SignalImpl extends RootElementImpl implements Signal {
 	 * @generated
 	 */
 	public ItemDefinition basicGetStructureRef() {
-		return structureRef;
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.SIGNAL__STRUCTURE_REF,
+				Bpmn2Package.Literals.SIGNAL__STRUCTURE_REF, false, true);
 	}
 
 	/**
@@ -118,12 +92,8 @@ public class SignalImpl extends RootElementImpl implements Signal {
 	 * @generated
 	 */
 	public void setStructureRef(ItemDefinition newStructureRef) {
-		ItemDefinition oldStructureRef = structureRef;
-		structureRef = newStructureRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.SIGNAL__STRUCTURE_REF, oldStructureRef,
-					structureRef));
+		eDynamicSet(Bpmn2Package.SIGNAL__STRUCTURE_REF,
+				Bpmn2Package.Literals.SIGNAL__STRUCTURE_REF, newStructureRef);
 	}
 
 	/**
@@ -132,7 +102,8 @@ public class SignalImpl extends RootElementImpl implements Signal {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.SIGNAL__NAME,
+				Bpmn2Package.Literals.SIGNAL__NAME, true, true);
 	}
 
 	/**
@@ -141,11 +112,8 @@ public class SignalImpl extends RootElementImpl implements Signal {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.SIGNAL__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.SIGNAL__NAME,
+				Bpmn2Package.Literals.SIGNAL__NAME, newName);
 	}
 
 	/**
@@ -211,29 +179,12 @@ public class SignalImpl extends RootElementImpl implements Signal {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.SIGNAL__STRUCTURE_REF:
-			return structureRef != null;
+			return basicGetStructureRef() != null;
 		case Bpmn2Package.SIGNAL__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //SignalImpl

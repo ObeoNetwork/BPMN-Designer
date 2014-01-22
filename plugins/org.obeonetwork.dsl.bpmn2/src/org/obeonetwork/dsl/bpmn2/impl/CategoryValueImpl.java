@@ -50,24 +50,6 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
 	 * @ordered
 	 */
 	protected static final String VALUE_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected String value = VALUE_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getCategorizedFlowElements() <em>Categorized Flow Elements</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCategorizedFlowElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<FlowElement> categorizedFlowElements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,7 +76,8 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
 	 * @generated
 	 */
 	public String getValue() {
-		return value;
+		return (String) eDynamicGet(Bpmn2Package.CATEGORY_VALUE__VALUE,
+				Bpmn2Package.Literals.CATEGORY_VALUE__VALUE, true, true);
 	}
 
 	/**
@@ -103,11 +86,8 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
 	 * @generated
 	 */
 	public void setValue(String newValue) {
-		String oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CATEGORY_VALUE__VALUE, oldValue, value));
+		eDynamicSet(Bpmn2Package.CATEGORY_VALUE__VALUE,
+				Bpmn2Package.Literals.CATEGORY_VALUE__VALUE, newValue);
 	}
 
 	/**
@@ -117,13 +97,10 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<FlowElement> getCategorizedFlowElements() {
-		if (categorizedFlowElements == null) {
-			categorizedFlowElements = new EObjectWithInverseEList.ManyInverse<FlowElement>(
-					FlowElement.class, this,
-					Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS,
-					Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF);
-		}
-		return categorizedFlowElements;
+		return (EList<FlowElement>) eDynamicGet(
+				Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS,
+				Bpmn2Package.Literals.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS,
+				true, true);
 	}
 
 	/**
@@ -214,30 +191,12 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CATEGORY_VALUE__VALUE:
-			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT
-					.equals(value);
+			return VALUE_EDEFAULT == null ? getValue() != null
+					: !VALUE_EDEFAULT.equals(getValue());
 		case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
-			return categorizedFlowElements != null
-					&& !categorizedFlowElements.isEmpty();
+			return !getCategorizedFlowElements().isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (value: ");
-		result.append(value);
-		result.append(')');
-		return result.toString();
 	}
 
 } //CategoryValueImpl

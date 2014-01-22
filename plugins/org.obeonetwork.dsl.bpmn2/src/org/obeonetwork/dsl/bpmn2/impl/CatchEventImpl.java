@@ -60,60 +60,6 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 * @ordered
 	 */
 	protected static final boolean PARALLEL_MULTIPLE_EDEFAULT = false;
-	/**
-	 * The cached value of the '{@link #isParallelMultiple() <em>Parallel Multiple</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isParallelMultiple()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean parallelMultiple = PARALLEL_MULTIPLE_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getOutputSet() <em>Output Set</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutputSet()
-	 * @generated
-	 * @ordered
-	 */
-	protected OutputSet outputSet;
-	/**
-	 * The cached value of the '{@link #getEventDefinitionRefs() <em>Event Definition Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEventDefinitionRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EventDefinition> eventDefinitionRefs;
-	/**
-	 * The cached value of the '{@link #getDataOutputAssociation() <em>Data Output Association</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDataOutputAssociation()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataOutputAssociation> dataOutputAssociation;
-	/**
-	 * The cached value of the '{@link #getDataOutputs() <em>Data Outputs</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDataOutputs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataOutput> dataOutputs;
-	/**
-	 * The cached value of the '{@link #getEventDefinitions() <em>Event Definitions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEventDefinitions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EventDefinition> eventDefinitions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,7 +86,10 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 * @generated
 	 */
 	public boolean isParallelMultiple() {
-		return parallelMultiple;
+		return (Boolean) eDynamicGet(
+				Bpmn2Package.CATCH_EVENT__PARALLEL_MULTIPLE,
+				Bpmn2Package.Literals.CATCH_EVENT__PARALLEL_MULTIPLE, true,
+				true);
 	}
 
 	/**
@@ -149,12 +98,9 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 * @generated
 	 */
 	public void setParallelMultiple(boolean newParallelMultiple) {
-		boolean oldParallelMultiple = parallelMultiple;
-		parallelMultiple = newParallelMultiple;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CATCH_EVENT__PARALLEL_MULTIPLE,
-					oldParallelMultiple, parallelMultiple));
+		eDynamicSet(Bpmn2Package.CATCH_EVENT__PARALLEL_MULTIPLE,
+				Bpmn2Package.Literals.CATCH_EVENT__PARALLEL_MULTIPLE,
+				newParallelMultiple);
 	}
 
 	/**
@@ -163,7 +109,8 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 * @generated
 	 */
 	public OutputSet getOutputSet() {
-		return outputSet;
+		return (OutputSet) eDynamicGet(Bpmn2Package.CATCH_EVENT__OUTPUT_SET,
+				Bpmn2Package.Literals.CATCH_EVENT__OUTPUT_SET, true, true);
 	}
 
 	/**
@@ -173,17 +120,8 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 */
 	public NotificationChain basicSetOutputSet(OutputSet newOutputSet,
 			NotificationChain msgs) {
-		OutputSet oldOutputSet = outputSet;
-		outputSet = newOutputSet;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, Bpmn2Package.CATCH_EVENT__OUTPUT_SET,
-					oldOutputSet, newOutputSet);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newOutputSet,
+				Bpmn2Package.CATCH_EVENT__OUTPUT_SET, msgs);
 		return msgs;
 	}
 
@@ -193,25 +131,8 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 * @generated
 	 */
 	public void setOutputSet(OutputSet newOutputSet) {
-		if (newOutputSet != outputSet) {
-			NotificationChain msgs = null;
-			if (outputSet != null)
-				msgs = ((InternalEObject) outputSet).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.CATCH_EVENT__OUTPUT_SET, null,
-						msgs);
-			if (newOutputSet != null)
-				msgs = ((InternalEObject) newOutputSet).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.CATCH_EVENT__OUTPUT_SET, null,
-						msgs);
-			msgs = basicSetOutputSet(newOutputSet, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CATCH_EVENT__OUTPUT_SET, newOutputSet,
-					newOutputSet));
+		eDynamicSet(Bpmn2Package.CATCH_EVENT__OUTPUT_SET,
+				Bpmn2Package.Literals.CATCH_EVENT__OUTPUT_SET, newOutputSet);
 	}
 
 	/**
@@ -221,12 +142,10 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<EventDefinition> getEventDefinitionRefs() {
-		if (eventDefinitionRefs == null) {
-			eventDefinitionRefs = new EObjectResolvingEList<EventDefinition>(
-					EventDefinition.class, this,
-					Bpmn2Package.CATCH_EVENT__EVENT_DEFINITION_REFS);
-		}
-		return eventDefinitionRefs;
+		return (EList<EventDefinition>) eDynamicGet(
+				Bpmn2Package.CATCH_EVENT__EVENT_DEFINITION_REFS,
+				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITION_REFS, true,
+				true);
 	}
 
 	/**
@@ -236,12 +155,10 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataOutputAssociation> getDataOutputAssociation() {
-		if (dataOutputAssociation == null) {
-			dataOutputAssociation = new EObjectContainmentEList<DataOutputAssociation>(
-					DataOutputAssociation.class, this,
-					Bpmn2Package.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION);
-		}
-		return dataOutputAssociation;
+		return (EList<DataOutputAssociation>) eDynamicGet(
+				Bpmn2Package.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION,
+				Bpmn2Package.Literals.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION,
+				true, true);
 	}
 
 	/**
@@ -251,12 +168,9 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataOutput> getDataOutputs() {
-		if (dataOutputs == null) {
-			dataOutputs = new EObjectContainmentEList<DataOutput>(
-					DataOutput.class, this,
-					Bpmn2Package.CATCH_EVENT__DATA_OUTPUTS);
-		}
-		return dataOutputs;
+		return (EList<DataOutput>) eDynamicGet(
+				Bpmn2Package.CATCH_EVENT__DATA_OUTPUTS,
+				Bpmn2Package.Literals.CATCH_EVENT__DATA_OUTPUTS, true, true);
 	}
 
 	/**
@@ -266,12 +180,10 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<EventDefinition> getEventDefinitions() {
-		if (eventDefinitions == null) {
-			eventDefinitions = new EObjectContainmentEList<EventDefinition>(
-					EventDefinition.class, this,
-					Bpmn2Package.CATCH_EVENT__EVENT_DEFINITIONS);
-		}
-		return eventDefinitions;
+		return (EList<EventDefinition>) eDynamicGet(
+				Bpmn2Package.CATCH_EVENT__EVENT_DEFINITIONS,
+				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS, true,
+				true);
 	}
 
 	/**
@@ -400,38 +312,19 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CATCH_EVENT__PARALLEL_MULTIPLE:
-			return parallelMultiple != PARALLEL_MULTIPLE_EDEFAULT;
+			return isParallelMultiple() != PARALLEL_MULTIPLE_EDEFAULT;
 		case Bpmn2Package.CATCH_EVENT__OUTPUT_SET:
-			return outputSet != null;
+			return getOutputSet() != null;
 		case Bpmn2Package.CATCH_EVENT__EVENT_DEFINITION_REFS:
-			return eventDefinitionRefs != null
-					&& !eventDefinitionRefs.isEmpty();
+			return !getEventDefinitionRefs().isEmpty();
 		case Bpmn2Package.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
-			return dataOutputAssociation != null
-					&& !dataOutputAssociation.isEmpty();
+			return !getDataOutputAssociation().isEmpty();
 		case Bpmn2Package.CATCH_EVENT__DATA_OUTPUTS:
-			return dataOutputs != null && !dataOutputs.isEmpty();
+			return !getDataOutputs().isEmpty();
 		case Bpmn2Package.CATCH_EVENT__EVENT_DEFINITIONS:
-			return eventDefinitions != null && !eventDefinitions.isEmpty();
+			return !getEventDefinitions().isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (parallelMultiple: ");
-		result.append(parallelMultiple);
-		result.append(')');
-		return result.toString();
 	}
 
 } //CatchEventImpl

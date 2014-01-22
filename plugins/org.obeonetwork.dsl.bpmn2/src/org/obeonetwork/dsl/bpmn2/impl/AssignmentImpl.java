@@ -39,25 +39,6 @@ import org.obeonetwork.dsl.bpmn2.Expression;
  */
 public class AssignmentImpl extends BaseElementImpl implements Assignment {
 	/**
-	 * The cached value of the '{@link #getFrom() <em>From</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFrom()
-	 * @generated
-	 * @ordered
-	 */
-	protected Expression from;
-	/**
-	 * The cached value of the '{@link #getTo() <em>To</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTo()
-	 * @generated
-	 * @ordered
-	 */
-	protected Expression to;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -82,7 +63,8 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
 	 * @generated
 	 */
 	public Expression getFrom() {
-		return from;
+		return (Expression) eDynamicGet(Bpmn2Package.ASSIGNMENT__FROM,
+				Bpmn2Package.Literals.ASSIGNMENT__FROM, true, true);
 	}
 
 	/**
@@ -92,17 +74,8 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
 	 */
 	public NotificationChain basicSetFrom(Expression newFrom,
 			NotificationChain msgs) {
-		Expression oldFrom = from;
-		from = newFrom;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, Bpmn2Package.ASSIGNMENT__FROM, oldFrom,
-					newFrom);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newFrom,
+				Bpmn2Package.ASSIGNMENT__FROM, msgs);
 		return msgs;
 	}
 
@@ -112,22 +85,8 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
 	 * @generated
 	 */
 	public void setFrom(Expression newFrom) {
-		if (newFrom != from) {
-			NotificationChain msgs = null;
-			if (from != null)
-				msgs = ((InternalEObject) from).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Bpmn2Package.ASSIGNMENT__FROM,
-						null, msgs);
-			if (newFrom != null)
-				msgs = ((InternalEObject) newFrom).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Bpmn2Package.ASSIGNMENT__FROM,
-						null, msgs);
-			msgs = basicSetFrom(newFrom, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.ASSIGNMENT__FROM, newFrom, newFrom));
+		eDynamicSet(Bpmn2Package.ASSIGNMENT__FROM,
+				Bpmn2Package.Literals.ASSIGNMENT__FROM, newFrom);
 	}
 
 	/**
@@ -136,7 +95,8 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
 	 * @generated
 	 */
 	public Expression getTo() {
-		return to;
+		return (Expression) eDynamicGet(Bpmn2Package.ASSIGNMENT__TO,
+				Bpmn2Package.Literals.ASSIGNMENT__TO, true, true);
 	}
 
 	/**
@@ -145,16 +105,8 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
 	 * @generated
 	 */
 	public NotificationChain basicSetTo(Expression newTo, NotificationChain msgs) {
-		Expression oldTo = to;
-		to = newTo;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, Bpmn2Package.ASSIGNMENT__TO, oldTo, newTo);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newTo,
+				Bpmn2Package.ASSIGNMENT__TO, msgs);
 		return msgs;
 	}
 
@@ -164,22 +116,8 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
 	 * @generated
 	 */
 	public void setTo(Expression newTo) {
-		if (newTo != to) {
-			NotificationChain msgs = null;
-			if (to != null)
-				msgs = ((InternalEObject) to).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Bpmn2Package.ASSIGNMENT__TO,
-						null, msgs);
-			if (newTo != null)
-				msgs = ((InternalEObject) newTo).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Bpmn2Package.ASSIGNMENT__TO,
-						null, msgs);
-			msgs = basicSetTo(newTo, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.ASSIGNMENT__TO, newTo, newTo));
+		eDynamicSet(Bpmn2Package.ASSIGNMENT__TO,
+				Bpmn2Package.Literals.ASSIGNMENT__TO, newTo);
 	}
 
 	/**
@@ -260,9 +198,9 @@ public class AssignmentImpl extends BaseElementImpl implements Assignment {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.ASSIGNMENT__FROM:
-			return from != null;
+			return getFrom() != null;
 		case Bpmn2Package.ASSIGNMENT__TO:
-			return to != null;
+			return getTo() != null;
 		}
 		return super.eIsSet(featureID);
 	}

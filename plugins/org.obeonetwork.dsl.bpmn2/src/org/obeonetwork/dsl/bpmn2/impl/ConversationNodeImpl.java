@@ -55,24 +55,6 @@ import org.obeonetwork.dsl.bpmn2.Participant;
 public abstract class ConversationNodeImpl extends BaseElementImpl implements
 		ConversationNode {
 	/**
-	 * The cached value of the '{@link #getIncomingConversationLinks() <em>Incoming Conversation Links</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIncomingConversationLinks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ConversationLink> incomingConversationLinks;
-	/**
-	 * The cached value of the '{@link #getOutgoingConversationLinks() <em>Outgoing Conversation Links</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutgoingConversationLinks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ConversationLink> outgoingConversationLinks;
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -81,42 +63,6 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getParticipantRefs() <em>Participant Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParticipantRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Participant> participantRefs;
-	/**
-	 * The cached value of the '{@link #getMessageFlowRefs() <em>Message Flow Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMessageFlowRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MessageFlow> messageFlowRefs;
-	/**
-	 * The cached value of the '{@link #getCorrelationKeys() <em>Correlation Keys</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCorrelationKeys()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CorrelationKey> correlationKeys;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -144,14 +90,10 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getIncomingConversationLinks() {
-		if (incomingConversationLinks == null) {
-			incomingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
-					ConversationLink.class,
-					this,
-					Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS,
-					Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
-		}
-		return incomingConversationLinks;
+		return (EList<ConversationLink>) eDynamicGet(
+				Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
+				true, true);
 	}
 
 	/**
@@ -161,14 +103,10 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getOutgoingConversationLinks() {
-		if (outgoingConversationLinks == null) {
-			outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
-					ConversationLink.class,
-					this,
-					Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS,
-					Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
-		}
-		return outgoingConversationLinks;
+		return (EList<ConversationLink>) eDynamicGet(
+				Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
+				true, true);
 	}
 
 	/**
@@ -177,7 +115,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__NAME,
+				Bpmn2Package.Literals.CONVERSATION_NODE__NAME, true, true);
 	}
 
 	/**
@@ -186,11 +125,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CONVERSATION_NODE__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.CONVERSATION_NODE__NAME,
+				Bpmn2Package.Literals.CONVERSATION_NODE__NAME, newName);
 	}
 
 	/**
@@ -200,12 +136,10 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Participant> getParticipantRefs() {
-		if (participantRefs == null) {
-			participantRefs = new EObjectResolvingEList<Participant>(
-					Participant.class, this,
-					Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS);
-		}
-		return participantRefs;
+		return (EList<Participant>) eDynamicGet(
+				Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS,
+				Bpmn2Package.Literals.CONVERSATION_NODE__PARTICIPANT_REFS,
+				true, true);
 	}
 
 	/**
@@ -215,12 +149,10 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<MessageFlow> getMessageFlowRefs() {
-		if (messageFlowRefs == null) {
-			messageFlowRefs = new EObjectResolvingEList<MessageFlow>(
-					MessageFlow.class, this,
-					Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS);
-		}
-		return messageFlowRefs;
+		return (EList<MessageFlow>) eDynamicGet(
+				Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS,
+				Bpmn2Package.Literals.CONVERSATION_NODE__MESSAGE_FLOW_REFS,
+				true, true);
 	}
 
 	/**
@@ -230,12 +162,10 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<CorrelationKey> getCorrelationKeys() {
-		if (correlationKeys == null) {
-			correlationKeys = new EObjectContainmentEList<CorrelationKey>(
-					CorrelationKey.class, this,
-					Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS);
-		}
-		return correlationKeys;
+		return (EList<CorrelationKey>) eDynamicGet(
+				Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS,
+				Bpmn2Package.Literals.CONVERSATION_NODE__CORRELATION_KEYS,
+				true, true);
 	}
 
 	/**
@@ -368,20 +298,18 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-			return incomingConversationLinks != null
-					&& !incomingConversationLinks.isEmpty();
+			return !getIncomingConversationLinks().isEmpty();
 		case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-			return outgoingConversationLinks != null
-					&& !outgoingConversationLinks.isEmpty();
+			return !getOutgoingConversationLinks().isEmpty();
 		case Bpmn2Package.CONVERSATION_NODE__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
-			return participantRefs != null && !participantRefs.isEmpty();
+			return !getParticipantRefs().isEmpty();
 		case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
-			return messageFlowRefs != null && !messageFlowRefs.isEmpty();
+			return !getMessageFlowRefs().isEmpty();
 		case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
-			return correlationKeys != null && !correlationKeys.isEmpty();
+			return !getCorrelationKeys().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -424,23 +352,6 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ConversationNodeImpl

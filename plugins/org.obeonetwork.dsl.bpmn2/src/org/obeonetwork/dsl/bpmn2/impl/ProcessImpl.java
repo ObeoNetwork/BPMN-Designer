@@ -66,24 +66,6 @@ import org.obeonetwork.dsl.bpmn2.ResourceRole;
 public class ProcessImpl extends CallableElementImpl implements
 		org.obeonetwork.dsl.bpmn2.Process {
 	/**
-	 * The cached value of the '{@link #getFlowElements() <em>Flow Elements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFlowElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<FlowElement> flowElements;
-	/**
-	 * The cached value of the '{@link #getLaneSets() <em>Lane Sets</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLaneSets()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<LaneSet> laneSets;
-	/**
 	 * The default value of the '{@link #getProcessType() <em>Process Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,15 +74,6 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @ordered
 	 */
 	protected static final ProcessType PROCESS_TYPE_EDEFAULT = ProcessType.NONE;
-	/**
-	 * The cached value of the '{@link #getProcessType() <em>Process Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProcessType()
-	 * @generated
-	 * @ordered
-	 */
-	protected ProcessType processType = PROCESS_TYPE_EDEFAULT;
 	/**
 	 * The default value of the '{@link #isIsClosed() <em>Is Closed</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -111,60 +84,6 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	protected static final boolean IS_CLOSED_EDEFAULT = false;
 	/**
-	 * The cached value of the '{@link #isIsClosed() <em>Is Closed</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsClosed()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isClosed = IS_CLOSED_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getAuditing() <em>Auditing</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAuditing()
-	 * @generated
-	 * @ordered
-	 */
-	protected Auditing auditing;
-	/**
-	 * The cached value of the '{@link #getMonitoring() <em>Monitoring</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMonitoring()
-	 * @generated
-	 * @ordered
-	 */
-	protected Monitoring monitoring;
-	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProperties()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Property> properties;
-	/**
-	 * The cached value of the '{@link #getSupports() <em>Supports</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSupports()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<org.obeonetwork.dsl.bpmn2.Process> supports;
-	/**
-	 * The cached value of the '{@link #getDefinitionalCollaborationRef() <em>Definitional Collaboration Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefinitionalCollaborationRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Collaboration definitionalCollaborationRef;
-	/**
 	 * The default value of the '{@link #isIsExecutable() <em>Is Executable</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -173,42 +92,6 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @ordered
 	 */
 	protected static final boolean IS_EXECUTABLE_EDEFAULT = false;
-	/**
-	 * The cached value of the '{@link #isIsExecutable() <em>Is Executable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsExecutable()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isExecutable = IS_EXECUTABLE_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getResources() <em>Resources</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResources()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ResourceRole> resources;
-	/**
-	 * The cached value of the '{@link #getArtifacts() <em>Artifacts</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArtifacts()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Artifact> artifacts;
-	/**
-	 * The cached value of the '{@link #getCorrelationSubscriptions() <em>Correlation Subscriptions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCorrelationSubscriptions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CorrelationSubscription> correlationSubscriptions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -236,12 +119,10 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<FlowElement> getFlowElements() {
-		if (flowElements == null) {
-			flowElements = new EObjectContainmentEList<FlowElement>(
-					FlowElement.class, this,
-					Bpmn2Package.PROCESS__FLOW_ELEMENTS);
-		}
-		return flowElements;
+		return (EList<FlowElement>) eDynamicGet(
+				Bpmn2Package.PROCESS__FLOW_ELEMENTS,
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+				true, true);
 	}
 
 	/**
@@ -251,11 +132,9 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<LaneSet> getLaneSets() {
-		if (laneSets == null) {
-			laneSets = new EObjectContainmentEList<LaneSet>(LaneSet.class,
-					this, Bpmn2Package.PROCESS__LANE_SETS);
-		}
-		return laneSets;
+		return (EList<LaneSet>) eDynamicGet(Bpmn2Package.PROCESS__LANE_SETS,
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS, true,
+				true);
 	}
 
 	/**
@@ -264,7 +143,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public ProcessType getProcessType() {
-		return processType;
+		return (ProcessType) eDynamicGet(Bpmn2Package.PROCESS__PROCESS_TYPE,
+				Bpmn2Package.Literals.PROCESS__PROCESS_TYPE, true, true);
 	}
 
 	/**
@@ -273,13 +153,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public void setProcessType(ProcessType newProcessType) {
-		ProcessType oldProcessType = processType;
-		processType = newProcessType == null ? PROCESS_TYPE_EDEFAULT
-				: newProcessType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.PROCESS__PROCESS_TYPE, oldProcessType,
-					processType));
+		eDynamicSet(Bpmn2Package.PROCESS__PROCESS_TYPE,
+				Bpmn2Package.Literals.PROCESS__PROCESS_TYPE, newProcessType);
 	}
 
 	/**
@@ -288,7 +163,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public boolean isIsClosed() {
-		return isClosed;
+		return (Boolean) eDynamicGet(Bpmn2Package.PROCESS__IS_CLOSED,
+				Bpmn2Package.Literals.PROCESS__IS_CLOSED, true, true);
 	}
 
 	/**
@@ -297,11 +173,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public void setIsClosed(boolean newIsClosed) {
-		boolean oldIsClosed = isClosed;
-		isClosed = newIsClosed;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.PROCESS__IS_CLOSED, oldIsClosed, isClosed));
+		eDynamicSet(Bpmn2Package.PROCESS__IS_CLOSED,
+				Bpmn2Package.Literals.PROCESS__IS_CLOSED, newIsClosed);
 	}
 
 	/**
@@ -310,7 +183,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public Auditing getAuditing() {
-		return auditing;
+		return (Auditing) eDynamicGet(Bpmn2Package.PROCESS__AUDITING,
+				Bpmn2Package.Literals.PROCESS__AUDITING, true, true);
 	}
 
 	/**
@@ -320,17 +194,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	public NotificationChain basicSetAuditing(Auditing newAuditing,
 			NotificationChain msgs) {
-		Auditing oldAuditing = auditing;
-		auditing = newAuditing;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, Bpmn2Package.PROCESS__AUDITING,
-					oldAuditing, newAuditing);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newAuditing,
+				Bpmn2Package.PROCESS__AUDITING, msgs);
 		return msgs;
 	}
 
@@ -340,22 +205,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public void setAuditing(Auditing newAuditing) {
-		if (newAuditing != auditing) {
-			NotificationChain msgs = null;
-			if (auditing != null)
-				msgs = ((InternalEObject) auditing)
-						.eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.PROCESS__AUDITING, null, msgs);
-			if (newAuditing != null)
-				msgs = ((InternalEObject) newAuditing)
-						.eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.PROCESS__AUDITING, null, msgs);
-			msgs = basicSetAuditing(newAuditing, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.PROCESS__AUDITING, newAuditing, newAuditing));
+		eDynamicSet(Bpmn2Package.PROCESS__AUDITING,
+				Bpmn2Package.Literals.PROCESS__AUDITING, newAuditing);
 	}
 
 	/**
@@ -364,7 +215,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public Monitoring getMonitoring() {
-		return monitoring;
+		return (Monitoring) eDynamicGet(Bpmn2Package.PROCESS__MONITORING,
+				Bpmn2Package.Literals.PROCESS__MONITORING, true, true);
 	}
 
 	/**
@@ -374,17 +226,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	public NotificationChain basicSetMonitoring(Monitoring newMonitoring,
 			NotificationChain msgs) {
-		Monitoring oldMonitoring = monitoring;
-		monitoring = newMonitoring;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, Bpmn2Package.PROCESS__MONITORING,
-					oldMonitoring, newMonitoring);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newMonitoring,
+				Bpmn2Package.PROCESS__MONITORING, msgs);
 		return msgs;
 	}
 
@@ -394,23 +237,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public void setMonitoring(Monitoring newMonitoring) {
-		if (newMonitoring != monitoring) {
-			NotificationChain msgs = null;
-			if (monitoring != null)
-				msgs = ((InternalEObject) monitoring).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.PROCESS__MONITORING, null, msgs);
-			if (newMonitoring != null)
-				msgs = ((InternalEObject) newMonitoring).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.PROCESS__MONITORING, null, msgs);
-			msgs = basicSetMonitoring(newMonitoring, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.PROCESS__MONITORING, newMonitoring,
-					newMonitoring));
+		eDynamicSet(Bpmn2Package.PROCESS__MONITORING,
+				Bpmn2Package.Literals.PROCESS__MONITORING, newMonitoring);
 	}
 
 	/**
@@ -420,11 +248,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Property> getProperties() {
-		if (properties == null) {
-			properties = new EObjectContainmentEList<Property>(Property.class,
-					this, Bpmn2Package.PROCESS__PROPERTIES);
-		}
-		return properties;
+		return (EList<Property>) eDynamicGet(Bpmn2Package.PROCESS__PROPERTIES,
+				Bpmn2Package.Literals.PROCESS__PROPERTIES, true, true);
 	}
 
 	/**
@@ -434,12 +259,9 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<org.obeonetwork.dsl.bpmn2.Process> getSupports() {
-		if (supports == null) {
-			supports = new EObjectResolvingEList<org.obeonetwork.dsl.bpmn2.Process>(
-					org.obeonetwork.dsl.bpmn2.Process.class, this,
-					Bpmn2Package.PROCESS__SUPPORTS);
-		}
-		return supports;
+		return (EList<org.obeonetwork.dsl.bpmn2.Process>) eDynamicGet(
+				Bpmn2Package.PROCESS__SUPPORTS,
+				Bpmn2Package.Literals.PROCESS__SUPPORTS, true, true);
 	}
 
 	/**
@@ -448,21 +270,10 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public Collaboration getDefinitionalCollaborationRef() {
-		if (definitionalCollaborationRef != null
-				&& definitionalCollaborationRef.eIsProxy()) {
-			InternalEObject oldDefinitionalCollaborationRef = (InternalEObject) definitionalCollaborationRef;
-			definitionalCollaborationRef = (Collaboration) eResolveProxy(oldDefinitionalCollaborationRef);
-			if (definitionalCollaborationRef != oldDefinitionalCollaborationRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF,
-							oldDefinitionalCollaborationRef,
-							definitionalCollaborationRef));
-			}
-		}
-		return definitionalCollaborationRef;
+		return (Collaboration) eDynamicGet(
+				Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF,
+				Bpmn2Package.Literals.PROCESS__DEFINITIONAL_COLLABORATION_REF,
+				true, true);
 	}
 
 	/**
@@ -471,7 +282,10 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public Collaboration basicGetDefinitionalCollaborationRef() {
-		return definitionalCollaborationRef;
+		return (Collaboration) eDynamicGet(
+				Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF,
+				Bpmn2Package.Literals.PROCESS__DEFINITIONAL_COLLABORATION_REF,
+				false, true);
 	}
 
 	/**
@@ -481,13 +295,9 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	public void setDefinitionalCollaborationRef(
 			Collaboration newDefinitionalCollaborationRef) {
-		Collaboration oldDefinitionalCollaborationRef = definitionalCollaborationRef;
-		definitionalCollaborationRef = newDefinitionalCollaborationRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF,
-					oldDefinitionalCollaborationRef,
-					definitionalCollaborationRef));
+		eDynamicSet(Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF,
+				Bpmn2Package.Literals.PROCESS__DEFINITIONAL_COLLABORATION_REF,
+				newDefinitionalCollaborationRef);
 	}
 
 	/**
@@ -496,7 +306,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public boolean isIsExecutable() {
-		return isExecutable;
+		return (Boolean) eDynamicGet(Bpmn2Package.PROCESS__IS_EXECUTABLE,
+				Bpmn2Package.Literals.PROCESS__IS_EXECUTABLE, true, true);
 	}
 
 	/**
@@ -505,12 +316,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public void setIsExecutable(boolean newIsExecutable) {
-		boolean oldIsExecutable = isExecutable;
-		isExecutable = newIsExecutable;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.PROCESS__IS_EXECUTABLE, oldIsExecutable,
-					isExecutable));
+		eDynamicSet(Bpmn2Package.PROCESS__IS_EXECUTABLE,
+				Bpmn2Package.Literals.PROCESS__IS_EXECUTABLE, newIsExecutable);
 	}
 
 	/**
@@ -520,11 +327,9 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ResourceRole> getResources() {
-		if (resources == null) {
-			resources = new EObjectContainmentEList<ResourceRole>(
-					ResourceRole.class, this, Bpmn2Package.PROCESS__RESOURCES);
-		}
-		return resources;
+		return (EList<ResourceRole>) eDynamicGet(
+				Bpmn2Package.PROCESS__RESOURCES,
+				Bpmn2Package.Literals.PROCESS__RESOURCES, true, true);
 	}
 
 	/**
@@ -534,11 +339,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Artifact> getArtifacts() {
-		if (artifacts == null) {
-			artifacts = new EObjectContainmentEList<Artifact>(Artifact.class,
-					this, Bpmn2Package.PROCESS__ARTIFACTS);
-		}
-		return artifacts;
+		return (EList<Artifact>) eDynamicGet(Bpmn2Package.PROCESS__ARTIFACTS,
+				Bpmn2Package.Literals.PROCESS__ARTIFACTS, true, true);
 	}
 
 	/**
@@ -548,12 +350,10 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<CorrelationSubscription> getCorrelationSubscriptions() {
-		if (correlationSubscriptions == null) {
-			correlationSubscriptions = new EObjectContainmentEList<CorrelationSubscription>(
-					CorrelationSubscription.class, this,
-					Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS);
-		}
-		return correlationSubscriptions;
+		return (EList<CorrelationSubscription>) eDynamicGet(
+				Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS,
+				Bpmn2Package.Literals.PROCESS__CORRELATION_SUBSCRIPTIONS, true,
+				true);
 	}
 
 	/**
@@ -754,32 +554,31 @@ public class ProcessImpl extends CallableElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
-			return flowElements != null && !flowElements.isEmpty();
+			return !getFlowElements().isEmpty();
 		case Bpmn2Package.PROCESS__LANE_SETS:
-			return laneSets != null && !laneSets.isEmpty();
+			return !getLaneSets().isEmpty();
 		case Bpmn2Package.PROCESS__PROCESS_TYPE:
-			return processType != PROCESS_TYPE_EDEFAULT;
+			return getProcessType() != PROCESS_TYPE_EDEFAULT;
 		case Bpmn2Package.PROCESS__IS_CLOSED:
-			return isClosed != IS_CLOSED_EDEFAULT;
+			return isIsClosed() != IS_CLOSED_EDEFAULT;
 		case Bpmn2Package.PROCESS__AUDITING:
-			return auditing != null;
+			return getAuditing() != null;
 		case Bpmn2Package.PROCESS__MONITORING:
-			return monitoring != null;
+			return getMonitoring() != null;
 		case Bpmn2Package.PROCESS__PROPERTIES:
-			return properties != null && !properties.isEmpty();
+			return !getProperties().isEmpty();
 		case Bpmn2Package.PROCESS__SUPPORTS:
-			return supports != null && !supports.isEmpty();
+			return !getSupports().isEmpty();
 		case Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF:
-			return definitionalCollaborationRef != null;
+			return basicGetDefinitionalCollaborationRef() != null;
 		case Bpmn2Package.PROCESS__IS_EXECUTABLE:
-			return isExecutable != IS_EXECUTABLE_EDEFAULT;
+			return isIsExecutable() != IS_EXECUTABLE_EDEFAULT;
 		case Bpmn2Package.PROCESS__RESOURCES:
-			return resources != null && !resources.isEmpty();
+			return !getResources().isEmpty();
 		case Bpmn2Package.PROCESS__ARTIFACTS:
-			return artifacts != null && !artifacts.isEmpty();
+			return !getArtifacts().isEmpty();
 		case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
-			return correlationSubscriptions != null
-					&& !correlationSubscriptions.isEmpty();
+			return !getCorrelationSubscriptions().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -822,27 +621,6 @@ public class ProcessImpl extends CallableElementImpl implements
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (processType: ");
-		result.append(processType);
-		result.append(", isClosed: ");
-		result.append(isClosed);
-		result.append(", isExecutable: ");
-		result.append(isExecutable);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ProcessImpl

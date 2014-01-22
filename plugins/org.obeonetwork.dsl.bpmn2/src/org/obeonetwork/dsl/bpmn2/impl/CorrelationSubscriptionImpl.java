@@ -46,25 +46,6 @@ import org.obeonetwork.dsl.bpmn2.CorrelationSubscription;
 public class CorrelationSubscriptionImpl extends BaseElementImpl implements
 		CorrelationSubscription {
 	/**
-	 * The cached value of the '{@link #getCorrelationKeyRef() <em>Correlation Key Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCorrelationKeyRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected CorrelationKey correlationKeyRef;
-	/**
-	 * The cached value of the '{@link #getCorrelationPropertyBinding() <em>Correlation Property Binding</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCorrelationPropertyBinding()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CorrelationPropertyBinding> correlationPropertyBinding;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -89,19 +70,10 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public CorrelationKey getCorrelationKeyRef() {
-		if (correlationKeyRef != null && correlationKeyRef.eIsProxy()) {
-			InternalEObject oldCorrelationKeyRef = (InternalEObject) correlationKeyRef;
-			correlationKeyRef = (CorrelationKey) eResolveProxy(oldCorrelationKeyRef);
-			if (correlationKeyRef != oldCorrelationKeyRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
-							oldCorrelationKeyRef, correlationKeyRef));
-			}
-		}
-		return correlationKeyRef;
+		return (CorrelationKey) eDynamicGet(
+				Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
+				Bpmn2Package.Literals.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
+				true, true);
 	}
 
 	/**
@@ -110,7 +82,10 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public CorrelationKey basicGetCorrelationKeyRef() {
-		return correlationKeyRef;
+		return (CorrelationKey) eDynamicGet(
+				Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
+				Bpmn2Package.Literals.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
+				false, true);
 	}
 
 	/**
@@ -119,12 +94,10 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setCorrelationKeyRef(CorrelationKey newCorrelationKeyRef) {
-		CorrelationKey oldCorrelationKeyRef = correlationKeyRef;
-		correlationKeyRef = newCorrelationKeyRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
-					oldCorrelationKeyRef, correlationKeyRef));
+		eDynamicSet(
+				Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
+				Bpmn2Package.Literals.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
+				newCorrelationKeyRef);
 	}
 
 	/**
@@ -134,13 +107,10 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<CorrelationPropertyBinding> getCorrelationPropertyBinding() {
-		if (correlationPropertyBinding == null) {
-			correlationPropertyBinding = new EObjectContainmentEList<CorrelationPropertyBinding>(
-					CorrelationPropertyBinding.class,
-					this,
-					Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING);
-		}
-		return correlationPropertyBinding;
+		return (EList<CorrelationPropertyBinding>) eDynamicGet(
+				Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING,
+				Bpmn2Package.Literals.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING,
+				true, true);
 	}
 
 	/**
@@ -225,10 +195,9 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF:
-			return correlationKeyRef != null;
+			return basicGetCorrelationKeyRef() != null;
 		case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING:
-			return correlationPropertyBinding != null
-					&& !correlationPropertyBinding.isEmpty();
+			return !getCorrelationPropertyBinding().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

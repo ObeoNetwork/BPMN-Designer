@@ -41,25 +41,6 @@ import org.obeonetwork.dsl.bpmn2.Task;
  */
 public class TaskImpl extends ActivityImpl implements Task {
 	/**
-	 * The cached value of the '{@link #getIncomingConversationLinks() <em>Incoming Conversation Links</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIncomingConversationLinks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ConversationLink> incomingConversationLinks;
-	/**
-	 * The cached value of the '{@link #getOutgoingConversationLinks() <em>Outgoing Conversation Links</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutgoingConversationLinks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ConversationLink> outgoingConversationLinks;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -85,13 +66,10 @@ public class TaskImpl extends ActivityImpl implements Task {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getIncomingConversationLinks() {
-		if (incomingConversationLinks == null) {
-			incomingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
-					ConversationLink.class, this,
-					Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS,
-					Bpmn2Package.CONVERSATION_LINK__TARGET_REF);
-		}
-		return incomingConversationLinks;
+		return (EList<ConversationLink>) eDynamicGet(
+				Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
+				true, true);
 	}
 
 	/**
@@ -101,13 +79,10 @@ public class TaskImpl extends ActivityImpl implements Task {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getOutgoingConversationLinks() {
-		if (outgoingConversationLinks == null) {
-			outgoingConversationLinks = new EObjectWithInverseResolvingEList<ConversationLink>(
-					ConversationLink.class, this,
-					Bpmn2Package.TASK__OUTGOING_CONVERSATION_LINKS,
-					Bpmn2Package.CONVERSATION_LINK__SOURCE_REF);
-		}
-		return outgoingConversationLinks;
+		return (EList<ConversationLink>) eDynamicGet(
+				Bpmn2Package.TASK__OUTGOING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
+				true, true);
 	}
 
 	/**
@@ -174,11 +149,9 @@ public class TaskImpl extends ActivityImpl implements Task {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS:
-			return incomingConversationLinks != null
-					&& !incomingConversationLinks.isEmpty();
+			return !getIncomingConversationLinks().isEmpty();
 		case Bpmn2Package.TASK__OUTGOING_CONVERSATION_LINKS:
-			return outgoingConversationLinks != null
-					&& !outgoingConversationLinks.isEmpty();
+			return !getOutgoingConversationLinks().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

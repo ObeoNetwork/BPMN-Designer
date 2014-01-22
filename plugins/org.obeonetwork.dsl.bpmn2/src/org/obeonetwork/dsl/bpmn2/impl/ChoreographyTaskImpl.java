@@ -39,16 +39,6 @@ import org.obeonetwork.dsl.bpmn2.MessageFlow;
 public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements
 		ChoreographyTask {
 	/**
-	 * The cached value of the '{@link #getMessageFlowRef() <em>Message Flow Ref</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMessageFlowRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MessageFlow> messageFlowRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -74,12 +64,10 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<MessageFlow> getMessageFlowRef() {
-		if (messageFlowRef == null) {
-			messageFlowRef = new EObjectResolvingEList<MessageFlow>(
-					MessageFlow.class, this,
-					Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF);
-		}
-		return messageFlowRef;
+		return (EList<MessageFlow>) eDynamicGet(
+				Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF,
+				Bpmn2Package.Literals.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF,
+				true, true);
 	}
 
 	/**
@@ -138,7 +126,7 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
-			return messageFlowRef != null && !messageFlowRef.isEmpty();
+			return !getMessageFlowRef().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

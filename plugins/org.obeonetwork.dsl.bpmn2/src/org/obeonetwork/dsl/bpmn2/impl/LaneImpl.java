@@ -57,51 +57,6 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getChildLaneSet() <em>Child Lane Set</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChildLaneSet()
-	 * @generated
-	 * @ordered
-	 */
-	protected LaneSet childLaneSet;
-	/**
-	 * The cached value of the '{@link #getPartitionElementRef() <em>Partition Element Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPartitionElementRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected BaseElement partitionElementRef;
-	/**
-	 * The cached value of the '{@link #getFlowNodeRefs() <em>Flow Node Refs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFlowNodeRefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<FlowNode> flowNodeRefs;
-	/**
-	 * The cached value of the '{@link #getPartitionElement() <em>Partition Element</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPartitionElement()
-	 * @generated
-	 * @ordered
-	 */
-	protected BaseElement partitionElement;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -128,7 +83,8 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.LANE__NAME,
+				Bpmn2Package.Literals.LANE__NAME, true, true);
 	}
 
 	/**
@@ -137,11 +93,8 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.LANE__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.LANE__NAME, Bpmn2Package.Literals.LANE__NAME,
+				newName);
 	}
 
 	/**
@@ -150,7 +103,8 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	 * @generated
 	 */
 	public LaneSet getChildLaneSet() {
-		return childLaneSet;
+		return (LaneSet) eDynamicGet(Bpmn2Package.LANE__CHILD_LANE_SET,
+				Bpmn2Package.Literals.LANE__CHILD_LANE_SET, true, true);
 	}
 
 	/**
@@ -160,17 +114,8 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	 */
 	public NotificationChain basicSetChildLaneSet(LaneSet newChildLaneSet,
 			NotificationChain msgs) {
-		LaneSet oldChildLaneSet = childLaneSet;
-		childLaneSet = newChildLaneSet;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, Bpmn2Package.LANE__CHILD_LANE_SET,
-					oldChildLaneSet, newChildLaneSet);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newChildLaneSet,
+				Bpmn2Package.LANE__CHILD_LANE_SET, msgs);
 		return msgs;
 	}
 
@@ -180,23 +125,8 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	 * @generated
 	 */
 	public void setChildLaneSet(LaneSet newChildLaneSet) {
-		if (newChildLaneSet != childLaneSet) {
-			NotificationChain msgs = null;
-			if (childLaneSet != null)
-				msgs = ((InternalEObject) childLaneSet)
-						.eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.LANE__CHILD_LANE_SET, null, msgs);
-			if (newChildLaneSet != null)
-				msgs = ((InternalEObject) newChildLaneSet)
-						.eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.LANE__CHILD_LANE_SET, null, msgs);
-			msgs = basicSetChildLaneSet(newChildLaneSet, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.LANE__CHILD_LANE_SET, newChildLaneSet,
-					newChildLaneSet));
+		eDynamicSet(Bpmn2Package.LANE__CHILD_LANE_SET,
+				Bpmn2Package.Literals.LANE__CHILD_LANE_SET, newChildLaneSet);
 	}
 
 	/**
@@ -205,17 +135,9 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	 * @generated
 	 */
 	public BaseElement getPartitionElementRef() {
-		if (partitionElementRef != null && partitionElementRef.eIsProxy()) {
-			InternalEObject oldPartitionElementRef = (InternalEObject) partitionElementRef;
-			partitionElementRef = (BaseElement) eResolveProxy(oldPartitionElementRef);
-			if (partitionElementRef != oldPartitionElementRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Bpmn2Package.LANE__PARTITION_ELEMENT_REF,
-							oldPartitionElementRef, partitionElementRef));
-			}
-		}
-		return partitionElementRef;
+		return (BaseElement) eDynamicGet(
+				Bpmn2Package.LANE__PARTITION_ELEMENT_REF,
+				Bpmn2Package.Literals.LANE__PARTITION_ELEMENT_REF, true, true);
 	}
 
 	/**
@@ -224,7 +146,9 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	 * @generated
 	 */
 	public BaseElement basicGetPartitionElementRef() {
-		return partitionElementRef;
+		return (BaseElement) eDynamicGet(
+				Bpmn2Package.LANE__PARTITION_ELEMENT_REF,
+				Bpmn2Package.Literals.LANE__PARTITION_ELEMENT_REF, false, true);
 	}
 
 	/**
@@ -233,12 +157,9 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	 * @generated
 	 */
 	public void setPartitionElementRef(BaseElement newPartitionElementRef) {
-		BaseElement oldPartitionElementRef = partitionElementRef;
-		partitionElementRef = newPartitionElementRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.LANE__PARTITION_ELEMENT_REF,
-					oldPartitionElementRef, partitionElementRef));
+		eDynamicSet(Bpmn2Package.LANE__PARTITION_ELEMENT_REF,
+				Bpmn2Package.Literals.LANE__PARTITION_ELEMENT_REF,
+				newPartitionElementRef);
 	}
 
 	/**
@@ -248,12 +169,8 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<FlowNode> getFlowNodeRefs() {
-		if (flowNodeRefs == null) {
-			flowNodeRefs = new EObjectWithInverseEList.ManyInverse<FlowNode>(
-					FlowNode.class, this, Bpmn2Package.LANE__FLOW_NODE_REFS,
-					Bpmn2Package.FLOW_NODE__LANES);
-		}
-		return flowNodeRefs;
+		return (EList<FlowNode>) eDynamicGet(Bpmn2Package.LANE__FLOW_NODE_REFS,
+				Bpmn2Package.Literals.LANE__FLOW_NODE_REFS, true, true);
 	}
 
 	/**
@@ -262,7 +179,8 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	 * @generated
 	 */
 	public BaseElement getPartitionElement() {
-		return partitionElement;
+		return (BaseElement) eDynamicGet(Bpmn2Package.LANE__PARTITION_ELEMENT,
+				Bpmn2Package.Literals.LANE__PARTITION_ELEMENT, true, true);
 	}
 
 	/**
@@ -272,17 +190,8 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	 */
 	public NotificationChain basicSetPartitionElement(
 			BaseElement newPartitionElement, NotificationChain msgs) {
-		BaseElement oldPartitionElement = partitionElement;
-		partitionElement = newPartitionElement;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, Bpmn2Package.LANE__PARTITION_ELEMENT,
-					oldPartitionElement, newPartitionElement);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eDynamicInverseAdd((InternalEObject) newPartitionElement,
+				Bpmn2Package.LANE__PARTITION_ELEMENT, msgs);
 		return msgs;
 	}
 
@@ -292,25 +201,9 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	 * @generated
 	 */
 	public void setPartitionElement(BaseElement newPartitionElement) {
-		if (newPartitionElement != partitionElement) {
-			NotificationChain msgs = null;
-			if (partitionElement != null)
-				msgs = ((InternalEObject) partitionElement).eInverseRemove(
-						this, EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.LANE__PARTITION_ELEMENT, null,
-						msgs);
-			if (newPartitionElement != null)
-				msgs = ((InternalEObject) newPartitionElement).eInverseAdd(
-						this, EOPPOSITE_FEATURE_BASE
-								- Bpmn2Package.LANE__PARTITION_ELEMENT, null,
-						msgs);
-			msgs = basicSetPartitionElement(newPartitionElement, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.LANE__PARTITION_ELEMENT, newPartitionElement,
-					newPartitionElement));
+		eDynamicSet(Bpmn2Package.LANE__PARTITION_ELEMENT,
+				Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,
+				newPartitionElement);
 	}
 
 	/**
@@ -439,35 +332,18 @@ public class LaneImpl extends BaseElementImpl implements Lane {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.LANE__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		case Bpmn2Package.LANE__CHILD_LANE_SET:
-			return childLaneSet != null;
+			return getChildLaneSet() != null;
 		case Bpmn2Package.LANE__PARTITION_ELEMENT_REF:
-			return partitionElementRef != null;
+			return basicGetPartitionElementRef() != null;
 		case Bpmn2Package.LANE__FLOW_NODE_REFS:
-			return flowNodeRefs != null && !flowNodeRefs.isEmpty();
+			return !getFlowNodeRefs().isEmpty();
 		case Bpmn2Package.LANE__PARTITION_ELEMENT:
-			return partitionElement != null;
+			return getPartitionElement() != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //LaneImpl

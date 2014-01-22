@@ -16,6 +16,7 @@ package org.obeonetwork.dsl.bpmn2.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
@@ -35,7 +36,7 @@ import org.obeonetwork.dsl.bpmn2.ParticipantMultiplicity;
  *
  * @generated
  */
-public class ParticipantMultiplicityImpl extends EObjectImpl implements
+public class ParticipantMultiplicityImpl extends CDOObjectImpl implements
 		ParticipantMultiplicity {
 	/**
 	 * The default value of the '{@link #getMinimum() <em>Minimum</em>}' attribute.
@@ -47,15 +48,6 @@ public class ParticipantMultiplicityImpl extends EObjectImpl implements
 	 */
 	protected static final int MINIMUM_EDEFAULT = 0;
 	/**
-	 * The cached value of the '{@link #getMinimum() <em>Minimum</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMinimum()
-	 * @generated
-	 * @ordered
-	 */
-	protected int minimum = MINIMUM_EDEFAULT;
-	/**
 	 * The default value of the '{@link #getMaximum() <em>Maximum</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,15 +56,6 @@ public class ParticipantMultiplicityImpl extends EObjectImpl implements
 	 * @ordered
 	 */
 	protected static final int MAXIMUM_EDEFAULT = 1;
-	/**
-	 * The cached value of the '{@link #getMaximum() <em>Maximum</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMaximum()
-	 * @generated
-	 * @ordered
-	 */
-	protected int maximum = MAXIMUM_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -98,8 +81,21 @@ public class ParticipantMultiplicityImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public int getMinimum() {
-		return minimum;
+		return (Integer) eDynamicGet(
+				Bpmn2Package.PARTICIPANT_MULTIPLICITY__MINIMUM,
+				Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__MINIMUM, true,
+				true);
 	}
 
 	/**
@@ -108,12 +104,9 @@ public class ParticipantMultiplicityImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public void setMinimum(int newMinimum) {
-		int oldMinimum = minimum;
-		minimum = newMinimum;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.PARTICIPANT_MULTIPLICITY__MINIMUM, oldMinimum,
-					minimum));
+		eDynamicSet(Bpmn2Package.PARTICIPANT_MULTIPLICITY__MINIMUM,
+				Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__MINIMUM,
+				newMinimum);
 	}
 
 	/**
@@ -122,7 +115,10 @@ public class ParticipantMultiplicityImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public int getMaximum() {
-		return maximum;
+		return (Integer) eDynamicGet(
+				Bpmn2Package.PARTICIPANT_MULTIPLICITY__MAXIMUM,
+				Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__MAXIMUM, true,
+				true);
 	}
 
 	/**
@@ -131,12 +127,9 @@ public class ParticipantMultiplicityImpl extends EObjectImpl implements
 	 * @generated
 	 */
 	public void setMaximum(int newMaximum) {
-		int oldMaximum = maximum;
-		maximum = newMaximum;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.PARTICIPANT_MULTIPLICITY__MAXIMUM, oldMaximum,
-					maximum));
+		eDynamicSet(Bpmn2Package.PARTICIPANT_MULTIPLICITY__MAXIMUM,
+				Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__MAXIMUM,
+				newMaximum);
 	}
 
 	/**
@@ -200,30 +193,11 @@ public class ParticipantMultiplicityImpl extends EObjectImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.PARTICIPANT_MULTIPLICITY__MINIMUM:
-			return minimum != MINIMUM_EDEFAULT;
+			return getMinimum() != MINIMUM_EDEFAULT;
 		case Bpmn2Package.PARTICIPANT_MULTIPLICITY__MAXIMUM:
-			return maximum != MAXIMUM_EDEFAULT;
+			return getMaximum() != MAXIMUM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (minimum: ");
-		result.append(minimum);
-		result.append(", maximum: ");
-		result.append(maximum);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ParticipantMultiplicityImpl

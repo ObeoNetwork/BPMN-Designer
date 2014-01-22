@@ -44,15 +44,6 @@ import org.obeonetwork.dsl.bpmn2.LaneSet;
  */
 public class LaneSetImpl extends BaseElementImpl implements LaneSet {
 	/**
-	 * The cached value of the '{@link #getLanes() <em>Lanes</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLanes()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Lane> lanes;
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,15 +52,6 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -97,11 +79,8 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Lane> getLanes() {
-		if (lanes == null) {
-			lanes = new EObjectContainmentEList<Lane>(Lane.class, this,
-					Bpmn2Package.LANE_SET__LANES);
-		}
-		return lanes;
+		return (EList<Lane>) eDynamicGet(Bpmn2Package.LANE_SET__LANES,
+				Bpmn2Package.Literals.LANE_SET__LANES, true, true);
 	}
 
 	/**
@@ -110,7 +89,8 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+		return (String) eDynamicGet(Bpmn2Package.LANE_SET__NAME,
+				Bpmn2Package.Literals.LANE_SET__NAME, true, true);
 	}
 
 	/**
@@ -119,11 +99,8 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.LANE_SET__NAME, oldName, name));
+		eDynamicSet(Bpmn2Package.LANE_SET__NAME,
+				Bpmn2Package.Literals.LANE_SET__NAME, newName);
 	}
 
 	/**
@@ -204,29 +181,12 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.LANE_SET__LANES:
-			return lanes != null && !lanes.isEmpty();
+			return !getLanes().isEmpty();
 		case Bpmn2Package.LANE_SET__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
-					.equals(name);
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
+					.equals(getName());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //LaneSetImpl

@@ -46,25 +46,6 @@ import org.obeonetwork.dsl.bpmn2.ParticipantAssociation;
 public class CallChoreographyImpl extends ChoreographyActivityImpl implements
 		CallChoreography {
 	/**
-	 * The cached value of the '{@link #getCalledChoreographyRef() <em>Called Choreography Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCalledChoreographyRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Choreography calledChoreographyRef;
-	/**
-	 * The cached value of the '{@link #getParticipantAssociations() <em>Participant Associations</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParticipantAssociations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ParticipantAssociation> participantAssociations;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -89,19 +70,10 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements
 	 * @generated
 	 */
 	public Choreography getCalledChoreographyRef() {
-		if (calledChoreographyRef != null && calledChoreographyRef.eIsProxy()) {
-			InternalEObject oldCalledChoreographyRef = (InternalEObject) calledChoreographyRef;
-			calledChoreographyRef = (Choreography) eResolveProxy(oldCalledChoreographyRef);
-			if (calledChoreographyRef != oldCalledChoreographyRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(
-							this,
-							Notification.RESOLVE,
-							Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
-							oldCalledChoreographyRef, calledChoreographyRef));
-			}
-		}
-		return calledChoreographyRef;
+		return (Choreography) eDynamicGet(
+				Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
+				Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
+				true, true);
 	}
 
 	/**
@@ -110,7 +82,10 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements
 	 * @generated
 	 */
 	public Choreography basicGetCalledChoreographyRef() {
-		return calledChoreographyRef;
+		return (Choreography) eDynamicGet(
+				Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
+				Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
+				false, true);
 	}
 
 	/**
@@ -119,12 +94,10 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements
 	 * @generated
 	 */
 	public void setCalledChoreographyRef(Choreography newCalledChoreographyRef) {
-		Choreography oldCalledChoreographyRef = calledChoreographyRef;
-		calledChoreographyRef = newCalledChoreographyRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
-					oldCalledChoreographyRef, calledChoreographyRef));
+		eDynamicSet(
+				Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
+				Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
+				newCalledChoreographyRef);
 	}
 
 	/**
@@ -134,12 +107,10 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ParticipantAssociation> getParticipantAssociations() {
-		if (participantAssociations == null) {
-			participantAssociations = new EObjectContainmentEList<ParticipantAssociation>(
-					ParticipantAssociation.class, this,
-					Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS);
-		}
-		return participantAssociations;
+		return (EList<ParticipantAssociation>) eDynamicGet(
+				Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS,
+				Bpmn2Package.Literals.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS,
+				true, true);
 	}
 
 	/**
@@ -224,10 +195,9 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF:
-			return calledChoreographyRef != null;
+			return basicGetCalledChoreographyRef() != null;
 		case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
-			return participantAssociations != null
-					&& !participantAssociations.isEmpty();
+			return !getParticipantAssociations().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
