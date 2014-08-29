@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:oryx="http://www.b3mn.org/oryx"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32.000259"
+   height="31.999743"
+   version="1.0"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="CancelEventDefinition.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata20">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="480"
+     inkscape:window-width="1129"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="11.8"
+     inkscape:cx="11.286572"
+     inkscape:cy="13.153085"
+     inkscape:window-x="2292"
+     inkscape:window-y="412"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 20 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="40 : 20 : 1"
+       inkscape:persp3d-origin="20 : 13.333333 : 1"
+       id="perspective22" />
+    <defs
+       id="defs8">
+      <radialGradient
+         gradientUnits="userSpaceOnUse"
+         fy="3.5999999"
+         fx="3.5999999"
+         r="31"
+         cy="3.5999999"
+         cx="3.5999999"
+         id="background">
+        <stop
+           id="stop11"
+           stop-opacity="1"
+           stop-color="#ffffff"
+           offset="0%" />
+        <stop
+           stop-opacity="1"
+           stop-color="#ffffff"
+           offset="100%"
+           id="fill_el" />
+      </radialGradient>
+    </defs>
+  </defs>
+  <oryx:magnets>
+    <oryx:magnet
+       oryx:cx="16"
+       oryx:cy="16"
+       oryx:default="yes" />
+  </oryx:magnets>
+  <oryx:docker
+     oryx:cx="16"
+     oryx:cy="16" />
+  <circle
+     d="M 31,16 C 31,24.284271 24.284271,31 16,31 7.7157288,31 1,24.284271 1,16 1,7.7157288 7.7157288,1 16,1 24.284271,1 31,7.7157288 31,16 z"
+     sodipodi:ry="15"
+     sodipodi:rx="15"
+     sodipodi:cy="16"
+     sodipodi:cx="16"
+     style="fill:#f6ffd5;fill-opacity:1;stroke:#668000;stroke-width:1;stroke-opacity:1"
+     r="15"
+     cy="16"
+     cx="16"
+     id="bg_frame"
+     transform="matrix(1.0322667,0,0,1.0322495,-0.51613765,-0.51612045)" />
+  <circle
+     d="M 28,16 C 28,22.627417 22.627417,28 16,28 9.372583,28 4,22.627417 4,16 4,9.372583 9.372583,4 16,4 22.627417,4 28,9.372583 28,16 z"
+     style="fill:#f6ffd5;fill-opacity:1;stroke:#668000;stroke-width:1;stroke-opacity:1"
+     sodipodi:ry="12"
+     sodipodi:rx="12"
+     sodipodi:cy="16"
+     sodipodi:cx="16"
+     id="circle15"
+     r="12"
+     cy="16"
+     cx="16"
+     transform="matrix(1.0322667,0,0,1.0322495,-0.51613765,-0.51612045)" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:#f6ffd5;fill-opacity:1;stroke:#668000;stroke-width:1.75483882000000002;stroke-opacity:1"
+     id="cancelCross"
+     d="M 7.0028006,10.088891 9.9628094,7.1289322 15.882825,13.04885 21.802842,7.1289316 24.76285,10.08889 l -5.920017,5.919918 5.920018,5.919919 -2.960009,2.95996 -5.920017,-5.919919 -5.9200167,5.919917 -2.9600072,-2.959959 5.9200159,-5.919917 -5.9200164,-5.919918 z" />
+  <text
+     style="font-size:11.35483931999999996px;fill:#f6ffd5;fill-opacity:1;stroke:#668000;stroke-width:1.03225815000000010;stroke-opacity:1"
+     oryx:align="top center"
+     y="33.548393"
+     x="15.999996"
+     id="text_name"
+     font-size="11"
+     transform="scale(1.0000083,0.99999167)" />
+</svg>
