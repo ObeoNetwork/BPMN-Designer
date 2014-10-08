@@ -178,7 +178,7 @@
               </style>
             </subNodeMappings>
             <subNodeMappings name="IntermediateCatchEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="bpmn2.IntermediateCatchEvent">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/catching/none.png">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/IntermediateCatchEvent.png">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -226,7 +226,7 @@
               </conditionnalStyles>
             </subNodeMappings>
             <subNodeMappings name="IntermediateThrowEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="bpmn2.IntermediateThrowEvent">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/throwing/none.png">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/IntermediateThrowEvent.png">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -532,7 +532,7 @@
                 </style>
               </subNodeMappings>
               <subNodeMappings name="SPIntermediateCatchEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="feature:flowElements" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="bpmn2.IntermediateCatchEvent">
-                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/catching/none.png">
+                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/IntermediateCatchEvent.png">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -580,7 +580,7 @@
                 </conditionnalStyles>
               </subNodeMappings>
               <subNodeMappings name="SPIntermediateThrowEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="feature:flowElements" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="bpmn2.IntermediateThrowEvent">
-                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons/throwing/none.png">
+                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj32/IntermediateThrowEvent.png">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -666,12 +666,11 @@
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subContainerMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="0" arcHeight="0" borderSizeComputationExpression="3" borderColor="//@userColorsPalettes[name='Colors']/@entries[name='LaneBorder']" showIcon="false" labelAlignment="LEFT" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LaneBackground']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LaneBackground']">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="0" arcHeight="0" borderSizeComputationExpression="3" borderColor="//@userColorsPalettes[name='Colors']/@entries[name='LaneBorder']" showIcon="false" labelAlignment="LEFT" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LaneBackgroundLeft']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LaneBackgroundRight']">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="0" arcHeight="0" borderSizeComputationExpression="1" labelSize="12" labelFormat="bold" showIcon="false" backgroundStyle="GradientTopToBottom" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LaneSetBackground']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LaneSetBackground']">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="0" arcHeight="0" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='Colors']/@entries[name='LaneBorder']" labelSize="12" labelFormat="bold" showIcon="false" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LaneBorder']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LaneBackgroundLeft']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </containerMappings>
@@ -1866,9 +1865,9 @@
   </ownedViewpoints>
   <userColorsPalettes name="Colors">
     <entries xsi:type="description:UserFixedColor" red="0" green="128" blue="192" name="Blue"/>
-    <entries xsi:type="description:UserFixedColor" red="229" green="235" blue="163" name="LaneSetBackground"/>
-    <entries xsi:type="description:UserFixedColor" red="255" green="255" blue="255" name="LaneBackground"/>
-    <entries xsi:type="description:UserFixedColor" red="127" green="127" blue="127" name="LaneBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="255" green="255" blue="255" name="LaneBackgroundRight"/>
+    <entries xsi:type="description:UserFixedColor" red="233" green="236" blue="197" name="LaneBackgroundLeft"/>
+    <entries xsi:type="description:UserFixedColor" red="221" green="230" blue="133" name="LaneBorder"/>
     <entries xsi:type="description:UserFixedColor" name="SequenceFlowColor"/>
     <entries xsi:type="description:UserFixedColor" name="MessageFlowColor"/>
     <entries xsi:type="description:UserFixedColor" red="176" green="176" blue="176" name="AssociationLinkColor"/>
