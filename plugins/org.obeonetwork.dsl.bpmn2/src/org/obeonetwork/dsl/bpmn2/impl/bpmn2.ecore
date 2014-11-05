@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bpmn2"
-    nsURI="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" nsPrefix="bpmn">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bpmn2" nsURI="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
+    nsPrefix="bpmn">
   <eClassifiers xsi:type="ecore:EClass" name="Interface" eSuperTypes="#//RootElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -503,7 +502,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CatchEvent" abstract="true" eSuperTypes="#//Event">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="parallelMultiple" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputSet" ordered="false"
         eType="#//OutputSet" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="eventDefinitionRefs" ordered="false"
@@ -555,7 +555,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Gateway" abstract="true" eSuperTypes="#//FlowNode">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gatewayDirection" ordered="false"
-        lowerBound="1" eType="#//GatewayDirection" defaultValueLiteral="unspecified"/>
+        lowerBound="1" eType="#//GatewayDirection" defaultValueLiteral="Unspecified"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GatewayDirection">
     <eLiterals name="Unspecified"/>

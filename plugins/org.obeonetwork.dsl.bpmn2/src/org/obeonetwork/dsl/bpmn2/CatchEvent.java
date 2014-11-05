@@ -40,6 +40,7 @@ import org.eclipse.emf.common.util.EList;
 public interface CatchEvent extends Event {
 	/**
 	 * Returns the value of the '<em><b>Parallel Multiple</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parallel Multiple</em>' attribute isn't clear,
@@ -49,7 +50,7 @@ public interface CatchEvent extends Event {
 	 * @return the value of the '<em>Parallel Multiple</em>' attribute.
 	 * @see #setParallelMultiple(boolean)
 	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getCatchEvent_ParallelMultiple()
-	 * @model required="true" ordered="false"
+	 * @model default="false" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isParallelMultiple();

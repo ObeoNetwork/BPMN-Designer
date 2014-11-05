@@ -15,6 +15,7 @@ Bundle-ActivationPolicy: lazy
 Export-Package: org.obeonetwork.dsl.bpmn2,
  org.obeonetwork.dsl.bpmn2.bpmdi,
  org.obeonetwork.dsl.bpmn2.bpmdi.util,
+ org.obeonetwork.dsl.bpmn2.impl,
  org.obeonetwork.dsl.bpmn2.util,
  org.obeonetwork.dsl.dd.dc,
  org.obeonetwork.dsl.dd.dc.util,
