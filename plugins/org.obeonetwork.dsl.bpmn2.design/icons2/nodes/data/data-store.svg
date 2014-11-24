@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   id="svg5795"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="data-store.svg"
+   inkscape:export-filename="/Volumes/partage/private/marketing/Design/Produits/BPMN/edit/nodes/data/png/data-store.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs5797" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.328125"
+     inkscape:cx="20.707888"
+     inkscape:cy="8.1915714"
+     inkscape:document-units="px"
+     inkscape:current-layer="g4387"
+     showgrid="false"
+     inkscape:window-width="966"
+     inkscape:window-height="852"
+     inkscape:window-x="1433"
+     inkscape:window-y="306"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5800">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1020.3622)">
+    <g
+       transform="matrix(1,0,0,0.99993688,-167.9603,889.93056)"
+       id="g4387">
+      <g
+         id="g4393"
+         transform="matrix(1,0,0,0.9991155,-0.6988725,-65.814888)">
+        <g
+           style="fill:#c1caf4;fill-opacity:1;stroke:#413492;stroke-opacity:1"
+           id="g4325"
+           transform="translate(80,20)">
+          <path
+             sodipodi:nodetypes="ccccc"
+             inkscape:connector-curvature="0"
+             id="path4327"
+             d="m 91.880892,188.64291 0,7.313 c 3.230741,5.593 21.342168,6.13852 25.544668,0 l 0,-7.313 c -5.37191,5.18335 -19.946381,5.1122 -25.544668,0 z"
+             style="fill:#c1caf4;fill-opacity:1;stroke:#413492;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             inkscape:export-filename="Z:\private\marketing\Design\SupportCommunication\FichesProduits\ObeoSmartEA\png\icon_federatedrepositories.png"
+             inkscape:export-xdpi="300"
+             inkscape:export-ydpi="300" />
+          <path
+             inkscape:export-filename="Z:\private\marketing\Design\SupportCommunication\FichesProduits\ObeoSmartEA\png\icon_federatedrepositories.png"
+             inkscape:export-xdpi="300"
+             inkscape:export-ydpi="300"
+             style="fill:#c1caf4;fill-opacity:1;stroke:#413492;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m 104.64756,177.17885 c -7.085689,0 -12.756508,1.6001 -12.756508,3.60113 0,0.10943 -0.04384,0.22983 -0.01016,0.33679 l 0,7.22214 c 4.583369,5.76035 21.377098,5.56211 25.533388,0 l 0,-7.19623 c 0.0417,-0.11884 0.0164,-0.24077 0.0164,-0.3627 0,-2.00103 -5.69739,-3.60113 -12.78308,-3.60113 z"
+             id="path4329"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="ssccccsss" />
+          <path
+             style="fill:#c1caf4;fill-opacity:1;stroke:#413492;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m 91.880892,196.35091 0,7.49391 c 5.365689,5.14056 19.951658,5.16259 25.544668,0 l 0,-7.49391 c -5.03472,5.4973 -20.00258,5.4973 -25.544668,0 z"
+             id="path4331"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="ccccc"
+             inkscape:export-filename="Z:\private\marketing\Design\SupportCommunication\FichesProduits\ObeoSmartEA\png\icon_federatedrepositories.png"
+             inkscape:export-xdpi="300"
+             inkscape:export-ydpi="300" />
+          <path
+             sodipodi:nodetypes="cc"
+             inkscape:connector-curvature="0"
+             id="path4333"
+             d="m 91.839365,180.68548 c 3.431493,5.89312 21.337205,6.09516 25.639615,0.40915"
+             style="fill:#c1caf4;fill-opacity:1;stroke:#413492;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

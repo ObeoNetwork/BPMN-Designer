@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   id="svg5795"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="data-object.svg"
+   inkscape:export-filename="/Volumes/partage/private/marketing/Design/Produits/BPMN/edit/nodes/data/png/data-object.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs5797" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.328125"
+     inkscape:cx="20.707888"
+     inkscape:cy="-2.7252729"
+     inkscape:document-units="px"
+     inkscape:current-layer="g4387"
+     showgrid="false"
+     inkscape:window-width="966"
+     inkscape:window-height="852"
+     inkscape:window-x="1433"
+     inkscape:window-y="306"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5800">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1020.3622)">
+    <g
+       transform="matrix(1,0,0,0.99993688,-167.9603,889.93056)"
+       id="g4387">
+      <g
+         id="g4369"
+         transform="translate(0.19980633,116.56439)"
+         inkscape:export-filename="/Volumes/partage/private/marketing/Design/Produits/BPMN/edit/nodes/data/png/data-object.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90">
+        <path
+           sodipodi:nodetypes="ccccccc"
+           inkscape:connector-curvature="0"
+           id="path4371"
+           d="m 172.37247,14.838574 0,30.288932 22.97377,0 0,-22.747733 -8.03301,0 0,-7.541199 z"
+           style="fill:#c1caf4;fill-opacity:1;stroke:#413492;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0"
+           id="path4373"
+           d="m 187.55907,14.631218 -1.4e-4,7.538452 7.98346,0 z"
+           style="fill:#413492;fill-opacity:1;stroke:#413492;stroke-width:1.511464;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32.170078"
+   height="31.840523"
+   id="svg5795"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="compensation.svg">
+  <defs
+     id="defs5797" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="54.299322"
+     inkscape:cy="-32.097743"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="966"
+     inkscape:window-height="852"
+     inkscape:window-x="1598"
+     inkscape:window-y="324"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5800">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(91.442179,-992.51381)">
+    <g
+       id="g5725"
+       inkscape:export-filename="/Volumes/partage/private/marketing/Design/Produits/BPMN/design/nodes/boundary-events/png/compensation.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="translate(-189.02014,918.18431)"
+       style="stroke:#c51325;stroke-opacity:1">
+      <g
+         style="stroke:#c51325;stroke-opacity:1"
+         inkscape:export-filename="/Volumes/partage/private/marketing/Design/Produits/BPMN/design/nodes/boundary-events/png/none.png"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         id="g4674-9"
+         transform="translate(-5.6456908,53.981547)">
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:#c51325;stroke-width:4.26015568;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="path3753-8"
+           sodipodi:cx="110"
+           sodipodi:cy="98.076469"
+           sodipodi:rx="44.285713"
+           sodipodi:ry="57.142857"
+           d="m 154.28571,98.076469 c 0,31.559131 -19.82739,57.142861 -44.28571,57.142861 -24.458324,0 -44.285713,-25.58373 -44.285713,-57.142861 0,-31.559128 19.827389,-57.142856 44.285713,-57.142856 24.45832,0 44.28571,25.583728 44.28571,57.142856 z"
+           transform="matrix(0.34661363,0,0,0.26862556,81.181191,9.9219258)" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:#c51325;stroke-width:5.6615591;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="path3753-2-7"
+           sodipodi:cx="110"
+           sodipodi:cy="98.076469"
+           sodipodi:rx="44.285713"
+           sodipodi:ry="57.142857"
+           d="m 154.28571,98.076469 c 0,31.559131 -19.82739,57.142861 -44.28571,57.142861 -24.458324,0 -44.285713,-25.58373 -44.285713,-57.142861 0,-31.559128 19.827389,-57.142856 44.285713,-57.142856 24.45832,0 44.28571,25.583728 44.28571,57.142856 z"
+           transform="matrix(0.26081651,0,0,0.20213279,90.618876,16.443302)" />
+      </g>
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3755"
+         d="m 104.88926,90.2679 6.96259,-5.562989 0,11.125982 z"
+         style="fill:#c51325;fill-opacity:1;stroke:#c51325;stroke-width:1.49962318;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3755-2"
+         d="m 112.42704,90.2679 6.9626,-5.562989 0,11.125982 z"
+         style="fill:#c51325;fill-opacity:1;stroke:#c51325;stroke-width:1.49962318;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+  </g>
+</svg>
