@@ -13,20 +13,27 @@ package org.obeonetwork.bpmn2.design;
 
 import java.util.Set;
 
+import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.gmf.runtime.notation.Bounds;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
+import org.obeonetwork.dsl.bpmn2.Lane;
 
+import fr.obeo.dsl.viewpoint.DDiagramElement;
+import fr.obeo.dsl.viewpoint.DDiagramElementContainer;
 import fr.obeo.dsl.viewpoint.DNode;
+import fr.obeo.dsl.viewpoint.business.api.dialect.DialectManager;
 import fr.obeo.dsl.viewpoint.diagram.business.api.view.ViewPointLayoutDataManager;
 import fr.obeo.dsl.viewpoint.diagram.business.api.view.ViewpointGMFHelper;
 import fr.obeo.dsl.viewpoint.diagram.business.api.view.refresh.CanonicalSynchronizer;
 import fr.obeo.dsl.viewpoint.diagram.business.api.view.refresh.CanonicalSynchronizerFactory;
 
 /**
- * Fix the position of the elements created form a contextual menu.
- * @author atakarabt
+ * Size and position utilities.
+ * 
  * */
 public class ElementsPositionService {
 	
@@ -35,6 +42,7 @@ public class ElementsPositionService {
 	 * @param currentNode the node where the contextual menu displayed
 	 * @param newNode the new element to create
 	 * 
+     * @author atakarabt
 	 * */
 	public void positionRelativeToCurrent (EObject currentNode, EObject newNode) {
 		if (currentNode instanceof DNode && newNode instanceof DNode) {
@@ -59,4 +67,39 @@ public class ElementsPositionService {
 			
 		}
 	}
+	
+	public DDiagramElementContainer lanesAutoSize(final DDiagramElementContainer laneSetContainer) {
+		Node laneSetNode = ViewpointGMFHelper.getGmfNode(laneSetContainer);
+		Bounds laneSetBounds = (Bounds)laneSetNode.getLayoutConstraint();
+		int laneSetWidth = laneSetBounds.getWidth();
+
+		for(DDiagramElement laneDiagramElement : laneSetContainer.getElements()) {
+			if(laneDiagramElement.getTarget() instanceof Lane) {
+				Node laneNode = ViewpointGMFHelper.getGmfNode(laneDiagramElement);
+				Bounds laneBounds = (Bounds)laneNode.getLayoutConstraint();
+				laneBounds.setWidth(laneSetWidth - 5);
+			}
+		}
+		
+		DialectManager.INSTANCE.refresh(laneSetContainer.getParentDiagram(),
+				new NullProgressMonitor());
+		DialectManager.INSTANCE.refresh(laneSetContainer.getParentDiagram(),
+				new NullProgressMonitor());
+		
+		return laneSetContainer;
+	}
+	
+	public EObject moveElement(EObject referenceOwner, String referenceName, final EObject element, final EObject relativeElement) {
+		
+        EStructuralFeature feature = referenceOwner.eClass().getEStructuralFeature(referenceName);
+        @SuppressWarnings("unchecked")
+		EList<EObject> list = (EList<EObject>) referenceOwner.eGet(feature);
+        
+        int relativeIndex = list.indexOf(relativeElement);
+        
+        list.move(relativeIndex, element);
+        
+		return referenceOwner;
+	}
+	
 }
