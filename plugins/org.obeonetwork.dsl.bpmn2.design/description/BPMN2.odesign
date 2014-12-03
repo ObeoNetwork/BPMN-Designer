@@ -794,6 +794,56 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$views.lanesAutoSize()%>"/>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:PopupMenu" name="ConvertTask_Popup" label="Convert Task to..." precondition="&lt;%filter(&quot;Task&quot;)%>">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToTask_ContextAction" label="Task" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$views.target.convertToTask()%>"/>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToBusinessRuleTask_ContextAction" label="Business Rule Task" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$views.target.convertToBusinessRuleTask()%>"/>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToManualTask_ContextAction" label="Manual Task" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$views.target.convertToManualTask()%>"/>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="Receive Task" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/receiveTask.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$views.target.convertToReceiveTask()%>"/>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="Script Task" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/scriptTask.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$views.target.convertToScriptTask()%>"/>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToSendTask_ContextAction" label="Send Task" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$views.target.convertToSendTask()%>"/>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToServiceTask_ContextAction" label="Service Task" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$views.target.convertToServiceTask()%>"/>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToUserTask_ContextAction" label="User Task" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$views.target.convertToUserTask()%>"/>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
         </toolSections>
         <toolSections name="Events">
           <ownedTools xsi:type="tool:ToolDescription" name="Start" precondition="&lt;%$element.filter(&quot;ImplicitThrowEvent&quot;)!=null ||$element.filter(&quot;IntermediateCatchEvent&quot;)!=null ||$element.filter(&quot;EndEvent&quot;)!=null ||$element.filter(&quot;StartEvent&quot;)!=null ||$element.filter(&quot;Task&quot;)!=null || $element.eContainer(&quot;Lane&quot;)!=null || $element.eContainer(&quot;ChoreographyTask&quot;)!=null || $element.filter(&quot;ParallelGateway&quot;)!=null || $element.filter(&quot;ExclusiveGateway&quot;)!=null || $element.filter(&quot;InclusiveGateway&quot;)!=null || $element.filter(&quot;ComplexGateway&quot;)!=null || $element.filter(&quot;EventBasedGateway&quot;)!=null || $element.filter(&quot;SubProcess&quot;)!=null%>" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
@@ -1381,7 +1431,7 @@
                     <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;Lane&quot;).nSize > 0%>">
                       <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="&lt;%$element%>"/>
                     </subModelOperations>
-                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Service Task"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New User Task"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -2003,7 +2053,7 @@
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.ElementsPositionService"/>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.ExpandCollapseService"/>
-    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.TaskLikeService"/>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.TaskService"/>
   </ownedViewpoints>
   <userColorsPalettes name="Colors">
     <entries xsi:type="description:UserFixedColor" red="255" green="255" blue="255" name="LaneBackgroundRight"/>
