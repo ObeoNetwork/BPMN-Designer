@@ -1892,8 +1892,11 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Lane" referenceName="lanes"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;LaneSet&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Lane" referenceName="lanes" variableName="newLane"/>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Lane&quot;)%>">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;LaneSet&quot;).moveElement(&quot;lanes&quot;,$newLane,$container)%>"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
