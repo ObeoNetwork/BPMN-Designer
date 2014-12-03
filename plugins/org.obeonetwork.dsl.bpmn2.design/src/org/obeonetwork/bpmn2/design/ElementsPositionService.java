@@ -83,8 +83,6 @@ public class ElementsPositionService {
 		
 		DialectManager.INSTANCE.refresh(laneSetContainer.getParentDiagram(),
 				new NullProgressMonitor());
-		DialectManager.INSTANCE.refresh(laneSetContainer.getParentDiagram(),
-				new NullProgressMonitor());
 		
 		return laneSetContainer;
 	}

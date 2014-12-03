@@ -25,7 +25,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="HorizontalLaneSet" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%self.laneSets%>" domainClass="bpmn2.LaneSet" childrenPresentation="VerticalStack">
+        <containerMappings name="HorizontalLaneSet" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%self.laneSets%>" doubleClickDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='LaneSet_AutosizeLanes_DoubleClick']" domainClass="bpmn2.LaneSet" childrenPresentation="VerticalStack">
           <subContainerMappings name="Lane" label="Lane" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%filter(&quot;LaneSet&quot;).lanes%>" domainClass="bpmn2.Lane" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementToLane'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveExtensionValueToLane'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='LaneReorder']" reusedContainerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']">
             <subNodeMappings name="StartEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="&lt;%$containerView.target().flowNodeRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="bpmn2.StartEvent">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/start-event/start.svg">
@@ -380,7 +380,7 @@
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subContainerMappings>
-            <subContainerMappings name="SubProcess" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="feature:flowNodeRefs" doubleClickDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='ToggleCollapseSubProcess_DoubleClick']" domainClass="bpmn2.SubProcess" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementToLane']">
+            <subContainerMappings name="SubProcess" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="feature:flowNodeRefs" doubleClickDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='SubProcessToggleCollapse_DoubleClick']" domainClass="bpmn2.SubProcess" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementToLane']">
               <subNodeMappings name="SPStartEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="feature:flowElements" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="bpmn2.StartEvent">
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/start-event/start.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -662,12 +662,12 @@
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </subContainerMappings>
-              <subContainerMappings name="SPCallActivity_Process" preconditionExpression="&lt;%calledElementRef.filter(&quot;Process&quot;)!=null%>" semanticCandidatesExpression="feature:flowElements" semanticElements="&lt;%self + self.calledElementRef%>" domainClass="bpmn2.CallActivity">
+              <subContainerMappings name="SPCallActivity_Process" preconditionExpression="&lt;%calledElementRef.filter(&quot;Process&quot;)!=null%>" deletionDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteCallActivity']" semanticCandidatesExpression="feature:flowElements" semanticElements="&lt;%self + self.calledElementRef%>" domainClass="bpmn2.CallActivity">
                 <style xsi:type="style:FlatContainerStyleDescription" arcWidth="20" arcHeight="20" borderSizeComputationExpression="3" borderColor="//@userColorsPalettes[name='Colors']/@entries[name='TaskBorder']" showIcon="false" labelExpression="&lt;%&quot; \n\n&quot;+calledElementRef.name%>" roundedCorner="true" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='GlobalTaskBackground']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='GlobalTaskBackground']">
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
               </subContainerMappings>
-              <subContainerMappings name="SPCallActivity_Task" preconditionExpression="&lt;%calledElementRef.filter(&quot;GlobalTask&quot;)!=null%>" semanticCandidatesExpression="feature:flowElements" semanticElements="&lt;%self + self.calledElementRef%>" domainClass="bpmn2.CallActivity">
+              <subContainerMappings name="SPCallActivity_Task" preconditionExpression="&lt;%calledElementRef.filter(&quot;GlobalTask&quot;)!=null%>" deletionDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteCallActivity']" semanticCandidatesExpression="feature:flowElements" semanticElements="&lt;%self + self.calledElementRef%>" domainClass="bpmn2.CallActivity">
                 <style xsi:type="style:FlatContainerStyleDescription" arcWidth="20" arcHeight="20" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Colors']/@entries[name='TaskBorder']" showIcon="false" labelExpression="&lt;%&quot; \n\n&quot;+calledElementRef.name%>" roundedCorner="true" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='GlobalTaskBackground']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='GlobalTaskBackground']">
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 </style>
@@ -676,12 +676,12 @@
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subContainerMappings>
-            <subContainerMappings name="CallActivity_Process" preconditionExpression="&lt;%calledElementRef.filter(&quot;Process&quot;)!=null%>" semanticCandidatesExpression="feature:flowNodeRefs" semanticElements="&lt;%self + self.calledElementRef%>" domainClass="bpmn2.CallActivity">
+            <subContainerMappings name="CallActivity_Process" preconditionExpression="&lt;%calledElementRef.filter(&quot;Process&quot;)!=null%>" deletionDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteCallActivity']" semanticCandidatesExpression="feature:flowNodeRefs" semanticElements="&lt;%self + self.calledElementRef%>" domainClass="bpmn2.CallActivity">
               <style xsi:type="style:FlatContainerStyleDescription" arcWidth="20" arcHeight="20" borderSizeComputationExpression="3" borderColor="//@userColorsPalettes[name='Colors']/@entries[name='TaskBorder']" showIcon="false" labelExpression="&lt;%&quot; \n\n&quot;+calledElementRef.name%>" roundedCorner="true" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='GlobalTaskBackground']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='GlobalTaskBackground']">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subContainerMappings>
-            <subContainerMappings name="CallActivity_Task" preconditionExpression="&lt;%calledElementRef.filter(&quot;GlobalTask&quot;)!=null%>" semanticCandidatesExpression="feature:flowNodeRefs" semanticElements="&lt;%self + self.calledElementRef%>" domainClass="bpmn2.CallActivity">
+            <subContainerMappings name="CallActivity_Task" preconditionExpression="&lt;%calledElementRef.filter(&quot;GlobalTask&quot;)!=null%>" deletionDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteCallActivity']" semanticCandidatesExpression="feature:flowNodeRefs" semanticElements="&lt;%self + self.calledElementRef%>" domainClass="bpmn2.CallActivity">
               <style xsi:type="style:FlatContainerStyleDescription" arcWidth="20" arcHeight="20" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Colors']/@entries[name='TaskBorder']" showIcon="false" labelExpression="&lt;%&quot; \n\n&quot;+calledElementRef.name%>" roundedCorner="true" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='GlobalTaskBackground']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='GlobalTaskBackground']">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -731,14 +731,14 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="ToggleCollapseSubProcess_DoubleClick" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="SubProcessToggleCollapse_DoubleClick" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$elementView.toggleCollapse()%>"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:OperationAction" name="ToggleCollapseSubProcess_ContextAction" label="Toggle collapse" precondition="&lt;%self.filter(&quot;SubProcess&quot;)!=null%>" forceRefresh="true">
+          <ownedTools xsi:type="tool:OperationAction" name="ToggleCollapseSubProcess_ContextAction" label="Toggle collapse" precondition="&lt;%self.filter(&quot;SubProcess&quot;)!=null%>" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SubProcess.png">
             <view name="views"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$views.toggleCollapse()%>"/>
@@ -769,6 +769,29 @@
                 <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$oldSemanticContainer.moveElement(&quot;lanes&quot;,$element,$newSemanticContainer)%>"/>
                 <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newContainerView.eContainer().lanesAutoSize()%>"/>
               </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteCallActivity">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.eContainer(&quot;FlowElementsContainer&quot;)%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="flowElements" elementExpression="&lt;%$element%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="LaneSet_AutosizeLanes_DoubleClick" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$elementView.lanesAutoSize()%>"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:OperationAction" name="LaneSet_AutosizeLanes_ContextAction" label="Lanes autosize" precondition="&lt;%filter(&quot;LaneSet&quot;)%>" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/swimlane/pool.png">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$views.lanesAutoSize()%>"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
@@ -1848,17 +1871,20 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Other">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="LaneSet" label="Lane Set" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/swimlane/pool.png">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="LaneSet" label="Lane Set" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/swimlane/pool.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.LaneSet" referenceName="laneSets">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Lane Set"/>
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']" containerViewExpression="&lt;%$container%>" variableName="laneSetView"/>
                   <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Lane" referenceName="lanes"/>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']" containerViewExpression="&lt;%$laneSetView%>" variableName="laneView"/>
                   </subModelOperations>
                 </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$laneSetView.lanesAutoSize()%>"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
