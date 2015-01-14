@@ -19,6 +19,12 @@ import org.obeonetwork.dsl.bpmn2.Task;
 import org.obeonetwork.dsl.bpmn2.UserTask;
 import org.obeonetwork.dsl.bpmn2.impl.TaskImpl;
 
+/**
+ * Test and conversion services to operate on Task objects.
+ * 
+ * @author vrichard
+ *
+ */
 public class TaskService {
 
 	public boolean isLikeScriptTask(final EObject eObject) {
