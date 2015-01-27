@@ -27,6 +27,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionAttributeDefinitions"
         ordered="false" upperBound="-1" eType="#//ExtensionAttributeDefinition" containment="true"
         eOpposite="#//ExtensionAttributeDefinition/extensionDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExtensionAttributeDefinition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
@@ -38,6 +40,8 @@
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionDefinition" ordered="false"
         lowerBound="1" eType="#//ExtensionDefinition" eOpposite="#//ExtensionDefinition/extensionAttributeDefinitions"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExtensionAttributeValue">
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueRef" ordered="false"
@@ -46,6 +50,8 @@
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionAttributeDefinition"
         ordered="false" eType="#//ExtensionAttributeDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Documentation" eSuperTypes="#//BaseElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" ordered="false" lowerBound="1"
@@ -195,6 +201,8 @@
         lowerBound="1" eType="#//OutputSet"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operationRef" ordered="false"
         lowerBound="1" eType="#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResourceRole" eSuperTypes="#//BaseElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resourceRef" ordered="false"
@@ -224,11 +232,15 @@
         lowerBound="1" eType="#//Expression" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameterRef" ordered="false"
         lowerBound="1" eType="#//ResourceParameter"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//BaseElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="ResourceAssignmentExpression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" ordered="false"
         lowerBound="1" eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Monitoring" eSuperTypes="#//BaseElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Performer" eSuperTypes="#//ResourceRole"/>
@@ -388,6 +400,8 @@
         defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximum" ordered="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MessageFlowAssociation" eSuperTypes="#//BaseElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="innerMessageFlowRef" ordered="false"
@@ -611,6 +625,8 @@
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="definition" ordered="false"
         lowerBound="1" eType="#//ExtensionDefinition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IntermediateCatchEvent" eSuperTypes="#//CatchEvent"/>
   <eClassifiers xsi:type="ecore:EClass" name="IntermediateThrowEvent" eSuperTypes="#//ThrowEvent"/>
@@ -649,6 +665,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="escalationCode" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CompensateEventDefinition" eSuperTypes="#//EventDefinition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="waitForCompletion" ordered="false"
