@@ -15,6 +15,7 @@
 package org.obeonetwork.dsl.bpmn2.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.Import;
@@ -29,6 +30,7 @@ import org.obeonetwork.dsl.bpmn2.Import;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ImportImpl#getImportType <em>Import Type</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ImportImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ImportImpl#getNamespace <em>Namespace</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ImportImpl#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -64,12 +66,23 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 	protected static final String NAMESPACE_EDEFAULT = null;
 
 	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see #getId()
 	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	protected ImportImpl() {
 		super();
+		setId(EcoreUtil.generateUUID());
 	}
 
 	/**
@@ -157,6 +170,26 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId() {
+		return (String) eDynamicGet(Bpmn2Package.IMPORT__ID,
+				Bpmn2Package.Literals.IMPORT__ID, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		eDynamicSet(Bpmn2Package.IMPORT__ID, Bpmn2Package.Literals.IMPORT__ID,
+				newId);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -166,6 +199,8 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 			return getLocation();
 		case Bpmn2Package.IMPORT__NAMESPACE:
 			return getNamespace();
+		case Bpmn2Package.IMPORT__ID:
+			return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -186,6 +221,9 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 			return;
 		case Bpmn2Package.IMPORT__NAMESPACE:
 			setNamespace((String) newValue);
+			return;
+		case Bpmn2Package.IMPORT__ID:
+			setId((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -208,6 +246,9 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 		case Bpmn2Package.IMPORT__NAMESPACE:
 			setNamespace(NAMESPACE_EDEFAULT);
 			return;
+		case Bpmn2Package.IMPORT__ID:
+			setId(ID_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -229,6 +270,9 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 		case Bpmn2Package.IMPORT__NAMESPACE:
 			return NAMESPACE_EDEFAULT == null ? getNamespace() != null
 					: !NAMESPACE_EDEFAULT.equals(getNamespace());
+		case Bpmn2Package.IMPORT__ID:
+			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT
+					.equals(getId());
 		}
 		return super.eIsSet(featureID);
 	}

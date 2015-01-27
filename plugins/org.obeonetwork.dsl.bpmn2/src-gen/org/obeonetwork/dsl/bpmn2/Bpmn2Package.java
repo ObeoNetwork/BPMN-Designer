@@ -801,13 +801,22 @@ public interface Bpmn2Package extends EPackage {
 	int IMPORT__NAMESPACE = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT__ID = 3;
+
+	/**
 	 * The number of structural features of the '<em>Import</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORT_FEATURE_COUNT = 3;
+	int IMPORT_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.bpmn2.impl.ErrorImpl <em>Error</em>}' class.
@@ -16137,6 +16146,17 @@ public interface Bpmn2Package extends EPackage {
 	EAttribute getImport_Namespace();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.bpmn2.Import#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see org.obeonetwork.dsl.bpmn2.Import#getId()
+	 * @see #getImport()
+	 * @generated
+	 */
+	EAttribute getImport_Id();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.bpmn2.Error <em>Error</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -21113,6 +21133,14 @@ public interface Bpmn2Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute IMPORT__NAMESPACE = eINSTANCE.getImport_Namespace();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPORT__ID = eINSTANCE.getImport_Id();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ErrorImpl <em>Error</em>}' class.

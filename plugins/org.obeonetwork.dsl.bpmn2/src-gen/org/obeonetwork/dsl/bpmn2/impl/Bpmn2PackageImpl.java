@@ -1632,6 +1632,15 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getImport_Id() {
+		return (EAttribute) getImport().getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getError() {
 		if (errorEClass == null) {
 			errorEClass = (EClass) EPackage.Registry.INSTANCE

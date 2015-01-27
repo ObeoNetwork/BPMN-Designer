@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.obeonetwork.dsl.dd.dc.*;
 import org.obeonetwork.dsl.dd.dc.Bounds;
 import org.obeonetwork.dsl.dd.dc.DcFactory;
 import org.obeonetwork.dsl.dd.dc.DcPackage;
