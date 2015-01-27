@@ -18,26 +18,12 @@
 
 <plugin>
 
-   <extension point="org.eclipse.ui.newWizards">
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="org.obeonetwork.dsl.bpmn2.presentation.Bpmn2ModelWizardID"
-            name="%_UI_Bpmn2ModelWizard_label"
-            class="org.obeonetwork.dsl.bpmn2.presentation.Bpmn2ModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/Bpmn2ModelFile.gif">
-         <description>%_UI_Bpmn2ModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
 
    <extension point="org.eclipse.ui.editors">
       <editor
             id="org.obeonetwork.dsl.bpmn2.presentation.Bpmn2EditorID"
             name="%_UI_Bpmn2Editor_label"
-            icon="icons/full/obj16/Bpmn2ModelFile.gif"
+            icon="icons/full/obj16/file_bpmn.png"
             extensions="bpmn"
             class="org.obeonetwork.dsl.bpmn2.presentation.Bpmn2Editor"
             contributorClass="org.obeonetwork.dsl.bpmn2.presentation.Bpmn2ActionBarContributor">

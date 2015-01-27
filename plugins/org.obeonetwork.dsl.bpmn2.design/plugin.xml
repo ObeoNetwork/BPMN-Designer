@@ -25,7 +25,7 @@
      <wizard
            category="org.obeonetwork.dsl.bpmn2.designer.category"
            class="org.obeonetwork.bpmn2.design.ui.wizards.newmodel.Bpmn2ModelWizard"
-           icon="icons/Bpmn2ModelFile.gif"
+           icon="icons2/file_bpmn_new.png"
            id="org.obeonetwork.dsl.bpmn2.wizard.newBpmn2Model"
            name="BPMN Model"
            preferredPerspectives="fr.obeo.dsl.viewpoint.ui.tools.perspective.modeling"
@@ -39,7 +39,7 @@
      <wizard
            category="org.obeonetwork.dsl.bpmn2.designer.category"
            class="org.obeonetwork.bpmn2.design.ui.wizards.newmodel.Bpmn2ProjectWizard"
-           icon="icons/Bpmn2ModelFile.gif"
+           icon="icons2/folder_bpmn_new.png"
            id="org.obeonetwork.dsl.bpmn2.wizard.newBpmn2Project"
            name="BPMN Project"
            project="true">
