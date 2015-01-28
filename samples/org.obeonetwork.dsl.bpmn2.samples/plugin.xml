@@ -27,7 +27,7 @@
       
       <wizard
             name="BPMN Samples"
-            icon="icons/bpmn2_logo.gif"
+            icon="icons/folder_bpmn_new.png"
             category="org.eclipse.ui.Examples/org.obeonetwork.dsl.bpmn2.samples.Bpmn2Samples.plugin"
             class="org.obeonetwork.dsl.bpmn2.samples.wizards.ProjectUnzipperNewWizard"
             project="true"
