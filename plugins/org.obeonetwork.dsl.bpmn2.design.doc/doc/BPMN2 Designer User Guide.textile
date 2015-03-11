@@ -22,7 +22,7 @@ Click on @Next@, name your project and then click on @Finish@. The project appea
 
 !gettingStarted/example-3-workspace.png!
 
-Double click on TravelAgency.aird to open the designer. You will be greeted with the process definitions table.
+Double click on representations.aird to open the designer. You will be greeted with the process definitions table.
 
 !gettingStarted/example-4_1-maintable.png!
 
@@ -44,7 +44,7 @@ Select the @Modeling@ perspective and the click on @OK@.
 
 !gettingStarted/example-5_3-perspective.png!
 
-Then click on the wizard shortcuts at the top-left of the Eclipse Workbench. Select __New BPMN2 Project.__
+Then click on the wizard shortcuts at the top-left of the Eclipse Workbench. Select __New BPMN Project.__
 
 !gettingStarted/example-6_1-newproject.png!
 
@@ -52,7 +52,7 @@ You can choose a specific name for the project.
 
 !gettingStarted/example-6_2-newproject.png!
 
-When you press the __Finish__ button, the projects gets created and automatically enabled the BPMN2 viewpoints.
+When you press the __Finish__ button, the projects gets created and automatically enabled the BPMN 2.0 - Process viewpoints.
 
 !gettingStarted/example-6_3-newproject.png!
 
