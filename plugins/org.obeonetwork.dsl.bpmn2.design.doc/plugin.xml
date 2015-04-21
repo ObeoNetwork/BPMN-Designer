@@ -29,10 +29,6 @@
             configId="org.eclipse.ui.intro.universalConfig"
             content="intro/welcome_intro.xml">
       </configExtension>
-      <configExtension
-            configId="fr.obeo.dsl.designer.architect.introConfig"
-            content="intro/welcome_intro.xml">
-      </configExtension>
    </extension>
 
 </plugin>

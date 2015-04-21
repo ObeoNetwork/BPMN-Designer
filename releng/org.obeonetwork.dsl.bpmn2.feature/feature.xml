@@ -216,16 +216,15 @@ Each party waives its rights to a jury trial in any resulting
 litigation.
    </license>
 
-   <requires>
-      <import feature="fr.obeo.dsl.feature.designer.architect" version="6.0.0" match="greaterOrEqual"/>
-      <import feature="fr.obeo.dsl.viewpoint.runtime" version="6.4.0" match="greaterOrEqual"/>
-      <import feature="fr.obeo.dsl.viewpoint.runtime.acceleo2" version="6.4.0" match="greaterOrEqual"/>
-      <import feature="fr.obeo.dsl.viewpoint.runtime.ocl" version="6.4.0" match="greaterOrEqual"/>
-      <import feature="fr.obeo.dsl.viewpoint.runtime.acceleo" version="6.4.0" match="greaterOrEqual"/>
-      <import feature="fr.obeo.dsl.viewpoint.runtime.ide.ui" version="6.4.0" match="greaterOrEqual"/>
-      <import feature="fr.obeo.dsl.viewpoint.runtime.ide.ui.acceleo" version="6.4.0" match="greaterOrEqual"/>
-      <import feature="fr.obeo.dsl.viewpoint.specifier.ide.ui" version="6.4.0" match="greaterOrEqual"/>
-      <import feature="fr.obeo.dsl.viewpoint.specifier.ide.ui.acceleo" version="6.4.0" match="greaterOrEqual"/>
+   <requires>     
+      <import feature="org.eclipse.sirius.runtime" version="2.0.3" match="greaterOrEqual"/>
+      <import feature="org.eclipse.sirius.query.legacy.feature" version="1.0.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.sirius.runtime.ocl" version="2.0.3" match="greaterOrEqual"/>
+      <import feature="org.eclipse.sirius.runtime.acceleo" version="2.0.3" match="greaterOrEqual"/>
+      <import feature="org.eclipse.sirius.runtime.ide.ui" version="2.0.3" match="greaterOrEqual"/>
+      <import feature="org.eclipse.sirius.runtime.ide.ui.acceleo" version="2.0.3" match="greaterOrEqual"/>
+      <import feature="org.eclipse.sirius.specifier.ide.ui" version="2.0.3" match="greaterOrEqual"/>
+      <import feature="org.eclipse.sirius.specifier.ide.ui.acceleo" version="2.0.3" match="greaterOrEqual"/>
       <import plugin="fr.obeo.mda.license"/>
    </requires>
 

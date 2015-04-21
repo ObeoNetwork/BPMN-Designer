@@ -28,7 +28,7 @@
            icon="icons2/file_bpmn_new.png"
            id="org.obeonetwork.dsl.bpmn2.wizard.newBpmn2Model"
            name="BPMN Model"
-           preferredPerspectives="fr.obeo.dsl.viewpoint.ui.tools.perspective.modeling"
+           preferredPerspectives="org.eclipse.sirius.ui.tools.perspective.modeling"
            project="false">
      </wizard>
      <category
@@ -48,7 +48,7 @@
   <extension
         point="org.eclipse.ui.perspectiveExtensions">
      <perspectiveExtension
-           targetID="fr.obeo.dsl.viewpoint.ui.tools.perspective.modeling">
+           targetID="org.eclipse.sirius.ui.tools.perspective.modeling">
         <newWizardShortcut
               id="org.obeonetwork.dsl.bpmn2.wizard.newBpmn2Project">
         </newWizardShortcut>
