@@ -25,6 +25,7 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -33,7 +34,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-
 import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.ui.PlatformUI;
@@ -41,15 +41,14 @@ import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.WizardNewProjectCreationPage;
 import org.eclipse.ui.wizards.newresource.BasicNewResourceWizard;
 import org.obeonetwork.bpmn2.design.Activator;
-
-import fr.obeo.dsl.common.tools.api.util.Option;
-import fr.obeo.dsl.common.tools.api.util.Options;
-import fr.obeo.dsl.viewpoint.business.api.componentization.ViewpointRegistry;
-import fr.obeo.dsl.viewpoint.business.api.modelingproject.ModelingProject;
-import fr.obeo.dsl.viewpoint.business.api.session.Session;
-import fr.obeo.dsl.viewpoint.description.Viewpoint;
-import fr.obeo.dsl.viewpoint.ui.business.api.viewpoint.ViewpointSelectionCallback;
-import fr.obeo.dsl.viewpoint.ui.tools.api.project.ModelingProjectManager;
+import org.eclipse.sirius.ext.base.Option;
+import org.eclipse.sirius.ext.base.Options;
+import org.eclipse.sirius.business.api.componentization.ViewpointRegistry;
+import org.eclipse.sirius.business.api.modelingproject.ModelingProject;
+import org.eclipse.sirius.business.api.session.Session;
+import org.eclipse.sirius.viewpoint.description.Viewpoint;
+import org.eclipse.sirius.ui.business.api.viewpoint.ViewpointSelectionCallback;
+import org.eclipse.sirius.ui.tools.api.project.ModelingProjectManager;
 
 /**
  * 
@@ -91,7 +90,7 @@ public class Bpmn2ProjectWizard extends BasicNewResourceWizard {
 
 		try {
 			IProject project = ModelingProjectManager.INSTANCE.createNewModelingProject(
-					newProjectPage.getProjectName(), newProjectPage.getLocationPath(), true);
+					newProjectPage.getProjectName(), newProjectPage.getLocationPath(), true, new NullProgressMonitor());
 			Option<IFile> optionalNewfile = createEcoreResource(project);
 			if (optionalNewfile.some() && optionalNewfile.get().exists()) {
 				selectAndReveal(optionalNewfile.get());
@@ -166,7 +165,7 @@ public class Bpmn2ProjectWizard extends BasicNewResourceWizard {
 
 						for (Viewpoint vp : ViewpointRegistry.getInstance().getViewpoints()) {
 							if ("Process".equals(vp.getName())) {
-								callback.selectViewpoint(vp, session);
+								callback.selectViewpoint(vp, session, new NullProgressMonitor());
 							} 
 						}
 					}

@@ -22,14 +22,14 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 import org.obeonetwork.dsl.bpmn2.Lane;
 
-import fr.obeo.dsl.viewpoint.DDiagramElement;
-import fr.obeo.dsl.viewpoint.DDiagramElementContainer;
-import fr.obeo.dsl.viewpoint.DNode;
-import fr.obeo.dsl.viewpoint.business.api.dialect.DialectManager;
-import fr.obeo.dsl.viewpoint.diagram.business.api.view.ViewPointLayoutDataManager;
-import fr.obeo.dsl.viewpoint.diagram.business.api.view.ViewpointGMFHelper;
-import fr.obeo.dsl.viewpoint.diagram.business.api.view.refresh.CanonicalSynchronizer;
-import fr.obeo.dsl.viewpoint.diagram.business.api.view.refresh.CanonicalSynchronizerFactory;
+import org.eclipse.sirius.diagram.DDiagramElement;
+import org.eclipse.sirius.diagram.DDiagramElementContainer;
+import org.eclipse.sirius.diagram.DNode;
+import org.eclipse.sirius.business.api.dialect.DialectManager;
+import org.eclipse.sirius.diagram.ui.business.api.view.SiriusLayoutDataManager;
+import org.eclipse.sirius.diagram.ui.business.api.view.SiriusGMFHelper;
+import org.eclipse.sirius.diagram.business.api.refresh.CanonicalSynchronizer;
+import org.eclipse.sirius.diagram.business.api.refresh.CanonicalSynchronizerFactory;
 
 /**
  * Size and position utilities.
@@ -49,15 +49,15 @@ public class ElementsPositionService {
 			DNode currentDNode = (DNode)currentNode;
 			DNode newDNode = (DNode)newNode;
 			// Retrieve GMF nodes associated with our graphical nodes
-			Node firstNode = ViewpointGMFHelper.getGmfNode(currentDNode);
+			Node firstNode = SiriusGMFHelper.getGmfNode(currentDNode);
 			Bounds firstBounds= (Bounds)firstNode.getLayoutConstraint();
 			// Launch refresh so that GMF view corresponding to the newDNode are created
 			CanonicalSynchronizer canonicalSynchronizer = CanonicalSynchronizerFactory.INSTANCE.createCanonicalSynchronizer(firstNode.getDiagram());
 			canonicalSynchronizer.synchronize();
-			Node secondNode = ViewpointGMFHelper.getGmfNode(newDNode);
+			Node secondNode = SiriusGMFHelper.getGmfNode(newDNode);
 			Bounds secondBounds= (Bounds)secondNode.getLayoutConstraint();
 			// Make sure that the created view will never be arranged
-			Set<View> createdViewsToArrange = ViewPointLayoutDataManager.INSTANCE.getCreatedViewWithCenterLayout().get(secondNode.getDiagram());
+			Set<View> createdViewsToArrange = SiriusLayoutDataManager.INSTANCE.getCreatedViewWithCenterLayout().get(secondNode.getDiagram());
 			if (createdViewsToArrange != null) {
 				createdViewsToArrange.remove(secondNode);
 			}
@@ -69,13 +69,13 @@ public class ElementsPositionService {
 	}
 	
 	public DDiagramElementContainer lanesAutoSize(final DDiagramElementContainer laneSetContainer) {
-		Node laneSetNode = ViewpointGMFHelper.getGmfNode(laneSetContainer);
+		Node laneSetNode = SiriusGMFHelper.getGmfNode(laneSetContainer);
 		Bounds laneSetBounds = (Bounds)laneSetNode.getLayoutConstraint();
 		int laneSetWidth = laneSetBounds.getWidth();
 
 		for(DDiagramElement laneDiagramElement : laneSetContainer.getElements()) {
 			if(laneDiagramElement.getTarget() instanceof Lane) {
-				Node laneNode = ViewpointGMFHelper.getGmfNode(laneDiagramElement);
+				Node laneNode = SiriusGMFHelper.getGmfNode(laneDiagramElement);
 				Bounds laneBounds = (Bounds)laneNode.getLayoutConstraint();
 				laneBounds.setWidth(laneSetWidth - 5);
 			}

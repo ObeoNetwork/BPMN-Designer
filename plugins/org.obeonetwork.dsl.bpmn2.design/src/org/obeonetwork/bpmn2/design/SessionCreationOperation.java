@@ -15,8 +15,6 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
 
-import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
-import org.obeonetwork.dsl.bpmn2.Definitions;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.expressions.EvaluationContext;
@@ -25,6 +23,7 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
@@ -32,18 +31,19 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.transaction.RecordingCommand;
+import org.eclipse.sirius.business.api.componentization.ViewpointRegistry;
+import org.eclipse.sirius.business.api.modelingproject.ModelingProject;
+import org.eclipse.sirius.business.api.session.Session;
+import org.eclipse.sirius.ext.base.Option;
+import org.eclipse.sirius.ui.business.api.viewpoint.ViewpointSelectionCallback;
+import org.eclipse.sirius.ui.tools.internal.actions.nature.ModelingToggleNatureAction;
+import org.eclipse.sirius.viewpoint.description.Viewpoint;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.obeonetwork.bpmn2.design.ui.wizards.newmodel.Messages;
+import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
+import org.obeonetwork.dsl.bpmn2.Definitions;
 
 import com.google.common.collect.Lists;
-
-import fr.obeo.dsl.common.tools.api.util.Option;
-import fr.obeo.dsl.viewpoint.business.api.componentization.ViewpointRegistry;
-import fr.obeo.dsl.viewpoint.business.api.modelingproject.ModelingProject;
-import fr.obeo.dsl.viewpoint.business.api.session.Session;
-import fr.obeo.dsl.viewpoint.description.Viewpoint;
-import fr.obeo.dsl.viewpoint.ui.business.api.viewpoint.ViewpointSelectionCallback;
-import fr.obeo.dsl.viewpoint.ui.tools.internal.actions.nature.ModelingToggleNatureAction;
 
 /**
  * An operation to create and initialize a new session with empty semantic BPMN
@@ -127,7 +127,7 @@ public class SessionCreationOperation extends WorkspaceModifyOperation {
 
 		IProject prj = modelFile.getProject();
 		if (prj != null
-				&& !ModelingProject.MODELING_PROJECT_PREDICATE.apply(prj)) {
+				&& !ModelingProject.hasModelingProjectNature(prj)) {
 			ModelingToggleNatureAction toogleProject = new ModelingToggleNatureAction();
 			EvaluationContext evaluationContext = new EvaluationContext(null,
 					Lists.newArrayList(prj));
@@ -164,7 +164,7 @@ public class SessionCreationOperation extends WorkspaceModifyOperation {
 											if ("Process".equals(vp.getName())) {
 												selection.selectViewpoint(vp,
 														created.get()
-																.getSession());
+																.getSession(), new NullProgressMonitor());
 											}
 										}
 									}

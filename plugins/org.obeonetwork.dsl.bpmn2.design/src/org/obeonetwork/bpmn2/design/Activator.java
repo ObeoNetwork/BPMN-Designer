@@ -11,8 +11,8 @@
  */
 package org.obeonetwork.bpmn2.design;
 
-import fr.obeo.dsl.viewpoint.business.api.componentization.ViewpointRegistry;
-import fr.obeo.dsl.viewpoint.description.Viewpoint;
+import org.eclipse.sirius.business.api.componentization.ViewpointRegistry;
+import org.eclipse.sirius.viewpoint.description.Viewpoint;
 
 import java.util.HashSet;
 import java.util.Set;

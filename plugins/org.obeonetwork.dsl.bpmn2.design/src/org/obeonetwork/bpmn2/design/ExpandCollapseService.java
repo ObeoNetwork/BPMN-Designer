@@ -2,12 +2,12 @@ package org.obeonetwork.bpmn2.design;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
 
-import fr.obeo.dsl.viewpoint.DDiagramElement;
-import fr.obeo.dsl.viewpoint.DDiagramElementContainer;
-import fr.obeo.dsl.viewpoint.business.api.dialect.DialectManager;
-import fr.obeo.dsl.viewpoint.business.api.helper.display.DisplayService;
-import fr.obeo.dsl.viewpoint.business.api.helper.display.DisplayServiceManager;
-import fr.obeo.dsl.viewpoint.business.api.helper.graphicalfilters.HideFilterHelper;
+import org.eclipse.sirius.diagram.DDiagramElement;
+import org.eclipse.sirius.diagram.DDiagramElementContainer;
+import org.eclipse.sirius.business.api.dialect.DialectManager;
+import org.eclipse.sirius.diagram.business.api.helper.display.DisplayService;
+import org.eclipse.sirius.diagram.business.api.helper.display.DisplayServiceManager;
+import org.eclipse.sirius.diagram.business.api.helper.graphicalfilters.HideFilterHelper;
 
 /**
  * @author vrichard

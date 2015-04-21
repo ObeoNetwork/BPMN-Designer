@@ -26,29 +26,19 @@
  <repositories>
   <!-- configure p2 repository to resolve against -->
   <repository>
-   <id>helios</id>
+   <id>luna</id>
     <layout>p2</layout>
-    <url>http://mirror.update.eclipse.obeo.fr/release-helios-3.6/</url>
+    <url>http://download.eclipse.org/releases/luna/</url>
   </repository>
   <repository>
-   <id>EEF</id>
+   <id>OD7</id>
     <layout>p2</layout>
-    <url>http://download.eclipse.org/modeling/emft/eef/updates/releases/0.9</url>
+    <url>http://update.obeo.fr/release/designer/7.0/team/7.0.1/luna/repository/</url>
   </repository>
   <repository>
-   <id>EEF-EPF</id>
+   <id>AcceleoLegacy</id>
     <layout>p2</layout>
-    <url>http://build.eclipse.org/modeling/emf/eef/epf/</url>
-  </repository>
-  <repository>
-   <id>OD6</id>
-    <layout>p2</layout>
-    <url>http://update.obeo.fr/release/designer/release-6.0.0/indigo/update/repository/</url>
-  </repository>
-  <repository>
-   <id>Acceleo2</id>
-    <layout>p2</layout>
-    <url>http://update.obeo.fr/stable/acceleo/stable-2.8.0/fr.obeo.acceleo.update/</url>
+    <url>http://download.eclipse.org/sirius/updates/legacy/</url>
   </repository>
  </repositories>
  <build>
