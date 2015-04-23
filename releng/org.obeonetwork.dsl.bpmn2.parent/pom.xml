@@ -31,12 +31,12 @@
     <url>http://download.eclipse.org/releases/luna/</url>
   </repository>
   <repository>
-   <id>OD7</id>
+   	<id>OD7</id>
     <layout>p2</layout>
-    <url>http://update.obeo.fr/release/designer/7.0/team/7.0.1/luna/repository/</url>
+    <url>http://update.obeo.fr/release/designer/7.0/community/7.0.1/luna/repository/</url>
   </repository>
   <repository>
-   <id>AcceleoLegacy</id>
+   	<id>AcceleoLegacy</id>
     <layout>p2</layout>
     <url>http://download.eclipse.org/sirius/updates/legacy/</url>
   </repository>
