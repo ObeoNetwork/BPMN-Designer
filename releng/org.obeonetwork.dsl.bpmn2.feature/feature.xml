@@ -2,7 +2,7 @@
 <feature
       id="org.obeonetwork.dsl.bpmn2.feature"
       label="BPMN-Designer"
-      version="2.0.0.qualifier"
+      version="3.0.0.qualifier"
       provider-name="Obeo">
 
    <description url="http://marketplace.obeonetwork.com/module/bpmn">
@@ -220,7 +220,7 @@ litigation.
          id="org.eclipse.sirius.query.legacy.feature"
          version="0.0.0"/>
 
-   <requires>     
+   <requires>
       <import feature="org.eclipse.sirius.runtime"/>
       <import feature="org.eclipse.sirius.query.legacy.feature"/>
       <import feature="org.eclipse.sirius.runtime.acceleo"/>
