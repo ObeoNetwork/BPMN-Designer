@@ -26,12 +26,12 @@
  <repositories>
   <!-- configure p2 repository to resolve against -->
   <repository>
-   <id>luna</id>
+   <id>eclipse</id>
     <layout>p2</layout>
     <url>http://download.eclipse.org/releases/mars/</url>
   </repository>
   <repository>
-   	<id>OD8.1</id>
+   	<id>OD</id>
     <layout>p2</layout>
     <url>http://update.obeo.fr/release/designer/8.1/community/latest/repository/</url>
   </repository>
