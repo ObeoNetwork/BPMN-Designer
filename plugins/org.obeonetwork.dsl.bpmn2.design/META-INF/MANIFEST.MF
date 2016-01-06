@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-Name: BPMN-Designer Viewpoint
 Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.design;singleton=true
-Bundle-Version: 3.0.0.qualifier
+Bundle-Version: 3.1.0.qualifier
 Bundle-Activator: org.obeonetwork.bpmn2.design.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -19,7 +19,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius.diagram.ui,
  org.eclipse.sirius.ext.base
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Provide-Package: org.obeonetwork.dsl.bpmn2.design
 Bundle-Vendor: Obeo
 Import-Package: org.eclipse.gmf.runtime.notation
