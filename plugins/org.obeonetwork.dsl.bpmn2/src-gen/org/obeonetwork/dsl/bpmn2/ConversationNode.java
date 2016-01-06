@@ -23,13 +23,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ConversationNode#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ConversationNode#getParticipantRefs <em>Participant Refs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ConversationNode#getMessageFlowRefs <em>Message Flow Refs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ConversationNode#getCorrelationKeys <em>Correlation Keys</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getConversationNode()
  * @model abstract="true"

@@ -21,11 +21,11 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ComplexBehaviorDefinition#getCondition <em>Condition</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ComplexBehaviorDefinition#getEvent <em>Event</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getComplexBehaviorDefinition()
  * @model

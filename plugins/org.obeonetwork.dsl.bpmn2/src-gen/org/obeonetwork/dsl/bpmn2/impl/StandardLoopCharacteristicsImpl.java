@@ -27,17 +27,16 @@ import org.obeonetwork.dsl.bpmn2.StandardLoopCharacteristics;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.StandardLoopCharacteristicsImpl#isTestBefore <em>Test Before</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.StandardLoopCharacteristicsImpl#getLoopCondition <em>Loop Condition</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.StandardLoopCharacteristicsImpl#getLoopMaximum <em>Loop Maximum</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl
-		implements StandardLoopCharacteristics {
+public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl implements StandardLoopCharacteristics {
 	/**
 	 * The default value of the '{@link #isTestBefore() <em>Test Before</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -73,10 +72,8 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl
 	 * @generated
 	 */
 	public boolean isTestBefore() {
-		return (Boolean) eDynamicGet(
-				Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE,
-				Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE,
-				true, true);
+		return (Boolean) eDynamicGet(Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE,
+				Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE, true, true);
 	}
 
 	/**
@@ -85,10 +82,8 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl
 	 * @generated
 	 */
 	public void setTestBefore(boolean newTestBefore) {
-		eDynamicSet(
-				Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE,
-				Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE,
-				newTestBefore);
+		eDynamicSet(Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE,
+				Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE, newTestBefore);
 	}
 
 	/**
@@ -97,10 +92,8 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl
 	 * @generated
 	 */
 	public Expression getLoopCondition() {
-		return (Expression) eDynamicGet(
-				Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION,
-				Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION,
-				true, true);
+		return (Expression) eDynamicGet(Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION,
+				Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION, true, true);
 	}
 
 	/**
@@ -108,11 +101,9 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLoopCondition(Expression newLoopCondition,
-			NotificationChain msgs) {
+	public NotificationChain basicSetLoopCondition(Expression newLoopCondition, NotificationChain msgs) {
 		msgs = eDynamicInverseAdd((InternalEObject) newLoopCondition,
-				Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION,
-				msgs);
+				Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION, msgs);
 		return msgs;
 	}
 
@@ -122,10 +113,8 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl
 	 * @generated
 	 */
 	public void setLoopCondition(Expression newLoopCondition) {
-		eDynamicSet(
-				Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION,
-				Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION,
-				newLoopCondition);
+		eDynamicSet(Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION,
+				Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION, newLoopCondition);
 	}
 
 	/**
@@ -134,10 +123,8 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl
 	 * @generated
 	 */
 	public Expression getLoopMaximum() {
-		return (Expression) eDynamicGet(
-				Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM,
-				Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM,
-				true, true);
+		return (Expression) eDynamicGet(Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM,
+				Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM, true, true);
 	}
 
 	/**
@@ -145,8 +132,7 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLoopMaximum(Expression newLoopMaximum,
-			NotificationChain msgs) {
+	public NotificationChain basicSetLoopMaximum(Expression newLoopMaximum, NotificationChain msgs) {
 		msgs = eDynamicInverseAdd((InternalEObject) newLoopMaximum,
 				Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM, msgs);
 		return msgs;
@@ -158,10 +144,8 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl
 	 * @generated
 	 */
 	public void setLoopMaximum(Expression newLoopMaximum) {
-		eDynamicSet(
-				Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM,
-				Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM,
-				newLoopMaximum);
+		eDynamicSet(Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM,
+				Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM, newLoopMaximum);
 	}
 
 	/**
@@ -170,8 +154,7 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
 			return basicSetLoopCondition(null, msgs);

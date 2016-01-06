@@ -23,11 +23,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CorrelationSubscription#getCorrelationKeyRef <em>Correlation Key Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CorrelationSubscription#getCorrelationPropertyBinding <em>Correlation Property Binding</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getCorrelationSubscription()
  * @model

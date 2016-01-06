@@ -67,8 +67,7 @@ public interface BpmnDiPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	BpmnDiPackage eINSTANCE = org.obeonetwork.dsl.bpmn2.bpmdi.impl.BpmnDiPackageImpl
-			.init();
+	BpmnDiPackage eINSTANCE = org.obeonetwork.dsl.bpmn2.bpmdi.impl.BpmnDiPackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.bpmn2.bpmdi.impl.BPMNPlaneImpl <em>BPMN Plane</em>}' class.
@@ -979,8 +978,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BPMN_PLANE__BPMN_ELEMENT = eINSTANCE
-				.getBPMNPlane_BpmnElement();
+		EReference BPMN_PLANE__BPMN_ELEMENT = eINSTANCE.getBPMNPlane_BpmnElement();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.bpmdi.impl.BPMNShapeImpl <em>BPMN Shape</em>}' class.
@@ -998,8 +996,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BPMN_SHAPE__BPMN_ELEMENT = eINSTANCE
-				.getBPMNShape_BpmnElement();
+		EReference BPMN_SHAPE__BPMN_ELEMENT = eINSTANCE.getBPMNShape_BpmnElement();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Horizontal</b></em>' attribute feature.
@@ -1007,8 +1004,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BPMN_SHAPE__IS_HORIZONTAL = eINSTANCE
-				.getBPMNShape_IsHorizontal();
+		EAttribute BPMN_SHAPE__IS_HORIZONTAL = eINSTANCE.getBPMNShape_IsHorizontal();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Expanded</b></em>' attribute feature.
@@ -1016,8 +1012,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BPMN_SHAPE__IS_EXPANDED = eINSTANCE
-				.getBPMNShape_IsExpanded();
+		EAttribute BPMN_SHAPE__IS_EXPANDED = eINSTANCE.getBPMNShape_IsExpanded();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Marker Visible</b></em>' attribute feature.
@@ -1025,8 +1020,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BPMN_SHAPE__IS_MARKER_VISIBLE = eINSTANCE
-				.getBPMNShape_IsMarkerVisible();
+		EAttribute BPMN_SHAPE__IS_MARKER_VISIBLE = eINSTANCE.getBPMNShape_IsMarkerVisible();
 
 		/**
 		 * The meta object literal for the '<em><b>Label</b></em>' containment reference feature.
@@ -1042,8 +1036,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BPMN_SHAPE__IS_MESSAGE_VISIBLE = eINSTANCE
-				.getBPMNShape_IsMessageVisible();
+		EAttribute BPMN_SHAPE__IS_MESSAGE_VISIBLE = eINSTANCE.getBPMNShape_IsMessageVisible();
 
 		/**
 		 * The meta object literal for the '<em><b>Participant Band Kind</b></em>' attribute feature.
@@ -1051,8 +1044,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BPMN_SHAPE__PARTICIPANT_BAND_KIND = eINSTANCE
-				.getBPMNShape_ParticipantBandKind();
+		EAttribute BPMN_SHAPE__PARTICIPANT_BAND_KIND = eINSTANCE.getBPMNShape_ParticipantBandKind();
 
 		/**
 		 * The meta object literal for the '<em><b>Choreography Activity Shape</b></em>' reference feature.
@@ -1060,8 +1052,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE = eINSTANCE
-				.getBPMNShape_ChoreographyActivityShape();
+		EReference BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE = eINSTANCE.getBPMNShape_ChoreographyActivityShape();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.bpmdi.impl.BPMNLabelImpl <em>BPMN Label</em>}' class.
@@ -1079,8 +1070,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BPMN_LABEL__LABEL_STYLE = eINSTANCE
-				.getBPMNLabel_LabelStyle();
+		EReference BPMN_LABEL__LABEL_STYLE = eINSTANCE.getBPMNLabel_LabelStyle();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.bpmdi.impl.BPMNLabelStyleImpl <em>BPMN Label Style</em>}' class.
@@ -1124,8 +1114,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BPMN_EDGE__BPMN_ELEMENT = eINSTANCE
-				.getBPMNEdge_BpmnElement();
+		EReference BPMN_EDGE__BPMN_ELEMENT = eINSTANCE.getBPMNEdge_BpmnElement();
 
 		/**
 		 * The meta object literal for the '<em><b>Source Element</b></em>' reference feature.
@@ -1133,8 +1122,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BPMN_EDGE__SOURCE_ELEMENT = eINSTANCE
-				.getBPMNEdge_SourceElement();
+		EReference BPMN_EDGE__SOURCE_ELEMENT = eINSTANCE.getBPMNEdge_SourceElement();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Element</b></em>' reference feature.
@@ -1142,8 +1130,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BPMN_EDGE__TARGET_ELEMENT = eINSTANCE
-				.getBPMNEdge_TargetElement();
+		EReference BPMN_EDGE__TARGET_ELEMENT = eINSTANCE.getBPMNEdge_TargetElement();
 
 		/**
 		 * The meta object literal for the '<em><b>Message Visible Kind</b></em>' attribute feature.
@@ -1151,8 +1138,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BPMN_EDGE__MESSAGE_VISIBLE_KIND = eINSTANCE
-				.getBPMNEdge_MessageVisibleKind();
+		EAttribute BPMN_EDGE__MESSAGE_VISIBLE_KIND = eINSTANCE.getBPMNEdge_MessageVisibleKind();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.bpmdi.impl.BPMNDiagramImpl <em>BPMN Diagram</em>}' class.
@@ -1178,8 +1164,7 @@ public interface BpmnDiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BPMN_DIAGRAM__LABEL_STYLE = eINSTANCE
-				.getBPMNDiagram_LabelStyle();
+		EReference BPMN_DIAGRAM__LABEL_STYLE = eINSTANCE.getBPMNDiagram_LabelStyle();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.bpmdi.ParticipantBandKind <em>Participant Band Kind</em>}' enum.

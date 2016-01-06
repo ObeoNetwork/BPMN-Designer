@@ -30,17 +30,16 @@ import org.obeonetwork.dsl.bpmn2.ItemDefinition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataObjectReferenceImpl#getItemSubjectRef <em>Item Subject Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataObjectReferenceImpl#getDataState <em>Data State</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataObjectReferenceImpl#getDataObjectRef <em>Data Object Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class DataObjectReferenceImpl extends FlowElementImpl implements
-		DataObjectReference {
+public class DataObjectReferenceImpl extends FlowElementImpl implements DataObjectReference {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,10 +65,8 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	public ItemDefinition getItemSubjectRef() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
-				true, true);
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF,
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, true, true);
 	}
 
 	/**
@@ -78,10 +75,8 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	public ItemDefinition basicGetItemSubjectRef() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
-				false, true);
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF,
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, false, true);
 	}
 
 	/**
@@ -91,8 +86,7 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements
 	 */
 	public void setItemSubjectRef(ItemDefinition newItemSubjectRef) {
 		eDynamicSet(Bpmn2Package.DATA_OBJECT_REFERENCE__ITEM_SUBJECT_REF,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
-				newItemSubjectRef);
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, newItemSubjectRef);
 	}
 
 	/**
@@ -101,10 +95,8 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	public DataState getDataState() {
-		return (DataState) eDynamicGet(
-				Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE, true,
-				true);
+		return (DataState) eDynamicGet(Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE,
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE, true, true);
 	}
 
 	/**
@@ -112,10 +104,8 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDataState(DataState newDataState,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newDataState,
-				Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE, msgs);
+	public NotificationChain basicSetDataState(DataState newDataState, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newDataState, Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE, msgs);
 		return msgs;
 	}
 
@@ -126,8 +116,7 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements
 	 */
 	public void setDataState(DataState newDataState) {
 		eDynamicSet(Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE,
-				newDataState);
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE, newDataState);
 	}
 
 	/**
@@ -136,10 +125,8 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	public DataObject getDataObjectRef() {
-		return (DataObject) eDynamicGet(
-				Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF,
-				Bpmn2Package.Literals.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF,
-				true, true);
+		return (DataObject) eDynamicGet(Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF,
+				Bpmn2Package.Literals.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF, true, true);
 	}
 
 	/**
@@ -148,10 +135,8 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	public DataObject basicGetDataObjectRef() {
-		return (DataObject) eDynamicGet(
-				Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF,
-				Bpmn2Package.Literals.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF,
-				false, true);
+		return (DataObject) eDynamicGet(Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF,
+				Bpmn2Package.Literals.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF, false, true);
 	}
 
 	/**
@@ -161,8 +146,7 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements
 	 */
 	public void setDataObjectRef(DataObject newDataObjectRef) {
 		eDynamicSet(Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF,
-				Bpmn2Package.Literals.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF,
-				newDataObjectRef);
+				Bpmn2Package.Literals.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF, newDataObjectRef);
 	}
 
 	/**
@@ -171,8 +155,7 @@ public class DataObjectReferenceImpl extends FlowElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.DATA_OBJECT_REFERENCE__DATA_STATE:
 			return basicSetDataState(null, msgs);

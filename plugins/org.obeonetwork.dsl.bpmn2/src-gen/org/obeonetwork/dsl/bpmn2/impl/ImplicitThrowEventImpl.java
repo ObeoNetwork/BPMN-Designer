@@ -22,13 +22,10 @@ import org.obeonetwork.dsl.bpmn2.ImplicitThrowEvent;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Implicit Throw Event</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public class ImplicitThrowEventImpl extends ThrowEventImpl implements
-		ImplicitThrowEvent {
+public class ImplicitThrowEventImpl extends ThrowEventImpl implements ImplicitThrowEvent {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

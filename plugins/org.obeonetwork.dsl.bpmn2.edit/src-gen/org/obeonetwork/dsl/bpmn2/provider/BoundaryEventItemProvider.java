@@ -39,9 +39,8 @@ import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BoundaryEventItemProvider extends CatchEventItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BoundaryEventItemProvider extends CatchEventItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -76,17 +75,13 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
 	 * @generated
 	 */
 	protected void addCancelActivityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_BoundaryEvent_cancelActivity_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_BoundaryEvent_cancelActivity_feature",
-						"_UI_BoundaryEvent_type"),
-				Bpmn2Package.Literals.BOUNDARY_EVENT__CANCEL_ACTIVITY, true,
-				false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null,
-				null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BoundaryEvent_cancelActivity_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BoundaryEvent_cancelActivity_feature",
+								"_UI_BoundaryEvent_type"),
+						Bpmn2Package.Literals.BOUNDARY_EVENT__CANCEL_ACTIVITY, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -96,16 +91,12 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
 	 * @generated
 	 */
 	protected void addAttachedToRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_BoundaryEvent_attachedToRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_BoundaryEvent_attachedToRef_feature",
-						"_UI_BoundaryEvent_type"),
-				Bpmn2Package.Literals.BOUNDARY_EVENT__ATTACHED_TO_REF, true,
-				false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BoundaryEvent_attachedToRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BoundaryEvent_attachedToRef_feature",
+								"_UI_BoundaryEvent_type"),
+						Bpmn2Package.Literals.BOUNDARY_EVENT__ATTACHED_TO_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -117,15 +108,9 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/BoundaryEvent.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/BoundaryEvent.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/BoundaryEvent.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/BoundaryEvent.gif"));
 		}
 	}
 
@@ -165,8 +150,7 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
 
 		switch (notification.getFeatureID(BoundaryEvent.class)) {
 		case Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -180,8 +164,7 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

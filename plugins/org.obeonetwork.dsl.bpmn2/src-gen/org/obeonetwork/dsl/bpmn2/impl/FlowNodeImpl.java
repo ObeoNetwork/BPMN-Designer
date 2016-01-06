@@ -32,12 +32,12 @@ import org.obeonetwork.dsl.bpmn2.SequenceFlow;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.FlowNodeImpl#getOutgoing <em>Outgoing</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.FlowNodeImpl#getIncoming <em>Incoming</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.FlowNodeImpl#getLanes <em>Lanes</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -68,8 +68,7 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<SequenceFlow> getOutgoing() {
-		return (EList<SequenceFlow>) eDynamicGet(
-				Bpmn2Package.FLOW_NODE__OUTGOING,
+		return (EList<SequenceFlow>) eDynamicGet(Bpmn2Package.FLOW_NODE__OUTGOING,
 				Bpmn2Package.Literals.FLOW_NODE__OUTGOING, true, true);
 	}
 
@@ -80,8 +79,7 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<SequenceFlow> getIncoming() {
-		return (EList<SequenceFlow>) eDynamicGet(
-				Bpmn2Package.FLOW_NODE__INCOMING,
+		return (EList<SequenceFlow>) eDynamicGet(Bpmn2Package.FLOW_NODE__INCOMING,
 				Bpmn2Package.Literals.FLOW_NODE__INCOMING, true, true);
 	}
 
@@ -92,8 +90,8 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Lane> getLanes() {
-		return (EList<Lane>) eDynamicGet(Bpmn2Package.FLOW_NODE__LANES,
-				Bpmn2Package.Literals.FLOW_NODE__LANES, true, true);
+		return (EList<Lane>) eDynamicGet(Bpmn2Package.FLOW_NODE__LANES, Bpmn2Package.Literals.FLOW_NODE__LANES, true,
+				true);
 	}
 
 	/**
@@ -103,18 +101,14 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.FLOW_NODE__OUTGOING:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoing())
-					.basicAdd(otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoing()).basicAdd(otherEnd, msgs);
 		case Bpmn2Package.FLOW_NODE__INCOMING:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncoming())
-					.basicAdd(otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncoming()).basicAdd(otherEnd, msgs);
 		case Bpmn2Package.FLOW_NODE__LANES:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getLanes())
-					.basicAdd(otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getLanes()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -125,15 +119,12 @@ public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.FLOW_NODE__OUTGOING:
-			return ((InternalEList<?>) getOutgoing()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getOutgoing()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.FLOW_NODE__INCOMING:
-			return ((InternalEList<?>) getIncoming()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getIncoming()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.FLOW_NODE__LANES:
 			return ((InternalEList<?>) getLanes()).basicRemove(otherEnd, msgs);
 		}

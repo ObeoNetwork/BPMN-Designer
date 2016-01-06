@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ThrowEvent#getInputSet <em>Input Set</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ThrowEvent#getEventDefinitionRefs <em>Event Definition Refs</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ThrowEvent#getDataInputs <em>Data Inputs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ThrowEvent#getEventDefinitions <em>Event Definitions</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getThrowEvent()
  * @model abstract="true"

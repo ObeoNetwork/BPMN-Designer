@@ -23,12 +23,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CorrelationProperty#getCorrelationPropertyRetrievalExpression <em>Correlation Property Retrieval Expression</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CorrelationProperty#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CorrelationProperty#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getCorrelationProperty()
  * @model

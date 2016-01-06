@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Lane#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Lane#getChildLaneSet <em>Child Lane Set</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Lane#getFlowNodeRefs <em>Flow Node Refs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Lane#getPartitionElement <em>Partition Element</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getLane()
  * @model

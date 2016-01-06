@@ -23,6 +23,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ExtensionAttributeDefinition#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ExtensionAttributeDefinition#getType <em>Type</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ExtensionAttributeDefinition#getExtensionDefinition <em>Extension Definition</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ExtensionAttributeDefinition#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getExtensionAttributeDefinition()
  * @model

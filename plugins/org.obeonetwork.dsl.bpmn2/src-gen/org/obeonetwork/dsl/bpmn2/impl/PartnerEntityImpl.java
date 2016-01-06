@@ -28,11 +28,11 @@ import org.obeonetwork.dsl.bpmn2.PartnerEntity;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.PartnerEntityImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.PartnerEntityImpl#getParticipantRef <em>Participant Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -72,8 +72,8 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.PARTNER_ENTITY__NAME,
-				Bpmn2Package.Literals.PARTNER_ENTITY__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.PARTNER_ENTITY__NAME, Bpmn2Package.Literals.PARTNER_ENTITY__NAME, true,
+				true);
 	}
 
 	/**
@@ -82,8 +82,7 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.PARTNER_ENTITY__NAME,
-				Bpmn2Package.Literals.PARTNER_ENTITY__NAME, newName);
+		eDynamicSet(Bpmn2Package.PARTNER_ENTITY__NAME, Bpmn2Package.Literals.PARTNER_ENTITY__NAME, newName);
 	}
 
 	/**
@@ -93,10 +92,8 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Participant> getParticipantRef() {
-		return (EList<Participant>) eDynamicGet(
-				Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTNER_ENTITY__PARTICIPANT_REF, true,
-				true);
+		return (EList<Participant>) eDynamicGet(Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF,
+				Bpmn2Package.Literals.PARTNER_ENTITY__PARTICIPANT_REF, true, true);
 	}
 
 	/**
@@ -129,8 +126,7 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
 			return;
 		case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
 			getParticipantRef().clear();
-			getParticipantRef().addAll(
-					(Collection<? extends Participant>) newValue);
+			getParticipantRef().addAll((Collection<? extends Participant>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -163,8 +159,7 @@ public class PartnerEntityImpl extends RootElementImpl implements PartnerEntity 
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.PARTNER_ENTITY__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.PARTNER_ENTITY__PARTICIPANT_REF:
 			return !getParticipantRef().isEmpty();
 		}

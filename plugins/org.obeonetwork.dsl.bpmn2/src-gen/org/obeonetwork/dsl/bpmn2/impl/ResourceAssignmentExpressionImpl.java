@@ -18,31 +18,29 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+import org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.Expression;
 import org.obeonetwork.dsl.bpmn2.ResourceAssignmentExpression;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Resource Assignment Expression</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Resource Assignment Expression</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ResourceAssignmentExpressionImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ResourceAssignmentExpressionImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ResourceAssignmentExpressionImpl extends CDOObjectImpl implements
-		ResourceAssignmentExpression {
+public class ResourceAssignmentExpressionImpl extends BPMN2ObjectImpl implements ResourceAssignmentExpression {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getId()
 	 * @generated
 	 * @ordered
@@ -50,18 +48,15 @@ public class ResourceAssignmentExpressionImpl extends CDOObjectImpl implements
 	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
 	 */
 	protected ResourceAssignmentExpressionImpl() {
 		super();
-		setId(EcoreUtil.generateUUID());
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -70,8 +65,7 @@ public class ResourceAssignmentExpressionImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -80,71 +74,61 @@ public class ResourceAssignmentExpressionImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
-		return (Expression) eDynamicGet(
-				Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
-				Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
-				true, true);
+		return (Expression) eDynamicGet(Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
+				Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetExpression(Expression newExpression,
-			NotificationChain msgs) {
+	public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs) {
 		msgs = eDynamicInverseAdd((InternalEObject) newExpression,
 				Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION, msgs);
 		return msgs;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
-		eDynamicSet(
-				Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
-				Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
-				newExpression);
+		eDynamicSet(Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
+				Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION, newExpression);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
-		return (String) eDynamicGet(
-				Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__ID,
-				Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__ID, true,
-				true);
+		return (String) eDynamicGet(Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__ID,
+				Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__ID, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		eDynamicSet(Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__ID,
 				Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__ID, newId);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
 			return basicSetExpression(null, msgs);
@@ -153,8 +137,7 @@ public class ResourceAssignmentExpressionImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -169,8 +152,7 @@ public class ResourceAssignmentExpressionImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -187,8 +169,7 @@ public class ResourceAssignmentExpressionImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -205,8 +186,7 @@ public class ResourceAssignmentExpressionImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -215,10 +195,9 @@ public class ResourceAssignmentExpressionImpl extends CDOObjectImpl implements
 		case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
 			return getExpression() != null;
 		case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__ID:
-			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT
-					.equals(getId());
+			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //ResourceAssignmentExpressionImpl
+} // ResourceAssignmentExpressionImpl

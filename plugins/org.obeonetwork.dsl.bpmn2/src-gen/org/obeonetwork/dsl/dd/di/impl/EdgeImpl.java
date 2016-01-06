@@ -32,12 +32,12 @@ import org.obeonetwork.dsl.dd.di.Edge;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.EdgeImpl#getSource <em>Source</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.EdgeImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.EdgeImpl#getWaypoint <em>Waypoint</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -67,8 +67,7 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
 	 * @generated
 	 */
 	public DiagramElement getSource() {
-		return (DiagramElement) eDynamicGet(DiPackage.EDGE__SOURCE,
-				DiPackage.Literals.EDGE__SOURCE, true, true);
+		return (DiagramElement) eDynamicGet(DiPackage.EDGE__SOURCE, DiPackage.Literals.EDGE__SOURCE, true, true);
 	}
 
 	/**
@@ -77,8 +76,7 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
 	 * @generated
 	 */
 	public DiagramElement basicGetSource() {
-		return (DiagramElement) eDynamicGet(DiPackage.EDGE__SOURCE,
-				DiPackage.Literals.EDGE__SOURCE, false, true);
+		return (DiagramElement) eDynamicGet(DiPackage.EDGE__SOURCE, DiPackage.Literals.EDGE__SOURCE, false, true);
 	}
 
 	/**
@@ -87,8 +85,7 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
 	 * @generated
 	 */
 	public DiagramElement getTarget() {
-		return (DiagramElement) eDynamicGet(DiPackage.EDGE__TARGET,
-				DiPackage.Literals.EDGE__TARGET, true, true);
+		return (DiagramElement) eDynamicGet(DiPackage.EDGE__TARGET, DiPackage.Literals.EDGE__TARGET, true, true);
 	}
 
 	/**
@@ -97,8 +94,7 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
 	 * @generated
 	 */
 	public DiagramElement basicGetTarget() {
-		return (DiagramElement) eDynamicGet(DiPackage.EDGE__TARGET,
-				DiPackage.Literals.EDGE__TARGET, false, true);
+		return (DiagramElement) eDynamicGet(DiPackage.EDGE__TARGET, DiPackage.Literals.EDGE__TARGET, false, true);
 	}
 
 	/**
@@ -108,8 +104,7 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Point> getWaypoint() {
-		return (EList<Point>) eDynamicGet(DiPackage.EDGE__WAYPOINT,
-				DiPackage.Literals.EDGE__WAYPOINT, true, true);
+		return (EList<Point>) eDynamicGet(DiPackage.EDGE__WAYPOINT, DiPackage.Literals.EDGE__WAYPOINT, true, true);
 	}
 
 	/**
@@ -118,12 +113,10 @@ public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case DiPackage.EDGE__WAYPOINT:
-			return ((InternalEList<?>) getWaypoint()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getWaypoint()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

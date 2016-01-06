@@ -40,9 +40,8 @@ import org.obeonetwork.dsl.bpmn2.SubConversation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SubConversationItemProvider extends ConversationNodeItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class SubConversationItemProvider extends ConversationNodeItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -77,12 +76,10 @@ public class SubConversationItemProvider extends ConversationNodeItemProvider
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES);
+			childrenFeatures.add(Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES);
 		}
 		return childrenFeatures;
 	}
@@ -109,15 +106,9 @@ public class SubConversationItemProvider extends ConversationNodeItemProvider
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/SubConversation.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/SubConversation.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/SubConversation.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/SubConversation.gif"));
 		}
 	}
 
@@ -157,8 +148,7 @@ public class SubConversationItemProvider extends ConversationNodeItemProvider
 
 		switch (notification.getFeatureID(SubConversation.class)) {
 		case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -172,20 +162,16 @@ public class SubConversationItemProvider extends ConversationNodeItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
 				Bpmn2Factory.eINSTANCE.createCallConversation()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
 				Bpmn2Factory.eINSTANCE.createConversation()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
 				Bpmn2Factory.eINSTANCE.createSubConversation()));
 	}
 

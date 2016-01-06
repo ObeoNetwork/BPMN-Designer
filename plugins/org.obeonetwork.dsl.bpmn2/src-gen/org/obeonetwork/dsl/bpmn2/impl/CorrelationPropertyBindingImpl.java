@@ -28,16 +28,15 @@ import org.obeonetwork.dsl.bpmn2.FormalExpression;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationPropertyBindingImpl#getDataPath <em>Data Path</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationPropertyBindingImpl#getCorrelationPropertyRef <em>Correlation Property Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
-		CorrelationPropertyBinding {
+public class CorrelationPropertyBindingImpl extends BaseElementImpl implements CorrelationPropertyBinding {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,10 +62,8 @@ public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public FormalExpression getDataPath() {
-		return (FormalExpression) eDynamicGet(
-				Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH,
-				true, true);
+		return (FormalExpression) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH, true, true);
 	}
 
 	/**
@@ -74,10 +71,9 @@ public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDataPath(FormalExpression newDataPath,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newDataPath,
-				Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH, msgs);
+	public NotificationChain basicSetDataPath(FormalExpression newDataPath, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newDataPath, Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH,
+				msgs);
 		return msgs;
 	}
 
@@ -88,8 +84,7 @@ public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
 	 */
 	public void setDataPath(FormalExpression newDataPath) {
 		eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH,
-				newDataPath);
+				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH, newDataPath);
 	}
 
 	/**
@@ -98,10 +93,8 @@ public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public CorrelationProperty getCorrelationPropertyRef() {
-		return (CorrelationProperty) eDynamicGet(
-				Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
-				true, true);
+		return (CorrelationProperty) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF, true, true);
 	}
 
 	/**
@@ -110,10 +103,8 @@ public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public CorrelationProperty basicGetCorrelationPropertyRef() {
-		return (CorrelationProperty) eDynamicGet(
-				Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
-				false, true);
+		return (CorrelationProperty) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF, false, true);
 	}
 
 	/**
@@ -121,10 +112,8 @@ public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCorrelationPropertyRef(
-			CorrelationProperty newCorrelationPropertyRef) {
-		eDynamicSet(
-				Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
+	public void setCorrelationPropertyRef(CorrelationProperty newCorrelationPropertyRef) {
+		eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
 				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
 				newCorrelationPropertyRef);
 	}
@@ -135,8 +124,7 @@ public class CorrelationPropertyBindingImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH:
 			return basicSetDataPath(null, msgs);

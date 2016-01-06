@@ -18,17 +18,17 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+import org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.ExtensionAttributeDefinition;
 import org.obeonetwork.dsl.bpmn2.ExtensionDefinition;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Extension Attribute Definition</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Extension Attribute Definition</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ExtensionAttributeDefinitionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ExtensionAttributeDefinitionImpl#getType <em>Type</em>}</li>
@@ -36,16 +36,13 @@ import org.obeonetwork.dsl.bpmn2.ExtensionDefinition;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ExtensionAttributeDefinitionImpl#getExtensionDefinition <em>Extension Definition</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ExtensionAttributeDefinitionImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ExtensionAttributeDefinitionImpl extends CDOObjectImpl implements
-		ExtensionAttributeDefinition {
+public class ExtensionAttributeDefinitionImpl extends BPMN2ObjectImpl implements ExtensionAttributeDefinition {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -53,8 +50,7 @@ public class ExtensionAttributeDefinitionImpl extends CDOObjectImpl implements
 	protected static final String NAME_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getType()
 	 * @generated
 	 * @ordered
@@ -62,8 +58,7 @@ public class ExtensionAttributeDefinitionImpl extends CDOObjectImpl implements
 	protected static final String TYPE_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #isIsReference() <em>Is Reference</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isIsReference()
 	 * @generated
 	 * @ordered
@@ -71,9 +66,9 @@ public class ExtensionAttributeDefinitionImpl extends CDOObjectImpl implements
 	protected static final boolean IS_REFERENCE_EDEFAULT = false;
 
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getId()
 	 * @generated
 	 * @ordered
@@ -81,18 +76,15 @@ public class ExtensionAttributeDefinitionImpl extends CDOObjectImpl implements
 	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
 	 */
 	protected ExtensionAttributeDefinitionImpl() {
 		super();
-		setId(EcoreUtil.generateUUID());
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -101,8 +93,7 @@ public class ExtensionAttributeDefinitionImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -111,162 +102,137 @@ public class ExtensionAttributeDefinitionImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
-		return (String) eDynamicGet(
-				Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__NAME,
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__NAME,
-				true, true);
+		return (String) eDynamicGet(Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__NAME,
+				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__NAME, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		eDynamicSet(Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__NAME,
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__NAME,
-				newName);
+				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__NAME, newName);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getType() {
-		return (String) eDynamicGet(
-				Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__TYPE,
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__TYPE,
-				true, true);
+		return (String) eDynamicGet(Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__TYPE,
+				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__TYPE, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(String newType) {
 		eDynamicSet(Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__TYPE,
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__TYPE,
-				newType);
+				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__TYPE, newType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isIsReference() {
-		return (Boolean) eDynamicGet(
-				Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__IS_REFERENCE,
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__IS_REFERENCE,
-				true, true);
+		return (Boolean) eDynamicGet(Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__IS_REFERENCE,
+				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__IS_REFERENCE, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsReference(boolean newIsReference) {
-		eDynamicSet(
-				Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__IS_REFERENCE,
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__IS_REFERENCE,
-				newIsReference);
+		eDynamicSet(Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__IS_REFERENCE,
+				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__IS_REFERENCE, newIsReference);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExtensionDefinition getExtensionDefinition() {
-		return (ExtensionDefinition) eDynamicGet(
-				Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION,
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION,
-				true, true);
+		return (ExtensionDefinition) eDynamicGet(Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION,
+				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetExtensionDefinition(
-			ExtensionDefinition newExtensionDefinition, NotificationChain msgs) {
-		msgs = eBasicSetContainer(
-				(InternalEObject) newExtensionDefinition,
-				Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION,
-				msgs);
+	public NotificationChain basicSetExtensionDefinition(ExtensionDefinition newExtensionDefinition,
+			NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject) newExtensionDefinition,
+				Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION, msgs);
 		return msgs;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExtensionDefinition(
-			ExtensionDefinition newExtensionDefinition) {
-		eDynamicSet(
-				Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION,
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION,
-				newExtensionDefinition);
+	@Override
+	public void setExtensionDefinition(ExtensionDefinition newExtensionDefinition) {
+		eDynamicSet(Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION,
+				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION, newExtensionDefinition);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
-		return (String) eDynamicGet(
-				Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__ID,
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__ID, true,
-				true);
+		return (String) eDynamicGet(Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__ID,
+				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__ID, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		eDynamicSet(Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__ID,
 				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__ID, newId);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION:
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
-			return basicSetExtensionDefinition((ExtensionDefinition) otherEnd,
-					msgs);
+			return basicSetExtensionDefinition((ExtensionDefinition) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION:
 			return basicSetExtensionDefinition(null, msgs);
@@ -275,27 +241,22 @@ public class ExtensionAttributeDefinitionImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(
-			NotificationChain msgs) {
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 		case Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION:
-			return eInternalContainer()
-					.eInverseRemove(
-							this,
-							Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS,
-							ExtensionDefinition.class, msgs);
+			return eInternalContainer().eInverseRemove(this,
+					Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS, ExtensionDefinition.class,
+					msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -316,8 +277,7 @@ public class ExtensionAttributeDefinitionImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -343,8 +303,7 @@ public class ExtensionAttributeDefinitionImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -370,28 +329,24 @@ public class ExtensionAttributeDefinitionImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__TYPE:
-			return TYPE_EDEFAULT == null ? getType() != null : !TYPE_EDEFAULT
-					.equals(getType());
+			return TYPE_EDEFAULT == null ? getType() != null : !TYPE_EDEFAULT.equals(getType());
 		case Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__IS_REFERENCE:
 			return isIsReference() != IS_REFERENCE_EDEFAULT;
 		case Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION:
 			return getExtensionDefinition() != null;
 		case Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__ID:
-			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT
-					.equals(getId());
+			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //ExtensionAttributeDefinitionImpl
+} // ExtensionAttributeDefinitionImpl

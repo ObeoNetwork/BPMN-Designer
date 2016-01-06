@@ -26,13 +26,13 @@ import org.obeonetwork.dsl.bpmn2.ReceiveTask;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ReceiveTaskImpl#getImplementation <em>Implementation</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ReceiveTaskImpl#isInstantiate <em>Instantiate</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ReceiveTaskImpl#getOperationRef <em>Operation Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ReceiveTaskImpl#getMessageRef <em>Message Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -91,8 +91,7 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public void setImplementation(String newImplementation) {
-		eDynamicSet(Bpmn2Package.RECEIVE_TASK__IMPLEMENTATION,
-				Bpmn2Package.Literals.RECEIVE_TASK__IMPLEMENTATION,
+		eDynamicSet(Bpmn2Package.RECEIVE_TASK__IMPLEMENTATION, Bpmn2Package.Literals.RECEIVE_TASK__IMPLEMENTATION,
 				newImplementation);
 	}
 
@@ -112,8 +111,8 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public void setInstantiate(boolean newInstantiate) {
-		eDynamicSet(Bpmn2Package.RECEIVE_TASK__INSTANTIATE,
-				Bpmn2Package.Literals.RECEIVE_TASK__INSTANTIATE, newInstantiate);
+		eDynamicSet(Bpmn2Package.RECEIVE_TASK__INSTANTIATE, Bpmn2Package.Literals.RECEIVE_TASK__INSTANTIATE,
+				newInstantiate);
 	}
 
 	/**
@@ -122,8 +121,7 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public Operation getOperationRef() {
-		return (Operation) eDynamicGet(
-				Bpmn2Package.RECEIVE_TASK__OPERATION_REF,
+		return (Operation) eDynamicGet(Bpmn2Package.RECEIVE_TASK__OPERATION_REF,
 				Bpmn2Package.Literals.RECEIVE_TASK__OPERATION_REF, true, true);
 	}
 
@@ -133,8 +131,7 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public Operation basicGetOperationRef() {
-		return (Operation) eDynamicGet(
-				Bpmn2Package.RECEIVE_TASK__OPERATION_REF,
+		return (Operation) eDynamicGet(Bpmn2Package.RECEIVE_TASK__OPERATION_REF,
 				Bpmn2Package.Literals.RECEIVE_TASK__OPERATION_REF, false, true);
 	}
 
@@ -144,8 +141,7 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public void setOperationRef(Operation newOperationRef) {
-		eDynamicSet(Bpmn2Package.RECEIVE_TASK__OPERATION_REF,
-				Bpmn2Package.Literals.RECEIVE_TASK__OPERATION_REF,
+		eDynamicSet(Bpmn2Package.RECEIVE_TASK__OPERATION_REF, Bpmn2Package.Literals.RECEIVE_TASK__OPERATION_REF,
 				newOperationRef);
 	}
 
@@ -175,8 +171,8 @@ public class ReceiveTaskImpl extends TaskImpl implements ReceiveTask {
 	 * @generated
 	 */
 	public void setMessageRef(Message newMessageRef) {
-		eDynamicSet(Bpmn2Package.RECEIVE_TASK__MESSAGE_REF,
-				Bpmn2Package.Literals.RECEIVE_TASK__MESSAGE_REF, newMessageRef);
+		eDynamicSet(Bpmn2Package.RECEIVE_TASK__MESSAGE_REF, Bpmn2Package.Literals.RECEIVE_TASK__MESSAGE_REF,
+				newMessageRef);
 	}
 
 	/**

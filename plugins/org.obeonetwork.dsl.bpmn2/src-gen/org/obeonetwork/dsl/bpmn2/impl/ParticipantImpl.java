@@ -35,6 +35,7 @@ import org.obeonetwork.dsl.bpmn2.ParticipantMultiplicity;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ParticipantImpl#getIncomingConversationLinks <em>Incoming Conversation Links</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ParticipantImpl#getOutgoingConversationLinks <em>Outgoing Conversation Links</em>}</li>
@@ -44,7 +45,6 @@ import org.obeonetwork.dsl.bpmn2.ParticipantMultiplicity;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ParticipantImpl#getEndPointRefs <em>End Point Refs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ParticipantImpl#getProcessRef <em>Process Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -85,10 +85,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getIncomingConversationLinks() {
-		return (EList<ConversationLink>) eDynamicGet(
-				Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS,
-				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
-				true, true);
+		return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, true);
 	}
 
 	/**
@@ -98,10 +96,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getOutgoingConversationLinks() {
-		return (EList<ConversationLink>) eDynamicGet(
-				Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS,
-				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
-				true, true);
+		return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, true);
 	}
 
 	/**
@@ -110,8 +106,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.PARTICIPANT__NAME,
-				Bpmn2Package.Literals.PARTICIPANT__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.PARTICIPANT__NAME, Bpmn2Package.Literals.PARTICIPANT__NAME, true,
+				true);
 	}
 
 	/**
@@ -120,8 +116,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.PARTICIPANT__NAME,
-				Bpmn2Package.Literals.PARTICIPANT__NAME, newName);
+		eDynamicSet(Bpmn2Package.PARTICIPANT__NAME, Bpmn2Package.Literals.PARTICIPANT__NAME, newName);
 	}
 
 	/**
@@ -131,8 +126,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Interface> getInterfaceRefs() {
-		return (EList<Interface>) eDynamicGet(
-				Bpmn2Package.PARTICIPANT__INTERFACE_REFS,
+		return (EList<Interface>) eDynamicGet(Bpmn2Package.PARTICIPANT__INTERFACE_REFS,
 				Bpmn2Package.Literals.PARTICIPANT__INTERFACE_REFS, true, true);
 	}
 
@@ -142,10 +136,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @generated
 	 */
 	public ParticipantMultiplicity getParticipantMultiplicity() {
-		return (ParticipantMultiplicity) eDynamicGet(
-				Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
-				Bpmn2Package.Literals.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
-				true, true);
+		return (ParticipantMultiplicity) eDynamicGet(Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
+				Bpmn2Package.Literals.PARTICIPANT__PARTICIPANT_MULTIPLICITY, true, true);
 	}
 
 	/**
@@ -153,8 +145,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetParticipantMultiplicity(
-			ParticipantMultiplicity newParticipantMultiplicity,
+	public NotificationChain basicSetParticipantMultiplicity(ParticipantMultiplicity newParticipantMultiplicity,
 			NotificationChain msgs) {
 		msgs = eDynamicInverseAdd((InternalEObject) newParticipantMultiplicity,
 				Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY, msgs);
@@ -166,11 +157,9 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParticipantMultiplicity(
-			ParticipantMultiplicity newParticipantMultiplicity) {
+	public void setParticipantMultiplicity(ParticipantMultiplicity newParticipantMultiplicity) {
 		eDynamicSet(Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
-				Bpmn2Package.Literals.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
-				newParticipantMultiplicity);
+				Bpmn2Package.Literals.PARTICIPANT__PARTICIPANT_MULTIPLICITY, newParticipantMultiplicity);
 	}
 
 	/**
@@ -180,8 +169,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<EndPoint> getEndPointRefs() {
-		return (EList<EndPoint>) eDynamicGet(
-				Bpmn2Package.PARTICIPANT__END_POINT_REFS,
+		return (EList<EndPoint>) eDynamicGet(Bpmn2Package.PARTICIPANT__END_POINT_REFS,
 				Bpmn2Package.Literals.PARTICIPANT__END_POINT_REFS, true, true);
 	}
 
@@ -191,8 +179,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @generated
 	 */
 	public org.obeonetwork.dsl.bpmn2.Process getProcessRef() {
-		return (org.obeonetwork.dsl.bpmn2.Process) eDynamicGet(
-				Bpmn2Package.PARTICIPANT__PROCESS_REF,
+		return (org.obeonetwork.dsl.bpmn2.Process) eDynamicGet(Bpmn2Package.PARTICIPANT__PROCESS_REF,
 				Bpmn2Package.Literals.PARTICIPANT__PROCESS_REF, true, true);
 	}
 
@@ -202,8 +189,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @generated
 	 */
 	public org.obeonetwork.dsl.bpmn2.Process basicGetProcessRef() {
-		return (org.obeonetwork.dsl.bpmn2.Process) eDynamicGet(
-				Bpmn2Package.PARTICIPANT__PROCESS_REF,
+		return (org.obeonetwork.dsl.bpmn2.Process) eDynamicGet(Bpmn2Package.PARTICIPANT__PROCESS_REF,
 				Bpmn2Package.Literals.PARTICIPANT__PROCESS_REF, false, true);
 	}
 
@@ -213,8 +199,8 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @generated
 	 */
 	public void setProcessRef(org.obeonetwork.dsl.bpmn2.Process newProcessRef) {
-		eDynamicSet(Bpmn2Package.PARTICIPANT__PROCESS_REF,
-				Bpmn2Package.Literals.PARTICIPANT__PROCESS_REF, newProcessRef);
+		eDynamicSet(Bpmn2Package.PARTICIPANT__PROCESS_REF, Bpmn2Package.Literals.PARTICIPANT__PROCESS_REF,
+				newProcessRef);
 	}
 
 	/**
@@ -224,8 +210,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks())
@@ -243,15 +228,12 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.PARTICIPANT__INCOMING_CONVERSATION_LINKS:
-			return ((InternalEList<?>) getIncomingConversationLinks())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
-			return ((InternalEList<?>) getOutgoingConversationLinks())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
 			return basicSetParticipantMultiplicity(null, msgs);
 		}
@@ -300,8 +282,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 			return;
 		case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
 			getInterfaceRefs().clear();
-			getInterfaceRefs().addAll(
-					(Collection<? extends Interface>) newValue);
+			getInterfaceRefs().addAll((Collection<? extends Interface>) newValue);
 			return;
 		case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
 			setParticipantMultiplicity((ParticipantMultiplicity) newValue);
@@ -357,8 +338,7 @@ public class ParticipantImpl extends BaseElementImpl implements Participant {
 		case Bpmn2Package.PARTICIPANT__OUTGOING_CONVERSATION_LINKS:
 			return !getOutgoingConversationLinks().isEmpty();
 		case Bpmn2Package.PARTICIPANT__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.PARTICIPANT__INTERFACE_REFS:
 			return !getInterfaceRefs().isEmpty();
 		case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:

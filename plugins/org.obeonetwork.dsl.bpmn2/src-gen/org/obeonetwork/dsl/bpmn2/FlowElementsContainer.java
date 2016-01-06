@@ -23,11 +23,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.FlowElementsContainer#getFlowElements <em>Flow Elements</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.FlowElementsContainer#getLaneSets <em>Lane Sets</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getFlowElementsContainer()
  * @model abstract="true"

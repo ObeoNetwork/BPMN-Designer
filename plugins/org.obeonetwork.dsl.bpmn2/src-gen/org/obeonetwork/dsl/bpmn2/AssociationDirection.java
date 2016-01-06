@@ -111,8 +111,7 @@ public enum AssociationDirection implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final AssociationDirection[] VALUES_ARRAY = new AssociationDirection[] {
-			NONE, ONE, BOTH, };
+	private static final AssociationDirection[] VALUES_ARRAY = new AssociationDirection[] { NONE, ONE, BOTH, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Association Direction</b></em>' enumerators.
@@ -120,13 +119,14 @@ public enum AssociationDirection implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<AssociationDirection> VALUES = Collections
-			.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<AssociationDirection> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
 	 * Returns the '<em><b>Association Direction</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AssociationDirection get(String literal) {
@@ -143,6 +143,8 @@ public enum AssociationDirection implements Enumerator {
 	 * Returns the '<em><b>Association Direction</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AssociationDirection getByName(String name) {
@@ -159,6 +161,8 @@ public enum AssociationDirection implements Enumerator {
 	 * Returns the '<em><b>Association Direction</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AssociationDirection get(int value) {

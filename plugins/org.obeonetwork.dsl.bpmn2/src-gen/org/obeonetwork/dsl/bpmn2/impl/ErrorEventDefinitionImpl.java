@@ -24,15 +24,14 @@ import org.obeonetwork.dsl.bpmn2.ErrorEventDefinition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ErrorEventDefinitionImpl#getErrorRef <em>Error Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
-		ErrorEventDefinition {
+public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements ErrorEventDefinition {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -58,10 +57,8 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public org.obeonetwork.dsl.bpmn2.Error getErrorRef() {
-		return (org.obeonetwork.dsl.bpmn2.Error) eDynamicGet(
-				Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
-				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, true,
-				true);
+		return (org.obeonetwork.dsl.bpmn2.Error) eDynamicGet(Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
+				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, true, true);
 	}
 
 	/**
@@ -70,10 +67,8 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public org.obeonetwork.dsl.bpmn2.Error basicGetErrorRef() {
-		return (org.obeonetwork.dsl.bpmn2.Error) eDynamicGet(
-				Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
-				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, false,
-				true);
+		return (org.obeonetwork.dsl.bpmn2.Error) eDynamicGet(Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
+				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, false, true);
 	}
 
 	/**
@@ -83,8 +78,7 @@ public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements
 	 */
 	public void setErrorRef(org.obeonetwork.dsl.bpmn2.Error newErrorRef) {
 		eDynamicSet(Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
-				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF,
-				newErrorRef);
+				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, newErrorRef);
 	}
 
 	/**

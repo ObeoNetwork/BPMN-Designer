@@ -29,12 +29,12 @@ import org.obeonetwork.dsl.bpmn2.ItemDefinition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataObjectImpl#getItemSubjectRef <em>Item Subject Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataObjectImpl#getDataState <em>Data State</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataObjectImpl#isIsCollection <em>Is Collection</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -74,10 +74,8 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
 	 * @generated
 	 */
 	public ItemDefinition getItemSubjectRef() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.DATA_OBJECT__ITEM_SUBJECT_REF,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
-				true, true);
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.DATA_OBJECT__ITEM_SUBJECT_REF,
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, true, true);
 	}
 
 	/**
@@ -86,10 +84,8 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
 	 * @generated
 	 */
 	public ItemDefinition basicGetItemSubjectRef() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.DATA_OBJECT__ITEM_SUBJECT_REF,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
-				false, true);
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.DATA_OBJECT__ITEM_SUBJECT_REF,
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, false, true);
 	}
 
 	/**
@@ -99,8 +95,7 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
 	 */
 	public void setItemSubjectRef(ItemDefinition newItemSubjectRef) {
 		eDynamicSet(Bpmn2Package.DATA_OBJECT__ITEM_SUBJECT_REF,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
-				newItemSubjectRef);
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, newItemSubjectRef);
 	}
 
 	/**
@@ -110,8 +105,7 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
 	 */
 	public DataState getDataState() {
 		return (DataState) eDynamicGet(Bpmn2Package.DATA_OBJECT__DATA_STATE,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE, true,
-				true);
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE, true, true);
 	}
 
 	/**
@@ -119,10 +113,8 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDataState(DataState newDataState,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newDataState,
-				Bpmn2Package.DATA_OBJECT__DATA_STATE, msgs);
+	public NotificationChain basicSetDataState(DataState newDataState, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newDataState, Bpmn2Package.DATA_OBJECT__DATA_STATE, msgs);
 		return msgs;
 	}
 
@@ -132,8 +124,7 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
 	 * @generated
 	 */
 	public void setDataState(DataState newDataState) {
-		eDynamicSet(Bpmn2Package.DATA_OBJECT__DATA_STATE,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE,
+		eDynamicSet(Bpmn2Package.DATA_OBJECT__DATA_STATE, Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE,
 				newDataState);
 	}
 
@@ -153,8 +144,7 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
 	 * @generated
 	 */
 	public void setIsCollection(boolean newIsCollection) {
-		eDynamicSet(Bpmn2Package.DATA_OBJECT__IS_COLLECTION,
-				Bpmn2Package.Literals.DATA_OBJECT__IS_COLLECTION,
+		eDynamicSet(Bpmn2Package.DATA_OBJECT__IS_COLLECTION, Bpmn2Package.Literals.DATA_OBJECT__IS_COLLECTION,
 				newIsCollection);
 	}
 
@@ -164,8 +154,7 @@ public class DataObjectImpl extends FlowElementImpl implements DataObject {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.DATA_OBJECT__DATA_STATE:
 			return basicSetDataState(null, msgs);

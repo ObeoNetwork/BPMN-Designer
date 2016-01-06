@@ -26,13 +26,13 @@ import org.obeonetwork.dsl.bpmn2.MessageFlow;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.MessageFlowImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.MessageFlowImpl#getSourceRef <em>Source Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.MessageFlowImpl#getTargetRef <em>Target Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.MessageFlowImpl#getMessageRef <em>Message Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -72,8 +72,8 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.MESSAGE_FLOW__NAME,
-				Bpmn2Package.Literals.MESSAGE_FLOW__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.MESSAGE_FLOW__NAME, Bpmn2Package.Literals.MESSAGE_FLOW__NAME, true,
+				true);
 	}
 
 	/**
@@ -82,8 +82,7 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.MESSAGE_FLOW__NAME,
-				Bpmn2Package.Literals.MESSAGE_FLOW__NAME, newName);
+		eDynamicSet(Bpmn2Package.MESSAGE_FLOW__NAME, Bpmn2Package.Literals.MESSAGE_FLOW__NAME, newName);
 	}
 
 	/**
@@ -92,8 +91,7 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public InteractionNode getSourceRef() {
-		return (InteractionNode) eDynamicGet(
-				Bpmn2Package.MESSAGE_FLOW__SOURCE_REF,
+		return (InteractionNode) eDynamicGet(Bpmn2Package.MESSAGE_FLOW__SOURCE_REF,
 				Bpmn2Package.Literals.MESSAGE_FLOW__SOURCE_REF, true, true);
 	}
 
@@ -103,8 +101,7 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public InteractionNode basicGetSourceRef() {
-		return (InteractionNode) eDynamicGet(
-				Bpmn2Package.MESSAGE_FLOW__SOURCE_REF,
+		return (InteractionNode) eDynamicGet(Bpmn2Package.MESSAGE_FLOW__SOURCE_REF,
 				Bpmn2Package.Literals.MESSAGE_FLOW__SOURCE_REF, false, true);
 	}
 
@@ -114,8 +111,8 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public void setSourceRef(InteractionNode newSourceRef) {
-		eDynamicSet(Bpmn2Package.MESSAGE_FLOW__SOURCE_REF,
-				Bpmn2Package.Literals.MESSAGE_FLOW__SOURCE_REF, newSourceRef);
+		eDynamicSet(Bpmn2Package.MESSAGE_FLOW__SOURCE_REF, Bpmn2Package.Literals.MESSAGE_FLOW__SOURCE_REF,
+				newSourceRef);
 	}
 
 	/**
@@ -124,8 +121,7 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public InteractionNode getTargetRef() {
-		return (InteractionNode) eDynamicGet(
-				Bpmn2Package.MESSAGE_FLOW__TARGET_REF,
+		return (InteractionNode) eDynamicGet(Bpmn2Package.MESSAGE_FLOW__TARGET_REF,
 				Bpmn2Package.Literals.MESSAGE_FLOW__TARGET_REF, true, true);
 	}
 
@@ -135,8 +131,7 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public InteractionNode basicGetTargetRef() {
-		return (InteractionNode) eDynamicGet(
-				Bpmn2Package.MESSAGE_FLOW__TARGET_REF,
+		return (InteractionNode) eDynamicGet(Bpmn2Package.MESSAGE_FLOW__TARGET_REF,
 				Bpmn2Package.Literals.MESSAGE_FLOW__TARGET_REF, false, true);
 	}
 
@@ -146,8 +141,8 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public void setTargetRef(InteractionNode newTargetRef) {
-		eDynamicSet(Bpmn2Package.MESSAGE_FLOW__TARGET_REF,
-				Bpmn2Package.Literals.MESSAGE_FLOW__TARGET_REF, newTargetRef);
+		eDynamicSet(Bpmn2Package.MESSAGE_FLOW__TARGET_REF, Bpmn2Package.Literals.MESSAGE_FLOW__TARGET_REF,
+				newTargetRef);
 	}
 
 	/**
@@ -176,8 +171,8 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	 * @generated
 	 */
 	public void setMessageRef(Message newMessageRef) {
-		eDynamicSet(Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF,
-				Bpmn2Package.Literals.MESSAGE_FLOW__MESSAGE_REF, newMessageRef);
+		eDynamicSet(Bpmn2Package.MESSAGE_FLOW__MESSAGE_REF, Bpmn2Package.Literals.MESSAGE_FLOW__MESSAGE_REF,
+				newMessageRef);
 	}
 
 	/**
@@ -263,8 +258,7 @@ public class MessageFlowImpl extends BaseElementImpl implements MessageFlow {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.MESSAGE_FLOW__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.MESSAGE_FLOW__SOURCE_REF:
 			return basicGetSourceRef() != null;
 		case Bpmn2Package.MESSAGE_FLOW__TARGET_REF:

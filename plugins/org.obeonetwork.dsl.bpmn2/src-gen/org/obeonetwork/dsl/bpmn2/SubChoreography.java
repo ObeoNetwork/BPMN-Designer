@@ -23,17 +23,16 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.SubChoreography#getArtifacts <em>Artifacts</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getSubChoreography()
  * @model
  * @generated
  */
-public interface SubChoreography extends ChoreographyActivity,
-		FlowElementsContainer {
+public interface SubChoreography extends ChoreographyActivity, FlowElementsContainer {
 	/**
 	 * Returns the value of the '<em><b>Artifacts</b></em>' containment reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.Artifact}.

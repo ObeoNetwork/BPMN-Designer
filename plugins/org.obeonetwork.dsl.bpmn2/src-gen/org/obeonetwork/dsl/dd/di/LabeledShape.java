@@ -23,10 +23,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.di.LabeledShape#getOwnedLabel <em>Owned Label</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.dd.di.DiPackage#getLabeledShape()
  * @model abstract="true"

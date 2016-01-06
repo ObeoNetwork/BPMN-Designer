@@ -37,9 +37,8 @@ import org.obeonetwork.dsl.bpmn2.Group;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GroupItemProvider extends ArtifactItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class GroupItemProvider extends ArtifactItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -74,16 +73,11 @@ public class GroupItemProvider extends ArtifactItemProvider implements
 	 */
 	protected void addCategoryValueRefPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Group_categoryValueRef_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_Group_categoryValueRef_feature",
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Group_categoryValueRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Group_categoryValueRef_feature",
 								"_UI_Group_type"),
-						Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF, true,
-						false, true, null, null, null));
+						Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -95,11 +89,9 @@ public class GroupItemProvider extends ArtifactItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Group.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Group.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Group.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Group.gif"));
 		}
 	}
 
@@ -147,8 +139,7 @@ public class GroupItemProvider extends ArtifactItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

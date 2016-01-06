@@ -23,13 +23,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ItemDefinition#getItemKind <em>Item Kind</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ItemDefinition#getStructureRef <em>Structure Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ItemDefinition#isIsCollection <em>Is Collection</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ItemDefinition#getImport <em>Import</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getItemDefinition()
  * @model

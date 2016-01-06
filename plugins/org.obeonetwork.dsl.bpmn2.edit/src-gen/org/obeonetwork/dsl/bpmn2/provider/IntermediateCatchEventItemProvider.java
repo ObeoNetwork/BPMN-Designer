@@ -35,9 +35,8 @@ import org.obeonetwork.dsl.bpmn2.IntermediateCatchEvent;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IntermediateCatchEventItemProvider extends CatchEventItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class IntermediateCatchEventItemProvider extends CatchEventItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -72,15 +71,9 @@ public class IntermediateCatchEventItemProvider extends CatchEventItemProvider
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/IntermediateCatchEvent.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/IntermediateCatchEvent.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/IntermediateCatchEvent.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/IntermediateCatchEvent.gif"));
 		}
 	}
 
@@ -128,8 +121,7 @@ public class IntermediateCatchEventItemProvider extends CatchEventItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

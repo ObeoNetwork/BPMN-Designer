@@ -36,9 +36,8 @@ import org.obeonetwork.dsl.dd.di.DiPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LabeledEdgeItemProvider extends EdgeItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class LabeledEdgeItemProvider extends EdgeItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -72,16 +71,12 @@ public class LabeledEdgeItemProvider extends EdgeItemProvider implements
 	 * @generated
 	 */
 	protected void addOwnedLabelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_LabeledEdge_ownedLabel_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_LabeledEdge_ownedLabel_feature",
-						"_UI_LabeledEdge_type"),
-				DiPackage.Literals.LABELED_EDGE__OWNED_LABEL, false, false,
-				false, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_LabeledEdge_ownedLabel_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_LabeledEdge_ownedLabel_feature",
+								"_UI_LabeledEdge_type"),
+						DiPackage.Literals.LABELED_EDGE__OWNED_LABEL, false, false, false, null, null, null));
 	}
 
 	/**
@@ -126,8 +121,7 @@ public class LabeledEdgeItemProvider extends EdgeItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

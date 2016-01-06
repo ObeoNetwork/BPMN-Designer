@@ -42,9 +42,8 @@ import org.obeonetwork.dsl.bpmn2.ResourceRole;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResourceRoleItemProvider extends BaseElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ResourceRoleItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -79,16 +78,12 @@ public class ResourceRoleItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	protected void addResourceRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ResourceRole_resourceRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ResourceRole_resourceRef_feature",
-						"_UI_ResourceRole_type"),
-				Bpmn2Package.Literals.RESOURCE_ROLE__RESOURCE_REF, true, false,
-				true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ResourceRole_resourceRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ResourceRole_resourceRef_feature",
+								"_UI_ResourceRole_type"),
+						Bpmn2Package.Literals.RESOURCE_ROLE__RESOURCE_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -98,16 +93,13 @@ public class ResourceRoleItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ResourceRole_name_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ResourceRole_name_feature",
-						"_UI_ResourceRole_type"),
-				Bpmn2Package.Literals.RESOURCE_ROLE__NAME, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ResourceRole_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ResourceRole_name_feature",
+								"_UI_ResourceRole_type"),
+						Bpmn2Package.Literals.RESOURCE_ROLE__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -119,14 +111,11 @@ public class ResourceRoleItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION);
+			childrenFeatures.add(Bpmn2Package.Literals.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS);
+			childrenFeatures.add(Bpmn2Package.Literals.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION);
 		}
 		return childrenFeatures;
 	}
@@ -153,13 +142,9 @@ public class ResourceRoleItemProvider extends BaseElementItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator()
-							.getImage("full/obj16/ResourceRole.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ResourceRole.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator()
-							.getImage("full/obj16/ResourceRole.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ResourceRole.gif"));
 		}
 	}
 
@@ -199,13 +184,11 @@ public class ResourceRoleItemProvider extends BaseElementItemProvider implements
 
 		switch (notification.getFeatureID(ResourceRole.class)) {
 		case Bpmn2Package.RESOURCE_ROLE__NAME:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Bpmn2Package.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS:
 		case Bpmn2Package.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -219,20 +202,15 @@ public class ResourceRoleItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors
-				.add(createChildParameter(
-						Bpmn2Package.Literals.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS,
-						Bpmn2Factory.eINSTANCE.createResourceParameterBinding()));
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS,
+				Bpmn2Factory.eINSTANCE.createResourceParameterBinding()));
 
 		newChildDescriptors
-				.add(createChildParameter(
-						Bpmn2Package.Literals.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION,
-						Bpmn2Factory.eINSTANCE
-								.createResourceAssignmentExpression()));
+				.add(createChildParameter(Bpmn2Package.Literals.RESOURCE_ROLE__RESOURCE_ASSIGNMENT_EXPRESSION,
+						Bpmn2Factory.eINSTANCE.createResourceAssignmentExpression()));
 	}
 
 }

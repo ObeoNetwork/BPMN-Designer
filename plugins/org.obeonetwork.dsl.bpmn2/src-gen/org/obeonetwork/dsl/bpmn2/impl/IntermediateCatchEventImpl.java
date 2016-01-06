@@ -22,13 +22,10 @@ import org.obeonetwork.dsl.bpmn2.IntermediateCatchEvent;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Intermediate Catch Event</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public class IntermediateCatchEventImpl extends CatchEventImpl implements
-		IntermediateCatchEvent {
+public class IntermediateCatchEventImpl extends CatchEventImpl implements IntermediateCatchEvent {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

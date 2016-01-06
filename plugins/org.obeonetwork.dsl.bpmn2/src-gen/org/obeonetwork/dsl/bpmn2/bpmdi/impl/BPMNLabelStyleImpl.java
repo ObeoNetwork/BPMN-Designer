@@ -30,10 +30,10 @@ import org.obeonetwork.dsl.dd.di.impl.StyleImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.impl.BPMNLabelStyleImpl#getFont <em>Font</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,8 +63,8 @@ public class BPMNLabelStyleImpl extends StyleImpl implements BPMNLabelStyle {
 	 * @generated
 	 */
 	public Font getFont() {
-		return (Font) eDynamicGet(BpmnDiPackage.BPMN_LABEL_STYLE__FONT,
-				BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT, true, true);
+		return (Font) eDynamicGet(BpmnDiPackage.BPMN_LABEL_STYLE__FONT, BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT,
+				true, true);
 	}
 
 	/**
@@ -73,8 +73,7 @@ public class BPMNLabelStyleImpl extends StyleImpl implements BPMNLabelStyle {
 	 * @generated
 	 */
 	public NotificationChain basicSetFont(Font newFont, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newFont,
-				BpmnDiPackage.BPMN_LABEL_STYLE__FONT, msgs);
+		msgs = eDynamicInverseAdd((InternalEObject) newFont, BpmnDiPackage.BPMN_LABEL_STYLE__FONT, msgs);
 		return msgs;
 	}
 
@@ -84,8 +83,7 @@ public class BPMNLabelStyleImpl extends StyleImpl implements BPMNLabelStyle {
 	 * @generated
 	 */
 	public void setFont(Font newFont) {
-		eDynamicSet(BpmnDiPackage.BPMN_LABEL_STYLE__FONT,
-				BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT, newFont);
+		eDynamicSet(BpmnDiPackage.BPMN_LABEL_STYLE__FONT, BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT, newFont);
 	}
 
 	/**
@@ -94,8 +92,7 @@ public class BPMNLabelStyleImpl extends StyleImpl implements BPMNLabelStyle {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
 			return basicSetFont(null, msgs);

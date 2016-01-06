@@ -21,12 +21,12 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ConversationLink#getSourceRef <em>Source Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ConversationLink#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ConversationLink#getTargetRef <em>Target Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getConversationLink()
  * @model

@@ -24,10 +24,10 @@ import org.obeonetwork.dsl.bpmn2.StartEvent;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.StartEventImpl#isIsInterrupting <em>Is Interrupting</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -77,8 +77,7 @@ public class StartEventImpl extends CatchEventImpl implements StartEvent {
 	 * @generated
 	 */
 	public void setIsInterrupting(boolean newIsInterrupting) {
-		eDynamicSet(Bpmn2Package.START_EVENT__IS_INTERRUPTING,
-				Bpmn2Package.Literals.START_EVENT__IS_INTERRUPTING,
+		eDynamicSet(Bpmn2Package.START_EVENT__IS_INTERRUPTING, Bpmn2Package.Literals.START_EVENT__IS_INTERRUPTING,
 				newIsInterrupting);
 	}
 

@@ -26,15 +26,14 @@ import org.obeonetwork.dsl.dd.di.LabeledShape;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.LabeledShapeImpl#getOwnedLabel <em>Owned Label</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public abstract class LabeledShapeImpl extends ShapeImpl implements
-		LabeledShape {
+public abstract class LabeledShapeImpl extends ShapeImpl implements LabeledShape {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

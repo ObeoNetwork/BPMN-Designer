@@ -26,12 +26,12 @@ import org.obeonetwork.dsl.bpmn2.SendTask;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SendTaskImpl#getImplementation <em>Implementation</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SendTaskImpl#getOperationRef <em>Operation Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SendTaskImpl#getMessageRef <em>Message Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -81,8 +81,7 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
 	 * @generated
 	 */
 	public void setImplementation(String newImplementation) {
-		eDynamicSet(Bpmn2Package.SEND_TASK__IMPLEMENTATION,
-				Bpmn2Package.Literals.SEND_TASK__IMPLEMENTATION,
+		eDynamicSet(Bpmn2Package.SEND_TASK__IMPLEMENTATION, Bpmn2Package.Literals.SEND_TASK__IMPLEMENTATION,
 				newImplementation);
 	}
 
@@ -112,8 +111,8 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
 	 * @generated
 	 */
 	public void setOperationRef(Operation newOperationRef) {
-		eDynamicSet(Bpmn2Package.SEND_TASK__OPERATION_REF,
-				Bpmn2Package.Literals.SEND_TASK__OPERATION_REF, newOperationRef);
+		eDynamicSet(Bpmn2Package.SEND_TASK__OPERATION_REF, Bpmn2Package.Literals.SEND_TASK__OPERATION_REF,
+				newOperationRef);
 	}
 
 	/**
@@ -122,8 +121,8 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
 	 * @generated
 	 */
 	public Message getMessageRef() {
-		return (Message) eDynamicGet(Bpmn2Package.SEND_TASK__MESSAGE_REF,
-				Bpmn2Package.Literals.SEND_TASK__MESSAGE_REF, true, true);
+		return (Message) eDynamicGet(Bpmn2Package.SEND_TASK__MESSAGE_REF, Bpmn2Package.Literals.SEND_TASK__MESSAGE_REF,
+				true, true);
 	}
 
 	/**
@@ -132,8 +131,8 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
 	 * @generated
 	 */
 	public Message basicGetMessageRef() {
-		return (Message) eDynamicGet(Bpmn2Package.SEND_TASK__MESSAGE_REF,
-				Bpmn2Package.Literals.SEND_TASK__MESSAGE_REF, false, true);
+		return (Message) eDynamicGet(Bpmn2Package.SEND_TASK__MESSAGE_REF, Bpmn2Package.Literals.SEND_TASK__MESSAGE_REF,
+				false, true);
 	}
 
 	/**
@@ -142,8 +141,7 @@ public class SendTaskImpl extends TaskImpl implements SendTask {
 	 * @generated
 	 */
 	public void setMessageRef(Message newMessageRef) {
-		eDynamicSet(Bpmn2Package.SEND_TASK__MESSAGE_REF,
-				Bpmn2Package.Literals.SEND_TASK__MESSAGE_REF, newMessageRef);
+		eDynamicSet(Bpmn2Package.SEND_TASK__MESSAGE_REF, Bpmn2Package.Literals.SEND_TASK__MESSAGE_REF, newMessageRef);
 	}
 
 	/**

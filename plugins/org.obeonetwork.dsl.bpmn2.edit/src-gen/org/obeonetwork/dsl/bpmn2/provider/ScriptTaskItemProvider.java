@@ -39,9 +39,8 @@ import org.obeonetwork.dsl.bpmn2.ScriptTask;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ScriptTaskItemProvider extends TaskItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ScriptTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -76,16 +75,13 @@ public class ScriptTaskItemProvider extends TaskItemProvider implements
 	 * @generated
 	 */
 	protected void addScriptFormatPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ScriptTask_scriptFormat_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ScriptTask_scriptFormat_feature",
-						"_UI_ScriptTask_type"),
-				Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT_FORMAT, true, false,
-				false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ScriptTask_scriptFormat_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ScriptTask_scriptFormat_feature",
+								"_UI_ScriptTask_type"),
+						Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT_FORMAT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -96,17 +92,12 @@ public class ScriptTaskItemProvider extends TaskItemProvider implements
 	 */
 	protected void addScriptPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_ScriptTask_script_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_ScriptTask_script_feature",
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ScriptTask_script_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ScriptTask_script_feature",
 								"_UI_ScriptTask_type"),
-						Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT, true, false,
-						false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
+						Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -118,11 +109,9 @@ public class ScriptTaskItemProvider extends TaskItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/ScriptTask.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ScriptTask.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/ScriptTask.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ScriptTask.gif"));
 		}
 	}
 
@@ -163,8 +152,7 @@ public class ScriptTaskItemProvider extends TaskItemProvider implements
 		switch (notification.getFeatureID(ScriptTask.class)) {
 		case Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT:
 		case Bpmn2Package.SCRIPT_TASK__SCRIPT:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -178,8 +166,7 @@ public class ScriptTaskItemProvider extends TaskItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

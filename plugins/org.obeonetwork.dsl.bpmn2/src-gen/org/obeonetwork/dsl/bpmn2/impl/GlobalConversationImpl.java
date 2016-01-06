@@ -22,13 +22,10 @@ import org.obeonetwork.dsl.bpmn2.GlobalConversation;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Global Conversation</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public class GlobalConversationImpl extends CollaborationImpl implements
-		GlobalConversation {
+public class GlobalConversationImpl extends CollaborationImpl implements GlobalConversation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

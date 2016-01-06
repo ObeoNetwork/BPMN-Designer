@@ -28,13 +28,13 @@ import org.obeonetwork.dsl.bpmn2.SequenceFlow;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SequenceFlowImpl#isIsImmediate <em>Is Immediate</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SequenceFlowImpl#getConditionExpression <em>Condition Expression</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SequenceFlowImpl#getTargetRef <em>Target Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SequenceFlowImpl#getSourceRef <em>Source Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -84,8 +84,7 @@ public class SequenceFlowImpl extends FlowElementImpl implements SequenceFlow {
 	 * @generated
 	 */
 	public void setIsImmediate(boolean newIsImmediate) {
-		eDynamicSet(Bpmn2Package.SEQUENCE_FLOW__IS_IMMEDIATE,
-				Bpmn2Package.Literals.SEQUENCE_FLOW__IS_IMMEDIATE,
+		eDynamicSet(Bpmn2Package.SEQUENCE_FLOW__IS_IMMEDIATE, Bpmn2Package.Literals.SEQUENCE_FLOW__IS_IMMEDIATE,
 				newIsImmediate);
 	}
 
@@ -95,10 +94,8 @@ public class SequenceFlowImpl extends FlowElementImpl implements SequenceFlow {
 	 * @generated
 	 */
 	public Expression getConditionExpression() {
-		return (Expression) eDynamicGet(
-				Bpmn2Package.SEQUENCE_FLOW__CONDITION_EXPRESSION,
-				Bpmn2Package.Literals.SEQUENCE_FLOW__CONDITION_EXPRESSION,
-				true, true);
+		return (Expression) eDynamicGet(Bpmn2Package.SEQUENCE_FLOW__CONDITION_EXPRESSION,
+				Bpmn2Package.Literals.SEQUENCE_FLOW__CONDITION_EXPRESSION, true, true);
 	}
 
 	/**
@@ -106,8 +103,7 @@ public class SequenceFlowImpl extends FlowElementImpl implements SequenceFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetConditionExpression(
-			Expression newConditionExpression, NotificationChain msgs) {
+	public NotificationChain basicSetConditionExpression(Expression newConditionExpression, NotificationChain msgs) {
 		msgs = eDynamicInverseAdd((InternalEObject) newConditionExpression,
 				Bpmn2Package.SEQUENCE_FLOW__CONDITION_EXPRESSION, msgs);
 		return msgs;
@@ -120,8 +116,7 @@ public class SequenceFlowImpl extends FlowElementImpl implements SequenceFlow {
 	 */
 	public void setConditionExpression(Expression newConditionExpression) {
 		eDynamicSet(Bpmn2Package.SEQUENCE_FLOW__CONDITION_EXPRESSION,
-				Bpmn2Package.Literals.SEQUENCE_FLOW__CONDITION_EXPRESSION,
-				newConditionExpression);
+				Bpmn2Package.Literals.SEQUENCE_FLOW__CONDITION_EXPRESSION, newConditionExpression);
 	}
 
 	/**
@@ -149,10 +144,8 @@ public class SequenceFlowImpl extends FlowElementImpl implements SequenceFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTargetRef(FlowNode newTargetRef,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newTargetRef,
-				Bpmn2Package.SEQUENCE_FLOW__TARGET_REF, msgs);
+	public NotificationChain basicSetTargetRef(FlowNode newTargetRef, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newTargetRef, Bpmn2Package.SEQUENCE_FLOW__TARGET_REF, msgs);
 		return msgs;
 	}
 
@@ -162,8 +155,8 @@ public class SequenceFlowImpl extends FlowElementImpl implements SequenceFlow {
 	 * @generated
 	 */
 	public void setTargetRef(FlowNode newTargetRef) {
-		eDynamicSet(Bpmn2Package.SEQUENCE_FLOW__TARGET_REF,
-				Bpmn2Package.Literals.SEQUENCE_FLOW__TARGET_REF, newTargetRef);
+		eDynamicSet(Bpmn2Package.SEQUENCE_FLOW__TARGET_REF, Bpmn2Package.Literals.SEQUENCE_FLOW__TARGET_REF,
+				newTargetRef);
 	}
 
 	/**
@@ -191,10 +184,8 @@ public class SequenceFlowImpl extends FlowElementImpl implements SequenceFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSourceRef(FlowNode newSourceRef,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newSourceRef,
-				Bpmn2Package.SEQUENCE_FLOW__SOURCE_REF, msgs);
+	public NotificationChain basicSetSourceRef(FlowNode newSourceRef, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newSourceRef, Bpmn2Package.SEQUENCE_FLOW__SOURCE_REF, msgs);
 		return msgs;
 	}
 
@@ -204,8 +195,8 @@ public class SequenceFlowImpl extends FlowElementImpl implements SequenceFlow {
 	 * @generated
 	 */
 	public void setSourceRef(FlowNode newSourceRef) {
-		eDynamicSet(Bpmn2Package.SEQUENCE_FLOW__SOURCE_REF,
-				Bpmn2Package.Literals.SEQUENCE_FLOW__SOURCE_REF, newSourceRef);
+		eDynamicSet(Bpmn2Package.SEQUENCE_FLOW__SOURCE_REF, Bpmn2Package.Literals.SEQUENCE_FLOW__SOURCE_REF,
+				newSourceRef);
 	}
 
 	/**
@@ -214,20 +205,19 @@ public class SequenceFlowImpl extends FlowElementImpl implements SequenceFlow {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.SEQUENCE_FLOW__TARGET_REF:
 			FlowNode targetRef = basicGetTargetRef();
 			if (targetRef != null)
-				msgs = ((InternalEObject) targetRef).eInverseRemove(this,
-						Bpmn2Package.FLOW_NODE__INCOMING, FlowNode.class, msgs);
+				msgs = ((InternalEObject) targetRef).eInverseRemove(this, Bpmn2Package.FLOW_NODE__INCOMING,
+						FlowNode.class, msgs);
 			return basicSetTargetRef((FlowNode) otherEnd, msgs);
 		case Bpmn2Package.SEQUENCE_FLOW__SOURCE_REF:
 			FlowNode sourceRef = basicGetSourceRef();
 			if (sourceRef != null)
-				msgs = ((InternalEObject) sourceRef).eInverseRemove(this,
-						Bpmn2Package.FLOW_NODE__OUTGOING, FlowNode.class, msgs);
+				msgs = ((InternalEObject) sourceRef).eInverseRemove(this, Bpmn2Package.FLOW_NODE__OUTGOING,
+						FlowNode.class, msgs);
 			return basicSetSourceRef((FlowNode) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -239,8 +229,7 @@ public class SequenceFlowImpl extends FlowElementImpl implements SequenceFlow {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.SEQUENCE_FLOW__CONDITION_EXPRESSION:
 			return basicSetConditionExpression(null, msgs);

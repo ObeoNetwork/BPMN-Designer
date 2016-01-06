@@ -23,11 +23,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Resource#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Resource#getResourceParameters <em>Resource Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getResource()
  * @model

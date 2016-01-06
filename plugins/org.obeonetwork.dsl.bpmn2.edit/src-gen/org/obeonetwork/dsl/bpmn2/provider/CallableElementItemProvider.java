@@ -42,9 +42,8 @@ import org.obeonetwork.dsl.bpmn2.CallableElement;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CallableElementItemProvider extends RootElementItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class CallableElementItemProvider extends RootElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -79,16 +78,13 @@ public class CallableElementItemProvider extends RootElementItemProvider
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_CallableElement_name_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_CallableElement_name_feature",
-						"_UI_CallableElement_type"),
-				Bpmn2Package.Literals.CALLABLE_ELEMENT__NAME, true, false,
-				false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_CallableElement_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_CallableElement_name_feature",
+								"_UI_CallableElement_type"),
+						Bpmn2Package.Literals.CALLABLE_ELEMENT__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -99,17 +95,11 @@ public class CallableElementItemProvider extends RootElementItemProvider
 	 */
 	protected void addSupportedInterfaceRefsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_CallableElement_supportedInterfaceRefs_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_CallableElement_supportedInterfaceRefs_feature",
-								"_UI_CallableElement_type"),
-						Bpmn2Package.Literals.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS,
-						true, false, true, null, null, null));
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_CallableElement_supportedInterfaceRefs_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_CallableElement_supportedInterfaceRefs_feature", "_UI_CallableElement_type"),
+				Bpmn2Package.Literals.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -121,14 +111,11 @@ public class CallableElementItemProvider extends RootElementItemProvider
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_SPECIFICATION);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_BINDING);
+			childrenFeatures.add(Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_SPECIFICATION);
+			childrenFeatures.add(Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_BINDING);
 		}
 		return childrenFeatures;
 	}
@@ -182,13 +169,11 @@ public class CallableElementItemProvider extends RootElementItemProvider
 
 		switch (notification.getFeatureID(CallableElement.class)) {
 		case Bpmn2Package.CALLABLE_ELEMENT__NAME:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
 		case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -202,16 +187,13 @@ public class CallableElementItemProvider extends RootElementItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_SPECIFICATION,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_SPECIFICATION,
 				Bpmn2Factory.eINSTANCE.createInputOutputSpecification()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_BINDING,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_BINDING,
 				Bpmn2Factory.eINSTANCE.createInputOutputBinding()));
 	}
 

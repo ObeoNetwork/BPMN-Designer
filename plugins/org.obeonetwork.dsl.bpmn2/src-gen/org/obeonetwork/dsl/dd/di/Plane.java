@@ -26,10 +26,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.di.Plane#getPlaneElement <em>Plane Element</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.dd.di.DiPackage#getPlane()
  * @model abstract="true"
@@ -63,7 +63,6 @@ public interface Plane extends Node {
 	 * @model
 	 * @generated
 	 */
-	boolean plane_element_type(DiagnosticChain diagnostics,
-			Map<Object, Object> context);
+	boolean plane_element_type(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Plane

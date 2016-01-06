@@ -48,9 +48,8 @@ import org.obeonetwork.dsl.dd.di.provider.LabeledShapeItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -90,16 +89,12 @@ public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements
 	 * @generated
 	 */
 	protected void addBpmnElementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_BPMNShape_bpmnElement_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_BPMNShape_bpmnElement_feature",
-						"_UI_BPMNShape_type"),
-				BpmnDiPackage.Literals.BPMN_SHAPE__BPMN_ELEMENT, true, false,
-				true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BPMNShape_bpmnElement_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BPMNShape_bpmnElement_feature",
+								"_UI_BPMNShape_type"),
+						BpmnDiPackage.Literals.BPMN_SHAPE__BPMN_ELEMENT, true, false, true, null, null, null));
 	}
 
 	/**
@@ -109,16 +104,13 @@ public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements
 	 * @generated
 	 */
 	protected void addIsHorizontalPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_BPMNShape_isHorizontal_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_BPMNShape_isHorizontal_feature",
-						"_UI_BPMNShape_type"),
-				BpmnDiPackage.Literals.BPMN_SHAPE__IS_HORIZONTAL, true, false,
-				false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BPMNShape_isHorizontal_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BPMNShape_isHorizontal_feature",
+								"_UI_BPMNShape_type"),
+						BpmnDiPackage.Literals.BPMN_SHAPE__IS_HORIZONTAL, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -128,16 +120,13 @@ public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements
 	 * @generated
 	 */
 	protected void addIsExpandedPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_BPMNShape_isExpanded_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_BPMNShape_isExpanded_feature",
-						"_UI_BPMNShape_type"),
-				BpmnDiPackage.Literals.BPMN_SHAPE__IS_EXPANDED, true, false,
-				false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BPMNShape_isExpanded_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BPMNShape_isExpanded_feature",
+								"_UI_BPMNShape_type"),
+						BpmnDiPackage.Literals.BPMN_SHAPE__IS_EXPANDED, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -147,17 +136,13 @@ public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements
 	 * @generated
 	 */
 	protected void addIsMarkerVisiblePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_BPMNShape_isMarkerVisible_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_BPMNShape_isMarkerVisible_feature",
-						"_UI_BPMNShape_type"),
-				BpmnDiPackage.Literals.BPMN_SHAPE__IS_MARKER_VISIBLE, true,
-				false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null,
-				null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BPMNShape_isMarkerVisible_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BPMNShape_isMarkerVisible_feature",
+								"_UI_BPMNShape_type"),
+						BpmnDiPackage.Literals.BPMN_SHAPE__IS_MARKER_VISIBLE, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -167,17 +152,13 @@ public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements
 	 * @generated
 	 */
 	protected void addIsMessageVisiblePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_BPMNShape_isMessageVisible_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_BPMNShape_isMessageVisible_feature",
-						"_UI_BPMNShape_type"),
-				BpmnDiPackage.Literals.BPMN_SHAPE__IS_MESSAGE_VISIBLE, true,
-				false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null,
-				null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BPMNShape_isMessageVisible_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BPMNShape_isMessageVisible_feature",
+								"_UI_BPMNShape_type"),
+						BpmnDiPackage.Literals.BPMN_SHAPE__IS_MESSAGE_VISIBLE, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -187,17 +168,13 @@ public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements
 	 * @generated
 	 */
 	protected void addParticipantBandKindPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_BPMNShape_participantBandKind_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_BPMNShape_participantBandKind_feature",
-						"_UI_BPMNShape_type"),
-				BpmnDiPackage.Literals.BPMN_SHAPE__PARTICIPANT_BAND_KIND, true,
-				false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
-				null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BPMNShape_participantBandKind_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BPMNShape_participantBandKind_feature",
+								"_UI_BPMNShape_type"),
+						BpmnDiPackage.Literals.BPMN_SHAPE__PARTICIPANT_BAND_KIND, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -207,16 +184,12 @@ public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements
 	 * @generated
 	 */
 	protected void addChoreographyActivityShapePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_BPMNShape_choreographyActivityShape_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_BPMNShape_choreographyActivityShape_feature",
-						"_UI_BPMNShape_type"),
-				BpmnDiPackage.Literals.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE,
-				true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BPMNShape_choreographyActivityShape_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_BPMNShape_choreographyActivityShape_feature", "_UI_BPMNShape_type"),
+				BpmnDiPackage.Literals.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE, true, false, true, null, null, null));
 	}
 
 	/**
@@ -228,8 +201,7 @@ public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(BpmnDiPackage.Literals.BPMN_SHAPE__LABEL);
@@ -259,11 +231,9 @@ public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/BPMNShape.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/BPMNShape.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/BPMNShape.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/BPMNShape.gif"));
 		}
 	}
 
@@ -286,8 +256,7 @@ public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements
 	@Override
 	public String getText(Object object) {
 		BPMNShape bpmnShape = (BPMNShape) object;
-		return getString("_UI_BPMNShape_type") + " "
-				+ bpmnShape.isIsHorizontal();
+		return getString("_UI_BPMNShape_type") + " " + bpmnShape.isIsHorizontal();
 	}
 
 	/**
@@ -307,12 +276,10 @@ public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements
 		case BpmnDiPackage.BPMN_SHAPE__IS_MARKER_VISIBLE:
 		case BpmnDiPackage.BPMN_SHAPE__IS_MESSAGE_VISIBLE:
 		case BpmnDiPackage.BPMN_SHAPE__PARTICIPANT_BAND_KIND:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case BpmnDiPackage.BPMN_SHAPE__LABEL:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -326,12 +293,10 @@ public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				BpmnDiPackage.Literals.BPMN_SHAPE__LABEL,
+		newChildDescriptors.add(createChildParameter(BpmnDiPackage.Literals.BPMN_SHAPE__LABEL,
 				BpmnDiFactory.eINSTANCE.createBPMNLabel()));
 	}
 

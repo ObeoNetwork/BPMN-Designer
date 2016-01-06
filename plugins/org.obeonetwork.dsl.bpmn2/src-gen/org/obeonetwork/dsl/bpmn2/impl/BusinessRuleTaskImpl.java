@@ -24,10 +24,10 @@ import org.obeonetwork.dsl.bpmn2.BusinessRuleTask;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.BusinessRuleTaskImpl#getImplementation <em>Implementation</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -67,10 +67,8 @@ public class BusinessRuleTaskImpl extends TaskImpl implements BusinessRuleTask {
 	 * @generated
 	 */
 	public String getImplementation() {
-		return (String) eDynamicGet(
-				Bpmn2Package.BUSINESS_RULE_TASK__IMPLEMENTATION,
-				Bpmn2Package.Literals.BUSINESS_RULE_TASK__IMPLEMENTATION, true,
-				true);
+		return (String) eDynamicGet(Bpmn2Package.BUSINESS_RULE_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.BUSINESS_RULE_TASK__IMPLEMENTATION, true, true);
 	}
 
 	/**
@@ -80,8 +78,7 @@ public class BusinessRuleTaskImpl extends TaskImpl implements BusinessRuleTask {
 	 */
 	public void setImplementation(String newImplementation) {
 		eDynamicSet(Bpmn2Package.BUSINESS_RULE_TASK__IMPLEMENTATION,
-				Bpmn2Package.Literals.BUSINESS_RULE_TASK__IMPLEMENTATION,
-				newImplementation);
+				Bpmn2Package.Literals.BUSINESS_RULE_TASK__IMPLEMENTATION, newImplementation);
 	}
 
 	/**

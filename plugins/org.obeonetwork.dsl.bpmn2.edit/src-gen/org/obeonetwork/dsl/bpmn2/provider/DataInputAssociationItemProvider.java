@@ -35,10 +35,8 @@ import org.obeonetwork.dsl.bpmn2.DataInputAssociation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DataInputAssociationItemProvider extends
-		DataAssociationItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider,
-		IItemLabelProvider, IItemPropertySource {
+public class DataInputAssociationItemProvider extends DataAssociationItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -73,15 +71,9 @@ public class DataInputAssociationItemProvider extends
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/DataInputAssociation.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/DataInputAssociation.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/DataInputAssociation.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/DataInputAssociation.gif"));
 		}
 	}
 
@@ -129,8 +121,7 @@ public class DataInputAssociationItemProvider extends
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

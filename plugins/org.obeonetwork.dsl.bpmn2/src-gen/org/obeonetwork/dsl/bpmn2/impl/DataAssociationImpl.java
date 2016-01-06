@@ -33,18 +33,17 @@ import org.obeonetwork.dsl.bpmn2.ItemAwareElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataAssociationImpl#getTransformation <em>Transformation</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataAssociationImpl#getAssignment <em>Assignment</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataAssociationImpl#getTargetRef <em>Target Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataAssociationImpl#getSourceRef <em>Source Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class DataAssociationImpl extends BaseElementImpl implements
-		DataAssociation {
+public class DataAssociationImpl extends BaseElementImpl implements DataAssociation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,10 +69,8 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public FormalExpression getTransformation() {
-		return (FormalExpression) eDynamicGet(
-				Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION,
-				Bpmn2Package.Literals.DATA_ASSOCIATION__TRANSFORMATION, true,
-				true);
+		return (FormalExpression) eDynamicGet(Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION,
+				Bpmn2Package.Literals.DATA_ASSOCIATION__TRANSFORMATION, true, true);
 	}
 
 	/**
@@ -81,10 +78,9 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTransformation(
-			FormalExpression newTransformation, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newTransformation,
-				Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION, msgs);
+	public NotificationChain basicSetTransformation(FormalExpression newTransformation, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newTransformation, Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION,
+				msgs);
 		return msgs;
 	}
 
@@ -95,8 +91,7 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 */
 	public void setTransformation(FormalExpression newTransformation) {
 		eDynamicSet(Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION,
-				Bpmn2Package.Literals.DATA_ASSOCIATION__TRANSFORMATION,
-				newTransformation);
+				Bpmn2Package.Literals.DATA_ASSOCIATION__TRANSFORMATION, newTransformation);
 	}
 
 	/**
@@ -106,8 +101,7 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Assignment> getAssignment() {
-		return (EList<Assignment>) eDynamicGet(
-				Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT,
+		return (EList<Assignment>) eDynamicGet(Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT,
 				Bpmn2Package.Literals.DATA_ASSOCIATION__ASSIGNMENT, true, true);
 	}
 
@@ -117,8 +111,7 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public ItemAwareElement getTargetRef() {
-		return (ItemAwareElement) eDynamicGet(
-				Bpmn2Package.DATA_ASSOCIATION__TARGET_REF,
+		return (ItemAwareElement) eDynamicGet(Bpmn2Package.DATA_ASSOCIATION__TARGET_REF,
 				Bpmn2Package.Literals.DATA_ASSOCIATION__TARGET_REF, true, true);
 	}
 
@@ -128,8 +121,7 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public ItemAwareElement basicGetTargetRef() {
-		return (ItemAwareElement) eDynamicGet(
-				Bpmn2Package.DATA_ASSOCIATION__TARGET_REF,
+		return (ItemAwareElement) eDynamicGet(Bpmn2Package.DATA_ASSOCIATION__TARGET_REF,
 				Bpmn2Package.Literals.DATA_ASSOCIATION__TARGET_REF, false, true);
 	}
 
@@ -139,8 +131,7 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setTargetRef(ItemAwareElement newTargetRef) {
-		eDynamicSet(Bpmn2Package.DATA_ASSOCIATION__TARGET_REF,
-				Bpmn2Package.Literals.DATA_ASSOCIATION__TARGET_REF,
+		eDynamicSet(Bpmn2Package.DATA_ASSOCIATION__TARGET_REF, Bpmn2Package.Literals.DATA_ASSOCIATION__TARGET_REF,
 				newTargetRef);
 	}
 
@@ -151,8 +142,7 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ItemAwareElement> getSourceRef() {
-		return (EList<ItemAwareElement>) eDynamicGet(
-				Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF,
+		return (EList<ItemAwareElement>) eDynamicGet(Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF,
 				Bpmn2Package.Literals.DATA_ASSOCIATION__SOURCE_REF, true, true);
 	}
 
@@ -162,14 +152,12 @@ public class DataAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION:
 			return basicSetTransformation(null, msgs);
 		case Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT:
-			return ((InternalEList<?>) getAssignment()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getAssignment()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -217,8 +205,7 @@ public class DataAssociationImpl extends BaseElementImpl implements
 			return;
 		case Bpmn2Package.DATA_ASSOCIATION__SOURCE_REF:
 			getSourceRef().clear();
-			getSourceRef().addAll(
-					(Collection<? extends ItemAwareElement>) newValue);
+			getSourceRef().addAll((Collection<? extends ItemAwareElement>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

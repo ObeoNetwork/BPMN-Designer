@@ -21,12 +21,12 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.TimerEventDefinition#getTimeDate <em>Time Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.TimerEventDefinition#getTimeCycle <em>Time Cycle</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.TimerEventDefinition#getTimeDuration <em>Time Duration</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getTimerEventDefinition()
  * @model

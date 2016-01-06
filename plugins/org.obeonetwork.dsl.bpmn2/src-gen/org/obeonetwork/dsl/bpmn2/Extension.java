@@ -23,12 +23,12 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Extension#isMustUnderstand <em>Must Understand</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Extension#getDefinition <em>Definition</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Extension#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getExtension()
  * @model

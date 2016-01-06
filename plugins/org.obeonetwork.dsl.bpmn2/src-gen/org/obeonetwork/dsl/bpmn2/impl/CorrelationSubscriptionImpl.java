@@ -32,16 +32,15 @@ import org.obeonetwork.dsl.bpmn2.CorrelationSubscription;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationSubscriptionImpl#getCorrelationKeyRef <em>Correlation Key Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationSubscriptionImpl#getCorrelationPropertyBinding <em>Correlation Property Binding</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class CorrelationSubscriptionImpl extends BaseElementImpl implements
-		CorrelationSubscription {
+public class CorrelationSubscriptionImpl extends BaseElementImpl implements CorrelationSubscription {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,10 +66,8 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public CorrelationKey getCorrelationKeyRef() {
-		return (CorrelationKey) eDynamicGet(
-				Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
-				Bpmn2Package.Literals.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
-				true, true);
+		return (CorrelationKey) eDynamicGet(Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
+				Bpmn2Package.Literals.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF, true, true);
 	}
 
 	/**
@@ -79,10 +76,8 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public CorrelationKey basicGetCorrelationKeyRef() {
-		return (CorrelationKey) eDynamicGet(
-				Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
-				Bpmn2Package.Literals.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
-				false, true);
+		return (CorrelationKey) eDynamicGet(Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
+				Bpmn2Package.Literals.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF, false, true);
 	}
 
 	/**
@@ -91,10 +86,8 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setCorrelationKeyRef(CorrelationKey newCorrelationKeyRef) {
-		eDynamicSet(
-				Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
-				Bpmn2Package.Literals.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
-				newCorrelationKeyRef);
+		eDynamicSet(Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF,
+				Bpmn2Package.Literals.CORRELATION_SUBSCRIPTION__CORRELATION_KEY_REF, newCorrelationKeyRef);
 	}
 
 	/**
@@ -106,8 +99,7 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements
 	public EList<CorrelationPropertyBinding> getCorrelationPropertyBinding() {
 		return (EList<CorrelationPropertyBinding>) eDynamicGet(
 				Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING,
-				Bpmn2Package.Literals.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING,
-				true, true);
+				Bpmn2Package.Literals.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING, true, true);
 	}
 
 	/**
@@ -116,12 +108,10 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING:
-			return ((InternalEList<?>) getCorrelationPropertyBinding())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getCorrelationPropertyBinding()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -158,8 +148,7 @@ public class CorrelationSubscriptionImpl extends BaseElementImpl implements
 			return;
 		case Bpmn2Package.CORRELATION_SUBSCRIPTION__CORRELATION_PROPERTY_BINDING:
 			getCorrelationPropertyBinding().clear();
-			getCorrelationPropertyBinding()
-					.addAll((Collection<? extends CorrelationPropertyBinding>) newValue);
+			getCorrelationPropertyBinding().addAll((Collection<? extends CorrelationPropertyBinding>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

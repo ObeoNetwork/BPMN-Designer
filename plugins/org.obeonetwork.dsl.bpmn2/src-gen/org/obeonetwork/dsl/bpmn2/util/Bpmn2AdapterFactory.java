@@ -232,14 +232,12 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseExtensionAttributeDefinition(
-				ExtensionAttributeDefinition object) {
+		public Adapter caseExtensionAttributeDefinition(ExtensionAttributeDefinition object) {
 			return createExtensionAttributeDefinitionAdapter();
 		}
 
 		@Override
-		public Adapter caseExtensionAttributeValue(
-				ExtensionAttributeValue object) {
+		public Adapter caseExtensionAttributeValue(ExtensionAttributeValue object) {
 			return createExtensionAttributeValueAdapter();
 		}
 
@@ -294,8 +292,7 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseInputOutputSpecification(
-				InputOutputSpecification object) {
+		public Adapter caseInputOutputSpecification(InputOutputSpecification object) {
 			return createInputOutputSpecificationAdapter();
 		}
 
@@ -350,8 +347,7 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseResourceParameterBinding(
-				ResourceParameterBinding object) {
+		public Adapter caseResourceParameterBinding(ResourceParameterBinding object) {
 			return createResourceParameterBindingAdapter();
 		}
 
@@ -361,8 +357,7 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseResourceAssignmentExpression(
-				ResourceAssignmentExpression object) {
+		public Adapter caseResourceAssignmentExpression(ResourceAssignmentExpression object) {
 			return createResourceAssignmentExpressionAdapter();
 		}
 
@@ -457,8 +452,7 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseParticipantMultiplicity(
-				ParticipantMultiplicity object) {
+		public Adapter caseParticipantMultiplicity(ParticipantMultiplicity object) {
 			return createParticipantMultiplicityAdapter();
 		}
 
@@ -473,8 +467,7 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseConversationAssociation(
-				ConversationAssociation object) {
+		public Adapter caseConversationAssociation(ConversationAssociation object) {
 			return createConversationAssociationAdapter();
 		}
 
@@ -494,8 +487,7 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseCorrelationPropertyRetrievalExpression(
-				CorrelationPropertyRetrievalExpression object) {
+		public Adapter caseCorrelationPropertyRetrievalExpression(CorrelationPropertyRetrievalExpression object) {
 			return createCorrelationPropertyRetrievalExpressionAdapter();
 		}
 
@@ -505,14 +497,12 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseCorrelationSubscription(
-				CorrelationSubscription object) {
+		public Adapter caseCorrelationSubscription(CorrelationSubscription object) {
 			return createCorrelationSubscriptionAdapter();
 		}
 
 		@Override
-		public Adapter caseCorrelationPropertyBinding(
-				CorrelationPropertyBinding object) {
+		public Adapter caseCorrelationPropertyBinding(CorrelationPropertyBinding object) {
 			return createCorrelationPropertyBindingAdapter();
 		}
 
@@ -682,14 +672,12 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseTerminateEventDefinition(
-				TerminateEventDefinition object) {
+		public Adapter caseTerminateEventDefinition(TerminateEventDefinition object) {
 			return createTerminateEventDefinitionAdapter();
 		}
 
 		@Override
-		public Adapter caseEscalationEventDefinition(
-				EscalationEventDefinition object) {
+		public Adapter caseEscalationEventDefinition(EscalationEventDefinition object) {
 			return createEscalationEventDefinitionAdapter();
 		}
 
@@ -699,8 +687,7 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseCompensateEventDefinition(
-				CompensateEventDefinition object) {
+		public Adapter caseCompensateEventDefinition(CompensateEventDefinition object) {
 			return createCompensateEventDefinitionAdapter();
 		}
 
@@ -720,8 +707,7 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseConditionalEventDefinition(
-				ConditionalEventDefinition object) {
+		public Adapter caseConditionalEventDefinition(ConditionalEventDefinition object) {
 			return createConditionalEventDefinitionAdapter();
 		}
 
@@ -846,20 +832,17 @@ public class Bpmn2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMultiInstanceLoopCharacteristics(
-				MultiInstanceLoopCharacteristics object) {
+		public Adapter caseMultiInstanceLoopCharacteristics(MultiInstanceLoopCharacteristics object) {
 			return createMultiInstanceLoopCharacteristicsAdapter();
 		}
 
 		@Override
-		public Adapter caseComplexBehaviorDefinition(
-				ComplexBehaviorDefinition object) {
+		public Adapter caseComplexBehaviorDefinition(ComplexBehaviorDefinition object) {
 			return createComplexBehaviorDefinitionAdapter();
 		}
 
 		@Override
-		public Adapter caseStandardLoopCharacteristics(
-				StandardLoopCharacteristics object) {
+		public Adapter caseStandardLoopCharacteristics(StandardLoopCharacteristics object) {
 			return createStandardLoopCharacteristicsAdapter();
 		}
 

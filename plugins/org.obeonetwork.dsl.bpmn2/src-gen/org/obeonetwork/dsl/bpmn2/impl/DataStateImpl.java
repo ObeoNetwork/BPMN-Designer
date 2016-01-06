@@ -24,10 +24,10 @@ import org.obeonetwork.dsl.bpmn2.DataState;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataStateImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -67,8 +67,7 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.DATA_STATE__NAME,
-				Bpmn2Package.Literals.DATA_STATE__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.DATA_STATE__NAME, Bpmn2Package.Literals.DATA_STATE__NAME, true, true);
 	}
 
 	/**
@@ -77,8 +76,7 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.DATA_STATE__NAME,
-				Bpmn2Package.Literals.DATA_STATE__NAME, newName);
+		eDynamicSet(Bpmn2Package.DATA_STATE__NAME, Bpmn2Package.Literals.DATA_STATE__NAME, newName);
 	}
 
 	/**
@@ -134,8 +132,7 @@ public class DataStateImpl extends BaseElementImpl implements DataState {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.DATA_STATE__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		}
 		return super.eIsSet(featureID);
 	}

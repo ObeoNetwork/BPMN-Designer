@@ -23,13 +23,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.DataAssociation#getTransformation <em>Transformation</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.DataAssociation#getAssignment <em>Assignment</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.DataAssociation#getTargetRef <em>Target Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.DataAssociation#getSourceRef <em>Source Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getDataAssociation()
  * @model

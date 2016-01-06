@@ -89,8 +89,7 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
 		case BpmnDiPackage.BPMN_DIAGRAM:
 			return (EObject) createBPMNDiagram();
 		default:
-			throw new IllegalArgumentException("The class '" + eClass.getName()
-					+ "' is not a valid classifier");
+			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -107,8 +106,7 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
 		case BpmnDiPackage.MESSAGE_VISIBLE_KIND:
 			return createMessageVisibleKindFromString(eDataType, initialValue);
 		default:
-			throw new IllegalArgumentException("The datatype '"
-					+ eDataType.getName() + "' is not a valid classifier");
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -125,8 +123,7 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
 		case BpmnDiPackage.MESSAGE_VISIBLE_KIND:
 			return convertMessageVisibleKindToString(eDataType, instanceValue);
 		default:
-			throw new IllegalArgumentException("The datatype '"
-					+ eDataType.getName() + "' is not a valid classifier");
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -195,13 +192,11 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParticipantBandKind createParticipantBandKindFromString(
-			EDataType eDataType, String initialValue) {
+	public ParticipantBandKind createParticipantBandKindFromString(EDataType eDataType, String initialValue) {
 		ParticipantBandKind result = ParticipantBandKind.get(initialValue);
 		if (result == null)
-			throw new IllegalArgumentException("The value '" + initialValue
-					+ "' is not a valid enumerator of '" + eDataType.getName()
-					+ "'");
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
@@ -210,8 +205,7 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertParticipantBandKindToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertParticipantBandKindToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -220,13 +214,11 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MessageVisibleKind createMessageVisibleKindFromString(
-			EDataType eDataType, String initialValue) {
+	public MessageVisibleKind createMessageVisibleKindFromString(EDataType eDataType, String initialValue) {
 		MessageVisibleKind result = MessageVisibleKind.get(initialValue);
 		if (result == null)
-			throw new IllegalArgumentException("The value '" + initialValue
-					+ "' is not a valid enumerator of '" + eDataType.getName()
-					+ "'");
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
@@ -235,8 +227,7 @@ public class BpmnDiFactoryImpl extends EFactoryImpl implements BpmnDiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertMessageVisibleKindToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertMessageVisibleKindToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

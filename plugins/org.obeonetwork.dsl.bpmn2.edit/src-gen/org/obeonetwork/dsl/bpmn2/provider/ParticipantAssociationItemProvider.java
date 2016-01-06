@@ -37,9 +37,8 @@ import org.obeonetwork.dsl.bpmn2.ParticipantAssociation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ParticipantAssociationItemProvider extends BaseElementItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ParticipantAssociationItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -74,18 +73,13 @@ public class ParticipantAssociationItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	protected void addInnerParticipantRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_ParticipantAssociation_innerParticipantRef_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_ParticipantAssociation_innerParticipantRef_feature",
-								"_UI_ParticipantAssociation_type"),
-						Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
-						true, false, true, null, null, null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ParticipantAssociation_innerParticipantRef_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_ParticipantAssociation_innerParticipantRef_feature", "_UI_ParticipantAssociation_type"),
+				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, true, false, true, null, null,
+				null));
 	}
 
 	/**
@@ -95,18 +89,13 @@ public class ParticipantAssociationItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	protected void addOuterParticipantRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_ParticipantAssociation_outerParticipantRef_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_ParticipantAssociation_outerParticipantRef_feature",
-								"_UI_ParticipantAssociation_type"),
-						Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
-						true, false, true, null, null, null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ParticipantAssociation_outerParticipantRef_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_ParticipantAssociation_outerParticipantRef_feature", "_UI_ParticipantAssociation_type"),
+				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, true, false, true, null, null,
+				null));
 	}
 
 	/**
@@ -118,15 +107,9 @@ public class ParticipantAssociationItemProvider extends BaseElementItemProvider
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ParticipantAssociation.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ParticipantAssociation.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ParticipantAssociation.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ParticipantAssociation.gif"));
 		}
 	}
 
@@ -174,8 +157,7 @@ public class ParticipantAssociationItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

@@ -66,8 +66,7 @@ public interface Bpmn2Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Bpmn2Package eINSTANCE = org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl
-			.init();
+	Bpmn2Package eINSTANCE = org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.bpmn2.impl.BaseElementImpl <em>Base Element</em>}' class.
@@ -116,13 +115,22 @@ public interface Bpmn2Package extends EPackage {
 	int BASE_ELEMENT__DOCUMENTATION = 3;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASE_ELEMENT__DESCRIPTION = 4;
+
+	/**
 	 * The number of structural features of the '<em>Base Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BASE_ELEMENT_FEATURE_COUNT = 4;
+	int BASE_ELEMENT_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.bpmn2.impl.RootElementImpl <em>Root Element</em>}' class.
@@ -169,6 +177,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int ROOT_ELEMENT__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOT_ELEMENT__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The number of structural features of the '<em>Root Element</em>' class.
@@ -224,6 +241,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int INTERFACE__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -473,6 +499,15 @@ public interface Bpmn2Package extends EPackage {
 	int DOCUMENTATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -544,6 +579,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int OPERATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -646,6 +690,15 @@ public interface Bpmn2Package extends EPackage {
 	int MESSAGE__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -717,6 +770,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int ITEM_DEFINITION__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM_DEFINITION__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Item Kind</b></em>' attribute.
@@ -865,6 +927,15 @@ public interface Bpmn2Package extends EPackage {
 	int ERROR__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Structure Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -947,6 +1018,15 @@ public interface Bpmn2Package extends EPackage {
 	int END_POINT__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_POINT__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The number of structural features of the '<em>End Point</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1002,6 +1082,15 @@ public interface Bpmn2Package extends EPackage {
 	int AUDITING__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUDITING__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The number of structural features of the '<em>Auditing</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1055,6 +1144,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int CALLABLE_ELEMENT__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLABLE_ELEMENT__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1146,6 +1244,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int GLOBAL_TASK__DOCUMENTATION = CALLABLE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_TASK__DESCRIPTION = CALLABLE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1248,6 +1355,15 @@ public interface Bpmn2Package extends EPackage {
 	int INPUT_OUTPUT_SPECIFICATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_OUTPUT_SPECIFICATION__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Input Sets</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1337,6 +1453,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int INPUT_SET__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_SET__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1439,6 +1564,15 @@ public interface Bpmn2Package extends EPackage {
 	int ITEM_AWARE_ELEMENT__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM_AWARE_ELEMENT__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Item Subject Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1510,6 +1644,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int DATA_INPUT__DOCUMENTATION = ITEM_AWARE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_INPUT__DESCRIPTION = ITEM_AWARE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Item Subject Ref</b></em>' reference.
@@ -1630,6 +1773,15 @@ public interface Bpmn2Package extends EPackage {
 	int DATA_STATE__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_STATE__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1692,6 +1844,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int OUTPUT_SET__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_SET__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Data Output Refs</b></em>' reference list.
@@ -1792,6 +1953,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int DATA_OUTPUT__DOCUMENTATION = ITEM_AWARE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_OUTPUT__DESCRIPTION = ITEM_AWARE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Item Subject Ref</b></em>' reference.
@@ -1967,6 +2137,15 @@ public interface Bpmn2Package extends EPackage {
 	int RESOURCE_ROLE__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_ROLE__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Resource Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2058,6 +2237,15 @@ public interface Bpmn2Package extends EPackage {
 	int RESOURCE__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2129,6 +2317,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE_PARAMETER__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_PARAMETER__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2259,6 +2456,15 @@ public interface Bpmn2Package extends EPackage {
 	int EXPRESSION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The number of structural features of the '<em>Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2351,6 +2557,15 @@ public interface Bpmn2Package extends EPackage {
 	int MONITORING__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONITORING__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The number of structural features of the '<em>Monitoring</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2404,6 +2619,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int PERFORMER__DOCUMENTATION = RESOURCE_ROLE__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMER__DESCRIPTION = RESOURCE_ROLE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Resource Ref</b></em>' reference.
@@ -2495,6 +2719,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int PROCESS__DOCUMENTATION = CALLABLE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__DESCRIPTION = CALLABLE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2650,13 +2883,31 @@ public interface Bpmn2Package extends EPackage {
 	int PROCESS__CORRELATION_SUBSCRIPTIONS = CALLABLE_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
+	 * The feature id for the '<em><b>Decomposed By</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__DECOMPOSED_BY = CALLABLE_ELEMENT_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Decomposes</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__DECOMPOSES = CALLABLE_ELEMENT_FEATURE_COUNT + 14;
+
+	/**
 	 * The number of structural features of the '<em>Process</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_FEATURE_COUNT = CALLABLE_ELEMENT_FEATURE_COUNT + 13;
+	int PROCESS_FEATURE_COUNT = CALLABLE_ELEMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.bpmn2.impl.FlowElementsContainerImpl <em>Flow Elements Container</em>}' class.
@@ -2703,6 +2954,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int FLOW_ELEMENTS_CONTAINER__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_ELEMENTS_CONTAINER__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Flow Elements</b></em>' containment reference list.
@@ -2776,6 +3036,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int FLOW_ELEMENT__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_ELEMENT__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2869,6 +3138,15 @@ public interface Bpmn2Package extends EPackage {
 	int CATEGORY_VALUE__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CATEGORY_VALUE__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2942,6 +3220,15 @@ public interface Bpmn2Package extends EPackage {
 	int LANE_SET__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANE_SET__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Lanes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3013,6 +3300,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int LANE__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANE__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3113,6 +3409,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int FLOW_NODE__DOCUMENTATION = FLOW_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_NODE__DESCRIPTION = FLOW_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3231,6 +3536,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int SEQUENCE_FLOW__DOCUMENTATION = FLOW_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEQUENCE_FLOW__DESCRIPTION = FLOW_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3360,6 +3674,15 @@ public interface Bpmn2Package extends EPackage {
 	int PROPERTY__DOCUMENTATION = ITEM_AWARE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY__DESCRIPTION = ITEM_AWARE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Item Subject Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3440,6 +3763,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int COLLABORATION__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLABORATION__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3603,6 +3935,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int CHOREOGRAPHY__DOCUMENTATION = COLLABORATION__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOREOGRAPHY__DESCRIPTION = COLLABORATION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3786,6 +4127,15 @@ public interface Bpmn2Package extends EPackage {
 	int ARTIFACT__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARTIFACT__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The number of structural features of the '<em>Artifact</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3839,6 +4189,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int PARTICIPANT_ASSOCIATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARTICIPANT_ASSOCIATION__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Inner Participant Ref</b></em>' reference.
@@ -3912,6 +4271,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int PARTICIPANT__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARTICIPANT__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
@@ -4069,6 +4437,15 @@ public interface Bpmn2Package extends EPackage {
 	int CONVERSATION_LINK__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVERSATION_LINK__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Source Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4197,6 +4574,15 @@ public interface Bpmn2Package extends EPackage {
 	int MESSAGE_FLOW_ASSOCIATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_FLOW_ASSOCIATION__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Inner Message Flow Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4268,6 +4654,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int MESSAGE_FLOW__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_FLOW__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4361,6 +4756,15 @@ public interface Bpmn2Package extends EPackage {
 	int CONVERSATION_ASSOCIATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVERSATION_ASSOCIATION__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Inner Conversation Node Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4432,6 +4836,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int CONVERSATION_NODE__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVERSATION_NODE__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
@@ -4543,6 +4956,15 @@ public interface Bpmn2Package extends EPackage {
 	int CORRELATION_KEY__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORRELATION_KEY__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Correlation Property Ref</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4614,6 +5036,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int CORRELATION_PROPERTY__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORRELATION_PROPERTY__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Correlation Property Retrieval Expression</b></em>' containment reference list.
@@ -4698,6 +5129,15 @@ public interface Bpmn2Package extends EPackage {
 	int CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Message Path</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4769,6 +5209,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int FORMAL_EXPRESSION__DOCUMENTATION = EXPRESSION__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMAL_EXPRESSION__DESCRIPTION = EXPRESSION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Language</b></em>' attribute.
@@ -4853,6 +5302,15 @@ public interface Bpmn2Package extends EPackage {
 	int CORRELATION_SUBSCRIPTION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORRELATION_SUBSCRIPTION__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Correlation Key Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4926,6 +5384,15 @@ public interface Bpmn2Package extends EPackage {
 	int CORRELATION_PROPERTY_BINDING__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORRELATION_PROPERTY_BINDING__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Data Path</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4997,6 +5464,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int GLOBAL_MANUAL_TASK__DOCUMENTATION = GLOBAL_TASK__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_MANUAL_TASK__DESCRIPTION = GLOBAL_TASK__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5097,6 +5573,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int ACTIVITY__DOCUMENTATION = FLOW_NODE__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__DESCRIPTION = FLOW_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5314,6 +5799,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int TASK__DOCUMENTATION = ACTIVITY__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__DESCRIPTION = ACTIVITY__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5551,6 +6045,15 @@ public interface Bpmn2Package extends EPackage {
 	int MANUAL_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANUAL_TASK__DESCRIPTION = TASK__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5786,6 +6289,15 @@ public interface Bpmn2Package extends EPackage {
 	int LOOP_CHARACTERISTICS__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_CHARACTERISTICS__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The number of structural features of the '<em>Loop Characteristics</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5839,6 +6351,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int EVENT__DOCUMENTATION = FLOW_NODE__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT__DESCRIPTION = FLOW_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5984,6 +6505,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int CATCH_EVENT__DOCUMENTATION = EVENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CATCH_EVENT__DESCRIPTION = EVENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6183,6 +6713,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int BOUNDARY_EVENT__DOCUMENTATION = CATCH_EVENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDARY_EVENT__DESCRIPTION = CATCH_EVENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6402,6 +6941,15 @@ public interface Bpmn2Package extends EPackage {
 	int EVENT_DEFINITION__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_DEFINITION__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The number of structural features of the '<em>Event Definition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6455,6 +7003,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int DATA_ASSOCIATION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ASSOCIATION__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Transformation</b></em>' containment reference.
@@ -6548,6 +7105,15 @@ public interface Bpmn2Package extends EPackage {
 	int DATA_OUTPUT_ASSOCIATION__DOCUMENTATION = DATA_ASSOCIATION__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_OUTPUT_ASSOCIATION__DESCRIPTION = DATA_ASSOCIATION__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Transformation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6639,6 +7205,15 @@ public interface Bpmn2Package extends EPackage {
 	int ASSIGNMENT__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSIGNMENT__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>From</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6710,6 +7285,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int DATA_INPUT_ASSOCIATION__DOCUMENTATION = DATA_ASSOCIATION__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_INPUT_ASSOCIATION__DESCRIPTION = DATA_ASSOCIATION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Transformation</b></em>' containment reference.
@@ -6801,6 +7385,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int USER_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_TASK__DESCRIPTION = TASK__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7056,6 +7649,15 @@ public interface Bpmn2Package extends EPackage {
 	int RENDERING__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RENDERING__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The number of structural features of the '<em>Rendering</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7109,6 +7711,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int HUMAN_PERFORMER__DOCUMENTATION = PERFORMER__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HUMAN_PERFORMER__DESCRIPTION = PERFORMER__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Resource Ref</b></em>' reference.
@@ -7202,6 +7813,15 @@ public interface Bpmn2Package extends EPackage {
 	int POTENTIAL_OWNER__DOCUMENTATION = HUMAN_PERFORMER__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIAL_OWNER__DESCRIPTION = HUMAN_PERFORMER__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Resource Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7291,6 +7911,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int GLOBAL_USER_TASK__DOCUMENTATION = GLOBAL_TASK__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_USER_TASK__DESCRIPTION = GLOBAL_TASK__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7409,6 +8038,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int GATEWAY__DOCUMENTATION = FLOW_NODE__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATEWAY__DESCRIPTION = FLOW_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7536,6 +8174,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int EVENT_BASED_GATEWAY__DOCUMENTATION = GATEWAY__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_BASED_GATEWAY__DESCRIPTION = GATEWAY__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7683,6 +8330,15 @@ public interface Bpmn2Package extends EPackage {
 	int COMPLEX_GATEWAY__DOCUMENTATION = GATEWAY__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLEX_GATEWAY__DESCRIPTION = GATEWAY__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7828,6 +8484,15 @@ public interface Bpmn2Package extends EPackage {
 	int EXCLUSIVE_GATEWAY__DOCUMENTATION = GATEWAY__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCLUSIVE_GATEWAY__DESCRIPTION = GATEWAY__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7962,6 +8627,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int INCLUSIVE_GATEWAY__DOCUMENTATION = GATEWAY__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INCLUSIVE_GATEWAY__DESCRIPTION = GATEWAY__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8100,6 +8774,15 @@ public interface Bpmn2Package extends EPackage {
 	int PARALLEL_GATEWAY__DOCUMENTATION = GATEWAY__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARALLEL_GATEWAY__DESCRIPTION = GATEWAY__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8225,6 +8908,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int RELATIONSHIP__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -8362,6 +9054,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int INTERMEDIATE_CATCH_EVENT__DOCUMENTATION = CATCH_EVENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERMEDIATE_CATCH_EVENT__DESCRIPTION = CATCH_EVENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8563,6 +9264,15 @@ public interface Bpmn2Package extends EPackage {
 	int THROW_EVENT__DOCUMENTATION = EVENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THROW_EVENT__DESCRIPTION = EVENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8751,6 +9461,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int INTERMEDIATE_THROW_EVENT__DOCUMENTATION = THROW_EVENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERMEDIATE_THROW_EVENT__DESCRIPTION = THROW_EVENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8943,6 +9662,15 @@ public interface Bpmn2Package extends EPackage {
 	int END_EVENT__DOCUMENTATION = THROW_EVENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_EVENT__DESCRIPTION = THROW_EVENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9131,6 +9859,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int START_EVENT__DOCUMENTATION = CATCH_EVENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_EVENT__DESCRIPTION = CATCH_EVENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9341,6 +10078,15 @@ public interface Bpmn2Package extends EPackage {
 	int CANCEL_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANCEL_EVENT_DEFINITION__DESCRIPTION = EVENT_DEFINITION__DESCRIPTION;
+
+	/**
 	 * The number of structural features of the '<em>Cancel Event Definition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9394,6 +10140,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int ERROR_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERROR_EVENT_DEFINITION__DESCRIPTION = EVENT_DEFINITION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Error Ref</b></em>' reference.
@@ -9460,6 +10215,15 @@ public interface Bpmn2Package extends EPackage {
 	int TERMINATE_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TERMINATE_EVENT_DEFINITION__DESCRIPTION = EVENT_DEFINITION__DESCRIPTION;
+
+	/**
 	 * The number of structural features of the '<em>Terminate Event Definition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9513,6 +10277,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int ESCALATION_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCALATION_EVENT_DEFINITION__DESCRIPTION = EVENT_DEFINITION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Escalation Ref</b></em>' reference.
@@ -9634,6 +10407,15 @@ public interface Bpmn2Package extends EPackage {
 	int COMPENSATE_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPENSATE_EVENT_DEFINITION__DESCRIPTION = EVENT_DEFINITION__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Wait For Completion</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9705,6 +10487,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int TIMER_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIMER_EVENT_DEFINITION__DESCRIPTION = EVENT_DEFINITION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Time Date</b></em>' containment reference.
@@ -9789,6 +10580,15 @@ public interface Bpmn2Package extends EPackage {
 	int LINK_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_EVENT_DEFINITION__DESCRIPTION = EVENT_DEFINITION__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9871,6 +10671,15 @@ public interface Bpmn2Package extends EPackage {
 	int MESSAGE_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_EVENT_DEFINITION__DESCRIPTION = EVENT_DEFINITION__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Message Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9944,6 +10753,15 @@ public interface Bpmn2Package extends EPackage {
 	int CONDITIONAL_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITIONAL_EVENT_DEFINITION__DESCRIPTION = EVENT_DEFINITION__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10008,6 +10826,15 @@ public interface Bpmn2Package extends EPackage {
 	int SIGNAL_EVENT_DEFINITION__DOCUMENTATION = EVENT_DEFINITION__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_EVENT_DEFINITION__DESCRIPTION = EVENT_DEFINITION__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Signal Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10070,6 +10897,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int SIGNAL__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Structure Ref</b></em>' reference.
@@ -10143,6 +10979,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int IMPLICIT_THROW_EVENT__DOCUMENTATION = THROW_EVENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICIT_THROW_EVENT__DESCRIPTION = THROW_EVENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -10335,6 +11180,15 @@ public interface Bpmn2Package extends EPackage {
 	int DATA_OBJECT__DOCUMENTATION = FLOW_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_OBJECT__DESCRIPTION = FLOW_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10453,6 +11307,15 @@ public interface Bpmn2Package extends EPackage {
 	int DATA_STORE__DOCUMENTATION = ITEM_AWARE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_STORE__DESCRIPTION = ITEM_AWARE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Item Subject Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10551,6 +11414,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int DATA_STORE_REFERENCE__DOCUMENTATION = FLOW_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_STORE_REFERENCE__DESCRIPTION = FLOW_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -10671,6 +11543,15 @@ public interface Bpmn2Package extends EPackage {
 	int DATA_OBJECT_REFERENCE__DOCUMENTATION = FLOW_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_OBJECT_REFERENCE__DESCRIPTION = FLOW_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10787,6 +11668,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int CALL_CONVERSATION__DOCUMENTATION = CONVERSATION_NODE__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_CONVERSATION__DESCRIPTION = CONVERSATION_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
@@ -10916,6 +11806,15 @@ public interface Bpmn2Package extends EPackage {
 	int CONVERSATION__DOCUMENTATION = CONVERSATION_NODE__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVERSATION__DESCRIPTION = CONVERSATION_NODE__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11023,6 +11922,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int SUB_CONVERSATION__DOCUMENTATION = CONVERSATION_NODE__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_CONVERSATION__DESCRIPTION = CONVERSATION_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
@@ -11141,6 +12049,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int GLOBAL_CONVERSATION__DOCUMENTATION = COLLABORATION__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_CONVERSATION__DESCRIPTION = COLLABORATION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -11306,6 +12223,15 @@ public interface Bpmn2Package extends EPackage {
 	int PARTNER_ENTITY__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARTNER_ENTITY__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11379,6 +12305,15 @@ public interface Bpmn2Package extends EPackage {
 	int PARTNER_ROLE__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARTNER_ROLE__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11450,6 +12385,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int CHOREOGRAPHY_ACTIVITY__DOCUMENTATION = FLOW_NODE__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOREOGRAPHY_ACTIVITY__DESCRIPTION = FLOW_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -11604,6 +12548,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int CALL_CHOREOGRAPHY__DOCUMENTATION = CHOREOGRAPHY_ACTIVITY__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_CHOREOGRAPHY__DESCRIPTION = CHOREOGRAPHY_ACTIVITY__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -11776,6 +12729,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int SUB_CHOREOGRAPHY__DOCUMENTATION = CHOREOGRAPHY_ACTIVITY__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_CHOREOGRAPHY__DESCRIPTION = CHOREOGRAPHY_ACTIVITY__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -11959,6 +12921,15 @@ public interface Bpmn2Package extends EPackage {
 	int CHOREOGRAPHY_TASK__DOCUMENTATION = CHOREOGRAPHY_ACTIVITY__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOREOGRAPHY_TASK__DESCRIPTION = CHOREOGRAPHY_ACTIVITY__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12120,6 +13091,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int GLOBAL_CHOREOGRAPHY_TASK__DOCUMENTATION = CHOREOGRAPHY__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_CHOREOGRAPHY_TASK__DESCRIPTION = CHOREOGRAPHY__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -12312,6 +13292,15 @@ public interface Bpmn2Package extends EPackage {
 	int TEXT_ANNOTATION__DOCUMENTATION = ARTIFACT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_ANNOTATION__DESCRIPTION = ARTIFACT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12385,6 +13374,15 @@ public interface Bpmn2Package extends EPackage {
 	int GROUP__DOCUMENTATION = ARTIFACT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__DESCRIPTION = ARTIFACT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Category Value Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12447,6 +13445,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int ASSOCIATION__DOCUMENTATION = ARTIFACT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__DESCRIPTION = ARTIFACT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Association Direction</b></em>' attribute.
@@ -12531,6 +13538,15 @@ public interface Bpmn2Package extends EPackage {
 	int CATEGORY__DOCUMENTATION = ROOT_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CATEGORY__DESCRIPTION = ROOT_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Category Value</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12602,6 +13618,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int SERVICE_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_TASK__DESCRIPTION = TASK__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -12857,6 +13882,15 @@ public interface Bpmn2Package extends EPackage {
 	int SUB_PROCESS__DOCUMENTATION = ACTIVITY__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_PROCESS__DESCRIPTION = ACTIVITY__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13110,6 +14144,15 @@ public interface Bpmn2Package extends EPackage {
 	int MULTI_INSTANCE_LOOP_CHARACTERISTICS__DOCUMENTATION = LOOP_CHARACTERISTICS__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_INSTANCE_LOOP_CHARACTERISTICS__DESCRIPTION = LOOP_CHARACTERISTICS__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Is Sequential</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13264,6 +14307,15 @@ public interface Bpmn2Package extends EPackage {
 	int COMPLEX_BEHAVIOR_DEFINITION__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLEX_BEHAVIOR_DEFINITION__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13335,6 +14387,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int STANDARD_LOOP_CHARACTERISTICS__DOCUMENTATION = LOOP_CHARACTERISTICS__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD_LOOP_CHARACTERISTICS__DESCRIPTION = LOOP_CHARACTERISTICS__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Test Before</b></em>' attribute.
@@ -13417,6 +14478,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int CALL_ACTIVITY__DOCUMENTATION = ACTIVITY__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_ACTIVITY__DESCRIPTION = ACTIVITY__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -13643,6 +14713,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int SEND_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_TASK__DESCRIPTION = TASK__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -13905,6 +14984,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int RECEIVE_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECEIVE_TASK__DESCRIPTION = TASK__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -14178,6 +15266,15 @@ public interface Bpmn2Package extends EPackage {
 	int SCRIPT_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRIPT_TASK__DESCRIPTION = TASK__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14431,6 +15528,15 @@ public interface Bpmn2Package extends EPackage {
 	int BUSINESS_RULE_TASK__DOCUMENTATION = TASK__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUSINESS_RULE_TASK__DESCRIPTION = TASK__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14673,6 +15779,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int AD_HOC_SUB_PROCESS__DOCUMENTATION = SUB_PROCESS__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AD_HOC_SUB_PROCESS__DESCRIPTION = SUB_PROCESS__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -14955,6 +16070,15 @@ public interface Bpmn2Package extends EPackage {
 	int TRANSACTION__DOCUMENTATION = SUB_PROCESS__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION__DESCRIPTION = SUB_PROCESS__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15226,6 +16350,15 @@ public interface Bpmn2Package extends EPackage {
 	int GLOBAL_SCRIPT_TASK__DOCUMENTATION = GLOBAL_TASK__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_SCRIPT_TASK__DESCRIPTION = GLOBAL_TASK__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15344,6 +16477,15 @@ public interface Bpmn2Package extends EPackage {
 	int GLOBAL_BUSINESS_RULE_TASK__DOCUMENTATION = GLOBAL_TASK__DOCUMENTATION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_BUSINESS_RULE_TASK__DESCRIPTION = GLOBAL_TASK__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15451,6 +16593,15 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int DEFINITIONS__DOCUMENTATION = BASE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFINITIONS__DESCRIPTION = BASE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -15756,6 +16907,17 @@ public interface Bpmn2Package extends EPackage {
 	 * @generated
 	 */
 	EReference getBaseElement_Documentation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.bpmn2.BaseElement#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see org.obeonetwork.dsl.bpmn2.BaseElement#getDescription()
+	 * @see #getBaseElement()
+	 * @generated
+	 */
+	EAttribute getBaseElement_Description();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.bpmn2.ExtensionDefinition <em>Extension Definition</em>}'.
@@ -17079,6 +18241,28 @@ public interface Bpmn2Package extends EPackage {
 	 * @generated
 	 */
 	EReference getProcess_CorrelationSubscriptions();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.bpmn2.Process#getDecomposedBy <em>Decomposed By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Decomposed By</em>'.
+	 * @see org.obeonetwork.dsl.bpmn2.Process#getDecomposedBy()
+	 * @see #getProcess()
+	 * @generated
+	 */
+	EReference getProcess_DecomposedBy();
+
+	/**
+	 * Returns the meta object for the container reference '{@link org.obeonetwork.dsl.bpmn2.Process#getDecomposes <em>Decomposes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Decomposes</em>'.
+	 * @see org.obeonetwork.dsl.bpmn2.Process#getDecomposes()
+	 * @see #getProcess()
+	 * @generated
+	 */
+	EReference getProcess_Decomposes();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.bpmn2.FlowElementsContainer <em>Flow Elements Container</em>}'.
@@ -20750,8 +21934,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INTERFACE__IMPLEMENTATION_REF = eINSTANCE
-				.getInterface_ImplementationRef();
+		EReference INTERFACE__IMPLEMENTATION_REF = eINSTANCE.getInterface_ImplementationRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.RootElementImpl <em>Root Element</em>}' class.
@@ -20787,8 +21970,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BASE_ELEMENT__EXTENSION_DEFINITIONS = eINSTANCE
-				.getBaseElement_ExtensionDefinitions();
+		EReference BASE_ELEMENT__EXTENSION_DEFINITIONS = eINSTANCE.getBaseElement_ExtensionDefinitions();
 
 		/**
 		 * The meta object literal for the '<em><b>Extension Values</b></em>' containment reference list feature.
@@ -20796,8 +21978,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BASE_ELEMENT__EXTENSION_VALUES = eINSTANCE
-				.getBaseElement_ExtensionValues();
+		EReference BASE_ELEMENT__EXTENSION_VALUES = eINSTANCE.getBaseElement_ExtensionValues();
 
 		/**
 		 * The meta object literal for the '<em><b>Documentation</b></em>' containment reference list feature.
@@ -20805,8 +21986,15 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BASE_ELEMENT__DOCUMENTATION = eINSTANCE
-				.getBaseElement_Documentation();
+		EReference BASE_ELEMENT__DOCUMENTATION = eINSTANCE.getBaseElement_Documentation();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BASE_ELEMENT__DESCRIPTION = eINSTANCE.getBaseElement_Description();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ExtensionDefinitionImpl <em>Extension Definition</em>}' class.
@@ -20824,8 +22012,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXTENSION_DEFINITION__NAME = eINSTANCE
-				.getExtensionDefinition_Name();
+		EAttribute EXTENSION_DEFINITION__NAME = eINSTANCE.getExtensionDefinition_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Extension Attribute Definitions</b></em>' containment reference list feature.
@@ -20842,8 +22029,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXTENSION_DEFINITION__ID = eINSTANCE
-				.getExtensionDefinition_Id();
+		EAttribute EXTENSION_DEFINITION__ID = eINSTANCE.getExtensionDefinition_Id();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ExtensionAttributeDefinitionImpl <em>Extension Attribute Definition</em>}' class.
@@ -20853,8 +22039,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getExtensionAttributeDefinition()
 		 * @generated
 		 */
-		EClass EXTENSION_ATTRIBUTE_DEFINITION = eINSTANCE
-				.getExtensionAttributeDefinition();
+		EClass EXTENSION_ATTRIBUTE_DEFINITION = eINSTANCE.getExtensionAttributeDefinition();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -20862,8 +22047,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXTENSION_ATTRIBUTE_DEFINITION__NAME = eINSTANCE
-				.getExtensionAttributeDefinition_Name();
+		EAttribute EXTENSION_ATTRIBUTE_DEFINITION__NAME = eINSTANCE.getExtensionAttributeDefinition_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -20871,8 +22055,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXTENSION_ATTRIBUTE_DEFINITION__TYPE = eINSTANCE
-				.getExtensionAttributeDefinition_Type();
+		EAttribute EXTENSION_ATTRIBUTE_DEFINITION__TYPE = eINSTANCE.getExtensionAttributeDefinition_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Reference</b></em>' attribute feature.
@@ -20898,8 +22081,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXTENSION_ATTRIBUTE_DEFINITION__ID = eINSTANCE
-				.getExtensionAttributeDefinition_Id();
+		EAttribute EXTENSION_ATTRIBUTE_DEFINITION__ID = eINSTANCE.getExtensionAttributeDefinition_Id();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ExtensionAttributeValueImpl <em>Extension Attribute Value</em>}' class.
@@ -20909,8 +22091,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getExtensionAttributeValue()
 		 * @generated
 		 */
-		EClass EXTENSION_ATTRIBUTE_VALUE = eINSTANCE
-				.getExtensionAttributeValue();
+		EClass EXTENSION_ATTRIBUTE_VALUE = eINSTANCE.getExtensionAttributeValue();
 
 		/**
 		 * The meta object literal for the '<em><b>Value Ref</b></em>' reference feature.
@@ -20918,8 +22099,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXTENSION_ATTRIBUTE_VALUE__VALUE_REF = eINSTANCE
-				.getExtensionAttributeValue_ValueRef();
+		EReference EXTENSION_ATTRIBUTE_VALUE__VALUE_REF = eINSTANCE.getExtensionAttributeValue_ValueRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
@@ -20927,8 +22107,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXTENSION_ATTRIBUTE_VALUE__VALUE = eINSTANCE
-				.getExtensionAttributeValue_Value();
+		EReference EXTENSION_ATTRIBUTE_VALUE__VALUE = eINSTANCE.getExtensionAttributeValue_Value();
 
 		/**
 		 * The meta object literal for the '<em><b>Extension Attribute Definition</b></em>' reference feature.
@@ -20945,8 +22124,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXTENSION_ATTRIBUTE_VALUE__ID = eINSTANCE
-				.getExtensionAttributeValue_Id();
+		EAttribute EXTENSION_ATTRIBUTE_VALUE__ID = eINSTANCE.getExtensionAttributeValue_Id();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.DocumentationImpl <em>Documentation</em>}' class.
@@ -20972,8 +22150,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DOCUMENTATION__TEXT_FORMAT = eINSTANCE
-				.getDocumentation_TextFormat();
+		EAttribute DOCUMENTATION__TEXT_FORMAT = eINSTANCE.getDocumentation_TextFormat();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.OperationImpl <em>Operation</em>}' class.
@@ -20999,8 +22176,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OPERATION__IN_MESSAGE_REF = eINSTANCE
-				.getOperation_InMessageRef();
+		EReference OPERATION__IN_MESSAGE_REF = eINSTANCE.getOperation_InMessageRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Out Message Ref</b></em>' reference feature.
@@ -21008,8 +22184,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OPERATION__OUT_MESSAGE_REF = eINSTANCE
-				.getOperation_OutMessageRef();
+		EReference OPERATION__OUT_MESSAGE_REF = eINSTANCE.getOperation_OutMessageRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Error Refs</b></em>' reference list feature.
@@ -21025,8 +22200,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OPERATION__IMPLEMENTATION_REF = eINSTANCE
-				.getOperation_ImplementationRef();
+		EReference OPERATION__IMPLEMENTATION_REF = eINSTANCE.getOperation_ImplementationRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.MessageImpl <em>Message</em>}' class.
@@ -21070,8 +22244,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ITEM_DEFINITION__ITEM_KIND = eINSTANCE
-				.getItemDefinition_ItemKind();
+		EAttribute ITEM_DEFINITION__ITEM_KIND = eINSTANCE.getItemDefinition_ItemKind();
 
 		/**
 		 * The meta object literal for the '<em><b>Structure Ref</b></em>' reference feature.
@@ -21079,8 +22252,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ITEM_DEFINITION__STRUCTURE_REF = eINSTANCE
-				.getItemDefinition_StructureRef();
+		EReference ITEM_DEFINITION__STRUCTURE_REF = eINSTANCE.getItemDefinition_StructureRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Collection</b></em>' attribute feature.
@@ -21088,8 +22260,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ITEM_DEFINITION__IS_COLLECTION = eINSTANCE
-				.getItemDefinition_IsCollection();
+		EAttribute ITEM_DEFINITION__IS_COLLECTION = eINSTANCE.getItemDefinition_IsCollection();
 
 		/**
 		 * The meta object literal for the '<em><b>Import</b></em>' reference feature.
@@ -21097,8 +22268,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ITEM_DEFINITION__IMPORT = eINSTANCE
-				.getItemDefinition_Import();
+		EReference ITEM_DEFINITION__IMPORT = eINSTANCE.getItemDefinition_Import();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ImportImpl <em>Import</em>}' class.
@@ -21238,8 +22408,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CALLABLE_ELEMENT__IO_SPECIFICATION = eINSTANCE
-				.getCallableElement_IoSpecification();
+		EReference CALLABLE_ELEMENT__IO_SPECIFICATION = eINSTANCE.getCallableElement_IoSpecification();
 
 		/**
 		 * The meta object literal for the '<em><b>Supported Interface Refs</b></em>' reference list feature.
@@ -21247,8 +22416,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS = eINSTANCE
-				.getCallableElement_SupportedInterfaceRefs();
+		EReference CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS = eINSTANCE.getCallableElement_SupportedInterfaceRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>Io Binding</b></em>' containment reference list feature.
@@ -21256,8 +22424,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CALLABLE_ELEMENT__IO_BINDING = eINSTANCE
-				.getCallableElement_IoBinding();
+		EReference CALLABLE_ELEMENT__IO_BINDING = eINSTANCE.getCallableElement_IoBinding();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.InputOutputSpecificationImpl <em>Input Output Specification</em>}' class.
@@ -21267,8 +22434,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getInputOutputSpecification()
 		 * @generated
 		 */
-		EClass INPUT_OUTPUT_SPECIFICATION = eINSTANCE
-				.getInputOutputSpecification();
+		EClass INPUT_OUTPUT_SPECIFICATION = eINSTANCE.getInputOutputSpecification();
 
 		/**
 		 * The meta object literal for the '<em><b>Input Sets</b></em>' containment reference list feature.
@@ -21276,8 +22442,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INPUT_OUTPUT_SPECIFICATION__INPUT_SETS = eINSTANCE
-				.getInputOutputSpecification_InputSets();
+		EReference INPUT_OUTPUT_SPECIFICATION__INPUT_SETS = eINSTANCE.getInputOutputSpecification_InputSets();
 
 		/**
 		 * The meta object literal for the '<em><b>Output Sets</b></em>' containment reference list feature.
@@ -21285,8 +22450,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS = eINSTANCE
-				.getInputOutputSpecification_OutputSets();
+		EReference INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS = eINSTANCE.getInputOutputSpecification_OutputSets();
 
 		/**
 		 * The meta object literal for the '<em><b>Data Inputs</b></em>' containment reference list feature.
@@ -21294,8 +22458,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS = eINSTANCE
-				.getInputOutputSpecification_DataInputs();
+		EReference INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS = eINSTANCE.getInputOutputSpecification_DataInputs();
 
 		/**
 		 * The meta object literal for the '<em><b>Data Outputs</b></em>' containment reference list feature.
@@ -21303,8 +22466,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS = eINSTANCE
-				.getInputOutputSpecification_DataOutputs();
+		EReference INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS = eINSTANCE.getInputOutputSpecification_DataOutputs();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.InputSetImpl <em>Input Set</em>}' class.
@@ -21330,8 +22492,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INPUT_SET__DATA_INPUT_REFS = eINSTANCE
-				.getInputSet_DataInputRefs();
+		EReference INPUT_SET__DATA_INPUT_REFS = eINSTANCE.getInputSet_DataInputRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>Optional Input Refs</b></em>' reference list feature.
@@ -21339,8 +22500,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INPUT_SET__OPTIONAL_INPUT_REFS = eINSTANCE
-				.getInputSet_OptionalInputRefs();
+		EReference INPUT_SET__OPTIONAL_INPUT_REFS = eINSTANCE.getInputSet_OptionalInputRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>While Executing Input Refs</b></em>' reference list feature.
@@ -21348,8 +22508,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INPUT_SET__WHILE_EXECUTING_INPUT_REFS = eINSTANCE
-				.getInputSet_WhileExecutingInputRefs();
+		EReference INPUT_SET__WHILE_EXECUTING_INPUT_REFS = eINSTANCE.getInputSet_WhileExecutingInputRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>Output Set Refs</b></em>' reference list feature.
@@ -21357,8 +22516,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INPUT_SET__OUTPUT_SET_REFS = eINSTANCE
-				.getInputSet_OutputSetRefs();
+		EReference INPUT_SET__OUTPUT_SET_REFS = eINSTANCE.getInputSet_OutputSetRefs();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.DataInputImpl <em>Data Input</em>}' class.
@@ -21384,8 +22542,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA_INPUT__IS_COLLECTION = eINSTANCE
-				.getDataInput_IsCollection();
+		EAttribute DATA_INPUT__IS_COLLECTION = eINSTANCE.getDataInput_IsCollection();
 
 		/**
 		 * The meta object literal for the '<em><b>Input Set With Optional</b></em>' reference list feature.
@@ -21393,8 +22550,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_INPUT__INPUT_SET_WITH_OPTIONAL = eINSTANCE
-				.getDataInput_InputSetWithOptional();
+		EReference DATA_INPUT__INPUT_SET_WITH_OPTIONAL = eINSTANCE.getDataInput_InputSetWithOptional();
 
 		/**
 		 * The meta object literal for the '<em><b>Input Set With While Executing</b></em>' reference list feature.
@@ -21402,8 +22558,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING = eINSTANCE
-				.getDataInput_InputSetWithWhileExecuting();
+		EReference DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING = eINSTANCE.getDataInput_InputSetWithWhileExecuting();
 
 		/**
 		 * The meta object literal for the '<em><b>Input Set Refs</b></em>' reference list feature.
@@ -21411,8 +22566,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_INPUT__INPUT_SET_REFS = eINSTANCE
-				.getDataInput_InputSetRefs();
+		EReference DATA_INPUT__INPUT_SET_REFS = eINSTANCE.getDataInput_InputSetRefs();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ItemAwareElementImpl <em>Item Aware Element</em>}' class.
@@ -21430,8 +22584,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF = eINSTANCE
-				.getItemAwareElement_ItemSubjectRef();
+		EReference ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF = eINSTANCE.getItemAwareElement_ItemSubjectRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Data State</b></em>' containment reference feature.
@@ -21439,8 +22592,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ITEM_AWARE_ELEMENT__DATA_STATE = eINSTANCE
-				.getItemAwareElement_DataState();
+		EReference ITEM_AWARE_ELEMENT__DATA_STATE = eINSTANCE.getItemAwareElement_DataState();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.DataStateImpl <em>Data State</em>}' class.
@@ -21476,8 +22628,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OUTPUT_SET__DATA_OUTPUT_REFS = eINSTANCE
-				.getOutputSet_DataOutputRefs();
+		EReference OUTPUT_SET__DATA_OUTPUT_REFS = eINSTANCE.getOutputSet_DataOutputRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>Optional Output Refs</b></em>' reference list feature.
@@ -21485,8 +22636,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OUTPUT_SET__OPTIONAL_OUTPUT_REFS = eINSTANCE
-				.getOutputSet_OptionalOutputRefs();
+		EReference OUTPUT_SET__OPTIONAL_OUTPUT_REFS = eINSTANCE.getOutputSet_OptionalOutputRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>While Executing Output Refs</b></em>' reference list feature.
@@ -21494,8 +22644,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS = eINSTANCE
-				.getOutputSet_WhileExecutingOutputRefs();
+		EReference OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS = eINSTANCE.getOutputSet_WhileExecutingOutputRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -21511,8 +22660,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OUTPUT_SET__INPUT_SET_REFS = eINSTANCE
-				.getOutputSet_InputSetRefs();
+		EReference OUTPUT_SET__INPUT_SET_REFS = eINSTANCE.getOutputSet_InputSetRefs();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.DataOutputImpl <em>Data Output</em>}' class.
@@ -21538,8 +22686,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA_OUTPUT__IS_COLLECTION = eINSTANCE
-				.getDataOutput_IsCollection();
+		EAttribute DATA_OUTPUT__IS_COLLECTION = eINSTANCE.getDataOutput_IsCollection();
 
 		/**
 		 * The meta object literal for the '<em><b>Output Set With Optional</b></em>' reference list feature.
@@ -21547,8 +22694,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_OUTPUT__OUTPUT_SET_WITH_OPTIONAL = eINSTANCE
-				.getDataOutput_OutputSetWithOptional();
+		EReference DATA_OUTPUT__OUTPUT_SET_WITH_OPTIONAL = eINSTANCE.getDataOutput_OutputSetWithOptional();
 
 		/**
 		 * The meta object literal for the '<em><b>Output Set With While Executing</b></em>' reference list feature.
@@ -21556,8 +22702,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_OUTPUT__OUTPUT_SET_WITH_WHILE_EXECUTING = eINSTANCE
-				.getDataOutput_OutputSetWithWhileExecuting();
+		EReference DATA_OUTPUT__OUTPUT_SET_WITH_WHILE_EXECUTING = eINSTANCE.getDataOutput_OutputSetWithWhileExecuting();
 
 		/**
 		 * The meta object literal for the '<em><b>Output Set Refs</b></em>' reference list feature.
@@ -21565,8 +22710,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_OUTPUT__OUTPUT_SET_REFS = eINSTANCE
-				.getDataOutput_OutputSetRefs();
+		EReference DATA_OUTPUT__OUTPUT_SET_REFS = eINSTANCE.getDataOutput_OutputSetRefs();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.InputOutputBindingImpl <em>Input Output Binding</em>}' class.
@@ -21584,8 +22728,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INPUT_OUTPUT_BINDING__INPUT_DATA_REF = eINSTANCE
-				.getInputOutputBinding_InputDataRef();
+		EReference INPUT_OUTPUT_BINDING__INPUT_DATA_REF = eINSTANCE.getInputOutputBinding_InputDataRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Output Data Ref</b></em>' reference feature.
@@ -21593,8 +22736,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF = eINSTANCE
-				.getInputOutputBinding_OutputDataRef();
+		EReference INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF = eINSTANCE.getInputOutputBinding_OutputDataRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Operation Ref</b></em>' reference feature.
@@ -21602,8 +22744,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INPUT_OUTPUT_BINDING__OPERATION_REF = eINSTANCE
-				.getInputOutputBinding_OperationRef();
+		EReference INPUT_OUTPUT_BINDING__OPERATION_REF = eINSTANCE.getInputOutputBinding_OperationRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -21611,8 +22752,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INPUT_OUTPUT_BINDING__ID = eINSTANCE
-				.getInputOutputBinding_Id();
+		EAttribute INPUT_OUTPUT_BINDING__ID = eINSTANCE.getInputOutputBinding_Id();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ResourceRoleImpl <em>Resource Role</em>}' class.
@@ -21630,8 +22770,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE_ROLE__RESOURCE_REF = eINSTANCE
-				.getResourceRole_ResourceRef();
+		EReference RESOURCE_ROLE__RESOURCE_REF = eINSTANCE.getResourceRole_ResourceRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Resource Parameter Bindings</b></em>' containment reference list feature.
@@ -21639,8 +22778,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS = eINSTANCE
-				.getResourceRole_ResourceParameterBindings();
+		EReference RESOURCE_ROLE__RESOURCE_PARAMETER_BINDINGS = eINSTANCE.getResourceRole_ResourceParameterBindings();
 
 		/**
 		 * The meta object literal for the '<em><b>Resource Assignment Expression</b></em>' containment reference feature.
@@ -21683,8 +22821,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE__RESOURCE_PARAMETERS = eINSTANCE
-				.getResource_ResourceParameters();
+		EReference RESOURCE__RESOURCE_PARAMETERS = eINSTANCE.getResource_ResourceParameters();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ResourceParameterImpl <em>Resource Parameter</em>}' class.
@@ -21702,8 +22839,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESOURCE_PARAMETER__NAME = eINSTANCE
-				.getResourceParameter_Name();
+		EAttribute RESOURCE_PARAMETER__NAME = eINSTANCE.getResourceParameter_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Required</b></em>' attribute feature.
@@ -21711,8 +22847,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESOURCE_PARAMETER__IS_REQUIRED = eINSTANCE
-				.getResourceParameter_IsRequired();
+		EAttribute RESOURCE_PARAMETER__IS_REQUIRED = eINSTANCE.getResourceParameter_IsRequired();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
@@ -21720,8 +22855,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE_PARAMETER__TYPE = eINSTANCE
-				.getResourceParameter_Type();
+		EReference RESOURCE_PARAMETER__TYPE = eINSTANCE.getResourceParameter_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ResourceParameterBindingImpl <em>Resource Parameter Binding</em>}' class.
@@ -21731,8 +22865,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getResourceParameterBinding()
 		 * @generated
 		 */
-		EClass RESOURCE_PARAMETER_BINDING = eINSTANCE
-				.getResourceParameterBinding();
+		EClass RESOURCE_PARAMETER_BINDING = eINSTANCE.getResourceParameterBinding();
 
 		/**
 		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
@@ -21740,8 +22873,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE_PARAMETER_BINDING__EXPRESSION = eINSTANCE
-				.getResourceParameterBinding_Expression();
+		EReference RESOURCE_PARAMETER_BINDING__EXPRESSION = eINSTANCE.getResourceParameterBinding_Expression();
 
 		/**
 		 * The meta object literal for the '<em><b>Parameter Ref</b></em>' reference feature.
@@ -21749,8 +22881,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE_PARAMETER_BINDING__PARAMETER_REF = eINSTANCE
-				.getResourceParameterBinding_ParameterRef();
+		EReference RESOURCE_PARAMETER_BINDING__PARAMETER_REF = eINSTANCE.getResourceParameterBinding_ParameterRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -21758,8 +22889,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESOURCE_PARAMETER_BINDING__ID = eINSTANCE
-				.getResourceParameterBinding_Id();
+		EAttribute RESOURCE_PARAMETER_BINDING__ID = eINSTANCE.getResourceParameterBinding_Id();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ExpressionImpl <em>Expression</em>}' class.
@@ -21779,8 +22909,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getResourceAssignmentExpression()
 		 * @generated
 		 */
-		EClass RESOURCE_ASSIGNMENT_EXPRESSION = eINSTANCE
-				.getResourceAssignmentExpression();
+		EClass RESOURCE_ASSIGNMENT_EXPRESSION = eINSTANCE.getResourceAssignmentExpression();
 
 		/**
 		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
@@ -21788,8 +22917,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION = eINSTANCE
-				.getResourceAssignmentExpression_Expression();
+		EReference RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION = eINSTANCE.getResourceAssignmentExpression_Expression();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -21797,8 +22925,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESOURCE_ASSIGNMENT_EXPRESSION__ID = eINSTANCE
-				.getResourceAssignmentExpression_Id();
+		EAttribute RESOURCE_ASSIGNMENT_EXPRESSION__ID = eINSTANCE.getResourceAssignmentExpression_Id();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.MonitoringImpl <em>Monitoring</em>}' class.
@@ -21884,8 +23011,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROCESS__DEFINITIONAL_COLLABORATION_REF = eINSTANCE
-				.getProcess_DefinitionalCollaborationRef();
+		EReference PROCESS__DEFINITIONAL_COLLABORATION_REF = eINSTANCE.getProcess_DefinitionalCollaborationRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Executable</b></em>' attribute feature.
@@ -21917,8 +23043,23 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROCESS__CORRELATION_SUBSCRIPTIONS = eINSTANCE
-				.getProcess_CorrelationSubscriptions();
+		EReference PROCESS__CORRELATION_SUBSCRIPTIONS = eINSTANCE.getProcess_CorrelationSubscriptions();
+
+		/**
+		 * The meta object literal for the '<em><b>Decomposed By</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESS__DECOMPOSED_BY = eINSTANCE.getProcess_DecomposedBy();
+
+		/**
+		 * The meta object literal for the '<em><b>Decomposes</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESS__DECOMPOSES = eINSTANCE.getProcess_Decomposes();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.FlowElementsContainerImpl <em>Flow Elements Container</em>}' class.
@@ -21936,8 +23077,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS = eINSTANCE
-				.getFlowElementsContainer_FlowElements();
+		EReference FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS = eINSTANCE.getFlowElementsContainer_FlowElements();
 
 		/**
 		 * The meta object literal for the '<em><b>Lane Sets</b></em>' containment reference list feature.
@@ -21945,8 +23085,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FLOW_ELEMENTS_CONTAINER__LANE_SETS = eINSTANCE
-				.getFlowElementsContainer_LaneSets();
+		EReference FLOW_ELEMENTS_CONTAINER__LANE_SETS = eINSTANCE.getFlowElementsContainer_LaneSets();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.FlowElementImpl <em>Flow Element</em>}' class.
@@ -21980,8 +23119,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FLOW_ELEMENT__MONITORING = eINSTANCE
-				.getFlowElement_Monitoring();
+		EReference FLOW_ELEMENT__MONITORING = eINSTANCE.getFlowElement_Monitoring();
 
 		/**
 		 * The meta object literal for the '<em><b>Category Value Ref</b></em>' reference list feature.
@@ -21989,8 +23127,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FLOW_ELEMENT__CATEGORY_VALUE_REF = eINSTANCE
-				.getFlowElement_CategoryValueRef();
+		EReference FLOW_ELEMENT__CATEGORY_VALUE_REF = eINSTANCE.getFlowElement_CategoryValueRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.CategoryValueImpl <em>Category Value</em>}' class.
@@ -22016,8 +23153,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS = eINSTANCE
-				.getCategoryValue_CategorizedFlowElements();
+		EReference CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS = eINSTANCE.getCategoryValue_CategorizedFlowElements();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.LaneSetImpl <em>Lane Set</em>}' class.
@@ -22077,8 +23213,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LANE__PARTITION_ELEMENT_REF = eINSTANCE
-				.getLane_PartitionElementRef();
+		EReference LANE__PARTITION_ELEMENT_REF = eINSTANCE.getLane_PartitionElementRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Flow Node Refs</b></em>' reference list feature.
@@ -22094,8 +23229,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LANE__PARTITION_ELEMENT = eINSTANCE
-				.getLane_PartitionElement();
+		EReference LANE__PARTITION_ELEMENT = eINSTANCE.getLane_PartitionElement();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.FlowNodeImpl <em>Flow Node</em>}' class.
@@ -22147,8 +23281,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SEQUENCE_FLOW__IS_IMMEDIATE = eINSTANCE
-				.getSequenceFlow_IsImmediate();
+		EAttribute SEQUENCE_FLOW__IS_IMMEDIATE = eINSTANCE.getSequenceFlow_IsImmediate();
 
 		/**
 		 * The meta object literal for the '<em><b>Condition Expression</b></em>' containment reference feature.
@@ -22156,8 +23289,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SEQUENCE_FLOW__CONDITION_EXPRESSION = eINSTANCE
-				.getSequenceFlow_ConditionExpression();
+		EReference SEQUENCE_FLOW__CONDITION_EXPRESSION = eINSTANCE.getSequenceFlow_ConditionExpression();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Ref</b></em>' reference feature.
@@ -22165,8 +23297,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SEQUENCE_FLOW__TARGET_REF = eINSTANCE
-				.getSequenceFlow_TargetRef();
+		EReference SEQUENCE_FLOW__TARGET_REF = eINSTANCE.getSequenceFlow_TargetRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Source Ref</b></em>' reference feature.
@@ -22174,8 +23305,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SEQUENCE_FLOW__SOURCE_REF = eINSTANCE
-				.getSequenceFlow_SourceRef();
+		EReference SEQUENCE_FLOW__SOURCE_REF = eINSTANCE.getSequenceFlow_SourceRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.PropertyImpl <em>Property</em>}' class.
@@ -22219,8 +23349,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COLLABORATION__IS_CLOSED = eINSTANCE
-				.getCollaboration_IsClosed();
+		EAttribute COLLABORATION__IS_CLOSED = eINSTANCE.getCollaboration_IsClosed();
 
 		/**
 		 * The meta object literal for the '<em><b>Choreography Ref</b></em>' reference list feature.
@@ -22228,8 +23357,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COLLABORATION__CHOREOGRAPHY_REF = eINSTANCE
-				.getCollaboration_ChoreographyRef();
+		EReference COLLABORATION__CHOREOGRAPHY_REF = eINSTANCE.getCollaboration_ChoreographyRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Artifacts</b></em>' containment reference list feature.
@@ -22237,8 +23365,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COLLABORATION__ARTIFACTS = eINSTANCE
-				.getCollaboration_Artifacts();
+		EReference COLLABORATION__ARTIFACTS = eINSTANCE.getCollaboration_Artifacts();
 
 		/**
 		 * The meta object literal for the '<em><b>Participant Associations</b></em>' containment reference list feature.
@@ -22246,8 +23373,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COLLABORATION__PARTICIPANT_ASSOCIATIONS = eINSTANCE
-				.getCollaboration_ParticipantAssociations();
+		EReference COLLABORATION__PARTICIPANT_ASSOCIATIONS = eINSTANCE.getCollaboration_ParticipantAssociations();
 
 		/**
 		 * The meta object literal for the '<em><b>Message Flow Associations</b></em>' containment reference list feature.
@@ -22255,8 +23381,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS = eINSTANCE
-				.getCollaboration_MessageFlowAssociations();
+		EReference COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS = eINSTANCE.getCollaboration_MessageFlowAssociations();
 
 		/**
 		 * The meta object literal for the '<em><b>Conversation Associations</b></em>' containment reference feature.
@@ -22264,8 +23389,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COLLABORATION__CONVERSATION_ASSOCIATIONS = eINSTANCE
-				.getCollaboration_ConversationAssociations();
+		EReference COLLABORATION__CONVERSATION_ASSOCIATIONS = eINSTANCE.getCollaboration_ConversationAssociations();
 
 		/**
 		 * The meta object literal for the '<em><b>Participants</b></em>' containment reference list feature.
@@ -22273,8 +23397,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COLLABORATION__PARTICIPANTS = eINSTANCE
-				.getCollaboration_Participants();
+		EReference COLLABORATION__PARTICIPANTS = eINSTANCE.getCollaboration_Participants();
 
 		/**
 		 * The meta object literal for the '<em><b>Message Flows</b></em>' containment reference list feature.
@@ -22282,8 +23405,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COLLABORATION__MESSAGE_FLOWS = eINSTANCE
-				.getCollaboration_MessageFlows();
+		EReference COLLABORATION__MESSAGE_FLOWS = eINSTANCE.getCollaboration_MessageFlows();
 
 		/**
 		 * The meta object literal for the '<em><b>Correlation Keys</b></em>' containment reference list feature.
@@ -22291,8 +23413,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COLLABORATION__CORRELATION_KEYS = eINSTANCE
-				.getCollaboration_CorrelationKeys();
+		EReference COLLABORATION__CORRELATION_KEYS = eINSTANCE.getCollaboration_CorrelationKeys();
 
 		/**
 		 * The meta object literal for the '<em><b>Conversations</b></em>' containment reference list feature.
@@ -22300,8 +23421,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COLLABORATION__CONVERSATIONS = eINSTANCE
-				.getCollaboration_Conversations();
+		EReference COLLABORATION__CONVERSATIONS = eINSTANCE.getCollaboration_Conversations();
 
 		/**
 		 * The meta object literal for the '<em><b>Conversation Links</b></em>' containment reference list feature.
@@ -22309,8 +23429,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COLLABORATION__CONVERSATION_LINKS = eINSTANCE
-				.getCollaboration_ConversationLinks();
+		EReference COLLABORATION__CONVERSATION_LINKS = eINSTANCE.getCollaboration_ConversationLinks();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ChoreographyImpl <em>Choreography</em>}' class.
@@ -22384,8 +23503,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PARTICIPANT__INTERFACE_REFS = eINSTANCE
-				.getParticipant_InterfaceRefs();
+		EReference PARTICIPANT__INTERFACE_REFS = eINSTANCE.getParticipant_InterfaceRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>Participant Multiplicity</b></em>' containment reference feature.
@@ -22393,8 +23511,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PARTICIPANT__PARTICIPANT_MULTIPLICITY = eINSTANCE
-				.getParticipant_ParticipantMultiplicity();
+		EReference PARTICIPANT__PARTICIPANT_MULTIPLICITY = eINSTANCE.getParticipant_ParticipantMultiplicity();
 
 		/**
 		 * The meta object literal for the '<em><b>End Point Refs</b></em>' reference list feature.
@@ -22402,8 +23519,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PARTICIPANT__END_POINT_REFS = eINSTANCE
-				.getParticipant_EndPointRefs();
+		EReference PARTICIPANT__END_POINT_REFS = eINSTANCE.getParticipant_EndPointRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>Process Ref</b></em>' reference feature.
@@ -22411,8 +23527,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PARTICIPANT__PROCESS_REF = eINSTANCE
-				.getParticipant_ProcessRef();
+		EReference PARTICIPANT__PROCESS_REF = eINSTANCE.getParticipant_ProcessRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.InteractionNodeImpl <em>Interaction Node</em>}' class.
@@ -22458,8 +23573,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONVERSATION_LINK__SOURCE_REF = eINSTANCE
-				.getConversationLink_SourceRef();
+		EReference CONVERSATION_LINK__SOURCE_REF = eINSTANCE.getConversationLink_SourceRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -22467,8 +23581,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONVERSATION_LINK__NAME = eINSTANCE
-				.getConversationLink_Name();
+		EAttribute CONVERSATION_LINK__NAME = eINSTANCE.getConversationLink_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Ref</b></em>' reference feature.
@@ -22476,8 +23589,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONVERSATION_LINK__TARGET_REF = eINSTANCE
-				.getConversationLink_TargetRef();
+		EReference CONVERSATION_LINK__TARGET_REF = eINSTANCE.getConversationLink_TargetRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ParticipantMultiplicityImpl <em>Participant Multiplicity</em>}' class.
@@ -22487,8 +23599,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getParticipantMultiplicity()
 		 * @generated
 		 */
-		EClass PARTICIPANT_MULTIPLICITY = eINSTANCE
-				.getParticipantMultiplicity();
+		EClass PARTICIPANT_MULTIPLICITY = eINSTANCE.getParticipantMultiplicity();
 
 		/**
 		 * The meta object literal for the '<em><b>Minimum</b></em>' attribute feature.
@@ -22496,8 +23607,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PARTICIPANT_MULTIPLICITY__MINIMUM = eINSTANCE
-				.getParticipantMultiplicity_Minimum();
+		EAttribute PARTICIPANT_MULTIPLICITY__MINIMUM = eINSTANCE.getParticipantMultiplicity_Minimum();
 
 		/**
 		 * The meta object literal for the '<em><b>Maximum</b></em>' attribute feature.
@@ -22505,8 +23615,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PARTICIPANT_MULTIPLICITY__MAXIMUM = eINSTANCE
-				.getParticipantMultiplicity_Maximum();
+		EAttribute PARTICIPANT_MULTIPLICITY__MAXIMUM = eINSTANCE.getParticipantMultiplicity_Maximum();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -22514,8 +23623,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PARTICIPANT_MULTIPLICITY__ID = eINSTANCE
-				.getParticipantMultiplicity_Id();
+		EAttribute PARTICIPANT_MULTIPLICITY__ID = eINSTANCE.getParticipantMultiplicity_Id();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.MessageFlowAssociationImpl <em>Message Flow Association</em>}' class.
@@ -22569,8 +23677,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MESSAGE_FLOW__SOURCE_REF = eINSTANCE
-				.getMessageFlow_SourceRef();
+		EReference MESSAGE_FLOW__SOURCE_REF = eINSTANCE.getMessageFlow_SourceRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Ref</b></em>' reference feature.
@@ -22578,8 +23685,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MESSAGE_FLOW__TARGET_REF = eINSTANCE
-				.getMessageFlow_TargetRef();
+		EReference MESSAGE_FLOW__TARGET_REF = eINSTANCE.getMessageFlow_TargetRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Message Ref</b></em>' reference feature.
@@ -22587,8 +23693,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MESSAGE_FLOW__MESSAGE_REF = eINSTANCE
-				.getMessageFlow_MessageRef();
+		EReference MESSAGE_FLOW__MESSAGE_REF = eINSTANCE.getMessageFlow_MessageRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ConversationAssociationImpl <em>Conversation Association</em>}' class.
@@ -22598,8 +23703,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getConversationAssociation()
 		 * @generated
 		 */
-		EClass CONVERSATION_ASSOCIATION = eINSTANCE
-				.getConversationAssociation();
+		EClass CONVERSATION_ASSOCIATION = eINSTANCE.getConversationAssociation();
 
 		/**
 		 * The meta object literal for the '<em><b>Inner Conversation Node Ref</b></em>' reference feature.
@@ -22635,8 +23739,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONVERSATION_NODE__NAME = eINSTANCE
-				.getConversationNode_Name();
+		EAttribute CONVERSATION_NODE__NAME = eINSTANCE.getConversationNode_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Participant Refs</b></em>' reference list feature.
@@ -22644,8 +23747,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONVERSATION_NODE__PARTICIPANT_REFS = eINSTANCE
-				.getConversationNode_ParticipantRefs();
+		EReference CONVERSATION_NODE__PARTICIPANT_REFS = eINSTANCE.getConversationNode_ParticipantRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>Message Flow Refs</b></em>' reference list feature.
@@ -22653,8 +23755,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONVERSATION_NODE__MESSAGE_FLOW_REFS = eINSTANCE
-				.getConversationNode_MessageFlowRefs();
+		EReference CONVERSATION_NODE__MESSAGE_FLOW_REFS = eINSTANCE.getConversationNode_MessageFlowRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>Correlation Keys</b></em>' containment reference list feature.
@@ -22662,8 +23763,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONVERSATION_NODE__CORRELATION_KEYS = eINSTANCE
-				.getConversationNode_CorrelationKeys();
+		EReference CONVERSATION_NODE__CORRELATION_KEYS = eINSTANCE.getConversationNode_CorrelationKeys();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationKeyImpl <em>Correlation Key</em>}' class.
@@ -22681,8 +23781,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CORRELATION_KEY__CORRELATION_PROPERTY_REF = eINSTANCE
-				.getCorrelationKey_CorrelationPropertyRef();
+		EReference CORRELATION_KEY__CORRELATION_PROPERTY_REF = eINSTANCE.getCorrelationKey_CorrelationPropertyRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -22717,8 +23816,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CORRELATION_PROPERTY__NAME = eINSTANCE
-				.getCorrelationProperty_Name();
+		EAttribute CORRELATION_PROPERTY__NAME = eINSTANCE.getCorrelationProperty_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
@@ -22726,8 +23824,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CORRELATION_PROPERTY__TYPE = eINSTANCE
-				.getCorrelationProperty_Type();
+		EReference CORRELATION_PROPERTY__TYPE = eINSTANCE.getCorrelationProperty_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationPropertyRetrievalExpressionImpl <em>Correlation Property Retrieval Expression</em>}' class.
@@ -22737,8 +23834,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getCorrelationPropertyRetrievalExpression()
 		 * @generated
 		 */
-		EClass CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION = eINSTANCE
-				.getCorrelationPropertyRetrievalExpression();
+		EClass CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION = eINSTANCE.getCorrelationPropertyRetrievalExpression();
 
 		/**
 		 * The meta object literal for the '<em><b>Message Path</b></em>' containment reference feature.
@@ -22774,8 +23870,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FORMAL_EXPRESSION__LANGUAGE = eINSTANCE
-				.getFormalExpression_Language();
+		EAttribute FORMAL_EXPRESSION__LANGUAGE = eINSTANCE.getFormalExpression_Language();
 
 		/**
 		 * The meta object literal for the '<em><b>Body</b></em>' reference feature.
@@ -22783,8 +23878,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FORMAL_EXPRESSION__BODY = eINSTANCE
-				.getFormalExpression_Body();
+		EReference FORMAL_EXPRESSION__BODY = eINSTANCE.getFormalExpression_Body();
 
 		/**
 		 * The meta object literal for the '<em><b>Evaluates To Type Ref</b></em>' reference feature.
@@ -22792,8 +23886,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF = eINSTANCE
-				.getFormalExpression_EvaluatesToTypeRef();
+		EReference FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF = eINSTANCE.getFormalExpression_EvaluatesToTypeRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationSubscriptionImpl <em>Correlation Subscription</em>}' class.
@@ -22803,8 +23896,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getCorrelationSubscription()
 		 * @generated
 		 */
-		EClass CORRELATION_SUBSCRIPTION = eINSTANCE
-				.getCorrelationSubscription();
+		EClass CORRELATION_SUBSCRIPTION = eINSTANCE.getCorrelationSubscription();
 
 		/**
 		 * The meta object literal for the '<em><b>Correlation Key Ref</b></em>' reference feature.
@@ -22832,8 +23924,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getCorrelationPropertyBinding()
 		 * @generated
 		 */
-		EClass CORRELATION_PROPERTY_BINDING = eINSTANCE
-				.getCorrelationPropertyBinding();
+		EClass CORRELATION_PROPERTY_BINDING = eINSTANCE.getCorrelationPropertyBinding();
 
 		/**
 		 * The meta object literal for the '<em><b>Data Path</b></em>' containment reference feature.
@@ -22841,8 +23932,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CORRELATION_PROPERTY_BINDING__DATA_PATH = eINSTANCE
-				.getCorrelationPropertyBinding_DataPath();
+		EReference CORRELATION_PROPERTY_BINDING__DATA_PATH = eINSTANCE.getCorrelationPropertyBinding_DataPath();
 
 		/**
 		 * The meta object literal for the '<em><b>Correlation Property Ref</b></em>' reference feature.
@@ -22899,8 +23989,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ACTIVITY__IS_FOR_COMPENSATION = eINSTANCE
-				.getActivity_IsForCompensation();
+		EAttribute ACTIVITY__IS_FOR_COMPENSATION = eINSTANCE.getActivity_IsForCompensation();
 
 		/**
 		 * The meta object literal for the '<em><b>Loop Characteristics</b></em>' containment reference feature.
@@ -22908,8 +23997,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTIVITY__LOOP_CHARACTERISTICS = eINSTANCE
-				.getActivity_LoopCharacteristics();
+		EReference ACTIVITY__LOOP_CHARACTERISTICS = eINSTANCE.getActivity_LoopCharacteristics();
 
 		/**
 		 * The meta object literal for the '<em><b>Resources</b></em>' containment reference list feature.
@@ -22941,8 +24029,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTIVITY__IO_SPECIFICATION = eINSTANCE
-				.getActivity_IoSpecification();
+		EReference ACTIVITY__IO_SPECIFICATION = eINSTANCE.getActivity_IoSpecification();
 
 		/**
 		 * The meta object literal for the '<em><b>Boundary Event Refs</b></em>' reference list feature.
@@ -22950,8 +24037,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTIVITY__BOUNDARY_EVENT_REFS = eINSTANCE
-				.getActivity_BoundaryEventRefs();
+		EReference ACTIVITY__BOUNDARY_EVENT_REFS = eINSTANCE.getActivity_BoundaryEventRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>Data Input Associations</b></em>' containment reference list feature.
@@ -22959,8 +24045,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTIVITY__DATA_INPUT_ASSOCIATIONS = eINSTANCE
-				.getActivity_DataInputAssociations();
+		EReference ACTIVITY__DATA_INPUT_ASSOCIATIONS = eINSTANCE.getActivity_DataInputAssociations();
 
 		/**
 		 * The meta object literal for the '<em><b>Data Output Associations</b></em>' containment reference list feature.
@@ -22968,8 +24053,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTIVITY__DATA_OUTPUT_ASSOCIATIONS = eINSTANCE
-				.getActivity_DataOutputAssociations();
+		EReference ACTIVITY__DATA_OUTPUT_ASSOCIATIONS = eINSTANCE.getActivity_DataOutputAssociations();
 
 		/**
 		 * The meta object literal for the '<em><b>Start Quantity</b></em>' attribute feature.
@@ -22977,8 +24061,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ACTIVITY__START_QUANTITY = eINSTANCE
-				.getActivity_StartQuantity();
+		EAttribute ACTIVITY__START_QUANTITY = eINSTANCE.getActivity_StartQuantity();
 
 		/**
 		 * The meta object literal for the '<em><b>Completion Quantity</b></em>' attribute feature.
@@ -22986,8 +24069,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ACTIVITY__COMPLETION_QUANTITY = eINSTANCE
-				.getActivity_CompletionQuantity();
+		EAttribute ACTIVITY__COMPLETION_QUANTITY = eINSTANCE.getActivity_CompletionQuantity();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.LoopCharacteristicsImpl <em>Loop Characteristics</em>}' class.
@@ -23015,8 +24097,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BOUNDARY_EVENT__CANCEL_ACTIVITY = eINSTANCE
-				.getBoundaryEvent_CancelActivity();
+		EAttribute BOUNDARY_EVENT__CANCEL_ACTIVITY = eINSTANCE.getBoundaryEvent_CancelActivity();
 
 		/**
 		 * The meta object literal for the '<em><b>Attached To Ref</b></em>' reference feature.
@@ -23024,8 +24105,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BOUNDARY_EVENT__ATTACHED_TO_REF = eINSTANCE
-				.getBoundaryEvent_AttachedToRef();
+		EReference BOUNDARY_EVENT__ATTACHED_TO_REF = eINSTANCE.getBoundaryEvent_AttachedToRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.CatchEventImpl <em>Catch Event</em>}' class.
@@ -23043,8 +24123,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CATCH_EVENT__PARALLEL_MULTIPLE = eINSTANCE
-				.getCatchEvent_ParallelMultiple();
+		EAttribute CATCH_EVENT__PARALLEL_MULTIPLE = eINSTANCE.getCatchEvent_ParallelMultiple();
 
 		/**
 		 * The meta object literal for the '<em><b>Output Set</b></em>' containment reference feature.
@@ -23052,8 +24131,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CATCH_EVENT__OUTPUT_SET = eINSTANCE
-				.getCatchEvent_OutputSet();
+		EReference CATCH_EVENT__OUTPUT_SET = eINSTANCE.getCatchEvent_OutputSet();
 
 		/**
 		 * The meta object literal for the '<em><b>Event Definition Refs</b></em>' reference list feature.
@@ -23061,8 +24139,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CATCH_EVENT__EVENT_DEFINITION_REFS = eINSTANCE
-				.getCatchEvent_EventDefinitionRefs();
+		EReference CATCH_EVENT__EVENT_DEFINITION_REFS = eINSTANCE.getCatchEvent_EventDefinitionRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>Data Output Association</b></em>' containment reference list feature.
@@ -23070,8 +24147,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CATCH_EVENT__DATA_OUTPUT_ASSOCIATION = eINSTANCE
-				.getCatchEvent_DataOutputAssociation();
+		EReference CATCH_EVENT__DATA_OUTPUT_ASSOCIATION = eINSTANCE.getCatchEvent_DataOutputAssociation();
 
 		/**
 		 * The meta object literal for the '<em><b>Data Outputs</b></em>' containment reference list feature.
@@ -23079,8 +24155,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CATCH_EVENT__DATA_OUTPUTS = eINSTANCE
-				.getCatchEvent_DataOutputs();
+		EReference CATCH_EVENT__DATA_OUTPUTS = eINSTANCE.getCatchEvent_DataOutputs();
 
 		/**
 		 * The meta object literal for the '<em><b>Event Definitions</b></em>' containment reference list feature.
@@ -23088,8 +24163,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CATCH_EVENT__EVENT_DEFINITIONS = eINSTANCE
-				.getCatchEvent_EventDefinitions();
+		EReference CATCH_EVENT__EVENT_DEFINITIONS = eINSTANCE.getCatchEvent_EventDefinitions();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.EventImpl <em>Event</em>}' class.
@@ -23145,8 +24219,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_ASSOCIATION__TRANSFORMATION = eINSTANCE
-				.getDataAssociation_Transformation();
+		EReference DATA_ASSOCIATION__TRANSFORMATION = eINSTANCE.getDataAssociation_Transformation();
 
 		/**
 		 * The meta object literal for the '<em><b>Assignment</b></em>' containment reference list feature.
@@ -23154,8 +24227,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_ASSOCIATION__ASSIGNMENT = eINSTANCE
-				.getDataAssociation_Assignment();
+		EReference DATA_ASSOCIATION__ASSIGNMENT = eINSTANCE.getDataAssociation_Assignment();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Ref</b></em>' reference feature.
@@ -23163,8 +24235,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_ASSOCIATION__TARGET_REF = eINSTANCE
-				.getDataAssociation_TargetRef();
+		EReference DATA_ASSOCIATION__TARGET_REF = eINSTANCE.getDataAssociation_TargetRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Source Ref</b></em>' reference list feature.
@@ -23172,8 +24243,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_ASSOCIATION__SOURCE_REF = eINSTANCE
-				.getDataAssociation_SourceRef();
+		EReference DATA_ASSOCIATION__SOURCE_REF = eINSTANCE.getDataAssociation_SourceRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.AssignmentImpl <em>Assignment</em>}' class.
@@ -23235,8 +24305,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USER_TASK__IMPLEMENTATION = eINSTANCE
-				.getUserTask_Implementation();
+		EAttribute USER_TASK__IMPLEMENTATION = eINSTANCE.getUserTask_Implementation();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.RenderingImpl <em>Rendering</em>}' class.
@@ -23284,8 +24353,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GLOBAL_USER_TASK__IMPLEMENTATION = eINSTANCE
-				.getGlobalUserTask_Implementation();
+		EAttribute GLOBAL_USER_TASK__IMPLEMENTATION = eINSTANCE.getGlobalUserTask_Implementation();
 
 		/**
 		 * The meta object literal for the '<em><b>Renderings</b></em>' containment reference list feature.
@@ -23293,8 +24361,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GLOBAL_USER_TASK__RENDERINGS = eINSTANCE
-				.getGlobalUserTask_Renderings();
+		EReference GLOBAL_USER_TASK__RENDERINGS = eINSTANCE.getGlobalUserTask_Renderings();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.GatewayImpl <em>Gateway</em>}' class.
@@ -23312,8 +24379,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GATEWAY__GATEWAY_DIRECTION = eINSTANCE
-				.getGateway_GatewayDirection();
+		EAttribute GATEWAY__GATEWAY_DIRECTION = eINSTANCE.getGateway_GatewayDirection();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.EventBasedGatewayImpl <em>Event Based Gateway</em>}' class.
@@ -23331,8 +24397,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EVENT_BASED_GATEWAY__INSTANTIATE = eINSTANCE
-				.getEventBasedGateway_Instantiate();
+		EAttribute EVENT_BASED_GATEWAY__INSTANTIATE = eINSTANCE.getEventBasedGateway_Instantiate();
 
 		/**
 		 * The meta object literal for the '<em><b>Event Gateway Type</b></em>' attribute feature.
@@ -23340,8 +24405,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE = eINSTANCE
-				.getEventBasedGateway_EventGatewayType();
+		EAttribute EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE = eINSTANCE.getEventBasedGateway_EventGatewayType();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ComplexGatewayImpl <em>Complex Gateway</em>}' class.
@@ -23359,8 +24423,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPLEX_GATEWAY__ACTIVATION_CONDITION = eINSTANCE
-				.getComplexGateway_ActivationCondition();
+		EReference COMPLEX_GATEWAY__ACTIVATION_CONDITION = eINSTANCE.getComplexGateway_ActivationCondition();
 
 		/**
 		 * The meta object literal for the '<em><b>Default</b></em>' reference feature.
@@ -23368,8 +24431,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPLEX_GATEWAY__DEFAULT = eINSTANCE
-				.getComplexGateway_Default();
+		EReference COMPLEX_GATEWAY__DEFAULT = eINSTANCE.getComplexGateway_Default();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ExclusiveGatewayImpl <em>Exclusive Gateway</em>}' class.
@@ -23387,8 +24449,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXCLUSIVE_GATEWAY__DEFAULT = eINSTANCE
-				.getExclusiveGateway_Default();
+		EReference EXCLUSIVE_GATEWAY__DEFAULT = eINSTANCE.getExclusiveGateway_Default();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.InclusiveGatewayImpl <em>Inclusive Gateway</em>}' class.
@@ -23406,8 +24467,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INCLUSIVE_GATEWAY__DEFAULT = eINSTANCE
-				.getInclusiveGateway_Default();
+		EReference INCLUSIVE_GATEWAY__DEFAULT = eINSTANCE.getInclusiveGateway_Default();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ParallelGatewayImpl <em>Parallel Gateway</em>}' class.
@@ -23443,8 +24503,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RELATIONSHIP__DIRECTION = eINSTANCE
-				.getRelationship_Direction();
+		EAttribute RELATIONSHIP__DIRECTION = eINSTANCE.getRelationship_Direction();
 
 		/**
 		 * The meta object literal for the '<em><b>Sources</b></em>' reference list feature.
@@ -23478,8 +24537,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXTENSION__MUST_UNDERSTAND = eINSTANCE
-				.getExtension_MustUnderstand();
+		EAttribute EXTENSION__MUST_UNDERSTAND = eINSTANCE.getExtension_MustUnderstand();
 
 		/**
 		 * The meta object literal for the '<em><b>Definition</b></em>' containment reference feature.
@@ -23541,8 +24599,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference THROW_EVENT__EVENT_DEFINITION_REFS = eINSTANCE
-				.getThrowEvent_EventDefinitionRefs();
+		EReference THROW_EVENT__EVENT_DEFINITION_REFS = eINSTANCE.getThrowEvent_EventDefinitionRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>Data Input Association</b></em>' containment reference list feature.
@@ -23550,8 +24607,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference THROW_EVENT__DATA_INPUT_ASSOCIATION = eINSTANCE
-				.getThrowEvent_DataInputAssociation();
+		EReference THROW_EVENT__DATA_INPUT_ASSOCIATION = eINSTANCE.getThrowEvent_DataInputAssociation();
 
 		/**
 		 * The meta object literal for the '<em><b>Data Inputs</b></em>' containment reference list feature.
@@ -23559,8 +24615,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference THROW_EVENT__DATA_INPUTS = eINSTANCE
-				.getThrowEvent_DataInputs();
+		EReference THROW_EVENT__DATA_INPUTS = eINSTANCE.getThrowEvent_DataInputs();
 
 		/**
 		 * The meta object literal for the '<em><b>Event Definitions</b></em>' containment reference list feature.
@@ -23568,8 +24623,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference THROW_EVENT__EVENT_DEFINITIONS = eINSTANCE
-				.getThrowEvent_EventDefinitions();
+		EReference THROW_EVENT__EVENT_DEFINITIONS = eINSTANCE.getThrowEvent_EventDefinitions();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.EndEventImpl <em>End Event</em>}' class.
@@ -23597,8 +24651,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute START_EVENT__IS_INTERRUPTING = eINSTANCE
-				.getStartEvent_IsInterrupting();
+		EAttribute START_EVENT__IS_INTERRUPTING = eINSTANCE.getStartEvent_IsInterrupting();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.CancelEventDefinitionImpl <em>Cancel Event Definition</em>}' class.
@@ -23626,8 +24679,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ERROR_EVENT_DEFINITION__ERROR_REF = eINSTANCE
-				.getErrorEventDefinition_ErrorRef();
+		EReference ERROR_EVENT_DEFINITION__ERROR_REF = eINSTANCE.getErrorEventDefinition_ErrorRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.TerminateEventDefinitionImpl <em>Terminate Event Definition</em>}' class.
@@ -23637,8 +24689,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getTerminateEventDefinition()
 		 * @generated
 		 */
-		EClass TERMINATE_EVENT_DEFINITION = eINSTANCE
-				.getTerminateEventDefinition();
+		EClass TERMINATE_EVENT_DEFINITION = eINSTANCE.getTerminateEventDefinition();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.EscalationEventDefinitionImpl <em>Escalation Event Definition</em>}' class.
@@ -23648,8 +24699,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getEscalationEventDefinition()
 		 * @generated
 		 */
-		EClass ESCALATION_EVENT_DEFINITION = eINSTANCE
-				.getEscalationEventDefinition();
+		EClass ESCALATION_EVENT_DEFINITION = eINSTANCE.getEscalationEventDefinition();
 
 		/**
 		 * The meta object literal for the '<em><b>Escalation Ref</b></em>' reference feature.
@@ -23657,8 +24707,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ESCALATION_EVENT_DEFINITION__ESCALATION_REF = eINSTANCE
-				.getEscalationEventDefinition_EscalationRef();
+		EReference ESCALATION_EVENT_DEFINITION__ESCALATION_REF = eINSTANCE.getEscalationEventDefinition_EscalationRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.EscalationImpl <em>Escalation</em>}' class.
@@ -23676,8 +24725,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ESCALATION__STRUCTURE_REF = eINSTANCE
-				.getEscalation_StructureRef();
+		EReference ESCALATION__STRUCTURE_REF = eINSTANCE.getEscalation_StructureRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -23693,8 +24741,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ESCALATION__ESCALATION_CODE = eINSTANCE
-				.getEscalation_EscalationCode();
+		EAttribute ESCALATION__ESCALATION_CODE = eINSTANCE.getEscalation_EscalationCode();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -23712,8 +24759,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getCompensateEventDefinition()
 		 * @generated
 		 */
-		EClass COMPENSATE_EVENT_DEFINITION = eINSTANCE
-				.getCompensateEventDefinition();
+		EClass COMPENSATE_EVENT_DEFINITION = eINSTANCE.getCompensateEventDefinition();
 
 		/**
 		 * The meta object literal for the '<em><b>Wait For Completion</b></em>' attribute feature.
@@ -23730,8 +24776,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF = eINSTANCE
-				.getCompensateEventDefinition_ActivityRef();
+		EReference COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF = eINSTANCE.getCompensateEventDefinition_ActivityRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.TimerEventDefinitionImpl <em>Timer Event Definition</em>}' class.
@@ -23749,8 +24794,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TIMER_EVENT_DEFINITION__TIME_DATE = eINSTANCE
-				.getTimerEventDefinition_TimeDate();
+		EReference TIMER_EVENT_DEFINITION__TIME_DATE = eINSTANCE.getTimerEventDefinition_TimeDate();
 
 		/**
 		 * The meta object literal for the '<em><b>Time Cycle</b></em>' containment reference feature.
@@ -23758,8 +24802,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TIMER_EVENT_DEFINITION__TIME_CYCLE = eINSTANCE
-				.getTimerEventDefinition_TimeCycle();
+		EReference TIMER_EVENT_DEFINITION__TIME_CYCLE = eINSTANCE.getTimerEventDefinition_TimeCycle();
 
 		/**
 		 * The meta object literal for the '<em><b>Time Duration</b></em>' containment reference feature.
@@ -23767,8 +24810,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TIMER_EVENT_DEFINITION__TIME_DURATION = eINSTANCE
-				.getTimerEventDefinition_TimeDuration();
+		EReference TIMER_EVENT_DEFINITION__TIME_DURATION = eINSTANCE.getTimerEventDefinition_TimeDuration();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.LinkEventDefinitionImpl <em>Link Event Definition</em>}' class.
@@ -23786,8 +24828,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LINK_EVENT_DEFINITION__NAME = eINSTANCE
-				.getLinkEventDefinition_Name();
+		EAttribute LINK_EVENT_DEFINITION__NAME = eINSTANCE.getLinkEventDefinition_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
@@ -23795,8 +24836,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LINK_EVENT_DEFINITION__TARGET = eINSTANCE
-				.getLinkEventDefinition_Target();
+		EReference LINK_EVENT_DEFINITION__TARGET = eINSTANCE.getLinkEventDefinition_Target();
 
 		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' reference list feature.
@@ -23804,8 +24844,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LINK_EVENT_DEFINITION__SOURCE = eINSTANCE
-				.getLinkEventDefinition_Source();
+		EReference LINK_EVENT_DEFINITION__SOURCE = eINSTANCE.getLinkEventDefinition_Source();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.MessageEventDefinitionImpl <em>Message Event Definition</em>}' class.
@@ -23823,8 +24862,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MESSAGE_EVENT_DEFINITION__MESSAGE_REF = eINSTANCE
-				.getMessageEventDefinition_MessageRef();
+		EReference MESSAGE_EVENT_DEFINITION__MESSAGE_REF = eINSTANCE.getMessageEventDefinition_MessageRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Operation Ref</b></em>' reference feature.
@@ -23832,8 +24870,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MESSAGE_EVENT_DEFINITION__OPERATION_REF = eINSTANCE
-				.getMessageEventDefinition_OperationRef();
+		EReference MESSAGE_EVENT_DEFINITION__OPERATION_REF = eINSTANCE.getMessageEventDefinition_OperationRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ConditionalEventDefinitionImpl <em>Conditional Event Definition</em>}' class.
@@ -23843,8 +24880,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getConditionalEventDefinition()
 		 * @generated
 		 */
-		EClass CONDITIONAL_EVENT_DEFINITION = eINSTANCE
-				.getConditionalEventDefinition();
+		EClass CONDITIONAL_EVENT_DEFINITION = eINSTANCE.getConditionalEventDefinition();
 
 		/**
 		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
@@ -23852,8 +24888,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONDITIONAL_EVENT_DEFINITION__CONDITION = eINSTANCE
-				.getConditionalEventDefinition_Condition();
+		EReference CONDITIONAL_EVENT_DEFINITION__CONDITION = eINSTANCE.getConditionalEventDefinition_Condition();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.SignalEventDefinitionImpl <em>Signal Event Definition</em>}' class.
@@ -23871,8 +24906,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SIGNAL_EVENT_DEFINITION__SIGNAL_REF = eINSTANCE
-				.getSignalEventDefinition_SignalRef();
+		EReference SIGNAL_EVENT_DEFINITION__SIGNAL_REF = eINSTANCE.getSignalEventDefinition_SignalRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.SignalImpl <em>Signal</em>}' class.
@@ -23926,8 +24960,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA_OBJECT__IS_COLLECTION = eINSTANCE
-				.getDataObject_IsCollection();
+		EAttribute DATA_OBJECT__IS_COLLECTION = eINSTANCE.getDataObject_IsCollection();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.DataStoreImpl <em>Data Store</em>}' class.
@@ -23961,8 +24994,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA_STORE__IS_UNLIMITED = eINSTANCE
-				.getDataStore_IsUnlimited();
+		EAttribute DATA_STORE__IS_UNLIMITED = eINSTANCE.getDataStore_IsUnlimited();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.DataStoreReferenceImpl <em>Data Store Reference</em>}' class.
@@ -23980,8 +25012,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_STORE_REFERENCE__DATA_STORE_REF = eINSTANCE
-				.getDataStoreReference_DataStoreRef();
+		EReference DATA_STORE_REFERENCE__DATA_STORE_REF = eINSTANCE.getDataStoreReference_DataStoreRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.DataObjectReferenceImpl <em>Data Object Reference</em>}' class.
@@ -23999,8 +25030,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_OBJECT_REFERENCE__DATA_OBJECT_REF = eINSTANCE
-				.getDataObjectReference_DataObjectRef();
+		EReference DATA_OBJECT_REFERENCE__DATA_OBJECT_REF = eINSTANCE.getDataObjectReference_DataObjectRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.CallConversationImpl <em>Call Conversation</em>}' class.
@@ -24018,8 +25048,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CALL_CONVERSATION__CALLED_COLLABORATION_REF = eINSTANCE
-				.getCallConversation_CalledCollaborationRef();
+		EReference CALL_CONVERSATION__CALLED_COLLABORATION_REF = eINSTANCE.getCallConversation_CalledCollaborationRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Participant Associations</b></em>' containment reference list feature.
@@ -24056,8 +25085,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SUB_CONVERSATION__CONVERSATION_NODES = eINSTANCE
-				.getSubConversation_ConversationNodes();
+		EReference SUB_CONVERSATION__CONVERSATION_NODES = eINSTANCE.getSubConversation_ConversationNodes();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.GlobalConversationImpl <em>Global Conversation</em>}' class.
@@ -24093,8 +25121,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PARTNER_ENTITY__PARTICIPANT_REF = eINSTANCE
-				.getPartnerEntity_ParticipantRef();
+		EReference PARTNER_ENTITY__PARTICIPANT_REF = eINSTANCE.getPartnerEntity_ParticipantRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.PartnerRoleImpl <em>Partner Role</em>}' class.
@@ -24120,8 +25147,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PARTNER_ROLE__PARTICIPANT_REF = eINSTANCE
-				.getPartnerRole_ParticipantRef();
+		EReference PARTNER_ROLE__PARTICIPANT_REF = eINSTANCE.getPartnerRole_ParticipantRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ChoreographyActivityImpl <em>Choreography Activity</em>}' class.
@@ -24139,8 +25165,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS = eINSTANCE
-				.getChoreographyActivity_ParticipantRefs();
+		EReference CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS = eINSTANCE.getChoreographyActivity_ParticipantRefs();
 
 		/**
 		 * The meta object literal for the '<em><b>Initiating Participant Ref</b></em>' reference feature.
@@ -24157,8 +25182,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS = eINSTANCE
-				.getChoreographyActivity_CorrelationKeys();
+		EReference CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS = eINSTANCE.getChoreographyActivity_CorrelationKeys();
 
 		/**
 		 * The meta object literal for the '<em><b>Loop Type</b></em>' attribute feature.
@@ -24166,8 +25190,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CHOREOGRAPHY_ACTIVITY__LOOP_TYPE = eINSTANCE
-				.getChoreographyActivity_LoopType();
+		EAttribute CHOREOGRAPHY_ACTIVITY__LOOP_TYPE = eINSTANCE.getChoreographyActivity_LoopType();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.CallChoreographyImpl <em>Call Choreography</em>}' class.
@@ -24185,8 +25208,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF = eINSTANCE
-				.getCallChoreography_CalledChoreographyRef();
+		EReference CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF = eINSTANCE.getCallChoreography_CalledChoreographyRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Participant Associations</b></em>' containment reference list feature.
@@ -24213,8 +25235,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SUB_CHOREOGRAPHY__ARTIFACTS = eINSTANCE
-				.getSubChoreography_Artifacts();
+		EReference SUB_CHOREOGRAPHY__ARTIFACTS = eINSTANCE.getSubChoreography_Artifacts();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ChoreographyTaskImpl <em>Choreography Task</em>}' class.
@@ -24232,8 +25253,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF = eINSTANCE
-				.getChoreographyTask_MessageFlowRef();
+		EReference CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF = eINSTANCE.getChoreographyTask_MessageFlowRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.GlobalChoreographyTaskImpl <em>Global Choreography Task</em>}' class.
@@ -24278,8 +25298,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TEXT_ANNOTATION__TEXT_FORMAT = eINSTANCE
-				.getTextAnnotation_TextFormat();
+		EAttribute TEXT_ANNOTATION__TEXT_FORMAT = eINSTANCE.getTextAnnotation_TextFormat();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.GroupImpl <em>Group</em>}' class.
@@ -24297,8 +25316,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GROUP__CATEGORY_VALUE_REF = eINSTANCE
-				.getGroup_CategoryValueRef();
+		EReference GROUP__CATEGORY_VALUE_REF = eINSTANCE.getGroup_CategoryValueRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.AssociationImpl <em>Association</em>}' class.
@@ -24316,8 +25334,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ASSOCIATION__ASSOCIATION_DIRECTION = eINSTANCE
-				.getAssociation_AssociationDirection();
+		EAttribute ASSOCIATION__ASSOCIATION_DIRECTION = eINSTANCE.getAssociation_AssociationDirection();
 
 		/**
 		 * The meta object literal for the '<em><b>Source Ref</b></em>' reference feature.
@@ -24325,8 +25342,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ASSOCIATION__SOURCE_REF = eINSTANCE
-				.getAssociation_SourceRef();
+		EReference ASSOCIATION__SOURCE_REF = eINSTANCE.getAssociation_SourceRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Ref</b></em>' reference feature.
@@ -24334,8 +25350,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ASSOCIATION__TARGET_REF = eINSTANCE
-				.getAssociation_TargetRef();
+		EReference ASSOCIATION__TARGET_REF = eINSTANCE.getAssociation_TargetRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.CategoryImpl <em>Category</em>}' class.
@@ -24353,8 +25368,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CATEGORY__CATEGORY_VALUE = eINSTANCE
-				.getCategory_CategoryValue();
+		EReference CATEGORY__CATEGORY_VALUE = eINSTANCE.getCategory_CategoryValue();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -24380,8 +25394,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SERVICE_TASK__IMPLEMENTATION = eINSTANCE
-				.getServiceTask_Implementation();
+		EAttribute SERVICE_TASK__IMPLEMENTATION = eINSTANCE.getServiceTask_Implementation();
 
 		/**
 		 * The meta object literal for the '<em><b>Operation Ref</b></em>' reference feature.
@@ -24389,8 +25402,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SERVICE_TASK__OPERATION_REF = eINSTANCE
-				.getServiceTask_OperationRef();
+		EReference SERVICE_TASK__OPERATION_REF = eINSTANCE.getServiceTask_OperationRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.SubProcessImpl <em>Sub Process</em>}' class.
@@ -24408,8 +25420,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SUB_PROCESS__TRIGGERED_BY_EVENT = eINSTANCE
-				.getSubProcess_TriggeredByEvent();
+		EAttribute SUB_PROCESS__TRIGGERED_BY_EVENT = eINSTANCE.getSubProcess_TriggeredByEvent();
 
 		/**
 		 * The meta object literal for the '<em><b>Artifacts</b></em>' containment reference list feature.
@@ -24427,8 +25438,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getMultiInstanceLoopCharacteristics()
 		 * @generated
 		 */
-		EClass MULTI_INSTANCE_LOOP_CHARACTERISTICS = eINSTANCE
-				.getMultiInstanceLoopCharacteristics();
+		EClass MULTI_INSTANCE_LOOP_CHARACTERISTICS = eINSTANCE.getMultiInstanceLoopCharacteristics();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Sequential</b></em>' attribute feature.
@@ -24537,8 +25547,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getComplexBehaviorDefinition()
 		 * @generated
 		 */
-		EClass COMPLEX_BEHAVIOR_DEFINITION = eINSTANCE
-				.getComplexBehaviorDefinition();
+		EClass COMPLEX_BEHAVIOR_DEFINITION = eINSTANCE.getComplexBehaviorDefinition();
 
 		/**
 		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
@@ -24546,8 +25555,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPLEX_BEHAVIOR_DEFINITION__CONDITION = eINSTANCE
-				.getComplexBehaviorDefinition_Condition();
+		EReference COMPLEX_BEHAVIOR_DEFINITION__CONDITION = eINSTANCE.getComplexBehaviorDefinition_Condition();
 
 		/**
 		 * The meta object literal for the '<em><b>Event</b></em>' containment reference feature.
@@ -24555,8 +25563,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPLEX_BEHAVIOR_DEFINITION__EVENT = eINSTANCE
-				.getComplexBehaviorDefinition_Event();
+		EReference COMPLEX_BEHAVIOR_DEFINITION__EVENT = eINSTANCE.getComplexBehaviorDefinition_Event();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.StandardLoopCharacteristicsImpl <em>Standard Loop Characteristics</em>}' class.
@@ -24566,8 +25573,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getStandardLoopCharacteristics()
 		 * @generated
 		 */
-		EClass STANDARD_LOOP_CHARACTERISTICS = eINSTANCE
-				.getStandardLoopCharacteristics();
+		EClass STANDARD_LOOP_CHARACTERISTICS = eINSTANCE.getStandardLoopCharacteristics();
 
 		/**
 		 * The meta object literal for the '<em><b>Test Before</b></em>' attribute feature.
@@ -24575,8 +25581,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE = eINSTANCE
-				.getStandardLoopCharacteristics_TestBefore();
+		EAttribute STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE = eINSTANCE.getStandardLoopCharacteristics_TestBefore();
 
 		/**
 		 * The meta object literal for the '<em><b>Loop Condition</b></em>' containment reference feature.
@@ -24593,8 +25598,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM = eINSTANCE
-				.getStandardLoopCharacteristics_LoopMaximum();
+		EReference STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM = eINSTANCE.getStandardLoopCharacteristics_LoopMaximum();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.CallActivityImpl <em>Call Activity</em>}' class.
@@ -24612,8 +25616,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CALL_ACTIVITY__CALLED_ELEMENT_REF = eINSTANCE
-				.getCallActivity_CalledElementRef();
+		EReference CALL_ACTIVITY__CALLED_ELEMENT_REF = eINSTANCE.getCallActivity_CalledElementRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.SendTaskImpl <em>Send Task</em>}' class.
@@ -24631,8 +25634,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SEND_TASK__IMPLEMENTATION = eINSTANCE
-				.getSendTask_Implementation();
+		EAttribute SEND_TASK__IMPLEMENTATION = eINSTANCE.getSendTask_Implementation();
 
 		/**
 		 * The meta object literal for the '<em><b>Operation Ref</b></em>' reference feature.
@@ -24640,8 +25642,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SEND_TASK__OPERATION_REF = eINSTANCE
-				.getSendTask_OperationRef();
+		EReference SEND_TASK__OPERATION_REF = eINSTANCE.getSendTask_OperationRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Message Ref</b></em>' reference feature.
@@ -24667,8 +25668,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RECEIVE_TASK__IMPLEMENTATION = eINSTANCE
-				.getReceiveTask_Implementation();
+		EAttribute RECEIVE_TASK__IMPLEMENTATION = eINSTANCE.getReceiveTask_Implementation();
 
 		/**
 		 * The meta object literal for the '<em><b>Instantiate</b></em>' attribute feature.
@@ -24676,8 +25676,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RECEIVE_TASK__INSTANTIATE = eINSTANCE
-				.getReceiveTask_Instantiate();
+		EAttribute RECEIVE_TASK__INSTANTIATE = eINSTANCE.getReceiveTask_Instantiate();
 
 		/**
 		 * The meta object literal for the '<em><b>Operation Ref</b></em>' reference feature.
@@ -24685,8 +25684,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RECEIVE_TASK__OPERATION_REF = eINSTANCE
-				.getReceiveTask_OperationRef();
+		EReference RECEIVE_TASK__OPERATION_REF = eINSTANCE.getReceiveTask_OperationRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Message Ref</b></em>' reference feature.
@@ -24694,8 +25692,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RECEIVE_TASK__MESSAGE_REF = eINSTANCE
-				.getReceiveTask_MessageRef();
+		EReference RECEIVE_TASK__MESSAGE_REF = eINSTANCE.getReceiveTask_MessageRef();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.ScriptTaskImpl <em>Script Task</em>}' class.
@@ -24713,8 +25710,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SCRIPT_TASK__SCRIPT_FORMAT = eINSTANCE
-				.getScriptTask_ScriptFormat();
+		EAttribute SCRIPT_TASK__SCRIPT_FORMAT = eINSTANCE.getScriptTask_ScriptFormat();
 
 		/**
 		 * The meta object literal for the '<em><b>Script</b></em>' attribute feature.
@@ -24740,8 +25736,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BUSINESS_RULE_TASK__IMPLEMENTATION = eINSTANCE
-				.getBusinessRuleTask_Implementation();
+		EAttribute BUSINESS_RULE_TASK__IMPLEMENTATION = eINSTANCE.getBusinessRuleTask_Implementation();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.AdHocSubProcessImpl <em>Ad Hoc Sub Process</em>}' class.
@@ -24759,8 +25754,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference AD_HOC_SUB_PROCESS__COMPLETION_CONDITION = eINSTANCE
-				.getAdHocSubProcess_CompletionCondition();
+		EReference AD_HOC_SUB_PROCESS__COMPLETION_CONDITION = eINSTANCE.getAdHocSubProcess_CompletionCondition();
 
 		/**
 		 * The meta object literal for the '<em><b>Ordering</b></em>' attribute feature.
@@ -24768,8 +25762,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AD_HOC_SUB_PROCESS__ORDERING = eINSTANCE
-				.getAdHocSubProcess_Ordering();
+		EAttribute AD_HOC_SUB_PROCESS__ORDERING = eINSTANCE.getAdHocSubProcess_Ordering();
 
 		/**
 		 * The meta object literal for the '<em><b>Cancel Remaining Instances</b></em>' attribute feature.
@@ -24822,8 +25815,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE = eINSTANCE
-				.getGlobalScriptTask_ScriptLanguage();
+		EAttribute GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE = eINSTANCE.getGlobalScriptTask_ScriptLanguage();
 
 		/**
 		 * The meta object literal for the '<em><b>Script</b></em>' attribute feature.
@@ -24831,8 +25823,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GLOBAL_SCRIPT_TASK__SCRIPT = eINSTANCE
-				.getGlobalScriptTask_Script();
+		EAttribute GLOBAL_SCRIPT_TASK__SCRIPT = eINSTANCE.getGlobalScriptTask_Script();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.GlobalBusinessRuleTaskImpl <em>Global Business Rule Task</em>}' class.
@@ -24842,8 +25833,7 @@ public interface Bpmn2Package extends EPackage {
 		 * @see org.obeonetwork.dsl.bpmn2.impl.Bpmn2PackageImpl#getGlobalBusinessRuleTask()
 		 * @generated
 		 */
-		EClass GLOBAL_BUSINESS_RULE_TASK = eINSTANCE
-				.getGlobalBusinessRuleTask();
+		EClass GLOBAL_BUSINESS_RULE_TASK = eINSTANCE.getGlobalBusinessRuleTask();
 
 		/**
 		 * The meta object literal for the '<em><b>Implementation</b></em>' attribute feature.
@@ -24851,8 +25841,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION = eINSTANCE
-				.getGlobalBusinessRuleTask_Implementation();
+		EAttribute GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION = eINSTANCE.getGlobalBusinessRuleTask_Implementation();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.impl.DefinitionsImpl <em>Definitions</em>}' class.
@@ -24878,8 +25867,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DEFINITIONS__TARGET_NAMESPACE = eINSTANCE
-				.getDefinitions_TargetNamespace();
+		EAttribute DEFINITIONS__TARGET_NAMESPACE = eINSTANCE.getDefinitions_TargetNamespace();
 
 		/**
 		 * The meta object literal for the '<em><b>Expression Language</b></em>' attribute feature.
@@ -24887,8 +25875,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DEFINITIONS__EXPRESSION_LANGUAGE = eINSTANCE
-				.getDefinitions_ExpressionLanguage();
+		EAttribute DEFINITIONS__EXPRESSION_LANGUAGE = eINSTANCE.getDefinitions_ExpressionLanguage();
 
 		/**
 		 * The meta object literal for the '<em><b>Type Language</b></em>' attribute feature.
@@ -24896,8 +25883,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DEFINITIONS__TYPE_LANGUAGE = eINSTANCE
-				.getDefinitions_TypeLanguage();
+		EAttribute DEFINITIONS__TYPE_LANGUAGE = eINSTANCE.getDefinitions_TypeLanguage();
 
 		/**
 		 * The meta object literal for the '<em><b>Imports</b></em>' containment reference list feature.
@@ -24913,8 +25899,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DEFINITIONS__EXTENSIONS = eINSTANCE
-				.getDefinitions_Extensions();
+		EReference DEFINITIONS__EXTENSIONS = eINSTANCE.getDefinitions_Extensions();
 
 		/**
 		 * The meta object literal for the '<em><b>Relationships</b></em>' containment reference list feature.
@@ -24922,8 +25907,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DEFINITIONS__RELATIONSHIPS = eINSTANCE
-				.getDefinitions_Relationships();
+		EReference DEFINITIONS__RELATIONSHIPS = eINSTANCE.getDefinitions_Relationships();
 
 		/**
 		 * The meta object literal for the '<em><b>Root Elements</b></em>' containment reference list feature.
@@ -24931,8 +25915,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DEFINITIONS__ROOT_ELEMENTS = eINSTANCE
-				.getDefinitions_RootElements();
+		EReference DEFINITIONS__ROOT_ELEMENTS = eINSTANCE.getDefinitions_RootElements();
 
 		/**
 		 * The meta object literal for the '<em><b>Diagrams</b></em>' containment reference list feature.
@@ -24956,8 +25939,7 @@ public interface Bpmn2Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DEFINITIONS__EXPORTER_VERSION = eINSTANCE
-				.getDefinitions_ExporterVersion();
+		EAttribute DEFINITIONS__EXPORTER_VERSION = eINSTANCE.getDefinitions_ExporterVersion();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.bpmn2.ItemKind <em>Item Kind</em>}' enum.

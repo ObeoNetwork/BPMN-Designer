@@ -34,18 +34,17 @@ import org.obeonetwork.dsl.bpmn2.OutputSet;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InputOutputSpecificationImpl#getInputSets <em>Input Sets</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InputOutputSpecificationImpl#getOutputSets <em>Output Sets</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InputOutputSpecificationImpl#getDataInputs <em>Data Inputs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InputOutputSpecificationImpl#getDataOutputs <em>Data Outputs</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class InputOutputSpecificationImpl extends BaseElementImpl implements
-		InputOutputSpecification {
+public class InputOutputSpecificationImpl extends BaseElementImpl implements InputOutputSpecification {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -72,10 +71,8 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<InputSet> getInputSets() {
-		return (EList<InputSet>) eDynamicGet(
-				Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS,
-				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS,
-				true, true);
+		return (EList<InputSet>) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS,
+				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS, true, true);
 	}
 
 	/**
@@ -85,10 +82,8 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<OutputSet> getOutputSets() {
-		return (EList<OutputSet>) eDynamicGet(
-				Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS,
-				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS,
-				true, true);
+		return (EList<OutputSet>) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS,
+				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS, true, true);
 	}
 
 	/**
@@ -98,10 +93,8 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataInput> getDataInputs() {
-		return (EList<DataInput>) eDynamicGet(
-				Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS,
-				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS,
-				true, true);
+		return (EList<DataInput>) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS,
+				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS, true, true);
 	}
 
 	/**
@@ -111,10 +104,8 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataOutput> getDataOutputs() {
-		return (EList<DataOutput>) eDynamicGet(
-				Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS,
-				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS,
-				true, true);
+		return (EList<DataOutput>) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS,
+				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS, true, true);
 	}
 
 	/**
@@ -123,21 +114,16 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
-			return ((InternalEList<?>) getInputSets()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getInputSets()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
-			return ((InternalEList<?>) getOutputSets()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getOutputSets()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
-			return ((InternalEList<?>) getDataInputs()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getDataInputs()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
-			return ((InternalEList<?>) getDataOutputs()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getDataOutputs()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -185,8 +171,7 @@ public class InputOutputSpecificationImpl extends BaseElementImpl implements
 			return;
 		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
 			getDataOutputs().clear();
-			getDataOutputs()
-					.addAll((Collection<? extends DataOutput>) newValue);
+			getDataOutputs().addAll((Collection<? extends DataOutput>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

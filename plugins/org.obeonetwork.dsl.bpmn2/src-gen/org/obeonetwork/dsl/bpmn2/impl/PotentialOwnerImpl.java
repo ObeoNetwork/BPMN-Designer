@@ -22,13 +22,10 @@ import org.obeonetwork.dsl.bpmn2.PotentialOwner;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Potential Owner</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public class PotentialOwnerImpl extends HumanPerformerImpl implements
-		PotentialOwner {
+public class PotentialOwnerImpl extends HumanPerformerImpl implements PotentialOwner {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

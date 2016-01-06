@@ -22,13 +22,10 @@ import org.obeonetwork.dsl.bpmn2.RootElement;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Root Element</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public abstract class RootElementImpl extends BaseElementImpl implements
-		RootElement {
+public abstract class RootElementImpl extends BaseElementImpl implements RootElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

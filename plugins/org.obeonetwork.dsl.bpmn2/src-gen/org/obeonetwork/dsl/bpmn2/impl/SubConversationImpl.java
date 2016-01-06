@@ -31,15 +31,14 @@ import org.obeonetwork.dsl.bpmn2.SubConversation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SubConversationImpl#getConversationNodes <em>Conversation Nodes</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class SubConversationImpl extends ConversationNodeImpl implements
-		SubConversation {
+public class SubConversationImpl extends ConversationNodeImpl implements SubConversation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,10 +65,8 @@ public class SubConversationImpl extends ConversationNodeImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationNode> getConversationNodes() {
-		return (EList<ConversationNode>) eDynamicGet(
-				Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES,
-				Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
-				true, true);
+		return (EList<ConversationNode>) eDynamicGet(Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES,
+				Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES, true, true);
 	}
 
 	/**
@@ -78,12 +75,10 @@ public class SubConversationImpl extends ConversationNodeImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
-			return ((InternalEList<?>) getConversationNodes()).basicRemove(
-					otherEnd, msgs);
+			return ((InternalEList<?>) getConversationNodes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -113,8 +108,7 @@ public class SubConversationImpl extends ConversationNodeImpl implements
 		switch (featureID) {
 		case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
 			getConversationNodes().clear();
-			getConversationNodes().addAll(
-					(Collection<? extends ConversationNode>) newValue);
+			getConversationNodes().addAll((Collection<? extends ConversationNode>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

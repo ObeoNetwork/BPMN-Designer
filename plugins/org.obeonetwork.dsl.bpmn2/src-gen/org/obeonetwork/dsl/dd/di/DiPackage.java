@@ -1106,8 +1106,7 @@ public interface DiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DIAGRAM_ELEMENT__OWNING_DIAGRAM = eINSTANCE
-				.getDiagramElement_OwningDiagram();
+		EReference DIAGRAM_ELEMENT__OWNING_DIAGRAM = eINSTANCE.getDiagramElement_OwningDiagram();
 
 		/**
 		 * The meta object literal for the '<em><b>Owning Element</b></em>' reference feature.
@@ -1115,8 +1114,7 @@ public interface DiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DIAGRAM_ELEMENT__OWNING_ELEMENT = eINSTANCE
-				.getDiagramElement_OwningElement();
+		EReference DIAGRAM_ELEMENT__OWNING_ELEMENT = eINSTANCE.getDiagramElement_OwningElement();
 
 		/**
 		 * The meta object literal for the '<em><b>Owned Element</b></em>' reference list feature.
@@ -1124,8 +1122,7 @@ public interface DiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DIAGRAM_ELEMENT__OWNED_ELEMENT = eINSTANCE
-				.getDiagramElement_OwnedElement();
+		EReference DIAGRAM_ELEMENT__OWNED_ELEMENT = eINSTANCE.getDiagramElement_OwnedElement();
 
 		/**
 		 * The meta object literal for the '<em><b>Model Element</b></em>' reference feature.
@@ -1133,8 +1130,7 @@ public interface DiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DIAGRAM_ELEMENT__MODEL_ELEMENT = eINSTANCE
-				.getDiagramElement_ModelElement();
+		EReference DIAGRAM_ELEMENT__MODEL_ELEMENT = eINSTANCE.getDiagramElement_ModelElement();
 
 		/**
 		 * The meta object literal for the '<em><b>Style</b></em>' reference feature.
@@ -1168,8 +1164,7 @@ public interface DiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DIAGRAM__DOCUMENTATION = eINSTANCE
-				.getDiagram_Documentation();
+		EAttribute DIAGRAM__DOCUMENTATION = eINSTANCE.getDiagram_Documentation();
 
 		/**
 		 * The meta object literal for the '<em><b>Resolution</b></em>' attribute feature.
@@ -1283,8 +1278,7 @@ public interface DiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LABELED_EDGE__OWNED_LABEL = eINSTANCE
-				.getLabeledEdge_OwnedLabel();
+		EReference LABELED_EDGE__OWNED_LABEL = eINSTANCE.getLabeledEdge_OwnedLabel();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.dd.di.impl.LabelImpl <em>Label</em>}' class.
@@ -1320,8 +1314,7 @@ public interface DiPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LABELED_SHAPE__OWNED_LABEL = eINSTANCE
-				.getLabeledShape_OwnedLabel();
+		EReference LABELED_SHAPE__OWNED_LABEL = eINSTANCE.getLabeledShape_OwnedLabel();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.dd.di.impl.PlaneImpl <em>Plane</em>}' class.

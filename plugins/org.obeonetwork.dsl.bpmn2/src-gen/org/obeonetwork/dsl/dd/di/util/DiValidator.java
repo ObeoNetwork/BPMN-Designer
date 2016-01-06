@@ -112,12 +112,11 @@ public class DiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	@Override
-	protected boolean validate(int classifierID, Object value,
-			DiagnosticChain diagnostics, Map<Object, Object> context) {
+	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics,
+			Map<Object, Object> context) {
 		switch (classifierID) {
 		case DiPackage.DIAGRAM_ELEMENT:
-			return validateDiagramElement((DiagramElement) value, diagnostics,
-					context);
+			return validateDiagramElement((DiagramElement) value, diagnostics, context);
 		case DiPackage.DIAGRAM:
 			return validateDiagram((Diagram) value, diagnostics, context);
 		case DiPackage.STYLE:
@@ -129,13 +128,11 @@ public class DiValidator extends EObjectValidator {
 		case DiPackage.SHAPE:
 			return validateShape((Shape) value, diagnostics, context);
 		case DiPackage.LABELED_EDGE:
-			return validateLabeledEdge((LabeledEdge) value, diagnostics,
-					context);
+			return validateLabeledEdge((LabeledEdge) value, diagnostics, context);
 		case DiPackage.LABEL:
 			return validateLabel((Label) value, diagnostics, context);
 		case DiPackage.LABELED_SHAPE:
-			return validateLabeledShape((LabeledShape) value, diagnostics,
-					context);
+			return validateLabeledShape((LabeledShape) value, diagnostics, context);
 		case DiPackage.PLANE:
 			return validatePlane((Plane) value, diagnostics, context);
 		default:
@@ -148,32 +145,9 @@ public class DiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDiagramElement(DiagramElement diagramElement,
-			DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject) diagramElement,
-				diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateDiagram(Diagram diagram,
-			DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject) diagram, diagnostics,
-				context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateStyle(Style style, DiagnosticChain diagnostics,
+	public boolean validateDiagramElement(DiagramElement diagramElement, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject) style, diagnostics,
-				context);
+		return validate_EveryDefaultConstraint((EObject) diagramElement, diagnostics, context);
 	}
 
 	/**
@@ -181,10 +155,54 @@ public class DiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateNode(Node node, DiagnosticChain diagnostics,
+	public boolean validateDiagram(Diagram diagram, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject) diagram, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateStyle(Style style, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject) style, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNode(Node node, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject) node, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateEdge(Edge edge, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject) edge, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateShape(Shape shape, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject) shape, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLabeledEdge(LabeledEdge labeledEdge, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject) node, diagnostics,
-				context);
+		return validate_EveryDefaultConstraint((EObject) labeledEdge, diagnostics, context);
 	}
 
 	/**
@@ -192,10 +210,18 @@ public class DiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEdge(Edge edge, DiagnosticChain diagnostics,
+	public boolean validateLabel(Label label, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject) label, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLabeledShape(LabeledShape labeledShape, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject) edge, diagnostics,
-				context);
+		return validate_EveryDefaultConstraint((EObject) labeledShape, diagnostics, context);
 	}
 
 	/**
@@ -203,80 +229,26 @@ public class DiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateShape(Shape shape, DiagnosticChain diagnostics,
-			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject) shape, diagnostics,
-				context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateLabeledEdge(LabeledEdge labeledEdge,
-			DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject) labeledEdge,
-				diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateLabel(Label label, DiagnosticChain diagnostics,
-			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject) label, diagnostics,
-				context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateLabeledShape(LabeledShape labeledShape,
-			DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject) labeledShape,
-				diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatePlane(Plane plane, DiagnosticChain diagnostics,
-			Map<Object, Object> context) {
-		if (!validate_NoCircularContainment((EObject) plane, diagnostics,
-				context))
+	public boolean validatePlane(Plane plane, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment((EObject) plane, diagnostics, context))
 			return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject) plane,
-				diagnostics, context);
+		boolean result = validate_EveryMultiplicityConforms((EObject) plane, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryDataValueConforms((EObject) plane,
-					diagnostics, context);
+			result &= validate_EveryDataValueConforms((EObject) plane, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryReferenceIsContained((EObject) plane,
-					diagnostics, context);
+			result &= validate_EveryReferenceIsContained((EObject) plane, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryBidirectionalReferenceIsPaired(
-					(EObject) plane, diagnostics, context);
+			result &= validate_EveryBidirectionalReferenceIsPaired((EObject) plane, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryProxyResolves((EObject) plane, diagnostics,
-					context);
+			result &= validate_EveryProxyResolves((EObject) plane, diagnostics, context);
 		if (result || diagnostics != null)
 			result &= validate_UniqueID((EObject) plane, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryKeyUnique((EObject) plane, diagnostics,
-					context);
+			result &= validate_EveryKeyUnique((EObject) plane, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryMapEntryUnique((EObject) plane,
-					diagnostics, context);
+			result &= validate_EveryMapEntryUnique((EObject) plane, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validatePlane_plane_element_type(plane, diagnostics,
-					context);
+			result &= validatePlane_plane_element_type(plane, diagnostics, context);
 		return result;
 	}
 
@@ -286,8 +258,8 @@ public class DiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePlane_plane_element_type(Plane plane,
-			DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validatePlane_plane_element_type(Plane plane, DiagnosticChain diagnostics,
+			Map<Object, Object> context) {
 		return plane.plane_element_type(diagnostics, context);
 	}
 

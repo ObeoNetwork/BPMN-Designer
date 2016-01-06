@@ -26,16 +26,15 @@ import org.obeonetwork.dsl.bpmn2.Operation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.MessageEventDefinitionImpl#getMessageRef <em>Message Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.MessageEventDefinitionImpl#getOperationRef <em>Operation Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
-		MessageEventDefinition {
+public class MessageEventDefinitionImpl extends EventDefinitionImpl implements MessageEventDefinition {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,10 +60,8 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Message getMessageRef() {
-		return (Message) eDynamicGet(
-				Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
-				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
-				true, true);
+		return (Message) eDynamicGet(Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF, true, true);
 	}
 
 	/**
@@ -73,10 +70,8 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Message basicGetMessageRef() {
-		return (Message) eDynamicGet(
-				Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
-				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
-				false, true);
+		return (Message) eDynamicGet(Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF, false, true);
 	}
 
 	/**
@@ -86,8 +81,7 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 	 */
 	public void setMessageRef(Message newMessageRef) {
 		eDynamicSet(Bpmn2Package.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
-				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
-				newMessageRef);
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF, newMessageRef);
 	}
 
 	/**
@@ -96,10 +90,8 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Operation getOperationRef() {
-		return (Operation) eDynamicGet(
-				Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
-				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
-				true, true);
+		return (Operation) eDynamicGet(Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF, true, true);
 	}
 
 	/**
@@ -108,10 +100,8 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Operation basicGetOperationRef() {
-		return (Operation) eDynamicGet(
-				Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
-				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
-				false, true);
+		return (Operation) eDynamicGet(Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF, false, true);
 	}
 
 	/**
@@ -121,8 +111,7 @@ public class MessageEventDefinitionImpl extends EventDefinitionImpl implements
 	 */
 	public void setOperationRef(Operation newOperationRef) {
 		eDynamicSet(Bpmn2Package.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
-				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
-				newOperationRef);
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF, newOperationRef);
 	}
 
 	/**

@@ -2,6 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bpmn2" nsURI="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
     nsPrefix="bpmn">
+  <eAnnotations source="http://www.obeonetwork.com/bpmn2/addons" references="#//BaseElement/description #//Process/decomposedBy #//Process/decomposes"/>
   <eClassifiers xsi:type="ecore:EClass" name="Interface" eSuperTypes="#//RootElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -20,6 +21,7 @@
         upperBound="-1" eType="#//ExtensionAttributeValue" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="documentation" ordered="false"
         upperBound="-1" eType="#//Documentation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExtensionDefinition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
@@ -269,6 +271,10 @@
         upperBound="-1" eType="#//Artifact" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="correlationSubscriptions"
         ordered="false" upperBound="-1" eType="#//CorrelationSubscription" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposedBy" upperBound="-1"
+        eType="#//Process" containment="true" eOpposite="#//Process/decomposes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposes" eType="#//Process"
+        eOpposite="#//Process/decomposedBy"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FlowElementsContainer" abstract="true"
       eSuperTypes="#//BaseElement">

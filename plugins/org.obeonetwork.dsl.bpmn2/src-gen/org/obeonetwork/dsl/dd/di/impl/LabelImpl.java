@@ -27,10 +27,10 @@ import org.obeonetwork.dsl.dd.di.Label;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.LabelImpl#getBounds <em>Bounds</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,8 +60,7 @@ public abstract class LabelImpl extends NodeImpl implements Label {
 	 * @generated
 	 */
 	public Bounds getBounds() {
-		return (Bounds) eDynamicGet(DiPackage.LABEL__BOUNDS,
-				DiPackage.Literals.LABEL__BOUNDS, true, true);
+		return (Bounds) eDynamicGet(DiPackage.LABEL__BOUNDS, DiPackage.Literals.LABEL__BOUNDS, true, true);
 	}
 
 	/**
@@ -69,10 +68,8 @@ public abstract class LabelImpl extends NodeImpl implements Label {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBounds(Bounds newBounds,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newBounds,
-				DiPackage.LABEL__BOUNDS, msgs);
+	public NotificationChain basicSetBounds(Bounds newBounds, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newBounds, DiPackage.LABEL__BOUNDS, msgs);
 		return msgs;
 	}
 
@@ -82,8 +79,7 @@ public abstract class LabelImpl extends NodeImpl implements Label {
 	 * @generated
 	 */
 	public void setBounds(Bounds newBounds) {
-		eDynamicSet(DiPackage.LABEL__BOUNDS, DiPackage.Literals.LABEL__BOUNDS,
-				newBounds);
+		eDynamicSet(DiPackage.LABEL__BOUNDS, DiPackage.Literals.LABEL__BOUNDS, newBounds);
 	}
 
 	/**
@@ -92,8 +88,7 @@ public abstract class LabelImpl extends NodeImpl implements Label {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case DiPackage.LABEL__BOUNDS:
 			return basicSetBounds(null, msgs);

@@ -24,10 +24,10 @@ import org.obeonetwork.dsl.dd.di.Plane;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNPlane#getBpmnElement <em>Bpmn Element</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage#getBPMNPlane()
  * @model

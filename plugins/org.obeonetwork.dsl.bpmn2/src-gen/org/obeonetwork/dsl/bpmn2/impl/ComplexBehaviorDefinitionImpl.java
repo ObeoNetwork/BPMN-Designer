@@ -28,16 +28,15 @@ import org.obeonetwork.dsl.bpmn2.ImplicitThrowEvent;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ComplexBehaviorDefinitionImpl#getCondition <em>Condition</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ComplexBehaviorDefinitionImpl#getEvent <em>Event</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
-		ComplexBehaviorDefinition {
+public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements ComplexBehaviorDefinition {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,10 +62,8 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public FormalExpression getCondition() {
-		return (FormalExpression) eDynamicGet(
-				Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
-				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
-				true, true);
+		return (FormalExpression) eDynamicGet(Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
+				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, true, true);
 	}
 
 	/**
@@ -74,10 +71,9 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCondition(FormalExpression newCondition,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newCondition,
-				Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, msgs);
+	public NotificationChain basicSetCondition(FormalExpression newCondition, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newCondition, Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
+				msgs);
 		return msgs;
 	}
 
@@ -88,8 +84,7 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
 	 */
 	public void setCondition(FormalExpression newCondition) {
 		eDynamicSet(Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
-				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
-				newCondition);
+				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, newCondition);
 	}
 
 	/**
@@ -98,10 +93,8 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public ImplicitThrowEvent getEvent() {
-		return (ImplicitThrowEvent) eDynamicGet(
-				Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT,
-				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT, true,
-				true);
+		return (ImplicitThrowEvent) eDynamicGet(Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT,
+				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT, true, true);
 	}
 
 	/**
@@ -109,10 +102,8 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetEvent(ImplicitThrowEvent newEvent,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newEvent,
-				Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, msgs);
+	public NotificationChain basicSetEvent(ImplicitThrowEvent newEvent, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newEvent, Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, msgs);
 		return msgs;
 	}
 
@@ -123,8 +114,7 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
 	 */
 	public void setEvent(ImplicitThrowEvent newEvent) {
 		eDynamicSet(Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT,
-				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT,
-				newEvent);
+				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT, newEvent);
 	}
 
 	/**
@@ -133,8 +123,7 @@ public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
 			return basicSetCondition(null, msgs);

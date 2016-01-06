@@ -68,8 +68,7 @@ public class DiFactoryImpl extends EFactoryImpl implements DiFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 		default:
-			throw new IllegalArgumentException("The class '" + eClass.getName()
-					+ "' is not a valid classifier");
+			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
 

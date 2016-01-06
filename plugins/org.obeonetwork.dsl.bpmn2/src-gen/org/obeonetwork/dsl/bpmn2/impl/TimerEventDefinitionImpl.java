@@ -27,17 +27,16 @@ import org.obeonetwork.dsl.bpmn2.TimerEventDefinition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.TimerEventDefinitionImpl#getTimeDate <em>Time Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.TimerEventDefinitionImpl#getTimeCycle <em>Time Cycle</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.TimerEventDefinitionImpl#getTimeDuration <em>Time Duration</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
-		TimerEventDefinition {
+public class TimerEventDefinitionImpl extends EventDefinitionImpl implements TimerEventDefinition {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,10 +62,8 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Expression getTimeDate() {
-		return (Expression) eDynamicGet(
-				Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DATE,
-				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE, true,
-				true);
+		return (Expression) eDynamicGet(Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DATE,
+				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE, true, true);
 	}
 
 	/**
@@ -74,10 +71,8 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTimeDate(Expression newTimeDate,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newTimeDate,
-				Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DATE, msgs);
+	public NotificationChain basicSetTimeDate(Expression newTimeDate, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newTimeDate, Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DATE, msgs);
 		return msgs;
 	}
 
@@ -88,8 +83,7 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
 	 */
 	public void setTimeDate(Expression newTimeDate) {
 		eDynamicSet(Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DATE,
-				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE,
-				newTimeDate);
+				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE, newTimeDate);
 	}
 
 	/**
@@ -98,10 +92,8 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Expression getTimeCycle() {
-		return (Expression) eDynamicGet(
-				Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_CYCLE,
-				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE, true,
-				true);
+		return (Expression) eDynamicGet(Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_CYCLE,
+				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE, true, true);
 	}
 
 	/**
@@ -109,10 +101,9 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTimeCycle(Expression newTimeCycle,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newTimeCycle,
-				Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_CYCLE, msgs);
+	public NotificationChain basicSetTimeCycle(Expression newTimeCycle, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newTimeCycle, Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_CYCLE,
+				msgs);
 		return msgs;
 	}
 
@@ -123,8 +114,7 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
 	 */
 	public void setTimeCycle(Expression newTimeCycle) {
 		eDynamicSet(Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_CYCLE,
-				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE,
-				newTimeCycle);
+				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE, newTimeCycle);
 	}
 
 	/**
@@ -133,10 +123,8 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Expression getTimeDuration() {
-		return (Expression) eDynamicGet(
-				Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DURATION,
-				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION,
-				true, true);
+		return (Expression) eDynamicGet(Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DURATION,
+				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION, true, true);
 	}
 
 	/**
@@ -144,10 +132,9 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTimeDuration(Expression newTimeDuration,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newTimeDuration,
-				Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DURATION, msgs);
+	public NotificationChain basicSetTimeDuration(Expression newTimeDuration, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newTimeDuration, Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DURATION,
+				msgs);
 		return msgs;
 	}
 
@@ -158,8 +145,7 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
 	 */
 	public void setTimeDuration(Expression newTimeDuration) {
 		eDynamicSet(Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DURATION,
-				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION,
-				newTimeDuration);
+				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION, newTimeDuration);
 	}
 
 	/**
@@ -168,8 +154,7 @@ public class TimerEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DATE:
 			return basicSetTimeDate(null, msgs);

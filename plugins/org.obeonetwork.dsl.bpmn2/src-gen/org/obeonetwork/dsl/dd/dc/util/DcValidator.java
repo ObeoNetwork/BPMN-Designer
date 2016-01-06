@@ -105,8 +105,8 @@ public class DcValidator extends EObjectValidator {
 	 * @generated
 	 */
 	@Override
-	protected boolean validate(int classifierID, Object value,
-			DiagnosticChain diagnostics, Map<Object, Object> context) {
+	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics,
+			Map<Object, Object> context) {
 		switch (classifierID) {
 		case DcPackage.FONT:
 			return validateFont((Font) value, diagnostics, context);
@@ -124,33 +124,24 @@ public class DcValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateFont(Font font, DiagnosticChain diagnostics,
-			Map<Object, Object> context) {
-		if (!validate_NoCircularContainment((EObject) font, diagnostics,
-				context))
+	public boolean validateFont(Font font, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment((EObject) font, diagnostics, context))
 			return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject) font,
-				diagnostics, context);
+		boolean result = validate_EveryMultiplicityConforms((EObject) font, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryDataValueConforms((EObject) font,
-					diagnostics, context);
+			result &= validate_EveryDataValueConforms((EObject) font, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryReferenceIsContained((EObject) font,
-					diagnostics, context);
+			result &= validate_EveryReferenceIsContained((EObject) font, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryBidirectionalReferenceIsPaired(
-					(EObject) font, diagnostics, context);
+			result &= validate_EveryBidirectionalReferenceIsPaired((EObject) font, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryProxyResolves((EObject) font, diagnostics,
-					context);
+			result &= validate_EveryProxyResolves((EObject) font, diagnostics, context);
 		if (result || diagnostics != null)
 			result &= validate_UniqueID((EObject) font, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryKeyUnique((EObject) font, diagnostics,
-					context);
+			result &= validate_EveryKeyUnique((EObject) font, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryMapEntryUnique((EObject) font, diagnostics,
-					context);
+			result &= validate_EveryMapEntryUnique((EObject) font, diagnostics, context);
 		if (result || diagnostics != null)
 			result &= validateFont_non_negative_size(font, diagnostics, context);
 		return result;
@@ -162,8 +153,7 @@ public class DcValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateFont_non_negative_size(Font font,
-			DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateFont_non_negative_size(Font font, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return font.non_negative_size(diagnostics, context);
 	}
 
@@ -172,10 +162,8 @@ public class DcValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePoint(Point point, DiagnosticChain diagnostics,
-			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject) point, diagnostics,
-				context);
+	public boolean validatePoint(Point point, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject) point, diagnostics, context);
 	}
 
 	/**
@@ -183,10 +171,8 @@ public class DcValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateBounds(Bounds bounds, DiagnosticChain diagnostics,
-			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject) bounds, diagnostics,
-				context);
+	public boolean validateBounds(Bounds bounds, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject) bounds, diagnostics, context);
 	}
 
 	/**

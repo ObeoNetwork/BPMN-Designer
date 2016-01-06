@@ -26,6 +26,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.Font#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.Font#getSize <em>Size</em>}</li>
@@ -34,7 +35,6 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *   <li>{@link org.obeonetwork.dsl.dd.dc.Font#isIsUnderline <em>Is Underline</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.Font#isIsStrikeThrough <em>Is Strike Through</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.dd.dc.DcPackage#getFont()
  * @model
@@ -209,7 +209,6 @@ public interface Font extends CDOObject {
 	 * @model
 	 * @generated
 	 */
-	boolean non_negative_size(DiagnosticChain diagnostics,
-			Map<Object, Object> context);
+	boolean non_negative_size(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Font

@@ -24,10 +24,10 @@ import org.obeonetwork.dsl.bpmn2.Property;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.PropertyImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -67,8 +67,7 @@ public class PropertyImpl extends ItemAwareElementImpl implements Property {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.PROPERTY__NAME,
-				Bpmn2Package.Literals.PROPERTY__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.PROPERTY__NAME, Bpmn2Package.Literals.PROPERTY__NAME, true, true);
 	}
 
 	/**
@@ -77,8 +76,7 @@ public class PropertyImpl extends ItemAwareElementImpl implements Property {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.PROPERTY__NAME,
-				Bpmn2Package.Literals.PROPERTY__NAME, newName);
+		eDynamicSet(Bpmn2Package.PROPERTY__NAME, Bpmn2Package.Literals.PROPERTY__NAME, newName);
 	}
 
 	/**
@@ -134,8 +132,7 @@ public class PropertyImpl extends ItemAwareElementImpl implements Property {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.PROPERTY__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		}
 		return super.eIsSet(featureID);
 	}

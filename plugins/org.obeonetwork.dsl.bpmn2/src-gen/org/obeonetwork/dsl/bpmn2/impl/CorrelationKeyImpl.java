@@ -28,16 +28,15 @@ import org.obeonetwork.dsl.bpmn2.CorrelationProperty;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationKeyImpl#getCorrelationPropertyRef <em>Correlation Property Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationKeyImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class CorrelationKeyImpl extends BaseElementImpl implements
-		CorrelationKey {
+public class CorrelationKeyImpl extends BaseElementImpl implements CorrelationKey {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -74,10 +73,8 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<CorrelationProperty> getCorrelationPropertyRef() {
-		return (EList<CorrelationProperty>) eDynamicGet(
-				Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF,
-				Bpmn2Package.Literals.CORRELATION_KEY__CORRELATION_PROPERTY_REF,
-				true, true);
+		return (EList<CorrelationProperty>) eDynamicGet(Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF,
+				Bpmn2Package.Literals.CORRELATION_KEY__CORRELATION_PROPERTY_REF, true, true);
 	}
 
 	/**
@@ -86,8 +83,8 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.CORRELATION_KEY__NAME,
-				Bpmn2Package.Literals.CORRELATION_KEY__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.CORRELATION_KEY__NAME, Bpmn2Package.Literals.CORRELATION_KEY__NAME,
+				true, true);
 	}
 
 	/**
@@ -96,8 +93,7 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.CORRELATION_KEY__NAME,
-				Bpmn2Package.Literals.CORRELATION_KEY__NAME, newName);
+		eDynamicSet(Bpmn2Package.CORRELATION_KEY__NAME, Bpmn2Package.Literals.CORRELATION_KEY__NAME, newName);
 	}
 
 	/**
@@ -127,8 +123,7 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
 		switch (featureID) {
 		case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
 			getCorrelationPropertyRef().clear();
-			getCorrelationPropertyRef().addAll(
-					(Collection<? extends CorrelationProperty>) newValue);
+			getCorrelationPropertyRef().addAll((Collection<? extends CorrelationProperty>) newValue);
 			return;
 		case Bpmn2Package.CORRELATION_KEY__NAME:
 			setName((String) newValue);
@@ -166,8 +161,7 @@ public class CorrelationKeyImpl extends BaseElementImpl implements
 		case Bpmn2Package.CORRELATION_KEY__CORRELATION_PROPERTY_REF:
 			return !getCorrelationPropertyRef().isEmpty();
 		case Bpmn2Package.CORRELATION_KEY__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		}
 		return super.eIsSet(featureID);
 	}

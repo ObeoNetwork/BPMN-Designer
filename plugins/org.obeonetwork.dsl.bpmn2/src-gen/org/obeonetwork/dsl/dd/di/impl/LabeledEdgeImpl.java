@@ -26,10 +26,10 @@ import org.obeonetwork.dsl.dd.di.LabeledEdge;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.LabeledEdgeImpl#getOwnedLabel <em>Owned Label</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

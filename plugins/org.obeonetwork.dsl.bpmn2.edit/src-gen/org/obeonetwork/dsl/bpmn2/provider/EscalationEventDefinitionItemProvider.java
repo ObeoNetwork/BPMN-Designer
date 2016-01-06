@@ -37,9 +37,8 @@ import org.obeonetwork.dsl.bpmn2.EscalationEventDefinition;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EscalationEventDefinitionItemProvider extends
-		EventDefinitionItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider,
+public class EscalationEventDefinitionItemProvider extends EventDefinitionItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
 		IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -74,18 +73,13 @@ public class EscalationEventDefinitionItemProvider extends
 	 * @generated
 	 */
 	protected void addEscalationRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_EscalationEventDefinition_escalationRef_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_EscalationEventDefinition_escalationRef_feature",
-								"_UI_EscalationEventDefinition_type"),
-						Bpmn2Package.Literals.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
-						true, false, true, null, null, null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_EscalationEventDefinition_escalationRef_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_EscalationEventDefinition_escalationRef_feature",
+						"_UI_EscalationEventDefinition_type"),
+				Bpmn2Package.Literals.ESCALATION_EVENT_DEFINITION__ESCALATION_REF, true, false, true, null, null,
+				null));
 	}
 
 	/**
@@ -97,15 +91,9 @@ public class EscalationEventDefinitionItemProvider extends
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/EscalationEventDefinition.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/EscalationEventDefinition.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/EscalationEventDefinition.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/EscalationEventDefinition.gif"));
 		}
 	}
 
@@ -153,8 +141,7 @@ public class EscalationEventDefinitionItemProvider extends
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

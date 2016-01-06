@@ -28,16 +28,15 @@ import org.obeonetwork.dsl.bpmn2.ItemDefinition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ItemAwareElementImpl#getItemSubjectRef <em>Item Subject Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ItemAwareElementImpl#getDataState <em>Data State</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ItemAwareElementImpl extends BaseElementImpl implements
-		ItemAwareElement {
+public class ItemAwareElementImpl extends BaseElementImpl implements ItemAwareElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,10 +62,8 @@ public class ItemAwareElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public ItemDefinition getItemSubjectRef() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
-				true, true);
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, true, true);
 	}
 
 	/**
@@ -75,10 +72,8 @@ public class ItemAwareElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public ItemDefinition basicGetItemSubjectRef() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
-				false, true);
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, false, true);
 	}
 
 	/**
@@ -88,8 +83,7 @@ public class ItemAwareElementImpl extends BaseElementImpl implements
 	 */
 	public void setItemSubjectRef(ItemDefinition newItemSubjectRef) {
 		eDynamicSet(Bpmn2Package.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
-				newItemSubjectRef);
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, newItemSubjectRef);
 	}
 
 	/**
@@ -98,10 +92,8 @@ public class ItemAwareElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public DataState getDataState() {
-		return (DataState) eDynamicGet(
-				Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE, true,
-				true);
+		return (DataState) eDynamicGet(Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE,
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE, true, true);
 	}
 
 	/**
@@ -109,10 +101,8 @@ public class ItemAwareElementImpl extends BaseElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDataState(DataState newDataState,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newDataState,
-				Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE, msgs);
+	public NotificationChain basicSetDataState(DataState newDataState, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newDataState, Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE, msgs);
 		return msgs;
 	}
 
@@ -122,8 +112,7 @@ public class ItemAwareElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setDataState(DataState newDataState) {
-		eDynamicSet(Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE,
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE,
+		eDynamicSet(Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE, Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE,
 				newDataState);
 	}
 
@@ -133,8 +122,7 @@ public class ItemAwareElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.ITEM_AWARE_ELEMENT__DATA_STATE:
 			return basicSetDataState(null, msgs);

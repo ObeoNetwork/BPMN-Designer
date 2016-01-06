@@ -26,12 +26,12 @@ import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.AssociationImpl#getAssociationDirection <em>Association Direction</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.AssociationImpl#getSourceRef <em>Source Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.AssociationImpl#getTargetRef <em>Target Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -71,10 +71,8 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	 * @generated
 	 */
 	public AssociationDirection getAssociationDirection() {
-		return (AssociationDirection) eDynamicGet(
-				Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION,
-				Bpmn2Package.Literals.ASSOCIATION__ASSOCIATION_DIRECTION, true,
-				true);
+		return (AssociationDirection) eDynamicGet(Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION,
+				Bpmn2Package.Literals.ASSOCIATION__ASSOCIATION_DIRECTION, true, true);
 	}
 
 	/**
@@ -82,11 +80,9 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAssociationDirection(
-			AssociationDirection newAssociationDirection) {
+	public void setAssociationDirection(AssociationDirection newAssociationDirection) {
 		eDynamicSet(Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION,
-				Bpmn2Package.Literals.ASSOCIATION__ASSOCIATION_DIRECTION,
-				newAssociationDirection);
+				Bpmn2Package.Literals.ASSOCIATION__ASSOCIATION_DIRECTION, newAssociationDirection);
 	}
 
 	/**
@@ -115,8 +111,7 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	 * @generated
 	 */
 	public void setSourceRef(BaseElement newSourceRef) {
-		eDynamicSet(Bpmn2Package.ASSOCIATION__SOURCE_REF,
-				Bpmn2Package.Literals.ASSOCIATION__SOURCE_REF, newSourceRef);
+		eDynamicSet(Bpmn2Package.ASSOCIATION__SOURCE_REF, Bpmn2Package.Literals.ASSOCIATION__SOURCE_REF, newSourceRef);
 	}
 
 	/**
@@ -145,8 +140,7 @@ public class AssociationImpl extends ArtifactImpl implements Association {
 	 * @generated
 	 */
 	public void setTargetRef(BaseElement newTargetRef) {
-		eDynamicSet(Bpmn2Package.ASSOCIATION__TARGET_REF,
-				Bpmn2Package.Literals.ASSOCIATION__TARGET_REF, newTargetRef);
+		eDynamicSet(Bpmn2Package.ASSOCIATION__TARGET_REF, Bpmn2Package.Literals.ASSOCIATION__TARGET_REF, newTargetRef);
 	}
 
 	/**

@@ -23,12 +23,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.FormalExpression#getLanguage <em>Language</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.FormalExpression#getBody <em>Body</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.FormalExpression#getEvaluatesToTypeRef <em>Evaluates To Type Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getFormalExpression()
  * @model

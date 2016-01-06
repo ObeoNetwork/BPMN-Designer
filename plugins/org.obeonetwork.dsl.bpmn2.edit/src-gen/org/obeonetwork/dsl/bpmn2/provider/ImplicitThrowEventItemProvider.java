@@ -35,9 +35,8 @@ import org.obeonetwork.dsl.bpmn2.ImplicitThrowEvent;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ImplicitThrowEventItemProvider extends ThrowEventItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ImplicitThrowEventItemProvider extends ThrowEventItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -72,15 +71,9 @@ public class ImplicitThrowEventItemProvider extends ThrowEventItemProvider
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ImplicitThrowEvent.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ImplicitThrowEvent.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ImplicitThrowEvent.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ImplicitThrowEvent.gif"));
 		}
 	}
 
@@ -128,8 +121,7 @@ public class ImplicitThrowEventItemProvider extends ThrowEventItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

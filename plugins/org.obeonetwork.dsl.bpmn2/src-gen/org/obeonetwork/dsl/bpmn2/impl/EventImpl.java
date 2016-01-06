@@ -33,12 +33,12 @@ import org.obeonetwork.dsl.bpmn2.Property;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.EventImpl#getIncomingConversationLinks <em>Incoming Conversation Links</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.EventImpl#getOutgoingConversationLinks <em>Outgoing Conversation Links</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.EventImpl#getProperties <em>Properties</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -69,10 +69,8 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getIncomingConversationLinks() {
-		return (EList<ConversationLink>) eDynamicGet(
-				Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS,
-				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
-				true, true);
+		return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, true);
 	}
 
 	/**
@@ -82,10 +80,8 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getOutgoingConversationLinks() {
-		return (EList<ConversationLink>) eDynamicGet(
-				Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS,
-				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
-				true, true);
+		return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, true);
 	}
 
 	/**
@@ -95,8 +91,8 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Property> getProperties() {
-		return (EList<Property>) eDynamicGet(Bpmn2Package.EVENT__PROPERTIES,
-				Bpmn2Package.Literals.EVENT__PROPERTIES, true, true);
+		return (EList<Property>) eDynamicGet(Bpmn2Package.EVENT__PROPERTIES, Bpmn2Package.Literals.EVENT__PROPERTIES,
+				true, true);
 	}
 
 	/**
@@ -106,8 +102,7 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks())
@@ -125,18 +120,14 @@ public abstract class EventImpl extends FlowNodeImpl implements Event {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.EVENT__INCOMING_CONVERSATION_LINKS:
-			return ((InternalEList<?>) getIncomingConversationLinks())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.EVENT__OUTGOING_CONVERSATION_LINKS:
-			return ((InternalEList<?>) getOutgoingConversationLinks())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.EVENT__PROPERTIES:
-			return ((InternalEList<?>) getProperties()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getProperties()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

@@ -102,26 +102,24 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
 	 */
 	public static DcPackage init() {
 		if (isInited)
-			return (DcPackage) EPackage.Registry.INSTANCE
-					.getEPackage(DcPackage.eNS_URI);
+			return (DcPackage) EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI);
 
 		// Obtain or create and register package
-		DcPackageImpl theDcPackage = (DcPackageImpl) (EPackage.Registry.INSTANCE
-				.get(eNS_URI) instanceof DcPackageImpl ? EPackage.Registry.INSTANCE
-				.get(eNS_URI) : new DcPackageImpl());
+		DcPackageImpl theDcPackage = (DcPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DcPackageImpl
+				? EPackage.Registry.INSTANCE.get(eNS_URI) : new DcPackageImpl());
 
 		isInited = true;
 
 		// Obtain or create and register interdependencies
 		Bpmn2PackageImpl theBpmn2Package = (Bpmn2PackageImpl) (EPackage.Registry.INSTANCE
-				.getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl ? EPackage.Registry.INSTANCE
-				.getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
+				.getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl
+						? EPackage.Registry.INSTANCE.getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
 		BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl) (EPackage.Registry.INSTANCE
-				.getEPackage(BpmnDiPackage.eNS_URI) instanceof BpmnDiPackageImpl ? EPackage.Registry.INSTANCE
-				.getEPackage(BpmnDiPackage.eNS_URI) : BpmnDiPackage.eINSTANCE);
+				.getEPackage(BpmnDiPackage.eNS_URI) instanceof BpmnDiPackageImpl
+						? EPackage.Registry.INSTANCE.getEPackage(BpmnDiPackage.eNS_URI) : BpmnDiPackage.eINSTANCE);
 		DiPackageImpl theDiPackage = (DiPackageImpl) (EPackage.Registry.INSTANCE
-				.getEPackage(DiPackage.eNS_URI) instanceof DiPackageImpl ? EPackage.Registry.INSTANCE
-				.getEPackage(DiPackage.eNS_URI) : DiPackage.eINSTANCE);
+				.getEPackage(DiPackage.eNS_URI) instanceof DiPackageImpl
+						? EPackage.Registry.INSTANCE.getEPackage(DiPackage.eNS_URI) : DiPackage.eINSTANCE);
 
 		// Load packages
 		theBpmn2Package.loadPackage();
@@ -140,12 +138,11 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
 		theBpmn2Package.fixPackageContents();
 
 		// Register package validator
-		EValidator.Registry.INSTANCE.put(theDcPackage,
-				new EValidator.Descriptor() {
-					public EValidator getEValidator() {
-						return DcValidator.INSTANCE;
-					}
-				});
+		EValidator.Registry.INSTANCE.put(theDcPackage, new EValidator.Descriptor() {
+			public EValidator getEValidator() {
+				return DcValidator.INSTANCE;
+			}
+		});
 
 		// Mark meta-data to indicate it can't be changed
 		theDcPackage.freeze();
@@ -369,35 +366,26 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
 		// Add supertypes to classes
 
 		// Initialize classes and features; add operations and parameters
-		initEClass(fontEClass, Font.class, "Font", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFont_Name(), ecorePackage.getEString(), "name", null,
-				0, 1, Font.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFont_Size(), ecorePackage.getEFloat(), "size", null,
-				0, 1, Font.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFont_IsBold(), ecorePackage.getEBoolean(), "isBold",
-				null, 0, 1, Font.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+		initEClass(fontEClass, Font.class, "Font", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFont_Name(), ecorePackage.getEString(), "name", null, 0, 1, Font.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFont_Size(), ecorePackage.getEFloat(), "size", null, 0, 1, Font.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFont_IsBold(), ecorePackage.getEBoolean(), "isBold", null, 0, 1, Font.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFont_IsItalic(), ecorePackage.getEBoolean(), "isItalic", null, 0, 1, Font.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
 				!IS_ORDERED);
-		initEAttribute(getFont_IsItalic(), ecorePackage.getEBoolean(),
-				"isItalic", null, 0, 1, Font.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFont_IsUnderline(), ecorePackage.getEBoolean(),
-				"isUnderline", null, 0, 1, Font.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFont_IsStrikeThrough(), ecorePackage.getEBoolean(),
-				"isStrikeThrough", null, 0, 1, Font.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFont_IsUnderline(), ecorePackage.getEBoolean(), "isUnderline", null, 0, 1, Font.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEAttribute(getFont_IsStrikeThrough(), ecorePackage.getEBoolean(), "isStrikeThrough", null, 0, 1, Font.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
-		EOperation op = addEOperation(fontEClass, ecorePackage.getEBoolean(),
-				"non_negative_size", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0,
-				1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = addEOperation(fontEClass, ecorePackage.getEBoolean(), "non_negative_size", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(ecorePackage.getEMap());
 		EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
 		g1.getETypeArguments().add(g2);
@@ -405,31 +393,21 @@ public class DcPackageImpl extends EPackageImpl implements DcPackage {
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(pointEClass, Point.class, "Point", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPoint_X(), ecorePackage.getEFloat(), "x", "0", 1, 1,
-				Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPoint_Y(), ecorePackage.getEFloat(), "y", "0", 1, 1,
-				Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(pointEClass, Point.class, "Point", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPoint_X(), ecorePackage.getEFloat(), "x", "0", 1, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPoint_Y(), ecorePackage.getEFloat(), "y", "0", 1, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(boundsEClass, Bounds.class, "Bounds", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBounds_X(), ecorePackage.getEFloat(), "x", "0", 1, 1,
-				Bounds.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBounds_Y(), ecorePackage.getEFloat(), "y", "0", 1, 1,
-				Bounds.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBounds_Width(), ecorePackage.getEFloat(), "width",
-				null, 1, 1, Bounds.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
-		initEAttribute(getBounds_Height(), ecorePackage.getEFloat(), "height",
-				null, 1, 1, Bounds.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
+		initEClass(boundsEClass, Bounds.class, "Bounds", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBounds_X(), ecorePackage.getEFloat(), "x", "0", 1, 1, Bounds.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBounds_Y(), ecorePackage.getEFloat(), "y", "0", 1, 1, Bounds.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBounds_Width(), ecorePackage.getEFloat(), "width", null, 1, 1, Bounds.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBounds_Height(), ecorePackage.getEFloat(), "height", null, 1, 1, Bounds.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

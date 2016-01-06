@@ -29,6 +29,7 @@ import org.obeonetwork.dsl.bpmn2.Operation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.OperationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.OperationImpl#getInMessageRef <em>In Message Ref</em>}</li>
@@ -36,7 +37,6 @@ import org.obeonetwork.dsl.bpmn2.Operation;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.OperationImpl#getErrorRefs <em>Error Refs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.OperationImpl#getImplementationRef <em>Implementation Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -76,8 +76,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.OPERATION__NAME,
-				Bpmn2Package.Literals.OPERATION__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.OPERATION__NAME, Bpmn2Package.Literals.OPERATION__NAME, true, true);
 	}
 
 	/**
@@ -86,8 +85,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.OPERATION__NAME,
-				Bpmn2Package.Literals.OPERATION__NAME, newName);
+		eDynamicSet(Bpmn2Package.OPERATION__NAME, Bpmn2Package.Literals.OPERATION__NAME, newName);
 	}
 
 	/**
@@ -116,8 +114,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public void setInMessageRef(Message newInMessageRef) {
-		eDynamicSet(Bpmn2Package.OPERATION__IN_MESSAGE_REF,
-				Bpmn2Package.Literals.OPERATION__IN_MESSAGE_REF,
+		eDynamicSet(Bpmn2Package.OPERATION__IN_MESSAGE_REF, Bpmn2Package.Literals.OPERATION__IN_MESSAGE_REF,
 				newInMessageRef);
 	}
 
@@ -147,8 +144,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public void setOutMessageRef(Message newOutMessageRef) {
-		eDynamicSet(Bpmn2Package.OPERATION__OUT_MESSAGE_REF,
-				Bpmn2Package.Literals.OPERATION__OUT_MESSAGE_REF,
+		eDynamicSet(Bpmn2Package.OPERATION__OUT_MESSAGE_REF, Bpmn2Package.Literals.OPERATION__OUT_MESSAGE_REF,
 				newOutMessageRef);
 	}
 
@@ -159,8 +155,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<org.obeonetwork.dsl.bpmn2.Error> getErrorRefs() {
-		return (EList<org.obeonetwork.dsl.bpmn2.Error>) eDynamicGet(
-				Bpmn2Package.OPERATION__ERROR_REFS,
+		return (EList<org.obeonetwork.dsl.bpmn2.Error>) eDynamicGet(Bpmn2Package.OPERATION__ERROR_REFS,
 				Bpmn2Package.Literals.OPERATION__ERROR_REFS, true, true);
 	}
 
@@ -170,8 +165,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public EObject getImplementationRef() {
-		return (EObject) eDynamicGet(
-				Bpmn2Package.OPERATION__IMPLEMENTATION_REF,
+		return (EObject) eDynamicGet(Bpmn2Package.OPERATION__IMPLEMENTATION_REF,
 				Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF, true, true);
 	}
 
@@ -181,10 +175,8 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public EObject basicGetImplementationRef() {
-		return (EObject) eDynamicGet(
-				Bpmn2Package.OPERATION__IMPLEMENTATION_REF,
-				Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF, false,
-				true);
+		return (EObject) eDynamicGet(Bpmn2Package.OPERATION__IMPLEMENTATION_REF,
+				Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF, false, true);
 	}
 
 	/**
@@ -193,8 +185,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	 * @generated
 	 */
 	public void setImplementationRef(EObject newImplementationRef) {
-		eDynamicSet(Bpmn2Package.OPERATION__IMPLEMENTATION_REF,
-				Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF,
+		eDynamicSet(Bpmn2Package.OPERATION__IMPLEMENTATION_REF, Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF,
 				newImplementationRef);
 	}
 
@@ -246,8 +237,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 			return;
 		case Bpmn2Package.OPERATION__ERROR_REFS:
 			getErrorRefs().clear();
-			getErrorRefs()
-					.addAll((Collection<? extends org.obeonetwork.dsl.bpmn2.Error>) newValue);
+			getErrorRefs().addAll((Collection<? extends org.obeonetwork.dsl.bpmn2.Error>) newValue);
 			return;
 		case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
 			setImplementationRef((EObject) newValue);
@@ -292,8 +282,7 @@ public class OperationImpl extends BaseElementImpl implements Operation {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.OPERATION__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
 			return basicGetInMessageRef() != null;
 		case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:

@@ -23,13 +23,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.InputOutputSpecification#getInputSets <em>Input Sets</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.InputOutputSpecification#getOutputSets <em>Output Sets</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.InputOutputSpecification#getDataInputs <em>Data Inputs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.InputOutputSpecification#getDataOutputs <em>Data Outputs</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getInputOutputSpecification()
  * @model

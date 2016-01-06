@@ -31,11 +31,11 @@ import org.obeonetwork.dsl.bpmn2.LaneSet;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.LaneSetImpl#getLanes <em>Lanes</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.LaneSetImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -76,8 +76,8 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Lane> getLanes() {
-		return (EList<Lane>) eDynamicGet(Bpmn2Package.LANE_SET__LANES,
-				Bpmn2Package.Literals.LANE_SET__LANES, true, true);
+		return (EList<Lane>) eDynamicGet(Bpmn2Package.LANE_SET__LANES, Bpmn2Package.Literals.LANE_SET__LANES, true,
+				true);
 	}
 
 	/**
@@ -86,8 +86,7 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.LANE_SET__NAME,
-				Bpmn2Package.Literals.LANE_SET__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.LANE_SET__NAME, Bpmn2Package.Literals.LANE_SET__NAME, true, true);
 	}
 
 	/**
@@ -96,8 +95,7 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.LANE_SET__NAME,
-				Bpmn2Package.Literals.LANE_SET__NAME, newName);
+		eDynamicSet(Bpmn2Package.LANE_SET__NAME, Bpmn2Package.Literals.LANE_SET__NAME, newName);
 	}
 
 	/**
@@ -106,8 +104,7 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.LANE_SET__LANES:
 			return ((InternalEList<?>) getLanes()).basicRemove(otherEnd, msgs);
@@ -180,8 +177,7 @@ public class LaneSetImpl extends BaseElementImpl implements LaneSet {
 		case Bpmn2Package.LANE_SET__LANES:
 			return !getLanes().isEmpty();
 		case Bpmn2Package.LANE_SET__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		}
 		return super.eIsSet(featureID);
 	}

@@ -24,15 +24,14 @@ import org.obeonetwork.dsl.bpmn2.GlobalBusinessRuleTask;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.GlobalBusinessRuleTaskImpl#getImplementation <em>Implementation</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class GlobalBusinessRuleTaskImpl extends GlobalTaskImpl implements
-		GlobalBusinessRuleTask {
+public class GlobalBusinessRuleTaskImpl extends GlobalTaskImpl implements GlobalBusinessRuleTask {
 	/**
 	 * The default value of the '{@link #getImplementation() <em>Implementation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -68,10 +67,8 @@ public class GlobalBusinessRuleTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	public String getImplementation() {
-		return (String) eDynamicGet(
-				Bpmn2Package.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION,
-				Bpmn2Package.Literals.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION,
-				true, true);
+		return (String) eDynamicGet(Bpmn2Package.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION, true, true);
 	}
 
 	/**
@@ -80,10 +77,8 @@ public class GlobalBusinessRuleTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	public void setImplementation(String newImplementation) {
-		eDynamicSet(
-				Bpmn2Package.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION,
-				Bpmn2Package.Literals.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION,
-				newImplementation);
+		eDynamicSet(Bpmn2Package.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION, newImplementation);
 	}
 
 	/**

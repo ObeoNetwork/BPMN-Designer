@@ -25,10 +25,10 @@ import org.obeonetwork.dsl.bpmn2.CallableElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CallActivityImpl#getCalledElementRef <em>Called Element Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -58,10 +58,8 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
 	 * @generated
 	 */
 	public CallableElement getCalledElementRef() {
-		return (CallableElement) eDynamicGet(
-				Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
-				Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, true,
-				true);
+		return (CallableElement) eDynamicGet(Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
+				Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, true, true);
 	}
 
 	/**
@@ -70,10 +68,8 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
 	 * @generated
 	 */
 	public CallableElement basicGetCalledElementRef() {
-		return (CallableElement) eDynamicGet(
-				Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
-				Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, false,
-				true);
+		return (CallableElement) eDynamicGet(Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
+				Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, false, true);
 	}
 
 	/**
@@ -83,8 +79,7 @@ public class CallActivityImpl extends ActivityImpl implements CallActivity {
 	 */
 	public void setCalledElementRef(CallableElement newCalledElementRef) {
 		eDynamicSet(Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
-				Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF,
-				newCalledElementRef);
+				Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, newCalledElementRef);
 	}
 
 	/**

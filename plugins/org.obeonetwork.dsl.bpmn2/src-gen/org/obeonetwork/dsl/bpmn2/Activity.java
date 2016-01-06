@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Activity#isIsForCompensation <em>Is For Compensation</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Activity#getLoopCharacteristics <em>Loop Characteristics</em>}</li>
@@ -36,7 +37,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Activity#getStartQuantity <em>Start Quantity</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Activity#getCompletionQuantity <em>Completion Quantity</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getActivity()
  * @model abstract="true"

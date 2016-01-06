@@ -42,9 +42,8 @@ import org.obeonetwork.dsl.bpmn2.ChoreographyActivity;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ChoreographyActivityItemProvider extends FlowNodeItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ChoreographyActivityItemProvider extends FlowNodeItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -80,16 +79,12 @@ public class ChoreographyActivityItemProvider extends FlowNodeItemProvider
 	 * @generated
 	 */
 	protected void addParticipantRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ChoreographyActivity_participantRefs_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ChoreographyActivity_participantRefs_feature",
-						"_UI_ChoreographyActivity_type"),
-				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS,
-				true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ChoreographyActivity_participantRefs_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_ChoreographyActivity_participantRefs_feature", "_UI_ChoreographyActivity_type"),
+				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -99,18 +94,13 @@ public class ChoreographyActivityItemProvider extends FlowNodeItemProvider
 	 * @generated
 	 */
 	protected void addInitiatingParticipantRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_ChoreographyActivity_initiatingParticipantRef_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_ChoreographyActivity_initiatingParticipantRef_feature",
-								"_UI_ChoreographyActivity_type"),
-						Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF,
-						true, false, true, null, null, null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ChoreographyActivity_initiatingParticipantRef_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_ChoreographyActivity_initiatingParticipantRef_feature", "_UI_ChoreographyActivity_type"),
+				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__INITIATING_PARTICIPANT_REF, true, false, true, null, null,
+				null));
 	}
 
 	/**
@@ -121,16 +111,12 @@ public class ChoreographyActivityItemProvider extends FlowNodeItemProvider
 	 */
 	protected void addLoopTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_ChoreographyActivity_loopType_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ChoreographyActivity_loopType_feature",
+				getString("_UI_PropertyDescriptor_description", "_UI_ChoreographyActivity_loopType_feature",
 						"_UI_ChoreographyActivity_type"),
-				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE, true,
-				false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
-				null));
+				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -142,12 +128,10 @@ public class ChoreographyActivityItemProvider extends FlowNodeItemProvider
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS);
+			childrenFeatures.add(Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS);
 		}
 		return childrenFeatures;
 	}
@@ -201,12 +185,10 @@ public class ChoreographyActivityItemProvider extends FlowNodeItemProvider
 
 		switch (notification.getFeatureID(ChoreographyActivity.class)) {
 		case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -220,12 +202,10 @@ public class ChoreographyActivityItemProvider extends FlowNodeItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS,
 				Bpmn2Factory.eINSTANCE.createCorrelationKey()));
 	}
 

@@ -29,13 +29,13 @@ import org.obeonetwork.dsl.bpmn2.RelationshipDirection;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.RelationshipImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.RelationshipImpl#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.RelationshipImpl#getSources <em>Sources</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.RelationshipImpl#getTargets <em>Targets</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -84,8 +84,8 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	 * @generated
 	 */
 	public String getType() {
-		return (String) eDynamicGet(Bpmn2Package.RELATIONSHIP__TYPE,
-				Bpmn2Package.Literals.RELATIONSHIP__TYPE, true, true);
+		return (String) eDynamicGet(Bpmn2Package.RELATIONSHIP__TYPE, Bpmn2Package.Literals.RELATIONSHIP__TYPE, true,
+				true);
 	}
 
 	/**
@@ -94,8 +94,7 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	 * @generated
 	 */
 	public void setType(String newType) {
-		eDynamicSet(Bpmn2Package.RELATIONSHIP__TYPE,
-				Bpmn2Package.Literals.RELATIONSHIP__TYPE, newType);
+		eDynamicSet(Bpmn2Package.RELATIONSHIP__TYPE, Bpmn2Package.Literals.RELATIONSHIP__TYPE, newType);
 	}
 
 	/**
@@ -104,8 +103,7 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	 * @generated
 	 */
 	public RelationshipDirection getDirection() {
-		return (RelationshipDirection) eDynamicGet(
-				Bpmn2Package.RELATIONSHIP__DIRECTION,
+		return (RelationshipDirection) eDynamicGet(Bpmn2Package.RELATIONSHIP__DIRECTION,
 				Bpmn2Package.Literals.RELATIONSHIP__DIRECTION, true, true);
 	}
 
@@ -115,8 +113,7 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	 * @generated
 	 */
 	public void setDirection(RelationshipDirection newDirection) {
-		eDynamicSet(Bpmn2Package.RELATIONSHIP__DIRECTION,
-				Bpmn2Package.Literals.RELATIONSHIP__DIRECTION, newDirection);
+		eDynamicSet(Bpmn2Package.RELATIONSHIP__DIRECTION, Bpmn2Package.Literals.RELATIONSHIP__DIRECTION, newDirection);
 	}
 
 	/**
@@ -221,8 +218,7 @@ public class RelationshipImpl extends BaseElementImpl implements Relationship {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.RELATIONSHIP__TYPE:
-			return TYPE_EDEFAULT == null ? getType() != null : !TYPE_EDEFAULT
-					.equals(getType());
+			return TYPE_EDEFAULT == null ? getType() != null : !TYPE_EDEFAULT.equals(getType());
 		case Bpmn2Package.RELATIONSHIP__DIRECTION:
 			return getDirection() != DIRECTION_EDEFAULT;
 		case Bpmn2Package.RELATIONSHIP__SOURCES:

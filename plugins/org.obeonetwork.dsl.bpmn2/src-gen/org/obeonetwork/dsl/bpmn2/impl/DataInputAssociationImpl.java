@@ -22,13 +22,10 @@ import org.obeonetwork.dsl.bpmn2.DataInputAssociation;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Data Input Association</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public class DataInputAssociationImpl extends DataAssociationImpl implements
-		DataInputAssociation {
+public class DataInputAssociationImpl extends DataAssociationImpl implements DataInputAssociation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

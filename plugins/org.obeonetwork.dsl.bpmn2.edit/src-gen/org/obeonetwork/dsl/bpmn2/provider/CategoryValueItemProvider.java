@@ -39,9 +39,8 @@ import org.obeonetwork.dsl.bpmn2.CategoryValue;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CategoryValueItemProvider extends BaseElementItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class CategoryValueItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -76,16 +75,13 @@ public class CategoryValueItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	protected void addValuePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_CategoryValue_value_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_CategoryValue_value_feature",
-						"_UI_CategoryValue_type"),
-				Bpmn2Package.Literals.CATEGORY_VALUE__VALUE, true, false,
-				false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_CategoryValue_value_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_CategoryValue_value_feature",
+								"_UI_CategoryValue_type"),
+						Bpmn2Package.Literals.CATEGORY_VALUE__VALUE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -96,17 +92,11 @@ public class CategoryValueItemProvider extends BaseElementItemProvider
 	 */
 	protected void addCategorizedFlowElementsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_CategoryValue_categorizedFlowElements_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_CategoryValue_categorizedFlowElements_feature",
-								"_UI_CategoryValue_type"),
-						Bpmn2Package.Literals.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS,
-						true, false, true, null, null, null));
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_CategoryValue_categorizedFlowElements_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_CategoryValue_categorizedFlowElements_feature", "_UI_CategoryValue_type"),
+				Bpmn2Package.Literals.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -118,15 +108,9 @@ public class CategoryValueItemProvider extends BaseElementItemProvider
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/CategoryValue.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/CategoryValue.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/CategoryValue.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/CategoryValue.gif"));
 		}
 	}
 
@@ -166,8 +150,7 @@ public class CategoryValueItemProvider extends BaseElementItemProvider
 
 		switch (notification.getFeatureID(CategoryValue.class)) {
 		case Bpmn2Package.CATEGORY_VALUE__VALUE:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -181,8 +164,7 @@ public class CategoryValueItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

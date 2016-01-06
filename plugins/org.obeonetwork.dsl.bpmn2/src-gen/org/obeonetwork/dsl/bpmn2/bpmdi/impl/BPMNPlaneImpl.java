@@ -29,10 +29,10 @@ import org.obeonetwork.dsl.dd.di.impl.PlaneImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.impl.BPMNPlaneImpl#getBpmnElement <em>Bpmn Element</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,8 +62,7 @@ public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
 	 * @generated
 	 */
 	public BaseElement getBpmnElement() {
-		return (BaseElement) eDynamicGet(
-				BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT,
+		return (BaseElement) eDynamicGet(BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT,
 				BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, true, true);
 	}
 
@@ -73,8 +72,7 @@ public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
 	 * @generated
 	 */
 	public BaseElement basicGetBpmnElement() {
-		return (BaseElement) eDynamicGet(
-				BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT,
+		return (BaseElement) eDynamicGet(BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT,
 				BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, false, true);
 	}
 
@@ -84,8 +82,8 @@ public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
 	 * @generated
 	 */
 	public void setBpmnElement(BaseElement newBpmnElement) {
-		eDynamicSet(BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT,
-				BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, newBpmnElement);
+		eDynamicSet(BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT, BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT,
+				newBpmnElement);
 	}
 
 	/**

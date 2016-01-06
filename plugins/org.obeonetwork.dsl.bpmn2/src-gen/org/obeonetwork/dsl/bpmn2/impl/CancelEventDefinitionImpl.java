@@ -22,13 +22,10 @@ import org.obeonetwork.dsl.bpmn2.CancelEventDefinition;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Cancel Event Definition</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public class CancelEventDefinitionImpl extends EventDefinitionImpl implements
-		CancelEventDefinition {
+public class CancelEventDefinitionImpl extends EventDefinitionImpl implements CancelEventDefinition {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

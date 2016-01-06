@@ -41,9 +41,8 @@ import org.obeonetwork.dsl.bpmn2.CorrelationPropertyBinding;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CorrelationPropertyBindingItemProvider extends
-		BaseElementItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider,
+public class CorrelationPropertyBindingItemProvider extends BaseElementItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
 		IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -78,18 +77,14 @@ public class CorrelationPropertyBindingItemProvider extends
 	 * @generated
 	 */
 	protected void addCorrelationPropertyRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_CorrelationPropertyBinding_correlationPropertyRef_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_CorrelationPropertyBinding_correlationPropertyRef_feature",
-								"_UI_CorrelationPropertyBinding_type"),
-						Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
-						true, false, true, null, null, null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_CorrelationPropertyBinding_correlationPropertyRef_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_CorrelationPropertyBinding_correlationPropertyRef_feature",
+						"_UI_CorrelationPropertyBinding_type"),
+				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF, true, false, true, null,
+				null, null));
 	}
 
 	/**
@@ -101,12 +96,10 @@ public class CorrelationPropertyBindingItemProvider extends
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH);
+			childrenFeatures.add(Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH);
 		}
 		return childrenFeatures;
 	}
@@ -133,15 +126,9 @@ public class CorrelationPropertyBindingItemProvider extends
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/CorrelationPropertyBinding.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/CorrelationPropertyBinding.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/CorrelationPropertyBinding.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/CorrelationPropertyBinding.gif"));
 		}
 	}
 
@@ -165,8 +152,7 @@ public class CorrelationPropertyBindingItemProvider extends
 	public String getText(Object object) {
 		String label = ((CorrelationPropertyBinding) object).getId();
 		return label == null || label.length() == 0 ? getString("_UI_CorrelationPropertyBinding_type")
-				: getString("_UI_CorrelationPropertyBinding_type") + " "
-						+ label;
+				: getString("_UI_CorrelationPropertyBinding_type") + " " + label;
 	}
 
 	/**
@@ -182,8 +168,7 @@ public class CorrelationPropertyBindingItemProvider extends
 
 		switch (notification.getFeatureID(CorrelationPropertyBinding.class)) {
 		case Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -197,12 +182,10 @@ public class CorrelationPropertyBindingItemProvider extends
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH,
 				Bpmn2Factory.eINSTANCE.createFormalExpression()));
 	}
 

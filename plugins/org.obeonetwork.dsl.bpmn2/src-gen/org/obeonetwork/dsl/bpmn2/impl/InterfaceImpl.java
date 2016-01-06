@@ -32,12 +32,12 @@ import org.obeonetwork.dsl.bpmn2.Operation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InterfaceImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InterfaceImpl#getOperations <em>Operations</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InterfaceImpl#getImplementationRef <em>Implementation Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -77,8 +77,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.INTERFACE__NAME,
-				Bpmn2Package.Literals.INTERFACE__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.INTERFACE__NAME, Bpmn2Package.Literals.INTERFACE__NAME, true, true);
 	}
 
 	/**
@@ -87,8 +86,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.INTERFACE__NAME,
-				Bpmn2Package.Literals.INTERFACE__NAME, newName);
+		eDynamicSet(Bpmn2Package.INTERFACE__NAME, Bpmn2Package.Literals.INTERFACE__NAME, newName);
 	}
 
 	/**
@@ -98,8 +96,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Operation> getOperations() {
-		return (EList<Operation>) eDynamicGet(
-				Bpmn2Package.INTERFACE__OPERATIONS,
+		return (EList<Operation>) eDynamicGet(Bpmn2Package.INTERFACE__OPERATIONS,
 				Bpmn2Package.Literals.INTERFACE__OPERATIONS, true, true);
 	}
 
@@ -109,8 +106,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public EObject getImplementationRef() {
-		return (EObject) eDynamicGet(
-				Bpmn2Package.INTERFACE__IMPLEMENTATION_REF,
+		return (EObject) eDynamicGet(Bpmn2Package.INTERFACE__IMPLEMENTATION_REF,
 				Bpmn2Package.Literals.INTERFACE__IMPLEMENTATION_REF, true, true);
 	}
 
@@ -120,10 +116,8 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public EObject basicGetImplementationRef() {
-		return (EObject) eDynamicGet(
-				Bpmn2Package.INTERFACE__IMPLEMENTATION_REF,
-				Bpmn2Package.Literals.INTERFACE__IMPLEMENTATION_REF, false,
-				true);
+		return (EObject) eDynamicGet(Bpmn2Package.INTERFACE__IMPLEMENTATION_REF,
+				Bpmn2Package.Literals.INTERFACE__IMPLEMENTATION_REF, false, true);
 	}
 
 	/**
@@ -132,8 +126,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	public void setImplementationRef(EObject newImplementationRef) {
-		eDynamicSet(Bpmn2Package.INTERFACE__IMPLEMENTATION_REF,
-				Bpmn2Package.Literals.INTERFACE__IMPLEMENTATION_REF,
+		eDynamicSet(Bpmn2Package.INTERFACE__IMPLEMENTATION_REF, Bpmn2Package.Literals.INTERFACE__IMPLEMENTATION_REF,
 				newImplementationRef);
 	}
 
@@ -143,12 +136,10 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.INTERFACE__OPERATIONS:
-			return ((InternalEList<?>) getOperations()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getOperations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -226,8 +217,7 @@ public class InterfaceImpl extends RootElementImpl implements Interface {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.INTERFACE__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.INTERFACE__OPERATIONS:
 			return !getOperations().isEmpty();
 		case Bpmn2Package.INTERFACE__IMPLEMENTATION_REF:

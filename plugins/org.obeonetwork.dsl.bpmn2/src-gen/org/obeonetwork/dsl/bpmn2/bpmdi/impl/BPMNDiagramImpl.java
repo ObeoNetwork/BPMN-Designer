@@ -36,11 +36,11 @@ import org.obeonetwork.dsl.dd.di.impl.DiagramImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.impl.BPMNDiagramImpl#getPlane <em>Plane</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.impl.BPMNDiagramImpl#getLabelStyle <em>Label Style</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -70,8 +70,8 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
 	 * @generated
 	 */
 	public BPMNPlane getPlane() {
-		return (BPMNPlane) eDynamicGet(BpmnDiPackage.BPMN_DIAGRAM__PLANE,
-				BpmnDiPackage.Literals.BPMN_DIAGRAM__PLANE, true, true);
+		return (BPMNPlane) eDynamicGet(BpmnDiPackage.BPMN_DIAGRAM__PLANE, BpmnDiPackage.Literals.BPMN_DIAGRAM__PLANE,
+				true, true);
 	}
 
 	/**
@@ -79,10 +79,8 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPlane(BPMNPlane newPlane,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newPlane,
-				BpmnDiPackage.BPMN_DIAGRAM__PLANE, msgs);
+	public NotificationChain basicSetPlane(BPMNPlane newPlane, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newPlane, BpmnDiPackage.BPMN_DIAGRAM__PLANE, msgs);
 		return msgs;
 	}
 
@@ -92,8 +90,7 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
 	 * @generated
 	 */
 	public void setPlane(BPMNPlane newPlane) {
-		eDynamicSet(BpmnDiPackage.BPMN_DIAGRAM__PLANE,
-				BpmnDiPackage.Literals.BPMN_DIAGRAM__PLANE, newPlane);
+		eDynamicSet(BpmnDiPackage.BPMN_DIAGRAM__PLANE, BpmnDiPackage.Literals.BPMN_DIAGRAM__PLANE, newPlane);
 	}
 
 	/**
@@ -103,8 +100,7 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<BPMNLabelStyle> getLabelStyle() {
-		return (EList<BPMNLabelStyle>) eDynamicGet(
-				BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE,
+		return (EList<BPMNLabelStyle>) eDynamicGet(BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE,
 				BpmnDiPackage.Literals.BPMN_DIAGRAM__LABEL_STYLE, true, true);
 	}
 
@@ -114,14 +110,12 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
 			return basicSetPlane(null, msgs);
 		case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-			return ((InternalEList<?>) getLabelStyle()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getLabelStyle()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -156,8 +150,7 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
 			return;
 		case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
 			getLabelStyle().clear();
-			getLabelStyle().addAll(
-					(Collection<? extends BPMNLabelStyle>) newValue);
+			getLabelStyle().addAll((Collection<? extends BPMNLabelStyle>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

@@ -31,8 +31,7 @@ public interface Bpmn2Factory extends EFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Bpmn2Factory eINSTANCE = org.obeonetwork.dsl.bpmn2.impl.Bpmn2FactoryImpl
-			.init();
+	Bpmn2Factory eINSTANCE = org.obeonetwork.dsl.bpmn2.impl.Bpmn2FactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Interface</em>'.

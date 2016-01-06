@@ -39,9 +39,8 @@ import org.obeonetwork.dsl.bpmn2.GlobalScriptTask;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -76,17 +75,13 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider
 	 * @generated
 	 */
 	protected void addScriptLanguagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_GlobalScriptTask_scriptLanguage_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_GlobalScriptTask_scriptLanguage_feature",
-						"_UI_GlobalScriptTask_type"),
-				Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE,
-				true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_GlobalScriptTask_scriptLanguage_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_GlobalScriptTask_scriptLanguage_feature",
+								"_UI_GlobalScriptTask_type"),
+						Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -96,16 +91,13 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider
 	 * @generated
 	 */
 	protected void addScriptPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_GlobalScriptTask_script_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_GlobalScriptTask_script_feature",
-						"_UI_GlobalScriptTask_type"),
-				Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT, true, false,
-				false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_GlobalScriptTask_script_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_GlobalScriptTask_script_feature",
+								"_UI_GlobalScriptTask_type"),
+						Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -117,15 +109,9 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/GlobalScriptTask.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/GlobalScriptTask.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/GlobalScriptTask.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/GlobalScriptTask.gif"));
 		}
 	}
 
@@ -166,8 +152,7 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider
 		switch (notification.getFeatureID(GlobalScriptTask.class)) {
 		case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
 		case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -181,8 +166,7 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

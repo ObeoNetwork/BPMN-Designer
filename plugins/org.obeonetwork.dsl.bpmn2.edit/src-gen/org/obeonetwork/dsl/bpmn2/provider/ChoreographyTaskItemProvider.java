@@ -37,9 +37,8 @@ import org.obeonetwork.dsl.bpmn2.ChoreographyTask;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ChoreographyTaskItemProvider extends
-		ChoreographyActivityItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider,
+public class ChoreographyTaskItemProvider extends ChoreographyActivityItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
 		IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -74,16 +73,13 @@ public class ChoreographyTaskItemProvider extends
 	 * @generated
 	 */
 	protected void addMessageFlowRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ChoreographyTask_messageFlowRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ChoreographyTask_messageFlowRef_feature",
-						"_UI_ChoreographyTask_type"),
-				Bpmn2Package.Literals.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF,
-				true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ChoreographyTask_messageFlowRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ChoreographyTask_messageFlowRef_feature",
+								"_UI_ChoreographyTask_type"),
+						Bpmn2Package.Literals.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF, true, false, true, null, null,
+						null));
 	}
 
 	/**
@@ -95,15 +91,9 @@ public class ChoreographyTaskItemProvider extends
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ChoreographyTask.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ChoreographyTask.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ChoreographyTask.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ChoreographyTask.gif"));
 		}
 	}
 
@@ -151,8 +141,7 @@ public class ChoreographyTaskItemProvider extends
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

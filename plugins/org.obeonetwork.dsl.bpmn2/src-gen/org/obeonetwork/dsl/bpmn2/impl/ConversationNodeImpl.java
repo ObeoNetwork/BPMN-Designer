@@ -35,6 +35,7 @@ import org.obeonetwork.dsl.bpmn2.Participant;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ConversationNodeImpl#getIncomingConversationLinks <em>Incoming Conversation Links</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ConversationNodeImpl#getOutgoingConversationLinks <em>Outgoing Conversation Links</em>}</li>
@@ -43,12 +44,10 @@ import org.obeonetwork.dsl.bpmn2.Participant;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ConversationNodeImpl#getMessageFlowRefs <em>Message Flow Refs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ConversationNodeImpl#getCorrelationKeys <em>Correlation Keys</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public abstract class ConversationNodeImpl extends BaseElementImpl implements
-		ConversationNode {
+public abstract class ConversationNodeImpl extends BaseElementImpl implements ConversationNode {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -85,10 +84,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getIncomingConversationLinks() {
-		return (EList<ConversationLink>) eDynamicGet(
-				Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS,
-				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
-				true, true);
+		return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, true);
 	}
 
 	/**
@@ -98,10 +95,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getOutgoingConversationLinks() {
-		return (EList<ConversationLink>) eDynamicGet(
-				Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS,
-				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
-				true, true);
+		return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, true);
 	}
 
 	/**
@@ -110,8 +105,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__NAME,
-				Bpmn2Package.Literals.CONVERSATION_NODE__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__NAME, Bpmn2Package.Literals.CONVERSATION_NODE__NAME,
+				true, true);
 	}
 
 	/**
@@ -120,8 +115,7 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.CONVERSATION_NODE__NAME,
-				Bpmn2Package.Literals.CONVERSATION_NODE__NAME, newName);
+		eDynamicSet(Bpmn2Package.CONVERSATION_NODE__NAME, Bpmn2Package.Literals.CONVERSATION_NODE__NAME, newName);
 	}
 
 	/**
@@ -131,10 +125,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Participant> getParticipantRefs() {
-		return (EList<Participant>) eDynamicGet(
-				Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS,
-				Bpmn2Package.Literals.CONVERSATION_NODE__PARTICIPANT_REFS,
-				true, true);
+		return (EList<Participant>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS,
+				Bpmn2Package.Literals.CONVERSATION_NODE__PARTICIPANT_REFS, true, true);
 	}
 
 	/**
@@ -144,10 +136,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<MessageFlow> getMessageFlowRefs() {
-		return (EList<MessageFlow>) eDynamicGet(
-				Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS,
-				Bpmn2Package.Literals.CONVERSATION_NODE__MESSAGE_FLOW_REFS,
-				true, true);
+		return (EList<MessageFlow>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS,
+				Bpmn2Package.Literals.CONVERSATION_NODE__MESSAGE_FLOW_REFS, true, true);
 	}
 
 	/**
@@ -157,10 +147,8 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<CorrelationKey> getCorrelationKeys() {
-		return (EList<CorrelationKey>) eDynamicGet(
-				Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS,
-				Bpmn2Package.Literals.CONVERSATION_NODE__CORRELATION_KEYS,
-				true, true);
+		return (EList<CorrelationKey>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS,
+				Bpmn2Package.Literals.CONVERSATION_NODE__CORRELATION_KEYS, true, true);
 	}
 
 	/**
@@ -170,8 +158,7 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks())
@@ -189,18 +176,14 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-			return ((InternalEList<?>) getIncomingConversationLinks())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-			return ((InternalEList<?>) getOutgoingConversationLinks())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
-			return ((InternalEList<?>) getCorrelationKeys()).basicRemove(
-					otherEnd, msgs);
+			return ((InternalEList<?>) getCorrelationKeys()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -243,18 +226,15 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 			return;
 		case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
 			getParticipantRefs().clear();
-			getParticipantRefs().addAll(
-					(Collection<? extends Participant>) newValue);
+			getParticipantRefs().addAll((Collection<? extends Participant>) newValue);
 			return;
 		case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
 			getMessageFlowRefs().clear();
-			getMessageFlowRefs().addAll(
-					(Collection<? extends MessageFlow>) newValue);
+			getMessageFlowRefs().addAll((Collection<? extends MessageFlow>) newValue);
 			return;
 		case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
 			getCorrelationKeys().clear();
-			getCorrelationKeys().addAll(
-					(Collection<? extends CorrelationKey>) newValue);
+			getCorrelationKeys().addAll((Collection<? extends CorrelationKey>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -297,8 +277,7 @@ public abstract class ConversationNodeImpl extends BaseElementImpl implements
 		case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
 			return !getOutgoingConversationLinks().isEmpty();
 		case Bpmn2Package.CONVERSATION_NODE__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
 			return !getParticipantRefs().isEmpty();
 		case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:

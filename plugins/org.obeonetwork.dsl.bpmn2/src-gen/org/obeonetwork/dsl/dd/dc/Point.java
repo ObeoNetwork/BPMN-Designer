@@ -23,11 +23,11 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.Point#getX <em>X</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.Point#getY <em>Y</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.dd.dc.DcPackage#getPoint()
  * @model

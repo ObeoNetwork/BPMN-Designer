@@ -21,12 +21,12 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ResourceParameter#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ResourceParameter#isIsRequired <em>Is Required</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ResourceParameter#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getResourceParameter()
  * @model

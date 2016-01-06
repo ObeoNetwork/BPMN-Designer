@@ -42,9 +42,8 @@ import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AdHocSubProcessItemProvider extends SubProcessItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class AdHocSubProcessItemProvider extends SubProcessItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -79,17 +78,13 @@ public class AdHocSubProcessItemProvider extends SubProcessItemProvider
 	 * @generated
 	 */
 	protected void addOrderingPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_AdHocSubProcess_ordering_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_AdHocSubProcess_ordering_feature",
-						"_UI_AdHocSubProcess_type"),
-				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__ORDERING, true,
-				false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
-				null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_AdHocSubProcess_ordering_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_AdHocSubProcess_ordering_feature",
+								"_UI_AdHocSubProcess_type"),
+						Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__ORDERING, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -100,18 +95,12 @@ public class AdHocSubProcessItemProvider extends SubProcessItemProvider
 	 */
 	protected void addCancelRemainingInstancesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_AdHocSubProcess_cancelRemainingInstances_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_AdHocSubProcess_cancelRemainingInstances_feature",
-								"_UI_AdHocSubProcess_type"),
-						Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES,
-						true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_AdHocSubProcess_cancelRemainingInstances_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_AdHocSubProcess_cancelRemainingInstances_feature", "_UI_AdHocSubProcess_type"),
+				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES, true, false, false,
+				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -123,12 +112,10 @@ public class AdHocSubProcessItemProvider extends SubProcessItemProvider
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION);
+			childrenFeatures.add(Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION);
 		}
 		return childrenFeatures;
 	}
@@ -155,15 +142,9 @@ public class AdHocSubProcessItemProvider extends SubProcessItemProvider
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/AdHocSubProcess.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/AdHocSubProcess.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/AdHocSubProcess.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/AdHocSubProcess.gif"));
 		}
 	}
 
@@ -204,12 +185,10 @@ public class AdHocSubProcessItemProvider extends SubProcessItemProvider
 		switch (notification.getFeatureID(AdHocSubProcess.class)) {
 		case Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING:
 		case Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -223,16 +202,13 @@ public class AdHocSubProcessItemProvider extends SubProcessItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION,
 				Bpmn2Factory.eINSTANCE.createExpression()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION,
 				Bpmn2Factory.eINSTANCE.createFormalExpression()));
 	}
 

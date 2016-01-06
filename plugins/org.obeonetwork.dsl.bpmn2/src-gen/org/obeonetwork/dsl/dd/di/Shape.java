@@ -23,10 +23,10 @@ import org.obeonetwork.dsl.dd.dc.Bounds;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.di.Shape#getBounds <em>Bounds</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.dd.di.DiPackage#getShape()
  * @model abstract="true"

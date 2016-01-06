@@ -39,9 +39,8 @@ import org.obeonetwork.dsl.bpmn2.Transaction;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TransactionItemProvider extends SubProcessItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class TransactionItemProvider extends SubProcessItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -76,16 +75,13 @@ public class TransactionItemProvider extends SubProcessItemProvider implements
 	 * @generated
 	 */
 	protected void addProtocolPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Transaction_protocol_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Transaction_protocol_feature",
-						"_UI_Transaction_type"),
-				Bpmn2Package.Literals.TRANSACTION__PROTOCOL, true, false,
-				false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Transaction_protocol_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Transaction_protocol_feature",
+								"_UI_Transaction_type"),
+						Bpmn2Package.Literals.TRANSACTION__PROTOCOL, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -95,16 +91,13 @@ public class TransactionItemProvider extends SubProcessItemProvider implements
 	 * @generated
 	 */
 	protected void addMethodPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Transaction_method_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Transaction_method_feature",
-						"_UI_Transaction_type"),
-				Bpmn2Package.Literals.TRANSACTION__METHOD, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Transaction_method_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Transaction_method_feature",
+								"_UI_Transaction_type"),
+						Bpmn2Package.Literals.TRANSACTION__METHOD, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -116,11 +109,9 @@ public class TransactionItemProvider extends SubProcessItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Transaction.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Transaction.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Transaction.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Transaction.gif"));
 		}
 	}
 
@@ -161,8 +152,7 @@ public class TransactionItemProvider extends SubProcessItemProvider implements
 		switch (notification.getFeatureID(Transaction.class)) {
 		case Bpmn2Package.TRANSACTION__PROTOCOL:
 		case Bpmn2Package.TRANSACTION__METHOD:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -176,8 +166,7 @@ public class TransactionItemProvider extends SubProcessItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

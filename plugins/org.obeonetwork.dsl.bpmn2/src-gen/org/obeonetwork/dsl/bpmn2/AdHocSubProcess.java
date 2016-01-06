@@ -21,12 +21,12 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.AdHocSubProcess#getCompletionCondition <em>Completion Condition</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.AdHocSubProcess#getOrdering <em>Ordering</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.AdHocSubProcess#isCancelRemainingInstances <em>Cancel Remaining Instances</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getAdHocSubProcess()
  * @model

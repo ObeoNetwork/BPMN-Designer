@@ -27,10 +27,10 @@ import org.obeonetwork.dsl.dd.di.Shape;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.ShapeImpl#getBounds <em>Bounds</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,8 +60,7 @@ public abstract class ShapeImpl extends NodeImpl implements Shape {
 	 * @generated
 	 */
 	public Bounds getBounds() {
-		return (Bounds) eDynamicGet(DiPackage.SHAPE__BOUNDS,
-				DiPackage.Literals.SHAPE__BOUNDS, true, true);
+		return (Bounds) eDynamicGet(DiPackage.SHAPE__BOUNDS, DiPackage.Literals.SHAPE__BOUNDS, true, true);
 	}
 
 	/**
@@ -69,10 +68,8 @@ public abstract class ShapeImpl extends NodeImpl implements Shape {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBounds(Bounds newBounds,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newBounds,
-				DiPackage.SHAPE__BOUNDS, msgs);
+	public NotificationChain basicSetBounds(Bounds newBounds, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newBounds, DiPackage.SHAPE__BOUNDS, msgs);
 		return msgs;
 	}
 
@@ -82,8 +79,7 @@ public abstract class ShapeImpl extends NodeImpl implements Shape {
 	 * @generated
 	 */
 	public void setBounds(Bounds newBounds) {
-		eDynamicSet(DiPackage.SHAPE__BOUNDS, DiPackage.Literals.SHAPE__BOUNDS,
-				newBounds);
+		eDynamicSet(DiPackage.SHAPE__BOUNDS, DiPackage.Literals.SHAPE__BOUNDS, newBounds);
 	}
 
 	/**
@@ -92,8 +88,7 @@ public abstract class ShapeImpl extends NodeImpl implements Shape {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case DiPackage.SHAPE__BOUNDS:
 			return basicSetBounds(null, msgs);

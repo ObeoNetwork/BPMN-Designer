@@ -16,6 +16,7 @@ package org.obeonetwork.dsl.dd.di.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+import org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl;
 import org.obeonetwork.dsl.dd.di.DiPackage;
 import org.obeonetwork.dsl.dd.di.Style;
 
@@ -23,12 +24,10 @@ import org.obeonetwork.dsl.dd.di.Style;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Style</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public abstract class StyleImpl extends CDOObjectImpl implements Style {
+public abstract class StyleImpl extends BPMN2ObjectImpl implements Style {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

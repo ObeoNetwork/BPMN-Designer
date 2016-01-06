@@ -25,15 +25,14 @@ import org.obeonetwork.dsl.bpmn2.SignalEventDefinition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SignalEventDefinitionImpl#getSignalRef <em>Signal Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
-		SignalEventDefinition {
+public class SignalEventDefinitionImpl extends EventDefinitionImpl implements SignalEventDefinition {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -59,10 +58,8 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Signal getSignalRef() {
-		return (Signal) eDynamicGet(
-				Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
-				Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
-				true, true);
+		return (Signal) eDynamicGet(Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
+				Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF, true, true);
 	}
 
 	/**
@@ -71,10 +68,8 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public Signal basicGetSignalRef() {
-		return (Signal) eDynamicGet(
-				Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
-				Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
-				false, true);
+		return (Signal) eDynamicGet(Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
+				Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF, false, true);
 	}
 
 	/**
@@ -84,8 +79,7 @@ public class SignalEventDefinitionImpl extends EventDefinitionImpl implements
 	 */
 	public void setSignalRef(Signal newSignalRef) {
 		eDynamicSet(Bpmn2Package.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
-				Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF,
-				newSignalRef);
+				Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF, newSignalRef);
 	}
 
 	/**

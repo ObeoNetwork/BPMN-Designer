@@ -35,9 +35,8 @@ import org.obeonetwork.dsl.bpmn2.Rendering;
  * <!-- end-user-doc -->
  * @generated
  */
-public class RenderingItemProvider extends BaseElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class RenderingItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -72,11 +71,9 @@ public class RenderingItemProvider extends BaseElementItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Rendering.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Rendering.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Rendering.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Rendering.gif"));
 		}
 	}
 
@@ -124,8 +121,7 @@ public class RenderingItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

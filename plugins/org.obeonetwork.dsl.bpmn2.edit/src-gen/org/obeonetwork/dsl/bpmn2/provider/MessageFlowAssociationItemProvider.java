@@ -37,9 +37,8 @@ import org.obeonetwork.dsl.bpmn2.MessageFlowAssociation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MessageFlowAssociationItemProvider extends BaseElementItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class MessageFlowAssociationItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -74,18 +73,13 @@ public class MessageFlowAssociationItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	protected void addInnerMessageFlowRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_MessageFlowAssociation_innerMessageFlowRef_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_MessageFlowAssociation_innerMessageFlowRef_feature",
-								"_UI_MessageFlowAssociation_type"),
-						Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
-						true, false, true, null, null, null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_MessageFlowAssociation_innerMessageFlowRef_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_MessageFlowAssociation_innerMessageFlowRef_feature", "_UI_MessageFlowAssociation_type"),
+				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF, true, false, true, null, null,
+				null));
 	}
 
 	/**
@@ -95,18 +89,13 @@ public class MessageFlowAssociationItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	protected void addOuterMessageFlowRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_MessageFlowAssociation_outerMessageFlowRef_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_MessageFlowAssociation_outerMessageFlowRef_feature",
-								"_UI_MessageFlowAssociation_type"),
-						Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
-						true, false, true, null, null, null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_MessageFlowAssociation_outerMessageFlowRef_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_MessageFlowAssociation_outerMessageFlowRef_feature", "_UI_MessageFlowAssociation_type"),
+				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF, true, false, true, null, null,
+				null));
 	}
 
 	/**
@@ -118,15 +107,9 @@ public class MessageFlowAssociationItemProvider extends BaseElementItemProvider
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/MessageFlowAssociation.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/MessageFlowAssociation.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/MessageFlowAssociation.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/MessageFlowAssociation.gif"));
 		}
 	}
 
@@ -174,8 +157,7 @@ public class MessageFlowAssociationItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

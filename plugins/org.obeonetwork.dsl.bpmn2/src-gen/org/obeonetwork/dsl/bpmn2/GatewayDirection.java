@@ -136,8 +136,8 @@ public enum GatewayDirection implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final GatewayDirection[] VALUES_ARRAY = new GatewayDirection[] {
-			UNSPECIFIED, CONVERGING, DIVERGING, MIXED, };
+	private static final GatewayDirection[] VALUES_ARRAY = new GatewayDirection[] { UNSPECIFIED, CONVERGING, DIVERGING,
+			MIXED, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Gateway Direction</b></em>' enumerators.
@@ -145,13 +145,14 @@ public enum GatewayDirection implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<GatewayDirection> VALUES = Collections
-			.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<GatewayDirection> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
 	 * Returns the '<em><b>Gateway Direction</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static GatewayDirection get(String literal) {
@@ -168,6 +169,8 @@ public enum GatewayDirection implements Enumerator {
 	 * Returns the '<em><b>Gateway Direction</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static GatewayDirection getByName(String name) {
@@ -184,6 +187,8 @@ public enum GatewayDirection implements Enumerator {
 	 * Returns the '<em><b>Gateway Direction</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static GatewayDirection get(int value) {

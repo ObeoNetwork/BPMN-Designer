@@ -31,11 +31,11 @@ import org.obeonetwork.dsl.bpmn2.ResourceParameter;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ResourceImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ResourceImpl#getResourceParameters <em>Resource Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -75,8 +75,7 @@ public class ResourceImpl extends RootElementImpl implements Resource {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.RESOURCE__NAME,
-				Bpmn2Package.Literals.RESOURCE__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.RESOURCE__NAME, Bpmn2Package.Literals.RESOURCE__NAME, true, true);
 	}
 
 	/**
@@ -85,8 +84,7 @@ public class ResourceImpl extends RootElementImpl implements Resource {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.RESOURCE__NAME,
-				Bpmn2Package.Literals.RESOURCE__NAME, newName);
+		eDynamicSet(Bpmn2Package.RESOURCE__NAME, Bpmn2Package.Literals.RESOURCE__NAME, newName);
 	}
 
 	/**
@@ -96,8 +94,7 @@ public class ResourceImpl extends RootElementImpl implements Resource {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ResourceParameter> getResourceParameters() {
-		return (EList<ResourceParameter>) eDynamicGet(
-				Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS,
+		return (EList<ResourceParameter>) eDynamicGet(Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS,
 				Bpmn2Package.Literals.RESOURCE__RESOURCE_PARAMETERS, true, true);
 	}
 
@@ -107,12 +104,10 @@ public class ResourceImpl extends RootElementImpl implements Resource {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
-			return ((InternalEList<?>) getResourceParameters()).basicRemove(
-					otherEnd, msgs);
+			return ((InternalEList<?>) getResourceParameters()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -147,8 +142,7 @@ public class ResourceImpl extends RootElementImpl implements Resource {
 			return;
 		case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
 			getResourceParameters().clear();
-			getResourceParameters().addAll(
-					(Collection<? extends ResourceParameter>) newValue);
+			getResourceParameters().addAll((Collection<? extends ResourceParameter>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -181,8 +175,7 @@ public class ResourceImpl extends RootElementImpl implements Resource {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.RESOURCE__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
 			return !getResourceParameters().isEmpty();
 		}

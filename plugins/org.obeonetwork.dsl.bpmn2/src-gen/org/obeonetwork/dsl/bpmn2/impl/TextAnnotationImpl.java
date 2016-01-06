@@ -24,11 +24,11 @@ import org.obeonetwork.dsl.bpmn2.TextAnnotation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.TextAnnotationImpl#getText <em>Text</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.TextAnnotationImpl#getTextFormat <em>Text Format</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -77,8 +77,8 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
 	 * @generated
 	 */
 	public String getText() {
-		return (String) eDynamicGet(Bpmn2Package.TEXT_ANNOTATION__TEXT,
-				Bpmn2Package.Literals.TEXT_ANNOTATION__TEXT, true, true);
+		return (String) eDynamicGet(Bpmn2Package.TEXT_ANNOTATION__TEXT, Bpmn2Package.Literals.TEXT_ANNOTATION__TEXT,
+				true, true);
 	}
 
 	/**
@@ -87,8 +87,7 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
 	 * @generated
 	 */
 	public void setText(String newText) {
-		eDynamicSet(Bpmn2Package.TEXT_ANNOTATION__TEXT,
-				Bpmn2Package.Literals.TEXT_ANNOTATION__TEXT, newText);
+		eDynamicSet(Bpmn2Package.TEXT_ANNOTATION__TEXT, Bpmn2Package.Literals.TEXT_ANNOTATION__TEXT, newText);
 	}
 
 	/**
@@ -107,8 +106,7 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
 	 * @generated
 	 */
 	public void setTextFormat(String newTextFormat) {
-		eDynamicSet(Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT,
-				Bpmn2Package.Literals.TEXT_ANNOTATION__TEXT_FORMAT,
+		eDynamicSet(Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT, Bpmn2Package.Literals.TEXT_ANNOTATION__TEXT_FORMAT,
 				newTextFormat);
 	}
 
@@ -173,8 +171,7 @@ public class TextAnnotationImpl extends ArtifactImpl implements TextAnnotation {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.TEXT_ANNOTATION__TEXT:
-			return TEXT_EDEFAULT == null ? getText() != null : !TEXT_EDEFAULT
-					.equals(getText());
+			return TEXT_EDEFAULT == null ? getText() != null : !TEXT_EDEFAULT.equals(getText());
 		case Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT:
 			return TEXT_FORMAT_EDEFAULT == null ? getTextFormat() != null
 					: !TEXT_FORMAT_EDEFAULT.equals(getTextFormat());

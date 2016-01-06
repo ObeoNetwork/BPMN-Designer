@@ -25,15 +25,14 @@ import org.obeonetwork.dsl.bpmn2.SequenceFlow;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InclusiveGatewayImpl#getDefault <em>Default</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class InclusiveGatewayImpl extends GatewayImpl implements
-		InclusiveGateway {
+public class InclusiveGatewayImpl extends GatewayImpl implements InclusiveGateway {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -59,8 +58,7 @@ public class InclusiveGatewayImpl extends GatewayImpl implements
 	 * @generated
 	 */
 	public SequenceFlow getDefault() {
-		return (SequenceFlow) eDynamicGet(
-				Bpmn2Package.INCLUSIVE_GATEWAY__DEFAULT,
+		return (SequenceFlow) eDynamicGet(Bpmn2Package.INCLUSIVE_GATEWAY__DEFAULT,
 				Bpmn2Package.Literals.INCLUSIVE_GATEWAY__DEFAULT, true, true);
 	}
 
@@ -70,8 +68,7 @@ public class InclusiveGatewayImpl extends GatewayImpl implements
 	 * @generated
 	 */
 	public SequenceFlow basicGetDefault() {
-		return (SequenceFlow) eDynamicGet(
-				Bpmn2Package.INCLUSIVE_GATEWAY__DEFAULT,
+		return (SequenceFlow) eDynamicGet(Bpmn2Package.INCLUSIVE_GATEWAY__DEFAULT,
 				Bpmn2Package.Literals.INCLUSIVE_GATEWAY__DEFAULT, false, true);
 	}
 
@@ -81,8 +78,8 @@ public class InclusiveGatewayImpl extends GatewayImpl implements
 	 * @generated
 	 */
 	public void setDefault(SequenceFlow newDefault) {
-		eDynamicSet(Bpmn2Package.INCLUSIVE_GATEWAY__DEFAULT,
-				Bpmn2Package.Literals.INCLUSIVE_GATEWAY__DEFAULT, newDefault);
+		eDynamicSet(Bpmn2Package.INCLUSIVE_GATEWAY__DEFAULT, Bpmn2Package.Literals.INCLUSIVE_GATEWAY__DEFAULT,
+				newDefault);
 	}
 
 	/**

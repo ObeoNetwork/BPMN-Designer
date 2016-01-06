@@ -21,11 +21,11 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.EventBasedGateway#isInstantiate <em>Instantiate</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.EventBasedGateway#getEventGatewayType <em>Event Gateway Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getEventBasedGateway()
  * @model

@@ -28,11 +28,11 @@ import org.obeonetwork.dsl.bpmn2.SequenceFlow;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ComplexGatewayImpl#getActivationCondition <em>Activation Condition</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ComplexGatewayImpl#getDefault <em>Default</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,10 +62,8 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
 	 * @generated
 	 */
 	public Expression getActivationCondition() {
-		return (Expression) eDynamicGet(
-				Bpmn2Package.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
-				Bpmn2Package.Literals.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
-				true, true);
+		return (Expression) eDynamicGet(Bpmn2Package.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
+				Bpmn2Package.Literals.COMPLEX_GATEWAY__ACTIVATION_CONDITION, true, true);
 	}
 
 	/**
@@ -73,8 +71,7 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetActivationCondition(
-			Expression newActivationCondition, NotificationChain msgs) {
+	public NotificationChain basicSetActivationCondition(Expression newActivationCondition, NotificationChain msgs) {
 		msgs = eDynamicInverseAdd((InternalEObject) newActivationCondition,
 				Bpmn2Package.COMPLEX_GATEWAY__ACTIVATION_CONDITION, msgs);
 		return msgs;
@@ -87,8 +84,7 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
 	 */
 	public void setActivationCondition(Expression newActivationCondition) {
 		eDynamicSet(Bpmn2Package.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
-				Bpmn2Package.Literals.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
-				newActivationCondition);
+				Bpmn2Package.Literals.COMPLEX_GATEWAY__ACTIVATION_CONDITION, newActivationCondition);
 	}
 
 	/**
@@ -97,8 +93,7 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
 	 * @generated
 	 */
 	public SequenceFlow getDefault() {
-		return (SequenceFlow) eDynamicGet(
-				Bpmn2Package.COMPLEX_GATEWAY__DEFAULT,
+		return (SequenceFlow) eDynamicGet(Bpmn2Package.COMPLEX_GATEWAY__DEFAULT,
 				Bpmn2Package.Literals.COMPLEX_GATEWAY__DEFAULT, true, true);
 	}
 
@@ -108,8 +103,7 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
 	 * @generated
 	 */
 	public SequenceFlow basicGetDefault() {
-		return (SequenceFlow) eDynamicGet(
-				Bpmn2Package.COMPLEX_GATEWAY__DEFAULT,
+		return (SequenceFlow) eDynamicGet(Bpmn2Package.COMPLEX_GATEWAY__DEFAULT,
 				Bpmn2Package.Literals.COMPLEX_GATEWAY__DEFAULT, false, true);
 	}
 
@@ -119,8 +113,7 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
 	 * @generated
 	 */
 	public void setDefault(SequenceFlow newDefault) {
-		eDynamicSet(Bpmn2Package.COMPLEX_GATEWAY__DEFAULT,
-				Bpmn2Package.Literals.COMPLEX_GATEWAY__DEFAULT, newDefault);
+		eDynamicSet(Bpmn2Package.COMPLEX_GATEWAY__DEFAULT, Bpmn2Package.Literals.COMPLEX_GATEWAY__DEFAULT, newDefault);
 	}
 
 	/**
@@ -129,8 +122,7 @@ public class ComplexGatewayImpl extends GatewayImpl implements ComplexGateway {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.COMPLEX_GATEWAY__ACTIVATION_CONDITION:
 			return basicSetActivationCondition(null, msgs);

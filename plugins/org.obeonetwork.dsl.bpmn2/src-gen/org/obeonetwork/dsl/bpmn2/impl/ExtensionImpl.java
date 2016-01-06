@@ -18,31 +18,30 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+import org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.Extension;
 import org.obeonetwork.dsl.bpmn2.ExtensionDefinition;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Extension</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Extension</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ExtensionImpl#isMustUnderstand <em>Must Understand</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ExtensionImpl#getDefinition <em>Definition</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ExtensionImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ExtensionImpl extends CDOObjectImpl implements Extension {
+public class ExtensionImpl extends BPMN2ObjectImpl implements Extension {
 	/**
 	 * The default value of the '{@link #isMustUnderstand() <em>Must Understand</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #isMustUnderstand()
 	 * @generated
 	 * @ordered
@@ -50,9 +49,9 @@ public class ExtensionImpl extends CDOObjectImpl implements Extension {
 	protected static final boolean MUST_UNDERSTAND_EDEFAULT = false;
 
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getId()
 	 * @generated
 	 * @ordered
@@ -60,18 +59,15 @@ public class ExtensionImpl extends CDOObjectImpl implements Extension {
 	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
 	 */
 	protected ExtensionImpl() {
 		super();
-		setId(EcoreUtil.generateUUID());
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -80,8 +76,7 @@ public class ExtensionImpl extends CDOObjectImpl implements Extension {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -90,87 +85,77 @@ public class ExtensionImpl extends CDOObjectImpl implements Extension {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isMustUnderstand() {
 		return (Boolean) eDynamicGet(Bpmn2Package.EXTENSION__MUST_UNDERSTAND,
 				Bpmn2Package.Literals.EXTENSION__MUST_UNDERSTAND, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMustUnderstand(boolean newMustUnderstand) {
-		eDynamicSet(Bpmn2Package.EXTENSION__MUST_UNDERSTAND,
-				Bpmn2Package.Literals.EXTENSION__MUST_UNDERSTAND,
+		eDynamicSet(Bpmn2Package.EXTENSION__MUST_UNDERSTAND, Bpmn2Package.Literals.EXTENSION__MUST_UNDERSTAND,
 				newMustUnderstand);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExtensionDefinition getDefinition() {
-		return (ExtensionDefinition) eDynamicGet(
-				Bpmn2Package.EXTENSION__DEFINITION,
+		return (ExtensionDefinition) eDynamicGet(Bpmn2Package.EXTENSION__DEFINITION,
 				Bpmn2Package.Literals.EXTENSION__DEFINITION, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDefinition(
-			ExtensionDefinition newDefinition, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newDefinition,
-				Bpmn2Package.EXTENSION__DEFINITION, msgs);
+	public NotificationChain basicSetDefinition(ExtensionDefinition newDefinition, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newDefinition, Bpmn2Package.EXTENSION__DEFINITION, msgs);
 		return msgs;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDefinition(ExtensionDefinition newDefinition) {
-		eDynamicSet(Bpmn2Package.EXTENSION__DEFINITION,
-				Bpmn2Package.Literals.EXTENSION__DEFINITION, newDefinition);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getId() {
-		return (String) eDynamicGet(Bpmn2Package.EXTENSION__ID,
-				Bpmn2Package.Literals.EXTENSION__ID, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		eDynamicSet(Bpmn2Package.EXTENSION__ID,
-				Bpmn2Package.Literals.EXTENSION__ID, newId);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public void setDefinition(ExtensionDefinition newDefinition) {
+		eDynamicSet(Bpmn2Package.EXTENSION__DEFINITION, Bpmn2Package.Literals.EXTENSION__DEFINITION, newDefinition);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getId() {
+		return (String) eDynamicGet(Bpmn2Package.EXTENSION__ID, Bpmn2Package.Literals.EXTENSION__ID, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setId(String newId) {
+		eDynamicSet(Bpmn2Package.EXTENSION__ID, Bpmn2Package.Literals.EXTENSION__ID, newId);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.EXTENSION__DEFINITION:
 			return basicSetDefinition(null, msgs);
@@ -179,8 +164,7 @@ public class ExtensionImpl extends CDOObjectImpl implements Extension {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -197,8 +181,7 @@ public class ExtensionImpl extends CDOObjectImpl implements Extension {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -218,8 +201,7 @@ public class ExtensionImpl extends CDOObjectImpl implements Extension {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -239,8 +221,7 @@ public class ExtensionImpl extends CDOObjectImpl implements Extension {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -251,10 +232,9 @@ public class ExtensionImpl extends CDOObjectImpl implements Extension {
 		case Bpmn2Package.EXTENSION__DEFINITION:
 			return getDefinition() != null;
 		case Bpmn2Package.EXTENSION__ID:
-			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT
-					.equals(getId());
+			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //ExtensionImpl
+} // ExtensionImpl

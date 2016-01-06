@@ -41,9 +41,8 @@ import org.obeonetwork.dsl.bpmn2.Event;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EventItemProvider extends FlowNodeItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class EventItemProvider extends FlowNodeItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -79,17 +78,12 @@ public class EventItemProvider extends FlowNodeItemProvider implements
 	 */
 	protected void addIncomingConversationLinksPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_InteractionNode_incomingConversationLinks_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_InteractionNode_incomingConversationLinks_feature",
-								"_UI_InteractionNode_type"),
-						Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
-						true, false, true, null, null, null));
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_InteractionNode_incomingConversationLinks_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_InteractionNode_incomingConversationLinks_feature", "_UI_InteractionNode_type"),
+				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false, true, null, null,
+				null));
 	}
 
 	/**
@@ -100,17 +94,12 @@ public class EventItemProvider extends FlowNodeItemProvider implements
 	 */
 	protected void addOutgoingConversationLinksPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_InteractionNode_outgoingConversationLinks_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_InteractionNode_outgoingConversationLinks_feature",
-								"_UI_InteractionNode_type"),
-						Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
-						true, false, true, null, null, null));
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_InteractionNode_outgoingConversationLinks_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_InteractionNode_outgoingConversationLinks_feature", "_UI_InteractionNode_type"),
+				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false, true, null, null,
+				null));
 	}
 
 	/**
@@ -122,8 +111,7 @@ public class EventItemProvider extends FlowNodeItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Bpmn2Package.Literals.EVENT__PROPERTIES);
@@ -180,8 +168,7 @@ public class EventItemProvider extends FlowNodeItemProvider implements
 
 		switch (notification.getFeatureID(Event.class)) {
 		case Bpmn2Package.EVENT__PROPERTIES:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -195,13 +182,11 @@ public class EventItemProvider extends FlowNodeItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.EVENT__PROPERTIES,
-				Bpmn2Factory.eINSTANCE.createProperty()));
+		newChildDescriptors.add(
+				createChildParameter(Bpmn2Package.Literals.EVENT__PROPERTIES, Bpmn2Factory.eINSTANCE.createProperty()));
 	}
 
 }

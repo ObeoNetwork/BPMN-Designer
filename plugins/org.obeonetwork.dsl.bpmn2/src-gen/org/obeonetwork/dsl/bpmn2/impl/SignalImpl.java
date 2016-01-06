@@ -25,11 +25,11 @@ import org.obeonetwork.dsl.bpmn2.Signal;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SignalImpl#getStructureRef <em>Structure Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SignalImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -89,8 +89,7 @@ public class SignalImpl extends RootElementImpl implements Signal {
 	 * @generated
 	 */
 	public void setStructureRef(ItemDefinition newStructureRef) {
-		eDynamicSet(Bpmn2Package.SIGNAL__STRUCTURE_REF,
-				Bpmn2Package.Literals.SIGNAL__STRUCTURE_REF, newStructureRef);
+		eDynamicSet(Bpmn2Package.SIGNAL__STRUCTURE_REF, Bpmn2Package.Literals.SIGNAL__STRUCTURE_REF, newStructureRef);
 	}
 
 	/**
@@ -99,8 +98,7 @@ public class SignalImpl extends RootElementImpl implements Signal {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.SIGNAL__NAME,
-				Bpmn2Package.Literals.SIGNAL__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.SIGNAL__NAME, Bpmn2Package.Literals.SIGNAL__NAME, true, true);
 	}
 
 	/**
@@ -109,8 +107,7 @@ public class SignalImpl extends RootElementImpl implements Signal {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.SIGNAL__NAME,
-				Bpmn2Package.Literals.SIGNAL__NAME, newName);
+		eDynamicSet(Bpmn2Package.SIGNAL__NAME, Bpmn2Package.Literals.SIGNAL__NAME, newName);
 	}
 
 	/**
@@ -178,8 +175,7 @@ public class SignalImpl extends RootElementImpl implements Signal {
 		case Bpmn2Package.SIGNAL__STRUCTURE_REF:
 			return basicGetStructureRef() != null;
 		case Bpmn2Package.SIGNAL__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		}
 		return super.eIsSet(featureID);
 	}

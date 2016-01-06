@@ -29,11 +29,11 @@ import org.obeonetwork.dsl.bpmn2.FlowElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CategoryValueImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CategoryValueImpl#getCategorizedFlowElements <em>Categorized Flow Elements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -73,8 +73,8 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
 	 * @generated
 	 */
 	public String getValue() {
-		return (String) eDynamicGet(Bpmn2Package.CATEGORY_VALUE__VALUE,
-				Bpmn2Package.Literals.CATEGORY_VALUE__VALUE, true, true);
+		return (String) eDynamicGet(Bpmn2Package.CATEGORY_VALUE__VALUE, Bpmn2Package.Literals.CATEGORY_VALUE__VALUE,
+				true, true);
 	}
 
 	/**
@@ -83,8 +83,7 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
 	 * @generated
 	 */
 	public void setValue(String newValue) {
-		eDynamicSet(Bpmn2Package.CATEGORY_VALUE__VALUE,
-				Bpmn2Package.Literals.CATEGORY_VALUE__VALUE, newValue);
+		eDynamicSet(Bpmn2Package.CATEGORY_VALUE__VALUE, Bpmn2Package.Literals.CATEGORY_VALUE__VALUE, newValue);
 	}
 
 	/**
@@ -94,10 +93,8 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<FlowElement> getCategorizedFlowElements() {
-		return (EList<FlowElement>) eDynamicGet(
-				Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS,
-				Bpmn2Package.Literals.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS,
-				true, true);
+		return (EList<FlowElement>) eDynamicGet(Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS,
+				Bpmn2Package.Literals.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS, true, true);
 	}
 
 	/**
@@ -107,12 +104,11 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getCategorizedFlowElements())
-					.basicAdd(otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getCategorizedFlowElements()).basicAdd(otherEnd,
+					msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -123,12 +119,10 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
-			return ((InternalEList<?>) getCategorizedFlowElements())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getCategorizedFlowElements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -188,8 +182,7 @@ public class CategoryValueImpl extends BaseElementImpl implements CategoryValue 
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.CATEGORY_VALUE__VALUE:
-			return VALUE_EDEFAULT == null ? getValue() != null
-					: !VALUE_EDEFAULT.equals(getValue());
+			return VALUE_EDEFAULT == null ? getValue() != null : !VALUE_EDEFAULT.equals(getValue());
 		case Bpmn2Package.CATEGORY_VALUE__CATEGORIZED_FLOW_ELEMENTS:
 			return !getCategorizedFlowElements().isEmpty();
 		}

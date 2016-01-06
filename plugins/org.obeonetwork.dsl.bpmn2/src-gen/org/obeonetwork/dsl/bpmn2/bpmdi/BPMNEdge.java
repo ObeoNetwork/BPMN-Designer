@@ -25,6 +25,7 @@ import org.obeonetwork.dsl.dd.di.LabeledEdge;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNEdge#getLabel <em>Label</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNEdge#getBpmnElement <em>Bpmn Element</em>}</li>
@@ -32,7 +33,6 @@ import org.obeonetwork.dsl.dd.di.LabeledEdge;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNEdge#getTargetElement <em>Target Element</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNEdge#getMessageVisibleKind <em>Message Visible Kind</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage#getBPMNEdge()
  * @model

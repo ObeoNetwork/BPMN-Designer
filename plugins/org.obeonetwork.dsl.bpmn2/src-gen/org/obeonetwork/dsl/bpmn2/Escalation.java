@@ -23,13 +23,13 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Escalation#getStructureRef <em>Structure Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Escalation#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Escalation#getEscalationCode <em>Escalation Code</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Escalation#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getEscalation()
  * @model

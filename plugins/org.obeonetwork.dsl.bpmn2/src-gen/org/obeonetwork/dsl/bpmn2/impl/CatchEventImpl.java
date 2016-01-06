@@ -34,6 +34,7 @@ import org.obeonetwork.dsl.bpmn2.OutputSet;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CatchEventImpl#isParallelMultiple <em>Parallel Multiple</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CatchEventImpl#getOutputSet <em>Output Set</em>}</li>
@@ -42,7 +43,6 @@ import org.obeonetwork.dsl.bpmn2.OutputSet;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CatchEventImpl#getDataOutputs <em>Data Outputs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CatchEventImpl#getEventDefinitions <em>Event Definitions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -82,10 +82,8 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 * @generated
 	 */
 	public boolean isParallelMultiple() {
-		return (Boolean) eDynamicGet(
-				Bpmn2Package.CATCH_EVENT__PARALLEL_MULTIPLE,
-				Bpmn2Package.Literals.CATCH_EVENT__PARALLEL_MULTIPLE, true,
-				true);
+		return (Boolean) eDynamicGet(Bpmn2Package.CATCH_EVENT__PARALLEL_MULTIPLE,
+				Bpmn2Package.Literals.CATCH_EVENT__PARALLEL_MULTIPLE, true, true);
 	}
 
 	/**
@@ -94,8 +92,7 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 * @generated
 	 */
 	public void setParallelMultiple(boolean newParallelMultiple) {
-		eDynamicSet(Bpmn2Package.CATCH_EVENT__PARALLEL_MULTIPLE,
-				Bpmn2Package.Literals.CATCH_EVENT__PARALLEL_MULTIPLE,
+		eDynamicSet(Bpmn2Package.CATCH_EVENT__PARALLEL_MULTIPLE, Bpmn2Package.Literals.CATCH_EVENT__PARALLEL_MULTIPLE,
 				newParallelMultiple);
 	}
 
@@ -114,10 +111,8 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOutputSet(OutputSet newOutputSet,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newOutputSet,
-				Bpmn2Package.CATCH_EVENT__OUTPUT_SET, msgs);
+	public NotificationChain basicSetOutputSet(OutputSet newOutputSet, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newOutputSet, Bpmn2Package.CATCH_EVENT__OUTPUT_SET, msgs);
 		return msgs;
 	}
 
@@ -127,8 +122,7 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 * @generated
 	 */
 	public void setOutputSet(OutputSet newOutputSet) {
-		eDynamicSet(Bpmn2Package.CATCH_EVENT__OUTPUT_SET,
-				Bpmn2Package.Literals.CATCH_EVENT__OUTPUT_SET, newOutputSet);
+		eDynamicSet(Bpmn2Package.CATCH_EVENT__OUTPUT_SET, Bpmn2Package.Literals.CATCH_EVENT__OUTPUT_SET, newOutputSet);
 	}
 
 	/**
@@ -138,10 +132,8 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<EventDefinition> getEventDefinitionRefs() {
-		return (EList<EventDefinition>) eDynamicGet(
-				Bpmn2Package.CATCH_EVENT__EVENT_DEFINITION_REFS,
-				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITION_REFS, true,
-				true);
+		return (EList<EventDefinition>) eDynamicGet(Bpmn2Package.CATCH_EVENT__EVENT_DEFINITION_REFS,
+				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITION_REFS, true, true);
 	}
 
 	/**
@@ -151,10 +143,8 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataOutputAssociation> getDataOutputAssociation() {
-		return (EList<DataOutputAssociation>) eDynamicGet(
-				Bpmn2Package.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION,
-				Bpmn2Package.Literals.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION,
-				true, true);
+		return (EList<DataOutputAssociation>) eDynamicGet(Bpmn2Package.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION,
+				Bpmn2Package.Literals.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION, true, true);
 	}
 
 	/**
@@ -164,8 +154,7 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataOutput> getDataOutputs() {
-		return (EList<DataOutput>) eDynamicGet(
-				Bpmn2Package.CATCH_EVENT__DATA_OUTPUTS,
+		return (EList<DataOutput>) eDynamicGet(Bpmn2Package.CATCH_EVENT__DATA_OUTPUTS,
 				Bpmn2Package.Literals.CATCH_EVENT__DATA_OUTPUTS, true, true);
 	}
 
@@ -176,10 +165,8 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<EventDefinition> getEventDefinitions() {
-		return (EList<EventDefinition>) eDynamicGet(
-				Bpmn2Package.CATCH_EVENT__EVENT_DEFINITIONS,
-				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS, true,
-				true);
+		return (EList<EventDefinition>) eDynamicGet(Bpmn2Package.CATCH_EVENT__EVENT_DEFINITIONS,
+				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS, true, true);
 	}
 
 	/**
@@ -188,20 +175,16 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.CATCH_EVENT__OUTPUT_SET:
 			return basicSetOutputSet(null, msgs);
 		case Bpmn2Package.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
-			return ((InternalEList<?>) getDataOutputAssociation()).basicRemove(
-					otherEnd, msgs);
+			return ((InternalEList<?>) getDataOutputAssociation()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.CATCH_EVENT__DATA_OUTPUTS:
-			return ((InternalEList<?>) getDataOutputs()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getDataOutputs()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.CATCH_EVENT__EVENT_DEFINITIONS:
-			return ((InternalEList<?>) getEventDefinitions()).basicRemove(
-					otherEnd, msgs);
+			return ((InternalEList<?>) getEventDefinitions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -247,23 +230,19 @@ public abstract class CatchEventImpl extends EventImpl implements CatchEvent {
 			return;
 		case Bpmn2Package.CATCH_EVENT__EVENT_DEFINITION_REFS:
 			getEventDefinitionRefs().clear();
-			getEventDefinitionRefs().addAll(
-					(Collection<? extends EventDefinition>) newValue);
+			getEventDefinitionRefs().addAll((Collection<? extends EventDefinition>) newValue);
 			return;
 		case Bpmn2Package.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
 			getDataOutputAssociation().clear();
-			getDataOutputAssociation().addAll(
-					(Collection<? extends DataOutputAssociation>) newValue);
+			getDataOutputAssociation().addAll((Collection<? extends DataOutputAssociation>) newValue);
 			return;
 		case Bpmn2Package.CATCH_EVENT__DATA_OUTPUTS:
 			getDataOutputs().clear();
-			getDataOutputs()
-					.addAll((Collection<? extends DataOutput>) newValue);
+			getDataOutputs().addAll((Collection<? extends DataOutput>) newValue);
 			return;
 		case Bpmn2Package.CATCH_EVENT__EVENT_DEFINITIONS:
 			getEventDefinitions().clear();
-			getEventDefinitions().addAll(
-					(Collection<? extends EventDefinition>) newValue);
+			getEventDefinitions().addAll((Collection<? extends EventDefinition>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

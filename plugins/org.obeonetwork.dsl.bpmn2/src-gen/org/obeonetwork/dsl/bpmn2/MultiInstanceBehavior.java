@@ -136,8 +136,8 @@ public enum MultiInstanceBehavior implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final MultiInstanceBehavior[] VALUES_ARRAY = new MultiInstanceBehavior[] {
-			NONE, ONE, ALL, COMPLEX, };
+	private static final MultiInstanceBehavior[] VALUES_ARRAY = new MultiInstanceBehavior[] { NONE, ONE, ALL,
+			COMPLEX, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Multi Instance Behavior</b></em>' enumerators.
@@ -145,13 +145,14 @@ public enum MultiInstanceBehavior implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<MultiInstanceBehavior> VALUES = Collections
-			.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<MultiInstanceBehavior> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
 	 * Returns the '<em><b>Multi Instance Behavior</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MultiInstanceBehavior get(String literal) {
@@ -168,6 +169,8 @@ public enum MultiInstanceBehavior implements Enumerator {
 	 * Returns the '<em><b>Multi Instance Behavior</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MultiInstanceBehavior getByName(String name) {
@@ -184,6 +187,8 @@ public enum MultiInstanceBehavior implements Enumerator {
 	 * Returns the '<em><b>Multi Instance Behavior</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MultiInstanceBehavior get(int value) {

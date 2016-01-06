@@ -45,9 +45,8 @@ import org.obeonetwork.dsl.bpmn2.Extension;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ExtensionItemProvider extends ItemProviderAdapter implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ExtensionItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -82,16 +81,13 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addMustUnderstandPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Extension_mustUnderstand_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Extension_mustUnderstand_feature",
-						"_UI_Extension_type"),
-				Bpmn2Package.Literals.EXTENSION__MUST_UNDERSTAND, true, false,
-				false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Extension_mustUnderstand_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Extension_mustUnderstand_feature",
+								"_UI_Extension_type"),
+						Bpmn2Package.Literals.EXTENSION__MUST_UNDERSTAND, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -101,15 +97,13 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addIdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Extension_id_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Extension_id_feature", "_UI_Extension_type"),
-				Bpmn2Package.Literals.EXTENSION__ID, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Extension_id_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Extension_id_feature",
+								"_UI_Extension_type"),
+						Bpmn2Package.Literals.EXTENSION__ID, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -121,8 +115,7 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Bpmn2Package.Literals.EXTENSION__DEFINITION);
@@ -152,11 +145,9 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Extension.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Extension.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Extension.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Extension.gif"));
 		}
 	}
 
@@ -197,12 +188,10 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
 		switch (notification.getFeatureID(Extension.class)) {
 		case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
 		case Bpmn2Package.EXTENSION__ID:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Bpmn2Package.EXTENSION__DEFINITION:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -216,12 +205,10 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.EXTENSION__DEFINITION,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.EXTENSION__DEFINITION,
 				Bpmn2Factory.eINSTANCE.createExtensionDefinition()));
 	}
 

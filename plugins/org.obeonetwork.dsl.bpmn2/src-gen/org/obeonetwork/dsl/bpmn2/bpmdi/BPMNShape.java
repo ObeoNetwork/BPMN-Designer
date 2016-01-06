@@ -24,6 +24,7 @@ import org.obeonetwork.dsl.dd.di.LabeledShape;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNShape#getBpmnElement <em>Bpmn Element</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNShape#isIsHorizontal <em>Is Horizontal</em>}</li>
@@ -34,7 +35,6 @@ import org.obeonetwork.dsl.dd.di.LabeledShape;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNShape#getParticipantBandKind <em>Participant Band Kind</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNShape#getChoreographyActivityShape <em>Choreography Activity Shape</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage#getBPMNShape()
  * @model

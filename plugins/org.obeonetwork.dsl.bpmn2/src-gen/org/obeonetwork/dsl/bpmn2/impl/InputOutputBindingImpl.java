@@ -16,7 +16,7 @@ package org.obeonetwork.dsl.bpmn2.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+import org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.InputOutputBinding;
 import org.obeonetwork.dsl.bpmn2.InputSet;
@@ -24,27 +24,25 @@ import org.obeonetwork.dsl.bpmn2.Operation;
 import org.obeonetwork.dsl.bpmn2.OutputSet;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Input Output Binding</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Input Output Binding</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InputOutputBindingImpl#getInputDataRef <em>Input Data Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InputOutputBindingImpl#getOutputDataRef <em>Output Data Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InputOutputBindingImpl#getOperationRef <em>Operation Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InputOutputBindingImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class InputOutputBindingImpl extends CDOObjectImpl implements
-		InputOutputBinding {
+public class InputOutputBindingImpl extends BPMN2ObjectImpl implements InputOutputBinding {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getId()
 	 * @generated
 	 * @ordered
@@ -52,18 +50,15 @@ public class InputOutputBindingImpl extends CDOObjectImpl implements
 	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
 	 */
 	protected InputOutputBindingImpl() {
 		super();
-		setId(EcoreUtil.generateUUID());
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -72,8 +67,7 @@ public class InputOutputBindingImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -82,133 +76,113 @@ public class InputOutputBindingImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputSet getInputDataRef() {
-		return (InputSet) eDynamicGet(
-				Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF,
-				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__INPUT_DATA_REF,
-				true, true);
+		return (InputSet) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF,
+				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__INPUT_DATA_REF, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public InputSet basicGetInputDataRef() {
-		return (InputSet) eDynamicGet(
-				Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF,
-				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__INPUT_DATA_REF,
-				false, true);
+		return (InputSet) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF,
+				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__INPUT_DATA_REF, false, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInputDataRef(InputSet newInputDataRef) {
 		eDynamicSet(Bpmn2Package.INPUT_OUTPUT_BINDING__INPUT_DATA_REF,
-				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__INPUT_DATA_REF,
-				newInputDataRef);
+				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__INPUT_DATA_REF, newInputDataRef);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputSet getOutputDataRef() {
-		return (OutputSet) eDynamicGet(
-				Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF,
-				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF,
-				true, true);
+		return (OutputSet) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF,
+				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public OutputSet basicGetOutputDataRef() {
-		return (OutputSet) eDynamicGet(
-				Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF,
-				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF,
-				false, true);
+		return (OutputSet) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF,
+				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF, false, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOutputDataRef(OutputSet newOutputDataRef) {
 		eDynamicSet(Bpmn2Package.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF,
-				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF,
-				newOutputDataRef);
+				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OUTPUT_DATA_REF, newOutputDataRef);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOperationRef() {
-		return (Operation) eDynamicGet(
-				Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF,
-				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OPERATION_REF,
-				true, true);
+		return (Operation) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF,
+				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OPERATION_REF, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Operation basicGetOperationRef() {
-		return (Operation) eDynamicGet(
-				Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF,
-				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OPERATION_REF,
-				false, true);
+		return (Operation) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF,
+				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OPERATION_REF, false, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperationRef(Operation newOperationRef) {
 		eDynamicSet(Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF,
-				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OPERATION_REF,
-				newOperationRef);
+				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__OPERATION_REF, newOperationRef);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return (String) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_BINDING__ID,
 				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__ID, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
-		eDynamicSet(Bpmn2Package.INPUT_OUTPUT_BINDING__ID,
-				Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__ID, newId);
+		eDynamicSet(Bpmn2Package.INPUT_OUTPUT_BINDING__ID, Bpmn2Package.Literals.INPUT_OUTPUT_BINDING__ID, newId);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -233,8 +207,7 @@ public class InputOutputBindingImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -257,8 +230,7 @@ public class InputOutputBindingImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -281,8 +253,7 @@ public class InputOutputBindingImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -295,10 +266,9 @@ public class InputOutputBindingImpl extends CDOObjectImpl implements
 		case Bpmn2Package.INPUT_OUTPUT_BINDING__OPERATION_REF:
 			return basicGetOperationRef() != null;
 		case Bpmn2Package.INPUT_OUTPUT_BINDING__ID:
-			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT
-					.equals(getId());
+			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //InputOutputBindingImpl
+} // InputOutputBindingImpl

@@ -21,11 +21,11 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CompensateEventDefinition#isWaitForCompletion <em>Wait For Completion</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CompensateEventDefinition#getActivityRef <em>Activity Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getCompensateEventDefinition()
  * @model

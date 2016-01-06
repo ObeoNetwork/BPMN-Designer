@@ -159,26 +159,24 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
 	 */
 	public static DiPackage init() {
 		if (isInited)
-			return (DiPackage) EPackage.Registry.INSTANCE
-					.getEPackage(DiPackage.eNS_URI);
+			return (DiPackage) EPackage.Registry.INSTANCE.getEPackage(DiPackage.eNS_URI);
 
 		// Obtain or create and register package
-		DiPackageImpl theDiPackage = (DiPackageImpl) (EPackage.Registry.INSTANCE
-				.get(eNS_URI) instanceof DiPackageImpl ? EPackage.Registry.INSTANCE
-				.get(eNS_URI) : new DiPackageImpl());
+		DiPackageImpl theDiPackage = (DiPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DiPackageImpl
+				? EPackage.Registry.INSTANCE.get(eNS_URI) : new DiPackageImpl());
 
 		isInited = true;
 
 		// Obtain or create and register interdependencies
 		Bpmn2PackageImpl theBpmn2Package = (Bpmn2PackageImpl) (EPackage.Registry.INSTANCE
-				.getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl ? EPackage.Registry.INSTANCE
-				.getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
+				.getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl
+						? EPackage.Registry.INSTANCE.getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
 		BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl) (EPackage.Registry.INSTANCE
-				.getEPackage(BpmnDiPackage.eNS_URI) instanceof BpmnDiPackageImpl ? EPackage.Registry.INSTANCE
-				.getEPackage(BpmnDiPackage.eNS_URI) : BpmnDiPackage.eINSTANCE);
+				.getEPackage(BpmnDiPackage.eNS_URI) instanceof BpmnDiPackageImpl
+						? EPackage.Registry.INSTANCE.getEPackage(BpmnDiPackage.eNS_URI) : BpmnDiPackage.eINSTANCE);
 		DcPackageImpl theDcPackage = (DcPackageImpl) (EPackage.Registry.INSTANCE
-				.getEPackage(DcPackage.eNS_URI) instanceof DcPackageImpl ? EPackage.Registry.INSTANCE
-				.getEPackage(DcPackage.eNS_URI) : DcPackage.eINSTANCE);
+				.getEPackage(DcPackage.eNS_URI) instanceof DcPackageImpl
+						? EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI) : DcPackage.eINSTANCE);
 
 		// Load packages
 		theBpmn2Package.loadPackage();
@@ -197,12 +195,11 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
 		theBpmn2Package.fixPackageContents();
 
 		// Register package validator
-		EValidator.Registry.INSTANCE.put(theDiPackage,
-				new EValidator.Descriptor() {
-					public EValidator getEValidator() {
-						return DiValidator.INSTANCE;
-					}
-				});
+		EValidator.Registry.INSTANCE.put(theDiPackage, new EValidator.Descriptor() {
+			public EValidator getEValidator() {
+				return DiValidator.INSTANCE;
+			}
+		});
 
 		// Mark meta-data to indicate it can't be changed
 		theDiPackage.freeze();
@@ -227,8 +224,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
 	 * @generated
 	 */
 	public EReference getDiagramElement_OwningDiagram() {
-		return (EReference) diagramElementEClass.getEStructuralFeatures()
-				.get(0);
+		return (EReference) diagramElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -237,8 +233,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
 	 * @generated
 	 */
 	public EReference getDiagramElement_OwningElement() {
-		return (EReference) diagramElementEClass.getEStructuralFeatures()
-				.get(1);
+		return (EReference) diagramElementEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -247,8 +242,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
 	 * @generated
 	 */
 	public EReference getDiagramElement_OwnedElement() {
-		return (EReference) diagramElementEClass.getEStructuralFeatures()
-				.get(2);
+		return (EReference) diagramElementEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -257,8 +251,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
 	 * @generated
 	 */
 	public EReference getDiagramElement_ModelElement() {
-		return (EReference) diagramElementEClass.getEStructuralFeatures()
-				.get(3);
+		return (EReference) diagramElementEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -267,8 +260,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
 	 * @generated
 	 */
 	public EReference getDiagramElement_Style() {
-		return (EReference) diagramElementEClass.getEStructuralFeatures()
-				.get(4);
+		return (EReference) diagramElementEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -562,8 +554,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		DcPackage theDcPackage = (DcPackage) EPackage.Registry.INSTANCE
-				.getEPackage(DcPackage.eNS_URI);
+		DcPackage theDcPackage = (DcPackage) EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -579,124 +570,87 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
 		planeEClass.getESuperTypes().add(this.getNode());
 
 		// Initialize classes and features; add operations and parameters
-		initEClass(diagramElementEClass, DiagramElement.class,
-				"DiagramElement", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDiagramElement_OwningDiagram(), this.getDiagram(),
-				this.getDiagram_RootElement(), "owningDiagram", null, 0, 1,
-				DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE,
-				!IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getDiagramElement_OwningElement(),
-				this.getDiagramElement(),
-				this.getDiagramElement_OwnedElement(), "owningElement", null,
-				0, 1, DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE,
-				!IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getDiagramElement_OwnedElement(),
-				this.getDiagramElement(),
-				this.getDiagramElement_OwningElement(), "ownedElement", null,
-				0, -1, DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE,
-				!IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getDiagramElement_ModelElement(),
-				ecorePackage.getEObject(), null, "modelElement", null, 0, 1,
-				DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE,
-				!IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getDiagramElement_Style(), this.getStyle(), null,
-				"style", null, 0, 1, DiagramElement.class, IS_TRANSIENT,
-				!IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED,
+		initEReference(getDiagramElement_OwningDiagram(), this.getDiagram(), this.getDiagram_RootElement(),
+				"owningDiagram", null, 0, 1, DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE,
+				!IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getDiagramElement_OwningElement(), this.getDiagramElement(),
+				this.getDiagramElement_OwnedElement(), "owningElement", null, 0, 1, DiagramElement.class, IS_TRANSIENT,
+				!IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED,
 				!IS_ORDERED);
+		initEReference(getDiagramElement_OwnedElement(), this.getDiagramElement(),
+				this.getDiagramElement_OwningElement(), "ownedElement", null, 0, -1, DiagramElement.class, IS_TRANSIENT,
+				!IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED,
+				!IS_ORDERED);
+		initEReference(getDiagramElement_ModelElement(), ecorePackage.getEObject(), null, "modelElement", null, 0, 1,
+				DiagramElement.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getDiagramElement_Style(), this.getStyle(), null, "style", null, 0, 1, DiagramElement.class,
+				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
-		initEClass(diagramEClass, Diagram.class, "Diagram", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDiagram_Name(), ecorePackage.getEString(), "name",
-				null, 0, 1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
-		initEAttribute(getDiagram_Documentation(), ecorePackage.getEString(),
-				"documentation", null, 0, 1, Diagram.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEClass(diagramEClass, Diagram.class, "Diagram", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1, Diagram.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDiagram_Documentation(), ecorePackage.getEString(), "documentation", null, 0, 1,
+				Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDiagram_Resolution(), ecorePackage.getEFloat(),
-				"resolution", null, 0, 1, Diagram.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, !IS_ORDERED);
-		initEReference(getDiagram_OwnedStyle(), this.getStyle(), null,
-				"ownedStyle", null, 0, -1, Diagram.class, IS_TRANSIENT,
-				!IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED,
+		initEAttribute(getDiagram_Resolution(), ecorePackage.getEFloat(), "resolution", null, 0, 1, Diagram.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
 				!IS_ORDERED);
-		initEReference(getDiagram_RootElement(), this.getDiagramElement(),
-				this.getDiagramElement_OwningDiagram(), "rootElement", null, 1,
-				1, Diagram.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE,
-				!IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
-				IS_DERIVED, !IS_ORDERED);
+		initEReference(getDiagram_OwnedStyle(), this.getStyle(), null, "ownedStyle", null, 0, -1, Diagram.class,
+				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getDiagram_RootElement(), this.getDiagramElement(), this.getDiagramElement_OwningDiagram(),
+				"rootElement", null, 1, 1, Diagram.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
-		initEClass(styleEClass, Style.class, "Style", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(styleEClass, Style.class, "Style", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(edgeEClass, Edge.class, "Edge", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEdge_Source(), this.getDiagramElement(), null, "source", null, 0, 1, Edge.class, IS_TRANSIENT,
+				!IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED,
+				!IS_ORDERED);
+		initEReference(getEdge_Target(), this.getDiagramElement(), null, "target", null, 0, 1, Edge.class, IS_TRANSIENT,
+				!IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED,
+				!IS_ORDERED);
+		initEReference(getEdge_Waypoint(), theDcPackage.getPoint(), null, "waypoint", null, 2, -1, Edge.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(shapeEClass, Shape.class, "Shape", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getShape_Bounds(), theDcPackage.getBounds(), null, "bounds", null, 1, 1, Shape.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(labeledEdgeEClass, LabeledEdge.class, "LabeledEdge", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLabeledEdge_OwnedLabel(), this.getLabel(), null, "ownedLabel", null, 0, -1, LabeledEdge.class,
+				IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
-		initEClass(edgeEClass, Edge.class, "Edge", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(labelEClass, Label.class, "Label", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLabel_Bounds(), theDcPackage.getBounds(), null, "bounds", null, 0, 1, Label.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(labeledShapeEClass, LabeledShape.class, "LabeledShape", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEdge_Source(), this.getDiagramElement(), null,
-				"source", null, 0, 1, Edge.class, IS_TRANSIENT, !IS_VOLATILE,
-				!IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getLabeledShape_OwnedLabel(), this.getLabel(), null, "ownedLabel", null, 0, -1,
+				LabeledShape.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getEdge_Target(), this.getDiagramElement(), null,
-				"target", null, 0, 1, Edge.class, IS_TRANSIENT, !IS_VOLATILE,
-				!IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getEdge_Waypoint(), theDcPackage.getPoint(), null,
-				"waypoint", null, 2, -1, Edge.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+
+		initEClass(planeEClass, Plane.class, "Plane", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPlane_PlaneElement(), this.getDiagramElement(), null, "planeElement", null, 0, -1,
+				Plane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(shapeEClass, Shape.class, "Shape", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getShape_Bounds(), theDcPackage.getBounds(), null,
-				"bounds", null, 1, 1, Shape.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(labeledEdgeEClass, LabeledEdge.class, "LabeledEdge",
-				IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLabeledEdge_OwnedLabel(), this.getLabel(), null,
-				"ownedLabel", null, 0, -1, LabeledEdge.class, IS_TRANSIENT,
-				!IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED,
-				!IS_ORDERED);
-
-		initEClass(labelEClass, Label.class, "Label", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLabel_Bounds(), theDcPackage.getBounds(), null,
-				"bounds", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(labeledShapeEClass, LabeledShape.class, "LabeledShape",
-				IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLabeledShape_OwnedLabel(), this.getLabel(), null,
-				"ownedLabel", null, 0, -1, LabeledShape.class, IS_TRANSIENT,
-				!IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED,
-				!IS_ORDERED);
-
-		initEClass(planeEClass, Plane.class, "Plane", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPlane_PlaneElement(), this.getDiagramElement(), null,
-				"planeElement", null, 0, -1, Plane.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		EOperation op = addEOperation(planeEClass, ecorePackage.getEBoolean(),
-				"plane_element_type", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0,
-				1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = addEOperation(planeEClass, ecorePackage.getEBoolean(), "plane_element_type", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(ecorePackage.getEMap());
 		EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
 		g1.getETypeArguments().add(g2);

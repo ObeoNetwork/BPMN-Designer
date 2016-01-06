@@ -86,8 +86,7 @@ public enum AdHocOrdering implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final AdHocOrdering[] VALUES_ARRAY = new AdHocOrdering[] {
-			PARALLEL, SEQUENTIAL, };
+	private static final AdHocOrdering[] VALUES_ARRAY = new AdHocOrdering[] { PARALLEL, SEQUENTIAL, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Ad Hoc Ordering</b></em>' enumerators.
@@ -95,13 +94,14 @@ public enum AdHocOrdering implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<AdHocOrdering> VALUES = Collections
-			.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<AdHocOrdering> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
 	 * Returns the '<em><b>Ad Hoc Ordering</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AdHocOrdering get(String literal) {
@@ -118,6 +118,8 @@ public enum AdHocOrdering implements Enumerator {
 	 * Returns the '<em><b>Ad Hoc Ordering</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AdHocOrdering getByName(String name) {
@@ -134,6 +136,8 @@ public enum AdHocOrdering implements Enumerator {
 	 * Returns the '<em><b>Ad Hoc Ordering</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AdHocOrdering get(int value) {

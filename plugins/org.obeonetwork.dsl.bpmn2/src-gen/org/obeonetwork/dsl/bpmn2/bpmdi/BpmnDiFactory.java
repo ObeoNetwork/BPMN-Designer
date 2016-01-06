@@ -31,8 +31,7 @@ public interface BpmnDiFactory extends EFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	BpmnDiFactory eINSTANCE = org.obeonetwork.dsl.bpmn2.bpmdi.impl.BpmnDiFactoryImpl
-			.init();
+	BpmnDiFactory eINSTANCE = org.obeonetwork.dsl.bpmn2.bpmdi.impl.BpmnDiFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>BPMN Plane</em>'.

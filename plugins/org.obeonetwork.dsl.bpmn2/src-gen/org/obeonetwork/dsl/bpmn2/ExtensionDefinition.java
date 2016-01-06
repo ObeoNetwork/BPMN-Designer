@@ -24,12 +24,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ExtensionDefinition#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ExtensionDefinition#getExtensionAttributeDefinitions <em>Extension Attribute Definitions</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ExtensionDefinition#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getExtensionDefinition()
  * @model

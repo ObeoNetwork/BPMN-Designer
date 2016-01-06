@@ -25,16 +25,15 @@ import org.obeonetwork.dsl.bpmn2.MessageFlowAssociation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.MessageFlowAssociationImpl#getInnerMessageFlowRef <em>Inner Message Flow Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.MessageFlowAssociationImpl#getOuterMessageFlowRef <em>Outer Message Flow Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class MessageFlowAssociationImpl extends BaseElementImpl implements
-		MessageFlowAssociation {
+public class MessageFlowAssociationImpl extends BaseElementImpl implements MessageFlowAssociation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -60,10 +59,8 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public MessageFlow getInnerMessageFlowRef() {
-		return (MessageFlow) eDynamicGet(
-				Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
-				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
-				true, true);
+		return (MessageFlow) eDynamicGet(Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF, true, true);
 	}
 
 	/**
@@ -72,10 +69,8 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public MessageFlow basicGetInnerMessageFlowRef() {
-		return (MessageFlow) eDynamicGet(
-				Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
-				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
-				false, true);
+		return (MessageFlow) eDynamicGet(Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF, false, true);
 	}
 
 	/**
@@ -84,10 +79,8 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setInnerMessageFlowRef(MessageFlow newInnerMessageFlowRef) {
-		eDynamicSet(
-				Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
-				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
-				newInnerMessageFlowRef);
+		eDynamicSet(Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF, newInnerMessageFlowRef);
 	}
 
 	/**
@@ -96,10 +89,8 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public MessageFlow getOuterMessageFlowRef() {
-		return (MessageFlow) eDynamicGet(
-				Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
-				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
-				true, true);
+		return (MessageFlow) eDynamicGet(Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF, true, true);
 	}
 
 	/**
@@ -108,10 +99,8 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public MessageFlow basicGetOuterMessageFlowRef() {
-		return (MessageFlow) eDynamicGet(
-				Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
-				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
-				false, true);
+		return (MessageFlow) eDynamicGet(Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF, false, true);
 	}
 
 	/**
@@ -120,10 +109,8 @@ public class MessageFlowAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setOuterMessageFlowRef(MessageFlow newOuterMessageFlowRef) {
-		eDynamicSet(
-				Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
-				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
-				newOuterMessageFlowRef);
+		eDynamicSet(Bpmn2Package.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF,
+				Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF, newOuterMessageFlowRef);
 	}
 
 	/**

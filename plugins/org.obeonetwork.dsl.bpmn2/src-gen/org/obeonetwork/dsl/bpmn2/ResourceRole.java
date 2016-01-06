@@ -23,13 +23,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ResourceRole#getResourceRef <em>Resource Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ResourceRole#getResourceParameterBindings <em>Resource Parameter Bindings</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ResourceRole#getResourceAssignmentExpression <em>Resource Assignment Expression</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ResourceRole#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getResourceRole()
  * @model
