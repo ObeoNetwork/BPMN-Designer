@@ -28,12 +28,12 @@
   <repository>
    <id>luna</id>
     <layout>p2</layout>
-    <url>http://download.eclipse.org/releases/luna/</url>
+    <url>http://download.eclipse.org/releases/mars/</url>
   </repository>
   <repository>
-   	<id>OD7</id>
+   	<id>OD8.1</id>
     <layout>p2</layout>
-    <url>http://update.obeo.fr/release/designer/7.0/community/7.0.1/luna/repository/</url>
+    <url>http://update.obeo.fr/release/designer/8.1/community/latest/repository/</url>
   </repository>
   <repository>
    	<id>AcceleoLegacy</id>
