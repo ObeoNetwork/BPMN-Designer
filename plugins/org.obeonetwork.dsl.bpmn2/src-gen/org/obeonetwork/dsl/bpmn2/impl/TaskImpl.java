@@ -30,11 +30,11 @@ import org.obeonetwork.dsl.bpmn2.Task;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.TaskImpl#getIncomingConversationLinks <em>Incoming Conversation Links</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.TaskImpl#getOutgoingConversationLinks <em>Outgoing Conversation Links</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,10 +65,8 @@ public class TaskImpl extends ActivityImpl implements Task {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getIncomingConversationLinks() {
-		return (EList<ConversationLink>) eDynamicGet(
-				Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS,
-				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
-				true, true);
+		return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, true);
 	}
 
 	/**
@@ -78,10 +76,8 @@ public class TaskImpl extends ActivityImpl implements Task {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ConversationLink> getOutgoingConversationLinks() {
-		return (EList<ConversationLink>) eDynamicGet(
-				Bpmn2Package.TASK__OUTGOING_CONVERSATION_LINKS,
-				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
-				true, true);
+		return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.TASK__OUTGOING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, true);
 	}
 
 	/**
@@ -91,8 +87,7 @@ public class TaskImpl extends ActivityImpl implements Task {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks())
@@ -110,15 +105,12 @@ public class TaskImpl extends ActivityImpl implements Task {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.TASK__INCOMING_CONVERSATION_LINKS:
-			return ((InternalEList<?>) getIncomingConversationLinks())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.TASK__OUTGOING_CONVERSATION_LINKS:
-			return ((InternalEList<?>) getOutgoingConversationLinks())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

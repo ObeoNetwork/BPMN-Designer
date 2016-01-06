@@ -22,8 +22,6 @@ import org.obeonetwork.dsl.bpmn2.ParallelGateway;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Parallel Gateway</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

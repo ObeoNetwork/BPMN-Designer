@@ -58,8 +58,7 @@ public enum ChoreographyLoopType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MULTI_INSTANCE_SEQUENTIAL(2, "MultiInstanceSequential",
-			"MultiInstanceSequential"),
+	MULTI_INSTANCE_SEQUENTIAL(2, "MultiInstanceSequential", "MultiInstanceSequential"),
 
 	/**
 	 * The '<em><b>Multi Instance Parallel</b></em>' literal object.
@@ -137,8 +136,8 @@ public enum ChoreographyLoopType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final ChoreographyLoopType[] VALUES_ARRAY = new ChoreographyLoopType[] {
-			NONE, STANDARD, MULTI_INSTANCE_SEQUENTIAL, MULTI_INSTANCE_PARALLEL, };
+	private static final ChoreographyLoopType[] VALUES_ARRAY = new ChoreographyLoopType[] { NONE, STANDARD,
+			MULTI_INSTANCE_SEQUENTIAL, MULTI_INSTANCE_PARALLEL, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Choreography Loop Type</b></em>' enumerators.
@@ -146,13 +145,14 @@ public enum ChoreographyLoopType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<ChoreographyLoopType> VALUES = Collections
-			.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<ChoreographyLoopType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
 	 * Returns the '<em><b>Choreography Loop Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ChoreographyLoopType get(String literal) {
@@ -169,6 +169,8 @@ public enum ChoreographyLoopType implements Enumerator {
 	 * Returns the '<em><b>Choreography Loop Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ChoreographyLoopType getByName(String name) {
@@ -185,6 +187,8 @@ public enum ChoreographyLoopType implements Enumerator {
 	 * Returns the '<em><b>Choreography Loop Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ChoreographyLoopType get(int value) {

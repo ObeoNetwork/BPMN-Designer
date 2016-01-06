@@ -35,6 +35,7 @@ import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNDiagram;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DefinitionsImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DefinitionsImpl#getTargetNamespace <em>Target Namespace</em>}</li>
@@ -48,7 +49,6 @@ import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNDiagram;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DefinitionsImpl#getExporter <em>Exporter</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DefinitionsImpl#getExporterVersion <em>Exporter Version</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -133,8 +133,8 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.DEFINITIONS__NAME,
-				Bpmn2Package.Literals.DEFINITIONS__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.DEFINITIONS__NAME, Bpmn2Package.Literals.DEFINITIONS__NAME, true,
+				true);
 	}
 
 	/**
@@ -143,8 +143,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.DEFINITIONS__NAME,
-				Bpmn2Package.Literals.DEFINITIONS__NAME, newName);
+		eDynamicSet(Bpmn2Package.DEFINITIONS__NAME, Bpmn2Package.Literals.DEFINITIONS__NAME, newName);
 	}
 
 	/**
@@ -163,8 +162,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public void setTargetNamespace(String newTargetNamespace) {
-		eDynamicSet(Bpmn2Package.DEFINITIONS__TARGET_NAMESPACE,
-				Bpmn2Package.Literals.DEFINITIONS__TARGET_NAMESPACE,
+		eDynamicSet(Bpmn2Package.DEFINITIONS__TARGET_NAMESPACE, Bpmn2Package.Literals.DEFINITIONS__TARGET_NAMESPACE,
 				newTargetNamespace);
 	}
 
@@ -174,10 +172,8 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public String getExpressionLanguage() {
-		return (String) eDynamicGet(
-				Bpmn2Package.DEFINITIONS__EXPRESSION_LANGUAGE,
-				Bpmn2Package.Literals.DEFINITIONS__EXPRESSION_LANGUAGE, true,
-				true);
+		return (String) eDynamicGet(Bpmn2Package.DEFINITIONS__EXPRESSION_LANGUAGE,
+				Bpmn2Package.Literals.DEFINITIONS__EXPRESSION_LANGUAGE, true, true);
 	}
 
 	/**
@@ -187,8 +183,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 */
 	public void setExpressionLanguage(String newExpressionLanguage) {
 		eDynamicSet(Bpmn2Package.DEFINITIONS__EXPRESSION_LANGUAGE,
-				Bpmn2Package.Literals.DEFINITIONS__EXPRESSION_LANGUAGE,
-				newExpressionLanguage);
+				Bpmn2Package.Literals.DEFINITIONS__EXPRESSION_LANGUAGE, newExpressionLanguage);
 	}
 
 	/**
@@ -207,8 +202,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public void setTypeLanguage(String newTypeLanguage) {
-		eDynamicSet(Bpmn2Package.DEFINITIONS__TYPE_LANGUAGE,
-				Bpmn2Package.Literals.DEFINITIONS__TYPE_LANGUAGE,
+		eDynamicSet(Bpmn2Package.DEFINITIONS__TYPE_LANGUAGE, Bpmn2Package.Literals.DEFINITIONS__TYPE_LANGUAGE,
 				newTypeLanguage);
 	}
 
@@ -230,8 +224,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Extension> getExtensions() {
-		return (EList<Extension>) eDynamicGet(
-				Bpmn2Package.DEFINITIONS__EXTENSIONS,
+		return (EList<Extension>) eDynamicGet(Bpmn2Package.DEFINITIONS__EXTENSIONS,
 				Bpmn2Package.Literals.DEFINITIONS__EXTENSIONS, true, true);
 	}
 
@@ -242,8 +235,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Relationship> getRelationships() {
-		return (EList<Relationship>) eDynamicGet(
-				Bpmn2Package.DEFINITIONS__RELATIONSHIPS,
+		return (EList<Relationship>) eDynamicGet(Bpmn2Package.DEFINITIONS__RELATIONSHIPS,
 				Bpmn2Package.Literals.DEFINITIONS__RELATIONSHIPS, true, true);
 	}
 
@@ -254,8 +246,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<RootElement> getRootElements() {
-		return (EList<RootElement>) eDynamicGet(
-				Bpmn2Package.DEFINITIONS__ROOT_ELEMENTS,
+		return (EList<RootElement>) eDynamicGet(Bpmn2Package.DEFINITIONS__ROOT_ELEMENTS,
 				Bpmn2Package.Literals.DEFINITIONS__ROOT_ELEMENTS, true, true);
 	}
 
@@ -266,8 +257,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<BPMNDiagram> getDiagrams() {
-		return (EList<BPMNDiagram>) eDynamicGet(
-				Bpmn2Package.DEFINITIONS__DIAGRAMS,
+		return (EList<BPMNDiagram>) eDynamicGet(Bpmn2Package.DEFINITIONS__DIAGRAMS,
 				Bpmn2Package.Literals.DEFINITIONS__DIAGRAMS, true, true);
 	}
 
@@ -277,8 +267,8 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public String getExporter() {
-		return (String) eDynamicGet(Bpmn2Package.DEFINITIONS__EXPORTER,
-				Bpmn2Package.Literals.DEFINITIONS__EXPORTER, true, true);
+		return (String) eDynamicGet(Bpmn2Package.DEFINITIONS__EXPORTER, Bpmn2Package.Literals.DEFINITIONS__EXPORTER,
+				true, true);
 	}
 
 	/**
@@ -287,8 +277,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public void setExporter(String newExporter) {
-		eDynamicSet(Bpmn2Package.DEFINITIONS__EXPORTER,
-				Bpmn2Package.Literals.DEFINITIONS__EXPORTER, newExporter);
+		eDynamicSet(Bpmn2Package.DEFINITIONS__EXPORTER, Bpmn2Package.Literals.DEFINITIONS__EXPORTER, newExporter);
 	}
 
 	/**
@@ -307,8 +296,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	public void setExporterVersion(String newExporterVersion) {
-		eDynamicSet(Bpmn2Package.DEFINITIONS__EXPORTER_VERSION,
-				Bpmn2Package.Literals.DEFINITIONS__EXPORTER_VERSION,
+		eDynamicSet(Bpmn2Package.DEFINITIONS__EXPORTER_VERSION, Bpmn2Package.Literals.DEFINITIONS__EXPORTER_VERSION,
 				newExporterVersion);
 	}
 
@@ -318,24 +306,18 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.DEFINITIONS__IMPORTS:
-			return ((InternalEList<?>) getImports())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getImports()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.DEFINITIONS__EXTENSIONS:
-			return ((InternalEList<?>) getExtensions()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getExtensions()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.DEFINITIONS__RELATIONSHIPS:
-			return ((InternalEList<?>) getRelationships()).basicRemove(
-					otherEnd, msgs);
+			return ((InternalEList<?>) getRelationships()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.DEFINITIONS__ROOT_ELEMENTS:
-			return ((InternalEList<?>) getRootElements()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getRootElements()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.DEFINITIONS__DIAGRAMS:
-			return ((InternalEList<?>) getDiagrams()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getDiagrams()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -405,13 +387,11 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 			return;
 		case Bpmn2Package.DEFINITIONS__RELATIONSHIPS:
 			getRelationships().clear();
-			getRelationships().addAll(
-					(Collection<? extends Relationship>) newValue);
+			getRelationships().addAll((Collection<? extends Relationship>) newValue);
 			return;
 		case Bpmn2Package.DEFINITIONS__ROOT_ELEMENTS:
 			getRootElements().clear();
-			getRootElements().addAll(
-					(Collection<? extends RootElement>) newValue);
+			getRootElements().addAll((Collection<? extends RootElement>) newValue);
 			return;
 		case Bpmn2Package.DEFINITIONS__DIAGRAMS:
 			getDiagrams().clear();
@@ -481,15 +461,13 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.DEFINITIONS__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.DEFINITIONS__TARGET_NAMESPACE:
 			return TARGET_NAMESPACE_EDEFAULT == null ? getTargetNamespace() != null
 					: !TARGET_NAMESPACE_EDEFAULT.equals(getTargetNamespace());
 		case Bpmn2Package.DEFINITIONS__EXPRESSION_LANGUAGE:
 			return EXPRESSION_LANGUAGE_EDEFAULT == null ? getExpressionLanguage() != null
-					: !EXPRESSION_LANGUAGE_EDEFAULT
-							.equals(getExpressionLanguage());
+					: !EXPRESSION_LANGUAGE_EDEFAULT.equals(getExpressionLanguage());
 		case Bpmn2Package.DEFINITIONS__TYPE_LANGUAGE:
 			return TYPE_LANGUAGE_EDEFAULT == null ? getTypeLanguage() != null
 					: !TYPE_LANGUAGE_EDEFAULT.equals(getTypeLanguage());
@@ -504,8 +482,7 @@ public class DefinitionsImpl extends BaseElementImpl implements Definitions {
 		case Bpmn2Package.DEFINITIONS__DIAGRAMS:
 			return !getDiagrams().isEmpty();
 		case Bpmn2Package.DEFINITIONS__EXPORTER:
-			return EXPORTER_EDEFAULT == null ? getExporter() != null
-					: !EXPORTER_EDEFAULT.equals(getExporter());
+			return EXPORTER_EDEFAULT == null ? getExporter() != null : !EXPORTER_EDEFAULT.equals(getExporter());
 		case Bpmn2Package.DEFINITIONS__EXPORTER_VERSION:
 			return EXPORTER_VERSION_EDEFAULT == null ? getExporterVersion() != null
 					: !EXPORTER_VERSION_EDEFAULT.equals(getExporterVersion());

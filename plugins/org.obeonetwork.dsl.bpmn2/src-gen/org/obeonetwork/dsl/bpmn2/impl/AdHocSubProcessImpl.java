@@ -28,17 +28,16 @@ import org.obeonetwork.dsl.bpmn2.Expression;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.AdHocSubProcessImpl#getCompletionCondition <em>Completion Condition</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.AdHocSubProcessImpl#getOrdering <em>Ordering</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.AdHocSubProcessImpl#isCancelRemainingInstances <em>Cancel Remaining Instances</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class AdHocSubProcessImpl extends SubProcessImpl implements
-		AdHocSubProcess {
+public class AdHocSubProcessImpl extends SubProcessImpl implements AdHocSubProcess {
 	/**
 	 * The default value of the '{@link #getOrdering() <em>Ordering</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -83,10 +82,8 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements
 	 * @generated
 	 */
 	public Expression getCompletionCondition() {
-		return (Expression) eDynamicGet(
-				Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION,
-				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION,
-				true, true);
+		return (Expression) eDynamicGet(Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION,
+				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION, true, true);
 	}
 
 	/**
@@ -94,8 +91,7 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCompletionCondition(
-			Expression newCompletionCondition, NotificationChain msgs) {
+	public NotificationChain basicSetCompletionCondition(Expression newCompletionCondition, NotificationChain msgs) {
 		msgs = eDynamicInverseAdd((InternalEObject) newCompletionCondition,
 				Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION, msgs);
 		return msgs;
@@ -108,8 +104,7 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements
 	 */
 	public void setCompletionCondition(Expression newCompletionCondition) {
 		eDynamicSet(Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION,
-				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION,
-				newCompletionCondition);
+				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION, newCompletionCondition);
 	}
 
 	/**
@@ -118,8 +113,7 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements
 	 * @generated
 	 */
 	public AdHocOrdering getOrdering() {
-		return (AdHocOrdering) eDynamicGet(
-				Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING,
+		return (AdHocOrdering) eDynamicGet(Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING,
 				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__ORDERING, true, true);
 	}
 
@@ -129,8 +123,8 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements
 	 * @generated
 	 */
 	public void setOrdering(AdHocOrdering newOrdering) {
-		eDynamicSet(Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING,
-				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__ORDERING, newOrdering);
+		eDynamicSet(Bpmn2Package.AD_HOC_SUB_PROCESS__ORDERING, Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__ORDERING,
+				newOrdering);
 	}
 
 	/**
@@ -139,10 +133,8 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements
 	 * @generated
 	 */
 	public boolean isCancelRemainingInstances() {
-		return (Boolean) eDynamicGet(
-				Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES,
-				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES,
-				true, true);
+		return (Boolean) eDynamicGet(Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES,
+				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES, true, true);
 	}
 
 	/**
@@ -151,10 +143,8 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements
 	 * @generated
 	 */
 	public void setCancelRemainingInstances(boolean newCancelRemainingInstances) {
-		eDynamicSet(
-				Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES,
-				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES,
-				newCancelRemainingInstances);
+		eDynamicSet(Bpmn2Package.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES,
+				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES, newCancelRemainingInstances);
 	}
 
 	/**
@@ -163,8 +153,7 @@ public class AdHocSubProcessImpl extends SubProcessImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.AD_HOC_SUB_PROCESS__COMPLETION_CONDITION:
 			return basicSetCompletionCondition(null, msgs);

@@ -23,12 +23,12 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ResourceParameterBinding#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ResourceParameterBinding#getParameterRef <em>Parameter Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ResourceParameterBinding#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getResourceParameterBinding()
  * @model

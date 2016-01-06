@@ -23,11 +23,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.UserTask#getRenderings <em>Renderings</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.UserTask#getImplementation <em>Implementation</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getUserTask()
  * @model

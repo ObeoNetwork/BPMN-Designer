@@ -24,12 +24,12 @@ import org.obeonetwork.dsl.bpmn2.DataStore;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataStoreImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataStoreImpl#getCapacity <em>Capacity</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataStoreImpl#isIsUnlimited <em>Is Unlimited</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,8 +87,7 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.DATA_STORE__NAME,
-				Bpmn2Package.Literals.DATA_STORE__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.DATA_STORE__NAME, Bpmn2Package.Literals.DATA_STORE__NAME, true, true);
 	}
 
 	/**
@@ -97,8 +96,7 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.DATA_STORE__NAME,
-				Bpmn2Package.Literals.DATA_STORE__NAME, newName);
+		eDynamicSet(Bpmn2Package.DATA_STORE__NAME, Bpmn2Package.Literals.DATA_STORE__NAME, newName);
 	}
 
 	/**
@@ -107,8 +105,8 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
 	 * @generated
 	 */
 	public int getCapacity() {
-		return (Integer) eDynamicGet(Bpmn2Package.DATA_STORE__CAPACITY,
-				Bpmn2Package.Literals.DATA_STORE__CAPACITY, true, true);
+		return (Integer) eDynamicGet(Bpmn2Package.DATA_STORE__CAPACITY, Bpmn2Package.Literals.DATA_STORE__CAPACITY,
+				true, true);
 	}
 
 	/**
@@ -117,8 +115,7 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
 	 * @generated
 	 */
 	public void setCapacity(int newCapacity) {
-		eDynamicSet(Bpmn2Package.DATA_STORE__CAPACITY,
-				Bpmn2Package.Literals.DATA_STORE__CAPACITY, newCapacity);
+		eDynamicSet(Bpmn2Package.DATA_STORE__CAPACITY, Bpmn2Package.Literals.DATA_STORE__CAPACITY, newCapacity);
 	}
 
 	/**
@@ -137,8 +134,8 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
 	 * @generated
 	 */
 	public void setIsUnlimited(boolean newIsUnlimited) {
-		eDynamicSet(Bpmn2Package.DATA_STORE__IS_UNLIMITED,
-				Bpmn2Package.Literals.DATA_STORE__IS_UNLIMITED, newIsUnlimited);
+		eDynamicSet(Bpmn2Package.DATA_STORE__IS_UNLIMITED, Bpmn2Package.Literals.DATA_STORE__IS_UNLIMITED,
+				newIsUnlimited);
 	}
 
 	/**
@@ -210,8 +207,7 @@ public class DataStoreImpl extends ItemAwareElementImpl implements DataStore {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.DATA_STORE__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.DATA_STORE__CAPACITY:
 			return getCapacity() != CAPACITY_EDEFAULT;
 		case Bpmn2Package.DATA_STORE__IS_UNLIMITED:

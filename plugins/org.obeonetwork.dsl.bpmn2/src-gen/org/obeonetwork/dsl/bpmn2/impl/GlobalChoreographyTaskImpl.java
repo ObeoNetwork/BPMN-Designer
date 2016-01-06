@@ -25,15 +25,14 @@ import org.obeonetwork.dsl.bpmn2.Participant;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.GlobalChoreographyTaskImpl#getInitiatingParticipantRef <em>Initiating Participant Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements
-		GlobalChoreographyTask {
+public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements GlobalChoreographyTask {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -59,10 +58,8 @@ public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements
 	 * @generated
 	 */
 	public Participant getInitiatingParticipantRef() {
-		return (Participant) eDynamicGet(
-				Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
-				Bpmn2Package.Literals.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
-				true, true);
+		return (Participant) eDynamicGet(Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
+				Bpmn2Package.Literals.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF, true, true);
 	}
 
 	/**
@@ -71,10 +68,8 @@ public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements
 	 * @generated
 	 */
 	public Participant basicGetInitiatingParticipantRef() {
-		return (Participant) eDynamicGet(
-				Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
-				Bpmn2Package.Literals.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
-				false, true);
+		return (Participant) eDynamicGet(Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
+				Bpmn2Package.Literals.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF, false, true);
 	}
 
 	/**
@@ -82,10 +77,8 @@ public class GlobalChoreographyTaskImpl extends ChoreographyImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInitiatingParticipantRef(
-			Participant newInitiatingParticipantRef) {
-		eDynamicSet(
-				Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
+	public void setInitiatingParticipantRef(Participant newInitiatingParticipantRef) {
+		eDynamicSet(Bpmn2Package.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
 				Bpmn2Package.Literals.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF,
 				newInitiatingParticipantRef);
 	}

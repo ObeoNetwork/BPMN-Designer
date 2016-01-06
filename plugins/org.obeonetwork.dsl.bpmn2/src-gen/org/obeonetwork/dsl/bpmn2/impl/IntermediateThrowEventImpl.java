@@ -22,13 +22,10 @@ import org.obeonetwork.dsl.bpmn2.IntermediateThrowEvent;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Intermediate Throw Event</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public class IntermediateThrowEventImpl extends ThrowEventImpl implements
-		IntermediateThrowEvent {
+public class IntermediateThrowEventImpl extends ThrowEventImpl implements IntermediateThrowEvent {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

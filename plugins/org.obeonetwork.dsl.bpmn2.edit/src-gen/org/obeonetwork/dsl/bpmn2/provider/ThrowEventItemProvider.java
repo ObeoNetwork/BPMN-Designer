@@ -41,9 +41,8 @@ import org.obeonetwork.dsl.bpmn2.ThrowEvent;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ThrowEventItemProvider extends EventItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ThrowEventItemProvider extends EventItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -77,16 +76,12 @@ public class ThrowEventItemProvider extends EventItemProvider implements
 	 * @generated
 	 */
 	protected void addEventDefinitionRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ThrowEvent_eventDefinitionRefs_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ThrowEvent_eventDefinitionRefs_feature",
-						"_UI_ThrowEvent_type"),
-				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITION_REFS, true,
-				false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ThrowEvent_eventDefinitionRefs_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ThrowEvent_eventDefinitionRefs_feature",
+								"_UI_ThrowEvent_type"),
+						Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITION_REFS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -98,17 +93,13 @@ public class ThrowEventItemProvider extends EventItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Bpmn2Package.Literals.THROW_EVENT__INPUT_SET);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.THROW_EVENT__DATA_INPUT_ASSOCIATION);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.THROW_EVENT__DATA_INPUTS);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS);
+			childrenFeatures.add(Bpmn2Package.Literals.THROW_EVENT__DATA_INPUT_ASSOCIATION);
+			childrenFeatures.add(Bpmn2Package.Literals.THROW_EVENT__DATA_INPUTS);
+			childrenFeatures.add(Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS);
 		}
 		return childrenFeatures;
 	}
@@ -165,8 +156,7 @@ public class ThrowEventItemProvider extends EventItemProvider implements
 		case Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION:
 		case Bpmn2Package.THROW_EVENT__DATA_INPUTS:
 		case Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -180,60 +170,46 @@ public class ThrowEventItemProvider extends EventItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.THROW_EVENT__INPUT_SET,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.THROW_EVENT__INPUT_SET,
 				Bpmn2Factory.eINSTANCE.createInputSet()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.THROW_EVENT__DATA_INPUT_ASSOCIATION,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.THROW_EVENT__DATA_INPUT_ASSOCIATION,
 				Bpmn2Factory.eINSTANCE.createDataInputAssociation()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.THROW_EVENT__DATA_INPUTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.THROW_EVENT__DATA_INPUTS,
 				Bpmn2Factory.eINSTANCE.createDataInput()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createCancelEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createErrorEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createTerminateEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createEscalationEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createCompensateEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createTimerEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createLinkEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createMessageEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createConditionalEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createSignalEventDefinition()));
 	}
 

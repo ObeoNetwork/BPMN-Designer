@@ -25,16 +25,15 @@ import org.obeonetwork.dsl.bpmn2.ParticipantAssociation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ParticipantAssociationImpl#getInnerParticipantRef <em>Inner Participant Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ParticipantAssociationImpl#getOuterParticipantRef <em>Outer Participant Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ParticipantAssociationImpl extends BaseElementImpl implements
-		ParticipantAssociation {
+public class ParticipantAssociationImpl extends BaseElementImpl implements ParticipantAssociation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -60,10 +59,8 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public Participant getInnerParticipantRef() {
-		return (Participant) eDynamicGet(
-				Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
-				true, true);
+		return (Participant) eDynamicGet(Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
+				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, true, true);
 	}
 
 	/**
@@ -72,10 +69,8 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public Participant basicGetInnerParticipantRef() {
-		return (Participant) eDynamicGet(
-				Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
-				false, true);
+		return (Participant) eDynamicGet(Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
+				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, false, true);
 	}
 
 	/**
@@ -84,10 +79,8 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setInnerParticipantRef(Participant newInnerParticipantRef) {
-		eDynamicSet(
-				Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
-				newInnerParticipantRef);
+		eDynamicSet(Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
+				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, newInnerParticipantRef);
 	}
 
 	/**
@@ -96,10 +89,8 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public Participant getOuterParticipantRef() {
-		return (Participant) eDynamicGet(
-				Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
-				true, true);
+		return (Participant) eDynamicGet(Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
+				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, true, true);
 	}
 
 	/**
@@ -108,10 +99,8 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public Participant basicGetOuterParticipantRef() {
-		return (Participant) eDynamicGet(
-				Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
-				false, true);
+		return (Participant) eDynamicGet(Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
+				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, false, true);
 	}
 
 	/**
@@ -120,10 +109,8 @@ public class ParticipantAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setOuterParticipantRef(Participant newOuterParticipantRef) {
-		eDynamicSet(
-				Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
-				newOuterParticipantRef);
+		eDynamicSet(Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
+				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, newOuterParticipantRef);
 	}
 
 	/**

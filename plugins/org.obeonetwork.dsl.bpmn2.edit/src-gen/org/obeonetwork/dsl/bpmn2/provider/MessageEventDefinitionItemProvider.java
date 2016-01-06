@@ -37,9 +37,8 @@ import org.obeonetwork.dsl.bpmn2.MessageEventDefinition;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MessageEventDefinitionItemProvider extends
-		EventDefinitionItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider,
+public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
 		IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -75,16 +74,12 @@ public class MessageEventDefinitionItemProvider extends
 	 * @generated
 	 */
 	protected void addMessageRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_MessageEventDefinition_messageRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_MessageEventDefinition_messageRef_feature",
-						"_UI_MessageEventDefinition_type"),
-				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF,
-				true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_MessageEventDefinition_messageRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_MessageEventDefinition_messageRef_feature",
+								"_UI_MessageEventDefinition_type"),
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -94,16 +89,12 @@ public class MessageEventDefinitionItemProvider extends
 	 * @generated
 	 */
 	protected void addOperationRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_MessageEventDefinition_operationRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_MessageEventDefinition_operationRef_feature",
-						"_UI_MessageEventDefinition_type"),
-				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF,
-				true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_MessageEventDefinition_operationRef_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_MessageEventDefinition_operationRef_feature", "_UI_MessageEventDefinition_type"),
+				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -115,15 +106,9 @@ public class MessageEventDefinitionItemProvider extends
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/MessageEventDefinition.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/MessageEventDefinition.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/MessageEventDefinition.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/MessageEventDefinition.gif"));
 		}
 	}
 
@@ -171,8 +156,7 @@ public class MessageEventDefinitionItemProvider extends
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

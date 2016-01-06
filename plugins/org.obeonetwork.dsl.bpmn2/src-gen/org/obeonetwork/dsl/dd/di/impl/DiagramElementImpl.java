@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+import org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl;
 import org.obeonetwork.dsl.dd.di.DiPackage;
 import org.obeonetwork.dsl.dd.di.Diagram;
 import org.obeonetwork.dsl.dd.di.DiagramElement;
@@ -32,6 +33,7 @@ import org.obeonetwork.dsl.dd.di.Style;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.DiagramElementImpl#getOwningDiagram <em>Owning Diagram</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.DiagramElementImpl#getOwningElement <em>Owning Element</em>}</li>
@@ -39,12 +41,10 @@ import org.obeonetwork.dsl.dd.di.Style;
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.DiagramElementImpl#getModelElement <em>Model Element</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.DiagramElementImpl#getStyle <em>Style</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public abstract class DiagramElementImpl extends CDOObjectImpl implements
-		DiagramElement {
+public abstract class DiagramElementImpl extends BPMN2ObjectImpl implements DiagramElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,10 +89,8 @@ public abstract class DiagramElementImpl extends CDOObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOwningDiagram(Diagram newOwningDiagram,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newOwningDiagram,
-				DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM, msgs);
+	public NotificationChain basicSetOwningDiagram(Diagram newOwningDiagram, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newOwningDiagram, DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM, msgs);
 		return msgs;
 	}
 
@@ -102,8 +100,7 @@ public abstract class DiagramElementImpl extends CDOObjectImpl implements
 	 * @generated
 	 */
 	public DiagramElement getOwningElement() {
-		return (DiagramElement) eDynamicGet(
-				DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT,
+		return (DiagramElement) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT,
 				DiPackage.Literals.DIAGRAM_ELEMENT__OWNING_ELEMENT, true, true);
 	}
 
@@ -112,10 +109,8 @@ public abstract class DiagramElementImpl extends CDOObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOwningElement(
-			DiagramElement newOwningElement, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newOwningElement,
-				DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT, msgs);
+	public NotificationChain basicSetOwningElement(DiagramElement newOwningElement, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newOwningElement, DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT, msgs);
 		return msgs;
 	}
 
@@ -126,8 +121,7 @@ public abstract class DiagramElementImpl extends CDOObjectImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DiagramElement> getOwnedElement() {
-		return (EList<DiagramElement>) eDynamicGet(
-				DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT,
+		return (EList<DiagramElement>) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT,
 				DiPackage.Literals.DIAGRAM_ELEMENT__OWNED_ELEMENT, true, true);
 	}
 
@@ -157,8 +151,8 @@ public abstract class DiagramElementImpl extends CDOObjectImpl implements
 	 * @generated
 	 */
 	public Style getStyle() {
-		return (Style) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__STYLE,
-				DiPackage.Literals.DIAGRAM_ELEMENT__STYLE, true, true);
+		return (Style) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__STYLE, DiPackage.Literals.DIAGRAM_ELEMENT__STYLE, true,
+				true);
 	}
 
 	/**
@@ -167,8 +161,8 @@ public abstract class DiagramElementImpl extends CDOObjectImpl implements
 	 * @generated
 	 */
 	public Style basicGetStyle() {
-		return (Style) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__STYLE,
-				DiPackage.Literals.DIAGRAM_ELEMENT__STYLE, false, true);
+		return (Style) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__STYLE, DiPackage.Literals.DIAGRAM_ELEMENT__STYLE, false,
+				true);
 	}
 
 	/**
@@ -178,25 +172,22 @@ public abstract class DiagramElementImpl extends CDOObjectImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
 			Diagram owningDiagram = getOwningDiagram();
 			if (owningDiagram != null)
-				msgs = ((InternalEObject) owningDiagram).eInverseRemove(this,
-						DiPackage.DIAGRAM__ROOT_ELEMENT, Diagram.class, msgs);
+				msgs = ((InternalEObject) owningDiagram).eInverseRemove(this, DiPackage.DIAGRAM__ROOT_ELEMENT,
+						Diagram.class, msgs);
 			return basicSetOwningDiagram((Diagram) otherEnd, msgs);
 		case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
 			DiagramElement owningElement = getOwningElement();
 			if (owningElement != null)
-				msgs = ((InternalEObject) owningElement).eInverseRemove(this,
-						DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT,
+				msgs = ((InternalEObject) owningElement).eInverseRemove(this, DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT,
 						DiagramElement.class, msgs);
 			return basicSetOwningElement((DiagramElement) otherEnd, msgs);
 		case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOwnedElement())
-					.basicAdd(otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOwnedElement()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -207,16 +198,14 @@ public abstract class DiagramElementImpl extends CDOObjectImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
 			return basicSetOwningDiagram(null, msgs);
 		case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
 			return basicSetOwningElement(null, msgs);
 		case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
-			return ((InternalEList<?>) getOwnedElement()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getOwnedElement()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

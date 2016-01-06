@@ -23,13 +23,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ChoreographyActivity#getParticipantRefs <em>Participant Refs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ChoreographyActivity#getInitiatingParticipantRef <em>Initiating Participant Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ChoreographyActivity#getCorrelationKeys <em>Correlation Keys</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ChoreographyActivity#getLoopType <em>Loop Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getChoreographyActivity()
  * @model abstract="true"

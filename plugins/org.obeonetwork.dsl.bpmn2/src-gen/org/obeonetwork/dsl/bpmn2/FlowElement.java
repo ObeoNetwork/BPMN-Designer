@@ -23,13 +23,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.FlowElement#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.FlowElement#getAuditing <em>Auditing</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.FlowElement#getMonitoring <em>Monitoring</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.FlowElement#getCategoryValueRef <em>Category Value Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getFlowElement()
  * @model abstract="true"

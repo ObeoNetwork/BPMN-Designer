@@ -24,16 +24,15 @@ import org.obeonetwork.dsl.bpmn2.GlobalScriptTask;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.GlobalScriptTaskImpl#getScriptLanguage <em>Script Language</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.GlobalScriptTaskImpl#getScript <em>Script</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class GlobalScriptTaskImpl extends GlobalTaskImpl implements
-		GlobalScriptTask {
+public class GlobalScriptTaskImpl extends GlobalTaskImpl implements GlobalScriptTask {
 	/**
 	 * The default value of the '{@link #getScriptLanguage() <em>Script Language</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -78,10 +77,8 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	public String getScriptLanguage() {
-		return (String) eDynamicGet(
-				Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE,
-				Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE,
-				true, true);
+		return (String) eDynamicGet(Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE,
+				Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE, true, true);
 	}
 
 	/**
@@ -91,8 +88,7 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements
 	 */
 	public void setScriptLanguage(String newScriptLanguage) {
 		eDynamicSet(Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE,
-				Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE,
-				newScriptLanguage);
+				Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE, newScriptLanguage);
 	}
 
 	/**
@@ -111,8 +107,8 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	public void setScript(String newScript) {
-		eDynamicSet(Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT,
-				Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT, newScript);
+		eDynamicSet(Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT, Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT,
+				newScript);
 	}
 
 	/**
@@ -179,8 +175,7 @@ public class GlobalScriptTaskImpl extends GlobalTaskImpl implements
 			return SCRIPT_LANGUAGE_EDEFAULT == null ? getScriptLanguage() != null
 					: !SCRIPT_LANGUAGE_EDEFAULT.equals(getScriptLanguage());
 		case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
-			return SCRIPT_EDEFAULT == null ? getScript() != null
-					: !SCRIPT_EDEFAULT.equals(getScript());
+			return SCRIPT_EDEFAULT == null ? getScript() != null : !SCRIPT_EDEFAULT.equals(getScript());
 		}
 		return super.eIsSet(featureID);
 	}

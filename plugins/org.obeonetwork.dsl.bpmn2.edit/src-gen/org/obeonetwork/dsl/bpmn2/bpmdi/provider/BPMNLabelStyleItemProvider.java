@@ -47,9 +47,8 @@ import org.obeonetwork.dsl.dd.di.provider.StyleItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BPMNLabelStyleItemProvider extends StyleItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BPMNLabelStyleItemProvider extends StyleItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -84,8 +83,7 @@ public class BPMNLabelStyleItemProvider extends StyleItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT);
@@ -115,15 +113,9 @@ public class BPMNLabelStyleItemProvider extends StyleItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/BPMNLabelStyle.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/BPMNLabelStyle.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/BPMNLabelStyle.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/BPMNLabelStyle.gif"));
 		}
 	}
 
@@ -161,8 +153,7 @@ public class BPMNLabelStyleItemProvider extends StyleItemProvider implements
 
 		switch (notification.getFeatureID(BPMNLabelStyle.class)) {
 		case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -176,13 +167,11 @@ public class BPMNLabelStyleItemProvider extends StyleItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT,
-				DcFactory.eINSTANCE.createFont()));
+		newChildDescriptors.add(
+				createChildParameter(BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT, DcFactory.eINSTANCE.createFont()));
 	}
 
 	/**

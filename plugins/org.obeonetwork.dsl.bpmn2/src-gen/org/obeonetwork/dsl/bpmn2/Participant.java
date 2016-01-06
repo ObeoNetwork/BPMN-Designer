@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Participant#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Participant#getInterfaceRefs <em>Interface Refs</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Participant#getEndPointRefs <em>End Point Refs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Participant#getProcessRef <em>Process Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getParticipant()
  * @model

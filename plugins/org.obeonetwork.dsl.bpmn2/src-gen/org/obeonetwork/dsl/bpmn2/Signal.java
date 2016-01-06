@@ -21,11 +21,11 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Signal#getStructureRef <em>Structure Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Signal#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getSignal()
  * @model

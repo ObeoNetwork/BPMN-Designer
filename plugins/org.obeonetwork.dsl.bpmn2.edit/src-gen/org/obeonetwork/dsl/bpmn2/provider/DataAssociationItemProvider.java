@@ -41,9 +41,8 @@ import org.obeonetwork.dsl.bpmn2.DataAssociation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DataAssociationItemProvider extends BaseElementItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class DataAssociationItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -78,16 +77,12 @@ public class DataAssociationItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	protected void addTargetRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_DataAssociation_targetRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_DataAssociation_targetRef_feature",
-						"_UI_DataAssociation_type"),
-				Bpmn2Package.Literals.DATA_ASSOCIATION__TARGET_REF, true,
-				false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DataAssociation_targetRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DataAssociation_targetRef_feature",
+								"_UI_DataAssociation_type"),
+						Bpmn2Package.Literals.DATA_ASSOCIATION__TARGET_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -97,16 +92,12 @@ public class DataAssociationItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	protected void addSourceRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_DataAssociation_sourceRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_DataAssociation_sourceRef_feature",
-						"_UI_DataAssociation_type"),
-				Bpmn2Package.Literals.DATA_ASSOCIATION__SOURCE_REF, true,
-				false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DataAssociation_sourceRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DataAssociation_sourceRef_feature",
+								"_UI_DataAssociation_type"),
+						Bpmn2Package.Literals.DATA_ASSOCIATION__SOURCE_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -118,14 +109,11 @@ public class DataAssociationItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.DATA_ASSOCIATION__TRANSFORMATION);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.DATA_ASSOCIATION__ASSIGNMENT);
+			childrenFeatures.add(Bpmn2Package.Literals.DATA_ASSOCIATION__TRANSFORMATION);
+			childrenFeatures.add(Bpmn2Package.Literals.DATA_ASSOCIATION__ASSIGNMENT);
 		}
 		return childrenFeatures;
 	}
@@ -152,15 +140,9 @@ public class DataAssociationItemProvider extends BaseElementItemProvider
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/DataAssociation.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/DataAssociation.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/DataAssociation.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/DataAssociation.gif"));
 		}
 	}
 
@@ -201,8 +183,7 @@ public class DataAssociationItemProvider extends BaseElementItemProvider
 		switch (notification.getFeatureID(DataAssociation.class)) {
 		case Bpmn2Package.DATA_ASSOCIATION__TRANSFORMATION:
 		case Bpmn2Package.DATA_ASSOCIATION__ASSIGNMENT:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -216,16 +197,13 @@ public class DataAssociationItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.DATA_ASSOCIATION__TRANSFORMATION,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DATA_ASSOCIATION__TRANSFORMATION,
 				Bpmn2Factory.eINSTANCE.createFormalExpression()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.DATA_ASSOCIATION__ASSIGNMENT,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DATA_ASSOCIATION__ASSIGNMENT,
 				Bpmn2Factory.eINSTANCE.createAssignment()));
 	}
 

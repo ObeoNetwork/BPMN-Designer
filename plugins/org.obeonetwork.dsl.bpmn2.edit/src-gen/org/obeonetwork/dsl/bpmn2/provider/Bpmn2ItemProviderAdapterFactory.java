@@ -124,8 +124,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createExtensionDefinitionAdapter() {
 		if (extensionDefinitionItemProvider == null) {
-			extensionDefinitionItemProvider = new ExtensionDefinitionItemProvider(
-					this);
+			extensionDefinitionItemProvider = new ExtensionDefinitionItemProvider(this);
 		}
 
 		return extensionDefinitionItemProvider;
@@ -148,8 +147,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createExtensionAttributeDefinitionAdapter() {
 		if (extensionAttributeDefinitionItemProvider == null) {
-			extensionAttributeDefinitionItemProvider = new ExtensionAttributeDefinitionItemProvider(
-					this);
+			extensionAttributeDefinitionItemProvider = new ExtensionAttributeDefinitionItemProvider(this);
 		}
 
 		return extensionAttributeDefinitionItemProvider;
@@ -172,8 +170,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createExtensionAttributeValueAdapter() {
 		if (extensionAttributeValueItemProvider == null) {
-			extensionAttributeValueItemProvider = new ExtensionAttributeValueItemProvider(
-					this);
+			extensionAttributeValueItemProvider = new ExtensionAttributeValueItemProvider(this);
 		}
 
 		return extensionAttributeValueItemProvider;
@@ -403,8 +400,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createInputOutputSpecificationAdapter() {
 		if (inputOutputSpecificationItemProvider == null) {
-			inputOutputSpecificationItemProvider = new InputOutputSpecificationItemProvider(
-					this);
+			inputOutputSpecificationItemProvider = new InputOutputSpecificationItemProvider(this);
 		}
 
 		return inputOutputSpecificationItemProvider;
@@ -473,8 +469,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createItemAwareElementAdapter() {
 		if (itemAwareElementItemProvider == null) {
-			itemAwareElementItemProvider = new ItemAwareElementItemProvider(
-					this);
+			itemAwareElementItemProvider = new ItemAwareElementItemProvider(this);
 		}
 
 		return itemAwareElementItemProvider;
@@ -566,8 +561,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createInputOutputBindingAdapter() {
 		if (inputOutputBindingItemProvider == null) {
-			inputOutputBindingItemProvider = new InputOutputBindingItemProvider(
-					this);
+			inputOutputBindingItemProvider = new InputOutputBindingItemProvider(this);
 		}
 
 		return inputOutputBindingItemProvider;
@@ -636,8 +630,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createResourceParameterAdapter() {
 		if (resourceParameterItemProvider == null) {
-			resourceParameterItemProvider = new ResourceParameterItemProvider(
-					this);
+			resourceParameterItemProvider = new ResourceParameterItemProvider(this);
 		}
 
 		return resourceParameterItemProvider;
@@ -660,8 +653,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createResourceParameterBindingAdapter() {
 		if (resourceParameterBindingItemProvider == null) {
-			resourceParameterBindingItemProvider = new ResourceParameterBindingItemProvider(
-					this);
+			resourceParameterBindingItemProvider = new ResourceParameterBindingItemProvider(this);
 		}
 
 		return resourceParameterBindingItemProvider;
@@ -707,8 +699,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createResourceAssignmentExpressionAdapter() {
 		if (resourceAssignmentExpressionItemProvider == null) {
-			resourceAssignmentExpressionItemProvider = new ResourceAssignmentExpressionItemProvider(
-					this);
+			resourceAssignmentExpressionItemProvider = new ResourceAssignmentExpressionItemProvider(this);
 		}
 
 		return resourceAssignmentExpressionItemProvider;
@@ -961,8 +952,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createParticipantAssociationAdapter() {
 		if (participantAssociationItemProvider == null) {
-			participantAssociationItemProvider = new ParticipantAssociationItemProvider(
-					this);
+			participantAssociationItemProvider = new ParticipantAssociationItemProvider(this);
 		}
 
 		return participantAssociationItemProvider;
@@ -1008,8 +998,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createConversationLinkAdapter() {
 		if (conversationLinkItemProvider == null) {
-			conversationLinkItemProvider = new ConversationLinkItemProvider(
-					this);
+			conversationLinkItemProvider = new ConversationLinkItemProvider(this);
 		}
 
 		return conversationLinkItemProvider;
@@ -1032,8 +1021,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createParticipantMultiplicityAdapter() {
 		if (participantMultiplicityItemProvider == null) {
-			participantMultiplicityItemProvider = new ParticipantMultiplicityItemProvider(
-					this);
+			participantMultiplicityItemProvider = new ParticipantMultiplicityItemProvider(this);
 		}
 
 		return participantMultiplicityItemProvider;
@@ -1056,8 +1044,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createMessageFlowAssociationAdapter() {
 		if (messageFlowAssociationItemProvider == null) {
-			messageFlowAssociationItemProvider = new MessageFlowAssociationItemProvider(
-					this);
+			messageFlowAssociationItemProvider = new MessageFlowAssociationItemProvider(this);
 		}
 
 		return messageFlowAssociationItemProvider;
@@ -1103,8 +1090,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createConversationAssociationAdapter() {
 		if (conversationAssociationItemProvider == null) {
-			conversationAssociationItemProvider = new ConversationAssociationItemProvider(
-					this);
+			conversationAssociationItemProvider = new ConversationAssociationItemProvider(this);
 		}
 
 		return conversationAssociationItemProvider;
@@ -1150,8 +1136,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createCorrelationPropertyAdapter() {
 		if (correlationPropertyItemProvider == null) {
-			correlationPropertyItemProvider = new CorrelationPropertyItemProvider(
-					this);
+			correlationPropertyItemProvider = new CorrelationPropertyItemProvider(this);
 		}
 
 		return correlationPropertyItemProvider;
@@ -1198,8 +1183,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createFormalExpressionAdapter() {
 		if (formalExpressionItemProvider == null) {
-			formalExpressionItemProvider = new FormalExpressionItemProvider(
-					this);
+			formalExpressionItemProvider = new FormalExpressionItemProvider(this);
 		}
 
 		return formalExpressionItemProvider;
@@ -1222,8 +1206,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createCorrelationSubscriptionAdapter() {
 		if (correlationSubscriptionItemProvider == null) {
-			correlationSubscriptionItemProvider = new CorrelationSubscriptionItemProvider(
-					this);
+			correlationSubscriptionItemProvider = new CorrelationSubscriptionItemProvider(this);
 		}
 
 		return correlationSubscriptionItemProvider;
@@ -1246,8 +1229,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createCorrelationPropertyBindingAdapter() {
 		if (correlationPropertyBindingItemProvider == null) {
-			correlationPropertyBindingItemProvider = new CorrelationPropertyBindingItemProvider(
-					this);
+			correlationPropertyBindingItemProvider = new CorrelationPropertyBindingItemProvider(this);
 		}
 
 		return correlationPropertyBindingItemProvider;
@@ -1270,8 +1252,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createGlobalManualTaskAdapter() {
 		if (globalManualTaskItemProvider == null) {
-			globalManualTaskItemProvider = new GlobalManualTaskItemProvider(
-					this);
+			globalManualTaskItemProvider = new GlobalManualTaskItemProvider(this);
 		}
 
 		return globalManualTaskItemProvider;
@@ -1363,8 +1344,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createDataOutputAssociationAdapter() {
 		if (dataOutputAssociationItemProvider == null) {
-			dataOutputAssociationItemProvider = new DataOutputAssociationItemProvider(
-					this);
+			dataOutputAssociationItemProvider = new DataOutputAssociationItemProvider(this);
 		}
 
 		return dataOutputAssociationItemProvider;
@@ -1433,8 +1413,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createDataInputAssociationAdapter() {
 		if (dataInputAssociationItemProvider == null) {
-			dataInputAssociationItemProvider = new DataInputAssociationItemProvider(
-					this);
+			dataInputAssociationItemProvider = new DataInputAssociationItemProvider(this);
 		}
 
 		return dataInputAssociationItemProvider;
@@ -1572,8 +1551,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createEventBasedGatewayAdapter() {
 		if (eventBasedGatewayItemProvider == null) {
-			eventBasedGatewayItemProvider = new EventBasedGatewayItemProvider(
-					this);
+			eventBasedGatewayItemProvider = new EventBasedGatewayItemProvider(this);
 		}
 
 		return eventBasedGatewayItemProvider;
@@ -1619,8 +1597,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createExclusiveGatewayAdapter() {
 		if (exclusiveGatewayItemProvider == null) {
-			exclusiveGatewayItemProvider = new ExclusiveGatewayItemProvider(
-					this);
+			exclusiveGatewayItemProvider = new ExclusiveGatewayItemProvider(this);
 		}
 
 		return exclusiveGatewayItemProvider;
@@ -1643,8 +1620,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createInclusiveGatewayAdapter() {
 		if (inclusiveGatewayItemProvider == null) {
-			inclusiveGatewayItemProvider = new InclusiveGatewayItemProvider(
-					this);
+			inclusiveGatewayItemProvider = new InclusiveGatewayItemProvider(this);
 		}
 
 		return inclusiveGatewayItemProvider;
@@ -1736,8 +1712,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createIntermediateCatchEventAdapter() {
 		if (intermediateCatchEventItemProvider == null) {
-			intermediateCatchEventItemProvider = new IntermediateCatchEventItemProvider(
-					this);
+			intermediateCatchEventItemProvider = new IntermediateCatchEventItemProvider(this);
 		}
 
 		return intermediateCatchEventItemProvider;
@@ -1760,8 +1735,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createIntermediateThrowEventAdapter() {
 		if (intermediateThrowEventItemProvider == null) {
-			intermediateThrowEventItemProvider = new IntermediateThrowEventItemProvider(
-					this);
+			intermediateThrowEventItemProvider = new IntermediateThrowEventItemProvider(this);
 		}
 
 		return intermediateThrowEventItemProvider;
@@ -1830,8 +1804,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createCancelEventDefinitionAdapter() {
 		if (cancelEventDefinitionItemProvider == null) {
-			cancelEventDefinitionItemProvider = new CancelEventDefinitionItemProvider(
-					this);
+			cancelEventDefinitionItemProvider = new CancelEventDefinitionItemProvider(this);
 		}
 
 		return cancelEventDefinitionItemProvider;
@@ -1854,8 +1827,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createErrorEventDefinitionAdapter() {
 		if (errorEventDefinitionItemProvider == null) {
-			errorEventDefinitionItemProvider = new ErrorEventDefinitionItemProvider(
-					this);
+			errorEventDefinitionItemProvider = new ErrorEventDefinitionItemProvider(this);
 		}
 
 		return errorEventDefinitionItemProvider;
@@ -1878,8 +1850,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createTerminateEventDefinitionAdapter() {
 		if (terminateEventDefinitionItemProvider == null) {
-			terminateEventDefinitionItemProvider = new TerminateEventDefinitionItemProvider(
-					this);
+			terminateEventDefinitionItemProvider = new TerminateEventDefinitionItemProvider(this);
 		}
 
 		return terminateEventDefinitionItemProvider;
@@ -1902,8 +1873,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createEscalationEventDefinitionAdapter() {
 		if (escalationEventDefinitionItemProvider == null) {
-			escalationEventDefinitionItemProvider = new EscalationEventDefinitionItemProvider(
-					this);
+			escalationEventDefinitionItemProvider = new EscalationEventDefinitionItemProvider(this);
 		}
 
 		return escalationEventDefinitionItemProvider;
@@ -1949,8 +1919,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createCompensateEventDefinitionAdapter() {
 		if (compensateEventDefinitionItemProvider == null) {
-			compensateEventDefinitionItemProvider = new CompensateEventDefinitionItemProvider(
-					this);
+			compensateEventDefinitionItemProvider = new CompensateEventDefinitionItemProvider(this);
 		}
 
 		return compensateEventDefinitionItemProvider;
@@ -1973,8 +1942,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createTimerEventDefinitionAdapter() {
 		if (timerEventDefinitionItemProvider == null) {
-			timerEventDefinitionItemProvider = new TimerEventDefinitionItemProvider(
-					this);
+			timerEventDefinitionItemProvider = new TimerEventDefinitionItemProvider(this);
 		}
 
 		return timerEventDefinitionItemProvider;
@@ -1997,8 +1965,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createLinkEventDefinitionAdapter() {
 		if (linkEventDefinitionItemProvider == null) {
-			linkEventDefinitionItemProvider = new LinkEventDefinitionItemProvider(
-					this);
+			linkEventDefinitionItemProvider = new LinkEventDefinitionItemProvider(this);
 		}
 
 		return linkEventDefinitionItemProvider;
@@ -2021,8 +1988,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createMessageEventDefinitionAdapter() {
 		if (messageEventDefinitionItemProvider == null) {
-			messageEventDefinitionItemProvider = new MessageEventDefinitionItemProvider(
-					this);
+			messageEventDefinitionItemProvider = new MessageEventDefinitionItemProvider(this);
 		}
 
 		return messageEventDefinitionItemProvider;
@@ -2045,8 +2011,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createConditionalEventDefinitionAdapter() {
 		if (conditionalEventDefinitionItemProvider == null) {
-			conditionalEventDefinitionItemProvider = new ConditionalEventDefinitionItemProvider(
-					this);
+			conditionalEventDefinitionItemProvider = new ConditionalEventDefinitionItemProvider(this);
 		}
 
 		return conditionalEventDefinitionItemProvider;
@@ -2069,8 +2034,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createSignalEventDefinitionAdapter() {
 		if (signalEventDefinitionItemProvider == null) {
-			signalEventDefinitionItemProvider = new SignalEventDefinitionItemProvider(
-					this);
+			signalEventDefinitionItemProvider = new SignalEventDefinitionItemProvider(this);
 		}
 
 		return signalEventDefinitionItemProvider;
@@ -2116,8 +2080,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createImplicitThrowEventAdapter() {
 		if (implicitThrowEventItemProvider == null) {
-			implicitThrowEventItemProvider = new ImplicitThrowEventItemProvider(
-					this);
+			implicitThrowEventItemProvider = new ImplicitThrowEventItemProvider(this);
 		}
 
 		return implicitThrowEventItemProvider;
@@ -2186,8 +2149,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createDataStoreReferenceAdapter() {
 		if (dataStoreReferenceItemProvider == null) {
-			dataStoreReferenceItemProvider = new DataStoreReferenceItemProvider(
-					this);
+			dataStoreReferenceItemProvider = new DataStoreReferenceItemProvider(this);
 		}
 
 		return dataStoreReferenceItemProvider;
@@ -2210,8 +2172,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createDataObjectReferenceAdapter() {
 		if (dataObjectReferenceItemProvider == null) {
-			dataObjectReferenceItemProvider = new DataObjectReferenceItemProvider(
-					this);
+			dataObjectReferenceItemProvider = new DataObjectReferenceItemProvider(this);
 		}
 
 		return dataObjectReferenceItemProvider;
@@ -2234,8 +2195,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createCallConversationAdapter() {
 		if (callConversationItemProvider == null) {
-			callConversationItemProvider = new CallConversationItemProvider(
-					this);
+			callConversationItemProvider = new CallConversationItemProvider(this);
 		}
 
 		return callConversationItemProvider;
@@ -2304,8 +2264,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createGlobalConversationAdapter() {
 		if (globalConversationItemProvider == null) {
-			globalConversationItemProvider = new GlobalConversationItemProvider(
-					this);
+			globalConversationItemProvider = new GlobalConversationItemProvider(this);
 		}
 
 		return globalConversationItemProvider;
@@ -2374,8 +2333,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createCallChoreographyAdapter() {
 		if (callChoreographyItemProvider == null) {
-			callChoreographyItemProvider = new CallChoreographyItemProvider(
-					this);
+			callChoreographyItemProvider = new CallChoreographyItemProvider(this);
 		}
 
 		return callChoreographyItemProvider;
@@ -2421,8 +2379,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createChoreographyTaskAdapter() {
 		if (choreographyTaskItemProvider == null) {
-			choreographyTaskItemProvider = new ChoreographyTaskItemProvider(
-					this);
+			choreographyTaskItemProvider = new ChoreographyTaskItemProvider(this);
 		}
 
 		return choreographyTaskItemProvider;
@@ -2445,8 +2402,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createGlobalChoreographyTaskAdapter() {
 		if (globalChoreographyTaskItemProvider == null) {
-			globalChoreographyTaskItemProvider = new GlobalChoreographyTaskItemProvider(
-					this);
+			globalChoreographyTaskItemProvider = new GlobalChoreographyTaskItemProvider(this);
 		}
 
 		return globalChoreographyTaskItemProvider;
@@ -2607,8 +2563,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createMultiInstanceLoopCharacteristicsAdapter() {
 		if (multiInstanceLoopCharacteristicsItemProvider == null) {
-			multiInstanceLoopCharacteristicsItemProvider = new MultiInstanceLoopCharacteristicsItemProvider(
-					this);
+			multiInstanceLoopCharacteristicsItemProvider = new MultiInstanceLoopCharacteristicsItemProvider(this);
 		}
 
 		return multiInstanceLoopCharacteristicsItemProvider;
@@ -2631,8 +2586,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createComplexBehaviorDefinitionAdapter() {
 		if (complexBehaviorDefinitionItemProvider == null) {
-			complexBehaviorDefinitionItemProvider = new ComplexBehaviorDefinitionItemProvider(
-					this);
+			complexBehaviorDefinitionItemProvider = new ComplexBehaviorDefinitionItemProvider(this);
 		}
 
 		return complexBehaviorDefinitionItemProvider;
@@ -2655,8 +2609,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createStandardLoopCharacteristicsAdapter() {
 		if (standardLoopCharacteristicsItemProvider == null) {
-			standardLoopCharacteristicsItemProvider = new StandardLoopCharacteristicsItemProvider(
-					this);
+			standardLoopCharacteristicsItemProvider = new StandardLoopCharacteristicsItemProvider(this);
 		}
 
 		return standardLoopCharacteristicsItemProvider;
@@ -2771,8 +2724,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createBusinessRuleTaskAdapter() {
 		if (businessRuleTaskItemProvider == null) {
-			businessRuleTaskItemProvider = new BusinessRuleTaskItemProvider(
-					this);
+			businessRuleTaskItemProvider = new BusinessRuleTaskItemProvider(this);
 		}
 
 		return businessRuleTaskItemProvider;
@@ -2841,8 +2793,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createGlobalScriptTaskAdapter() {
 		if (globalScriptTaskItemProvider == null) {
-			globalScriptTaskItemProvider = new GlobalScriptTaskItemProvider(
-					this);
+			globalScriptTaskItemProvider = new GlobalScriptTaskItemProvider(this);
 		}
 
 		return globalScriptTaskItemProvider;
@@ -2865,8 +2816,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	@Override
 	public Adapter createGlobalBusinessRuleTaskAdapter() {
 		if (globalBusinessRuleTaskItemProvider == null) {
-			globalBusinessRuleTaskItemProvider = new GlobalBusinessRuleTaskItemProvider(
-					this);
+			globalBusinessRuleTaskItemProvider = new GlobalBusinessRuleTaskItemProvider(this);
 		}
 
 		return globalBusinessRuleTaskItemProvider;
@@ -2902,8 +2852,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	 * @generated
 	 */
 	public ComposeableAdapterFactory getRootAdapterFactory() {
-		return parentAdapterFactory == null ? this : parentAdapterFactory
-				.getRootAdapterFactory();
+		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
 	}
 
 	/**
@@ -2912,8 +2861,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParentAdapterFactory(
-			ComposedAdapterFactory parentAdapterFactory) {
+	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
 		this.parentAdapterFactory = parentAdapterFactory;
 	}
 
@@ -2947,8 +2895,7 @@ public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
 	public Object adapt(Object object, Object type) {
 		if (isFactoryForType(type)) {
 			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class<?>)
-					|| (((Class<?>) type).isInstance(adapter))) {
+			if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
 				return adapter;
 			}
 		}

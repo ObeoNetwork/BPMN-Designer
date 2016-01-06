@@ -38,9 +38,8 @@ import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ErrorItemProvider extends RootElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ErrorItemProvider extends RootElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -76,15 +75,12 @@ public class ErrorItemProvider extends RootElementItemProvider implements
 	 * @generated
 	 */
 	protected void addStructureRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Error_structureRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Error_structureRef_feature", "_UI_Error_type"),
-				Bpmn2Package.Literals.ERROR__STRUCTURE_REF, true, false, true,
-				null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Error_structureRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Error_structureRef_feature",
+								"_UI_Error_type"),
+						Bpmn2Package.Literals.ERROR__STRUCTURE_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -94,15 +90,12 @@ public class ErrorItemProvider extends RootElementItemProvider implements
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Error_name_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Error_name_feature", "_UI_Error_type"),
-				Bpmn2Package.Literals.ERROR__NAME, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Error_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Error_name_feature", "_UI_Error_type"),
+						Bpmn2Package.Literals.ERROR__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -112,15 +105,13 @@ public class ErrorItemProvider extends RootElementItemProvider implements
 	 * @generated
 	 */
 	protected void addErrorCodePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Error_errorCode_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Error_errorCode_feature", "_UI_Error_type"),
-				Bpmn2Package.Literals.ERROR__ERROR_CODE, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Error_errorCode_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Error_errorCode_feature",
+								"_UI_Error_type"),
+						Bpmn2Package.Literals.ERROR__ERROR_CODE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -132,11 +123,9 @@ public class ErrorItemProvider extends RootElementItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Error.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Error.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Error.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Error.gif"));
 		}
 	}
 
@@ -174,12 +163,10 @@ public class ErrorItemProvider extends RootElementItemProvider implements
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification
-				.getFeatureID(org.obeonetwork.dsl.bpmn2.Error.class)) {
+		switch (notification.getFeatureID(org.obeonetwork.dsl.bpmn2.Error.class)) {
 		case Bpmn2Package.ERROR__NAME:
 		case Bpmn2Package.ERROR__ERROR_CODE:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -193,8 +180,7 @@ public class ErrorItemProvider extends RootElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

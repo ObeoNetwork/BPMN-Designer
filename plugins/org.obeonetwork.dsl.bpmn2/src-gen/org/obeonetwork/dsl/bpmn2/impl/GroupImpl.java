@@ -25,10 +25,10 @@ import org.obeonetwork.dsl.bpmn2.Group;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.GroupImpl#getCategoryValueRef <em>Category Value Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -58,8 +58,7 @@ public class GroupImpl extends ArtifactImpl implements Group {
 	 * @generated
 	 */
 	public CategoryValue getCategoryValueRef() {
-		return (CategoryValue) eDynamicGet(
-				Bpmn2Package.GROUP__CATEGORY_VALUE_REF,
+		return (CategoryValue) eDynamicGet(Bpmn2Package.GROUP__CATEGORY_VALUE_REF,
 				Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF, true, true);
 	}
 
@@ -69,8 +68,7 @@ public class GroupImpl extends ArtifactImpl implements Group {
 	 * @generated
 	 */
 	public CategoryValue basicGetCategoryValueRef() {
-		return (CategoryValue) eDynamicGet(
-				Bpmn2Package.GROUP__CATEGORY_VALUE_REF,
+		return (CategoryValue) eDynamicGet(Bpmn2Package.GROUP__CATEGORY_VALUE_REF,
 				Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF, false, true);
 	}
 
@@ -80,8 +78,7 @@ public class GroupImpl extends ArtifactImpl implements Group {
 	 * @generated
 	 */
 	public void setCategoryValueRef(CategoryValue newCategoryValueRef) {
-		eDynamicSet(Bpmn2Package.GROUP__CATEGORY_VALUE_REF,
-				Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF,
+		eDynamicSet(Bpmn2Package.GROUP__CATEGORY_VALUE_REF, Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF,
 				newCategoryValueRef);
 	}
 

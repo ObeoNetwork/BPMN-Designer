@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Process#getProcessType <em>Process Type</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Process#isIsClosed <em>Is Closed</em>}</li>
@@ -35,8 +36,9 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Process#getResources <em>Resources</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Process#getArtifacts <em>Artifacts</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Process#getCorrelationSubscriptions <em>Correlation Subscriptions</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.bpmn2.Process#getDecomposedBy <em>Decomposed By</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.bpmn2.Process#getDecomposes <em>Decomposes</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getProcess()
  * @model
@@ -281,5 +283,51 @@ public interface Process extends CallableElement, FlowElementsContainer {
 	 * @generated
 	 */
 	EList<CorrelationSubscription> getCorrelationSubscriptions();
+
+	/**
+	 * Returns the value of the '<em><b>Decomposed By</b></em>' containment reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.Process}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.bpmn2.Process#getDecomposes <em>Decomposes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Decomposed By</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Decomposed By</em>' containment reference list.
+	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getProcess_DecomposedBy()
+	 * @see org.obeonetwork.dsl.bpmn2.Process#getDecomposes
+	 * @model opposite="decomposes" containment="true"
+	 * @generated
+	 */
+	EList<Process> getDecomposedBy();
+
+	/**
+	 * Returns the value of the '<em><b>Decomposes</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.bpmn2.Process#getDecomposedBy <em>Decomposed By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Decomposes</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Decomposes</em>' container reference.
+	 * @see #setDecomposes(Process)
+	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getProcess_Decomposes()
+	 * @see org.obeonetwork.dsl.bpmn2.Process#getDecomposedBy
+	 * @model opposite="decomposedBy" transient="false"
+	 * @generated
+	 */
+	Process getDecomposes();
+
+	/**
+	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.Process#getDecomposes <em>Decomposes</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Decomposes</em>' container reference.
+	 * @see #getDecomposes()
+	 * @generated
+	 */
+	void setDecomposes(Process value);
 
 } // Process

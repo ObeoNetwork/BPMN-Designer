@@ -31,16 +31,15 @@ import org.obeonetwork.dsl.bpmn2.Rendering;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.GlobalUserTaskImpl#getImplementation <em>Implementation</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.GlobalUserTaskImpl#getRenderings <em>Renderings</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class GlobalUserTaskImpl extends GlobalTaskImpl implements
-		GlobalUserTask {
+public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask {
 	/**
 	 * The default value of the '{@link #getImplementation() <em>Implementation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -76,10 +75,8 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	public String getImplementation() {
-		return (String) eDynamicGet(
-				Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION,
-				Bpmn2Package.Literals.GLOBAL_USER_TASK__IMPLEMENTATION, true,
-				true);
+		return (String) eDynamicGet(Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION,
+				Bpmn2Package.Literals.GLOBAL_USER_TASK__IMPLEMENTATION, true, true);
 	}
 
 	/**
@@ -89,8 +86,7 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements
 	 */
 	public void setImplementation(String newImplementation) {
 		eDynamicSet(Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION,
-				Bpmn2Package.Literals.GLOBAL_USER_TASK__IMPLEMENTATION,
-				newImplementation);
+				Bpmn2Package.Literals.GLOBAL_USER_TASK__IMPLEMENTATION, newImplementation);
 	}
 
 	/**
@@ -100,8 +96,7 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Rendering> getRenderings() {
-		return (EList<Rendering>) eDynamicGet(
-				Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS,
+		return (EList<Rendering>) eDynamicGet(Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS,
 				Bpmn2Package.Literals.GLOBAL_USER_TASK__RENDERINGS, true, true);
 	}
 
@@ -111,12 +106,10 @@ public class GlobalUserTaskImpl extends GlobalTaskImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS:
-			return ((InternalEList<?>) getRenderings()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getRenderings()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

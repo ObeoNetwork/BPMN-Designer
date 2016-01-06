@@ -23,13 +23,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CallableElement#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CallableElement#getIoSpecification <em>Io Specification</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CallableElement#getSupportedInterfaceRefs <em>Supported Interface Refs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CallableElement#getIoBinding <em>Io Binding</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getCallableElement()
  * @model abstract="true"

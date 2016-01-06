@@ -31,10 +31,10 @@ import org.obeonetwork.dsl.bpmn2.ResourceRole;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.GlobalTaskImpl#getResources <em>Resources</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,8 +65,7 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ResourceRole> getResources() {
-		return (EList<ResourceRole>) eDynamicGet(
-				Bpmn2Package.GLOBAL_TASK__RESOURCES,
+		return (EList<ResourceRole>) eDynamicGet(Bpmn2Package.GLOBAL_TASK__RESOURCES,
 				Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES, true, true);
 	}
 
@@ -76,12 +75,10 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.GLOBAL_TASK__RESOURCES:
-			return ((InternalEList<?>) getResources()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getResources()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -111,8 +108,7 @@ public class GlobalTaskImpl extends CallableElementImpl implements GlobalTask {
 		switch (featureID) {
 		case Bpmn2Package.GLOBAL_TASK__RESOURCES:
 			getResources().clear();
-			getResources()
-					.addAll((Collection<? extends ResourceRole>) newValue);
+			getResources().addAll((Collection<? extends ResourceRole>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

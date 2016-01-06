@@ -24,11 +24,11 @@ import org.obeonetwork.dsl.bpmn2.ScriptTask;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ScriptTaskImpl#getScriptFormat <em>Script Format</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ScriptTaskImpl#getScript <em>Script</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,8 +87,7 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	 * @generated
 	 */
 	public void setScriptFormat(String newScriptFormat) {
-		eDynamicSet(Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT,
-				Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT_FORMAT,
+		eDynamicSet(Bpmn2Package.SCRIPT_TASK__SCRIPT_FORMAT, Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT_FORMAT,
 				newScriptFormat);
 	}
 
@@ -98,8 +97,8 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	 * @generated
 	 */
 	public String getScript() {
-		return (String) eDynamicGet(Bpmn2Package.SCRIPT_TASK__SCRIPT,
-				Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT, true, true);
+		return (String) eDynamicGet(Bpmn2Package.SCRIPT_TASK__SCRIPT, Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT, true,
+				true);
 	}
 
 	/**
@@ -108,8 +107,7 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 	 * @generated
 	 */
 	public void setScript(String newScript) {
-		eDynamicSet(Bpmn2Package.SCRIPT_TASK__SCRIPT,
-				Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT, newScript);
+		eDynamicSet(Bpmn2Package.SCRIPT_TASK__SCRIPT, Bpmn2Package.Literals.SCRIPT_TASK__SCRIPT, newScript);
 	}
 
 	/**
@@ -176,8 +174,7 @@ public class ScriptTaskImpl extends TaskImpl implements ScriptTask {
 			return SCRIPT_FORMAT_EDEFAULT == null ? getScriptFormat() != null
 					: !SCRIPT_FORMAT_EDEFAULT.equals(getScriptFormat());
 		case Bpmn2Package.SCRIPT_TASK__SCRIPT:
-			return SCRIPT_EDEFAULT == null ? getScript() != null
-					: !SCRIPT_EDEFAULT.equals(getScript());
+			return SCRIPT_EDEFAULT == null ? getScript() != null : !SCRIPT_EDEFAULT.equals(getScript());
 		}
 		return super.eIsSet(featureID);
 	}

@@ -43,8 +43,8 @@ import org.obeonetwork.dsl.dd.dc.util.DcAdapterFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DcItemProviderAdapterFactory extends DcAdapterFactory implements
-		ComposeableAdapterFactory, IChangeNotifier {
+public class DcItemProviderAdapterFactory extends DcAdapterFactory
+		implements ComposeableAdapterFactory, IChangeNotifier {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -159,8 +159,7 @@ public class DcItemProviderAdapterFactory extends DcAdapterFactory implements
 	 * @generated
 	 */
 	public ComposeableAdapterFactory getRootAdapterFactory() {
-		return parentAdapterFactory == null ? this : parentAdapterFactory
-				.getRootAdapterFactory();
+		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
 	}
 
 	/**
@@ -169,8 +168,7 @@ public class DcItemProviderAdapterFactory extends DcAdapterFactory implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParentAdapterFactory(
-			ComposedAdapterFactory parentAdapterFactory) {
+	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
 		this.parentAdapterFactory = parentAdapterFactory;
 	}
 
@@ -204,8 +202,7 @@ public class DcItemProviderAdapterFactory extends DcAdapterFactory implements
 	public Object adapt(Object object, Object type) {
 		if (isFactoryForType(type)) {
 			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class<?>)
-					|| (((Class<?>) type).isInstance(adapter))) {
+			if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
 				return adapter;
 			}
 		}

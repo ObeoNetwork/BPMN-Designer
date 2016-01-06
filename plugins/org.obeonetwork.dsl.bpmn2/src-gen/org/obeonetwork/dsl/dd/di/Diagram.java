@@ -24,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.di.Diagram#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.di.Diagram#getDocumentation <em>Documentation</em>}</li>
@@ -31,7 +32,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.dd.di.Diagram#getOwnedStyle <em>Owned Style</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.di.Diagram#getRootElement <em>Root Element</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagram()
  * @model abstract="true"

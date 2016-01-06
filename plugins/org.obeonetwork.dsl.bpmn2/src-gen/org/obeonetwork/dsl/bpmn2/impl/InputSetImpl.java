@@ -32,6 +32,7 @@ import org.obeonetwork.dsl.bpmn2.OutputSet;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InputSetImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InputSetImpl#getDataInputRefs <em>Data Input Refs</em>}</li>
@@ -39,7 +40,6 @@ import org.obeonetwork.dsl.bpmn2.OutputSet;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InputSetImpl#getWhileExecutingInputRefs <em>While Executing Input Refs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.InputSetImpl#getOutputSetRefs <em>Output Set Refs</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -79,8 +79,7 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.INPUT_SET__NAME,
-				Bpmn2Package.Literals.INPUT_SET__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.INPUT_SET__NAME, Bpmn2Package.Literals.INPUT_SET__NAME, true, true);
 	}
 
 	/**
@@ -89,8 +88,7 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.INPUT_SET__NAME,
-				Bpmn2Package.Literals.INPUT_SET__NAME, newName);
+		eDynamicSet(Bpmn2Package.INPUT_SET__NAME, Bpmn2Package.Literals.INPUT_SET__NAME, newName);
 	}
 
 	/**
@@ -100,8 +98,7 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataInput> getDataInputRefs() {
-		return (EList<DataInput>) eDynamicGet(
-				Bpmn2Package.INPUT_SET__DATA_INPUT_REFS,
+		return (EList<DataInput>) eDynamicGet(Bpmn2Package.INPUT_SET__DATA_INPUT_REFS,
 				Bpmn2Package.Literals.INPUT_SET__DATA_INPUT_REFS, true, true);
 	}
 
@@ -112,10 +109,8 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataInput> getOptionalInputRefs() {
-		return (EList<DataInput>) eDynamicGet(
-				Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS,
-				Bpmn2Package.Literals.INPUT_SET__OPTIONAL_INPUT_REFS, true,
-				true);
+		return (EList<DataInput>) eDynamicGet(Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS,
+				Bpmn2Package.Literals.INPUT_SET__OPTIONAL_INPUT_REFS, true, true);
 	}
 
 	/**
@@ -125,10 +120,8 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataInput> getWhileExecutingInputRefs() {
-		return (EList<DataInput>) eDynamicGet(
-				Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS,
-				Bpmn2Package.Literals.INPUT_SET__WHILE_EXECUTING_INPUT_REFS,
-				true, true);
+		return (EList<DataInput>) eDynamicGet(Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS,
+				Bpmn2Package.Literals.INPUT_SET__WHILE_EXECUTING_INPUT_REFS, true, true);
 	}
 
 	/**
@@ -138,8 +131,7 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<OutputSet> getOutputSetRefs() {
-		return (EList<OutputSet>) eDynamicGet(
-				Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS,
+		return (EList<OutputSet>) eDynamicGet(Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS,
 				Bpmn2Package.Literals.INPUT_SET__OUTPUT_SET_REFS, true, true);
 	}
 
@@ -150,21 +142,18 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getDataInputRefs())
-					.basicAdd(otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getDataInputRefs()).basicAdd(otherEnd, msgs);
 		case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOptionalInputRefs())
-					.basicAdd(otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOptionalInputRefs()).basicAdd(otherEnd,
+					msgs);
 		case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getWhileExecutingInputRefs())
-					.basicAdd(otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getWhileExecutingInputRefs()).basicAdd(otherEnd,
+					msgs);
 		case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutputSetRefs())
-					.basicAdd(otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutputSetRefs()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -175,21 +164,16 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
-			return ((InternalEList<?>) getDataInputRefs()).basicRemove(
-					otherEnd, msgs);
+			return ((InternalEList<?>) getDataInputRefs()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
-			return ((InternalEList<?>) getOptionalInputRefs()).basicRemove(
-					otherEnd, msgs);
+			return ((InternalEList<?>) getOptionalInputRefs()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-			return ((InternalEList<?>) getWhileExecutingInputRefs())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getWhileExecutingInputRefs()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
-			return ((InternalEList<?>) getOutputSetRefs()).basicRemove(
-					otherEnd, msgs);
+			return ((InternalEList<?>) getOutputSetRefs()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -230,23 +214,19 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 			return;
 		case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
 			getDataInputRefs().clear();
-			getDataInputRefs().addAll(
-					(Collection<? extends DataInput>) newValue);
+			getDataInputRefs().addAll((Collection<? extends DataInput>) newValue);
 			return;
 		case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
 			getOptionalInputRefs().clear();
-			getOptionalInputRefs().addAll(
-					(Collection<? extends DataInput>) newValue);
+			getOptionalInputRefs().addAll((Collection<? extends DataInput>) newValue);
 			return;
 		case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
 			getWhileExecutingInputRefs().clear();
-			getWhileExecutingInputRefs().addAll(
-					(Collection<? extends DataInput>) newValue);
+			getWhileExecutingInputRefs().addAll((Collection<? extends DataInput>) newValue);
 			return;
 		case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
 			getOutputSetRefs().clear();
-			getOutputSetRefs().addAll(
-					(Collection<? extends OutputSet>) newValue);
+			getOutputSetRefs().addAll((Collection<? extends OutputSet>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -288,8 +268,7 @@ public class InputSetImpl extends BaseElementImpl implements InputSet {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.INPUT_SET__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
 			return !getDataInputRefs().isEmpty();
 		case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:

@@ -24,10 +24,10 @@ import org.obeonetwork.dsl.dd.di.Style;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabelStyle#getFont <em>Font</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage#getBPMNLabelStyle()
  * @model

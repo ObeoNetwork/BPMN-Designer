@@ -23,13 +23,13 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.Bounds#getX <em>X</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.Bounds#getY <em>Y</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.Bounds#getWidth <em>Width</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.Bounds#getHeight <em>Height</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.dd.dc.DcPackage#getBounds()
  * @model

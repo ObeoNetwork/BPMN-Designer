@@ -25,16 +25,15 @@ import org.obeonetwork.dsl.bpmn2.CompensateEventDefinition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CompensateEventDefinitionImpl#isWaitForCompletion <em>Wait For Completion</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CompensateEventDefinitionImpl#getActivityRef <em>Activity Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class CompensateEventDefinitionImpl extends EventDefinitionImpl
-		implements CompensateEventDefinition {
+public class CompensateEventDefinitionImpl extends EventDefinitionImpl implements CompensateEventDefinition {
 	/**
 	 * The default value of the '{@link #isWaitForCompletion() <em>Wait For Completion</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,10 +69,8 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public boolean isWaitForCompletion() {
-		return (Boolean) eDynamicGet(
-				Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
-				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
-				true, true);
+		return (Boolean) eDynamicGet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
+				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, true, true);
 	}
 
 	/**
@@ -82,10 +79,8 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public void setWaitForCompletion(boolean newWaitForCompletion) {
-		eDynamicSet(
-				Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
-				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
-				newWaitForCompletion);
+		eDynamicSet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
+				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, newWaitForCompletion);
 	}
 
 	/**
@@ -94,10 +89,8 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public Activity getActivityRef() {
-		return (Activity) eDynamicGet(
-				Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
-				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
-				true, true);
+		return (Activity) eDynamicGet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
+				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, true, true);
 	}
 
 	/**
@@ -106,10 +99,8 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public Activity basicGetActivityRef() {
-		return (Activity) eDynamicGet(
-				Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
-				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
-				false, true);
+		return (Activity) eDynamicGet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
+				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, false, true);
 	}
 
 	/**
@@ -118,10 +109,8 @@ public class CompensateEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public void setActivityRef(Activity newActivityRef) {
-		eDynamicSet(
-				Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
-				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
-				newActivityRef);
+		eDynamicSet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
+				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, newActivityRef);
 	}
 
 	/**

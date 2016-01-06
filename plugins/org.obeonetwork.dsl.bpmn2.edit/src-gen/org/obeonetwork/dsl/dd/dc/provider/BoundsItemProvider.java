@@ -44,9 +44,8 @@ import org.obeonetwork.dsl.dd.dc.DcPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BoundsItemProvider extends ItemProviderAdapter implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BoundsItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -84,14 +83,10 @@ public class BoundsItemProvider extends ItemProviderAdapter implements
 	 */
 	protected void addXPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_Bounds_x_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Bounds_x_feature", "_UI_Bounds_type"),
-				DcPackage.Literals.BOUNDS__X, true, false, false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+				getString("_UI_PropertyDescriptor_description", "_UI_Bounds_x_feature", "_UI_Bounds_type"),
+				DcPackage.Literals.BOUNDS__X, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -102,14 +97,10 @@ public class BoundsItemProvider extends ItemProviderAdapter implements
 	 */
 	protected void addYPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_Bounds_y_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Bounds_y_feature", "_UI_Bounds_type"),
-				DcPackage.Literals.BOUNDS__Y, true, false, false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+				getString("_UI_PropertyDescriptor_description", "_UI_Bounds_y_feature", "_UI_Bounds_type"),
+				DcPackage.Literals.BOUNDS__Y, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -119,15 +110,12 @@ public class BoundsItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addWidthPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Bounds_width_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Bounds_width_feature", "_UI_Bounds_type"),
-				DcPackage.Literals.BOUNDS__WIDTH, true, false, false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Bounds_width_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Bounds_width_feature", "_UI_Bounds_type"),
+						DcPackage.Literals.BOUNDS__WIDTH, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+						null, null));
 	}
 
 	/**
@@ -137,15 +125,12 @@ public class BoundsItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addHeightPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Bounds_height_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Bounds_height_feature", "_UI_Bounds_type"),
-				DcPackage.Literals.BOUNDS__HEIGHT, true, false, false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Bounds_height_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Bounds_height_feature", "_UI_Bounds_type"),
+						DcPackage.Literals.BOUNDS__HEIGHT, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+						null, null));
 	}
 
 	/**
@@ -157,11 +142,9 @@ public class BoundsItemProvider extends ItemProviderAdapter implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Bounds.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Bounds.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Bounds.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Bounds.gif"));
 		}
 	}
 
@@ -203,8 +186,7 @@ public class BoundsItemProvider extends ItemProviderAdapter implements
 		case DcPackage.BOUNDS__Y:
 		case DcPackage.BOUNDS__WIDTH:
 		case DcPackage.BOUNDS__HEIGHT:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -218,8 +200,7 @@ public class BoundsItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

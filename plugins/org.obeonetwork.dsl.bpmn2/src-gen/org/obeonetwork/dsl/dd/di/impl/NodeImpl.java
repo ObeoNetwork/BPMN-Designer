@@ -22,8 +22,6 @@ import org.obeonetwork.dsl.dd.di.Node;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Node</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

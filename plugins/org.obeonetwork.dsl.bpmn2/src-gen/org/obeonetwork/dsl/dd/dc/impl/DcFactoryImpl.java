@@ -77,8 +77,7 @@ public class DcFactoryImpl extends EFactoryImpl implements DcFactory {
 		case DcPackage.BOUNDS:
 			return (EObject) createBounds();
 		default:
-			throw new IllegalArgumentException("The class '" + eClass.getName()
-					+ "' is not a valid classifier");
+			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
 

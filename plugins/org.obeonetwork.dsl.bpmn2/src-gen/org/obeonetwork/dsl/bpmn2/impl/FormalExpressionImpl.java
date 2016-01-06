@@ -26,17 +26,16 @@ import org.obeonetwork.dsl.bpmn2.ItemDefinition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.FormalExpressionImpl#getLanguage <em>Language</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.FormalExpressionImpl#getBody <em>Body</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.FormalExpressionImpl#getEvaluatesToTypeRef <em>Evaluates To Type Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class FormalExpressionImpl extends ExpressionImpl implements
-		FormalExpression {
+public class FormalExpressionImpl extends ExpressionImpl implements FormalExpression {
 	/**
 	 * The default value of the '{@link #getLanguage() <em>Language</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -82,8 +81,8 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	public void setLanguage(String newLanguage) {
-		eDynamicSet(Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE,
-				Bpmn2Package.Literals.FORMAL_EXPRESSION__LANGUAGE, newLanguage);
+		eDynamicSet(Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE, Bpmn2Package.Literals.FORMAL_EXPRESSION__LANGUAGE,
+				newLanguage);
 	}
 
 	/**
@@ -112,8 +111,7 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	public void setBody(EObject newBody) {
-		eDynamicSet(Bpmn2Package.FORMAL_EXPRESSION__BODY,
-				Bpmn2Package.Literals.FORMAL_EXPRESSION__BODY, newBody);
+		eDynamicSet(Bpmn2Package.FORMAL_EXPRESSION__BODY, Bpmn2Package.Literals.FORMAL_EXPRESSION__BODY, newBody);
 	}
 
 	/**
@@ -122,10 +120,8 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	public ItemDefinition getEvaluatesToTypeRef() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
-				Bpmn2Package.Literals.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
-				true, true);
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
+				Bpmn2Package.Literals.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF, true, true);
 	}
 
 	/**
@@ -134,10 +130,8 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	public ItemDefinition basicGetEvaluatesToTypeRef() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
-				Bpmn2Package.Literals.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
-				false, true);
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
+				Bpmn2Package.Literals.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF, false, true);
 	}
 
 	/**
@@ -147,8 +141,7 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	 */
 	public void setEvaluatesToTypeRef(ItemDefinition newEvaluatesToTypeRef) {
 		eDynamicSet(Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
-				Bpmn2Package.Literals.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF,
-				newEvaluatesToTypeRef);
+				Bpmn2Package.Literals.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF, newEvaluatesToTypeRef);
 	}
 
 	/**
@@ -224,8 +217,7 @@ public class FormalExpressionImpl extends ExpressionImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.FORMAL_EXPRESSION__LANGUAGE:
-			return LANGUAGE_EDEFAULT == null ? getLanguage() != null
-					: !LANGUAGE_EDEFAULT.equals(getLanguage());
+			return LANGUAGE_EDEFAULT == null ? getLanguage() != null : !LANGUAGE_EDEFAULT.equals(getLanguage());
 		case Bpmn2Package.FORMAL_EXPRESSION__BODY:
 			return basicGetBody() != null;
 		case Bpmn2Package.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF:

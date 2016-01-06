@@ -34,13 +34,13 @@ import org.obeonetwork.dsl.bpmn2.SubProcess;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SubProcessImpl#getFlowElements <em>Flow Elements</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SubProcessImpl#getLaneSets <em>Lane Sets</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SubProcessImpl#isTriggeredByEvent <em>Triggered By Event</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.SubProcessImpl#getArtifacts <em>Artifacts</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -81,10 +81,8 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<FlowElement> getFlowElements() {
-		return (EList<FlowElement>) eDynamicGet(
-				Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS,
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
-				true, true);
+		return (EList<FlowElement>) eDynamicGet(Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS,
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS, true, true);
 	}
 
 	/**
@@ -94,10 +92,8 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<LaneSet> getLaneSets() {
-		return (EList<LaneSet>) eDynamicGet(
-				Bpmn2Package.SUB_PROCESS__LANE_SETS,
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS, true,
-				true);
+		return (EList<LaneSet>) eDynamicGet(Bpmn2Package.SUB_PROCESS__LANE_SETS,
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS, true, true);
 	}
 
 	/**
@@ -106,10 +102,8 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	 * @generated
 	 */
 	public boolean isTriggeredByEvent() {
-		return (Boolean) eDynamicGet(
-				Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT,
-				Bpmn2Package.Literals.SUB_PROCESS__TRIGGERED_BY_EVENT, true,
-				true);
+		return (Boolean) eDynamicGet(Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT,
+				Bpmn2Package.Literals.SUB_PROCESS__TRIGGERED_BY_EVENT, true, true);
 	}
 
 	/**
@@ -118,8 +112,7 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	 * @generated
 	 */
 	public void setTriggeredByEvent(boolean newTriggeredByEvent) {
-		eDynamicSet(Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT,
-				Bpmn2Package.Literals.SUB_PROCESS__TRIGGERED_BY_EVENT,
+		eDynamicSet(Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT, Bpmn2Package.Literals.SUB_PROCESS__TRIGGERED_BY_EVENT,
 				newTriggeredByEvent);
 	}
 
@@ -130,8 +123,7 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Artifact> getArtifacts() {
-		return (EList<Artifact>) eDynamicGet(
-				Bpmn2Package.SUB_PROCESS__ARTIFACTS,
+		return (EList<Artifact>) eDynamicGet(Bpmn2Package.SUB_PROCESS__ARTIFACTS,
 				Bpmn2Package.Literals.SUB_PROCESS__ARTIFACTS, true, true);
 	}
 
@@ -141,18 +133,14 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
-			return ((InternalEList<?>) getFlowElements()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getFlowElements()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.SUB_PROCESS__LANE_SETS:
-			return ((InternalEList<?>) getLaneSets()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getLaneSets()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
-			return ((InternalEList<?>) getArtifacts()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getArtifacts()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -188,8 +176,7 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
 		switch (featureID) {
 		case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
 			getFlowElements().clear();
-			getFlowElements().addAll(
-					(Collection<? extends FlowElement>) newValue);
+			getFlowElements().addAll((Collection<? extends FlowElement>) newValue);
 			return;
 		case Bpmn2Package.SUB_PROCESS__LANE_SETS:
 			getLaneSets().clear();

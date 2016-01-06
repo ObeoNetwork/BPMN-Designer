@@ -42,9 +42,8 @@ import org.obeonetwork.dsl.dd.di.Edge;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EdgeItemProvider extends DiagramElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class EdgeItemProvider extends DiagramElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -79,15 +78,11 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements
 	 * @generated
 	 */
 	protected void addSourcePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Edge_source_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Edge_source_feature", "_UI_Edge_type"),
-				DiPackage.Literals.EDGE__SOURCE, false, false, false, null,
-				null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Edge_source_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Edge_source_feature", "_UI_Edge_type"),
+						DiPackage.Literals.EDGE__SOURCE, false, false, false, null, null, null));
 	}
 
 	/**
@@ -97,15 +92,11 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements
 	 * @generated
 	 */
 	protected void addTargetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Edge_target_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Edge_target_feature", "_UI_Edge_type"),
-				DiPackage.Literals.EDGE__TARGET, false, false, false, null,
-				null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Edge_target_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Edge_target_feature", "_UI_Edge_type"),
+						DiPackage.Literals.EDGE__TARGET, false, false, false, null, null, null));
 	}
 
 	/**
@@ -117,8 +108,7 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(DiPackage.Literals.EDGE__WAYPOINT);
@@ -173,8 +163,7 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements
 
 		switch (notification.getFeatureID(Edge.class)) {
 		case DiPackage.EDGE__WAYPOINT:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -188,13 +177,11 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				DiPackage.Literals.EDGE__WAYPOINT,
-				DcFactory.eINSTANCE.createPoint()));
+		newChildDescriptors
+				.add(createChildParameter(DiPackage.Literals.EDGE__WAYPOINT, DcFactory.eINSTANCE.createPoint()));
 	}
 
 }

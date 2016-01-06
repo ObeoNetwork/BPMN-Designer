@@ -35,9 +35,8 @@ import org.obeonetwork.dsl.bpmn2.DataOutputAssociation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DataOutputAssociationItemProvider extends
-		DataAssociationItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider,
+public class DataOutputAssociationItemProvider extends DataAssociationItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
 		IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -73,15 +72,9 @@ public class DataOutputAssociationItemProvider extends
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/DataOutputAssociation.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/DataOutputAssociation.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/DataOutputAssociation.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/DataOutputAssociation.gif"));
 		}
 	}
 
@@ -129,8 +122,7 @@ public class DataOutputAssociationItemProvider extends
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

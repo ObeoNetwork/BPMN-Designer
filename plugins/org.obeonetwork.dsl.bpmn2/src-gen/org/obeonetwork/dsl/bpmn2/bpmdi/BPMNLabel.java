@@ -23,10 +23,10 @@ import org.obeonetwork.dsl.dd.di.Label;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabel#getLabelStyle <em>Label Style</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage#getBPMNLabel()
  * @model

@@ -10,14 +10,17 @@ Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- org.eclipse.emf.cdo;bundle-version="4.0.1"
+ org.eclipse.emf.cdo;bundle-version="4.0.1";visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Export-Package: org.obeonetwork.dsl.bpmn2,
  org.obeonetwork.dsl.bpmn2.bpmdi,
+ org.obeonetwork.dsl.bpmn2.bpmdi.impl,
  org.obeonetwork.dsl.bpmn2.bpmdi.util,
  org.obeonetwork.dsl.bpmn2.impl,
  org.obeonetwork.dsl.bpmn2.util,
  org.obeonetwork.dsl.dd.dc,
+ org.obeonetwork.dsl.dd.dc.impl,
  org.obeonetwork.dsl.dd.dc.util,
  org.obeonetwork.dsl.dd.di,
+ org.obeonetwork.dsl.dd.di.impl,
  org.obeonetwork.dsl.dd.di.util

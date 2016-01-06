@@ -22,13 +22,10 @@ import org.obeonetwork.dsl.bpmn2.GlobalManualTask;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Global Manual Task</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public class GlobalManualTaskImpl extends GlobalTaskImpl implements
-		GlobalManualTask {
+public class GlobalManualTaskImpl extends GlobalTaskImpl implements GlobalManualTask {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

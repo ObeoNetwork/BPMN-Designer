@@ -42,9 +42,8 @@ import org.obeonetwork.dsl.bpmn2.CatchEvent;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CatchEventItemProvider extends EventItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class CatchEventItemProvider extends EventItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -79,17 +78,13 @@ public class CatchEventItemProvider extends EventItemProvider implements
 	 * @generated
 	 */
 	protected void addParallelMultiplePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_CatchEvent_parallelMultiple_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_CatchEvent_parallelMultiple_feature",
-						"_UI_CatchEvent_type"),
-				Bpmn2Package.Literals.CATCH_EVENT__PARALLEL_MULTIPLE, true,
-				false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null,
-				null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_CatchEvent_parallelMultiple_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_CatchEvent_parallelMultiple_feature",
+								"_UI_CatchEvent_type"),
+						Bpmn2Package.Literals.CATCH_EVENT__PARALLEL_MULTIPLE, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -99,16 +94,12 @@ public class CatchEventItemProvider extends EventItemProvider implements
 	 * @generated
 	 */
 	protected void addEventDefinitionRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_CatchEvent_eventDefinitionRefs_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_CatchEvent_eventDefinitionRefs_feature",
-						"_UI_CatchEvent_type"),
-				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITION_REFS, true,
-				false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_CatchEvent_eventDefinitionRefs_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_CatchEvent_eventDefinitionRefs_feature",
+								"_UI_CatchEvent_type"),
+						Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITION_REFS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -120,17 +111,13 @@ public class CatchEventItemProvider extends EventItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Bpmn2Package.Literals.CATCH_EVENT__OUTPUT_SET);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.CATCH_EVENT__DATA_OUTPUTS);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS);
+			childrenFeatures.add(Bpmn2Package.Literals.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION);
+			childrenFeatures.add(Bpmn2Package.Literals.CATCH_EVENT__DATA_OUTPUTS);
+			childrenFeatures.add(Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS);
 		}
 		return childrenFeatures;
 	}
@@ -184,15 +171,13 @@ public class CatchEventItemProvider extends EventItemProvider implements
 
 		switch (notification.getFeatureID(CatchEvent.class)) {
 		case Bpmn2Package.CATCH_EVENT__PARALLEL_MULTIPLE:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Bpmn2Package.CATCH_EVENT__OUTPUT_SET:
 		case Bpmn2Package.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION:
 		case Bpmn2Package.CATCH_EVENT__DATA_OUTPUTS:
 		case Bpmn2Package.CATCH_EVENT__EVENT_DEFINITIONS:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -206,60 +191,46 @@ public class CatchEventItemProvider extends EventItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CATCH_EVENT__OUTPUT_SET,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__OUTPUT_SET,
 				Bpmn2Factory.eINSTANCE.createOutputSet()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__DATA_OUTPUT_ASSOCIATION,
 				Bpmn2Factory.eINSTANCE.createDataOutputAssociation()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CATCH_EVENT__DATA_OUTPUTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__DATA_OUTPUTS,
 				Bpmn2Factory.eINSTANCE.createDataOutput()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createCancelEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createErrorEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createTerminateEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createEscalationEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createCompensateEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createTimerEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createLinkEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createMessageEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createConditionalEventDefinition()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.CATCH_EVENT__EVENT_DEFINITIONS,
 				Bpmn2Factory.eINSTANCE.createSignalEventDefinition()));
 	}
 

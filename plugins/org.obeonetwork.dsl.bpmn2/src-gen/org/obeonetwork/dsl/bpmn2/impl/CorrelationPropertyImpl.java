@@ -32,17 +32,16 @@ import org.obeonetwork.dsl.bpmn2.ItemDefinition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationPropertyImpl#getCorrelationPropertyRetrievalExpression <em>Correlation Property Retrieval Expression</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationPropertyImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationPropertyImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class CorrelationPropertyImpl extends RootElementImpl implements
-		CorrelationProperty {
+public class CorrelationPropertyImpl extends RootElementImpl implements CorrelationProperty {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -81,8 +80,7 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	public EList<CorrelationPropertyRetrievalExpression> getCorrelationPropertyRetrievalExpression() {
 		return (EList<CorrelationPropertyRetrievalExpression>) eDynamicGet(
 				Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION,
-				true, true);
+				Bpmn2Package.Literals.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION, true, true);
 	}
 
 	/**
@@ -101,8 +99,7 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY__NAME,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY__NAME, newName);
+		eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY__NAME, Bpmn2Package.Literals.CORRELATION_PROPERTY__NAME, newName);
 	}
 
 	/**
@@ -111,8 +108,7 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public ItemDefinition getType() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.CORRELATION_PROPERTY__TYPE,
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY__TYPE,
 				Bpmn2Package.Literals.CORRELATION_PROPERTY__TYPE, true, true);
 	}
 
@@ -122,8 +118,7 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public ItemDefinition basicGetType() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.CORRELATION_PROPERTY__TYPE,
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY__TYPE,
 				Bpmn2Package.Literals.CORRELATION_PROPERTY__TYPE, false, true);
 	}
 
@@ -133,8 +128,7 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public void setType(ItemDefinition newType) {
-		eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY__TYPE,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY__TYPE, newType);
+		eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY__TYPE, Bpmn2Package.Literals.CORRELATION_PROPERTY__TYPE, newType);
 	}
 
 	/**
@@ -143,12 +137,10 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
-			return ((InternalEList<?>) getCorrelationPropertyRetrievalExpression())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getCorrelationPropertyRetrievalExpression()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -229,8 +221,7 @@ public class CorrelationPropertyImpl extends RootElementImpl implements
 		case Bpmn2Package.CORRELATION_PROPERTY__CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION:
 			return !getCorrelationPropertyRetrievalExpression().isEmpty();
 		case Bpmn2Package.CORRELATION_PROPERTY__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.CORRELATION_PROPERTY__TYPE:
 			return basicGetType() != null;
 		}

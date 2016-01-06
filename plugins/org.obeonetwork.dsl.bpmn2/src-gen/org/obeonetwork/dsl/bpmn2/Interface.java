@@ -24,12 +24,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Interface#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Interface#getOperations <em>Operations</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Interface#getImplementationRef <em>Implementation Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getInterface()
  * @model

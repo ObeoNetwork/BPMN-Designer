@@ -31,6 +31,7 @@ import org.obeonetwork.dsl.bpmn2.InputSet;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataInputImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataInputImpl#isIsCollection <em>Is Collection</em>}</li>
@@ -38,7 +39,6 @@ import org.obeonetwork.dsl.bpmn2.InputSet;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataInputImpl#getInputSetWithWhileExecuting <em>Input Set With While Executing</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DataInputImpl#getInputSetRefs <em>Input Set Refs</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,8 +87,7 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.DATA_INPUT__NAME,
-				Bpmn2Package.Literals.DATA_INPUT__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.DATA_INPUT__NAME, Bpmn2Package.Literals.DATA_INPUT__NAME, true, true);
 	}
 
 	/**
@@ -97,8 +96,7 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.DATA_INPUT__NAME,
-				Bpmn2Package.Literals.DATA_INPUT__NAME, newName);
+		eDynamicSet(Bpmn2Package.DATA_INPUT__NAME, Bpmn2Package.Literals.DATA_INPUT__NAME, newName);
 	}
 
 	/**
@@ -117,8 +115,7 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 * @generated
 	 */
 	public void setIsCollection(boolean newIsCollection) {
-		eDynamicSet(Bpmn2Package.DATA_INPUT__IS_COLLECTION,
-				Bpmn2Package.Literals.DATA_INPUT__IS_COLLECTION,
+		eDynamicSet(Bpmn2Package.DATA_INPUT__IS_COLLECTION, Bpmn2Package.Literals.DATA_INPUT__IS_COLLECTION,
 				newIsCollection);
 	}
 
@@ -129,10 +126,8 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<InputSet> getInputSetWithOptional() {
-		return (EList<InputSet>) eDynamicGet(
-				Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL,
-				Bpmn2Package.Literals.DATA_INPUT__INPUT_SET_WITH_OPTIONAL,
-				true, true);
+		return (EList<InputSet>) eDynamicGet(Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL,
+				Bpmn2Package.Literals.DATA_INPUT__INPUT_SET_WITH_OPTIONAL, true, true);
 	}
 
 	/**
@@ -142,10 +137,8 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<InputSet> getInputSetWithWhileExecuting() {
-		return (EList<InputSet>) eDynamicGet(
-				Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING,
-				Bpmn2Package.Literals.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING,
-				true, true);
+		return (EList<InputSet>) eDynamicGet(Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING,
+				Bpmn2Package.Literals.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING, true, true);
 	}
 
 	/**
@@ -155,8 +148,7 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<InputSet> getInputSetRefs() {
-		return (EList<InputSet>) eDynamicGet(
-				Bpmn2Package.DATA_INPUT__INPUT_SET_REFS,
+		return (EList<InputSet>) eDynamicGet(Bpmn2Package.DATA_INPUT__INPUT_SET_REFS,
 				Bpmn2Package.Literals.DATA_INPUT__INPUT_SET_REFS, true, true);
 	}
 
@@ -167,18 +159,16 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getInputSetWithOptional())
-					.basicAdd(otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getInputSetWithOptional()).basicAdd(otherEnd,
+					msgs);
 		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getInputSetWithWhileExecuting())
 					.basicAdd(otherEnd, msgs);
 		case Bpmn2Package.DATA_INPUT__INPUT_SET_REFS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getInputSetRefs())
-					.basicAdd(otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getInputSetRefs()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -189,18 +179,14 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL:
-			return ((InternalEList<?>) getInputSetWithOptional()).basicRemove(
-					otherEnd, msgs);
+			return ((InternalEList<?>) getInputSetWithOptional()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING:
-			return ((InternalEList<?>) getInputSetWithWhileExecuting())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getInputSetWithWhileExecuting()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.DATA_INPUT__INPUT_SET_REFS:
-			return ((InternalEList<?>) getInputSetRefs()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getInputSetRefs()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -244,13 +230,11 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 			return;
 		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL:
 			getInputSetWithOptional().clear();
-			getInputSetWithOptional().addAll(
-					(Collection<? extends InputSet>) newValue);
+			getInputSetWithOptional().addAll((Collection<? extends InputSet>) newValue);
 			return;
 		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING:
 			getInputSetWithWhileExecuting().clear();
-			getInputSetWithWhileExecuting().addAll(
-					(Collection<? extends InputSet>) newValue);
+			getInputSetWithWhileExecuting().addAll((Collection<? extends InputSet>) newValue);
 			return;
 		case Bpmn2Package.DATA_INPUT__INPUT_SET_REFS:
 			getInputSetRefs().clear();
@@ -296,8 +280,7 @@ public class DataInputImpl extends ItemAwareElementImpl implements DataInput {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.DATA_INPUT__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.DATA_INPUT__IS_COLLECTION:
 			return isIsCollection() != IS_COLLECTION_EDEFAULT;
 		case Bpmn2Package.DATA_INPUT__INPUT_SET_WITH_OPTIONAL:

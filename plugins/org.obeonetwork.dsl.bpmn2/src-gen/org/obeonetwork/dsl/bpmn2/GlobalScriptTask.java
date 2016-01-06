@@ -21,11 +21,11 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.GlobalScriptTask#getScriptLanguage <em>Script Language</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.GlobalScriptTask#getScript <em>Script</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getGlobalScriptTask()
  * @model

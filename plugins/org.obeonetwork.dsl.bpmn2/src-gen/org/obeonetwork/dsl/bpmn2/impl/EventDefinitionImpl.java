@@ -22,13 +22,10 @@ import org.obeonetwork.dsl.bpmn2.EventDefinition;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Event Definition</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public abstract class EventDefinitionImpl extends RootElementImpl implements
-		EventDefinition {
+public abstract class EventDefinitionImpl extends RootElementImpl implements EventDefinition {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

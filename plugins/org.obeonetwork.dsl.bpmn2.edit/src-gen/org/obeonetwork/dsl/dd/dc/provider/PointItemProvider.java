@@ -44,9 +44,8 @@ import org.obeonetwork.dsl.dd.dc.Point;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PointItemProvider extends ItemProviderAdapter implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class PointItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -82,14 +81,10 @@ public class PointItemProvider extends ItemProviderAdapter implements
 	 */
 	protected void addXPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_Point_x_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Point_x_feature", "_UI_Point_type"),
-				DcPackage.Literals.POINT__X, true, false, false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+				getString("_UI_PropertyDescriptor_description", "_UI_Point_x_feature", "_UI_Point_type"),
+				DcPackage.Literals.POINT__X, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -100,14 +95,10 @@ public class PointItemProvider extends ItemProviderAdapter implements
 	 */
 	protected void addYPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_Point_y_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Point_y_feature", "_UI_Point_type"),
-				DcPackage.Literals.POINT__Y, true, false, false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+				getString("_UI_PropertyDescriptor_description", "_UI_Point_y_feature", "_UI_Point_type"),
+				DcPackage.Literals.POINT__Y, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -119,11 +110,9 @@ public class PointItemProvider extends ItemProviderAdapter implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Point.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Point.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Point.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Point.gif"));
 		}
 	}
 
@@ -163,8 +152,7 @@ public class PointItemProvider extends ItemProviderAdapter implements
 		switch (notification.getFeatureID(Point.class)) {
 		case DcPackage.POINT__X:
 		case DcPackage.POINT__Y:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -178,8 +166,7 @@ public class PointItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

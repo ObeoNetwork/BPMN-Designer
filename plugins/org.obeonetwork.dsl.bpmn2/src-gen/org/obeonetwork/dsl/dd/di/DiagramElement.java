@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.di.DiagramElement#getOwningDiagram <em>Owning Diagram</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.di.DiagramElement#getOwningElement <em>Owning Element</em>}</li>
@@ -32,7 +33,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.obeonetwork.dsl.dd.di.DiagramElement#getModelElement <em>Model Element</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.di.DiagramElement#getStyle <em>Style</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagramElement()
  * @model abstract="true"

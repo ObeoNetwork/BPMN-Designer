@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.OutputSet#getDataOutputRefs <em>Data Output Refs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.OutputSet#getOptionalOutputRefs <em>Optional Output Refs</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.OutputSet#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.OutputSet#getInputSetRefs <em>Input Set Refs</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getOutputSet()
  * @model

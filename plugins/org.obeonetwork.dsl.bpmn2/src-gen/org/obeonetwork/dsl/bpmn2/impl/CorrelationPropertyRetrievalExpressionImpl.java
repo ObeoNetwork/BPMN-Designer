@@ -28,11 +28,11 @@ import org.obeonetwork.dsl.bpmn2.Message;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationPropertyRetrievalExpressionImpl#getMessagePath <em>Message Path</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CorrelationPropertyRetrievalExpressionImpl#getMessageRef <em>Message Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,10 +63,8 @@ public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
 	 * @generated
 	 */
 	public FormalExpression getMessagePath() {
-		return (FormalExpression) eDynamicGet(
-				Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
-				true, true);
+		return (FormalExpression) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH, true, true);
 	}
 
 	/**
@@ -74,12 +72,9 @@ public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMessagePath(
-			FormalExpression newMessagePath, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd(
-				(InternalEObject) newMessagePath,
-				Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
-				msgs);
+	public NotificationChain basicSetMessagePath(FormalExpression newMessagePath, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newMessagePath,
+				Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH, msgs);
 		return msgs;
 	}
 
@@ -89,10 +84,8 @@ public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
 	 * @generated
 	 */
 	public void setMessagePath(FormalExpression newMessagePath) {
-		eDynamicSet(
-				Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
-				newMessagePath);
+		eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH, newMessagePath);
 	}
 
 	/**
@@ -101,10 +94,8 @@ public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
 	 * @generated
 	 */
 	public Message getMessageRef() {
-		return (Message) eDynamicGet(
-				Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF,
-				true, true);
+		return (Message) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF, true, true);
 	}
 
 	/**
@@ -113,10 +104,8 @@ public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
 	 * @generated
 	 */
 	public Message basicGetMessageRef() {
-		return (Message) eDynamicGet(
-				Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF,
-				false, true);
+		return (Message) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF, false, true);
 	}
 
 	/**
@@ -125,10 +114,8 @@ public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
 	 * @generated
 	 */
 	public void setMessageRef(Message newMessageRef) {
-		eDynamicSet(
-				Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF,
-				newMessageRef);
+		eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF,
+				Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF, newMessageRef);
 	}
 
 	/**
@@ -137,8 +124,7 @@ public class CorrelationPropertyRetrievalExpressionImpl extends BaseElementImpl
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH:
 			return basicSetMessagePath(null, msgs);

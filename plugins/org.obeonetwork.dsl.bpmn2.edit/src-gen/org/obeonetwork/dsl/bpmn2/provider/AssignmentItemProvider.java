@@ -40,9 +40,8 @@ import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AssignmentItemProvider extends BaseElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class AssignmentItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -77,8 +76,7 @@ public class AssignmentItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Bpmn2Package.Literals.ASSIGNMENT__FROM);
@@ -109,11 +107,9 @@ public class AssignmentItemProvider extends BaseElementItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Assignment.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Assignment.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Assignment.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Assignment.gif"));
 		}
 	}
 
@@ -154,8 +150,7 @@ public class AssignmentItemProvider extends BaseElementItemProvider implements
 		switch (notification.getFeatureID(Assignment.class)) {
 		case Bpmn2Package.ASSIGNMENT__FROM:
 		case Bpmn2Package.ASSIGNMENT__TO:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -169,24 +164,19 @@ public class AssignmentItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.ASSIGNMENT__FROM,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ASSIGNMENT__FROM,
 				Bpmn2Factory.eINSTANCE.createExpression()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.ASSIGNMENT__FROM,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ASSIGNMENT__FROM,
 				Bpmn2Factory.eINSTANCE.createFormalExpression()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.ASSIGNMENT__TO,
-				Bpmn2Factory.eINSTANCE.createExpression()));
+		newChildDescriptors.add(
+				createChildParameter(Bpmn2Package.Literals.ASSIGNMENT__TO, Bpmn2Factory.eINSTANCE.createExpression()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.ASSIGNMENT__TO,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ASSIGNMENT__TO,
 				Bpmn2Factory.eINSTANCE.createFormalExpression()));
 	}
 
@@ -197,8 +187,7 @@ public class AssignmentItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature,
-			Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -206,9 +195,8 @@ public class AssignmentItemProvider extends BaseElementItemProvider implements
 				|| childFeature == Bpmn2Package.Literals.ASSIGNMENT__TO;
 
 		if (qualify) {
-			return getString("_UI_CreateChild_text2", new Object[] {
-					getTypeText(childObject), getFeatureText(childFeature),
-					getTypeText(owner) });
+			return getString("_UI_CreateChild_text2",
+					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
 	}

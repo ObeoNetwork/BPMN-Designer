@@ -25,11 +25,11 @@ import org.obeonetwork.dsl.bpmn2.Message;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.MessageImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.MessageImpl#getItemRef <em>Item Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -69,8 +69,7 @@ public class MessageImpl extends RootElementImpl implements Message {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.MESSAGE__NAME,
-				Bpmn2Package.Literals.MESSAGE__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.MESSAGE__NAME, Bpmn2Package.Literals.MESSAGE__NAME, true, true);
 	}
 
 	/**
@@ -79,8 +78,7 @@ public class MessageImpl extends RootElementImpl implements Message {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.MESSAGE__NAME,
-				Bpmn2Package.Literals.MESSAGE__NAME, newName);
+		eDynamicSet(Bpmn2Package.MESSAGE__NAME, Bpmn2Package.Literals.MESSAGE__NAME, newName);
 	}
 
 	/**
@@ -89,8 +87,8 @@ public class MessageImpl extends RootElementImpl implements Message {
 	 * @generated
 	 */
 	public ItemDefinition getItemRef() {
-		return (ItemDefinition) eDynamicGet(Bpmn2Package.MESSAGE__ITEM_REF,
-				Bpmn2Package.Literals.MESSAGE__ITEM_REF, true, true);
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.MESSAGE__ITEM_REF, Bpmn2Package.Literals.MESSAGE__ITEM_REF,
+				true, true);
 	}
 
 	/**
@@ -99,8 +97,8 @@ public class MessageImpl extends RootElementImpl implements Message {
 	 * @generated
 	 */
 	public ItemDefinition basicGetItemRef() {
-		return (ItemDefinition) eDynamicGet(Bpmn2Package.MESSAGE__ITEM_REF,
-				Bpmn2Package.Literals.MESSAGE__ITEM_REF, false, true);
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.MESSAGE__ITEM_REF, Bpmn2Package.Literals.MESSAGE__ITEM_REF,
+				false, true);
 	}
 
 	/**
@@ -109,8 +107,7 @@ public class MessageImpl extends RootElementImpl implements Message {
 	 * @generated
 	 */
 	public void setItemRef(ItemDefinition newItemRef) {
-		eDynamicSet(Bpmn2Package.MESSAGE__ITEM_REF,
-				Bpmn2Package.Literals.MESSAGE__ITEM_REF, newItemRef);
+		eDynamicSet(Bpmn2Package.MESSAGE__ITEM_REF, Bpmn2Package.Literals.MESSAGE__ITEM_REF, newItemRef);
 	}
 
 	/**
@@ -176,8 +173,7 @@ public class MessageImpl extends RootElementImpl implements Message {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.MESSAGE__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.MESSAGE__ITEM_REF:
 			return basicGetItemRef() != null;
 		}

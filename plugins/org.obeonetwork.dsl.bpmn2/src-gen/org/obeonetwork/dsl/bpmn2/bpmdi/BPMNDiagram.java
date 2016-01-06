@@ -24,11 +24,11 @@ import org.obeonetwork.dsl.dd.di.Diagram;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNDiagram#getPlane <em>Plane</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNDiagram#getLabelStyle <em>Label Style</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage#getBPMNDiagram()
  * @model

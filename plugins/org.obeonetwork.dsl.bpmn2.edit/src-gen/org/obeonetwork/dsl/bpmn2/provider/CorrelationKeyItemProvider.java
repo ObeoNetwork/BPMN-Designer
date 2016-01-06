@@ -39,9 +39,8 @@ import org.obeonetwork.dsl.bpmn2.CorrelationKey;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CorrelationKeyItemProvider extends BaseElementItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class CorrelationKeyItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -77,17 +76,11 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider
 	 */
 	protected void addCorrelationPropertyRefPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_CorrelationKey_correlationPropertyRef_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_CorrelationKey_correlationPropertyRef_feature",
-								"_UI_CorrelationKey_type"),
-						Bpmn2Package.Literals.CORRELATION_KEY__CORRELATION_PROPERTY_REF,
-						true, false, true, null, null, null));
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_CorrelationKey_correlationPropertyRef_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_CorrelationKey_correlationPropertyRef_feature", "_UI_CorrelationKey_type"),
+				Bpmn2Package.Literals.CORRELATION_KEY__CORRELATION_PROPERTY_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -97,16 +90,13 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_CorrelationKey_name_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_CorrelationKey_name_feature",
-						"_UI_CorrelationKey_type"),
-				Bpmn2Package.Literals.CORRELATION_KEY__NAME, true, false,
-				false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_CorrelationKey_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_CorrelationKey_name_feature",
+								"_UI_CorrelationKey_type"),
+						Bpmn2Package.Literals.CORRELATION_KEY__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -118,15 +108,9 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/CorrelationKey.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/CorrelationKey.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/CorrelationKey.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/CorrelationKey.gif"));
 		}
 	}
 
@@ -166,8 +150,7 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider
 
 		switch (notification.getFeatureID(CorrelationKey.class)) {
 		case Bpmn2Package.CORRELATION_KEY__NAME:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -181,8 +164,7 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

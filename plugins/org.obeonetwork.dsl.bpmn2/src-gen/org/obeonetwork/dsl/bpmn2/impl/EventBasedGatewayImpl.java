@@ -25,16 +25,15 @@ import org.obeonetwork.dsl.bpmn2.EventBasedGatewayType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.EventBasedGatewayImpl#isInstantiate <em>Instantiate</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.EventBasedGatewayImpl#getEventGatewayType <em>Event Gateway Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class EventBasedGatewayImpl extends GatewayImpl implements
-		EventBasedGateway {
+public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGateway {
 	/**
 	 * The default value of the '{@link #isInstantiate() <em>Instantiate</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -79,10 +78,8 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
 	 * @generated
 	 */
 	public boolean isInstantiate() {
-		return (Boolean) eDynamicGet(
-				Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE,
-				Bpmn2Package.Literals.EVENT_BASED_GATEWAY__INSTANTIATE, true,
-				true);
+		return (Boolean) eDynamicGet(Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE,
+				Bpmn2Package.Literals.EVENT_BASED_GATEWAY__INSTANTIATE, true, true);
 	}
 
 	/**
@@ -92,8 +89,7 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
 	 */
 	public void setInstantiate(boolean newInstantiate) {
 		eDynamicSet(Bpmn2Package.EVENT_BASED_GATEWAY__INSTANTIATE,
-				Bpmn2Package.Literals.EVENT_BASED_GATEWAY__INSTANTIATE,
-				newInstantiate);
+				Bpmn2Package.Literals.EVENT_BASED_GATEWAY__INSTANTIATE, newInstantiate);
 	}
 
 	/**
@@ -102,10 +98,8 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
 	 * @generated
 	 */
 	public EventBasedGatewayType getEventGatewayType() {
-		return (EventBasedGatewayType) eDynamicGet(
-				Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
-				Bpmn2Package.Literals.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
-				true, true);
+		return (EventBasedGatewayType) eDynamicGet(Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
+				Bpmn2Package.Literals.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE, true, true);
 	}
 
 	/**
@@ -115,8 +109,7 @@ public class EventBasedGatewayImpl extends GatewayImpl implements
 	 */
 	public void setEventGatewayType(EventBasedGatewayType newEventGatewayType) {
 		eDynamicSet(Bpmn2Package.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
-				Bpmn2Package.Literals.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE,
-				newEventGatewayType);
+				Bpmn2Package.Literals.EVENT_BASED_GATEWAY__EVENT_GATEWAY_TYPE, newEventGatewayType);
 	}
 
 	/**

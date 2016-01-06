@@ -16,32 +16,30 @@ package org.obeonetwork.dsl.bpmn2.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+import org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.Escalation;
 import org.obeonetwork.dsl.bpmn2.ItemDefinition;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Escalation</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Escalation</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.EscalationImpl#getStructureRef <em>Structure Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.EscalationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.EscalationImpl#getEscalationCode <em>Escalation Code</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.EscalationImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class EscalationImpl extends CDOObjectImpl implements Escalation {
+public class EscalationImpl extends BPMN2ObjectImpl implements Escalation {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -49,8 +47,8 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	protected static final String NAME_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getEscalationCode() <em>Escalation Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getEscalationCode()
 	 * @generated
 	 * @ordered
@@ -58,9 +56,9 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	protected static final String ESCALATION_CODE_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getId()
 	 * @generated
 	 * @ordered
@@ -68,18 +66,15 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
 	 */
 	protected EscalationImpl() {
 		super();
-		setId(EcoreUtil.generateUUID());
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -88,8 +83,7 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -98,102 +92,92 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ItemDefinition getStructureRef() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.ESCALATION__STRUCTURE_REF,
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.ESCALATION__STRUCTURE_REF,
 				Bpmn2Package.Literals.ESCALATION__STRUCTURE_REF, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ItemDefinition basicGetStructureRef() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.ESCALATION__STRUCTURE_REF,
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.ESCALATION__STRUCTURE_REF,
 				Bpmn2Package.Literals.ESCALATION__STRUCTURE_REF, false, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStructureRef(ItemDefinition newStructureRef) {
-		eDynamicSet(Bpmn2Package.ESCALATION__STRUCTURE_REF,
-				Bpmn2Package.Literals.ESCALATION__STRUCTURE_REF,
+		eDynamicSet(Bpmn2Package.ESCALATION__STRUCTURE_REF, Bpmn2Package.Literals.ESCALATION__STRUCTURE_REF,
 				newStructureRef);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.ESCALATION__NAME,
-				Bpmn2Package.Literals.ESCALATION__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.ESCALATION__NAME, Bpmn2Package.Literals.ESCALATION__NAME, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.ESCALATION__NAME,
-				Bpmn2Package.Literals.ESCALATION__NAME, newName);
+		eDynamicSet(Bpmn2Package.ESCALATION__NAME, Bpmn2Package.Literals.ESCALATION__NAME, newName);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getEscalationCode() {
 		return (String) eDynamicGet(Bpmn2Package.ESCALATION__ESCALATION_CODE,
 				Bpmn2Package.Literals.ESCALATION__ESCALATION_CODE, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEscalationCode(String newEscalationCode) {
-		eDynamicSet(Bpmn2Package.ESCALATION__ESCALATION_CODE,
-				Bpmn2Package.Literals.ESCALATION__ESCALATION_CODE,
+		eDynamicSet(Bpmn2Package.ESCALATION__ESCALATION_CODE, Bpmn2Package.Literals.ESCALATION__ESCALATION_CODE,
 				newEscalationCode);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
-		return (String) eDynamicGet(Bpmn2Package.ESCALATION__ID,
-				Bpmn2Package.Literals.ESCALATION__ID, true, true);
+		return (String) eDynamicGet(Bpmn2Package.ESCALATION__ID, Bpmn2Package.Literals.ESCALATION__ID, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
-		eDynamicSet(Bpmn2Package.ESCALATION__ID,
-				Bpmn2Package.Literals.ESCALATION__ID, newId);
+		eDynamicSet(Bpmn2Package.ESCALATION__ID, Bpmn2Package.Literals.ESCALATION__ID, newId);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -214,8 +198,7 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -238,8 +221,7 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -262,8 +244,7 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -272,16 +253,14 @@ public class EscalationImpl extends CDOObjectImpl implements Escalation {
 		case Bpmn2Package.ESCALATION__STRUCTURE_REF:
 			return basicGetStructureRef() != null;
 		case Bpmn2Package.ESCALATION__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.ESCALATION__ESCALATION_CODE:
 			return ESCALATION_CODE_EDEFAULT == null ? getEscalationCode() != null
 					: !ESCALATION_CODE_EDEFAULT.equals(getEscalationCode());
 		case Bpmn2Package.ESCALATION__ID:
-			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT
-					.equals(getId());
+			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //EscalationImpl
+} // EscalationImpl

@@ -22,13 +22,10 @@ import org.obeonetwork.dsl.bpmn2.LoopCharacteristics;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Loop Characteristics</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public abstract class LoopCharacteristicsImpl extends BaseElementImpl implements
-		LoopCharacteristics {
+public abstract class LoopCharacteristicsImpl extends BaseElementImpl implements LoopCharacteristics {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

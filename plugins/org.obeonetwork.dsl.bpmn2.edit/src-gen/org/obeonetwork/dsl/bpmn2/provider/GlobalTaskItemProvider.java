@@ -40,9 +40,8 @@ import org.obeonetwork.dsl.bpmn2.GlobalTask;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GlobalTaskItemProvider extends CallableElementItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class GlobalTaskItemProvider extends CallableElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -77,8 +76,7 @@ public class GlobalTaskItemProvider extends CallableElementItemProvider
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES);
@@ -108,11 +106,9 @@ public class GlobalTaskItemProvider extends CallableElementItemProvider
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/GlobalTask.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/GlobalTask.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/GlobalTask.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/GlobalTask.gif"));
 		}
 	}
 
@@ -152,8 +148,7 @@ public class GlobalTaskItemProvider extends CallableElementItemProvider
 
 		switch (notification.getFeatureID(GlobalTask.class)) {
 		case Bpmn2Package.GLOBAL_TASK__RESOURCES:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -167,24 +162,19 @@ public class GlobalTaskItemProvider extends CallableElementItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES,
 				Bpmn2Factory.eINSTANCE.createResourceRole()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES,
 				Bpmn2Factory.eINSTANCE.createPerformer()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES,
 				Bpmn2Factory.eINSTANCE.createHumanPerformer()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.GLOBAL_TASK__RESOURCES,
 				Bpmn2Factory.eINSTANCE.createPotentialOwner()));
 	}
 

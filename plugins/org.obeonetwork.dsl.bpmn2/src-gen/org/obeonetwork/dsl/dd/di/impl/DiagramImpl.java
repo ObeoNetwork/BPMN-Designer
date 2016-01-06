@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+import org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl;
 import org.obeonetwork.dsl.dd.di.DiPackage;
 import org.obeonetwork.dsl.dd.di.Diagram;
 import org.obeonetwork.dsl.dd.di.DiagramElement;
@@ -30,6 +31,7 @@ import org.obeonetwork.dsl.dd.di.Style;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.DiagramImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.DiagramImpl#getDocumentation <em>Documentation</em>}</li>
@@ -37,11 +39,10 @@ import org.obeonetwork.dsl.dd.di.Style;
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.DiagramImpl#getOwnedStyle <em>Owned Style</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.di.impl.DiagramImpl#getRootElement <em>Root Element</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
+public abstract class DiagramImpl extends BPMN2ObjectImpl implements Diagram {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -105,8 +106,7 @@ public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(DiPackage.DIAGRAM__NAME,
-				DiPackage.Literals.DIAGRAM__NAME, true, true);
+		return (String) eDynamicGet(DiPackage.DIAGRAM__NAME, DiPackage.Literals.DIAGRAM__NAME, true, true);
 	}
 
 	/**
@@ -115,8 +115,7 @@ public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(DiPackage.DIAGRAM__NAME, DiPackage.Literals.DIAGRAM__NAME,
-				newName);
+		eDynamicSet(DiPackage.DIAGRAM__NAME, DiPackage.Literals.DIAGRAM__NAME, newName);
 	}
 
 	/**
@@ -125,8 +124,8 @@ public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
 	 * @generated
 	 */
 	public String getDocumentation() {
-		return (String) eDynamicGet(DiPackage.DIAGRAM__DOCUMENTATION,
-				DiPackage.Literals.DIAGRAM__DOCUMENTATION, true, true);
+		return (String) eDynamicGet(DiPackage.DIAGRAM__DOCUMENTATION, DiPackage.Literals.DIAGRAM__DOCUMENTATION, true,
+				true);
 	}
 
 	/**
@@ -135,8 +134,7 @@ public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
 	 * @generated
 	 */
 	public void setDocumentation(String newDocumentation) {
-		eDynamicSet(DiPackage.DIAGRAM__DOCUMENTATION,
-				DiPackage.Literals.DIAGRAM__DOCUMENTATION, newDocumentation);
+		eDynamicSet(DiPackage.DIAGRAM__DOCUMENTATION, DiPackage.Literals.DIAGRAM__DOCUMENTATION, newDocumentation);
 	}
 
 	/**
@@ -145,8 +143,7 @@ public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
 	 * @generated
 	 */
 	public float getResolution() {
-		return (Float) eDynamicGet(DiPackage.DIAGRAM__RESOLUTION,
-				DiPackage.Literals.DIAGRAM__RESOLUTION, true, true);
+		return (Float) eDynamicGet(DiPackage.DIAGRAM__RESOLUTION, DiPackage.Literals.DIAGRAM__RESOLUTION, true, true);
 	}
 
 	/**
@@ -155,8 +152,7 @@ public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
 	 * @generated
 	 */
 	public void setResolution(float newResolution) {
-		eDynamicSet(DiPackage.DIAGRAM__RESOLUTION,
-				DiPackage.Literals.DIAGRAM__RESOLUTION, newResolution);
+		eDynamicSet(DiPackage.DIAGRAM__RESOLUTION, DiPackage.Literals.DIAGRAM__RESOLUTION, newResolution);
 	}
 
 	/**
@@ -166,8 +162,8 @@ public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Style> getOwnedStyle() {
-		return (EList<Style>) eDynamicGet(DiPackage.DIAGRAM__OWNED_STYLE,
-				DiPackage.Literals.DIAGRAM__OWNED_STYLE, true, true);
+		return (EList<Style>) eDynamicGet(DiPackage.DIAGRAM__OWNED_STYLE, DiPackage.Literals.DIAGRAM__OWNED_STYLE, true,
+				true);
 	}
 
 	/**
@@ -176,8 +172,8 @@ public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
 	 * @generated
 	 */
 	public DiagramElement getRootElement() {
-		return (DiagramElement) eDynamicGet(DiPackage.DIAGRAM__ROOT_ELEMENT,
-				DiPackage.Literals.DIAGRAM__ROOT_ELEMENT, true, true);
+		return (DiagramElement) eDynamicGet(DiPackage.DIAGRAM__ROOT_ELEMENT, DiPackage.Literals.DIAGRAM__ROOT_ELEMENT,
+				true, true);
 	}
 
 	/**
@@ -185,10 +181,8 @@ public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRootElement(DiagramElement newRootElement,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newRootElement,
-				DiPackage.DIAGRAM__ROOT_ELEMENT, msgs);
+	public NotificationChain basicSetRootElement(DiagramElement newRootElement, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newRootElement, DiPackage.DIAGRAM__ROOT_ELEMENT, msgs);
 		return msgs;
 	}
 
@@ -198,14 +192,12 @@ public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case DiPackage.DIAGRAM__ROOT_ELEMENT:
 			DiagramElement rootElement = getRootElement();
 			if (rootElement != null)
-				msgs = ((InternalEObject) rootElement).eInverseRemove(this,
-						DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM,
+				msgs = ((InternalEObject) rootElement).eInverseRemove(this, DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM,
 						DiagramElement.class, msgs);
 			return basicSetRootElement((DiagramElement) otherEnd, msgs);
 		}
@@ -218,8 +210,7 @@ public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case DiPackage.DIAGRAM__ROOT_ELEMENT:
 			return basicSetRootElement(null, msgs);
@@ -300,8 +291,7 @@ public abstract class DiagramImpl extends CDOObjectImpl implements Diagram {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case DiPackage.DIAGRAM__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case DiPackage.DIAGRAM__DOCUMENTATION:
 			return DOCUMENTATION_EDEFAULT == null ? getDocumentation() != null
 					: !DOCUMENTATION_EDEFAULT.equals(getDocumentation());

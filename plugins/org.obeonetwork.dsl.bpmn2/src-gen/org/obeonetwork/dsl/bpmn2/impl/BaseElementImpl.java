@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+import org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl;
 import org.obeonetwork.dsl.bpmn2.BaseElement;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.Documentation;
@@ -30,27 +30,26 @@ import org.obeonetwork.dsl.bpmn2.ExtensionAttributeValue;
 import org.obeonetwork.dsl.bpmn2.ExtensionDefinition;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Base Element</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Base Element</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.BaseElementImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.BaseElementImpl#getExtensionDefinitions <em>Extension Definitions</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.BaseElementImpl#getExtensionValues <em>Extension Values</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.BaseElementImpl#getDocumentation <em>Documentation</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.BaseElementImpl#getDescription <em>Description</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public abstract class BaseElementImpl extends CDOObjectImpl implements
-		BaseElement {
+public abstract class BaseElementImpl extends BPMN2ObjectImpl implements BaseElement {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getId()
 	 * @generated
 	 * @ordered
@@ -58,18 +57,24 @@ public abstract class BaseElementImpl extends CDOObjectImpl implements
 	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
 	 */
 	protected BaseElementImpl() {
 		super();
-		setId(EcoreUtil.generateUUID());
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -78,8 +83,7 @@ public abstract class BaseElementImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -88,85 +92,93 @@ public abstract class BaseElementImpl extends CDOObjectImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
-		return (String) eDynamicGet(Bpmn2Package.BASE_ELEMENT__ID,
-				Bpmn2Package.Literals.BASE_ELEMENT__ID, true, true);
+		return (String) eDynamicGet(Bpmn2Package.BASE_ELEMENT__ID, Bpmn2Package.Literals.BASE_ELEMENT__ID, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
-		eDynamicSet(Bpmn2Package.BASE_ELEMENT__ID,
-				Bpmn2Package.Literals.BASE_ELEMENT__ID, newId);
+		eDynamicSet(Bpmn2Package.BASE_ELEMENT__ID, Bpmn2Package.Literals.BASE_ELEMENT__ID, newId);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	@SuppressWarnings("unchecked")
 	public EList<ExtensionDefinition> getExtensionDefinitions() {
-		return (EList<ExtensionDefinition>) eDynamicGet(
-				Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS,
-				Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_DEFINITIONS,
-				true, true);
+		return (EList<ExtensionDefinition>) eDynamicGet(Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS,
+				Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_DEFINITIONS, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	@SuppressWarnings("unchecked")
 	public EList<ExtensionAttributeValue> getExtensionValues() {
-		return (EList<ExtensionAttributeValue>) eDynamicGet(
-				Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES,
-				Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_VALUES, true,
-				true);
+		return (EList<ExtensionAttributeValue>) eDynamicGet(Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES,
+				Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_VALUES, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	@SuppressWarnings("unchecked")
 	public EList<Documentation> getDocumentation() {
-		return (EList<Documentation>) eDynamicGet(
-				Bpmn2Package.BASE_ELEMENT__DOCUMENTATION,
+		return (EList<Documentation>) eDynamicGet(Bpmn2Package.BASE_ELEMENT__DOCUMENTATION,
 				Bpmn2Package.Literals.BASE_ELEMENT__DOCUMENTATION, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public String getDescription() {
+		return (String) eDynamicGet(Bpmn2Package.BASE_ELEMENT__DESCRIPTION,
+				Bpmn2Package.Literals.BASE_ELEMENT__DESCRIPTION, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDescription(String newDescription) {
+		eDynamicSet(Bpmn2Package.BASE_ELEMENT__DESCRIPTION, Bpmn2Package.Literals.BASE_ELEMENT__DESCRIPTION,
+				newDescription);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-			return ((InternalEList<?>) getExtensionValues()).basicRemove(
-					otherEnd, msgs);
+			return ((InternalEList<?>) getExtensionValues()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
-			return ((InternalEList<?>) getDocumentation()).basicRemove(
-					otherEnd, msgs);
+			return ((InternalEList<?>) getDocumentation()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -180,13 +192,14 @@ public abstract class BaseElementImpl extends CDOObjectImpl implements
 			return getExtensionValues();
 		case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
 			return getDocumentation();
+		case Bpmn2Package.BASE_ELEMENT__DESCRIPTION:
+			return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -198,26 +211,25 @@ public abstract class BaseElementImpl extends CDOObjectImpl implements
 			return;
 		case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
 			getExtensionDefinitions().clear();
-			getExtensionDefinitions().addAll(
-					(Collection<? extends ExtensionDefinition>) newValue);
+			getExtensionDefinitions().addAll((Collection<? extends ExtensionDefinition>) newValue);
 			return;
 		case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
 			getExtensionValues().clear();
-			getExtensionValues().addAll(
-					(Collection<? extends ExtensionAttributeValue>) newValue);
+			getExtensionValues().addAll((Collection<? extends ExtensionAttributeValue>) newValue);
 			return;
 		case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
 			getDocumentation().clear();
-			getDocumentation().addAll(
-					(Collection<? extends Documentation>) newValue);
+			getDocumentation().addAll((Collection<? extends Documentation>) newValue);
+			return;
+		case Bpmn2Package.BASE_ELEMENT__DESCRIPTION:
+			setDescription((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -235,29 +247,33 @@ public abstract class BaseElementImpl extends CDOObjectImpl implements
 		case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
 			getDocumentation().clear();
 			return;
+		case Bpmn2Package.BASE_ELEMENT__DESCRIPTION:
+			setDescription(DESCRIPTION_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.BASE_ELEMENT__ID:
-			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT
-					.equals(getId());
+			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
 		case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
 			return !getExtensionDefinitions().isEmpty();
 		case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
 			return !getExtensionValues().isEmpty();
 		case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
 			return !getDocumentation().isEmpty();
+		case Bpmn2Package.BASE_ELEMENT__DESCRIPTION:
+			return DESCRIPTION_EDEFAULT == null ? getDescription() != null
+					: !DESCRIPTION_EDEFAULT.equals(getDescription());
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //BaseElementImpl
+} // BaseElementImpl

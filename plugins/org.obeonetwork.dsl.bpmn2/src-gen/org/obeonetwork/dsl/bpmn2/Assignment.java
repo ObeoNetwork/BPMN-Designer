@@ -21,11 +21,11 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Assignment#getFrom <em>From</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Assignment#getTo <em>To</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getAssignment()
  * @model

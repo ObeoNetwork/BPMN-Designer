@@ -24,13 +24,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ExtensionAttributeValue#getValueRef <em>Value Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ExtensionAttributeValue#getValue <em>Value</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ExtensionAttributeValue#getExtensionAttributeDefinition <em>Extension Attribute Definition</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.ExtensionAttributeValue#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getExtensionAttributeValue()
  * @model

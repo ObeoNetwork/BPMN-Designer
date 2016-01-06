@@ -44,9 +44,8 @@ import org.obeonetwork.dsl.dd.dc.Font;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FontItemProvider extends ItemProviderAdapter implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class FontItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -85,15 +84,12 @@ public class FontItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Font_name_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Font_name_feature", "_UI_Font_type"),
-				DcPackage.Literals.FONT__NAME, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Font_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Font_name_feature", "_UI_Font_type"),
+						DcPackage.Literals.FONT__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+						null, null));
 	}
 
 	/**
@@ -103,15 +99,12 @@ public class FontItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addSizePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Font_size_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Font_size_feature", "_UI_Font_type"),
-				DcPackage.Literals.FONT__SIZE, true, false, false,
-				ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Font_size_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Font_size_feature", "_UI_Font_type"),
+						DcPackage.Literals.FONT__SIZE, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+						null, null));
 	}
 
 	/**
@@ -121,15 +114,12 @@ public class FontItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addIsBoldPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Font_isBold_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Font_isBold_feature", "_UI_Font_type"),
-				DcPackage.Literals.FONT__IS_BOLD, true, false, false,
-				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Font_isBold_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Font_isBold_feature", "_UI_Font_type"),
+						DcPackage.Literals.FONT__IS_BOLD, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -139,15 +129,12 @@ public class FontItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addIsItalicPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Font_isItalic_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Font_isItalic_feature", "_UI_Font_type"),
-				DcPackage.Literals.FONT__IS_ITALIC, true, false, false,
-				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Font_isItalic_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Font_isItalic_feature", "_UI_Font_type"),
+						DcPackage.Literals.FONT__IS_ITALIC, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -157,15 +144,13 @@ public class FontItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addIsUnderlinePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Font_isUnderline_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Font_isUnderline_feature", "_UI_Font_type"),
-				DcPackage.Literals.FONT__IS_UNDERLINE, true, false, false,
-				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Font_isUnderline_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Font_isUnderline_feature",
+								"_UI_Font_type"),
+						DcPackage.Literals.FONT__IS_UNDERLINE, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -175,15 +160,13 @@ public class FontItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addIsStrikeThroughPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Font_isStrikeThrough_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Font_isStrikeThrough_feature", "_UI_Font_type"),
-				DcPackage.Literals.FONT__IS_STRIKE_THROUGH, true, false, false,
-				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Font_isStrikeThrough_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Font_isStrikeThrough_feature",
+								"_UI_Font_type"),
+						DcPackage.Literals.FONT__IS_STRIKE_THROUGH, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -195,11 +178,9 @@ public class FontItemProvider extends ItemProviderAdapter implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Font.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Font.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Font.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Font.gif"));
 		}
 	}
 
@@ -244,8 +225,7 @@ public class FontItemProvider extends ItemProviderAdapter implements
 		case DcPackage.FONT__IS_ITALIC:
 		case DcPackage.FONT__IS_UNDERLINE:
 		case DcPackage.FONT__IS_STRIKE_THROUGH:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -259,8 +239,7 @@ public class FontItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

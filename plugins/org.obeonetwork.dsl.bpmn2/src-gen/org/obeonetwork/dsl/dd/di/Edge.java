@@ -24,12 +24,12 @@ import org.obeonetwork.dsl.dd.dc.Point;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.di.Edge#getSource <em>Source</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.di.Edge#getTarget <em>Target</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.di.Edge#getWaypoint <em>Waypoint</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.dd.di.DiPackage#getEdge()
  * @model abstract="true"

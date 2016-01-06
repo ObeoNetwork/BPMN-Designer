@@ -25,10 +25,10 @@ import org.obeonetwork.dsl.bpmn2.GatewayDirection;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.GatewayImpl#getGatewayDirection <em>Gateway Direction</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -68,8 +68,7 @@ public abstract class GatewayImpl extends FlowNodeImpl implements Gateway {
 	 * @generated
 	 */
 	public GatewayDirection getGatewayDirection() {
-		return (GatewayDirection) eDynamicGet(
-				Bpmn2Package.GATEWAY__GATEWAY_DIRECTION,
+		return (GatewayDirection) eDynamicGet(Bpmn2Package.GATEWAY__GATEWAY_DIRECTION,
 				Bpmn2Package.Literals.GATEWAY__GATEWAY_DIRECTION, true, true);
 	}
 
@@ -79,8 +78,7 @@ public abstract class GatewayImpl extends FlowNodeImpl implements Gateway {
 	 * @generated
 	 */
 	public void setGatewayDirection(GatewayDirection newGatewayDirection) {
-		eDynamicSet(Bpmn2Package.GATEWAY__GATEWAY_DIRECTION,
-				Bpmn2Package.Literals.GATEWAY__GATEWAY_DIRECTION,
+		eDynamicSet(Bpmn2Package.GATEWAY__GATEWAY_DIRECTION, Bpmn2Package.Literals.GATEWAY__GATEWAY_DIRECTION,
 				newGatewayDirection);
 	}
 

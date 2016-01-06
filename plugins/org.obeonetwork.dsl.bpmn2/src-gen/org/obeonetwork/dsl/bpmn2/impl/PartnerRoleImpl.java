@@ -28,11 +28,11 @@ import org.obeonetwork.dsl.bpmn2.PartnerRole;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.PartnerRoleImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.PartnerRoleImpl#getParticipantRef <em>Participant Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -72,8 +72,8 @@ public class PartnerRoleImpl extends RootElementImpl implements PartnerRole {
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.PARTNER_ROLE__NAME,
-				Bpmn2Package.Literals.PARTNER_ROLE__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.PARTNER_ROLE__NAME, Bpmn2Package.Literals.PARTNER_ROLE__NAME, true,
+				true);
 	}
 
 	/**
@@ -82,8 +82,7 @@ public class PartnerRoleImpl extends RootElementImpl implements PartnerRole {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.PARTNER_ROLE__NAME,
-				Bpmn2Package.Literals.PARTNER_ROLE__NAME, newName);
+		eDynamicSet(Bpmn2Package.PARTNER_ROLE__NAME, Bpmn2Package.Literals.PARTNER_ROLE__NAME, newName);
 	}
 
 	/**
@@ -93,8 +92,7 @@ public class PartnerRoleImpl extends RootElementImpl implements PartnerRole {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Participant> getParticipantRef() {
-		return (EList<Participant>) eDynamicGet(
-				Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF,
+		return (EList<Participant>) eDynamicGet(Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF,
 				Bpmn2Package.Literals.PARTNER_ROLE__PARTICIPANT_REF, true, true);
 	}
 
@@ -128,8 +126,7 @@ public class PartnerRoleImpl extends RootElementImpl implements PartnerRole {
 			return;
 		case Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF:
 			getParticipantRef().clear();
-			getParticipantRef().addAll(
-					(Collection<? extends Participant>) newValue);
+			getParticipantRef().addAll((Collection<? extends Participant>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -162,8 +159,7 @@ public class PartnerRoleImpl extends RootElementImpl implements PartnerRole {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.PARTNER_ROLE__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF:
 			return !getParticipantRef().isEmpty();
 		}

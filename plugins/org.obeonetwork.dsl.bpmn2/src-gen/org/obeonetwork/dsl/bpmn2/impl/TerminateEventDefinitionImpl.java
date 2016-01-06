@@ -22,13 +22,10 @@ import org.obeonetwork.dsl.bpmn2.TerminateEventDefinition;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Terminate Event Definition</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public class TerminateEventDefinitionImpl extends EventDefinitionImpl implements
-		TerminateEventDefinition {
+public class TerminateEventDefinitionImpl extends EventDefinitionImpl implements TerminateEventDefinition {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

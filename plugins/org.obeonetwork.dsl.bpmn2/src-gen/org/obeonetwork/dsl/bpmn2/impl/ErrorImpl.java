@@ -24,17 +24,16 @@ import org.obeonetwork.dsl.bpmn2.ItemDefinition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ErrorImpl#getStructureRef <em>Structure Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ErrorImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ErrorImpl#getErrorCode <em>Error Code</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ErrorImpl extends RootElementImpl implements
-		org.obeonetwork.dsl.bpmn2.Error {
+public class ErrorImpl extends RootElementImpl implements org.obeonetwork.dsl.bpmn2.Error {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -99,8 +98,7 @@ public class ErrorImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public void setStructureRef(ItemDefinition newStructureRef) {
-		eDynamicSet(Bpmn2Package.ERROR__STRUCTURE_REF,
-				Bpmn2Package.Literals.ERROR__STRUCTURE_REF, newStructureRef);
+		eDynamicSet(Bpmn2Package.ERROR__STRUCTURE_REF, Bpmn2Package.Literals.ERROR__STRUCTURE_REF, newStructureRef);
 	}
 
 	/**
@@ -109,8 +107,7 @@ public class ErrorImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.ERROR__NAME,
-				Bpmn2Package.Literals.ERROR__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.ERROR__NAME, Bpmn2Package.Literals.ERROR__NAME, true, true);
 	}
 
 	/**
@@ -119,8 +116,7 @@ public class ErrorImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.ERROR__NAME,
-				Bpmn2Package.Literals.ERROR__NAME, newName);
+		eDynamicSet(Bpmn2Package.ERROR__NAME, Bpmn2Package.Literals.ERROR__NAME, newName);
 	}
 
 	/**
@@ -129,8 +125,8 @@ public class ErrorImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public String getErrorCode() {
-		return (String) eDynamicGet(Bpmn2Package.ERROR__ERROR_CODE,
-				Bpmn2Package.Literals.ERROR__ERROR_CODE, true, true);
+		return (String) eDynamicGet(Bpmn2Package.ERROR__ERROR_CODE, Bpmn2Package.Literals.ERROR__ERROR_CODE, true,
+				true);
 	}
 
 	/**
@@ -139,8 +135,7 @@ public class ErrorImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public void setErrorCode(String newErrorCode) {
-		eDynamicSet(Bpmn2Package.ERROR__ERROR_CODE,
-				Bpmn2Package.Literals.ERROR__ERROR_CODE, newErrorCode);
+		eDynamicSet(Bpmn2Package.ERROR__ERROR_CODE, Bpmn2Package.Literals.ERROR__ERROR_CODE, newErrorCode);
 	}
 
 	/**
@@ -216,11 +211,9 @@ public class ErrorImpl extends RootElementImpl implements
 		case Bpmn2Package.ERROR__STRUCTURE_REF:
 			return basicGetStructureRef() != null;
 		case Bpmn2Package.ERROR__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.ERROR__ERROR_CODE:
-			return ERROR_CODE_EDEFAULT == null ? getErrorCode() != null
-					: !ERROR_CODE_EDEFAULT.equals(getErrorCode());
+			return ERROR_CODE_EDEFAULT == null ? getErrorCode() != null : !ERROR_CODE_EDEFAULT.equals(getErrorCode());
 		}
 		return super.eIsSet(featureID);
 	}

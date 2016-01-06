@@ -33,18 +33,17 @@ import org.obeonetwork.dsl.bpmn2.Monitoring;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.FlowElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.FlowElementImpl#getAuditing <em>Auditing</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.FlowElementImpl#getMonitoring <em>Monitoring</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.FlowElementImpl#getCategoryValueRef <em>Category Value Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public abstract class FlowElementImpl extends BaseElementImpl implements
-		FlowElement {
+public abstract class FlowElementImpl extends BaseElementImpl implements FlowElement {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -80,8 +79,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.FLOW_ELEMENT__NAME,
-				Bpmn2Package.Literals.FLOW_ELEMENT__NAME, true, true);
+		return (String) eDynamicGet(Bpmn2Package.FLOW_ELEMENT__NAME, Bpmn2Package.Literals.FLOW_ELEMENT__NAME, true,
+				true);
 	}
 
 	/**
@@ -90,8 +89,7 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.FLOW_ELEMENT__NAME,
-				Bpmn2Package.Literals.FLOW_ELEMENT__NAME, newName);
+		eDynamicSet(Bpmn2Package.FLOW_ELEMENT__NAME, Bpmn2Package.Literals.FLOW_ELEMENT__NAME, newName);
 	}
 
 	/**
@@ -100,8 +98,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public Auditing getAuditing() {
-		return (Auditing) eDynamicGet(Bpmn2Package.FLOW_ELEMENT__AUDITING,
-				Bpmn2Package.Literals.FLOW_ELEMENT__AUDITING, true, true);
+		return (Auditing) eDynamicGet(Bpmn2Package.FLOW_ELEMENT__AUDITING, Bpmn2Package.Literals.FLOW_ELEMENT__AUDITING,
+				true, true);
 	}
 
 	/**
@@ -109,10 +107,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAuditing(Auditing newAuditing,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newAuditing,
-				Bpmn2Package.FLOW_ELEMENT__AUDITING, msgs);
+	public NotificationChain basicSetAuditing(Auditing newAuditing, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newAuditing, Bpmn2Package.FLOW_ELEMENT__AUDITING, msgs);
 		return msgs;
 	}
 
@@ -122,8 +118,7 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setAuditing(Auditing newAuditing) {
-		eDynamicSet(Bpmn2Package.FLOW_ELEMENT__AUDITING,
-				Bpmn2Package.Literals.FLOW_ELEMENT__AUDITING, newAuditing);
+		eDynamicSet(Bpmn2Package.FLOW_ELEMENT__AUDITING, Bpmn2Package.Literals.FLOW_ELEMENT__AUDITING, newAuditing);
 	}
 
 	/**
@@ -141,10 +136,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMonitoring(Monitoring newMonitoring,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newMonitoring,
-				Bpmn2Package.FLOW_ELEMENT__MONITORING, msgs);
+	public NotificationChain basicSetMonitoring(Monitoring newMonitoring, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newMonitoring, Bpmn2Package.FLOW_ELEMENT__MONITORING, msgs);
 		return msgs;
 	}
 
@@ -154,8 +147,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setMonitoring(Monitoring newMonitoring) {
-		eDynamicSet(Bpmn2Package.FLOW_ELEMENT__MONITORING,
-				Bpmn2Package.Literals.FLOW_ELEMENT__MONITORING, newMonitoring);
+		eDynamicSet(Bpmn2Package.FLOW_ELEMENT__MONITORING, Bpmn2Package.Literals.FLOW_ELEMENT__MONITORING,
+				newMonitoring);
 	}
 
 	/**
@@ -165,10 +158,8 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<CategoryValue> getCategoryValueRef() {
-		return (EList<CategoryValue>) eDynamicGet(
-				Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF,
-				Bpmn2Package.Literals.FLOW_ELEMENT__CATEGORY_VALUE_REF, true,
-				true);
+		return (EList<CategoryValue>) eDynamicGet(Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF,
+				Bpmn2Package.Literals.FLOW_ELEMENT__CATEGORY_VALUE_REF, true, true);
 	}
 
 	/**
@@ -178,12 +169,10 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getCategoryValueRef())
-					.basicAdd(otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getCategoryValueRef()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -194,16 +183,14 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.FLOW_ELEMENT__AUDITING:
 			return basicSetAuditing(null, msgs);
 		case Bpmn2Package.FLOW_ELEMENT__MONITORING:
 			return basicSetMonitoring(null, msgs);
 		case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
-			return ((InternalEList<?>) getCategoryValueRef()).basicRemove(
-					otherEnd, msgs);
+			return ((InternalEList<?>) getCategoryValueRef()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -248,8 +235,7 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 			return;
 		case Bpmn2Package.FLOW_ELEMENT__CATEGORY_VALUE_REF:
 			getCategoryValueRef().clear();
-			getCategoryValueRef().addAll(
-					(Collection<? extends CategoryValue>) newValue);
+			getCategoryValueRef().addAll((Collection<? extends CategoryValue>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -288,8 +274,7 @@ public abstract class FlowElementImpl extends BaseElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.FLOW_ELEMENT__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.FLOW_ELEMENT__AUDITING:
 			return getAuditing() != null;
 		case Bpmn2Package.FLOW_ELEMENT__MONITORING:

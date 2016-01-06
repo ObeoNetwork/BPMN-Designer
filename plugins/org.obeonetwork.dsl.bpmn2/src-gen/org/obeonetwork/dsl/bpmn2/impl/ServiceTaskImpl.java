@@ -25,11 +25,11 @@ import org.obeonetwork.dsl.bpmn2.ServiceTask;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ServiceTaskImpl#getImplementation <em>Implementation</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ServiceTaskImpl#getOperationRef <em>Operation Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -79,8 +79,7 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
 	 * @generated
 	 */
 	public void setImplementation(String newImplementation) {
-		eDynamicSet(Bpmn2Package.SERVICE_TASK__IMPLEMENTATION,
-				Bpmn2Package.Literals.SERVICE_TASK__IMPLEMENTATION,
+		eDynamicSet(Bpmn2Package.SERVICE_TASK__IMPLEMENTATION, Bpmn2Package.Literals.SERVICE_TASK__IMPLEMENTATION,
 				newImplementation);
 	}
 
@@ -90,8 +89,7 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
 	 * @generated
 	 */
 	public Operation getOperationRef() {
-		return (Operation) eDynamicGet(
-				Bpmn2Package.SERVICE_TASK__OPERATION_REF,
+		return (Operation) eDynamicGet(Bpmn2Package.SERVICE_TASK__OPERATION_REF,
 				Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF, true, true);
 	}
 
@@ -101,8 +99,7 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
 	 * @generated
 	 */
 	public Operation basicGetOperationRef() {
-		return (Operation) eDynamicGet(
-				Bpmn2Package.SERVICE_TASK__OPERATION_REF,
+		return (Operation) eDynamicGet(Bpmn2Package.SERVICE_TASK__OPERATION_REF,
 				Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF, false, true);
 	}
 
@@ -112,8 +109,7 @@ public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
 	 * @generated
 	 */
 	public void setOperationRef(Operation newOperationRef) {
-		eDynamicSet(Bpmn2Package.SERVICE_TASK__OPERATION_REF,
-				Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF,
+		eDynamicSet(Bpmn2Package.SERVICE_TASK__OPERATION_REF, Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF,
 				newOperationRef);
 	}
 

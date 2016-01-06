@@ -25,17 +25,16 @@ import org.obeonetwork.dsl.bpmn2.ResourceParameter;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ResourceParameterImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ResourceParameterImpl#isIsRequired <em>Is Required</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ResourceParameterImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ResourceParameterImpl extends BaseElementImpl implements
-		ResourceParameter {
+public class ResourceParameterImpl extends BaseElementImpl implements ResourceParameter {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -90,8 +89,7 @@ public class ResourceParameterImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.RESOURCE_PARAMETER__NAME,
-				Bpmn2Package.Literals.RESOURCE_PARAMETER__NAME, newName);
+		eDynamicSet(Bpmn2Package.RESOURCE_PARAMETER__NAME, Bpmn2Package.Literals.RESOURCE_PARAMETER__NAME, newName);
 	}
 
 	/**
@@ -100,10 +98,8 @@ public class ResourceParameterImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public boolean isIsRequired() {
-		return (Boolean) eDynamicGet(
-				Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED,
-				Bpmn2Package.Literals.RESOURCE_PARAMETER__IS_REQUIRED, true,
-				true);
+		return (Boolean) eDynamicGet(Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED,
+				Bpmn2Package.Literals.RESOURCE_PARAMETER__IS_REQUIRED, true, true);
 	}
 
 	/**
@@ -112,8 +108,7 @@ public class ResourceParameterImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setIsRequired(boolean newIsRequired) {
-		eDynamicSet(Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED,
-				Bpmn2Package.Literals.RESOURCE_PARAMETER__IS_REQUIRED,
+		eDynamicSet(Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED, Bpmn2Package.Literals.RESOURCE_PARAMETER__IS_REQUIRED,
 				newIsRequired);
 	}
 
@@ -123,8 +118,7 @@ public class ResourceParameterImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public ItemDefinition getType() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.RESOURCE_PARAMETER__TYPE,
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.RESOURCE_PARAMETER__TYPE,
 				Bpmn2Package.Literals.RESOURCE_PARAMETER__TYPE, true, true);
 	}
 
@@ -134,8 +128,7 @@ public class ResourceParameterImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public ItemDefinition basicGetType() {
-		return (ItemDefinition) eDynamicGet(
-				Bpmn2Package.RESOURCE_PARAMETER__TYPE,
+		return (ItemDefinition) eDynamicGet(Bpmn2Package.RESOURCE_PARAMETER__TYPE,
 				Bpmn2Package.Literals.RESOURCE_PARAMETER__TYPE, false, true);
 	}
 
@@ -145,8 +138,7 @@ public class ResourceParameterImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public void setType(ItemDefinition newType) {
-		eDynamicSet(Bpmn2Package.RESOURCE_PARAMETER__TYPE,
-				Bpmn2Package.Literals.RESOURCE_PARAMETER__TYPE, newType);
+		eDynamicSet(Bpmn2Package.RESOURCE_PARAMETER__TYPE, Bpmn2Package.Literals.RESOURCE_PARAMETER__TYPE, newType);
 	}
 
 	/**
@@ -220,8 +212,7 @@ public class ResourceParameterImpl extends BaseElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.RESOURCE_PARAMETER__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED:
 			return isIsRequired() != IS_REQUIRED_EDEFAULT;
 		case Bpmn2Package.RESOURCE_PARAMETER__TYPE:

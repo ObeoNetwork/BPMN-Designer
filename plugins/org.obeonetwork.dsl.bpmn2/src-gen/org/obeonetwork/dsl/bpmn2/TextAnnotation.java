@@ -21,11 +21,11 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.TextAnnotation#getText <em>Text</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.TextAnnotation#getTextFormat <em>Text Format</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getTextAnnotation()
  * @model

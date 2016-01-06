@@ -41,9 +41,8 @@ import org.obeonetwork.dsl.dd.di.Label;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LabelItemProvider extends NodeItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class LabelItemProvider extends NodeItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -78,8 +77,7 @@ public class LabelItemProvider extends NodeItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(DiPackage.Literals.LABEL__BOUNDS);
@@ -134,8 +132,7 @@ public class LabelItemProvider extends NodeItemProvider implements
 
 		switch (notification.getFeatureID(Label.class)) {
 		case DiPackage.LABEL__BOUNDS:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -149,13 +146,11 @@ public class LabelItemProvider extends NodeItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				DiPackage.Literals.LABEL__BOUNDS,
-				DcFactory.eINSTANCE.createBounds()));
+		newChildDescriptors
+				.add(createChildParameter(DiPackage.Literals.LABEL__BOUNDS, DcFactory.eINSTANCE.createBounds()));
 	}
 
 }

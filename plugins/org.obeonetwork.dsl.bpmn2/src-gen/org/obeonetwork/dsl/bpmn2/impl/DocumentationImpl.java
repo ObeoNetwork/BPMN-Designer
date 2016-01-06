@@ -24,11 +24,11 @@ import org.obeonetwork.dsl.bpmn2.Documentation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DocumentationImpl#getText <em>Text</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.DocumentationImpl#getTextFormat <em>Text Format</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -77,8 +77,8 @@ public class DocumentationImpl extends BaseElementImpl implements Documentation 
 	 * @generated
 	 */
 	public String getText() {
-		return (String) eDynamicGet(Bpmn2Package.DOCUMENTATION__TEXT,
-				Bpmn2Package.Literals.DOCUMENTATION__TEXT, true, true);
+		return (String) eDynamicGet(Bpmn2Package.DOCUMENTATION__TEXT, Bpmn2Package.Literals.DOCUMENTATION__TEXT, true,
+				true);
 	}
 
 	/**
@@ -87,8 +87,7 @@ public class DocumentationImpl extends BaseElementImpl implements Documentation 
 	 * @generated
 	 */
 	public void setText(String newText) {
-		eDynamicSet(Bpmn2Package.DOCUMENTATION__TEXT,
-				Bpmn2Package.Literals.DOCUMENTATION__TEXT, newText);
+		eDynamicSet(Bpmn2Package.DOCUMENTATION__TEXT, Bpmn2Package.Literals.DOCUMENTATION__TEXT, newText);
 	}
 
 	/**
@@ -107,8 +106,8 @@ public class DocumentationImpl extends BaseElementImpl implements Documentation 
 	 * @generated
 	 */
 	public void setTextFormat(String newTextFormat) {
-		eDynamicSet(Bpmn2Package.DOCUMENTATION__TEXT_FORMAT,
-				Bpmn2Package.Literals.DOCUMENTATION__TEXT_FORMAT, newTextFormat);
+		eDynamicSet(Bpmn2Package.DOCUMENTATION__TEXT_FORMAT, Bpmn2Package.Literals.DOCUMENTATION__TEXT_FORMAT,
+				newTextFormat);
 	}
 
 	/**
@@ -172,8 +171,7 @@ public class DocumentationImpl extends BaseElementImpl implements Documentation 
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.DOCUMENTATION__TEXT:
-			return TEXT_EDEFAULT == null ? getText() != null : !TEXT_EDEFAULT
-					.equals(getText());
+			return TEXT_EDEFAULT == null ? getText() != null : !TEXT_EDEFAULT.equals(getText());
 		case Bpmn2Package.DOCUMENTATION__TEXT_FORMAT:
 			return TEXT_FORMAT_EDEFAULT == null ? getTextFormat() != null
 					: !TEXT_FORMAT_EDEFAULT.equals(getTextFormat());

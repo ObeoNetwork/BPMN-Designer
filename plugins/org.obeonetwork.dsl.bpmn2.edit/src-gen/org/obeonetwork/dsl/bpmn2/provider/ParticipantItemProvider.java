@@ -42,9 +42,8 @@ import org.obeonetwork.dsl.bpmn2.Participant;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ParticipantItemProvider extends BaseElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ParticipantItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -84,17 +83,12 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
 	 */
 	protected void addIncomingConversationLinksPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_InteractionNode_incomingConversationLinks_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_InteractionNode_incomingConversationLinks_feature",
-								"_UI_InteractionNode_type"),
-						Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS,
-						true, false, true, null, null, null));
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_InteractionNode_incomingConversationLinks_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_InteractionNode_incomingConversationLinks_feature", "_UI_InteractionNode_type"),
+				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false, true, null, null,
+				null));
 	}
 
 	/**
@@ -105,17 +99,12 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
 	 */
 	protected void addOutgoingConversationLinksPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_InteractionNode_outgoingConversationLinks_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_InteractionNode_outgoingConversationLinks_feature",
-								"_UI_InteractionNode_type"),
-						Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS,
-						true, false, true, null, null, null));
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_InteractionNode_outgoingConversationLinks_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_InteractionNode_outgoingConversationLinks_feature", "_UI_InteractionNode_type"),
+				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false, true, null, null,
+				null));
 	}
 
 	/**
@@ -126,17 +115,12 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Participant_name_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_Participant_name_feature",
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Participant_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Participant_name_feature",
 								"_UI_Participant_type"),
-						Bpmn2Package.Literals.PARTICIPANT__NAME, true, false,
-						false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
+						Bpmn2Package.Literals.PARTICIPANT__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -146,16 +130,12 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	protected void addInterfaceRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Participant_interfaceRefs_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Participant_interfaceRefs_feature",
-						"_UI_Participant_type"),
-				Bpmn2Package.Literals.PARTICIPANT__INTERFACE_REFS, true, false,
-				true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Participant_interfaceRefs_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Participant_interfaceRefs_feature",
+								"_UI_Participant_type"),
+						Bpmn2Package.Literals.PARTICIPANT__INTERFACE_REFS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -165,16 +145,12 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	protected void addEndPointRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Participant_endPointRefs_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Participant_endPointRefs_feature",
-						"_UI_Participant_type"),
-				Bpmn2Package.Literals.PARTICIPANT__END_POINT_REFS, true, false,
-				true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Participant_endPointRefs_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Participant_endPointRefs_feature",
+								"_UI_Participant_type"),
+						Bpmn2Package.Literals.PARTICIPANT__END_POINT_REFS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -184,16 +160,12 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	protected void addProcessRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Participant_processRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Participant_processRef_feature",
-						"_UI_Participant_type"),
-				Bpmn2Package.Literals.PARTICIPANT__PROCESS_REF, true, false,
-				true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Participant_processRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Participant_processRef_feature",
+								"_UI_Participant_type"),
+						Bpmn2Package.Literals.PARTICIPANT__PROCESS_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -205,12 +177,10 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.PARTICIPANT__PARTICIPANT_MULTIPLICITY);
+			childrenFeatures.add(Bpmn2Package.Literals.PARTICIPANT__PARTICIPANT_MULTIPLICITY);
 		}
 		return childrenFeatures;
 	}
@@ -237,11 +207,9 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Participant.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Participant.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Participant.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Participant.gif"));
 		}
 	}
 
@@ -281,12 +249,10 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
 
 		switch (notification.getFeatureID(Participant.class)) {
 		case Bpmn2Package.PARTICIPANT__NAME:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Bpmn2Package.PARTICIPANT__PARTICIPANT_MULTIPLICITY:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -300,12 +266,10 @@ public class ParticipantItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PARTICIPANT__PARTICIPANT_MULTIPLICITY,
 				Bpmn2Factory.eINSTANCE.createParticipantMultiplicity()));
 	}
 

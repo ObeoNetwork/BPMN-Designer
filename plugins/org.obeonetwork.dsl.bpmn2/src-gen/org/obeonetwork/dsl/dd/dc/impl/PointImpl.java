@@ -16,6 +16,7 @@ package org.obeonetwork.dsl.dd.dc.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+import org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl;
 import org.obeonetwork.dsl.dd.dc.DcPackage;
 import org.obeonetwork.dsl.dd.dc.Point;
 
@@ -25,15 +26,15 @@ import org.obeonetwork.dsl.dd.dc.Point;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.impl.PointImpl#getX <em>X</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.impl.PointImpl#getY <em>Y</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class PointImpl extends CDOObjectImpl implements Point {
+public class PointImpl extends BPMN2ObjectImpl implements Point {
 	/**
 	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -88,8 +89,7 @@ public class PointImpl extends CDOObjectImpl implements Point {
 	 * @generated
 	 */
 	public float getX() {
-		return (Float) eDynamicGet(DcPackage.POINT__X,
-				DcPackage.Literals.POINT__X, true, true);
+		return (Float) eDynamicGet(DcPackage.POINT__X, DcPackage.Literals.POINT__X, true, true);
 	}
 
 	/**
@@ -107,8 +107,7 @@ public class PointImpl extends CDOObjectImpl implements Point {
 	 * @generated
 	 */
 	public float getY() {
-		return (Float) eDynamicGet(DcPackage.POINT__Y,
-				DcPackage.Literals.POINT__Y, true, true);
+		return (Float) eDynamicGet(DcPackage.POINT__Y, DcPackage.Literals.POINT__Y, true, true);
 	}
 
 	/**

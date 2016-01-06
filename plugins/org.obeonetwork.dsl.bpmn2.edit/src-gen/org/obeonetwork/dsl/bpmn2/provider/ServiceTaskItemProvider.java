@@ -39,9 +39,8 @@ import org.obeonetwork.dsl.bpmn2.ServiceTask;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ServiceTaskItemProvider extends TaskItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ServiceTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -76,17 +75,13 @@ public class ServiceTaskItemProvider extends TaskItemProvider implements
 	 * @generated
 	 */
 	protected void addImplementationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ServiceTask_implementation_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ServiceTask_implementation_feature",
-						"_UI_ServiceTask_type"),
-				Bpmn2Package.Literals.SERVICE_TASK__IMPLEMENTATION, true,
-				false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
-				null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ServiceTask_implementation_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ServiceTask_implementation_feature",
+								"_UI_ServiceTask_type"),
+						Bpmn2Package.Literals.SERVICE_TASK__IMPLEMENTATION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -96,16 +91,12 @@ public class ServiceTaskItemProvider extends TaskItemProvider implements
 	 * @generated
 	 */
 	protected void addOperationRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ServiceTask_operationRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ServiceTask_operationRef_feature",
-						"_UI_ServiceTask_type"),
-				Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF, true, false,
-				true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ServiceTask_operationRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ServiceTask_operationRef_feature",
+								"_UI_ServiceTask_type"),
+						Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -117,11 +108,9 @@ public class ServiceTaskItemProvider extends TaskItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/ServiceTask.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ServiceTask.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/ServiceTask.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ServiceTask.gif"));
 		}
 	}
 
@@ -161,8 +150,7 @@ public class ServiceTaskItemProvider extends TaskItemProvider implements
 
 		switch (notification.getFeatureID(ServiceTask.class)) {
 		case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -176,8 +164,7 @@ public class ServiceTaskItemProvider extends TaskItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

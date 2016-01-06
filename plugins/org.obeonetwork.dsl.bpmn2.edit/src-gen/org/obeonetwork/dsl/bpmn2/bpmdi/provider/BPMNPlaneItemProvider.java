@@ -42,9 +42,8 @@ import org.obeonetwork.dsl.dd.di.provider.PlaneItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BPMNPlaneItemProvider extends PlaneItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BPMNPlaneItemProvider extends PlaneItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -78,16 +77,12 @@ public class BPMNPlaneItemProvider extends PlaneItemProvider implements
 	 * @generated
 	 */
 	protected void addBpmnElementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_BPMNPlane_bpmnElement_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_BPMNPlane_bpmnElement_feature",
-						"_UI_BPMNPlane_type"),
-				BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, true, false,
-				true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BPMNPlane_bpmnElement_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BPMNPlane_bpmnElement_feature",
+								"_UI_BPMNPlane_type"),
+						BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, true, false, true, null, null, null));
 	}
 
 	/**
@@ -99,11 +94,9 @@ public class BPMNPlaneItemProvider extends PlaneItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/BPMNPlane.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/BPMNPlane.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/BPMNPlane.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/BPMNPlane.gif"));
 		}
 	}
 
@@ -149,8 +142,7 @@ public class BPMNPlaneItemProvider extends PlaneItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

@@ -35,9 +35,8 @@ import org.obeonetwork.dsl.bpmn2.Conversation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConversationItemProvider extends ConversationNodeItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ConversationItemProvider extends ConversationNodeItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -72,13 +71,9 @@ public class ConversationItemProvider extends ConversationNodeItemProvider
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator()
-							.getImage("full/obj16/Conversation.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Conversation.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator()
-							.getImage("full/obj16/Conversation.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Conversation.gif"));
 		}
 	}
 
@@ -126,8 +121,7 @@ public class ConversationItemProvider extends ConversationNodeItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

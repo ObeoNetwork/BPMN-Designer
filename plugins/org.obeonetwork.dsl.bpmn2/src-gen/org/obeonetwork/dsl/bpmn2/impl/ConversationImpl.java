@@ -22,13 +22,10 @@ import org.obeonetwork.dsl.bpmn2.Conversation;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Conversation</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public class ConversationImpl extends ConversationNodeImpl implements
-		Conversation {
+public class ConversationImpl extends ConversationNodeImpl implements Conversation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -22,8 +22,6 @@ import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Auditing</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

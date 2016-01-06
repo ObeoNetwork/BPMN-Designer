@@ -40,10 +40,8 @@ import org.obeonetwork.dsl.bpmn2.TimerEventDefinition;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TimerEventDefinitionItemProvider extends
-		EventDefinitionItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider,
-		IItemLabelProvider, IItemPropertySource {
+public class TimerEventDefinitionItemProvider extends EventDefinitionItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -78,16 +76,12 @@ public class TimerEventDefinitionItemProvider extends
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION);
+			childrenFeatures.add(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE);
+			childrenFeatures.add(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE);
+			childrenFeatures.add(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION);
 		}
 		return childrenFeatures;
 	}
@@ -114,15 +108,9 @@ public class TimerEventDefinitionItemProvider extends
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/TimerEventDefinition.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/TimerEventDefinition.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/TimerEventDefinition.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/TimerEventDefinition.gif"));
 		}
 	}
 
@@ -164,8 +152,7 @@ public class TimerEventDefinitionItemProvider extends
 		case Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DATE:
 		case Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_CYCLE:
 		case Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DURATION:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -179,32 +166,25 @@ public class TimerEventDefinitionItemProvider extends
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE,
 				Bpmn2Factory.eINSTANCE.createExpression()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE,
 				Bpmn2Factory.eINSTANCE.createFormalExpression()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE,
 				Bpmn2Factory.eINSTANCE.createExpression()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE,
 				Bpmn2Factory.eINSTANCE.createFormalExpression()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION,
 				Bpmn2Factory.eINSTANCE.createExpression()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION,
 				Bpmn2Factory.eINSTANCE.createFormalExpression()));
 	}
 
@@ -215,8 +195,7 @@ public class TimerEventDefinitionItemProvider extends
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature,
-			Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -225,9 +204,8 @@ public class TimerEventDefinitionItemProvider extends
 				|| childFeature == Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION;
 
 		if (qualify) {
-			return getString("_UI_CreateChild_text2", new Object[] {
-					getTypeText(childObject), getFeatureText(childFeature),
-					getTypeText(owner) });
+			return getString("_UI_CreateChild_text2",
+					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
 	}

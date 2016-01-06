@@ -42,9 +42,8 @@ import org.obeonetwork.dsl.bpmn2.ParticipantMultiplicity;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -81,16 +80,12 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter
 	 */
 	protected void addMinimumPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_ParticipantMultiplicity_minimum_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ParticipantMultiplicity_minimum_feature",
+				getString("_UI_PropertyDescriptor_description", "_UI_ParticipantMultiplicity_minimum_feature",
 						"_UI_ParticipantMultiplicity_type"),
-				Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__MINIMUM, true,
-				false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				null, null));
+				Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__MINIMUM, true, false, false,
+				ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -101,16 +96,12 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter
 	 */
 	protected void addMaximumPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_ParticipantMultiplicity_maximum_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ParticipantMultiplicity_maximum_feature",
+				getString("_UI_PropertyDescriptor_description", "_UI_ParticipantMultiplicity_maximum_feature",
 						"_UI_ParticipantMultiplicity_type"),
-				Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__MAXIMUM, true,
-				false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				null, null));
+				Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__MAXIMUM, true, false, false,
+				ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -120,17 +111,13 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter
 	 * @generated
 	 */
 	protected void addIdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ParticipantMultiplicity_id_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ParticipantMultiplicity_id_feature",
-						"_UI_ParticipantMultiplicity_type"),
-				Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__ID, true,
-				false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
-				null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ParticipantMultiplicity_id_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ParticipantMultiplicity_id_feature",
+								"_UI_ParticipantMultiplicity_type"),
+						Bpmn2Package.Literals.PARTICIPANT_MULTIPLICITY__ID, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -142,15 +129,9 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ParticipantMultiplicity.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ParticipantMultiplicity.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ParticipantMultiplicity.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ParticipantMultiplicity.gif"));
 		}
 	}
 
@@ -192,8 +173,7 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter
 		case Bpmn2Package.PARTICIPANT_MULTIPLICITY__MINIMUM:
 		case Bpmn2Package.PARTICIPANT_MULTIPLICITY__MAXIMUM:
 		case Bpmn2Package.PARTICIPANT_MULTIPLICITY__ID:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -207,8 +187,7 @@ public class ParticipantMultiplicityItemProvider extends ItemProviderAdapter
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

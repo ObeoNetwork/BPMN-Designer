@@ -30,17 +30,16 @@ import org.obeonetwork.dsl.bpmn2.LinkEventDefinition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.LinkEventDefinitionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.LinkEventDefinitionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.LinkEventDefinitionImpl#getSource <em>Source</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
-		LinkEventDefinition {
+public class LinkEventDefinitionImpl extends EventDefinitionImpl implements LinkEventDefinition {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -86,8 +85,8 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.LINK_EVENT_DEFINITION__NAME,
-				Bpmn2Package.Literals.LINK_EVENT_DEFINITION__NAME, newName);
+		eDynamicSet(Bpmn2Package.LINK_EVENT_DEFINITION__NAME, Bpmn2Package.Literals.LINK_EVENT_DEFINITION__NAME,
+				newName);
 	}
 
 	/**
@@ -96,8 +95,7 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public LinkEventDefinition getTarget() {
-		return (LinkEventDefinition) eDynamicGet(
-				Bpmn2Package.LINK_EVENT_DEFINITION__TARGET,
+		return (LinkEventDefinition) eDynamicGet(Bpmn2Package.LINK_EVENT_DEFINITION__TARGET,
 				Bpmn2Package.Literals.LINK_EVENT_DEFINITION__TARGET, true, true);
 	}
 
@@ -107,10 +105,8 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public LinkEventDefinition basicGetTarget() {
-		return (LinkEventDefinition) eDynamicGet(
-				Bpmn2Package.LINK_EVENT_DEFINITION__TARGET,
-				Bpmn2Package.Literals.LINK_EVENT_DEFINITION__TARGET, false,
-				true);
+		return (LinkEventDefinition) eDynamicGet(Bpmn2Package.LINK_EVENT_DEFINITION__TARGET,
+				Bpmn2Package.Literals.LINK_EVENT_DEFINITION__TARGET, false, true);
 	}
 
 	/**
@@ -118,10 +114,8 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTarget(LinkEventDefinition newTarget,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newTarget,
-				Bpmn2Package.LINK_EVENT_DEFINITION__TARGET, msgs);
+	public NotificationChain basicSetTarget(LinkEventDefinition newTarget, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newTarget, Bpmn2Package.LINK_EVENT_DEFINITION__TARGET, msgs);
 		return msgs;
 	}
 
@@ -131,8 +125,8 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	public void setTarget(LinkEventDefinition newTarget) {
-		eDynamicSet(Bpmn2Package.LINK_EVENT_DEFINITION__TARGET,
-				Bpmn2Package.Literals.LINK_EVENT_DEFINITION__TARGET, newTarget);
+		eDynamicSet(Bpmn2Package.LINK_EVENT_DEFINITION__TARGET, Bpmn2Package.Literals.LINK_EVENT_DEFINITION__TARGET,
+				newTarget);
 	}
 
 	/**
@@ -142,8 +136,7 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<LinkEventDefinition> getSource() {
-		return (EList<LinkEventDefinition>) eDynamicGet(
-				Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE,
+		return (EList<LinkEventDefinition>) eDynamicGet(Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE,
 				Bpmn2Package.Literals.LINK_EVENT_DEFINITION__SOURCE, true, true);
 	}
 
@@ -154,19 +147,16 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.LINK_EVENT_DEFINITION__TARGET:
 			LinkEventDefinition target = basicGetTarget();
 			if (target != null)
-				msgs = ((InternalEObject) target).eInverseRemove(this,
-						Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE,
+				msgs = ((InternalEObject) target).eInverseRemove(this, Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE,
 						LinkEventDefinition.class, msgs);
 			return basicSetTarget((LinkEventDefinition) otherEnd, msgs);
 		case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getSource())
-					.basicAdd(otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getSource()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -177,8 +167,7 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.LINK_EVENT_DEFINITION__TARGET:
 			return basicSetTarget(null, msgs);
@@ -225,8 +214,7 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
 			return;
 		case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:
 			getSource().clear();
-			getSource().addAll(
-					(Collection<? extends LinkEventDefinition>) newValue);
+			getSource().addAll((Collection<? extends LinkEventDefinition>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -262,8 +250,7 @@ public class LinkEventDefinitionImpl extends EventDefinitionImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.LINK_EVENT_DEFINITION__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT
-					.equals(getName());
+			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		case Bpmn2Package.LINK_EVENT_DEFINITION__TARGET:
 			return basicGetTarget() != null;
 		case Bpmn2Package.LINK_EVENT_DEFINITION__SOURCE:

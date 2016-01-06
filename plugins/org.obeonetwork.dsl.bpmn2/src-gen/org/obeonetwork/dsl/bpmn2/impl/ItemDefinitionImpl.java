@@ -27,18 +27,17 @@ import org.obeonetwork.dsl.bpmn2.ItemKind;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ItemDefinitionImpl#getItemKind <em>Item Kind</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ItemDefinitionImpl#getStructureRef <em>Structure Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ItemDefinitionImpl#isIsCollection <em>Is Collection</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ItemDefinitionImpl#getImport <em>Import</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ItemDefinitionImpl extends RootElementImpl implements
-		ItemDefinition {
+public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinition {
 	/**
 	 * The default value of the '{@link #getItemKind() <em>Item Kind</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -93,8 +92,8 @@ public class ItemDefinitionImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public void setItemKind(ItemKind newItemKind) {
-		eDynamicSet(Bpmn2Package.ITEM_DEFINITION__ITEM_KIND,
-				Bpmn2Package.Literals.ITEM_DEFINITION__ITEM_KIND, newItemKind);
+		eDynamicSet(Bpmn2Package.ITEM_DEFINITION__ITEM_KIND, Bpmn2Package.Literals.ITEM_DEFINITION__ITEM_KIND,
+				newItemKind);
 	}
 
 	/**
@@ -103,10 +102,8 @@ public class ItemDefinitionImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public EObject getStructureRef() {
-		return (EObject) eDynamicGet(
-				Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF,
-				Bpmn2Package.Literals.ITEM_DEFINITION__STRUCTURE_REF, true,
-				true);
+		return (EObject) eDynamicGet(Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF,
+				Bpmn2Package.Literals.ITEM_DEFINITION__STRUCTURE_REF, true, true);
 	}
 
 	/**
@@ -115,10 +112,8 @@ public class ItemDefinitionImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public EObject basicGetStructureRef() {
-		return (EObject) eDynamicGet(
-				Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF,
-				Bpmn2Package.Literals.ITEM_DEFINITION__STRUCTURE_REF, false,
-				true);
+		return (EObject) eDynamicGet(Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF,
+				Bpmn2Package.Literals.ITEM_DEFINITION__STRUCTURE_REF, false, true);
 	}
 
 	/**
@@ -127,8 +122,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public void setStructureRef(EObject newStructureRef) {
-		eDynamicSet(Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF,
-				Bpmn2Package.Literals.ITEM_DEFINITION__STRUCTURE_REF,
+		eDynamicSet(Bpmn2Package.ITEM_DEFINITION__STRUCTURE_REF, Bpmn2Package.Literals.ITEM_DEFINITION__STRUCTURE_REF,
 				newStructureRef);
 	}
 
@@ -138,10 +132,8 @@ public class ItemDefinitionImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public boolean isIsCollection() {
-		return (Boolean) eDynamicGet(
-				Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION,
-				Bpmn2Package.Literals.ITEM_DEFINITION__IS_COLLECTION, true,
-				true);
+		return (Boolean) eDynamicGet(Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION,
+				Bpmn2Package.Literals.ITEM_DEFINITION__IS_COLLECTION, true, true);
 	}
 
 	/**
@@ -150,8 +142,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public void setIsCollection(boolean newIsCollection) {
-		eDynamicSet(Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION,
-				Bpmn2Package.Literals.ITEM_DEFINITION__IS_COLLECTION,
+		eDynamicSet(Bpmn2Package.ITEM_DEFINITION__IS_COLLECTION, Bpmn2Package.Literals.ITEM_DEFINITION__IS_COLLECTION,
 				newIsCollection);
 	}
 
@@ -161,8 +152,8 @@ public class ItemDefinitionImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public Import getImport() {
-		return (Import) eDynamicGet(Bpmn2Package.ITEM_DEFINITION__IMPORT,
-				Bpmn2Package.Literals.ITEM_DEFINITION__IMPORT, true, true);
+		return (Import) eDynamicGet(Bpmn2Package.ITEM_DEFINITION__IMPORT, Bpmn2Package.Literals.ITEM_DEFINITION__IMPORT,
+				true, true);
 	}
 
 	/**
@@ -171,8 +162,8 @@ public class ItemDefinitionImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public Import basicGetImport() {
-		return (Import) eDynamicGet(Bpmn2Package.ITEM_DEFINITION__IMPORT,
-				Bpmn2Package.Literals.ITEM_DEFINITION__IMPORT, false, true);
+		return (Import) eDynamicGet(Bpmn2Package.ITEM_DEFINITION__IMPORT, Bpmn2Package.Literals.ITEM_DEFINITION__IMPORT,
+				false, true);
 	}
 
 	/**
@@ -181,8 +172,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements
 	 * @generated
 	 */
 	public void setImport(Import newImport) {
-		eDynamicSet(Bpmn2Package.ITEM_DEFINITION__IMPORT,
-				Bpmn2Package.Literals.ITEM_DEFINITION__IMPORT, newImport);
+		eDynamicSet(Bpmn2Package.ITEM_DEFINITION__IMPORT, Bpmn2Package.Literals.ITEM_DEFINITION__IMPORT, newImport);
 	}
 
 	/**

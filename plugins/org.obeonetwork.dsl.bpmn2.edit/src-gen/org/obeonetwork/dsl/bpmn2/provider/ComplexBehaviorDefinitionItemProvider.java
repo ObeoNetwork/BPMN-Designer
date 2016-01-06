@@ -40,9 +40,8 @@ import org.obeonetwork.dsl.bpmn2.ComplexBehaviorDefinition;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ComplexBehaviorDefinitionItemProvider extends
-		BaseElementItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider,
+public class ComplexBehaviorDefinitionItemProvider extends BaseElementItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
 		IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -78,14 +77,11 @@ public class ComplexBehaviorDefinitionItemProvider extends
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT);
+			childrenFeatures.add(Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION);
+			childrenFeatures.add(Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT);
 		}
 		return childrenFeatures;
 	}
@@ -112,15 +108,9 @@ public class ComplexBehaviorDefinitionItemProvider extends
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ComplexBehaviorDefinition.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ComplexBehaviorDefinition.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ComplexBehaviorDefinition.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ComplexBehaviorDefinition.gif"));
 		}
 	}
 
@@ -161,8 +151,7 @@ public class ComplexBehaviorDefinitionItemProvider extends
 		switch (notification.getFeatureID(ComplexBehaviorDefinition.class)) {
 		case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
 		case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -176,16 +165,13 @@ public class ComplexBehaviorDefinitionItemProvider extends
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
 				Bpmn2Factory.eINSTANCE.createFormalExpression()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT,
 				Bpmn2Factory.eINSTANCE.createImplicitThrowEvent()));
 	}
 

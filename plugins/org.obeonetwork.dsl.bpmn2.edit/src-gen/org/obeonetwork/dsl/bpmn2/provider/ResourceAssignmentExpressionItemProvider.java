@@ -45,18 +45,15 @@ import org.obeonetwork.dsl.bpmn2.ResourceAssignmentExpression;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResourceAssignmentExpressionItemProvider extends
-		ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider,
-		IItemLabelProvider, IItemPropertySource {
+public class ResourceAssignmentExpressionItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResourceAssignmentExpressionItemProvider(
-			AdapterFactory adapterFactory) {
+	public ResourceAssignmentExpressionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -83,17 +80,13 @@ public class ResourceAssignmentExpressionItemProvider extends
 	 * @generated
 	 */
 	protected void addIdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ResourceAssignmentExpression_id_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ResourceAssignmentExpression_id_feature",
-						"_UI_ResourceAssignmentExpression_type"),
-				Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__ID, true,
-				false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
-				null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ResourceAssignmentExpression_id_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ResourceAssignmentExpression_id_feature",
+								"_UI_ResourceAssignmentExpression_type"),
+				Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__ID, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -105,12 +98,10 @@ public class ResourceAssignmentExpressionItemProvider extends
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION);
+			childrenFeatures.add(Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION);
 		}
 		return childrenFeatures;
 	}
@@ -137,15 +128,9 @@ public class ResourceAssignmentExpressionItemProvider extends
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ResourceAssignmentExpression.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ResourceAssignmentExpression.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ResourceAssignmentExpression.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ResourceAssignmentExpression.gif"));
 		}
 	}
 
@@ -169,8 +154,7 @@ public class ResourceAssignmentExpressionItemProvider extends
 	public String getText(Object object) {
 		String label = ((ResourceAssignmentExpression) object).getId();
 		return label == null || label.length() == 0 ? getString("_UI_ResourceAssignmentExpression_type")
-				: getString("_UI_ResourceAssignmentExpression_type") + " "
-						+ label;
+				: getString("_UI_ResourceAssignmentExpression_type") + " " + label;
 	}
 
 	/**
@@ -186,12 +170,10 @@ public class ResourceAssignmentExpressionItemProvider extends
 
 		switch (notification.getFeatureID(ResourceAssignmentExpression.class)) {
 		case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__ID:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -205,19 +187,14 @@ public class ResourceAssignmentExpressionItemProvider extends
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors
-				.add(createChildParameter(
-						Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
-						Bpmn2Factory.eINSTANCE.createExpression()));
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
+				Bpmn2Factory.eINSTANCE.createExpression()));
 
-		newChildDescriptors
-				.add(createChildParameter(
-						Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
-						Bpmn2Factory.eINSTANCE.createFormalExpression()));
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION,
+				Bpmn2Factory.eINSTANCE.createFormalExpression()));
 	}
 
 	/**

@@ -24,11 +24,11 @@ import org.obeonetwork.dsl.bpmn2.Transaction;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.TransactionImpl#getProtocol <em>Protocol</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.TransactionImpl#getMethod <em>Method</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -77,8 +77,8 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
 	 * @generated
 	 */
 	public String getProtocol() {
-		return (String) eDynamicGet(Bpmn2Package.TRANSACTION__PROTOCOL,
-				Bpmn2Package.Literals.TRANSACTION__PROTOCOL, true, true);
+		return (String) eDynamicGet(Bpmn2Package.TRANSACTION__PROTOCOL, Bpmn2Package.Literals.TRANSACTION__PROTOCOL,
+				true, true);
 	}
 
 	/**
@@ -87,8 +87,7 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
 	 * @generated
 	 */
 	public void setProtocol(String newProtocol) {
-		eDynamicSet(Bpmn2Package.TRANSACTION__PROTOCOL,
-				Bpmn2Package.Literals.TRANSACTION__PROTOCOL, newProtocol);
+		eDynamicSet(Bpmn2Package.TRANSACTION__PROTOCOL, Bpmn2Package.Literals.TRANSACTION__PROTOCOL, newProtocol);
 	}
 
 	/**
@@ -97,8 +96,8 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
 	 * @generated
 	 */
 	public String getMethod() {
-		return (String) eDynamicGet(Bpmn2Package.TRANSACTION__METHOD,
-				Bpmn2Package.Literals.TRANSACTION__METHOD, true, true);
+		return (String) eDynamicGet(Bpmn2Package.TRANSACTION__METHOD, Bpmn2Package.Literals.TRANSACTION__METHOD, true,
+				true);
 	}
 
 	/**
@@ -107,8 +106,7 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
 	 * @generated
 	 */
 	public void setMethod(String newMethod) {
-		eDynamicSet(Bpmn2Package.TRANSACTION__METHOD,
-				Bpmn2Package.Literals.TRANSACTION__METHOD, newMethod);
+		eDynamicSet(Bpmn2Package.TRANSACTION__METHOD, Bpmn2Package.Literals.TRANSACTION__METHOD, newMethod);
 	}
 
 	/**
@@ -172,11 +170,9 @@ public class TransactionImpl extends SubProcessImpl implements Transaction {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Bpmn2Package.TRANSACTION__PROTOCOL:
-			return PROTOCOL_EDEFAULT == null ? getProtocol() != null
-					: !PROTOCOL_EDEFAULT.equals(getProtocol());
+			return PROTOCOL_EDEFAULT == null ? getProtocol() != null : !PROTOCOL_EDEFAULT.equals(getProtocol());
 		case Bpmn2Package.TRANSACTION__METHOD:
-			return METHOD_EDEFAULT == null ? getMethod() != null
-					: !METHOD_EDEFAULT.equals(getMethod());
+			return METHOD_EDEFAULT == null ? getMethod() != null : !METHOD_EDEFAULT.equals(getMethod());
 		}
 		return super.eIsSet(featureID);
 	}

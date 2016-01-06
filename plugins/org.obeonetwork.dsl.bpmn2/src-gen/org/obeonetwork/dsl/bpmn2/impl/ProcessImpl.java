@@ -40,6 +40,7 @@ import org.obeonetwork.dsl.bpmn2.ResourceRole;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ProcessImpl#getFlowElements <em>Flow Elements</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ProcessImpl#getLaneSets <em>Lane Sets</em>}</li>
@@ -54,13 +55,13 @@ import org.obeonetwork.dsl.bpmn2.ResourceRole;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ProcessImpl#getResources <em>Resources</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ProcessImpl#getArtifacts <em>Artifacts</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ProcessImpl#getCorrelationSubscriptions <em>Correlation Subscriptions</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ProcessImpl#getDecomposedBy <em>Decomposed By</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ProcessImpl#getDecomposes <em>Decomposes</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ProcessImpl extends CallableElementImpl implements
-		org.obeonetwork.dsl.bpmn2.Process {
+public class ProcessImpl extends CallableElementImpl implements org.obeonetwork.dsl.bpmn2.Process {
 	/**
 	 * The default value of the '{@link #getProcessType() <em>Process Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -115,10 +116,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<FlowElement> getFlowElements() {
-		return (EList<FlowElement>) eDynamicGet(
-				Bpmn2Package.PROCESS__FLOW_ELEMENTS,
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
-				true, true);
+		return (EList<FlowElement>) eDynamicGet(Bpmn2Package.PROCESS__FLOW_ELEMENTS,
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS, true, true);
 	}
 
 	/**
@@ -129,8 +128,7 @@ public class ProcessImpl extends CallableElementImpl implements
 	@SuppressWarnings("unchecked")
 	public EList<LaneSet> getLaneSets() {
 		return (EList<LaneSet>) eDynamicGet(Bpmn2Package.PROCESS__LANE_SETS,
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS, true,
-				true);
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS, true, true);
 	}
 
 	/**
@@ -149,8 +147,7 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public void setProcessType(ProcessType newProcessType) {
-		eDynamicSet(Bpmn2Package.PROCESS__PROCESS_TYPE,
-				Bpmn2Package.Literals.PROCESS__PROCESS_TYPE, newProcessType);
+		eDynamicSet(Bpmn2Package.PROCESS__PROCESS_TYPE, Bpmn2Package.Literals.PROCESS__PROCESS_TYPE, newProcessType);
 	}
 
 	/**
@@ -159,8 +156,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public boolean isIsClosed() {
-		return (Boolean) eDynamicGet(Bpmn2Package.PROCESS__IS_CLOSED,
-				Bpmn2Package.Literals.PROCESS__IS_CLOSED, true, true);
+		return (Boolean) eDynamicGet(Bpmn2Package.PROCESS__IS_CLOSED, Bpmn2Package.Literals.PROCESS__IS_CLOSED, true,
+				true);
 	}
 
 	/**
@@ -169,8 +166,7 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public void setIsClosed(boolean newIsClosed) {
-		eDynamicSet(Bpmn2Package.PROCESS__IS_CLOSED,
-				Bpmn2Package.Literals.PROCESS__IS_CLOSED, newIsClosed);
+		eDynamicSet(Bpmn2Package.PROCESS__IS_CLOSED, Bpmn2Package.Literals.PROCESS__IS_CLOSED, newIsClosed);
 	}
 
 	/**
@@ -179,8 +175,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public Auditing getAuditing() {
-		return (Auditing) eDynamicGet(Bpmn2Package.PROCESS__AUDITING,
-				Bpmn2Package.Literals.PROCESS__AUDITING, true, true);
+		return (Auditing) eDynamicGet(Bpmn2Package.PROCESS__AUDITING, Bpmn2Package.Literals.PROCESS__AUDITING, true,
+				true);
 	}
 
 	/**
@@ -188,10 +184,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAuditing(Auditing newAuditing,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newAuditing,
-				Bpmn2Package.PROCESS__AUDITING, msgs);
+	public NotificationChain basicSetAuditing(Auditing newAuditing, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newAuditing, Bpmn2Package.PROCESS__AUDITING, msgs);
 		return msgs;
 	}
 
@@ -201,8 +195,7 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public void setAuditing(Auditing newAuditing) {
-		eDynamicSet(Bpmn2Package.PROCESS__AUDITING,
-				Bpmn2Package.Literals.PROCESS__AUDITING, newAuditing);
+		eDynamicSet(Bpmn2Package.PROCESS__AUDITING, Bpmn2Package.Literals.PROCESS__AUDITING, newAuditing);
 	}
 
 	/**
@@ -211,8 +204,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public Monitoring getMonitoring() {
-		return (Monitoring) eDynamicGet(Bpmn2Package.PROCESS__MONITORING,
-				Bpmn2Package.Literals.PROCESS__MONITORING, true, true);
+		return (Monitoring) eDynamicGet(Bpmn2Package.PROCESS__MONITORING, Bpmn2Package.Literals.PROCESS__MONITORING,
+				true, true);
 	}
 
 	/**
@@ -220,10 +213,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMonitoring(Monitoring newMonitoring,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newMonitoring,
-				Bpmn2Package.PROCESS__MONITORING, msgs);
+	public NotificationChain basicSetMonitoring(Monitoring newMonitoring, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newMonitoring, Bpmn2Package.PROCESS__MONITORING, msgs);
 		return msgs;
 	}
 
@@ -233,8 +224,7 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public void setMonitoring(Monitoring newMonitoring) {
-		eDynamicSet(Bpmn2Package.PROCESS__MONITORING,
-				Bpmn2Package.Literals.PROCESS__MONITORING, newMonitoring);
+		eDynamicSet(Bpmn2Package.PROCESS__MONITORING, Bpmn2Package.Literals.PROCESS__MONITORING, newMonitoring);
 	}
 
 	/**
@@ -255,8 +245,7 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<org.obeonetwork.dsl.bpmn2.Process> getSupports() {
-		return (EList<org.obeonetwork.dsl.bpmn2.Process>) eDynamicGet(
-				Bpmn2Package.PROCESS__SUPPORTS,
+		return (EList<org.obeonetwork.dsl.bpmn2.Process>) eDynamicGet(Bpmn2Package.PROCESS__SUPPORTS,
 				Bpmn2Package.Literals.PROCESS__SUPPORTS, true, true);
 	}
 
@@ -266,10 +255,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public Collaboration getDefinitionalCollaborationRef() {
-		return (Collaboration) eDynamicGet(
-				Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF,
-				Bpmn2Package.Literals.PROCESS__DEFINITIONAL_COLLABORATION_REF,
-				true, true);
+		return (Collaboration) eDynamicGet(Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF,
+				Bpmn2Package.Literals.PROCESS__DEFINITIONAL_COLLABORATION_REF, true, true);
 	}
 
 	/**
@@ -278,10 +265,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public Collaboration basicGetDefinitionalCollaborationRef() {
-		return (Collaboration) eDynamicGet(
-				Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF,
-				Bpmn2Package.Literals.PROCESS__DEFINITIONAL_COLLABORATION_REF,
-				false, true);
+		return (Collaboration) eDynamicGet(Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF,
+				Bpmn2Package.Literals.PROCESS__DEFINITIONAL_COLLABORATION_REF, false, true);
 	}
 
 	/**
@@ -289,11 +274,9 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDefinitionalCollaborationRef(
-			Collaboration newDefinitionalCollaborationRef) {
+	public void setDefinitionalCollaborationRef(Collaboration newDefinitionalCollaborationRef) {
 		eDynamicSet(Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF,
-				Bpmn2Package.Literals.PROCESS__DEFINITIONAL_COLLABORATION_REF,
-				newDefinitionalCollaborationRef);
+				Bpmn2Package.Literals.PROCESS__DEFINITIONAL_COLLABORATION_REF, newDefinitionalCollaborationRef);
 	}
 
 	/**
@@ -302,8 +285,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public boolean isIsExecutable() {
-		return (Boolean) eDynamicGet(Bpmn2Package.PROCESS__IS_EXECUTABLE,
-				Bpmn2Package.Literals.PROCESS__IS_EXECUTABLE, true, true);
+		return (Boolean) eDynamicGet(Bpmn2Package.PROCESS__IS_EXECUTABLE, Bpmn2Package.Literals.PROCESS__IS_EXECUTABLE,
+				true, true);
 	}
 
 	/**
@@ -312,8 +295,7 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	public void setIsExecutable(boolean newIsExecutable) {
-		eDynamicSet(Bpmn2Package.PROCESS__IS_EXECUTABLE,
-				Bpmn2Package.Literals.PROCESS__IS_EXECUTABLE, newIsExecutable);
+		eDynamicSet(Bpmn2Package.PROCESS__IS_EXECUTABLE, Bpmn2Package.Literals.PROCESS__IS_EXECUTABLE, newIsExecutable);
 	}
 
 	/**
@@ -323,8 +305,7 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ResourceRole> getResources() {
-		return (EList<ResourceRole>) eDynamicGet(
-				Bpmn2Package.PROCESS__RESOURCES,
+		return (EList<ResourceRole>) eDynamicGet(Bpmn2Package.PROCESS__RESOURCES,
 				Bpmn2Package.Literals.PROCESS__RESOURCES, true, true);
 	}
 
@@ -335,8 +316,8 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Artifact> getArtifacts() {
-		return (EList<Artifact>) eDynamicGet(Bpmn2Package.PROCESS__ARTIFACTS,
-				Bpmn2Package.Literals.PROCESS__ARTIFACTS, true, true);
+		return (EList<Artifact>) eDynamicGet(Bpmn2Package.PROCESS__ARTIFACTS, Bpmn2Package.Literals.PROCESS__ARTIFACTS,
+				true, true);
 	}
 
 	/**
@@ -346,10 +327,68 @@ public class ProcessImpl extends CallableElementImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<CorrelationSubscription> getCorrelationSubscriptions() {
-		return (EList<CorrelationSubscription>) eDynamicGet(
-				Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS,
-				Bpmn2Package.Literals.PROCESS__CORRELATION_SUBSCRIPTIONS, true,
-				true);
+		return (EList<CorrelationSubscription>) eDynamicGet(Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS,
+				Bpmn2Package.Literals.PROCESS__CORRELATION_SUBSCRIPTIONS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<org.obeonetwork.dsl.bpmn2.Process> getDecomposedBy() {
+		return (EList<org.obeonetwork.dsl.bpmn2.Process>) eDynamicGet(Bpmn2Package.PROCESS__DECOMPOSED_BY,
+				Bpmn2Package.Literals.PROCESS__DECOMPOSED_BY, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public org.obeonetwork.dsl.bpmn2.Process getDecomposes() {
+		return (org.obeonetwork.dsl.bpmn2.Process) eDynamicGet(Bpmn2Package.PROCESS__DECOMPOSES,
+				Bpmn2Package.Literals.PROCESS__DECOMPOSES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDecomposes(org.obeonetwork.dsl.bpmn2.Process newDecomposes,
+			NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject) newDecomposes, Bpmn2Package.PROCESS__DECOMPOSES, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDecomposes(org.obeonetwork.dsl.bpmn2.Process newDecomposes) {
+		eDynamicSet(Bpmn2Package.PROCESS__DECOMPOSES, Bpmn2Package.Literals.PROCESS__DECOMPOSES, newDecomposes);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Bpmn2Package.PROCESS__DECOMPOSED_BY:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getDecomposedBy()).basicAdd(otherEnd, msgs);
+		case Bpmn2Package.PROCESS__DECOMPOSES:
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			return basicSetDecomposes((org.obeonetwork.dsl.bpmn2.Process) otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -358,33 +397,45 @@ public class ProcessImpl extends CallableElementImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
-			return ((InternalEList<?>) getFlowElements()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getFlowElements()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.PROCESS__LANE_SETS:
-			return ((InternalEList<?>) getLaneSets()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getLaneSets()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.PROCESS__AUDITING:
 			return basicSetAuditing(null, msgs);
 		case Bpmn2Package.PROCESS__MONITORING:
 			return basicSetMonitoring(null, msgs);
 		case Bpmn2Package.PROCESS__PROPERTIES:
-			return ((InternalEList<?>) getProperties()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getProperties()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.PROCESS__RESOURCES:
-			return ((InternalEList<?>) getResources()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getResources()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.PROCESS__ARTIFACTS:
-			return ((InternalEList<?>) getArtifacts()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getArtifacts()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
-			return ((InternalEList<?>) getCorrelationSubscriptions())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getCorrelationSubscriptions()).basicRemove(otherEnd, msgs);
+		case Bpmn2Package.PROCESS__DECOMPOSED_BY:
+			return ((InternalEList<?>) getDecomposedBy()).basicRemove(otherEnd, msgs);
+		case Bpmn2Package.PROCESS__DECOMPOSES:
+			return basicSetDecomposes(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+		case Bpmn2Package.PROCESS__DECOMPOSES:
+			return eInternalContainer().eInverseRemove(this, Bpmn2Package.PROCESS__DECOMPOSED_BY,
+					org.obeonetwork.dsl.bpmn2.Process.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -423,6 +474,10 @@ public class ProcessImpl extends CallableElementImpl implements
 			return getArtifacts();
 		case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
 			return getCorrelationSubscriptions();
+		case Bpmn2Package.PROCESS__DECOMPOSED_BY:
+			return getDecomposedBy();
+		case Bpmn2Package.PROCESS__DECOMPOSES:
+			return getDecomposes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -438,8 +493,7 @@ public class ProcessImpl extends CallableElementImpl implements
 		switch (featureID) {
 		case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
 			getFlowElements().clear();
-			getFlowElements().addAll(
-					(Collection<? extends FlowElement>) newValue);
+			getFlowElements().addAll((Collection<? extends FlowElement>) newValue);
 			return;
 		case Bpmn2Package.PROCESS__LANE_SETS:
 			getLaneSets().clear();
@@ -463,8 +517,7 @@ public class ProcessImpl extends CallableElementImpl implements
 			return;
 		case Bpmn2Package.PROCESS__SUPPORTS:
 			getSupports().clear();
-			getSupports()
-					.addAll((Collection<? extends org.obeonetwork.dsl.bpmn2.Process>) newValue);
+			getSupports().addAll((Collection<? extends org.obeonetwork.dsl.bpmn2.Process>) newValue);
 			return;
 		case Bpmn2Package.PROCESS__DEFINITIONAL_COLLABORATION_REF:
 			setDefinitionalCollaborationRef((Collaboration) newValue);
@@ -474,8 +527,7 @@ public class ProcessImpl extends CallableElementImpl implements
 			return;
 		case Bpmn2Package.PROCESS__RESOURCES:
 			getResources().clear();
-			getResources()
-					.addAll((Collection<? extends ResourceRole>) newValue);
+			getResources().addAll((Collection<? extends ResourceRole>) newValue);
 			return;
 		case Bpmn2Package.PROCESS__ARTIFACTS:
 			getArtifacts().clear();
@@ -483,8 +535,14 @@ public class ProcessImpl extends CallableElementImpl implements
 			return;
 		case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
 			getCorrelationSubscriptions().clear();
-			getCorrelationSubscriptions().addAll(
-					(Collection<? extends CorrelationSubscription>) newValue);
+			getCorrelationSubscriptions().addAll((Collection<? extends CorrelationSubscription>) newValue);
+			return;
+		case Bpmn2Package.PROCESS__DECOMPOSED_BY:
+			getDecomposedBy().clear();
+			getDecomposedBy().addAll((Collection<? extends org.obeonetwork.dsl.bpmn2.Process>) newValue);
+			return;
+		case Bpmn2Package.PROCESS__DECOMPOSES:
+			setDecomposes((org.obeonetwork.dsl.bpmn2.Process) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -537,6 +595,12 @@ public class ProcessImpl extends CallableElementImpl implements
 		case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
 			getCorrelationSubscriptions().clear();
 			return;
+		case Bpmn2Package.PROCESS__DECOMPOSED_BY:
+			getDecomposedBy().clear();
+			return;
+		case Bpmn2Package.PROCESS__DECOMPOSES:
+			setDecomposes((org.obeonetwork.dsl.bpmn2.Process) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -575,6 +639,10 @@ public class ProcessImpl extends CallableElementImpl implements
 			return !getArtifacts().isEmpty();
 		case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
 			return !getCorrelationSubscriptions().isEmpty();
+		case Bpmn2Package.PROCESS__DECOMPOSED_BY:
+			return !getDecomposedBy().isEmpty();
+		case Bpmn2Package.PROCESS__DECOMPOSES:
+			return getDecomposes() != null;
 		}
 		return super.eIsSet(featureID);
 	}

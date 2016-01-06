@@ -28,15 +28,14 @@ import org.obeonetwork.dsl.bpmn2.MessageFlow;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ChoreographyTaskImpl#getMessageFlowRef <em>Message Flow Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements
-		ChoreographyTask {
+public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements ChoreographyTask {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,10 +62,8 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<MessageFlow> getMessageFlowRef() {
-		return (EList<MessageFlow>) eDynamicGet(
-				Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF,
-				Bpmn2Package.Literals.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF,
-				true, true);
+		return (EList<MessageFlow>) eDynamicGet(Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF,
+				Bpmn2Package.Literals.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF, true, true);
 	}
 
 	/**
@@ -94,8 +91,7 @@ public class ChoreographyTaskImpl extends ChoreographyActivityImpl implements
 		switch (featureID) {
 		case Bpmn2Package.CHOREOGRAPHY_TASK__MESSAGE_FLOW_REF:
 			getMessageFlowRef().clear();
-			getMessageFlowRef().addAll(
-					(Collection<? extends MessageFlow>) newValue);
+			getMessageFlowRef().addAll((Collection<? extends MessageFlow>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

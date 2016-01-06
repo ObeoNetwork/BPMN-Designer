@@ -29,10 +29,10 @@ import org.obeonetwork.dsl.dd.di.impl.LabelImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.bpmdi.impl.BPMNLabelImpl#getLabelStyle <em>Label Style</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,8 +62,7 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
 	 * @generated
 	 */
 	public BPMNLabelStyle getLabelStyle() {
-		return (BPMNLabelStyle) eDynamicGet(
-				BpmnDiPackage.BPMN_LABEL__LABEL_STYLE,
+		return (BPMNLabelStyle) eDynamicGet(BpmnDiPackage.BPMN_LABEL__LABEL_STYLE,
 				BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE, true, true);
 	}
 
@@ -73,8 +72,7 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
 	 * @generated
 	 */
 	public BPMNLabelStyle basicGetLabelStyle() {
-		return (BPMNLabelStyle) eDynamicGet(
-				BpmnDiPackage.BPMN_LABEL__LABEL_STYLE,
+		return (BPMNLabelStyle) eDynamicGet(BpmnDiPackage.BPMN_LABEL__LABEL_STYLE,
 				BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE, false, true);
 	}
 
@@ -84,8 +82,8 @@ public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
 	 * @generated
 	 */
 	public void setLabelStyle(BPMNLabelStyle newLabelStyle) {
-		eDynamicSet(BpmnDiPackage.BPMN_LABEL__LABEL_STYLE,
-				BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE, newLabelStyle);
+		eDynamicSet(BpmnDiPackage.BPMN_LABEL__LABEL_STYLE, BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE,
+				newLabelStyle);
 	}
 
 	/**

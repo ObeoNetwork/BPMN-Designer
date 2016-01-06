@@ -471,8 +471,7 @@ public interface DcPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FONT__IS_STRIKE_THROUGH = eINSTANCE
-				.getFont_IsStrikeThrough();
+		EAttribute FONT__IS_STRIKE_THROUGH = eINSTANCE.getFont_IsStrikeThrough();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.dd.dc.impl.PointImpl <em>Point</em>}' class.

@@ -21,11 +21,11 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.MessageEventDefinition#getMessageRef <em>Message Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.MessageEventDefinition#getOperationRef <em>Operation Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getMessageEventDefinition()
  * @model

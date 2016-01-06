@@ -39,9 +39,8 @@ import org.obeonetwork.dsl.bpmn2.SendTask;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SendTaskItemProvider extends TaskItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class SendTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -77,16 +76,13 @@ public class SendTaskItemProvider extends TaskItemProvider implements
 	 * @generated
 	 */
 	protected void addImplementationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_SendTask_implementation_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_SendTask_implementation_feature",
-						"_UI_SendTask_type"),
-				Bpmn2Package.Literals.SEND_TASK__IMPLEMENTATION, true, false,
-				false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_SendTask_implementation_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_SendTask_implementation_feature",
+								"_UI_SendTask_type"),
+						Bpmn2Package.Literals.SEND_TASK__IMPLEMENTATION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -96,16 +92,12 @@ public class SendTaskItemProvider extends TaskItemProvider implements
 	 * @generated
 	 */
 	protected void addOperationRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_SendTask_operationRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_SendTask_operationRef_feature",
-						"_UI_SendTask_type"),
-				Bpmn2Package.Literals.SEND_TASK__OPERATION_REF, true, false,
-				true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_SendTask_operationRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_SendTask_operationRef_feature",
+								"_UI_SendTask_type"),
+						Bpmn2Package.Literals.SEND_TASK__OPERATION_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -116,16 +108,11 @@ public class SendTaskItemProvider extends TaskItemProvider implements
 	 */
 	protected void addMessageRefPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_SendTask_messageRef_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_SendTask_messageRef_feature",
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_SendTask_messageRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_SendTask_messageRef_feature",
 								"_UI_SendTask_type"),
-						Bpmn2Package.Literals.SEND_TASK__MESSAGE_REF, true,
-						false, true, null, null, null));
+						Bpmn2Package.Literals.SEND_TASK__MESSAGE_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -137,11 +124,9 @@ public class SendTaskItemProvider extends TaskItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/SendTask.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/SendTask.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/SendTask.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/SendTask.gif"));
 		}
 	}
 
@@ -181,8 +166,7 @@ public class SendTaskItemProvider extends TaskItemProvider implements
 
 		switch (notification.getFeatureID(SendTask.class)) {
 		case Bpmn2Package.SEND_TASK__IMPLEMENTATION:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -196,8 +180,7 @@ public class SendTaskItemProvider extends TaskItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

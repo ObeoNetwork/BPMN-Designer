@@ -31,11 +31,11 @@ import org.obeonetwork.dsl.bpmn2.UserTask;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.UserTaskImpl#getRenderings <em>Renderings</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.UserTaskImpl#getImplementation <em>Implementation</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -76,8 +76,7 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Rendering> getRenderings() {
-		return (EList<Rendering>) eDynamicGet(
-				Bpmn2Package.USER_TASK__RENDERINGS,
+		return (EList<Rendering>) eDynamicGet(Bpmn2Package.USER_TASK__RENDERINGS,
 				Bpmn2Package.Literals.USER_TASK__RENDERINGS, true, true);
 	}
 
@@ -97,8 +96,7 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
 	 * @generated
 	 */
 	public void setImplementation(String newImplementation) {
-		eDynamicSet(Bpmn2Package.USER_TASK__IMPLEMENTATION,
-				Bpmn2Package.Literals.USER_TASK__IMPLEMENTATION,
+		eDynamicSet(Bpmn2Package.USER_TASK__IMPLEMENTATION, Bpmn2Package.Literals.USER_TASK__IMPLEMENTATION,
 				newImplementation);
 	}
 
@@ -108,12 +106,10 @@ public class UserTaskImpl extends TaskImpl implements UserTask {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.USER_TASK__RENDERINGS:
-			return ((InternalEList<?>) getRenderings()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getRenderings()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

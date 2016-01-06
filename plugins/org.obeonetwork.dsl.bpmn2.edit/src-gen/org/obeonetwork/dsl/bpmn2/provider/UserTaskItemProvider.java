@@ -42,9 +42,8 @@ import org.obeonetwork.dsl.bpmn2.UserTask;
  * <!-- end-user-doc -->
  * @generated
  */
-public class UserTaskItemProvider extends TaskItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class UserTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -78,16 +77,13 @@ public class UserTaskItemProvider extends TaskItemProvider implements
 	 * @generated
 	 */
 	protected void addImplementationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_UserTask_implementation_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_UserTask_implementation_feature",
-						"_UI_UserTask_type"),
-				Bpmn2Package.Literals.USER_TASK__IMPLEMENTATION, true, false,
-				false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_UserTask_implementation_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_UserTask_implementation_feature",
+								"_UI_UserTask_type"),
+						Bpmn2Package.Literals.USER_TASK__IMPLEMENTATION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -99,8 +95,7 @@ public class UserTaskItemProvider extends TaskItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Bpmn2Package.Literals.USER_TASK__RENDERINGS);
@@ -130,11 +125,9 @@ public class UserTaskItemProvider extends TaskItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/UserTask.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/UserTask.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/UserTask.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/UserTask.gif"));
 		}
 	}
 
@@ -174,12 +167,10 @@ public class UserTaskItemProvider extends TaskItemProvider implements
 
 		switch (notification.getFeatureID(UserTask.class)) {
 		case Bpmn2Package.USER_TASK__IMPLEMENTATION:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Bpmn2Package.USER_TASK__RENDERINGS:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -193,12 +184,10 @@ public class UserTaskItemProvider extends TaskItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.USER_TASK__RENDERINGS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.USER_TASK__RENDERINGS,
 				Bpmn2Factory.eINSTANCE.createRendering()));
 	}
 

@@ -41,9 +41,8 @@ import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ProcessItemProvider extends CallableElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ProcessItemProvider extends CallableElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -81,15 +80,13 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
 	 * @generated
 	 */
 	protected void addProcessTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Process_processType_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Process_processType_feature", "_UI_Process_type"),
-				Bpmn2Package.Literals.PROCESS__PROCESS_TYPE, true, false,
-				false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Process_processType_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Process_processType_feature",
+								"_UI_Process_type"),
+						Bpmn2Package.Literals.PROCESS__PROCESS_TYPE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -99,15 +96,13 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
 	 * @generated
 	 */
 	protected void addIsClosedPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Process_isClosed_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Process_isClosed_feature", "_UI_Process_type"),
-				Bpmn2Package.Literals.PROCESS__IS_CLOSED, true, false, false,
-				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Process_isClosed_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Process_isClosed_feature",
+								"_UI_Process_type"),
+						Bpmn2Package.Literals.PROCESS__IS_CLOSED, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -117,15 +112,12 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
 	 * @generated
 	 */
 	protected void addSupportsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Process_supports_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Process_supports_feature", "_UI_Process_type"),
-				Bpmn2Package.Literals.PROCESS__SUPPORTS, true, false, true,
-				null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Process_supports_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Process_supports_feature",
+								"_UI_Process_type"),
+						Bpmn2Package.Literals.PROCESS__SUPPORTS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -134,18 +126,13 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefinitionalCollaborationRefPropertyDescriptor(
-			Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Process_definitionalCollaborationRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Process_definitionalCollaborationRef_feature",
-						"_UI_Process_type"),
-				Bpmn2Package.Literals.PROCESS__DEFINITIONAL_COLLABORATION_REF,
-				true, false, true, null, null, null));
+	protected void addDefinitionalCollaborationRefPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Process_definitionalCollaborationRef_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_Process_definitionalCollaborationRef_feature", "_UI_Process_type"),
+				Bpmn2Package.Literals.PROCESS__DEFINITIONAL_COLLABORATION_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -156,16 +143,11 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
 	 */
 	protected void addIsExecutablePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Process_isExecutable_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_Process_isExecutable_feature",
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Process_isExecutable_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Process_isExecutable_feature",
 								"_UI_Process_type"),
-						Bpmn2Package.Literals.PROCESS__IS_EXECUTABLE, true,
-						false, false,
+						Bpmn2Package.Literals.PROCESS__IS_EXECUTABLE, true, false, false,
 						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
@@ -178,21 +160,18 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS);
+			childrenFeatures.add(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS);
+			childrenFeatures.add(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS);
 			childrenFeatures.add(Bpmn2Package.Literals.PROCESS__AUDITING);
 			childrenFeatures.add(Bpmn2Package.Literals.PROCESS__MONITORING);
 			childrenFeatures.add(Bpmn2Package.Literals.PROCESS__PROPERTIES);
 			childrenFeatures.add(Bpmn2Package.Literals.PROCESS__RESOURCES);
 			childrenFeatures.add(Bpmn2Package.Literals.PROCESS__ARTIFACTS);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.PROCESS__CORRELATION_SUBSCRIPTIONS);
+			childrenFeatures.add(Bpmn2Package.Literals.PROCESS__CORRELATION_SUBSCRIPTIONS);
+			childrenFeatures.add(Bpmn2Package.Literals.PROCESS__DECOMPOSED_BY);
 		}
 		return childrenFeatures;
 	}
@@ -219,11 +198,9 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Process.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Process.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Process.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Process.gif"));
 		}
 	}
 
@@ -261,13 +238,11 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification
-				.getFeatureID(org.obeonetwork.dsl.bpmn2.Process.class)) {
+		switch (notification.getFeatureID(org.obeonetwork.dsl.bpmn2.Process.class)) {
 		case Bpmn2Package.PROCESS__PROCESS_TYPE:
 		case Bpmn2Package.PROCESS__IS_CLOSED:
 		case Bpmn2Package.PROCESS__IS_EXECUTABLE:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Bpmn2Package.PROCESS__FLOW_ELEMENTS:
 		case Bpmn2Package.PROCESS__LANE_SETS:
@@ -277,8 +252,8 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
 		case Bpmn2Package.PROCESS__RESOURCES:
 		case Bpmn2Package.PROCESS__ARTIFACTS:
 		case Bpmn2Package.PROCESS__CORRELATION_SUBSCRIPTIONS:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+		case Bpmn2Package.PROCESS__DECOMPOSED_BY:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -292,177 +267,137 @@ public class ProcessItemProvider extends CallableElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createSequenceFlow()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createTask()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createManualTask()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createBoundaryEvent()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createUserTask()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createEventBasedGateway()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createComplexGateway()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createExclusiveGateway()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createInclusiveGateway()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createParallelGateway()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createIntermediateCatchEvent()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createIntermediateThrowEvent()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createEndEvent()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createStartEvent()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createImplicitThrowEvent()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createDataObject()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createDataStoreReference()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createDataObjectReference()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createCallChoreography()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createSubChoreography()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createChoreographyTask()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createServiceTask()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createSubProcess()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createCallActivity()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createSendTask()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createReceiveTask()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createScriptTask()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createBusinessRuleTask()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createAdHocSubProcess()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
 				Bpmn2Factory.eINSTANCE.createTransaction()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS,
 				Bpmn2Factory.eINSTANCE.createLaneSet()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.PROCESS__AUDITING,
-				Bpmn2Factory.eINSTANCE.createAuditing()));
+		newChildDescriptors.add(
+				createChildParameter(Bpmn2Package.Literals.PROCESS__AUDITING, Bpmn2Factory.eINSTANCE.createAuditing()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.PROCESS__MONITORING,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__MONITORING,
 				Bpmn2Factory.eINSTANCE.createMonitoring()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.PROCESS__PROPERTIES,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__PROPERTIES,
 				Bpmn2Factory.eINSTANCE.createProperty()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.PROCESS__RESOURCES,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__RESOURCES,
 				Bpmn2Factory.eINSTANCE.createResourceRole()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.PROCESS__RESOURCES,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__RESOURCES,
 				Bpmn2Factory.eINSTANCE.createPerformer()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.PROCESS__RESOURCES,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__RESOURCES,
 				Bpmn2Factory.eINSTANCE.createHumanPerformer()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.PROCESS__RESOURCES,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__RESOURCES,
 				Bpmn2Factory.eINSTANCE.createPotentialOwner()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.PROCESS__ARTIFACTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__ARTIFACTS,
 				Bpmn2Factory.eINSTANCE.createTextAnnotation()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.PROCESS__ARTIFACTS,
-				Bpmn2Factory.eINSTANCE.createGroup()));
+		newChildDescriptors.add(
+				createChildParameter(Bpmn2Package.Literals.PROCESS__ARTIFACTS, Bpmn2Factory.eINSTANCE.createGroup()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.PROCESS__ARTIFACTS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__ARTIFACTS,
 				Bpmn2Factory.eINSTANCE.createAssociation()));
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.PROCESS__CORRELATION_SUBSCRIPTIONS,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__CORRELATION_SUBSCRIPTIONS,
 				Bpmn2Factory.eINSTANCE.createCorrelationSubscription()));
+
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.PROCESS__DECOMPOSED_BY,
+				Bpmn2Factory.eINSTANCE.createProcess()));
 	}
 
 }

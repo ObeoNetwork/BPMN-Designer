@@ -23,12 +23,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.FlowNode#getOutgoing <em>Outgoing</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.FlowNode#getIncoming <em>Incoming</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.FlowNode#getLanes <em>Lanes</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getFlowNode()
  * @model abstract="true"

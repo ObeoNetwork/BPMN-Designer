@@ -39,9 +39,8 @@ import org.obeonetwork.dsl.bpmn2.Signal;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SignalItemProvider extends RootElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class SignalItemProvider extends RootElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -76,15 +75,12 @@ public class SignalItemProvider extends RootElementItemProvider implements
 	 * @generated
 	 */
 	protected void addStructureRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Signal_structureRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Signal_structureRef_feature", "_UI_Signal_type"),
-				Bpmn2Package.Literals.SIGNAL__STRUCTURE_REF, true, false, true,
-				null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Signal_structureRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Signal_structureRef_feature",
+								"_UI_Signal_type"),
+						Bpmn2Package.Literals.SIGNAL__STRUCTURE_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -94,15 +90,12 @@ public class SignalItemProvider extends RootElementItemProvider implements
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_Signal_name_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_Signal_name_feature", "_UI_Signal_type"),
-				Bpmn2Package.Literals.SIGNAL__NAME, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Signal_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Signal_name_feature", "_UI_Signal_type"),
+						Bpmn2Package.Literals.SIGNAL__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -114,11 +107,9 @@ public class SignalItemProvider extends RootElementItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Signal.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Signal.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/Signal.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/Signal.gif"));
 		}
 	}
 
@@ -158,8 +149,7 @@ public class SignalItemProvider extends RootElementItemProvider implements
 
 		switch (notification.getFeatureID(Signal.class)) {
 		case Bpmn2Package.SIGNAL__NAME:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -173,8 +163,7 @@ public class SignalItemProvider extends RootElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

@@ -27,11 +27,11 @@ import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.BoundaryEventImpl#isCancelActivity <em>Cancel Activity</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.BoundaryEventImpl#getAttachedToRef <em>Attached To Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -71,10 +71,8 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
 	 * @generated
 	 */
 	public boolean isCancelActivity() {
-		return (Boolean) eDynamicGet(
-				Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY,
-				Bpmn2Package.Literals.BOUNDARY_EVENT__CANCEL_ACTIVITY, true,
-				true);
+		return (Boolean) eDynamicGet(Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY,
+				Bpmn2Package.Literals.BOUNDARY_EVENT__CANCEL_ACTIVITY, true, true);
 	}
 
 	/**
@@ -83,8 +81,7 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
 	 * @generated
 	 */
 	public void setCancelActivity(boolean newCancelActivity) {
-		eDynamicSet(Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY,
-				Bpmn2Package.Literals.BOUNDARY_EVENT__CANCEL_ACTIVITY,
+		eDynamicSet(Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY, Bpmn2Package.Literals.BOUNDARY_EVENT__CANCEL_ACTIVITY,
 				newCancelActivity);
 	}
 
@@ -94,10 +91,8 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
 	 * @generated
 	 */
 	public Activity getAttachedToRef() {
-		return (Activity) eDynamicGet(
-				Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF,
-				Bpmn2Package.Literals.BOUNDARY_EVENT__ATTACHED_TO_REF, true,
-				true);
+		return (Activity) eDynamicGet(Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF,
+				Bpmn2Package.Literals.BOUNDARY_EVENT__ATTACHED_TO_REF, true, true);
 	}
 
 	/**
@@ -106,10 +101,8 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
 	 * @generated
 	 */
 	public Activity basicGetAttachedToRef() {
-		return (Activity) eDynamicGet(
-				Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF,
-				Bpmn2Package.Literals.BOUNDARY_EVENT__ATTACHED_TO_REF, false,
-				true);
+		return (Activity) eDynamicGet(Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF,
+				Bpmn2Package.Literals.BOUNDARY_EVENT__ATTACHED_TO_REF, false, true);
 	}
 
 	/**
@@ -117,10 +110,9 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAttachedToRef(Activity newAttachedToRef,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newAttachedToRef,
-				Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF, msgs);
+	public NotificationChain basicSetAttachedToRef(Activity newAttachedToRef, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newAttachedToRef, Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF,
+				msgs);
 		return msgs;
 	}
 
@@ -130,8 +122,7 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
 	 * @generated
 	 */
 	public void setAttachedToRef(Activity newAttachedToRef) {
-		eDynamicSet(Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF,
-				Bpmn2Package.Literals.BOUNDARY_EVENT__ATTACHED_TO_REF,
+		eDynamicSet(Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF, Bpmn2Package.Literals.BOUNDARY_EVENT__ATTACHED_TO_REF,
 				newAttachedToRef);
 	}
 
@@ -141,15 +132,13 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
 			Activity attachedToRef = basicGetAttachedToRef();
 			if (attachedToRef != null)
 				msgs = ((InternalEObject) attachedToRef).eInverseRemove(this,
-						Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS,
-						Activity.class, msgs);
+						Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS, Activity.class, msgs);
 			return basicSetAttachedToRef((Activity) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -161,8 +150,7 @@ public class BoundaryEventImpl extends CatchEventImpl implements BoundaryEvent {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.BOUNDARY_EVENT__ATTACHED_TO_REF:
 			return basicSetAttachedToRef(null, msgs);

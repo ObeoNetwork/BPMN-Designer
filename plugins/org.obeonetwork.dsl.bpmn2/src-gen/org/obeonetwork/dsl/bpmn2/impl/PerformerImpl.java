@@ -22,8 +22,6 @@ import org.obeonetwork.dsl.bpmn2.Performer;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Performer</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

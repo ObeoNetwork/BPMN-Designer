@@ -39,9 +39,8 @@ import org.obeonetwork.dsl.bpmn2.GlobalBusinessRuleTask;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GlobalBusinessRuleTaskItemProvider extends GlobalTaskItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class GlobalBusinessRuleTaskItemProvider extends GlobalTaskItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -76,18 +75,12 @@ public class GlobalBusinessRuleTaskItemProvider extends GlobalTaskItemProvider
 	 */
 	protected void addImplementationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_GlobalBusinessRuleTask_implementation_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_GlobalBusinessRuleTask_implementation_feature",
-								"_UI_GlobalBusinessRuleTask_type"),
-						Bpmn2Package.Literals.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_GlobalBusinessRuleTask_implementation_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_GlobalBusinessRuleTask_implementation_feature", "_UI_GlobalBusinessRuleTask_type"),
+				Bpmn2Package.Literals.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -99,15 +92,9 @@ public class GlobalBusinessRuleTaskItemProvider extends GlobalTaskItemProvider
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/GlobalBusinessRuleTask.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/GlobalBusinessRuleTask.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/GlobalBusinessRuleTask.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/GlobalBusinessRuleTask.gif"));
 		}
 	}
 
@@ -147,8 +134,7 @@ public class GlobalBusinessRuleTaskItemProvider extends GlobalTaskItemProvider
 
 		switch (notification.getFeatureID(GlobalBusinessRuleTask.class)) {
 		case Bpmn2Package.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -162,8 +148,7 @@ public class GlobalBusinessRuleTaskItemProvider extends GlobalTaskItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

@@ -32,16 +32,15 @@ import org.obeonetwork.dsl.bpmn2.ParticipantAssociation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CallConversationImpl#getCalledCollaborationRef <em>Called Collaboration Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CallConversationImpl#getParticipantAssociations <em>Participant Associations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class CallConversationImpl extends ConversationNodeImpl implements
-		CallConversation {
+public class CallConversationImpl extends ConversationNodeImpl implements CallConversation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,10 +66,8 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 	 * @generated
 	 */
 	public Collaboration getCalledCollaborationRef() {
-		return (Collaboration) eDynamicGet(
-				Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
-				Bpmn2Package.Literals.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
-				true, true);
+		return (Collaboration) eDynamicGet(Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
+				Bpmn2Package.Literals.CALL_CONVERSATION__CALLED_COLLABORATION_REF, true, true);
 	}
 
 	/**
@@ -79,10 +76,8 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 	 * @generated
 	 */
 	public Collaboration basicGetCalledCollaborationRef() {
-		return (Collaboration) eDynamicGet(
-				Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
-				Bpmn2Package.Literals.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
-				false, true);
+		return (Collaboration) eDynamicGet(Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
+				Bpmn2Package.Literals.CALL_CONVERSATION__CALLED_COLLABORATION_REF, false, true);
 	}
 
 	/**
@@ -90,12 +85,9 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCalledCollaborationRef(
-			Collaboration newCalledCollaborationRef) {
-		eDynamicSet(
-				Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
-				Bpmn2Package.Literals.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
-				newCalledCollaborationRef);
+	public void setCalledCollaborationRef(Collaboration newCalledCollaborationRef) {
+		eDynamicSet(Bpmn2Package.CALL_CONVERSATION__CALLED_COLLABORATION_REF,
+				Bpmn2Package.Literals.CALL_CONVERSATION__CALLED_COLLABORATION_REF, newCalledCollaborationRef);
 	}
 
 	/**
@@ -105,10 +97,8 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ParticipantAssociation> getParticipantAssociations() {
-		return (EList<ParticipantAssociation>) eDynamicGet(
-				Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS,
-				Bpmn2Package.Literals.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS,
-				true, true);
+		return (EList<ParticipantAssociation>) eDynamicGet(Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS,
+				Bpmn2Package.Literals.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS, true, true);
 	}
 
 	/**
@@ -117,12 +107,10 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS:
-			return ((InternalEList<?>) getParticipantAssociations())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getParticipantAssociations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -159,8 +147,7 @@ public class CallConversationImpl extends ConversationNodeImpl implements
 			return;
 		case Bpmn2Package.CALL_CONVERSATION__PARTICIPANT_ASSOCIATIONS:
 			getParticipantAssociations().clear();
-			getParticipantAssociations().addAll(
-					(Collection<? extends ParticipantAssociation>) newValue);
+			getParticipantAssociations().addAll((Collection<? extends ParticipantAssociation>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

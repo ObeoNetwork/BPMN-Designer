@@ -35,9 +35,8 @@ import org.obeonetwork.dsl.bpmn2.HumanPerformer;
  * <!-- end-user-doc -->
  * @generated
  */
-public class HumanPerformerItemProvider extends PerformerItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class HumanPerformerItemProvider extends PerformerItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -72,15 +71,9 @@ public class HumanPerformerItemProvider extends PerformerItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/HumanPerformer.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/HumanPerformer.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/HumanPerformer.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/HumanPerformer.gif"));
 		}
 	}
 
@@ -128,8 +121,7 @@ public class HumanPerformerItemProvider extends PerformerItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

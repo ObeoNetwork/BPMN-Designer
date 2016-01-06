@@ -32,16 +32,15 @@ import org.obeonetwork.dsl.bpmn2.LaneSet;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.FlowElementsContainerImpl#getFlowElements <em>Flow Elements</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.FlowElementsContainerImpl#getLaneSets <em>Lane Sets</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public abstract class FlowElementsContainerImpl extends BaseElementImpl
-		implements FlowElementsContainer {
+public abstract class FlowElementsContainerImpl extends BaseElementImpl implements FlowElementsContainer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,10 +67,8 @@ public abstract class FlowElementsContainerImpl extends BaseElementImpl
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<FlowElement> getFlowElements() {
-		return (EList<FlowElement>) eDynamicGet(
-				Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
-				true, true);
+		return (EList<FlowElement>) eDynamicGet(Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS,
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS, true, true);
 	}
 
 	/**
@@ -81,10 +78,8 @@ public abstract class FlowElementsContainerImpl extends BaseElementImpl
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<LaneSet> getLaneSets() {
-		return (EList<LaneSet>) eDynamicGet(
-				Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS,
-				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS, true,
-				true);
+		return (EList<LaneSet>) eDynamicGet(Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS,
+				Bpmn2Package.Literals.FLOW_ELEMENTS_CONTAINER__LANE_SETS, true, true);
 	}
 
 	/**
@@ -93,15 +88,12 @@ public abstract class FlowElementsContainerImpl extends BaseElementImpl
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS:
-			return ((InternalEList<?>) getFlowElements()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getFlowElements()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS:
-			return ((InternalEList<?>) getLaneSets()).basicRemove(otherEnd,
-					msgs);
+			return ((InternalEList<?>) getLaneSets()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -133,8 +125,7 @@ public abstract class FlowElementsContainerImpl extends BaseElementImpl
 		switch (featureID) {
 		case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS:
 			getFlowElements().clear();
-			getFlowElements().addAll(
-					(Collection<? extends FlowElement>) newValue);
+			getFlowElements().addAll((Collection<? extends FlowElement>) newValue);
 			return;
 		case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__LANE_SETS:
 			getLaneSets().clear();

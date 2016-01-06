@@ -42,9 +42,8 @@ import org.obeonetwork.dsl.bpmn2.DataObject;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DataObjectItemProvider extends FlowElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class DataObjectItemProvider extends FlowElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -79,16 +78,12 @@ public class DataObjectItemProvider extends FlowElementItemProvider implements
 	 * @generated
 	 */
 	protected void addItemSubjectRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ItemAwareElement_itemSubjectRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ItemAwareElement_itemSubjectRef_feature",
-						"_UI_ItemAwareElement_type"),
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF,
-				true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ItemAwareElement_itemSubjectRef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ItemAwareElement_itemSubjectRef_feature",
+								"_UI_ItemAwareElement_type"),
+				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -98,16 +93,13 @@ public class DataObjectItemProvider extends FlowElementItemProvider implements
 	 * @generated
 	 */
 	protected void addIsCollectionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_DataObject_isCollection_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_DataObject_isCollection_feature",
-						"_UI_DataObject_type"),
-				Bpmn2Package.Literals.DATA_OBJECT__IS_COLLECTION, true, false,
-				false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DataObject_isCollection_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DataObject_isCollection_feature",
+								"_UI_DataObject_type"),
+						Bpmn2Package.Literals.DATA_OBJECT__IS_COLLECTION, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -119,12 +111,10 @@ public class DataObjectItemProvider extends FlowElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE);
+			childrenFeatures.add(Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE);
 		}
 		return childrenFeatures;
 	}
@@ -151,11 +141,9 @@ public class DataObjectItemProvider extends FlowElementItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/DataObject.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/DataObject.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/DataObject.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/DataObject.gif"));
 		}
 	}
 
@@ -195,12 +183,10 @@ public class DataObjectItemProvider extends FlowElementItemProvider implements
 
 		switch (notification.getFeatureID(DataObject.class)) {
 		case Bpmn2Package.DATA_OBJECT__IS_COLLECTION:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Bpmn2Package.DATA_OBJECT__DATA_STATE:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -214,12 +200,10 @@ public class DataObjectItemProvider extends FlowElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE,
+		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__DATA_STATE,
 				Bpmn2Factory.eINSTANCE.createDataState()));
 	}
 

@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CatchEvent#isParallelMultiple <em>Parallel Multiple</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CatchEvent#getOutputSet <em>Output Set</em>}</li>
@@ -31,7 +32,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CatchEvent#getDataOutputs <em>Data Outputs</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.CatchEvent#getEventDefinitions <em>Event Definitions</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getCatchEvent()
  * @model abstract="true"

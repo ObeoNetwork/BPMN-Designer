@@ -27,15 +27,14 @@ import org.obeonetwork.dsl.bpmn2.Expression;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ConditionalEventDefinitionImpl#getCondition <em>Condition</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
-		implements ConditionalEventDefinition {
+public class ConditionalEventDefinitionImpl extends EventDefinitionImpl implements ConditionalEventDefinition {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,10 +60,8 @@ public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public Expression getCondition() {
-		return (Expression) eDynamicGet(
-				Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION,
-				Bpmn2Package.Literals.CONDITIONAL_EVENT_DEFINITION__CONDITION,
-				true, true);
+		return (Expression) eDynamicGet(Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION,
+				Bpmn2Package.Literals.CONDITIONAL_EVENT_DEFINITION__CONDITION, true, true);
 	}
 
 	/**
@@ -72,10 +69,9 @@ public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCondition(Expression newCondition,
-			NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newCondition,
-				Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION, msgs);
+	public NotificationChain basicSetCondition(Expression newCondition, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject) newCondition, Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION,
+				msgs);
 		return msgs;
 	}
 
@@ -86,8 +82,7 @@ public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
 	 */
 	public void setCondition(Expression newCondition) {
 		eDynamicSet(Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION,
-				Bpmn2Package.Literals.CONDITIONAL_EVENT_DEFINITION__CONDITION,
-				newCondition);
+				Bpmn2Package.Literals.CONDITIONAL_EVENT_DEFINITION__CONDITION, newCondition);
 	}
 
 	/**
@@ -96,8 +91,7 @@ public class ConditionalEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.CONDITIONAL_EVENT_DEFINITION__CONDITION:
 			return basicSetCondition(null, msgs);

@@ -16,6 +16,7 @@ package org.obeonetwork.dsl.dd.dc.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+import org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl;
 import org.obeonetwork.dsl.dd.dc.Bounds;
 import org.obeonetwork.dsl.dd.dc.DcPackage;
 
@@ -25,17 +26,17 @@ import org.obeonetwork.dsl.dd.dc.DcPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.impl.BoundsImpl#getX <em>X</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.impl.BoundsImpl#getY <em>Y</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.impl.BoundsImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.dd.dc.impl.BoundsImpl#getHeight <em>Height</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class BoundsImpl extends CDOObjectImpl implements Bounds {
+public class BoundsImpl extends BPMN2ObjectImpl implements Bounds {
 	/**
 	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -108,8 +109,7 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * @generated
 	 */
 	public float getX() {
-		return (Float) eDynamicGet(DcPackage.BOUNDS__X,
-				DcPackage.Literals.BOUNDS__X, true, true);
+		return (Float) eDynamicGet(DcPackage.BOUNDS__X, DcPackage.Literals.BOUNDS__X, true, true);
 	}
 
 	/**
@@ -127,8 +127,7 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * @generated
 	 */
 	public float getY() {
-		return (Float) eDynamicGet(DcPackage.BOUNDS__Y,
-				DcPackage.Literals.BOUNDS__Y, true, true);
+		return (Float) eDynamicGet(DcPackage.BOUNDS__Y, DcPackage.Literals.BOUNDS__Y, true, true);
 	}
 
 	/**
@@ -146,8 +145,7 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * @generated
 	 */
 	public float getWidth() {
-		return (Float) eDynamicGet(DcPackage.BOUNDS__WIDTH,
-				DcPackage.Literals.BOUNDS__WIDTH, true, true);
+		return (Float) eDynamicGet(DcPackage.BOUNDS__WIDTH, DcPackage.Literals.BOUNDS__WIDTH, true, true);
 	}
 
 	/**
@@ -156,8 +154,7 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * @generated
 	 */
 	public void setWidth(float newWidth) {
-		eDynamicSet(DcPackage.BOUNDS__WIDTH, DcPackage.Literals.BOUNDS__WIDTH,
-				newWidth);
+		eDynamicSet(DcPackage.BOUNDS__WIDTH, DcPackage.Literals.BOUNDS__WIDTH, newWidth);
 	}
 
 	/**
@@ -166,8 +163,7 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * @generated
 	 */
 	public float getHeight() {
-		return (Float) eDynamicGet(DcPackage.BOUNDS__HEIGHT,
-				DcPackage.Literals.BOUNDS__HEIGHT, true, true);
+		return (Float) eDynamicGet(DcPackage.BOUNDS__HEIGHT, DcPackage.Literals.BOUNDS__HEIGHT, true, true);
 	}
 
 	/**
@@ -176,8 +172,7 @@ public class BoundsImpl extends CDOObjectImpl implements Bounds {
 	 * @generated
 	 */
 	public void setHeight(float newHeight) {
-		eDynamicSet(DcPackage.BOUNDS__HEIGHT,
-				DcPackage.Literals.BOUNDS__HEIGHT, newHeight);
+		eDynamicSet(DcPackage.BOUNDS__HEIGHT, DcPackage.Literals.BOUNDS__HEIGHT, newHeight);
 	}
 
 	/**

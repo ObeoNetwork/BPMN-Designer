@@ -16,31 +16,29 @@ package org.obeonetwork.dsl.bpmn2.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+import org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.Import;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Import</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Import</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ImportImpl#getImportType <em>Import Type</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ImportImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ImportImpl#getNamespace <em>Namespace</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ImportImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ImportImpl extends CDOObjectImpl implements Import {
+public class ImportImpl extends BPMN2ObjectImpl implements Import {
 	/**
 	 * The default value of the '{@link #getImportType() <em>Import Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getImportType()
 	 * @generated
 	 * @ordered
@@ -48,8 +46,7 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 	protected static final String IMPORT_TYPE_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getLocation() <em>Location</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getLocation()
 	 * @generated
 	 * @ordered
@@ -57,8 +54,7 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 	protected static final String LOCATION_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getNamespace() <em>Namespace</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getNamespace()
 	 * @generated
 	 * @ordered
@@ -66,9 +62,9 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 	protected static final String NAMESPACE_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getId()
 	 * @generated
 	 * @ordered
@@ -76,18 +72,15 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
 	 */
 	protected ImportImpl() {
 		super();
-		setId(EcoreUtil.generateUUID());
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -96,8 +89,7 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -106,88 +98,81 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getImportType() {
-		return (String) eDynamicGet(Bpmn2Package.IMPORT__IMPORT_TYPE,
-				Bpmn2Package.Literals.IMPORT__IMPORT_TYPE, true, true);
+		return (String) eDynamicGet(Bpmn2Package.IMPORT__IMPORT_TYPE, Bpmn2Package.Literals.IMPORT__IMPORT_TYPE, true,
+				true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImportType(String newImportType) {
-		eDynamicSet(Bpmn2Package.IMPORT__IMPORT_TYPE,
-				Bpmn2Package.Literals.IMPORT__IMPORT_TYPE, newImportType);
+		eDynamicSet(Bpmn2Package.IMPORT__IMPORT_TYPE, Bpmn2Package.Literals.IMPORT__IMPORT_TYPE, newImportType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLocation() {
-		return (String) eDynamicGet(Bpmn2Package.IMPORT__LOCATION,
-				Bpmn2Package.Literals.IMPORT__LOCATION, true, true);
+		return (String) eDynamicGet(Bpmn2Package.IMPORT__LOCATION, Bpmn2Package.Literals.IMPORT__LOCATION, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocation(String newLocation) {
-		eDynamicSet(Bpmn2Package.IMPORT__LOCATION,
-				Bpmn2Package.Literals.IMPORT__LOCATION, newLocation);
+		eDynamicSet(Bpmn2Package.IMPORT__LOCATION, Bpmn2Package.Literals.IMPORT__LOCATION, newLocation);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNamespace() {
-		return (String) eDynamicGet(Bpmn2Package.IMPORT__NAMESPACE,
-				Bpmn2Package.Literals.IMPORT__NAMESPACE, true, true);
+		return (String) eDynamicGet(Bpmn2Package.IMPORT__NAMESPACE, Bpmn2Package.Literals.IMPORT__NAMESPACE, true,
+				true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNamespace(String newNamespace) {
-		eDynamicSet(Bpmn2Package.IMPORT__NAMESPACE,
-				Bpmn2Package.Literals.IMPORT__NAMESPACE, newNamespace);
+		eDynamicSet(Bpmn2Package.IMPORT__NAMESPACE, Bpmn2Package.Literals.IMPORT__NAMESPACE, newNamespace);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
-		return (String) eDynamicGet(Bpmn2Package.IMPORT__ID,
-				Bpmn2Package.Literals.IMPORT__ID, true, true);
+		return (String) eDynamicGet(Bpmn2Package.IMPORT__ID, Bpmn2Package.Literals.IMPORT__ID, true, true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
-		eDynamicSet(Bpmn2Package.IMPORT__ID, Bpmn2Package.Literals.IMPORT__ID,
-				newId);
+		eDynamicSet(Bpmn2Package.IMPORT__ID, Bpmn2Package.Literals.IMPORT__ID, newId);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -206,8 +191,7 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -230,8 +214,7 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -254,8 +237,7 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -265,16 +247,13 @@ public class ImportImpl extends CDOObjectImpl implements Import {
 			return IMPORT_TYPE_EDEFAULT == null ? getImportType() != null
 					: !IMPORT_TYPE_EDEFAULT.equals(getImportType());
 		case Bpmn2Package.IMPORT__LOCATION:
-			return LOCATION_EDEFAULT == null ? getLocation() != null
-					: !LOCATION_EDEFAULT.equals(getLocation());
+			return LOCATION_EDEFAULT == null ? getLocation() != null : !LOCATION_EDEFAULT.equals(getLocation());
 		case Bpmn2Package.IMPORT__NAMESPACE:
-			return NAMESPACE_EDEFAULT == null ? getNamespace() != null
-					: !NAMESPACE_EDEFAULT.equals(getNamespace());
+			return NAMESPACE_EDEFAULT == null ? getNamespace() != null : !NAMESPACE_EDEFAULT.equals(getNamespace());
 		case Bpmn2Package.IMPORT__ID:
-			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT
-					.equals(getId());
+			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //ImportImpl
+} // ImportImpl

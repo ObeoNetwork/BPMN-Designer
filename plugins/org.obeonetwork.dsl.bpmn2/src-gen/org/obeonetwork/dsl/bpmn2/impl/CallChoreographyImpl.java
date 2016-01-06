@@ -32,16 +32,15 @@ import org.obeonetwork.dsl.bpmn2.ParticipantAssociation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CallChoreographyImpl#getCalledChoreographyRef <em>Called Choreography Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.CallChoreographyImpl#getParticipantAssociations <em>Participant Associations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class CallChoreographyImpl extends ChoreographyActivityImpl implements
-		CallChoreography {
+public class CallChoreographyImpl extends ChoreographyActivityImpl implements CallChoreography {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,10 +66,8 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements
 	 * @generated
 	 */
 	public Choreography getCalledChoreographyRef() {
-		return (Choreography) eDynamicGet(
-				Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
-				Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
-				true, true);
+		return (Choreography) eDynamicGet(Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
+				Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF, true, true);
 	}
 
 	/**
@@ -79,10 +76,8 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements
 	 * @generated
 	 */
 	public Choreography basicGetCalledChoreographyRef() {
-		return (Choreography) eDynamicGet(
-				Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
-				Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
-				false, true);
+		return (Choreography) eDynamicGet(Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
+				Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF, false, true);
 	}
 
 	/**
@@ -91,10 +86,8 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements
 	 * @generated
 	 */
 	public void setCalledChoreographyRef(Choreography newCalledChoreographyRef) {
-		eDynamicSet(
-				Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
-				Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
-				newCalledChoreographyRef);
+		eDynamicSet(Bpmn2Package.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF,
+				Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF, newCalledChoreographyRef);
 	}
 
 	/**
@@ -104,10 +97,8 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<ParticipantAssociation> getParticipantAssociations() {
-		return (EList<ParticipantAssociation>) eDynamicGet(
-				Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS,
-				Bpmn2Package.Literals.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS,
-				true, true);
+		return (EList<ParticipantAssociation>) eDynamicGet(Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS,
+				Bpmn2Package.Literals.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS, true, true);
 	}
 
 	/**
@@ -116,12 +107,10 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
-			return ((InternalEList<?>) getParticipantAssociations())
-					.basicRemove(otherEnd, msgs);
+			return ((InternalEList<?>) getParticipantAssociations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -158,8 +147,7 @@ public class CallChoreographyImpl extends ChoreographyActivityImpl implements
 			return;
 		case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
 			getParticipantAssociations().clear();
-			getParticipantAssociations().addAll(
-					(Collection<? extends ParticipantAssociation>) newValue);
+			getParticipantAssociations().addAll((Collection<? extends ParticipantAssociation>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

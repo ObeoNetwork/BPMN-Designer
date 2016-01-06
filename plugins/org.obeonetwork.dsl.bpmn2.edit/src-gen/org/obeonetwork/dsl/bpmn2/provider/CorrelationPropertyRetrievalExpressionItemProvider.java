@@ -41,9 +41,8 @@ import org.obeonetwork.dsl.bpmn2.CorrelationPropertyRetrievalExpression;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CorrelationPropertyRetrievalExpressionItemProvider extends
-		BaseElementItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider,
+public class CorrelationPropertyRetrievalExpressionItemProvider extends BaseElementItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
 		IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -51,8 +50,7 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CorrelationPropertyRetrievalExpressionItemProvider(
-			AdapterFactory adapterFactory) {
+	public CorrelationPropertyRetrievalExpressionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -79,18 +77,14 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends
 	 * @generated
 	 */
 	protected void addMessageRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_CorrelationPropertyRetrievalExpression_messageRef_feature"),
-						getString(
-								"_UI_PropertyDescriptor_description",
-								"_UI_CorrelationPropertyRetrievalExpression_messageRef_feature",
-								"_UI_CorrelationPropertyRetrievalExpression_type"),
-						Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF,
-						true, false, true, null, null, null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_CorrelationPropertyRetrievalExpression_messageRef_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_CorrelationPropertyRetrievalExpression_messageRef_feature",
+						"_UI_CorrelationPropertyRetrievalExpression_type"),
+				Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_REF, true, false, true, null,
+				null, null));
 	}
 
 	/**
@@ -102,12 +96,10 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH);
+			childrenFeatures.add(Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH);
 		}
 		return childrenFeatures;
 	}
@@ -134,17 +126,11 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator()
-							.getImage(
-									"full/obj16/CorrelationPropertyRetrievalExpression.png"));
+			return overlayImage(object,
+					getResourceLocator().getImage("full/obj16/CorrelationPropertyRetrievalExpression.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator()
-							.getImage(
-									"full/obj16/CorrelationPropertyRetrievalExpression.gif"));
+			return overlayImage(object,
+					getResourceLocator().getImage("full/obj16/CorrelationPropertyRetrievalExpression.gif"));
 		}
 	}
 
@@ -166,11 +152,9 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((CorrelationPropertyRetrievalExpression) object)
-				.getId();
+		String label = ((CorrelationPropertyRetrievalExpression) object).getId();
 		return label == null || label.length() == 0 ? getString("_UI_CorrelationPropertyRetrievalExpression_type")
-				: getString("_UI_CorrelationPropertyRetrievalExpression_type")
-						+ " " + label;
+				: getString("_UI_CorrelationPropertyRetrievalExpression_type") + " " + label;
 	}
 
 	/**
@@ -184,11 +168,9 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification
-				.getFeatureID(CorrelationPropertyRetrievalExpression.class)) {
+		switch (notification.getFeatureID(CorrelationPropertyRetrievalExpression.class)) {
 		case Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -202,13 +184,11 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
-				.add(createChildParameter(
-						Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
+				.add(createChildParameter(Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH,
 						Bpmn2Factory.eINSTANCE.createFormalExpression()));
 	}
 

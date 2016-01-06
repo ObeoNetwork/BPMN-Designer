@@ -21,13 +21,13 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.SequenceFlow#isIsImmediate <em>Is Immediate</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.SequenceFlow#getConditionExpression <em>Condition Expression</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.SequenceFlow#getTargetRef <em>Target Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.SequenceFlow#getSourceRef <em>Source Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getSequenceFlow()
  * @model

@@ -42,9 +42,8 @@ import org.obeonetwork.dsl.bpmn2.LaneSet;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LaneSetItemProvider extends BaseElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class LaneSetItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -78,15 +77,12 @@ public class LaneSetItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_LaneSet_name_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_LaneSet_name_feature", "_UI_LaneSet_type"),
-				Bpmn2Package.Literals.LANE_SET__NAME, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_LaneSet_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_LaneSet_name_feature", "_UI_LaneSet_type"),
+						Bpmn2Package.Literals.LANE_SET__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -98,8 +94,7 @@ public class LaneSetItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Bpmn2Package.Literals.LANE_SET__LANES);
@@ -129,11 +124,9 @@ public class LaneSetItemProvider extends BaseElementItemProvider implements
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/LaneSet.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/LaneSet.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object,
-					getResourceLocator().getImage("full/obj16/LaneSet.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/LaneSet.gif"));
 		}
 	}
 
@@ -173,12 +166,10 @@ public class LaneSetItemProvider extends BaseElementItemProvider implements
 
 		switch (notification.getFeatureID(LaneSet.class)) {
 		case Bpmn2Package.LANE_SET__NAME:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Bpmn2Package.LANE_SET__LANES:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -192,13 +183,11 @@ public class LaneSetItemProvider extends BaseElementItemProvider implements
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Bpmn2Package.Literals.LANE_SET__LANES,
-				Bpmn2Factory.eINSTANCE.createLane()));
+		newChildDescriptors
+				.add(createChildParameter(Bpmn2Package.Literals.LANE_SET__LANES, Bpmn2Factory.eINSTANCE.createLane()));
 	}
 
 }

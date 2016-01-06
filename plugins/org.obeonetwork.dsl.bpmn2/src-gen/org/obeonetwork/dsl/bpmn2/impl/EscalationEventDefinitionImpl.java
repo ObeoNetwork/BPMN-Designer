@@ -25,15 +25,14 @@ import org.obeonetwork.dsl.bpmn2.EscalationEventDefinition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.EscalationEventDefinitionImpl#getEscalationRef <em>Escalation Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class EscalationEventDefinitionImpl extends EventDefinitionImpl
-		implements EscalationEventDefinition {
+public class EscalationEventDefinitionImpl extends EventDefinitionImpl implements EscalationEventDefinition {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -59,10 +58,8 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public Escalation getEscalationRef() {
-		return (Escalation) eDynamicGet(
-				Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
-				Bpmn2Package.Literals.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
-				true, true);
+		return (Escalation) eDynamicGet(Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
+				Bpmn2Package.Literals.ESCALATION_EVENT_DEFINITION__ESCALATION_REF, true, true);
 	}
 
 	/**
@@ -71,10 +68,8 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public Escalation basicGetEscalationRef() {
-		return (Escalation) eDynamicGet(
-				Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
-				Bpmn2Package.Literals.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
-				false, true);
+		return (Escalation) eDynamicGet(Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
+				Bpmn2Package.Literals.ESCALATION_EVENT_DEFINITION__ESCALATION_REF, false, true);
 	}
 
 	/**
@@ -83,10 +78,8 @@ public class EscalationEventDefinitionImpl extends EventDefinitionImpl
 	 * @generated
 	 */
 	public void setEscalationRef(Escalation newEscalationRef) {
-		eDynamicSet(
-				Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
-				Bpmn2Package.Literals.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
-				newEscalationRef);
+		eDynamicSet(Bpmn2Package.ESCALATION_EVENT_DEFINITION__ESCALATION_REF,
+				Bpmn2Package.Literals.ESCALATION_EVENT_DEFINITION__ESCALATION_REF, newEscalationRef);
 	}
 
 	/**

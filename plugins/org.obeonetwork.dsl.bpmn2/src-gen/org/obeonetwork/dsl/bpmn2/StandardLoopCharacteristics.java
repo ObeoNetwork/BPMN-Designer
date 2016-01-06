@@ -21,12 +21,12 @@ package org.obeonetwork.dsl.bpmn2;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.StandardLoopCharacteristics#isTestBefore <em>Test Before</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.StandardLoopCharacteristics#getLoopCondition <em>Loop Condition</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.StandardLoopCharacteristics#getLoopMaximum <em>Loop Maximum</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getStandardLoopCharacteristics()
  * @model

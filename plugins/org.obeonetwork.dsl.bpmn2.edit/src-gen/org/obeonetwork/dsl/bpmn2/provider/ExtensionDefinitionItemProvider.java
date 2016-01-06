@@ -45,9 +45,8 @@ import org.obeonetwork.dsl.bpmn2.ExtensionDefinition;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ExtensionDefinitionItemProvider extends ItemProviderAdapter
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ExtensionDefinitionItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -82,16 +81,13 @@ public class ExtensionDefinitionItemProvider extends ItemProviderAdapter
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ExtensionDefinition_name_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ExtensionDefinition_name_feature",
-						"_UI_ExtensionDefinition_type"),
-				Bpmn2Package.Literals.EXTENSION_DEFINITION__NAME, true, false,
-				false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ExtensionDefinition_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ExtensionDefinition_name_feature",
+								"_UI_ExtensionDefinition_type"),
+						Bpmn2Package.Literals.EXTENSION_DEFINITION__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -101,16 +97,13 @@ public class ExtensionDefinitionItemProvider extends ItemProviderAdapter
 	 * @generated
 	 */
 	protected void addIdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory)
-						.getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ExtensionDefinition_id_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ExtensionDefinition_id_feature",
-						"_UI_ExtensionDefinition_type"),
-				Bpmn2Package.Literals.EXTENSION_DEFINITION__ID, true, false,
-				false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ExtensionDefinition_id_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ExtensionDefinition_id_feature",
+								"_UI_ExtensionDefinition_type"),
+						Bpmn2Package.Literals.EXTENSION_DEFINITION__ID, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -122,12 +115,10 @@ public class ExtensionDefinitionItemProvider extends ItemProviderAdapter
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(
-			Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(Bpmn2Package.Literals.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS);
+			childrenFeatures.add(Bpmn2Package.Literals.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS);
 		}
 		return childrenFeatures;
 	}
@@ -154,15 +145,9 @@ public class ExtensionDefinitionItemProvider extends ItemProviderAdapter
 	@Override
 	public Object getImage(Object object) {
 		try {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ExtensionDefinition.png"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ExtensionDefinition.png"));
 		} catch (java.util.MissingResourceException e) {
-			return overlayImage(
-					object,
-					getResourceLocator().getImage(
-							"full/obj16/ExtensionDefinition.gif"));
+			return overlayImage(object, getResourceLocator().getImage("full/obj16/ExtensionDefinition.gif"));
 		}
 	}
 
@@ -203,12 +188,10 @@ public class ExtensionDefinitionItemProvider extends ItemProviderAdapter
 		switch (notification.getFeatureID(ExtensionDefinition.class)) {
 		case Bpmn2Package.EXTENSION_DEFINITION__NAME:
 		case Bpmn2Package.EXTENSION_DEFINITION__ID:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case Bpmn2Package.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS:
-			fireNotifyChanged(new ViewerNotification(notification,
-					notification.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -222,15 +205,12 @@ public class ExtensionDefinitionItemProvider extends ItemProviderAdapter
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(
-			Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
-				.add(createChildParameter(
-						Bpmn2Package.Literals.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS,
-						Bpmn2Factory.eINSTANCE
-								.createExtensionAttributeDefinition()));
+				.add(createChildParameter(Bpmn2Package.Literals.EXTENSION_DEFINITION__EXTENSION_ATTRIBUTE_DEFINITIONS,
+						Bpmn2Factory.eINSTANCE.createExtensionAttributeDefinition()));
 	}
 
 	/**

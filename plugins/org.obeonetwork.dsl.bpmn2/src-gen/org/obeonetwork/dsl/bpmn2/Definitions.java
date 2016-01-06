@@ -24,6 +24,7 @@ import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNDiagram;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Definitions#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Definitions#getTargetNamespace <em>Target Namespace</em>}</li>
@@ -37,7 +38,6 @@ import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNDiagram;
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Definitions#getExporter <em>Exporter</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.Definitions#getExporterVersion <em>Exporter Version</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getDefinitions()
  * @model

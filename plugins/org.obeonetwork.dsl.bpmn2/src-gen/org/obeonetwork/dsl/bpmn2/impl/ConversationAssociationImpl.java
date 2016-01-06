@@ -25,16 +25,15 @@ import org.obeonetwork.dsl.bpmn2.ConversationNode;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ConversationAssociationImpl#getInnerConversationNodeRef <em>Inner Conversation Node Ref</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ConversationAssociationImpl#getOuterConversationNodeRef <em>Outer Conversation Node Ref</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ConversationAssociationImpl extends BaseElementImpl implements
-		ConversationAssociation {
+public class ConversationAssociationImpl extends BaseElementImpl implements ConversationAssociation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -60,10 +59,8 @@ public class ConversationAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public ConversationNode getInnerConversationNodeRef() {
-		return (ConversationNode) eDynamicGet(
-				Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF,
-				Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF,
-				true, true);
+		return (ConversationNode) eDynamicGet(Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF,
+				Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF, true, true);
 	}
 
 	/**
@@ -72,10 +69,8 @@ public class ConversationAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public ConversationNode basicGetInnerConversationNodeRef() {
-		return (ConversationNode) eDynamicGet(
-				Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF,
-				Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF,
-				false, true);
+		return (ConversationNode) eDynamicGet(Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF,
+				Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF, false, true);
 	}
 
 	/**
@@ -83,10 +78,8 @@ public class ConversationAssociationImpl extends BaseElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInnerConversationNodeRef(
-			ConversationNode newInnerConversationNodeRef) {
-		eDynamicSet(
-				Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF,
+	public void setInnerConversationNodeRef(ConversationNode newInnerConversationNodeRef) {
+		eDynamicSet(Bpmn2Package.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF,
 				Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF,
 				newInnerConversationNodeRef);
 	}
@@ -97,10 +90,8 @@ public class ConversationAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public ConversationNode getOuterConversationNodeRef() {
-		return (ConversationNode) eDynamicGet(
-				Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF,
-				Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF,
-				true, true);
+		return (ConversationNode) eDynamicGet(Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF,
+				Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF, true, true);
 	}
 
 	/**
@@ -109,10 +100,8 @@ public class ConversationAssociationImpl extends BaseElementImpl implements
 	 * @generated
 	 */
 	public ConversationNode basicGetOuterConversationNodeRef() {
-		return (ConversationNode) eDynamicGet(
-				Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF,
-				Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF,
-				false, true);
+		return (ConversationNode) eDynamicGet(Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF,
+				Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF, false, true);
 	}
 
 	/**
@@ -120,10 +109,8 @@ public class ConversationAssociationImpl extends BaseElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOuterConversationNodeRef(
-			ConversationNode newOuterConversationNodeRef) {
-		eDynamicSet(
-				Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF,
+	public void setOuterConversationNodeRef(ConversationNode newOuterConversationNodeRef) {
+		eDynamicSet(Bpmn2Package.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF,
 				Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF,
 				newOuterConversationNodeRef);
 	}
