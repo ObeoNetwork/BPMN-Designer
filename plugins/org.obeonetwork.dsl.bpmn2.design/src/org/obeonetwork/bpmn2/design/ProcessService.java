@@ -20,13 +20,15 @@ public class ProcessService {
 		return eObject;
 	}
 
-	public static void duplicate(Process process) {
-		EObject container = process.eContainer();
-		EObject cursor = container;
+	public static Definitions getDefinitionsObject(EObject eObject) {
+		EObject cursor = eObject;
 		while (!(cursor instanceof Definitions)) {
 			cursor = cursor.eContainer();
 		}
-		Definitions defs = (Definitions) cursor;
+		return (Definitions) cursor;
+	}
+
+	public static void duplicate(Process process) {
 
 		// Clone the process
 		@SuppressWarnings("serial")
@@ -43,6 +45,7 @@ public class ProcessService {
 		copier.copyReferences();
 
 		// Clone message flows
+		Definitions defs = getDefinitionsObject(process);
 		for (RootElement root : defs.getRootElements()) {
 			if (root instanceof Collaboration) {
 				Collaboration collaboration = (Collaboration) root;
@@ -62,6 +65,7 @@ public class ProcessService {
 		}
 
 		// Save process clone
+		EObject container = process.eContainer();
 		if (container instanceof Definitions) {
 			((Definitions) container).getRootElements().add(clone);
 		} else {
