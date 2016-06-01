@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="BPMN20" version="10.1.0.201507271600">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="BPMN20" version="10.1.3.201511131800">
   <ownedViewpoints name="Process" label="BPMN 2.0 - Process" modelFileExtension="bpmn">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ProcessDiagram" label="Process Diagram" domainClass="bpmn2.Process" enablePopupBars="true">
       <metamodel href="../../org.obeonetwork.dsl.bpmn2/model/BPMN20.ecore#/"/>
@@ -801,49 +801,49 @@
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToTask_ContextAction" label="Task" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.target.convertToTask()%>"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.convertToTask()%>"/>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToBusinessRuleTask_ContextAction" label="Business Rule Task" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.target.convertToBusinessRuleTask()%>"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.convertToBusinessRuleTask()%>"/>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToManualTask_ContextAction" label="Manual Task" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.target.convertToManualTask()%>"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.convertToManualTask()%>"/>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="Receive Task" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/receiveTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.target.convertToReceiveTask()%>"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.convertToReceiveTask()%>"/>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="Script Task" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/scriptTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.target.convertToScriptTask()%>"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.convertToScriptTask()%>"/>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToSendTask_ContextAction" label="Send Task" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.target.convertToSendTask()%>"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.convertToSendTask()%>"/>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToServiceTask_ContextAction" label="Service Task" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.target.convertToServiceTask()%>"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.convertToServiceTask()%>"/>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToUserTask_ContextAction" label="User Task" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.target.convertToUserTask()%>"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="&lt;%$views.convertToUserTask()%>"/>
               </initialOperation>
             </menuItemDescription>
           </ownedTools>
@@ -1440,7 +1440,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="Call Activity" precondition="&lt;%$container.filter(&quot;Lane&quot;)!=null || $container.filter(&quot;SubProcess&quot;)!=null%>" forceRefresh="true" candidatesExpression="&lt;%getDefinitionsObject().rootElements.filter(&quot;CallableElement&quot;)%>" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.gif">
+          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="Call Activity" precondition="&lt;%$container.filter(&quot;Lane&quot;)!=null || $container.filter(&quot;SubProcess&quot;)!=null%>" forceRefresh="true" candidatesExpression="&lt;%getDefinitionsObject().eAllContents.filter(&quot;CallableElement&quot;)%>" tree="true" rootExpression="&lt;%getDefinitionsObject().eContents().filter(&quot;CallableElement&quot;)%>" childrenExpression="&lt;%eContents().filter(&quot;CallableElement&quot;)%>" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
