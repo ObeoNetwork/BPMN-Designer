@@ -1511,7 +1511,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Connectors">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="SequenceFlowCreationTool" label="Sequence" edgeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SequenceFlow.png">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="SequenceFlowCreationTool" label="Sequence" precondition="&lt;%$preSource.~flowNodeRefs==$preTarget.~flowNodeRefs%>" edgeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='SequenceFlow']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SequenceFlow.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
