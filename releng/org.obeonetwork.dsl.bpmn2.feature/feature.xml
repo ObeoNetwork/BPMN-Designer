@@ -216,6 +216,10 @@ Each party waives its rights to a jury trial in any resulting
 litigation.
    </license>
 
+   <includes
+         id="org.eclipse.emf.cdo"
+         version="0.0.0"/>
+
    <requires>
       <import feature="org.eclipse.sirius.runtime"/>
       <import feature="org.eclipse.sirius.query.legacy.feature"/>
