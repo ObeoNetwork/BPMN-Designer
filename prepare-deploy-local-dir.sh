@@ -1,5 +1,5 @@
 #! /usr/bin/env sh
-UPDATE_SITE_DIR=releng/org.obeonetwork.bpmn2.repository/target/repository
+UPDATE_SITE_DIR=releng/org.obeonetwork.dsl.bpmn2.repository/target/repository
 DEPLOY_LOCAL_DIR=$1/repository
 echo "Prepare deploy local dir = ${DEPLOY_LOCAL_DIR}"
 # Create deploy local dir
