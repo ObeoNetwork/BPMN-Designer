@@ -31,9 +31,9 @@
     <url>http://download.eclipse.org/releases/mars/</url>
   </repository>
   <repository>
-   	<id>OD</id>
+   	<id>Sirius</id>
     <layout>p2</layout>
-    <url>http://update.obeo.fr/release/designer/8.1/community/latest/repository/</url>
+    <url>http://download.eclipse.org/sirius/updates/releases/3.1.x/mars/</url>
   </repository>
   <repository>
    	<id>AcceleoLegacy</id>
