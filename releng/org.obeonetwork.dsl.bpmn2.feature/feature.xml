@@ -220,6 +220,10 @@ litigation.
          id="org.eclipse.emf.cdo"
          version="0.0.0"/>
 
+   <includes
+         id="org.eclipse.net4j"
+         version="0.0.0"/>
+
    <requires>
       <import feature="org.eclipse.sirius.runtime"/>
       <import feature="org.eclipse.sirius.query.legacy.feature"/>
