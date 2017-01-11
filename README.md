@@ -2,9 +2,9 @@
 
 BPMN Designer provides a set of diagrams to work with BPMN 2.0 models. 
 
-!images/NobelPrize.png!
+![Nobel Prize](NobelPrize.png)
 
-!images/TravelAgency.png!
+![Travel Agency](images/TravelAgency.png)
 
 These plugins are released under the EPL Open-Source License.
 
