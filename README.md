@@ -1,4 +1,4 @@
-# Welcome to BPMN Designer by Obeo Network
+# BPMN Designer
 
 BPMN Designer provides a set of diagrams to work with BPMN 2.0 models. 
 
@@ -6,7 +6,7 @@ BPMN Designer provides a set of diagrams to work with BPMN 2.0 models.
 
 ![Travel Agency](images/TravelAgency.png)
 
-These plugins are released under the EPL Open-Source License.
+These plugins have been created with Eclipse/Sirius and are released under the EPL Open-Source License.
 
 To install it:
 - Download OD Community Edition version 8.1.2: https://www.obeodesigner.com/en/download-previous-versions
