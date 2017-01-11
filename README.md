@@ -2,7 +2,7 @@
 
 BPMN Designer provides a set of diagrams to work with BPMN 2.0 models. 
 
-![Nobel Prize](NobelPrize.png)
+![Nobel Prize](images/NobelPrize.png)
 
 ![Travel Agency](images/TravelAgency.png)
 
