@@ -13,7 +13,7 @@ To install it:
 - Unzip and start it
 - Add the following update sites:
  - http://download.eclipse.org/releases/mars/
- - https://s3-eu-west-1.amazonaws.com/obeo-bpmndesigner-releases/3.1.1/repository/
+ - https://s3-eu-west-1.amazonaws.com/obeo-bpmndesigner-releases/3.2.0/repository/
 - Install the BPMN-Designer and Sirius Support for Legacy Queries features
 
 To test it, create a new sample project: Ctrl+N > Examples > BPMN > BPMN Samples
