@@ -2,9 +2,14 @@ package org.obeonetwork.bpmn2.design;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
 import org.obeonetwork.dsl.bpmn2.Collaboration;
 import org.obeonetwork.dsl.bpmn2.Definitions;
@@ -70,6 +75,36 @@ public class ProcessService {
 			((Definitions) container).getRootElements().add(clone);
 		} else {
 			((Process) container).getDecomposedBy().add(clone);
+		}
+	}
+
+	public static void paste(EObject container, EObject containerView, EObject copiedView, EObject copiedElement) {
+		// change IDs
+		EcoreUtil.setID(copiedElement, EcoreUtil.generateUUID());
+		for (Iterator<EObject> iterator = copiedElement.eAllContents(); iterator.hasNext();) {
+			EcoreUtil.setID(iterator.next(), EcoreUtil.generateUUID());
+		}
+
+		// change Name
+		EStructuralFeature nameFeature = copiedElement.eClass().getEStructuralFeature("name"); //$NON-NLS-1$
+		if (nameFeature != null) {
+			Object name = copiedElement.eGet(nameFeature);
+			if (name == null) {
+				name = "";
+			}
+			copiedElement.eSet(nameFeature, name + " (copy)"); // $NON-NLS-1$
+		}
+
+		// add to container
+		for (EReference containment : container.eClass().getEAllContainments()) {
+			if (containment.getEType().equals(copiedElement.eClass())
+					|| copiedElement.eClass().getEAllSuperTypes().contains(containment.getEType())) {
+				if (containment.isMany()) {
+					((EList<EObject>) container.eGet(containment)).add(copiedElement);
+				} else {
+					container.eSet(containment, copiedElement);
+				}
+			}
 		}
 	}
 
