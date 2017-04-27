@@ -383,6 +383,72 @@
               </style>
             </subContainerMappings>
             <subContainerMappings name="SubProcess" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="feature:flowNodeRefs" doubleClickDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='SubProcessToggleCollapse_DoubleClick']" domainClass="bpmn2.SubProcess" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementToLane']">
+              <borderedNodeMappings name="TaskBorderOnSubProcess" semanticCandidatesExpression="&lt;%boundaryEventRefs%>" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="bpmn2.BoundaryEvent">
+                <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/none.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+                <conditionnalStyles predicateExpression="&lt;%eventDefinitions.nSize==1 &amp;&amp; eventDefinitions.filter(&quot;CancelEventDefinition&quot;)!=null%>">
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/cancel.svg">
+                    <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  </style>
+                </conditionnalStyles>
+                <conditionnalStyles predicateExpression="&lt;%eventDefinitions.nSize==1 &amp;&amp; eventDefinitions.filter(&quot;CompensateEventDefinition&quot;)!=null%>">
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/compensation.svg">
+                    <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  </style>
+                </conditionnalStyles>
+                <conditionnalStyles predicateExpression="&lt;%eventDefinitions.nSize==1 &amp;&amp; eventDefinitions.filter(&quot;ConditionalEventDefinition&quot;)!=null%>">
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/conditional.svg">
+                    <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  </style>
+                </conditionnalStyles>
+                <conditionnalStyles predicateExpression="&lt;%eventDefinitions.nSize==1 &amp;&amp; eventDefinitions.filter(&quot;ErrorEventDefinition&quot;)!=null%>">
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/error.svg">
+                    <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  </style>
+                </conditionnalStyles>
+                <conditionnalStyles predicateExpression="&lt;%eventDefinitions.nSize==1 &amp;&amp; eventDefinitions.filter(&quot;EscalationEventDefinition&quot;)!=null%>">
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/escalation.svg">
+                    <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  </style>
+                </conditionnalStyles>
+                <conditionnalStyles predicateExpression="&lt;%eventDefinitions.nSize==1 &amp;&amp; eventDefinitions.filter(&quot;MessageEventDefinition&quot;)!=null%>">
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/message.svg">
+                    <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  </style>
+                </conditionnalStyles>
+                <conditionnalStyles predicateExpression="&lt;%eventDefinitions.nSize==1 &amp;&amp; eventDefinitions.filter(&quot;SignalEventDefinition&quot;)!=null%>">
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/signal.svg">
+                    <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  </style>
+                </conditionnalStyles>
+                <conditionnalStyles predicateExpression="&lt;%eventDefinitions.nSize==1 &amp;&amp; eventDefinitions.filter(&quot;TimerEventDefinition&quot;)!=null%>">
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/timer.svg">
+                    <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  </style>
+                </conditionnalStyles>
+                <conditionnalStyles predicateExpression="&lt;%eventDefinitions.nSize>1 &amp;&amp; !parallelMultiple%>">
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/multiple.svg">
+                    <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  </style>
+                </conditionnalStyles>
+                <conditionnalStyles predicateExpression="&lt;%eventDefinitions.nSize>1 &amp;&amp; parallelMultiple%>">
+                  <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/multiple.parallel.svg">
+                    <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  </style>
+                </conditionnalStyles>
+              </borderedNodeMappings>
               <subNodeMappings name="SPStartEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="feature:flowElements" semanticElements="&lt;%self + self.eventDefinitions%>" domainClass="bpmn2.StartEvent">
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/start-event/start.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1002,7 +1068,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="BoundaryEventCreation" label="Boundary" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BoundaryEvent.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="BoundaryEventCreation" label="Boundary" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task']/@borderedNodeMappings[name='TaskBorder'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@borderedNodeMappings[name='TaskBorderOnSubProcess']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BoundaryEvent.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
