@@ -13,8 +13,11 @@
    height="31.840523"
    id="svg5795"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
-   sodipodi:docname="escalation.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="escalation.svg"
+   inkscape:export-filename="/Users/lchituc/Downloads/bpmn/throw-event/escalation.png"
+   inkscape:export-xdpi="44"
+   inkscape:export-ydpi="44">
   <defs
      id="defs5797" />
   <sodipodi:namedview
@@ -25,10 +28,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.328125"
-     inkscape:cx="24.758202"
+     inkscape:cx="19.29978"
      inkscape:cy="-7.0007299"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g5783"
      showgrid="false"
      inkscape:window-width="966"
      inkscape:window-height="852"
@@ -66,26 +69,28 @@
       <g
          transform="translate(4.1135147,370.46556)"
          id="g5259-7"
-         style="stroke:#c51325;stroke-opacity:1">
+         style="stroke:#3a9ed6;stroke-opacity:1;fill:none"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90">
         <path
            transform="matrix(0.34661363,0,0,0.26862556,79.372501,110.05206)"
-           d="m 154.28571,98.076469 c 0,31.559131 -19.82739,57.142861 -44.28571,57.142861 -24.458324,0 -44.285713,-25.58373 -44.285713,-57.142861 0,-31.559128 19.827389,-57.142856 44.285713,-57.142856 24.45832,0 44.28571,25.583728 44.28571,57.142856 z"
+           d="M 154.28571,98.076469 A 44.285713,57.142857 0 0 1 110,155.21933 44.285713,57.142857 0 0 1 65.714287,98.076469 44.285713,57.142857 0 0 1 110,40.933613 44.285713,57.142857 0 0 1 154.28571,98.076469 Z"
            sodipodi:ry="57.142857"
            sodipodi:rx="44.285713"
            sodipodi:cy="98.076469"
            sodipodi:cx="110"
            id="path5261-9"
-           style="fill:#ffffff;fill-opacity:1;stroke:#c51325;stroke-width:4.26015568;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:none;fill-opacity:1;stroke:#3a9ed6;stroke-width:4.26015568;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            sodipodi:type="arc" />
         <path
            transform="matrix(0.26081651,0,0,0.20213279,88.810186,116.57343)"
-           d="m 154.28571,98.076469 c 0,31.559131 -19.82739,57.142861 -44.28571,57.142861 -24.458324,0 -44.285713,-25.58373 -44.285713,-57.142861 0,-31.559128 19.827389,-57.142856 44.285713,-57.142856 24.45832,0 44.28571,25.583728 44.28571,57.142856 z"
+           d="M 154.28571,98.076469 A 44.285713,57.142857 0 0 1 110,155.21933 44.285713,57.142857 0 0 1 65.714287,98.076469 44.285713,57.142857 0 0 1 110,40.933613 44.285713,57.142857 0 0 1 154.28571,98.076469 Z"
            sodipodi:ry="57.142857"
            sodipodi:rx="44.285713"
            sodipodi:cy="98.076469"
            sodipodi:cx="110"
            id="path5263-4"
-           style="fill:#ffffff;fill-opacity:1;stroke:#c51325;stroke-width:5.6615591;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:none;fill-opacity:1;stroke:#3a9ed6;stroke-width:5.6615591;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            sodipodi:type="arc" />
       </g>
       <path
@@ -93,7 +98,7 @@
          inkscape:connector-curvature="0"
          id="rect5269-1"
          d="m 121.70565,499.82956 5.45668,10.86783 -5.54882,-3.1914 -5.54881,3.1914 z"
-         style="fill:#c51325;fill-opacity:1;stroke:#c51325;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+         style="fill:#3a9ed6;fill-opacity:1;stroke:#3a9ed6;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
     </g>
   </g>
 </svg>

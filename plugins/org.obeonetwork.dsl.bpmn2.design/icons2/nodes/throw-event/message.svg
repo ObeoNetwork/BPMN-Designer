@@ -13,8 +13,11 @@
    height="31.840523"
    id="svg5795"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
-   sodipodi:docname="message.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="message.svg"
+   inkscape:export-filename="/Users/lchituc/Downloads/bpmn/throw-event/message.png"
+   inkscape:export-xdpi="45"
+   inkscape:export-ydpi="45">
   <defs
      id="defs5797" />
   <sodipodi:namedview
@@ -24,16 +27,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.328125"
-     inkscape:cx="15.300387"
-     inkscape:cy="-7.0007299"
+     inkscape:zoom="3.6640625"
+     inkscape:cx="-33.825413"
+     inkscape:cy="3.9161144"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g5774"
      showgrid="false"
      inkscape:window-width="966"
      inkscape:window-height="852"
-     inkscape:window-x="1598"
-     inkscape:window-y="324"
+     inkscape:window-x="1526"
+     inkscape:window-y="380"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -66,26 +69,23 @@
       <g
          transform="translate(-0.1962203,321.80667)"
          id="g5259"
-         style="stroke:#c51325;stroke-opacity:1">
-        <path
-           transform="matrix(0.34661363,0,0,0.26862556,79.372501,110.05206)"
-           d="m 154.28571,98.076469 c 0,31.559131 -19.82739,57.142861 -44.28571,57.142861 -24.458324,0 -44.285713,-25.58373 -44.285713,-57.142861 0,-31.559128 19.827389,-57.142856 44.285713,-57.142856 24.45832,0 44.28571,25.583728 44.28571,57.142856 z"
-           sodipodi:ry="57.142857"
-           sodipodi:rx="44.285713"
-           sodipodi:cy="98.076469"
-           sodipodi:cx="110"
+         style="stroke:#3a9ed6;stroke-opacity:1;fill:none">
+        <circle
+           transform="scale(1,-1)"
            id="path5261"
-           style="fill:#ffffff;fill-opacity:1;stroke:#c51325;stroke-width:4.26015568;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           sodipodi:type="arc" />
+           style="fill:none;fill-opacity:1;stroke:#3a9ed6;stroke-width:1.29993594;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           cx="117.5"
+           cy="-136.3979"
+           r="15.350032" />
         <path
            transform="matrix(0.26081651,0,0,0.20213279,88.810186,116.57343)"
-           d="m 154.28571,98.076469 c 0,31.559131 -19.82739,57.142861 -44.28571,57.142861 -24.458324,0 -44.285713,-25.58373 -44.285713,-57.142861 0,-31.559128 19.827389,-57.142856 44.285713,-57.142856 24.45832,0 44.28571,25.583728 44.28571,57.142856 z"
+           d="M 154.28571,98.076469 A 44.285713,57.142857 0 0 1 110,155.21933 44.285713,57.142857 0 0 1 65.714287,98.076469 44.285713,57.142857 0 0 1 110,40.933613 44.285713,57.142857 0 0 1 154.28571,98.076469 Z"
            sodipodi:ry="57.142857"
            sodipodi:rx="44.285713"
            sodipodi:cy="98.076469"
            sodipodi:cx="110"
            id="path5263"
-           style="fill:#ffffff;fill-opacity:1;stroke:#c51325;stroke-width:5.6615591;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:none;fill-opacity:1;stroke:#3a9ed6;stroke-width:5.6615591;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            sodipodi:type="arc" />
       </g>
       <path
@@ -93,7 +93,7 @@
          inkscape:connector-curvature="0"
          id="rect5269"
          d="m 110.04327,453.00577 14.52102,0 0,10.39762 -14.52102,0 z"
-         style="fill:#c51325;fill-opacity:1;stroke:#c51325;stroke-width:1.47898364;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+         style="fill:#3a9ed6;fill-opacity:1;stroke:#3a9ed6;stroke-width:1.47898364;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"

@@ -13,8 +13,11 @@
    height="32.025204"
    id="svg5795"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
-   sodipodi:docname="link.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="link.svg"
+   inkscape:export-filename="/Users/lchituc/Downloads/bpmn/throw-event/link.png"
+   inkscape:export-xdpi="44.971088"
+   inkscape:export-ydpi="44.971088">
   <defs
      id="defs5797" />
   <sodipodi:namedview
@@ -25,10 +28,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.328125"
-     inkscape:cx="-14.072903"
-     inkscape:cy="0.59694089"
+     inkscape:cx="-8.6144808"
+     inkscape:cy="6.0553631"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g7808"
      showgrid="false"
      inkscape:window-width="966"
      inkscape:window-height="852"
@@ -61,7 +64,7 @@
        id="g7808"
        style="stroke:#c51325;stroke-opacity:1">
       <g
-         style="fill:none;stroke:#c51325;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:none;stroke:#3a9ed6;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
          inkscape:export-filename="/Volumes/partage/private/marketing/Design/Produits/BPMN/design/nodes/boundary-events/png/none.png"
          inkscape:export-ydpi="90"
          inkscape:export-xdpi="90"
@@ -69,29 +72,29 @@
          transform="translate(4.6129247,53.274035)">
         <path
            sodipodi:type="arc"
-           style="fill:#ffffff;fill-opacity:1;stroke:#c51325;stroke-width:4.91580629;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:none;fill-opacity:1;stroke:#3a9ed6;stroke-width:4.91580629;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            id="path3753-8-7"
            sodipodi:cx="110"
            sodipodi:cy="98.076469"
            sodipodi:rx="44.285713"
            sodipodi:ry="57.142857"
-           d="m 154.28571,98.076469 c 0,31.559131 -19.82739,57.142861 -44.28571,57.142861 -24.458324,0 -44.285713,-25.58373 -44.285713,-57.142861 0,-31.559128 19.827389,-57.142856 44.285713,-57.142856 24.45832,0 44.28571,25.583728 44.28571,57.142856 z"
+           d="M 154.28571,98.076469 A 44.285713,57.142857 0 0 1 110,155.21933 44.285713,57.142857 0 0 1 65.714287,98.076469 44.285713,57.142857 0 0 1 110,40.933613 44.285713,57.142857 0 0 1 154.28571,98.076469 Z"
            transform="matrix(0.34661363,0,0,0.26862556,81.181191,9.9219258)" />
         <path
            sodipodi:type="arc"
-           style="fill:#ffffff;fill-opacity:1;stroke:#c51325;stroke-width:6.53288984;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:none;fill-opacity:1;stroke:#3a9ed6;stroke-width:6.53288984;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            id="path3753-2-7-0"
            sodipodi:cx="110"
            sodipodi:cy="98.076469"
            sodipodi:rx="44.285713"
            sodipodi:ry="57.142857"
-           d="m 154.28571,98.076469 c 0,31.559131 -19.82739,57.142861 -44.28571,57.142861 -24.458324,0 -44.285713,-25.58373 -44.285713,-57.142861 0,-31.559128 19.827389,-57.142856 44.285713,-57.142856 24.45832,0 44.28571,25.583728 44.28571,57.142856 z"
+           d="M 154.28571,98.076469 A 44.285713,57.142857 0 0 1 110,155.21933 44.285713,57.142857 0 0 1 65.714287,98.076469 44.285713,57.142857 0 0 1 110,40.933613 44.285713,57.142857 0 0 1 154.28571,98.076469 Z"
            transform="matrix(0.26081651,0,0,0.20213279,90.618876,16.443302)" />
       </g>
       <path
          inkscape:connector-curvature="0"
          d="m 123.97113,82.78505 0,3.401359 -6.23913,0 0,6.714122 6.23913,0 0,3.398033 6.74052,-6.758676 -6.74052,-6.754838"
-         style="fill:#c51325;fill-opacity:1;stroke:#c51325;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:#3a9ed6;fill-opacity:1;stroke:#3a9ed6;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          id="path8645" />
     </g>
   </g>
