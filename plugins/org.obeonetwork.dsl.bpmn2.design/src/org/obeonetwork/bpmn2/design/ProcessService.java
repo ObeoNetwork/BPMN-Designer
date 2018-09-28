@@ -13,10 +13,12 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
 import org.obeonetwork.dsl.bpmn2.Collaboration;
 import org.obeonetwork.dsl.bpmn2.Definitions;
+import org.obeonetwork.dsl.bpmn2.FlowElement;
 import org.obeonetwork.dsl.bpmn2.InteractionNode;
 import org.obeonetwork.dsl.bpmn2.MessageFlow;
 import org.obeonetwork.dsl.bpmn2.Process;
 import org.obeonetwork.dsl.bpmn2.RootElement;
+import org.obeonetwork.dsl.bpmn2.SubProcess;
 
 public class ProcessService {
 
@@ -106,6 +108,13 @@ public class ProcessService {
 				}
 			}
 		}
+	}
+
+	public EList<FlowElement> getSubElements(EObject eo) {
+		if (eo instanceof SubProcess) {
+			return ((SubProcess) eo).getFlowElements();
+		}
+		return null;
 	}
 
 }
