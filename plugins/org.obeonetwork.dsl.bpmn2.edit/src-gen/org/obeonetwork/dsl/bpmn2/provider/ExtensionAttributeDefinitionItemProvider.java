@@ -85,8 +85,8 @@ public class ExtensionAttributeDefinitionItemProvider extends ItemProviderAdapte
 						getResourceLocator(), getString("_UI_ExtensionAttributeDefinition_name_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ExtensionAttributeDefinition_name_feature",
 								"_UI_ExtensionAttributeDefinition_type"),
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__NAME, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -101,8 +101,8 @@ public class ExtensionAttributeDefinitionItemProvider extends ItemProviderAdapte
 						getResourceLocator(), getString("_UI_ExtensionAttributeDefinition_type_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ExtensionAttributeDefinition_type_feature",
 								"_UI_ExtensionAttributeDefinition_type"),
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__TYPE, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__TYPE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -133,8 +133,8 @@ public class ExtensionAttributeDefinitionItemProvider extends ItemProviderAdapte
 						getResourceLocator(), getString("_UI_ExtensionAttributeDefinition_id_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ExtensionAttributeDefinition_id_feature",
 								"_UI_ExtensionAttributeDefinition_type"),
-				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__ID, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_DEFINITION__ID, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**

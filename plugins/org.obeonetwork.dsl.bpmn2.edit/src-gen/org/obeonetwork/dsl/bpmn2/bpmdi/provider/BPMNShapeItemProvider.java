@@ -184,11 +184,11 @@ public class BPMNShapeItemProvider extends LabeledShapeItemProvider implements I
 	 * @generated
 	 */
 	protected void addChoreographyActivityShapePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BPMNShape_choreographyActivityShape_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_BPMNShape_choreographyActivityShape_feature", "_UI_BPMNShape_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_BPMNShape_choreographyActivityShape_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_BPMNShape_choreographyActivityShape_feature",
+						"_UI_BPMNShape_type"),
 				BpmnDiPackage.Literals.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE, true, false, true, null, null, null));
 	}
 

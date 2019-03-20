@@ -126,11 +126,11 @@ public class DataInputItemProvider extends ItemAwareElementItemProvider implemen
 	 * @generated
 	 */
 	protected void addInputSetWithWhileExecutingPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DataInput_inputSetWithWhileExecuting_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_DataInput_inputSetWithWhileExecuting_feature", "_UI_DataInput_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_DataInput_inputSetWithWhileExecuting_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_DataInput_inputSetWithWhileExecuting_feature",
+						"_UI_DataInput_type"),
 				Bpmn2Package.Literals.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING, true, false, true, null, null, null));
 	}
 

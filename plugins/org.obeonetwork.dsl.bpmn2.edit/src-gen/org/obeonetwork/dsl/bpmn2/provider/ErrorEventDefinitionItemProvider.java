@@ -77,7 +77,7 @@ public class ErrorEventDefinitionItemProvider extends EventDefinitionItemProvide
 						getResourceLocator(), getString("_UI_ErrorEventDefinition_errorRef_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ErrorEventDefinition_errorRef_feature",
 								"_UI_ErrorEventDefinition_type"),
-				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, true, false, true, null, null, null));
+						Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, true, false, true, null, null, null));
 	}
 
 	/**

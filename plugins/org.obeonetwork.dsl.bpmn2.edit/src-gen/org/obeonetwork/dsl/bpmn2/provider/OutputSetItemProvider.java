@@ -108,11 +108,11 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
 	 * @generated
 	 */
 	protected void addWhileExecutingOutputRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_OutputSet_whileExecutingOutputRefs_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_OutputSet_whileExecutingOutputRefs_feature", "_UI_OutputSet_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_OutputSet_whileExecutingOutputRefs_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_OutputSet_whileExecutingOutputRefs_feature",
+						"_UI_OutputSet_type"),
 				Bpmn2Package.Literals.OUTPUT_SET__WHILE_EXECUTING_OUTPUT_REFS, true, false, true, null, null, null));
 	}
 

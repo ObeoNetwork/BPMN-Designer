@@ -5647,13 +5647,31 @@ public interface Bpmn2Package extends EPackage {
 	int ACTIVITY__LANES = FLOW_NODE__LANES;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__INCOMING_CONVERSATION_LINKS = FLOW_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__OUTGOING_CONVERSATION_LINKS = FLOW_NODE_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__IS_FOR_COMPENSATION = FLOW_NODE_FEATURE_COUNT + 0;
+	int ACTIVITY__IS_FOR_COMPENSATION = FLOW_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Loop Characteristics</b></em>' containment reference.
@@ -5662,7 +5680,7 @@ public interface Bpmn2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__LOOP_CHARACTERISTICS = FLOW_NODE_FEATURE_COUNT + 1;
+	int ACTIVITY__LOOP_CHARACTERISTICS = FLOW_NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Resources</b></em>' containment reference list.
@@ -5671,7 +5689,7 @@ public interface Bpmn2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__RESOURCES = FLOW_NODE_FEATURE_COUNT + 2;
+	int ACTIVITY__RESOURCES = FLOW_NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Default</b></em>' reference.
@@ -5680,7 +5698,7 @@ public interface Bpmn2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__DEFAULT = FLOW_NODE_FEATURE_COUNT + 3;
+	int ACTIVITY__DEFAULT = FLOW_NODE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -5689,7 +5707,7 @@ public interface Bpmn2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__PROPERTIES = FLOW_NODE_FEATURE_COUNT + 4;
+	int ACTIVITY__PROPERTIES = FLOW_NODE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Io Specification</b></em>' containment reference.
@@ -5698,7 +5716,7 @@ public interface Bpmn2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__IO_SPECIFICATION = FLOW_NODE_FEATURE_COUNT + 5;
+	int ACTIVITY__IO_SPECIFICATION = FLOW_NODE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Boundary Event Refs</b></em>' reference list.
@@ -5707,7 +5725,7 @@ public interface Bpmn2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__BOUNDARY_EVENT_REFS = FLOW_NODE_FEATURE_COUNT + 6;
+	int ACTIVITY__BOUNDARY_EVENT_REFS = FLOW_NODE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Data Input Associations</b></em>' containment reference list.
@@ -5716,7 +5734,7 @@ public interface Bpmn2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__DATA_INPUT_ASSOCIATIONS = FLOW_NODE_FEATURE_COUNT + 7;
+	int ACTIVITY__DATA_INPUT_ASSOCIATIONS = FLOW_NODE_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Data Output Associations</b></em>' containment reference list.
@@ -5725,7 +5743,7 @@ public interface Bpmn2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__DATA_OUTPUT_ASSOCIATIONS = FLOW_NODE_FEATURE_COUNT + 8;
+	int ACTIVITY__DATA_OUTPUT_ASSOCIATIONS = FLOW_NODE_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Start Quantity</b></em>' attribute.
@@ -5734,7 +5752,7 @@ public interface Bpmn2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__START_QUANTITY = FLOW_NODE_FEATURE_COUNT + 9;
+	int ACTIVITY__START_QUANTITY = FLOW_NODE_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Completion Quantity</b></em>' attribute.
@@ -5743,7 +5761,7 @@ public interface Bpmn2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__COMPLETION_QUANTITY = FLOW_NODE_FEATURE_COUNT + 10;
+	int ACTIVITY__COMPLETION_QUANTITY = FLOW_NODE_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
@@ -5752,7 +5770,7 @@ public interface Bpmn2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = FLOW_NODE_FEATURE_COUNT + 11;
+	int ACTIVITY_FEATURE_COUNT = FLOW_NODE_FEATURE_COUNT + 13;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.bpmn2.impl.TaskImpl <em>Task</em>}' class.
@@ -5873,6 +5891,24 @@ public interface Bpmn2Package extends EPackage {
 	int TASK__LANES = ACTIVITY__LANES;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__INCOMING_CONVERSATION_LINKS = ACTIVITY__INCOMING_CONVERSATION_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__OUTGOING_CONVERSATION_LINKS = ACTIVITY__OUTGOING_CONVERSATION_LINKS;
+
+	/**
 	 * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5972,31 +6008,13 @@ public interface Bpmn2Package extends EPackage {
 	int TASK__COMPLETION_QUANTITY = ACTIVITY__COMPLETION_QUANTITY;
 
 	/**
-	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__INCOMING_CONVERSATION_LINKS = ACTIVITY_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__OUTGOING_CONVERSATION_LINKS = ACTIVITY_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 2;
+	int TASK_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.bpmn2.impl.ManualTaskImpl <em>Manual Task</em>}' class.
@@ -6117,6 +6135,24 @@ public interface Bpmn2Package extends EPackage {
 	int MANUAL_TASK__LANES = TASK__LANES;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANUAL_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANUAL_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
+
+	/**
 	 * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6214,24 +6250,6 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int MANUAL_TASK__COMPLETION_QUANTITY = TASK__COMPLETION_QUANTITY;
-
-	/**
-	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MANUAL_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MANUAL_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
 
 	/**
 	 * The number of structural features of the '<em>Manual Task</em>' class.
@@ -7459,6 +7477,24 @@ public interface Bpmn2Package extends EPackage {
 	int USER_TASK__LANES = TASK__LANES;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
+
+	/**
 	 * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7556,24 +7592,6 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int USER_TASK__COMPLETION_QUANTITY = TASK__COMPLETION_QUANTITY;
-
-	/**
-	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Renderings</b></em>' containment reference list.
@@ -13692,6 +13710,24 @@ public interface Bpmn2Package extends EPackage {
 	int SERVICE_TASK__LANES = TASK__LANES;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
+
+	/**
 	 * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13789,24 +13825,6 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int SERVICE_TASK__COMPLETION_QUANTITY = TASK__COMPLETION_QUANTITY;
-
-	/**
-	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
@@ -13952,6 +13970,24 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int SUB_PROCESS__LANES = ACTIVITY__LANES;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_PROCESS__INCOMING_CONVERSATION_LINKS = ACTIVITY__INCOMING_CONVERSATION_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_PROCESS__OUTGOING_CONVERSATION_LINKS = ACTIVITY__OUTGOING_CONVERSATION_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.
@@ -14552,6 +14588,24 @@ public interface Bpmn2Package extends EPackage {
 	int CALL_ACTIVITY__LANES = ACTIVITY__LANES;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_ACTIVITY__INCOMING_CONVERSATION_LINKS = ACTIVITY__INCOMING_CONVERSATION_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_ACTIVITY__OUTGOING_CONVERSATION_LINKS = ACTIVITY__OUTGOING_CONVERSATION_LINKS;
+
+	/**
 	 * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14787,6 +14841,24 @@ public interface Bpmn2Package extends EPackage {
 	int SEND_TASK__LANES = TASK__LANES;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
+
+	/**
 	 * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14884,24 +14956,6 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int SEND_TASK__COMPLETION_QUANTITY = TASK__COMPLETION_QUANTITY;
-
-	/**
-	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEND_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEND_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
@@ -15058,6 +15112,24 @@ public interface Bpmn2Package extends EPackage {
 	int RECEIVE_TASK__LANES = TASK__LANES;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECEIVE_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECEIVE_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
+
+	/**
 	 * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15155,24 +15227,6 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int RECEIVE_TASK__COMPLETION_QUANTITY = TASK__COMPLETION_QUANTITY;
-
-	/**
-	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEIVE_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEIVE_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
@@ -15338,6 +15392,24 @@ public interface Bpmn2Package extends EPackage {
 	int SCRIPT_TASK__LANES = TASK__LANES;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRIPT_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRIPT_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
+
+	/**
 	 * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15435,24 +15507,6 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int SCRIPT_TASK__COMPLETION_QUANTITY = TASK__COMPLETION_QUANTITY;
-
-	/**
-	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPT_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPT_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Script Format</b></em>' attribute.
@@ -15600,6 +15654,24 @@ public interface Bpmn2Package extends EPackage {
 	int BUSINESS_RULE_TASK__LANES = TASK__LANES;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUSINESS_RULE_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUSINESS_RULE_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
+
+	/**
 	 * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15697,24 +15769,6 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int BUSINESS_RULE_TASK__COMPLETION_QUANTITY = TASK__COMPLETION_QUANTITY;
-
-	/**
-	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUSINESS_RULE_TASK__INCOMING_CONVERSATION_LINKS = TASK__INCOMING_CONVERSATION_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUSINESS_RULE_TASK__OUTGOING_CONVERSATION_LINKS = TASK__OUTGOING_CONVERSATION_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Implementation</b></em>' attribute.
@@ -15851,6 +15905,24 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int AD_HOC_SUB_PROCESS__LANES = SUB_PROCESS__LANES;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AD_HOC_SUB_PROCESS__INCOMING_CONVERSATION_LINKS = SUB_PROCESS__INCOMING_CONVERSATION_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AD_HOC_SUB_PROCESS__OUTGOING_CONVERSATION_LINKS = SUB_PROCESS__OUTGOING_CONVERSATION_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.
@@ -16140,6 +16212,24 @@ public interface Bpmn2Package extends EPackage {
 	 * @ordered
 	 */
 	int TRANSACTION__LANES = SUB_PROCESS__LANES;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION__INCOMING_CONVERSATION_LINKS = SUB_PROCESS__INCOMING_CONVERSATION_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTION__OUTGOING_CONVERSATION_LINKS = SUB_PROCESS__OUTGOING_CONVERSATION_LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Is For Compensation</b></em>' attribute.

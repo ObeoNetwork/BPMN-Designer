@@ -163,20 +163,24 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
 
 		// Obtain or create and register package
 		DiPackageImpl theDiPackage = (DiPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DiPackageImpl
-				? EPackage.Registry.INSTANCE.get(eNS_URI) : new DiPackageImpl());
+				? EPackage.Registry.INSTANCE.get(eNS_URI)
+				: new DiPackageImpl());
 
 		isInited = true;
 
 		// Obtain or create and register interdependencies
 		Bpmn2PackageImpl theBpmn2Package = (Bpmn2PackageImpl) (EPackage.Registry.INSTANCE
 				.getEPackage(Bpmn2Package.eNS_URI) instanceof Bpmn2PackageImpl
-						? EPackage.Registry.INSTANCE.getEPackage(Bpmn2Package.eNS_URI) : Bpmn2Package.eINSTANCE);
+						? EPackage.Registry.INSTANCE.getEPackage(Bpmn2Package.eNS_URI)
+						: Bpmn2Package.eINSTANCE);
 		BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl) (EPackage.Registry.INSTANCE
 				.getEPackage(BpmnDiPackage.eNS_URI) instanceof BpmnDiPackageImpl
-						? EPackage.Registry.INSTANCE.getEPackage(BpmnDiPackage.eNS_URI) : BpmnDiPackage.eINSTANCE);
+						? EPackage.Registry.INSTANCE.getEPackage(BpmnDiPackage.eNS_URI)
+						: BpmnDiPackage.eINSTANCE);
 		DcPackageImpl theDcPackage = (DcPackageImpl) (EPackage.Registry.INSTANCE
 				.getEPackage(DcPackage.eNS_URI) instanceof DcPackageImpl
-						? EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI) : DcPackage.eINSTANCE);
+						? EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI)
+						: DcPackage.eINSTANCE);
 
 		// Load packages
 		theBpmn2Package.loadPackage();

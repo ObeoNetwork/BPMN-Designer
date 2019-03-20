@@ -79,11 +79,11 @@ public class ChoreographyActivityItemProvider extends FlowNodeItemProvider imple
 	 * @generated
 	 */
 	protected void addParticipantRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ChoreographyActivity_participantRefs_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_ChoreographyActivity_participantRefs_feature", "_UI_ChoreographyActivity_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ChoreographyActivity_participantRefs_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ChoreographyActivity_participantRefs_feature",
+						"_UI_ChoreographyActivity_type"),
 				Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__PARTICIPANT_REFS, true, false, true, null, null, null));
 	}
 

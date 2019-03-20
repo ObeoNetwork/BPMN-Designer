@@ -65,6 +65,8 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements IEditi
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIncomingConversationLinksPropertyDescriptor(object);
+			addOutgoingConversationLinksPropertyDescriptor(object);
 			addIsForCompensationPropertyDescriptor(object);
 			addDefaultPropertyDescriptor(object);
 			addBoundaryEventRefsPropertyDescriptor(object);
@@ -72,6 +74,38 @@ public class ActivityItemProvider extends FlowNodeItemProvider implements IEditi
 			addCompletionQuantityPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Incoming Conversation Links feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIncomingConversationLinksPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_InteractionNode_incomingConversationLinks_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_InteractionNode_incomingConversationLinks_feature", "_UI_InteractionNode_type"),
+						Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false, true, null,
+						null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Outgoing Conversation Links feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOutgoingConversationLinksPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_InteractionNode_outgoingConversationLinks_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_InteractionNode_outgoingConversationLinks_feature", "_UI_InteractionNode_type"),
+						Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false, true, null,
+						null, null));
 	}
 
 	/**

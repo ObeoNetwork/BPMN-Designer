@@ -82,8 +82,8 @@ public class CompensateEventDefinitionItemProvider extends EventDefinitionItemPr
 						getString("_UI_PropertyDescriptor_description",
 								"_UI_CompensateEventDefinition_waitForCompletion_feature",
 								"_UI_CompensateEventDefinition_type"),
-				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, true, false, false,
-				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+						Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**

@@ -77,11 +77,11 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider impl
 	 * @generated
 	 */
 	protected void addItemSubjectRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ItemAwareElement_itemSubjectRef_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ItemAwareElement_itemSubjectRef_feature",
-								"_UI_ItemAwareElement_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ItemAwareElement_itemSubjectRef_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ItemAwareElement_itemSubjectRef_feature",
+						"_UI_ItemAwareElement_type"),
 				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, true, false, true, null, null, null));
 	}
 
@@ -92,11 +92,11 @@ public class DataStoreReferenceItemProvider extends FlowElementItemProvider impl
 	 * @generated
 	 */
 	protected void addDataStoreRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DataStoreReference_dataStoreRef_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DataStoreReference_dataStoreRef_feature",
-								"_UI_DataStoreReference_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_DataStoreReference_dataStoreRef_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_DataStoreReference_dataStoreRef_feature",
+						"_UI_DataStoreReference_type"),
 				Bpmn2Package.Literals.DATA_STORE_REFERENCE__DATA_STORE_REF, true, false, true, null, null, null));
 	}
 

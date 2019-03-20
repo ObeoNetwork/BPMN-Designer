@@ -42,7 +42,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface Activity extends FlowNode {
+public interface Activity extends FlowNode, InteractionNode {
 	/**
 	 * Returns the value of the '<em><b>Is For Compensation</b></em>' attribute.
 	 * The default value is <code>"false"</code>.

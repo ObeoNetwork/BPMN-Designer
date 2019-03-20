@@ -85,8 +85,8 @@ public class ResourceAssignmentExpressionItemProvider extends ItemProviderAdapte
 						getResourceLocator(), getString("_UI_ResourceAssignmentExpression_id_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ResourceAssignmentExpression_id_feature",
 								"_UI_ResourceAssignmentExpression_type"),
-				Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__ID, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						Bpmn2Package.Literals.RESOURCE_ASSIGNMENT_EXPRESSION__ID, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**

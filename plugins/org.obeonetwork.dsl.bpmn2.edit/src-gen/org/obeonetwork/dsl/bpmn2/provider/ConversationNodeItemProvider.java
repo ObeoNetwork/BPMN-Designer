@@ -86,8 +86,8 @@ public class ConversationNodeItemProvider extends BaseElementItemProvider implem
 						getResourceLocator(), getString("_UI_InteractionNode_incomingConversationLinks_feature"),
 						getString("_UI_PropertyDescriptor_description",
 								"_UI_InteractionNode_incomingConversationLinks_feature", "_UI_InteractionNode_type"),
-				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false, true, null, null,
-				null));
+						Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false, true, null,
+						null, null));
 	}
 
 	/**
@@ -102,8 +102,8 @@ public class ConversationNodeItemProvider extends BaseElementItemProvider implem
 						getResourceLocator(), getString("_UI_InteractionNode_outgoingConversationLinks_feature"),
 						getString("_UI_PropertyDescriptor_description",
 								"_UI_InteractionNode_outgoingConversationLinks_feature", "_UI_InteractionNode_type"),
-				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false, true, null, null,
-				null));
+						Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false, true, null,
+						null, null));
 	}
 
 	/**
@@ -145,11 +145,11 @@ public class ConversationNodeItemProvider extends BaseElementItemProvider implem
 	 * @generated
 	 */
 	protected void addMessageFlowRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ConversationNode_messageFlowRefs_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ConversationNode_messageFlowRefs_feature",
-								"_UI_ConversationNode_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ConversationNode_messageFlowRefs_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ConversationNode_messageFlowRefs_feature",
+						"_UI_ConversationNode_type"),
 				Bpmn2Package.Literals.CONVERSATION_NODE__MESSAGE_FLOW_REFS, true, false, true, null, null, null));
 	}
 

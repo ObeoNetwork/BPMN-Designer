@@ -75,11 +75,11 @@ public class CorrelationKeyItemProvider extends BaseElementItemProvider implemen
 	 * @generated
 	 */
 	protected void addCorrelationPropertyRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_CorrelationKey_correlationPropertyRef_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_CorrelationKey_correlationPropertyRef_feature", "_UI_CorrelationKey_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_CorrelationKey_correlationPropertyRef_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_CorrelationKey_correlationPropertyRef_feature",
+						"_UI_CorrelationKey_type"),
 				Bpmn2Package.Literals.CORRELATION_KEY__CORRELATION_PROPERTY_REF, true, false, true, null, null, null));
 	}
 

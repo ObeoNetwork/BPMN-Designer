@@ -24,5 +24,5 @@ package org.obeonetwork.dsl.bpmn2;
  * @model
  * @generated
  */
-public interface Task extends Activity, InteractionNode {
+public interface Task extends Activity {
 } // Task

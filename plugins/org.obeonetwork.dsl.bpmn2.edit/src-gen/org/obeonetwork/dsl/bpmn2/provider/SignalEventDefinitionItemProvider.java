@@ -73,11 +73,11 @@ public class SignalEventDefinitionItemProvider extends EventDefinitionItemProvid
 	 * @generated
 	 */
 	protected void addSignalRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_SignalEventDefinition_signalRef_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_SignalEventDefinition_signalRef_feature",
-								"_UI_SignalEventDefinition_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_SignalEventDefinition_signalRef_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_SignalEventDefinition_signalRef_feature",
+						"_UI_SignalEventDefinition_type"),
 				Bpmn2Package.Literals.SIGNAL_EVENT_DEFINITION__SIGNAL_REF, true, false, true, null, null, null));
 	}
 

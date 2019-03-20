@@ -79,8 +79,8 @@ public class ConversationAssociationItemProvider extends BaseElementItemProvider
 						getString("_UI_PropertyDescriptor_description",
 								"_UI_ConversationAssociation_innerConversationNodeRef_feature",
 								"_UI_ConversationAssociation_type"),
-				Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF, true, false, true, null,
-				null, null));
+						Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__INNER_CONVERSATION_NODE_REF, true, false, true,
+						null, null, null));
 	}
 
 	/**
@@ -96,8 +96,8 @@ public class ConversationAssociationItemProvider extends BaseElementItemProvider
 						getString("_UI_PropertyDescriptor_description",
 								"_UI_ConversationAssociation_outerConversationNodeRef_feature",
 								"_UI_ConversationAssociation_type"),
-				Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF, true, false, true, null,
-				null, null));
+						Bpmn2Package.Literals.CONVERSATION_ASSOCIATION__OUTER_CONVERSATION_NODE_REF, true, false, true,
+						null, null, null));
 	}
 
 	/**

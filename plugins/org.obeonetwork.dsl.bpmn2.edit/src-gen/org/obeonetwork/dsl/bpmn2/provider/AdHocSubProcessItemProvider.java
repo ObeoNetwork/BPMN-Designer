@@ -99,8 +99,8 @@ public class AdHocSubProcessItemProvider extends SubProcessItemProvider implemen
 						getResourceLocator(), getString("_UI_AdHocSubProcess_cancelRemainingInstances_feature"),
 						getString("_UI_PropertyDescriptor_description",
 								"_UI_AdHocSubProcess_cancelRemainingInstances_feature", "_UI_AdHocSubProcess_type"),
-				Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES, true, false, false,
-				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+						Bpmn2Package.Literals.AD_HOC_SUB_PROCESS__CANCEL_REMAINING_INSTANCES, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**

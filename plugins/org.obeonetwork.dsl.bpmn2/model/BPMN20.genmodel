@@ -6,7 +6,7 @@
     templateDirectory="org.obeonetwork.dsl.bpmn2/templates" dynamicTemplates="true"
     modelName="Bpmn2" modelPluginClass="" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject"
     rootExtendsClass="org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl" codeFormatting="true"
-    testsDirectory="/org.obeonetwork.dsl.bpmn2.tests/src-gen" importerID="org.eclipse.emf.importer.cdo"
+    testsDirectory="/org.obeonetwork.dsl.bpmn2.tests/src-gen" importerID="org.eclipse.emf.importer.ecore"
     featureDelegation="Dynamic" complianceLevel="6.0" copyrightFields="false" runtimeVersion="2.8"
     language="">
   <foreignModel>BPMN20.ecore</foreignModel>

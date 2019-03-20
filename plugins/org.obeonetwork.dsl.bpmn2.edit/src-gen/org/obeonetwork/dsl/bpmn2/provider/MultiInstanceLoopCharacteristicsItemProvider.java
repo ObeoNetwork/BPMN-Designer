@@ -89,8 +89,8 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
 						getString("_UI_PropertyDescriptor_description",
 								"_UI_MultiInstanceLoopCharacteristics_isSequential_feature",
 								"_UI_MultiInstanceLoopCharacteristics_type"),
-				Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL, true, false, false,
-				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+						Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**

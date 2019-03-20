@@ -79,8 +79,8 @@ public class GlobalBusinessRuleTaskItemProvider extends GlobalTaskItemProvider i
 						getResourceLocator(), getString("_UI_GlobalBusinessRuleTask_implementation_feature"),
 						getString("_UI_PropertyDescriptor_description",
 								"_UI_GlobalBusinessRuleTask_implementation_feature", "_UI_GlobalBusinessRuleTask_type"),
-				Bpmn2Package.Literals.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						Bpmn2Package.Literals.GLOBAL_BUSINESS_RULE_TASK__IMPLEMENTATION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**

@@ -107,11 +107,11 @@ public class FormalExpressionItemProvider extends ExpressionItemProvider impleme
 	 * @generated
 	 */
 	protected void addEvaluatesToTypeRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FormalExpression_evaluatesToTypeRef_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_FormalExpression_evaluatesToTypeRef_feature", "_UI_FormalExpression_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_FormalExpression_evaluatesToTypeRef_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_FormalExpression_evaluatesToTypeRef_feature",
+						"_UI_FormalExpression_type"),
 				Bpmn2Package.Literals.FORMAL_EXPRESSION__EVALUATES_TO_TYPE_REF, true, false, true, null, null, null));
 	}
 

@@ -1123,13 +1123,16 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
 		// Obtain or create and register interdependencies
 		BpmnDiPackageImpl theBpmnDiPackage = (BpmnDiPackageImpl) (EPackage.Registry.INSTANCE
 				.getEPackage(BpmnDiPackage.eNS_URI) instanceof BpmnDiPackageImpl
-						? EPackage.Registry.INSTANCE.getEPackage(BpmnDiPackage.eNS_URI) : BpmnDiPackage.eINSTANCE);
+						? EPackage.Registry.INSTANCE.getEPackage(BpmnDiPackage.eNS_URI)
+						: BpmnDiPackage.eINSTANCE);
 		DiPackageImpl theDiPackage = (DiPackageImpl) (EPackage.Registry.INSTANCE
 				.getEPackage(DiPackage.eNS_URI) instanceof DiPackageImpl
-						? EPackage.Registry.INSTANCE.getEPackage(DiPackage.eNS_URI) : DiPackage.eINSTANCE);
+						? EPackage.Registry.INSTANCE.getEPackage(DiPackage.eNS_URI)
+						: DiPackage.eINSTANCE);
 		DcPackageImpl theDcPackage = (DcPackageImpl) (EPackage.Registry.INSTANCE
 				.getEPackage(DcPackage.eNS_URI) instanceof DcPackageImpl
-						? EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI) : DcPackage.eINSTANCE);
+						? EPackage.Registry.INSTANCE.getEPackage(DcPackage.eNS_URI)
+						: DcPackage.eINSTANCE);
 
 		// Load packages
 		theBpmn2Package.loadPackage();

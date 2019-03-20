@@ -78,8 +78,8 @@ public class GlobalChoreographyTaskItemProvider extends ChoreographyItemProvider
 						getString("_UI_PropertyDescriptor_description",
 								"_UI_GlobalChoreographyTask_initiatingParticipantRef_feature",
 								"_UI_GlobalChoreographyTask_type"),
-				Bpmn2Package.Literals.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF, true, false, true, null,
-				null, null));
+						Bpmn2Package.Literals.GLOBAL_CHOREOGRAPHY_TASK__INITIATING_PARTICIPANT_REF, true, false, true,
+						null, null, null));
 	}
 
 	/**

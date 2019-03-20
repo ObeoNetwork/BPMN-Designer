@@ -485,8 +485,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GlobalManualTask" eSuperTypes="#//GlobalTask"/>
   <eClassifiers xsi:type="ecore:EClass" name="ManualTask" eSuperTypes="#//Task"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//Activity #//InteractionNode"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Activity" abstract="true" eSuperTypes="#//FlowNode">
+  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//Activity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Activity" abstract="true" eSuperTypes="#//FlowNode #//InteractionNode">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForCompensation" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>

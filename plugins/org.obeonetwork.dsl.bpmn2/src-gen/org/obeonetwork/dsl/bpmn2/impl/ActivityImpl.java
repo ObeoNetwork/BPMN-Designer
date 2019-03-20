@@ -24,9 +24,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.obeonetwork.dsl.bpmn2.Activity;
 import org.obeonetwork.dsl.bpmn2.BoundaryEvent;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
+import org.obeonetwork.dsl.bpmn2.ConversationLink;
 import org.obeonetwork.dsl.bpmn2.DataInputAssociation;
 import org.obeonetwork.dsl.bpmn2.DataOutputAssociation;
 import org.obeonetwork.dsl.bpmn2.InputOutputSpecification;
+import org.obeonetwork.dsl.bpmn2.InteractionNode;
 import org.obeonetwork.dsl.bpmn2.LoopCharacteristics;
 import org.obeonetwork.dsl.bpmn2.Property;
 import org.obeonetwork.dsl.bpmn2.ResourceRole;
@@ -40,6 +42,8 @@ import org.obeonetwork.dsl.bpmn2.SequenceFlow;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ActivityImpl#getIncomingConversationLinks <em>Incoming Conversation Links</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ActivityImpl#getOutgoingConversationLinks <em>Outgoing Conversation Links</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ActivityImpl#isIsForCompensation <em>Is For Compensation</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ActivityImpl#getLoopCharacteristics <em>Loop Characteristics</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.bpmn2.impl.ActivityImpl#getResources <em>Resources</em>}</li>
@@ -101,6 +105,28 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
 	@Override
 	protected EClass eStaticClass() {
 		return Bpmn2Package.Literals.ACTIVITY;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<ConversationLink> getIncomingConversationLinks() {
+		return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.ACTIVITY__INCOMING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<ConversationLink> getOutgoingConversationLinks() {
+		return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.ACTIVITY__OUTGOING_CONVERSATION_LINKS,
+				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, true);
 	}
 
 	/**
@@ -319,6 +345,12 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+		case Bpmn2Package.ACTIVITY__INCOMING_CONVERSATION_LINKS:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks())
+					.basicAdd(otherEnd, msgs);
+		case Bpmn2Package.ACTIVITY__OUTGOING_CONVERSATION_LINKS:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoingConversationLinks())
+					.basicAdd(otherEnd, msgs);
 		case Bpmn2Package.ACTIVITY__BOUNDARY_EVENT_REFS:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getBoundaryEventRefs()).basicAdd(otherEnd,
 					msgs);
@@ -334,6 +366,10 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+		case Bpmn2Package.ACTIVITY__INCOMING_CONVERSATION_LINKS:
+			return ((InternalEList<?>) getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
+		case Bpmn2Package.ACTIVITY__OUTGOING_CONVERSATION_LINKS:
+			return ((InternalEList<?>) getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
 		case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
 			return basicSetLoopCharacteristics(null, msgs);
 		case Bpmn2Package.ACTIVITY__RESOURCES:
@@ -360,6 +396,10 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case Bpmn2Package.ACTIVITY__INCOMING_CONVERSATION_LINKS:
+			return getIncomingConversationLinks();
+		case Bpmn2Package.ACTIVITY__OUTGOING_CONVERSATION_LINKS:
+			return getOutgoingConversationLinks();
 		case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
 			return isIsForCompensation();
 		case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
@@ -492,6 +532,10 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case Bpmn2Package.ACTIVITY__INCOMING_CONVERSATION_LINKS:
+			return !getIncomingConversationLinks().isEmpty();
+		case Bpmn2Package.ACTIVITY__OUTGOING_CONVERSATION_LINKS:
+			return !getOutgoingConversationLinks().isEmpty();
 		case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
 			return isIsForCompensation() != IS_FOR_COMPENSATION_EDEFAULT;
 		case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
@@ -516,6 +560,46 @@ public abstract class ActivityImpl extends FlowNodeImpl implements Activity {
 			return getCompletionQuantity() != COMPLETION_QUANTITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == InteractionNode.class) {
+			switch (derivedFeatureID) {
+			case Bpmn2Package.ACTIVITY__INCOMING_CONVERSATION_LINKS:
+				return Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS;
+			case Bpmn2Package.ACTIVITY__OUTGOING_CONVERSATION_LINKS:
+				return Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS;
+			default:
+				return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == InteractionNode.class) {
+			switch (baseFeatureID) {
+			case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+				return Bpmn2Package.ACTIVITY__INCOMING_CONVERSATION_LINKS;
+			case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+				return Bpmn2Package.ACTIVITY__OUTGOING_CONVERSATION_LINKS;
+			default:
+				return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //ActivityImpl

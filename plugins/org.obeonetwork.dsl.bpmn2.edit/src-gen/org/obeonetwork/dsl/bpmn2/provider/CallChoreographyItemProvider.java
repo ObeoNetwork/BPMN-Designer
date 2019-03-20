@@ -77,11 +77,11 @@ public class CallChoreographyItemProvider extends ChoreographyActivityItemProvid
 	 * @generated
 	 */
 	protected void addCalledChoreographyRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_CallChoreography_calledChoreographyRef_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_CallChoreography_calledChoreographyRef_feature", "_UI_CallChoreography_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_CallChoreography_calledChoreographyRef_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_CallChoreography_calledChoreographyRef_feature",
+						"_UI_CallChoreography_type"),
 				Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF, true, false, true, null, null, null));
 	}
 

@@ -86,11 +86,11 @@ public class ExtensionAttributeValueItemProvider extends ItemProviderAdapter imp
 	 * @generated
 	 */
 	protected void addValueRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ExtensionAttributeValue_valueRef_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ExtensionAttributeValue_valueRef_feature",
-								"_UI_ExtensionAttributeValue_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ExtensionAttributeValue_valueRef_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ExtensionAttributeValue_valueRef_feature",
+						"_UI_ExtensionAttributeValue_type"),
 				Bpmn2Package.Literals.EXTENSION_ATTRIBUTE_VALUE__VALUE_REF, true, false, true, null, null, null));
 	}
 

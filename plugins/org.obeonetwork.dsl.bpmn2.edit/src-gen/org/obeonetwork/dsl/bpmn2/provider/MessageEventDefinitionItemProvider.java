@@ -74,11 +74,11 @@ public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvi
 	 * @generated
 	 */
 	protected void addMessageRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_MessageEventDefinition_messageRef_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_MessageEventDefinition_messageRef_feature",
-								"_UI_MessageEventDefinition_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_MessageEventDefinition_messageRef_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_MessageEventDefinition_messageRef_feature",
+						"_UI_MessageEventDefinition_type"),
 				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__MESSAGE_REF, true, false, true, null, null, null));
 	}
 
@@ -89,11 +89,11 @@ public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvi
 	 * @generated
 	 */
 	protected void addOperationRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_MessageEventDefinition_operationRef_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_MessageEventDefinition_operationRef_feature", "_UI_MessageEventDefinition_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_MessageEventDefinition_operationRef_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_MessageEventDefinition_operationRef_feature",
+						"_UI_MessageEventDefinition_type"),
 				Bpmn2Package.Literals.MESSAGE_EVENT_DEFINITION__OPERATION_REF, true, false, true, null, null, null));
 	}
 

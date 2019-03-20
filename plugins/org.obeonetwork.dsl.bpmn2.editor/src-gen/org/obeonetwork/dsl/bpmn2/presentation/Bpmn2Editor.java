@@ -358,6 +358,8 @@ public class Bpmn2Editor extends MultiPageEditorPart
 	 * @generated
 	 */
 	protected EContentAdapter problemIndicationAdapter = new EContentAdapter() {
+		protected boolean dispatching;
+
 		@Override
 		public void notifyChanged(Notification notification) {
 			if (notification.getNotifier() instanceof Resource) {
@@ -372,19 +374,24 @@ public class Bpmn2Editor extends MultiPageEditorPart
 					} else {
 						resourceToDiagnosticMap.remove(resource);
 					}
-
-					if (updateProblemIndication) {
-						getSite().getShell().getDisplay().asyncExec(new Runnable() {
-							public void run() {
-								updateProblemIndication();
-							}
-						});
-					}
+					dispatchUpdateProblemIndication();
 					break;
 				}
 				}
 			} else {
 				super.notifyChanged(notification);
+			}
+		}
+
+		protected void dispatchUpdateProblemIndication() {
+			if (updateProblemIndication && !dispatching) {
+				dispatching = true;
+				getSite().getShell().getDisplay().asyncExec(new Runnable() {
+					public void run() {
+						dispatching = false;
+						updateProblemIndication();
+					}
+				});
 			}
 		}
 
@@ -397,13 +404,7 @@ public class Bpmn2Editor extends MultiPageEditorPart
 		protected void unsetTarget(Resource target) {
 			basicUnsetTarget(target);
 			resourceToDiagnosticMap.remove(target);
-			if (updateProblemIndication) {
-				getSite().getShell().getDisplay().asyncExec(new Runnable() {
-					public void run() {
-						updateProblemIndication();
-					}
-				});
-			}
+			dispatchUpdateProblemIndication();
 		}
 	};
 
@@ -927,6 +928,7 @@ public class Bpmn2Editor extends MultiPageEditorPart
 			selectionViewer = new TreeViewer(tree);
 			setCurrentViewer(selectionViewer);
 
+			selectionViewer.setUseHashlookup(true);
 			selectionViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 			selectionViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 			selectionViewer.setInput(editingDomain.getResourceSet());
@@ -1059,6 +1061,7 @@ public class Bpmn2Editor extends MultiPageEditorPart
 
 					// Set up the tree viewer.
 					//
+					contentOutlineViewer.setUseHashlookup(true);
 					contentOutlineViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 					contentOutlineViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 					contentOutlineViewer.setInput(editingDomain.getResourceSet());
@@ -1192,7 +1195,9 @@ public class Bpmn2Editor extends MultiPageEditorPart
 				// Save the resources to the file system.
 				//
 				boolean first = true;
-				for (Resource resource : editingDomain.getResourceSet().getResources()) {
+				List<Resource> resources = editingDomain.getResourceSet().getResources();
+				for (int i = 0; i < resources.size(); ++i) {
+					Resource resource = resources.get(i);
 					if ((first || !resource.getContents().isEmpty() || isPersisted(resource))
 							&& !editingDomain.isReadOnly(resource)) {
 						try {
@@ -1290,7 +1295,8 @@ public class Bpmn2Editor extends MultiPageEditorPart
 		setInputWithNotify(editorInput);
 		setPartName(editorInput.getName());
 		IProgressMonitor progressMonitor = getActionBars().getStatusLineManager() != null
-				? getActionBars().getStatusLineManager().getProgressMonitor() : new NullProgressMonitor();
+				? getActionBars().getStatusLineManager().getProgressMonitor()
+				: new NullProgressMonitor();
 		doSave(progressMonitor);
 	}
 
@@ -1386,7 +1392,8 @@ public class Bpmn2Editor extends MultiPageEditorPart
 	 */
 	public void setStatusLineManager(ISelection selection) {
 		IStatusLineManager statusLineManager = currentViewer != null && currentViewer == contentOutlineViewer
-				? contentOutlineStatusLineManager : getActionBars().getStatusLineManager();
+				? contentOutlineStatusLineManager
+				: getActionBars().getStatusLineManager();
 
 		if (statusLineManager != null) {
 			if (selection instanceof IStructuredSelection) {

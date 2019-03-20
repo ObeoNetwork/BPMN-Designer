@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.obeonetwork.dsl.bpmn2.bpmdi.*;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNDiagram;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNEdge;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabel;

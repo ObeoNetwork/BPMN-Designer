@@ -17,142 +17,6 @@ package org.obeonetwork.dsl.bpmn2.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.obeonetwork.dsl.bpmn2.Activity;
-import org.obeonetwork.dsl.bpmn2.AdHocSubProcess;
-import org.obeonetwork.dsl.bpmn2.Artifact;
-import org.obeonetwork.dsl.bpmn2.Assignment;
-import org.obeonetwork.dsl.bpmn2.Association;
-import org.obeonetwork.dsl.bpmn2.Auditing;
-import org.obeonetwork.dsl.bpmn2.BaseElement;
-import org.obeonetwork.dsl.bpmn2.BoundaryEvent;
-import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
-import org.obeonetwork.dsl.bpmn2.BusinessRuleTask;
-import org.obeonetwork.dsl.bpmn2.CallActivity;
-import org.obeonetwork.dsl.bpmn2.CallChoreography;
-import org.obeonetwork.dsl.bpmn2.CallConversation;
-import org.obeonetwork.dsl.bpmn2.CallableElement;
-import org.obeonetwork.dsl.bpmn2.CancelEventDefinition;
-import org.obeonetwork.dsl.bpmn2.CatchEvent;
-import org.obeonetwork.dsl.bpmn2.Category;
-import org.obeonetwork.dsl.bpmn2.CategoryValue;
-import org.obeonetwork.dsl.bpmn2.Choreography;
-import org.obeonetwork.dsl.bpmn2.ChoreographyActivity;
-import org.obeonetwork.dsl.bpmn2.ChoreographyTask;
-import org.obeonetwork.dsl.bpmn2.Collaboration;
-import org.obeonetwork.dsl.bpmn2.CompensateEventDefinition;
-import org.obeonetwork.dsl.bpmn2.ComplexBehaviorDefinition;
-import org.obeonetwork.dsl.bpmn2.ComplexGateway;
-import org.obeonetwork.dsl.bpmn2.ConditionalEventDefinition;
-import org.obeonetwork.dsl.bpmn2.Conversation;
-import org.obeonetwork.dsl.bpmn2.ConversationAssociation;
-import org.obeonetwork.dsl.bpmn2.ConversationLink;
-import org.obeonetwork.dsl.bpmn2.ConversationNode;
-import org.obeonetwork.dsl.bpmn2.CorrelationKey;
-import org.obeonetwork.dsl.bpmn2.CorrelationProperty;
-import org.obeonetwork.dsl.bpmn2.CorrelationPropertyBinding;
-import org.obeonetwork.dsl.bpmn2.CorrelationPropertyRetrievalExpression;
-import org.obeonetwork.dsl.bpmn2.CorrelationSubscription;
-import org.obeonetwork.dsl.bpmn2.DataAssociation;
-import org.obeonetwork.dsl.bpmn2.DataInput;
-import org.obeonetwork.dsl.bpmn2.DataInputAssociation;
-import org.obeonetwork.dsl.bpmn2.DataObject;
-import org.obeonetwork.dsl.bpmn2.DataObjectReference;
-import org.obeonetwork.dsl.bpmn2.DataOutput;
-import org.obeonetwork.dsl.bpmn2.DataOutputAssociation;
-import org.obeonetwork.dsl.bpmn2.DataState;
-import org.obeonetwork.dsl.bpmn2.DataStore;
-import org.obeonetwork.dsl.bpmn2.DataStoreReference;
-import org.obeonetwork.dsl.bpmn2.Definitions;
-import org.obeonetwork.dsl.bpmn2.Documentation;
-import org.obeonetwork.dsl.bpmn2.EndEvent;
-import org.obeonetwork.dsl.bpmn2.EndPoint;
-import org.obeonetwork.dsl.bpmn2.ErrorEventDefinition;
-import org.obeonetwork.dsl.bpmn2.Escalation;
-import org.obeonetwork.dsl.bpmn2.EscalationEventDefinition;
-import org.obeonetwork.dsl.bpmn2.Event;
-import org.obeonetwork.dsl.bpmn2.EventBasedGateway;
-import org.obeonetwork.dsl.bpmn2.EventDefinition;
-import org.obeonetwork.dsl.bpmn2.ExclusiveGateway;
-import org.obeonetwork.dsl.bpmn2.Expression;
-import org.obeonetwork.dsl.bpmn2.Extension;
-import org.obeonetwork.dsl.bpmn2.ExtensionAttributeDefinition;
-import org.obeonetwork.dsl.bpmn2.ExtensionAttributeValue;
-import org.obeonetwork.dsl.bpmn2.ExtensionDefinition;
-import org.obeonetwork.dsl.bpmn2.FlowElement;
-import org.obeonetwork.dsl.bpmn2.FlowElementsContainer;
-import org.obeonetwork.dsl.bpmn2.FlowNode;
-import org.obeonetwork.dsl.bpmn2.FormalExpression;
-import org.obeonetwork.dsl.bpmn2.Gateway;
-import org.obeonetwork.dsl.bpmn2.GlobalBusinessRuleTask;
-import org.obeonetwork.dsl.bpmn2.GlobalChoreographyTask;
-import org.obeonetwork.dsl.bpmn2.GlobalConversation;
-import org.obeonetwork.dsl.bpmn2.GlobalManualTask;
-import org.obeonetwork.dsl.bpmn2.GlobalScriptTask;
-import org.obeonetwork.dsl.bpmn2.GlobalTask;
-import org.obeonetwork.dsl.bpmn2.GlobalUserTask;
-import org.obeonetwork.dsl.bpmn2.Group;
-import org.obeonetwork.dsl.bpmn2.HumanPerformer;
-import org.obeonetwork.dsl.bpmn2.ImplicitThrowEvent;
-import org.obeonetwork.dsl.bpmn2.Import;
-import org.obeonetwork.dsl.bpmn2.InclusiveGateway;
-import org.obeonetwork.dsl.bpmn2.InputOutputBinding;
-import org.obeonetwork.dsl.bpmn2.InputOutputSpecification;
-import org.obeonetwork.dsl.bpmn2.InputSet;
-import org.obeonetwork.dsl.bpmn2.InteractionNode;
-import org.obeonetwork.dsl.bpmn2.Interface;
-import org.obeonetwork.dsl.bpmn2.IntermediateCatchEvent;
-import org.obeonetwork.dsl.bpmn2.IntermediateThrowEvent;
-import org.obeonetwork.dsl.bpmn2.ItemAwareElement;
-import org.obeonetwork.dsl.bpmn2.ItemDefinition;
-import org.obeonetwork.dsl.bpmn2.Lane;
-import org.obeonetwork.dsl.bpmn2.LaneSet;
-import org.obeonetwork.dsl.bpmn2.LinkEventDefinition;
-import org.obeonetwork.dsl.bpmn2.LoopCharacteristics;
-import org.obeonetwork.dsl.bpmn2.ManualTask;
-import org.obeonetwork.dsl.bpmn2.Message;
-import org.obeonetwork.dsl.bpmn2.MessageEventDefinition;
-import org.obeonetwork.dsl.bpmn2.MessageFlow;
-import org.obeonetwork.dsl.bpmn2.MessageFlowAssociation;
-import org.obeonetwork.dsl.bpmn2.Monitoring;
-import org.obeonetwork.dsl.bpmn2.MultiInstanceLoopCharacteristics;
-import org.obeonetwork.dsl.bpmn2.Operation;
-import org.obeonetwork.dsl.bpmn2.OutputSet;
-import org.obeonetwork.dsl.bpmn2.ParallelGateway;
-import org.obeonetwork.dsl.bpmn2.Participant;
-import org.obeonetwork.dsl.bpmn2.ParticipantAssociation;
-import org.obeonetwork.dsl.bpmn2.ParticipantMultiplicity;
-import org.obeonetwork.dsl.bpmn2.PartnerEntity;
-import org.obeonetwork.dsl.bpmn2.PartnerRole;
-import org.obeonetwork.dsl.bpmn2.Performer;
-import org.obeonetwork.dsl.bpmn2.PotentialOwner;
-import org.obeonetwork.dsl.bpmn2.Property;
-import org.obeonetwork.dsl.bpmn2.ReceiveTask;
-import org.obeonetwork.dsl.bpmn2.Relationship;
-import org.obeonetwork.dsl.bpmn2.Rendering;
-import org.obeonetwork.dsl.bpmn2.Resource;
-import org.obeonetwork.dsl.bpmn2.ResourceAssignmentExpression;
-import org.obeonetwork.dsl.bpmn2.ResourceParameter;
-import org.obeonetwork.dsl.bpmn2.ResourceParameterBinding;
-import org.obeonetwork.dsl.bpmn2.ResourceRole;
-import org.obeonetwork.dsl.bpmn2.RootElement;
-import org.obeonetwork.dsl.bpmn2.ScriptTask;
-import org.obeonetwork.dsl.bpmn2.SendTask;
-import org.obeonetwork.dsl.bpmn2.SequenceFlow;
-import org.obeonetwork.dsl.bpmn2.ServiceTask;
-import org.obeonetwork.dsl.bpmn2.Signal;
-import org.obeonetwork.dsl.bpmn2.SignalEventDefinition;
-import org.obeonetwork.dsl.bpmn2.StandardLoopCharacteristics;
-import org.obeonetwork.dsl.bpmn2.StartEvent;
-import org.obeonetwork.dsl.bpmn2.SubChoreography;
-import org.obeonetwork.dsl.bpmn2.SubConversation;
-import org.obeonetwork.dsl.bpmn2.SubProcess;
-import org.obeonetwork.dsl.bpmn2.Task;
-import org.obeonetwork.dsl.bpmn2.TerminateEventDefinition;
-import org.obeonetwork.dsl.bpmn2.TextAnnotation;
-import org.obeonetwork.dsl.bpmn2.ThrowEvent;
-import org.obeonetwork.dsl.bpmn2.TimerEventDefinition;
-import org.obeonetwork.dsl.bpmn2.Transaction;
-import org.obeonetwork.dsl.bpmn2.UserTask;
 import org.obeonetwork.dsl.bpmn2.*;
 
 /**
@@ -798,9 +662,9 @@ public class Bpmn2Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseActivity(manualTask);
 			if (result == null)
-				result = caseInteractionNode(manualTask);
-			if (result == null)
 				result = caseFlowNode(manualTask);
+			if (result == null)
+				result = caseInteractionNode(manualTask);
 			if (result == null)
 				result = caseFlowElement(manualTask);
 			if (result == null)
@@ -815,9 +679,9 @@ public class Bpmn2Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseActivity(task);
 			if (result == null)
-				result = caseInteractionNode(task);
-			if (result == null)
 				result = caseFlowNode(task);
+			if (result == null)
+				result = caseInteractionNode(task);
 			if (result == null)
 				result = caseFlowElement(task);
 			if (result == null)
@@ -831,6 +695,8 @@ public class Bpmn2Switch<T> extends Switch<T> {
 			T result = caseActivity(activity);
 			if (result == null)
 				result = caseFlowNode(activity);
+			if (result == null)
+				result = caseInteractionNode(activity);
 			if (result == null)
 				result = caseFlowElement(activity);
 			if (result == null)
@@ -958,9 +824,9 @@ public class Bpmn2Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseActivity(userTask);
 			if (result == null)
-				result = caseInteractionNode(userTask);
-			if (result == null)
 				result = caseFlowNode(userTask);
+			if (result == null)
+				result = caseInteractionNode(userTask);
 			if (result == null)
 				result = caseFlowElement(userTask);
 			if (result == null)
@@ -1640,9 +1506,9 @@ public class Bpmn2Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseActivity(serviceTask);
 			if (result == null)
-				result = caseInteractionNode(serviceTask);
-			if (result == null)
 				result = caseFlowNode(serviceTask);
+			if (result == null)
+				result = caseInteractionNode(serviceTask);
 			if (result == null)
 				result = caseFlowElement(serviceTask);
 			if (result == null)
@@ -1660,6 +1526,8 @@ public class Bpmn2Switch<T> extends Switch<T> {
 				result = caseFlowElementsContainer(subProcess);
 			if (result == null)
 				result = caseFlowNode(subProcess);
+			if (result == null)
+				result = caseInteractionNode(subProcess);
 			if (result == null)
 				result = caseFlowElement(subProcess);
 			if (result == null)
@@ -1707,6 +1575,8 @@ public class Bpmn2Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFlowNode(callActivity);
 			if (result == null)
+				result = caseInteractionNode(callActivity);
+			if (result == null)
 				result = caseFlowElement(callActivity);
 			if (result == null)
 				result = caseBaseElement(callActivity);
@@ -1722,9 +1592,9 @@ public class Bpmn2Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseActivity(sendTask);
 			if (result == null)
-				result = caseInteractionNode(sendTask);
-			if (result == null)
 				result = caseFlowNode(sendTask);
+			if (result == null)
+				result = caseInteractionNode(sendTask);
 			if (result == null)
 				result = caseFlowElement(sendTask);
 			if (result == null)
@@ -1741,9 +1611,9 @@ public class Bpmn2Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseActivity(receiveTask);
 			if (result == null)
-				result = caseInteractionNode(receiveTask);
-			if (result == null)
 				result = caseFlowNode(receiveTask);
+			if (result == null)
+				result = caseInteractionNode(receiveTask);
 			if (result == null)
 				result = caseFlowElement(receiveTask);
 			if (result == null)
@@ -1760,9 +1630,9 @@ public class Bpmn2Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseActivity(scriptTask);
 			if (result == null)
-				result = caseInteractionNode(scriptTask);
-			if (result == null)
 				result = caseFlowNode(scriptTask);
+			if (result == null)
+				result = caseInteractionNode(scriptTask);
 			if (result == null)
 				result = caseFlowElement(scriptTask);
 			if (result == null)
@@ -1779,9 +1649,9 @@ public class Bpmn2Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseActivity(businessRuleTask);
 			if (result == null)
-				result = caseInteractionNode(businessRuleTask);
-			if (result == null)
 				result = caseFlowNode(businessRuleTask);
+			if (result == null)
+				result = caseInteractionNode(businessRuleTask);
 			if (result == null)
 				result = caseFlowElement(businessRuleTask);
 			if (result == null)
@@ -1802,6 +1672,8 @@ public class Bpmn2Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFlowNode(adHocSubProcess);
 			if (result == null)
+				result = caseInteractionNode(adHocSubProcess);
+			if (result == null)
 				result = caseFlowElement(adHocSubProcess);
 			if (result == null)
 				result = caseBaseElement(adHocSubProcess);
@@ -1820,6 +1692,8 @@ public class Bpmn2Switch<T> extends Switch<T> {
 				result = caseFlowElementsContainer(transaction);
 			if (result == null)
 				result = caseFlowNode(transaction);
+			if (result == null)
+				result = caseInteractionNode(transaction);
 			if (result == null)
 				result = caseFlowElement(transaction);
 			if (result == null)

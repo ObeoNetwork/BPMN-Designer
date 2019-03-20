@@ -77,11 +77,11 @@ public class DataObjectReferenceItemProvider extends FlowElementItemProvider imp
 	 * @generated
 	 */
 	protected void addItemSubjectRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ItemAwareElement_itemSubjectRef_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ItemAwareElement_itemSubjectRef_feature",
-								"_UI_ItemAwareElement_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ItemAwareElement_itemSubjectRef_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ItemAwareElement_itemSubjectRef_feature",
+						"_UI_ItemAwareElement_type"),
 				Bpmn2Package.Literals.ITEM_AWARE_ELEMENT__ITEM_SUBJECT_REF, true, false, true, null, null, null));
 	}
 
@@ -92,11 +92,11 @@ public class DataObjectReferenceItemProvider extends FlowElementItemProvider imp
 	 * @generated
 	 */
 	protected void addDataObjectRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DataObjectReference_dataObjectRef_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DataObjectReference_dataObjectRef_feature",
-								"_UI_DataObjectReference_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_DataObjectReference_dataObjectRef_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_DataObjectReference_dataObjectRef_feature",
+						"_UI_DataObjectReference_type"),
 				Bpmn2Package.Literals.DATA_OBJECT_REFERENCE__DATA_OBJECT_REF, true, false, true, null, null, null));
 	}
 

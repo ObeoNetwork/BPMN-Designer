@@ -14,10 +14,7 @@
  */
 package org.obeonetwork.dsl.bpmn2.bpmdi.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.obeonetwork.dsl.bpmn2.BaseElement;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BPMNPlane;
 import org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage;

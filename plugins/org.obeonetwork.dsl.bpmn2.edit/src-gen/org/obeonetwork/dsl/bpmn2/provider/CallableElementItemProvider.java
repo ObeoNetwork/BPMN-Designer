@@ -94,11 +94,11 @@ public class CallableElementItemProvider extends RootElementItemProvider impleme
 	 * @generated
 	 */
 	protected void addSupportedInterfaceRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_CallableElement_supportedInterfaceRefs_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_CallableElement_supportedInterfaceRefs_feature", "_UI_CallableElement_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_CallableElement_supportedInterfaceRefs_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_CallableElement_supportedInterfaceRefs_feature",
+						"_UI_CallableElement_type"),
 				Bpmn2Package.Literals.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS, true, false, true, null, null, null));
 	}
 

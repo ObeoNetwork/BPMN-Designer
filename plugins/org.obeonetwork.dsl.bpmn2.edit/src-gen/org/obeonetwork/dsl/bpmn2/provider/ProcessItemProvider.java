@@ -127,11 +127,11 @@ public class ProcessItemProvider extends CallableElementItemProvider implements 
 	 * @generated
 	 */
 	protected void addDefinitionalCollaborationRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Process_definitionalCollaborationRef_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_Process_definitionalCollaborationRef_feature", "_UI_Process_type"),
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_Process_definitionalCollaborationRef_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_Process_definitionalCollaborationRef_feature",
+						"_UI_Process_type"),
 				Bpmn2Package.Literals.PROCESS__DEFINITIONAL_COLLABORATION_REF, true, false, true, null, null, null));
 	}
 
