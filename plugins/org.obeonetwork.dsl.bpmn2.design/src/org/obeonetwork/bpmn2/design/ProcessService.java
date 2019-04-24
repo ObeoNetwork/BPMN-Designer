@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.eclipse.emf.cdo.eresource.CDOResource;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
@@ -11,14 +12,30 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
+import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
+import org.obeonetwork.dsl.bpmn2.ChoreographyTask;
 import org.obeonetwork.dsl.bpmn2.Collaboration;
+import org.obeonetwork.dsl.bpmn2.ComplexGateway;
 import org.obeonetwork.dsl.bpmn2.Definitions;
+import org.obeonetwork.dsl.bpmn2.EndEvent;
+import org.obeonetwork.dsl.bpmn2.EventBasedGateway;
+import org.obeonetwork.dsl.bpmn2.ExclusiveGateway;
 import org.obeonetwork.dsl.bpmn2.FlowElement;
+import org.obeonetwork.dsl.bpmn2.FlowElementsContainer;
+import org.obeonetwork.dsl.bpmn2.FlowNode;
+import org.obeonetwork.dsl.bpmn2.ImplicitThrowEvent;
+import org.obeonetwork.dsl.bpmn2.InclusiveGateway;
 import org.obeonetwork.dsl.bpmn2.InteractionNode;
+import org.obeonetwork.dsl.bpmn2.IntermediateCatchEvent;
+import org.obeonetwork.dsl.bpmn2.Lane;
 import org.obeonetwork.dsl.bpmn2.MessageFlow;
+import org.obeonetwork.dsl.bpmn2.ParallelGateway;
 import org.obeonetwork.dsl.bpmn2.Process;
 import org.obeonetwork.dsl.bpmn2.RootElement;
+import org.obeonetwork.dsl.bpmn2.SequenceFlow;
+import org.obeonetwork.dsl.bpmn2.StartEvent;
 import org.obeonetwork.dsl.bpmn2.SubProcess;
+import org.obeonetwork.dsl.bpmn2.Task;
 
 public class ProcessService {
 
@@ -115,6 +132,95 @@ public class ProcessService {
 			return ((SubProcess) eo).getFlowElements();
 		}
 		return null;
+	}
+
+	public boolean isApplicableType(EObject element) {
+		return isEventTaskOrGateway(element) || isLaneChoregraphyTaskOrSubProcess(element);
+	}
+
+	private boolean isEventTaskOrGateway(EObject element) {
+		return element instanceof ImplicitThrowEvent || element instanceof IntermediateCatchEvent
+				|| element instanceof EndEvent || element instanceof StartEvent || element instanceof Task
+				|| element instanceof ParallelGateway || element instanceof ExclusiveGateway
+				|| element instanceof InclusiveGateway || element instanceof ComplexGateway
+				|| element instanceof EventBasedGateway;
+	}
+
+	private boolean isLaneChoregraphyTaskOrSubProcess(EObject element) {
+		return element instanceof Lane || element instanceof ChoreographyTask || element instanceof SubProcess;
+	}
+
+	public EObject createFlowElement(EObject container, String typeToCreate) {
+		FlowElementsContainer flowElementsContainer = getFlowElementsContainer(container);
+		FlowNode newElement = createElement(typeToCreate);
+		flowElementsContainer.getFlowElements().add(newElement);
+
+		if (isEventTaskOrGateway(container)) {
+			newElement.getLanes().addAll(((FlowNode) container).getLanes());
+			SequenceFlow sequence = Bpmn2Factory.eINSTANCE.createSequenceFlow();
+			flowElementsContainer.getFlowElements().add(sequence);
+			sequence.setSourceRef((FlowNode) container);
+			sequence.setTargetRef(newElement);
+		} else if (isLaneChoregraphyTaskOrSubProcess(container)) {
+			if (container instanceof Lane) {
+				newElement.getLanes().add((Lane) container);
+			} else if (container instanceof ChoreographyTask) {
+				// TODO Nothing in the odesign migrated
+			} else if (container instanceof SubProcess) {
+				// TODO Nothing in the odesign migrated
+			}
+		}
+		return newElement;
+	}
+
+	private FlowElementsContainer getFlowElementsContainer(EObject eo) {
+		FlowElementsContainer result = null;
+		if (eo instanceof FlowElementsContainer) {
+			result = (FlowElementsContainer) eo;
+		} else if (eo.eContainer() != null && !(eo.eContainer() instanceof CDOResource)) {
+			result = getFlowElementsContainer(eo.eContainer());
+		}
+		return result;
+	}
+
+	private FlowNode createElement(String typeToCreate) {
+		FlowNode result = null;
+		if ("StartEvent".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createStartEvent();
+		} else if ("EndEvent".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createEndEvent();
+		} else if ("IntermediateCatchEvent".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createIntermediateCatchEvent();
+		} else if ("IntermediateThrowEvent".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createIntermediateThrowEvent();
+		} else if ("Task".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createTask();
+		} else if ("BusinessRuleTask".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createBusinessRuleTask();
+		} else if ("ManualTask".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createManualTask();
+		} else if ("ReceiveTask".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createReceiveTask();
+		} else if ("ScriptTask".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createScriptTask();
+		} else if ("SendTask".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createSendTask();
+		} else if ("ServiceTask".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createServiceTask();
+		} else if ("UserTask".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createUserTask();
+		} else if ("ParallelGateway".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createParallelGateway();
+		} else if ("ExclusiveGateway".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createExclusiveGateway();
+		} else if ("InclusiveGateway".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createInclusiveGateway();
+		} else if ("ComplexGateway".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createComplexGateway();
+		} else if ("EventBasedGateway".equals(typeToCreate)) {
+			result = Bpmn2Factory.eINSTANCE.createEventBasedGateway();
+		}
+		return result;
 	}
 
 }

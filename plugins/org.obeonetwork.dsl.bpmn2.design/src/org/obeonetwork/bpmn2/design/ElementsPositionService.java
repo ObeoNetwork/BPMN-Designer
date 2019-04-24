@@ -72,6 +72,9 @@ public class ElementsPositionService {
 		Node laneSetNode = SiriusGMFHelper.getGmfNode(laneSetContainer);
 		Bounds laneSetBounds = (Bounds)laneSetNode.getLayoutConstraint();
 		int laneSetWidth = laneSetBounds.getWidth();
+		if(laneSetWidth==-1) {
+			return laneSetContainer;
+		}
 
 		for(DDiagramElement laneDiagramElement : laneSetContainer.getElements()) {
 			if(laneDiagramElement.getTarget() instanceof Lane) {
@@ -88,8 +91,7 @@ public class ElementsPositionService {
 	}
 	
 	public EObject moveElement(EObject referenceOwner, String referenceName, final EObject element, final EObject relativeElement) {
-		
-        EStructuralFeature feature = referenceOwner.eClass().getEStructuralFeature(referenceName);
+		EStructuralFeature feature = referenceOwner.eClass().getEStructuralFeature(referenceName);
         @SuppressWarnings("unchecked")
 		EList<EObject> list = (EList<EObject>) referenceOwner.eGet(feature);
         
