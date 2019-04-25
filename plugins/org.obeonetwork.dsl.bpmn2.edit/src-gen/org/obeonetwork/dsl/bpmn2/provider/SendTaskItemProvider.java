@@ -19,7 +19,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -29,22 +28,22 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.SendTask;
 
 /**
- * This is the item provider adapter for a {@link org.obeonetwork.dsl.bpmn2.SendTask} object.
- * <!-- begin-user-doc -->
+ * This is the item provider adapter for a
+ * {@link org.obeonetwork.dsl.bpmn2.SendTask} object. <!-- begin-user-doc -->
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class SendTaskItemProvider extends TaskItemProvider implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This constructs an instance from a factory and a notifier. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public SendTaskItemProvider(AdapterFactory adapterFactory) {
@@ -52,9 +51,9 @@ public class SendTaskItemProvider extends TaskItemProvider implements IEditingDo
 	}
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This returns the property descriptors for the adapted class. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -70,9 +69,9 @@ public class SendTaskItemProvider extends TaskItemProvider implements IEditingDo
 	}
 
 	/**
-	 * This adds a property descriptor for the Implementation feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Implementation feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addImplementationPropertyDescriptor(Object object) {
@@ -86,9 +85,9 @@ public class SendTaskItemProvider extends TaskItemProvider implements IEditingDo
 	}
 
 	/**
-	 * This adds a property descriptor for the Operation Ref feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Operation Ref feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addOperationRefPropertyDescriptor(Object object) {
@@ -101,9 +100,9 @@ public class SendTaskItemProvider extends TaskItemProvider implements IEditingDo
 	}
 
 	/**
-	 * This adds a property descriptor for the Message Ref feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Message Ref feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addMessageRefPropertyDescriptor(Object object) {
@@ -116,9 +115,8 @@ public class SendTaskItemProvider extends TaskItemProvider implements IEditingDo
 	}
 
 	/**
-	 * This returns SendTask.png.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This returns SendTask.png. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -131,8 +129,8 @@ public class SendTaskItemProvider extends TaskItemProvider implements IEditingDo
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -141,23 +139,22 @@ public class SendTaskItemProvider extends TaskItemProvider implements IEditingDo
 	}
 
 	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+	 * This returns the label text for the adapted class. <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		String label = ((SendTask) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_SendTask_type")
-				: getString("_UI_SendTask_type") + " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_SendTask_type") : label;
 	}
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This handles model notifications by calling {@link #updateChildren} to update
+	 * any cached children and by creating a viewer notification, which it passes to
+	 * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -173,10 +170,10 @@ public class SendTaskItemProvider extends TaskItemProvider implements IEditingDo
 	}
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing
+	 * the children that can be created under this object. <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override

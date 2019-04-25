@@ -19,7 +19,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -29,22 +28,22 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.OutputSet;
 
 /**
- * This is the item provider adapter for a {@link org.obeonetwork.dsl.bpmn2.OutputSet} object.
- * <!-- begin-user-doc -->
+ * This is the item provider adapter for a
+ * {@link org.obeonetwork.dsl.bpmn2.OutputSet} object. <!-- begin-user-doc -->
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class OutputSetItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This constructs an instance from a factory and a notifier. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public OutputSetItemProvider(AdapterFactory adapterFactory) {
@@ -52,9 +51,9 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
 	}
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This returns the property descriptors for the adapted class. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -72,9 +71,9 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
 	}
 
 	/**
-	 * This adds a property descriptor for the Data Output Refs feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Data Output Refs feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addDataOutputRefsPropertyDescriptor(Object object) {
@@ -87,9 +86,9 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
 	}
 
 	/**
-	 * This adds a property descriptor for the Optional Output Refs feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Optional Output Refs feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addOptionalOutputRefsPropertyDescriptor(Object object) {
@@ -103,8 +102,8 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
 
 	/**
 	 * This adds a property descriptor for the While Executing Output Refs feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addWhileExecutingOutputRefsPropertyDescriptor(Object object) {
@@ -117,9 +116,9 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
+	 * This adds a property descriptor for the Name feature. <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
@@ -133,9 +132,9 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
 	}
 
 	/**
-	 * This adds a property descriptor for the Input Set Refs feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds a property descriptor for the Input Set Refs feature. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected void addInputSetRefsPropertyDescriptor(Object object) {
@@ -148,9 +147,8 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
 	}
 
 	/**
-	 * This returns OutputSet.png.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This returns OutputSet.png. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -163,8 +161,8 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -173,23 +171,22 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
 	}
 
 	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
+	 * This returns the label text for the adapted class. <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		String label = ((OutputSet) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_OutputSet_type")
-				: getString("_UI_OutputSet_type") + " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_OutputSet_type") : label;
 	}
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This handles model notifications by calling {@link #updateChildren} to update
+	 * any cached children and by creating a viewer notification, which it passes to
+	 * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -205,10 +202,10 @@ public class OutputSetItemProvider extends BaseElementItemProvider implements IE
 	}
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing
+	 * the children that can be created under this object. <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
