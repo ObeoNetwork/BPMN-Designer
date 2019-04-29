@@ -1,17 +1,23 @@
 package org.obeonetwork.bpmn2.design;
 
+import org.eclipse.emf.cdo.eresource.CDOResource;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.diagram.DNodeContainer;
+import org.obeonetwork.dsl.bpmn2.Artifact;
+import org.obeonetwork.dsl.bpmn2.Association;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
 import org.obeonetwork.dsl.bpmn2.BusinessRuleTask;
 import org.obeonetwork.dsl.bpmn2.CallActivity;
 import org.obeonetwork.dsl.bpmn2.ChoreographyTask;
+import org.obeonetwork.dsl.bpmn2.Collaboration;
+import org.obeonetwork.dsl.bpmn2.Definitions;
 import org.obeonetwork.dsl.bpmn2.FlowElementsContainer;
 import org.obeonetwork.dsl.bpmn2.GlobalBusinessRuleTask;
 import org.obeonetwork.dsl.bpmn2.GlobalManualTask;
 import org.obeonetwork.dsl.bpmn2.GlobalScriptTask;
 import org.obeonetwork.dsl.bpmn2.GlobalUserTask;
 import org.obeonetwork.dsl.bpmn2.ManualTask;
+import org.obeonetwork.dsl.bpmn2.MessageFlow;
 import org.obeonetwork.dsl.bpmn2.ReceiveTask;
 import org.obeonetwork.dsl.bpmn2.ScriptTask;
 import org.obeonetwork.dsl.bpmn2.SendTask;
@@ -106,7 +112,6 @@ public class TaskService {
 	}
 
 	private Task clone(Task task, Task cloneTask) {
-
 		cloneTask.getBoundaryEventRefs().addAll(task.getBoundaryEventRefs());
 		cloneTask.getCategoryValueRef().addAll(task.getCategoryValueRef());
 		cloneTask.getDataInputAssociations().addAll(task.getDataInputAssociations());
@@ -137,7 +142,56 @@ public class TaskService {
 		container.getFlowElements().remove(task);
 		container.getFlowElements().add(cloneTask);
 
+		updateAssociations(task, cloneTask);
+		updateMessageFlows(task, cloneTask);
+
 		return cloneTask;
+	}
+
+	private void updateMessageFlows(Task task, Task cloneTask) {
+		Definitions def = ProcessService.getDefinitionsObject(cloneTask);
+		if (def != null) {
+			for (EObject eo : def.getRootElements()) {
+				if (eo instanceof Collaboration) {
+					Collaboration collaboration = (Collaboration) eo;
+					for (MessageFlow mf : collaboration.getMessageFlows()) {
+						if (task.equals(mf.getSourceRef())) {
+							mf.setSourceRef(cloneTask);
+						}
+						if (task.equals(mf.getTargetRef())) {
+							mf.setTargetRef(cloneTask);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	private void updateAssociations(Task task, Task cloneTask) {
+		org.obeonetwork.dsl.bpmn2.Process process = getProcess(cloneTask);
+		if (process != null) {
+			for (Artifact artifact : process.getArtifacts()) {
+				if (artifact instanceof Association) {
+					Association association = (Association) artifact;
+					if (task.equals(association.getSourceRef())) {
+						association.setSourceRef(cloneTask);
+					}
+					if (task.equals(association.getTargetRef())) {
+						association.setTargetRef(cloneTask);
+					}
+				}
+			}
+		}
+	}
+
+	private org.obeonetwork.dsl.bpmn2.Process getProcess(EObject eObject) {
+		if (eObject instanceof org.obeonetwork.dsl.bpmn2.Process) {
+			return (org.obeonetwork.dsl.bpmn2.Process) eObject;
+		}
+		if ((eObject.eContainer() != null) && !(eObject.eContainer() instanceof CDOResource)) {
+			return getProcess(eObject.eContainer());
+		}
+		return null;
 	}
 
 	public Task convertToTask(final DNodeContainer view) {

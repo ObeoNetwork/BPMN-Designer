@@ -946,43 +946,57 @@
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToBusinessRuleTask_ContextAction" label="Business Rule Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.views.convertToBusinessRuleTask()"/>
+                <firstModelOperations xsi:type="tool_1:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:view.convertToBusinessRuleTask()"/>
+                </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToManualTask_ContextAction" label="Manual Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.views.convertToManualTask()"/>
+                <firstModelOperations xsi:type="tool_1:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:view.convertToManualTask()"/>
+                </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="Receive Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/receiveTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.views.convertToReceiveTask()"/>
+                <firstModelOperations xsi:type="tool_1:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:view.convertToReceiveTask()"/>
+                </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="Script Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/scriptTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.views.convertToScriptTask()"/>
+                <firstModelOperations xsi:type="tool_1:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:view.convertToScriptTask()"/>
+                </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToSendTask_ContextAction" label="Send Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.views.convertToSendTask()"/>
+                <firstModelOperations xsi:type="tool_1:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:view.convertToSendTask()"/>
+                </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToServiceTask_ContextAction" label="Service Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.views.convertToServiceTask()"/>
+                <firstModelOperations xsi:type="tool_1:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:view.convertToServiceTask()"/>
+                </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="ConvertTaskToUserTask_ContextAction" label="User Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.views.convertToUserTask()"/>
+                <firstModelOperations xsi:type="tool_1:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:view.convertToUserTask()"/>
+                </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
           </ownedTools>
