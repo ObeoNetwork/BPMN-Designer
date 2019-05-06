@@ -45,11 +45,13 @@ public class ProcessService {
 	}
 
 	public static Definitions getDefinitionsObject(EObject eObject) {
-		EObject cursor = eObject;
-		while (!(cursor instanceof Definitions)) {
-			cursor = cursor.eContainer();
+		if(eObject==null) {
+			return null;
 		}
-		return (Definitions) cursor;
+		if(eObject instanceof Definitions) {
+			return (Definitions) eObject;
+		}
+		return getDefinitionsObject(eObject.eContainer());
 	}
 
 	public static void duplicate(Process process) {
