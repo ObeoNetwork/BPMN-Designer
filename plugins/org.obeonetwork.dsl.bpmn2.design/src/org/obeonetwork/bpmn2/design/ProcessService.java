@@ -1,8 +1,20 @@
+/**
+ * Copyright (c) 2011-2019 Obeo.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Obeo - initial API and implementation
+ * 
+ */
 package org.obeonetwork.bpmn2.design;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 
 import org.eclipse.emf.cdo.eresource.CDOResource;
 import org.eclipse.emf.common.util.EList;
@@ -12,6 +24,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
+import org.obeonetwork.dsl.bpmn2.BoundaryEvent;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
 import org.obeonetwork.dsl.bpmn2.ChoreographyTask;
 import org.obeonetwork.dsl.bpmn2.Collaboration;
@@ -39,21 +52,6 @@ import org.obeonetwork.dsl.bpmn2.Task;
 
 public class ProcessService {
 
-	public static EObject trace(EObject eObject) {
-		System.out.println("Trace(" + eObject + ")");
-		return eObject;
-	}
-
-	public static Definitions getDefinitionsObject(EObject eObject) {
-		if(eObject==null) {
-			return null;
-		}
-		if(eObject instanceof Definitions) {
-			return (Definitions) eObject;
-		}
-		return getDefinitionsObject(eObject.eContainer());
-	}
-
 	public static void duplicate(Process process) {
 
 		// Clone the process
@@ -71,7 +69,7 @@ public class ProcessService {
 		copier.copyReferences();
 
 		// Clone message flows
-		Definitions defs = getDefinitionsObject(process);
+		Definitions defs = ServiceHelper.getDefinitionsObject(process);
 		for (RootElement root : defs.getRootElements()) {
 			if (root instanceof Collaboration) {
 				Collaboration collaboration = (Collaboration) root;
@@ -141,11 +139,11 @@ public class ProcessService {
 	}
 
 	private boolean isEventTaskOrGateway(EObject element) {
-		return element instanceof ImplicitThrowEvent || element instanceof IntermediateCatchEvent
-				|| element instanceof EndEvent || element instanceof StartEvent || element instanceof Task
-				|| element instanceof ParallelGateway || element instanceof ExclusiveGateway
-				|| element instanceof InclusiveGateway || element instanceof ComplexGateway
-				|| element instanceof EventBasedGateway;
+		return element instanceof BoundaryEvent || element instanceof ImplicitThrowEvent
+				|| element instanceof IntermediateCatchEvent || element instanceof EndEvent
+				|| element instanceof StartEvent || element instanceof Task || element instanceof ParallelGateway
+				|| element instanceof ExclusiveGateway || element instanceof InclusiveGateway
+				|| element instanceof ComplexGateway || element instanceof EventBasedGateway;
 	}
 
 	private boolean isLaneChoregraphyTaskOrSubProcess(EObject element) {
@@ -158,7 +156,8 @@ public class ProcessService {
 		flowElementsContainer.getFlowElements().add(newElement);
 
 		if (isEventTaskOrGateway(container)) {
-			newElement.getLanes().addAll(((FlowNode) container).getLanes());
+			List<Lane> lanes = ((FlowNode) container).getLanes();
+			newElement.getLanes().addAll(lanes);
 			SequenceFlow sequence = Bpmn2Factory.eINSTANCE.createSequenceFlow();
 			flowElementsContainer.getFlowElements().add(sequence);
 			sequence.setSourceRef((FlowNode) container);

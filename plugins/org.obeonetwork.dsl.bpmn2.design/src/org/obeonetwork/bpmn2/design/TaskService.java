@@ -1,16 +1,29 @@
+/**
+ * Copyright (c) 2011-2019 Obeo.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Obeo - initial API and implementation
+ * 
+ */
 package org.obeonetwork.bpmn2.design;
 
-import org.eclipse.emf.cdo.eresource.CDOResource;
+import java.util.Collection;
+
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature.Setting;
+import org.eclipse.emf.ecore.util.ECrossReferenceAdapter;
 import org.eclipse.sirius.diagram.DNodeContainer;
-import org.obeonetwork.dsl.bpmn2.Artifact;
 import org.obeonetwork.dsl.bpmn2.Association;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
+import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.BusinessRuleTask;
 import org.obeonetwork.dsl.bpmn2.CallActivity;
 import org.obeonetwork.dsl.bpmn2.ChoreographyTask;
-import org.obeonetwork.dsl.bpmn2.Collaboration;
-import org.obeonetwork.dsl.bpmn2.Definitions;
 import org.obeonetwork.dsl.bpmn2.FlowElementsContainer;
 import org.obeonetwork.dsl.bpmn2.GlobalBusinessRuleTask;
 import org.obeonetwork.dsl.bpmn2.GlobalManualTask;
@@ -35,62 +48,41 @@ import org.obeonetwork.dsl.bpmn2.impl.TaskImpl;
 public class TaskService {
 
 	public boolean isLikeScriptTask(final EObject eObject) {
-
 		boolean isLikeScriptTask = eObject instanceof ScriptTask;
-
 		if (!isLikeScriptTask && eObject instanceof CallActivity) {
 			CallActivity callActivity = (CallActivity) eObject;
 			isLikeScriptTask = callActivity.getCalledElementRef() instanceof GlobalScriptTask;
 		}
-
 		return isLikeScriptTask;
-
 	}
 
 	public boolean isLikeBusinessRuleTask(final EObject eObject) {
-
 		boolean isLikeBusinessRuleTask = eObject instanceof BusinessRuleTask;
-
 		if (!isLikeBusinessRuleTask && eObject instanceof CallActivity) {
 			CallActivity callActivity = (CallActivity) eObject;
 			isLikeBusinessRuleTask = callActivity.getCalledElementRef() instanceof GlobalBusinessRuleTask;
 		}
-
 		return isLikeBusinessRuleTask;
-
 	}
 
 	public boolean isLikeUserTask(final EObject eObject) {
-
 		boolean isLikeUserTask = eObject instanceof UserTask;
-
 		if (!isLikeUserTask && eObject instanceof CallActivity) {
 			CallActivity callActivity = (CallActivity) eObject;
 			isLikeUserTask = callActivity.getCalledElementRef() instanceof GlobalUserTask;
 		}
-
 		return isLikeUserTask;
-
 	}
 
 	public boolean isLikeManualTask(final EObject eObject) {
-
 		boolean isLikeManualTask = eObject instanceof ManualTask;
-
 		if (!isLikeManualTask && eObject instanceof CallActivity) {
 			CallActivity callActivity = (CallActivity) eObject;
 			isLikeManualTask = callActivity.getCalledElementRef() instanceof GlobalManualTask;
 		}
-
 		return isLikeManualTask;
-
 	}
 
-	// <%self.filter("Task")!=null && self.filter("UserTask")==null &&
-	// self.filter("ServiceTask")==null && self.filter("SendTask")==null &&
-	// self.filter("ScriptTask")==null && self.filter("ReceiveTask")==null &&
-	// self.filter("ManualTask")==null && self.filter("BusinessRuleTask")==null
-	// && self.filter("CallActivity")==null%>
 	public boolean isLikeTask(final EObject eObject) {
 		return eObject instanceof Task && eObject.getClass().isAssignableFrom(TaskImpl.class);
 	}
@@ -109,6 +101,52 @@ public class TaskService {
 
 	public boolean isLikeChoreographyTask(final EObject eObject) {
 		return eObject instanceof ChoreographyTask;
+	}
+
+	public Task convertToTask(final DNodeContainer view) {
+		Task eObject = (Task) view.getTarget();
+		if (!eObject.getClass().isAssignableFrom(TaskImpl.class)) {
+			return (Task) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getTask());
+		}
+		return eObject;
+	}
+
+	public BusinessRuleTask convertToBusinessRuleTask(final DNodeContainer view) {
+		return (BusinessRuleTask) convertToSpecificTask((Task) view.getTarget(),
+				Bpmn2Package.eINSTANCE.getBusinessRuleTask());
+	}
+
+	public ManualTask convertToManualTask(final DNodeContainer view) {
+		return (ManualTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getManualTask());
+	}
+
+	public ReceiveTask convertToReceiveTask(final DNodeContainer view) {
+		return (ReceiveTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getReceiveTask());
+	}
+
+	public ScriptTask convertToScriptTask(final DNodeContainer view) {
+		return (ScriptTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getScriptTask());
+	}
+
+	public SendTask convertToSendTask(final DNodeContainer view) {
+		return (SendTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getSendTask());
+	}
+
+	public ServiceTask convertToServiceTask(final DNodeContainer view) {
+		return (ServiceTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getServiceTask());
+	}
+
+	public UserTask convertToUserTask(final DNodeContainer view) {
+		return (UserTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getUserTask());
+	}
+
+	private Task convertToSpecificTask(Task task, EClass eClass) {
+		if (eClass.equals(task.eClass())) {
+			return task;
+		} else {
+			Task cloneTask = clone(task, (Task) Bpmn2Factory.eINSTANCE.create(eClass));
+			return cloneTask;
+		}
 	}
 
 	private Task clone(Task task, Task cloneTask) {
@@ -138,145 +176,45 @@ public class TaskService {
 		cloneTask.setName(task.getName());
 		cloneTask.setStartQuantity(task.getStartQuantity());
 
+		updateMessageFlowsAndAssociations(task, cloneTask);
+
 		FlowElementsContainer container = (FlowElementsContainer) task.eContainer();
 		container.getFlowElements().remove(task);
 		container.getFlowElements().add(cloneTask);
 
-		updateAssociations(task, cloneTask);
-		updateMessageFlows(task, cloneTask);
-
 		return cloneTask;
 	}
 
-	private void updateMessageFlows(Task task, Task cloneTask) {
-		Definitions def = ProcessService.getDefinitionsObject(cloneTask);
-		if (def != null) {
-			for (EObject eo : def.getRootElements()) {
-				if (eo instanceof Collaboration) {
-					Collaboration collaboration = (Collaboration) eo;
-					for (MessageFlow mf : collaboration.getMessageFlows()) {
-						if (task.equals(mf.getSourceRef())) {
-							mf.setSourceRef(cloneTask);
-						}
-						if (task.equals(mf.getTargetRef())) {
-							mf.setTargetRef(cloneTask);
-						}
-					}
+	private void updateMessageFlowsAndAssociations(Task task, Task cloneTask) {
+		ECrossReferenceAdapter eCrossReferenceAdapter = ServiceHelper.getCrossReferenceAdapter(task);
+		if (eCrossReferenceAdapter != null) {
+			Collection<Setting> inverseReferences = eCrossReferenceAdapter.getInverseReferences(task);
+			for (Setting setting : inverseReferences) {
+				EObject object = setting.getEObject();
+				if (object instanceof MessageFlow) {
+					updateMessageFlow(task, cloneTask, (MessageFlow) object);
+				} else if (object instanceof Association) {
+					updateAssociation(task, cloneTask, (Association) object);
 				}
 			}
 		}
 	}
 
-	private void updateAssociations(Task task, Task cloneTask) {
-		org.obeonetwork.dsl.bpmn2.Process process = getProcess(cloneTask);
-		if (process != null) {
-			for (Artifact artifact : process.getArtifacts()) {
-				if (artifact instanceof Association) {
-					Association association = (Association) artifact;
-					if (task.equals(association.getSourceRef())) {
-						association.setSourceRef(cloneTask);
-					}
-					if (task.equals(association.getTargetRef())) {
-						association.setTargetRef(cloneTask);
-					}
-				}
-			}
+	private void updateMessageFlow(Task task, Task cloneTask, MessageFlow messageFlow) {
+		if (task.equals(messageFlow.getSourceRef())) {
+			messageFlow.setSourceRef(cloneTask);
+		}
+		if (task.equals(messageFlow.getTargetRef())) {
+			messageFlow.setTargetRef(cloneTask);
 		}
 	}
 
-	private org.obeonetwork.dsl.bpmn2.Process getProcess(EObject eObject) {
-		if (eObject instanceof org.obeonetwork.dsl.bpmn2.Process) {
-			return (org.obeonetwork.dsl.bpmn2.Process) eObject;
+	private void updateAssociation(Task task, Task cloneTask, Association association) {
+		if (task.equals(association.getSourceRef())) {
+			association.setSourceRef(cloneTask);
 		}
-		if ((eObject.eContainer() != null) && !(eObject.eContainer() instanceof CDOResource)) {
-			return getProcess(eObject.eContainer());
-		}
-		return null;
-	}
-
-	public Task convertToTask(final DNodeContainer view) {
-		Task eObject = (Task) view.getTarget();
-		if (!eObject.getClass().isAssignableFrom(TaskImpl.class)) {
-			view.setTarget(clone(eObject, Bpmn2Factory.eINSTANCE.createTask()));
-		}
-		return eObject;
-	}
-
-	public BusinessRuleTask convertToBusinessRuleTask(final DNodeContainer view) {
-		Task eObject = (Task) view.getTarget();
-		if (eObject instanceof BusinessRuleTask) {
-			return (BusinessRuleTask) eObject;
-		} else {
-			BusinessRuleTask cloneTask = (BusinessRuleTask) clone(eObject,
-					Bpmn2Factory.eINSTANCE.createBusinessRuleTask());
-			view.setTarget(cloneTask);
-			return cloneTask;
-		}
-	}
-
-	public ManualTask convertToManualTask(final DNodeContainer view) {
-		Task eObject = (Task) view.getTarget();
-		if (eObject instanceof ManualTask) {
-			return (ManualTask) eObject;
-		} else {
-			ManualTask cloneTask = (ManualTask) clone(eObject, Bpmn2Factory.eINSTANCE.createManualTask());
-			view.setTarget(cloneTask);
-			return cloneTask;
-		}
-	}
-
-	public ReceiveTask convertToReceiveTask(final DNodeContainer view) {
-		Task eObject = (Task) view.getTarget();
-		if (eObject instanceof ReceiveTask) {
-			return (ReceiveTask) eObject;
-		} else {
-			ReceiveTask cloneTask = (ReceiveTask) clone(eObject, Bpmn2Factory.eINSTANCE.createReceiveTask());
-			view.setTarget(cloneTask);
-			return cloneTask;
-		}
-	}
-
-	public ScriptTask convertToScriptTask(final DNodeContainer view) {
-		Task eObject = (Task) view.getTarget();
-		if (eObject instanceof ScriptTask) {
-			return (ScriptTask) eObject;
-		} else {
-			ScriptTask cloneTask = (ScriptTask) clone(eObject, Bpmn2Factory.eINSTANCE.createScriptTask());
-			view.setTarget(cloneTask);
-			return cloneTask;
-		}
-	}
-
-	public SendTask convertToSendTask(final DNodeContainer view) {
-		Task eObject = (Task) view.getTarget();
-		if (eObject instanceof SendTask) {
-			return (SendTask) eObject;
-		} else {
-			SendTask cloneTask = (SendTask) clone(eObject, Bpmn2Factory.eINSTANCE.createSendTask());
-			view.setTarget(cloneTask);
-			return cloneTask;
-		}
-	}
-
-	public ServiceTask convertToServiceTask(final DNodeContainer view) {
-		Task eObject = (Task) view.getTarget();
-		if (eObject instanceof ServiceTask) {
-			return (ServiceTask) eObject;
-		} else {
-			ServiceTask cloneTask = (ServiceTask) clone(eObject, Bpmn2Factory.eINSTANCE.createServiceTask());
-			view.setTarget(cloneTask);
-			return cloneTask;
-		}
-	}
-
-	public UserTask convertToUserTask(final DNodeContainer view) {
-		Task eObject = (Task) view.getTarget();
-		if (eObject instanceof UserTask) {
-			return (UserTask) eObject;
-		} else {
-			UserTask cloneTask = (UserTask) clone(eObject, Bpmn2Factory.eINSTANCE.createUserTask());
-			view.setTarget(cloneTask);
-			return cloneTask;
+		if (task.equals(association.getTargetRef())) {
+			association.setTargetRef(cloneTask);
 		}
 	}
 
