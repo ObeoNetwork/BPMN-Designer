@@ -799,6 +799,39 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="User Task" label="%UserTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.createFlowElement('UserTask')">
+                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
+                  <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                    <initialOperation/>
+                  </buttons>
+                  <page name="TaskPage" domainClass="bpmn2::Task" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.3/@ownedTools[name='User%20Task']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
+                  <groups name="TaskGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Task" semanticCandidateExpression="var:self">
+                    <controls xsi:type="properties:TextDescription" name="TaskName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                        </firstModelOperations>
+                      </initialOperation>
+                    </controls>
+                    <controls xsi:type="properties:TextAreaDescription" name="TaskDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="description" valueExpression="var:newValue"/>
+                        </firstModelOperations>
+                      </initialOperation>
+                    </controls>
+                  </groups>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
           <ownedTools xsi:type="tool_1:ToolDescription" name="Sub Process" label="%SubProcess" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SubProcess.png">
             <element name="element"/>
             <elementView name="elementView"/>
@@ -834,39 +867,6 @@
                       </controls>
                     </groups>
                   </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool_1:ToolDescription" name="User Task" label="%UserTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.createFlowElement('UserTask')">
-                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
-                  <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                    <initialOperation/>
-                  </buttons>
-                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                    <initialOperation/>
-                  </buttons>
-                  <page name="TaskPage" domainClass="bpmn2::Task" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.3/@ownedTools[name='User%20Task']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
-                  <groups name="TaskGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Task" semanticCandidateExpression="var:self">
-                    <controls xsi:type="properties:TextDescription" name="TaskName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
-                      <initialOperation>
-                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                          <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
-                        </firstModelOperations>
-                      </initialOperation>
-                    </controls>
-                    <controls xsi:type="properties:TextAreaDescription" name="TaskDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
-                      <initialOperation>
-                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                          <subModelOperations xsi:type="tool_1:SetValue" featureName="description" valueExpression="var:newValue"/>
-                        </firstModelOperations>
-                      </initialOperation>
-                    </controls>
-                  </groups>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -2302,6 +2302,39 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="User Task" label="%UserTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.createFlowElement('UserTask')">
+                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
+                  <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                    <initialOperation/>
+                  </buttons>
+                  <page name="TaskPage" domainClass="bpmn2::Task" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.2/@ownedTools[name='User%20Task']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
+                  <groups name="TaskGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Task" semanticCandidateExpression="var:self">
+                    <controls xsi:type="properties:TextDescription" name="TaskName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                        </firstModelOperations>
+                      </initialOperation>
+                    </controls>
+                    <controls xsi:type="properties:TextAreaDescription" name="TaskDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="description" valueExpression="var:newValue"/>
+                        </firstModelOperations>
+                      </initialOperation>
+                    </controls>
+                  </groups>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
           <ownedTools xsi:type="tool_1:ToolDescription" name="Sub Process" label="%SubProcess" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SubProcess.png">
             <element name="element"/>
             <elementView name="elementView"/>
@@ -2337,39 +2370,6 @@
                       </controls>
                     </groups>
                   </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool_1:ToolDescription" name="User Task" label="%UserTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.createFlowElement('UserTask')">
-                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
-                  <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                    <initialOperation/>
-                  </buttons>
-                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                    <initialOperation/>
-                  </buttons>
-                  <page name="TaskPage" domainClass="bpmn2::Task" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.2/@ownedTools[name='User%20Task']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
-                  <groups name="TaskGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Task" semanticCandidateExpression="var:self">
-                    <controls xsi:type="properties:TextDescription" name="TaskName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
-                      <initialOperation>
-                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                          <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
-                        </firstModelOperations>
-                      </initialOperation>
-                    </controls>
-                    <controls xsi:type="properties:TextAreaDescription" name="TaskDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
-                      <initialOperation>
-                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                          <subModelOperations xsi:type="tool_1:SetValue" featureName="description" valueExpression="var:newValue"/>
-                        </firstModelOperations>
-                      </initialOperation>
-                    </controls>
-                  </groups>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
