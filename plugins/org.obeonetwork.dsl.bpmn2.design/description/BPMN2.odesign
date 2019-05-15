@@ -871,7 +871,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)" forceRefresh="true" candidatesExpression="aql:self.eResource().eAllContents(bpmn2::CallableElement)" rootExpression="aql:self.eResource()" childrenExpression="aql:self.eContents()->filter(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.gif">
+          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)" forceRefresh="true" candidatesExpression="aql:self.eResource().eAllContents(bpmn2::CallableElement)" rootExpression="aql:self.eResource()" childrenExpression="aql:self.eContents()->filter(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -2374,7 +2374,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)" forceRefresh="true" candidatesExpression="aql:self.eResource().eAllContents(bpmn2::CallableElement)" rootExpression="aql:self.getDefinitionsObject().eContents(bpmn2::CallableElement)" childrenExpression="aql:self.eContents()->filter(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.gif">
+          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)" forceRefresh="true" candidatesExpression="aql:self.eResource().eAllContents(bpmn2::CallableElement)" rootExpression="aql:self.getDefinitionsObject().eContents(bpmn2::CallableElement)" childrenExpression="aql:self.eContents()->filter(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
