@@ -666,14 +666,10 @@ public class Bpmn2FactoryImpl extends EFactoryImpl implements Bpmn2Factory {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated NOT
+	 * @generated
 	 */
 	public org.obeonetwork.dsl.bpmn2.Process createProcess() {
 		ProcessImpl process = new ProcessImpl();
-		LaneSet laneSet = this.createLaneSet();
-		process.getLaneSets().add(laneSet);
-		Lane lane = this.createLane();
-		laneSet.getLanes().add(lane);
 		return process;
 	}
 
