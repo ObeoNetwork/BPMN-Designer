@@ -112,6 +112,13 @@ public class CallActivityItemProvider extends ActivityItemProvider implements IE
 	@Override
 	public String getText(Object object) {
 		String label = ((CallActivity) object).getName();
+		String processName = null;
+		if (((CallActivity) object).getCalledElementRef() != null) {
+			processName = ((CallActivity) object).getCalledElementRef().getName();
+		}
+		if (processName != null) {
+			label = (label == null ? "" : label) + "->" + processName;
+		}
 		return label == null || label.length() == 0 ? getString("_UI_CallActivity_type") : label;
 	}
 
