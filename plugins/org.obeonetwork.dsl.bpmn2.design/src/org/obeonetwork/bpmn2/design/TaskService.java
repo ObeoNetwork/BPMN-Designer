@@ -47,6 +47,21 @@ import org.obeonetwork.dsl.bpmn2.impl.TaskImpl;
  */
 public class TaskService {
 
+	public String getLabel(Task task, boolean borderedNodes) {
+		String result = " \n \n" + task.getName();
+		// if (borderedNodes) {
+		// result = " \n" + result;
+		// }
+		return result;
+	}
+
+	public String trimLabel(EObject eo, String newLabel) {
+		if (eo instanceof Task) {
+			return newLabel.trim();
+		}
+		return newLabel;
+	}
+
 	public boolean isLikeScriptTask(final EObject eObject) {
 		boolean isLikeScriptTask = eObject instanceof ScriptTask;
 		if (!isLikeScriptTask && eObject instanceof CallActivity) {
