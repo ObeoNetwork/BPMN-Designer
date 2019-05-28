@@ -87,7 +87,7 @@ public class ExpandCollapseService {
 									laneView = d;
 								}
 							}
-							if (laneView.getGraphicalFilters().size() == 0) {
+							if (laneView==null || laneView.getGraphicalFilters()==null || laneView.getGraphicalFilters().size() == 0) {
 								return result;
 							}
 							return object;
