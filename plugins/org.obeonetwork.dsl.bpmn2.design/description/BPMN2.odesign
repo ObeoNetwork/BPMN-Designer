@@ -1862,7 +1862,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="LinkProcess" label="%LinkProcess" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::Process) else self.eResource().eAllContents(bpmn2::Process) endif" message="%SelectProcess">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="LinkProcess" label="%LinkProcess" precondition="aql:self.oclIsTypeOf(bpmn2::Participant)" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::Process) else self.eResource().eAllContents(bpmn2::Process) endif" message="%SelectProcess">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
