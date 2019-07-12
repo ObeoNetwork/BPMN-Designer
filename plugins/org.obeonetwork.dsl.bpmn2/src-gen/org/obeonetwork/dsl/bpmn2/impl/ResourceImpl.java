@@ -40,146 +40,148 @@ import org.obeonetwork.dsl.bpmn2.ResourceParameter;
  * @generated
  */
 public class ResourceImpl extends RootElementImpl implements Resource {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
+    /**
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected static final String NAME_EDEFAULT = null;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ResourceImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ResourceImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.RESOURCE;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.RESOURCE;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.RESOURCE__NAME, Bpmn2Package.Literals.RESOURCE__NAME, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getName() {
+        return (String) eDynamicGet(Bpmn2Package.RESOURCE__NAME, Bpmn2Package.Literals.RESOURCE__NAME, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.RESOURCE__NAME, Bpmn2Package.Literals.RESOURCE__NAME, newName);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setName(String newName) {
+        eDynamicSet(Bpmn2Package.RESOURCE__NAME, Bpmn2Package.Literals.RESOURCE__NAME, newName);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<ResourceParameter> getResourceParameters() {
-		return (EList<ResourceParameter>) eDynamicGet(Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS,
-				Bpmn2Package.Literals.RESOURCE__RESOURCE_PARAMETERS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<ResourceParameter> getResourceParameters() {
+        return (EList<ResourceParameter>) eDynamicGet(Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS, Bpmn2Package.Literals.RESOURCE__RESOURCE_PARAMETERS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
-			return ((InternalEList<?>) getResourceParameters()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
+            return ((InternalEList<?>) getResourceParameters()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.RESOURCE__NAME:
-			return getName();
-		case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
-			return getResourceParameters();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.RESOURCE__NAME:
+            return getName();
+        case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
+            return getResourceParameters();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.RESOURCE__NAME:
-			setName((String) newValue);
-			return;
-		case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
-			getResourceParameters().clear();
-			getResourceParameters().addAll((Collection<? extends ResourceParameter>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.RESOURCE__NAME:
+            setName((String) newValue);
+            return;
+        case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
+            getResourceParameters().clear();
+            getResourceParameters().addAll((Collection<? extends ResourceParameter>) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.RESOURCE__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
-			getResourceParameters().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.RESOURCE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
+            getResourceParameters().clear();
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.RESOURCE__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
-		case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
-			return !getResourceParameters().isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.RESOURCE__NAME:
+            return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
+        case Bpmn2Package.RESOURCE__RESOURCE_PARAMETERS:
+            return !getResourceParameters().isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //ResourceImpl

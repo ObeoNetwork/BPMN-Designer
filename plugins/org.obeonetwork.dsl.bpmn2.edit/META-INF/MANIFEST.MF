@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.edit;singleton:=true
+Automatic-Module-Name: org.obeonetwork.dsl.bpmn2.edit
 Bundle-Version: 4.0.1.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.obeonetwork.dsl.bpmn2.provider.Bpmn2EditPlugin$Implementation
@@ -14,6 +15,5 @@ Export-Package: org.obeonetwork.dsl.bpmn2.bpmdi.provider,
  org.obeonetwork.dsl.dd.di.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.obeonetwork.dsl.bpmn2;visibility:=reexport,
- org.eclipse.emf.edit;visibility:=reexport,
- org.eclipse.emf.cdo;bundle-version="4.0.1"
+ org.eclipse.emf.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

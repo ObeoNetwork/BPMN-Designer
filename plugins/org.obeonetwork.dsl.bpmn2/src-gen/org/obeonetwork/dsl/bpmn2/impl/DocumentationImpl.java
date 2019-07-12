@@ -33,150 +33,151 @@ import org.obeonetwork.dsl.bpmn2.Documentation;
  * @generated
  */
 public class DocumentationImpl extends BaseElementImpl implements Documentation {
-	/**
-	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getText()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TEXT_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getTextFormat() <em>Text Format</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTextFormat()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TEXT_FORMAT_EDEFAULT = "text/plain";
+    /**
+     * The default value of the '{@link #getText() <em>Text</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getText()
+     * @generated
+     * @ordered
+     */
+    protected static final String TEXT_EDEFAULT = null;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DocumentationImpl() {
-		super();
-	}
+    /**
+     * The default value of the '{@link #getTextFormat() <em>Text Format</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getTextFormat()
+     * @generated
+     * @ordered
+     */
+    protected static final String TEXT_FORMAT_EDEFAULT = "text/plain";
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.DOCUMENTATION;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected DocumentationImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getText() {
-		return (String) eDynamicGet(Bpmn2Package.DOCUMENTATION__TEXT, Bpmn2Package.Literals.DOCUMENTATION__TEXT, true,
-				true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.DOCUMENTATION;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setText(String newText) {
-		eDynamicSet(Bpmn2Package.DOCUMENTATION__TEXT, Bpmn2Package.Literals.DOCUMENTATION__TEXT, newText);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getText() {
+        return (String) eDynamicGet(Bpmn2Package.DOCUMENTATION__TEXT, Bpmn2Package.Literals.DOCUMENTATION__TEXT, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTextFormat() {
-		return (String) eDynamicGet(Bpmn2Package.DOCUMENTATION__TEXT_FORMAT,
-				Bpmn2Package.Literals.DOCUMENTATION__TEXT_FORMAT, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setText(String newText) {
+        eDynamicSet(Bpmn2Package.DOCUMENTATION__TEXT, Bpmn2Package.Literals.DOCUMENTATION__TEXT, newText);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTextFormat(String newTextFormat) {
-		eDynamicSet(Bpmn2Package.DOCUMENTATION__TEXT_FORMAT, Bpmn2Package.Literals.DOCUMENTATION__TEXT_FORMAT,
-				newTextFormat);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getTextFormat() {
+        return (String) eDynamicGet(Bpmn2Package.DOCUMENTATION__TEXT_FORMAT, Bpmn2Package.Literals.DOCUMENTATION__TEXT_FORMAT, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.DOCUMENTATION__TEXT:
-			return getText();
-		case Bpmn2Package.DOCUMENTATION__TEXT_FORMAT:
-			return getTextFormat();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setTextFormat(String newTextFormat) {
+        eDynamicSet(Bpmn2Package.DOCUMENTATION__TEXT_FORMAT, Bpmn2Package.Literals.DOCUMENTATION__TEXT_FORMAT, newTextFormat);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.DOCUMENTATION__TEXT:
-			setText((String) newValue);
-			return;
-		case Bpmn2Package.DOCUMENTATION__TEXT_FORMAT:
-			setTextFormat((String) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.DOCUMENTATION__TEXT:
+            return getText();
+        case Bpmn2Package.DOCUMENTATION__TEXT_FORMAT:
+            return getTextFormat();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.DOCUMENTATION__TEXT:
-			setText(TEXT_EDEFAULT);
-			return;
-		case Bpmn2Package.DOCUMENTATION__TEXT_FORMAT:
-			setTextFormat(TEXT_FORMAT_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.DOCUMENTATION__TEXT:
+            setText((String) newValue);
+            return;
+        case Bpmn2Package.DOCUMENTATION__TEXT_FORMAT:
+            setTextFormat((String) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.DOCUMENTATION__TEXT:
-			return TEXT_EDEFAULT == null ? getText() != null : !TEXT_EDEFAULT.equals(getText());
-		case Bpmn2Package.DOCUMENTATION__TEXT_FORMAT:
-			return TEXT_FORMAT_EDEFAULT == null ? getTextFormat() != null
-					: !TEXT_FORMAT_EDEFAULT.equals(getTextFormat());
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.DOCUMENTATION__TEXT:
+            setText(TEXT_EDEFAULT);
+            return;
+        case Bpmn2Package.DOCUMENTATION__TEXT_FORMAT:
+            setTextFormat(TEXT_FORMAT_EDEFAULT);
+            return;
+        }
+        super.eUnset(featureID);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.DOCUMENTATION__TEXT:
+            return TEXT_EDEFAULT == null ? getText() != null : !TEXT_EDEFAULT.equals(getText());
+        case Bpmn2Package.DOCUMENTATION__TEXT_FORMAT:
+            return TEXT_FORMAT_EDEFAULT == null ? getTextFormat() != null : !TEXT_FORMAT_EDEFAULT.equals(getTextFormat());
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //DocumentationImpl

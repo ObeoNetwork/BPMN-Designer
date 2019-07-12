@@ -34,113 +34,112 @@ import org.obeonetwork.dsl.dd.di.impl.LabelImpl;
  * @generated
  */
 public class BPMNLabelImpl extends LabelImpl implements BPMNLabel {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BPMNLabelImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected BPMNLabelImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return BpmnDiPackage.Literals.BPMN_LABEL;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return BpmnDiPackage.Literals.BPMN_LABEL;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BPMNLabelStyle getLabelStyle() {
-		return (BPMNLabelStyle) eDynamicGet(BpmnDiPackage.BPMN_LABEL__LABEL_STYLE,
-				BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public BPMNLabelStyle getLabelStyle() {
+        return (BPMNLabelStyle) eDynamicGet(BpmnDiPackage.BPMN_LABEL__LABEL_STYLE, BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BPMNLabelStyle basicGetLabelStyle() {
-		return (BPMNLabelStyle) eDynamicGet(BpmnDiPackage.BPMN_LABEL__LABEL_STYLE,
-				BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public BPMNLabelStyle basicGetLabelStyle() {
+        return (BPMNLabelStyle) eDynamicGet(BpmnDiPackage.BPMN_LABEL__LABEL_STYLE, BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLabelStyle(BPMNLabelStyle newLabelStyle) {
-		eDynamicSet(BpmnDiPackage.BPMN_LABEL__LABEL_STYLE, BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE,
-				newLabelStyle);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setLabelStyle(BPMNLabelStyle newLabelStyle) {
+        eDynamicSet(BpmnDiPackage.BPMN_LABEL__LABEL_STYLE, BpmnDiPackage.Literals.BPMN_LABEL__LABEL_STYLE, newLabelStyle);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
-			if (resolve)
-				return getLabelStyle();
-			return basicGetLabelStyle();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
+            if (resolve)
+                return getLabelStyle();
+            return basicGetLabelStyle();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
-			setLabelStyle((BPMNLabelStyle) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
+            setLabelStyle((BPMNLabelStyle) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
-			setLabelStyle((BPMNLabelStyle) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
+            setLabelStyle((BPMNLabelStyle) null);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
-			return basicGetLabelStyle() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_LABEL__LABEL_STYLE:
+            return basicGetLabelStyle() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //BPMNLabelImpl

@@ -4,13 +4,12 @@
     modelDirectory="/org.obeonetwork.dsl.bpmn2/src-gen" creationIcons="false" editDirectory="/org.obeonetwork.dsl.bpmn2.edit/src-gen"
     editorDirectory="/org.obeonetwork.dsl.bpmn2.editor/src-gen" modelPluginID="org.obeonetwork.dsl.bpmn2"
     templateDirectory="org.obeonetwork.dsl.bpmn2/templates" dynamicTemplates="true"
-    modelName="Bpmn2" modelPluginClass="" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject"
+    modelName="Bpmn2" modelPluginClass=""
     rootExtendsClass="org.obeonetwork.dsl.bpmn2.BPMN2ObjectImpl" codeFormatting="true"
     testsDirectory="/org.obeonetwork.dsl.bpmn2.tests/src-gen" importerID="org.eclipse.emf.importer.ecore"
     featureDelegation="Dynamic" complianceLevel="6.0" copyrightFields="false" runtimeVersion="2.8"
     language="">
   <foreignModel>BPMN20.ecore</foreignModel>
-  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <genPackages prefix="Bpmn2" basePackage="org.obeonetwork.dsl" disposableProviderFactory="true"
       loadInitialization="true" multipleEditorPages="false" ecorePackage="BPMN20.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="BPMN20.ecore#//ItemKind">

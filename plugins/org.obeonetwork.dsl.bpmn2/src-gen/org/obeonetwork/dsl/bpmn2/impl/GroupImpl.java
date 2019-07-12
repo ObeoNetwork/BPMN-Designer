@@ -33,113 +33,112 @@ import org.obeonetwork.dsl.bpmn2.Group;
  * @generated
  */
 public class GroupImpl extends ArtifactImpl implements Group {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GroupImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected GroupImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.GROUP;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.GROUP;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CategoryValue getCategoryValueRef() {
-		return (CategoryValue) eDynamicGet(Bpmn2Package.GROUP__CATEGORY_VALUE_REF,
-				Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public CategoryValue getCategoryValueRef() {
+        return (CategoryValue) eDynamicGet(Bpmn2Package.GROUP__CATEGORY_VALUE_REF, Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CategoryValue basicGetCategoryValueRef() {
-		return (CategoryValue) eDynamicGet(Bpmn2Package.GROUP__CATEGORY_VALUE_REF,
-				Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CategoryValue basicGetCategoryValueRef() {
+        return (CategoryValue) eDynamicGet(Bpmn2Package.GROUP__CATEGORY_VALUE_REF, Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCategoryValueRef(CategoryValue newCategoryValueRef) {
-		eDynamicSet(Bpmn2Package.GROUP__CATEGORY_VALUE_REF, Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF,
-				newCategoryValueRef);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setCategoryValueRef(CategoryValue newCategoryValueRef) {
+        eDynamicSet(Bpmn2Package.GROUP__CATEGORY_VALUE_REF, Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF, newCategoryValueRef);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
-			if (resolve)
-				return getCategoryValueRef();
-			return basicGetCategoryValueRef();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
+            if (resolve)
+                return getCategoryValueRef();
+            return basicGetCategoryValueRef();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
-			setCategoryValueRef((CategoryValue) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
+            setCategoryValueRef((CategoryValue) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
-			setCategoryValueRef((CategoryValue) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
+            setCategoryValueRef((CategoryValue) null);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
-			return basicGetCategoryValueRef() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.GROUP__CATEGORY_VALUE_REF:
+            return basicGetCategoryValueRef() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //GroupImpl

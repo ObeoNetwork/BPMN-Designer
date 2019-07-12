@@ -26,23 +26,23 @@ import org.obeonetwork.dsl.bpmn2.HumanPerformer;
  * @generated
  */
 public class HumanPerformerImpl extends PerformerImpl implements HumanPerformer {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected HumanPerformerImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected HumanPerformerImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.HUMAN_PERFORMER;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.HUMAN_PERFORMER;
+    }
 
 } //HumanPerformerImpl

@@ -45,234 +45,228 @@ import org.obeonetwork.dsl.bpmn2.ExtensionDefinition;
  * @generated
  */
 public abstract class BaseElementImpl extends BPMN2ObjectImpl implements BaseElement {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
+    /**
+     * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @see #getId()
+     * @generated
+     * @ordered
+     */
+    protected static final String ID_EDEFAULT = null;
 
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
+    /**
+     * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see #getDescription()
+     * @generated
+     * @ordered
+     */
+    protected static final String DESCRIPTION_EDEFAULT = null;
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BaseElementImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    protected BaseElementImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.BASE_ELEMENT;
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.BASE_ELEMENT;
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getId() {
-		return (String) eDynamicGet(Bpmn2Package.BASE_ELEMENT__ID, Bpmn2Package.Literals.BASE_ELEMENT__ID, true, true);
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getId() {
+        return (String) eDynamicGet(Bpmn2Package.BASE_ELEMENT__ID, Bpmn2Package.Literals.BASE_ELEMENT__ID, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setId(String newId) {
-		eDynamicSet(Bpmn2Package.BASE_ELEMENT__ID, Bpmn2Package.Literals.BASE_ELEMENT__ID, newId);
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setId(String newId) {
+        eDynamicSet(Bpmn2Package.BASE_ELEMENT__ID, Bpmn2Package.Literals.BASE_ELEMENT__ID, newId);
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	@SuppressWarnings("unchecked")
-	public EList<ExtensionDefinition> getExtensionDefinitions() {
-		return (EList<ExtensionDefinition>) eDynamicGet(Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS,
-				Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_DEFINITIONS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    @SuppressWarnings("unchecked")
+    public EList<ExtensionDefinition> getExtensionDefinitions() {
+        return (EList<ExtensionDefinition>) eDynamicGet(Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS, Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_DEFINITIONS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	@SuppressWarnings("unchecked")
-	public EList<ExtensionAttributeValue> getExtensionValues() {
-		return (EList<ExtensionAttributeValue>) eDynamicGet(Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES,
-				Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_VALUES, true, true);
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    @SuppressWarnings("unchecked")
+    public EList<ExtensionAttributeValue> getExtensionValues() {
+        return (EList<ExtensionAttributeValue>) eDynamicGet(Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES, Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_VALUES, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	@SuppressWarnings("unchecked")
-	public EList<Documentation> getDocumentation() {
-		return (EList<Documentation>) eDynamicGet(Bpmn2Package.BASE_ELEMENT__DOCUMENTATION,
-				Bpmn2Package.Literals.BASE_ELEMENT__DOCUMENTATION, true, true);
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    @SuppressWarnings("unchecked")
+    public EList<Documentation> getDocumentation() {
+        return (EList<Documentation>) eDynamicGet(Bpmn2Package.BASE_ELEMENT__DOCUMENTATION, Bpmn2Package.Literals.BASE_ELEMENT__DOCUMENTATION, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getDescription() {
-		return (String) eDynamicGet(Bpmn2Package.BASE_ELEMENT__DESCRIPTION,
-				Bpmn2Package.Literals.BASE_ELEMENT__DESCRIPTION, true, true);
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getDescription() {
+        return (String) eDynamicGet(Bpmn2Package.BASE_ELEMENT__DESCRIPTION, Bpmn2Package.Literals.BASE_ELEMENT__DESCRIPTION, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDescription(String newDescription) {
-		eDynamicSet(Bpmn2Package.BASE_ELEMENT__DESCRIPTION, Bpmn2Package.Literals.BASE_ELEMENT__DESCRIPTION,
-				newDescription);
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setDescription(String newDescription) {
+        eDynamicSet(Bpmn2Package.BASE_ELEMENT__DESCRIPTION, Bpmn2Package.Literals.BASE_ELEMENT__DESCRIPTION, newDescription);
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-			return ((InternalEList<?>) getExtensionValues()).basicRemove(otherEnd, msgs);
-		case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
-			return ((InternalEList<?>) getDocumentation()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            return ((InternalEList<?>) getExtensionValues()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
+            return ((InternalEList<?>) getDocumentation()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.BASE_ELEMENT__ID:
-			return getId();
-		case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
-			return getExtensionDefinitions();
-		case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-			return getExtensionValues();
-		case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
-			return getDocumentation();
-		case Bpmn2Package.BASE_ELEMENT__DESCRIPTION:
-			return getDescription();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.BASE_ELEMENT__ID:
+            return getId();
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
+            return getExtensionDefinitions();
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            return getExtensionValues();
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
+            return getDocumentation();
+        case Bpmn2Package.BASE_ELEMENT__DESCRIPTION:
+            return getDescription();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.BASE_ELEMENT__ID:
-			setId((String) newValue);
-			return;
-		case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
-			getExtensionDefinitions().clear();
-			getExtensionDefinitions().addAll((Collection<? extends ExtensionDefinition>) newValue);
-			return;
-		case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-			getExtensionValues().clear();
-			getExtensionValues().addAll((Collection<? extends ExtensionAttributeValue>) newValue);
-			return;
-		case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
-			getDocumentation().clear();
-			getDocumentation().addAll((Collection<? extends Documentation>) newValue);
-			return;
-		case Bpmn2Package.BASE_ELEMENT__DESCRIPTION:
-			setDescription((String) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.BASE_ELEMENT__ID:
+            setId((String) newValue);
+            return;
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
+            getExtensionDefinitions().clear();
+            getExtensionDefinitions().addAll((Collection<? extends ExtensionDefinition>) newValue);
+            return;
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            getExtensionValues().clear();
+            getExtensionValues().addAll((Collection<? extends ExtensionAttributeValue>) newValue);
+            return;
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
+            getDocumentation().clear();
+            getDocumentation().addAll((Collection<? extends Documentation>) newValue);
+            return;
+        case Bpmn2Package.BASE_ELEMENT__DESCRIPTION:
+            setDescription((String) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.BASE_ELEMENT__ID:
-			setId(ID_EDEFAULT);
-			return;
-		case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
-			getExtensionDefinitions().clear();
-			return;
-		case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-			getExtensionValues().clear();
-			return;
-		case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
-			getDocumentation().clear();
-			return;
-		case Bpmn2Package.BASE_ELEMENT__DESCRIPTION:
-			setDescription(DESCRIPTION_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.BASE_ELEMENT__ID:
+            setId(ID_EDEFAULT);
+            return;
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
+            getExtensionDefinitions().clear();
+            return;
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            getExtensionValues().clear();
+            return;
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
+            getDocumentation().clear();
+            return;
+        case Bpmn2Package.BASE_ELEMENT__DESCRIPTION:
+            setDescription(DESCRIPTION_EDEFAULT);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.BASE_ELEMENT__ID:
-			return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
-		case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
-			return !getExtensionDefinitions().isEmpty();
-		case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
-			return !getExtensionValues().isEmpty();
-		case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
-			return !getDocumentation().isEmpty();
-		case Bpmn2Package.BASE_ELEMENT__DESCRIPTION:
-			return DESCRIPTION_EDEFAULT == null ? getDescription() != null
-					: !DESCRIPTION_EDEFAULT.equals(getDescription());
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.BASE_ELEMENT__ID:
+            return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS:
+            return !getExtensionDefinitions().isEmpty();
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
+            return !getExtensionValues().isEmpty();
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
+            return !getDocumentation().isEmpty();
+        case Bpmn2Package.BASE_ELEMENT__DESCRIPTION:
+            return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
+        }
+        return super.eIsSet(featureID);
+    }
 
 } // BaseElementImpl

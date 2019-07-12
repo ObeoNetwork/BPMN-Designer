@@ -26,23 +26,23 @@ import org.obeonetwork.dsl.bpmn2.IntermediateCatchEvent;
  * @generated
  */
 public class IntermediateCatchEventImpl extends CatchEventImpl implements IntermediateCatchEvent {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IntermediateCatchEventImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected IntermediateCatchEventImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.INTERMEDIATE_CATCH_EVENT;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.INTERMEDIATE_CATCH_EVENT;
+    }
 
 } //IntermediateCatchEventImpl

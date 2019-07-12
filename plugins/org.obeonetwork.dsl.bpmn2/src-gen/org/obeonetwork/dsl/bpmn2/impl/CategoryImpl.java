@@ -40,146 +40,148 @@ import org.obeonetwork.dsl.bpmn2.CategoryValue;
  * @generated
  */
 public class CategoryImpl extends RootElementImpl implements Category {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
+    /**
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected static final String NAME_EDEFAULT = null;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CategoryImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CategoryImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.CATEGORY;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.CATEGORY;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<CategoryValue> getCategoryValue() {
-		return (EList<CategoryValue>) eDynamicGet(Bpmn2Package.CATEGORY__CATEGORY_VALUE,
-				Bpmn2Package.Literals.CATEGORY__CATEGORY_VALUE, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<CategoryValue> getCategoryValue() {
+        return (EList<CategoryValue>) eDynamicGet(Bpmn2Package.CATEGORY__CATEGORY_VALUE, Bpmn2Package.Literals.CATEGORY__CATEGORY_VALUE, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.CATEGORY__NAME, Bpmn2Package.Literals.CATEGORY__NAME, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getName() {
+        return (String) eDynamicGet(Bpmn2Package.CATEGORY__NAME, Bpmn2Package.Literals.CATEGORY__NAME, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.CATEGORY__NAME, Bpmn2Package.Literals.CATEGORY__NAME, newName);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setName(String newName) {
+        eDynamicSet(Bpmn2Package.CATEGORY__NAME, Bpmn2Package.Literals.CATEGORY__NAME, newName);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-			return ((InternalEList<?>) getCategoryValue()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
+            return ((InternalEList<?>) getCategoryValue()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-			return getCategoryValue();
-		case Bpmn2Package.CATEGORY__NAME:
-			return getName();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
+            return getCategoryValue();
+        case Bpmn2Package.CATEGORY__NAME:
+            return getName();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-			getCategoryValue().clear();
-			getCategoryValue().addAll((Collection<? extends CategoryValue>) newValue);
-			return;
-		case Bpmn2Package.CATEGORY__NAME:
-			setName((String) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
+            getCategoryValue().clear();
+            getCategoryValue().addAll((Collection<? extends CategoryValue>) newValue);
+            return;
+        case Bpmn2Package.CATEGORY__NAME:
+            setName((String) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-			getCategoryValue().clear();
-			return;
-		case Bpmn2Package.CATEGORY__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
+            getCategoryValue().clear();
+            return;
+        case Bpmn2Package.CATEGORY__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
-			return !getCategoryValue().isEmpty();
-		case Bpmn2Package.CATEGORY__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.CATEGORY__CATEGORY_VALUE:
+            return !getCategoryValue().isEmpty();
+        case Bpmn2Package.CATEGORY__NAME:
+            return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //CategoryImpl

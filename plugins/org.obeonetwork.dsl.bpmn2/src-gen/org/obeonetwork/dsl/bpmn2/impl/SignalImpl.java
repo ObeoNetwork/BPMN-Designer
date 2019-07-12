@@ -34,150 +34,152 @@ import org.obeonetwork.dsl.bpmn2.Signal;
  * @generated
  */
 public class SignalImpl extends RootElementImpl implements Signal {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
+    /**
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected static final String NAME_EDEFAULT = null;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SignalImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SignalImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.SIGNAL;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.SIGNAL;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ItemDefinition getStructureRef() {
-		return (ItemDefinition) eDynamicGet(Bpmn2Package.SIGNAL__STRUCTURE_REF,
-				Bpmn2Package.Literals.SIGNAL__STRUCTURE_REF, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public ItemDefinition getStructureRef() {
+        return (ItemDefinition) eDynamicGet(Bpmn2Package.SIGNAL__STRUCTURE_REF, Bpmn2Package.Literals.SIGNAL__STRUCTURE_REF, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ItemDefinition basicGetStructureRef() {
-		return (ItemDefinition) eDynamicGet(Bpmn2Package.SIGNAL__STRUCTURE_REF,
-				Bpmn2Package.Literals.SIGNAL__STRUCTURE_REF, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ItemDefinition basicGetStructureRef() {
+        return (ItemDefinition) eDynamicGet(Bpmn2Package.SIGNAL__STRUCTURE_REF, Bpmn2Package.Literals.SIGNAL__STRUCTURE_REF, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStructureRef(ItemDefinition newStructureRef) {
-		eDynamicSet(Bpmn2Package.SIGNAL__STRUCTURE_REF, Bpmn2Package.Literals.SIGNAL__STRUCTURE_REF, newStructureRef);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setStructureRef(ItemDefinition newStructureRef) {
+        eDynamicSet(Bpmn2Package.SIGNAL__STRUCTURE_REF, Bpmn2Package.Literals.SIGNAL__STRUCTURE_REF, newStructureRef);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.SIGNAL__NAME, Bpmn2Package.Literals.SIGNAL__NAME, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getName() {
+        return (String) eDynamicGet(Bpmn2Package.SIGNAL__NAME, Bpmn2Package.Literals.SIGNAL__NAME, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.SIGNAL__NAME, Bpmn2Package.Literals.SIGNAL__NAME, newName);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setName(String newName) {
+        eDynamicSet(Bpmn2Package.SIGNAL__NAME, Bpmn2Package.Literals.SIGNAL__NAME, newName);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.SIGNAL__STRUCTURE_REF:
-			if (resolve)
-				return getStructureRef();
-			return basicGetStructureRef();
-		case Bpmn2Package.SIGNAL__NAME:
-			return getName();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.SIGNAL__STRUCTURE_REF:
+            if (resolve)
+                return getStructureRef();
+            return basicGetStructureRef();
+        case Bpmn2Package.SIGNAL__NAME:
+            return getName();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.SIGNAL__STRUCTURE_REF:
-			setStructureRef((ItemDefinition) newValue);
-			return;
-		case Bpmn2Package.SIGNAL__NAME:
-			setName((String) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.SIGNAL__STRUCTURE_REF:
+            setStructureRef((ItemDefinition) newValue);
+            return;
+        case Bpmn2Package.SIGNAL__NAME:
+            setName((String) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.SIGNAL__STRUCTURE_REF:
-			setStructureRef((ItemDefinition) null);
-			return;
-		case Bpmn2Package.SIGNAL__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.SIGNAL__STRUCTURE_REF:
+            setStructureRef((ItemDefinition) null);
+            return;
+        case Bpmn2Package.SIGNAL__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.SIGNAL__STRUCTURE_REF:
-			return basicGetStructureRef() != null;
-		case Bpmn2Package.SIGNAL__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.SIGNAL__STRUCTURE_REF:
+            return basicGetStructureRef() != null;
+        case Bpmn2Package.SIGNAL__NAME:
+            return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //SignalImpl

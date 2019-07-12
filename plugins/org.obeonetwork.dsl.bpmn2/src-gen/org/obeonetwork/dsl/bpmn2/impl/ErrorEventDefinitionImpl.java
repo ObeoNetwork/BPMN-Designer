@@ -32,113 +32,112 @@ import org.obeonetwork.dsl.bpmn2.ErrorEventDefinition;
  * @generated
  */
 public class ErrorEventDefinitionImpl extends EventDefinitionImpl implements ErrorEventDefinition {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ErrorEventDefinitionImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ErrorEventDefinitionImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.ERROR_EVENT_DEFINITION;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.ERROR_EVENT_DEFINITION;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public org.obeonetwork.dsl.bpmn2.Error getErrorRef() {
-		return (org.obeonetwork.dsl.bpmn2.Error) eDynamicGet(Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
-				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public org.obeonetwork.dsl.bpmn2.Error getErrorRef() {
+        return (org.obeonetwork.dsl.bpmn2.Error) eDynamicGet(Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF, Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public org.obeonetwork.dsl.bpmn2.Error basicGetErrorRef() {
-		return (org.obeonetwork.dsl.bpmn2.Error) eDynamicGet(Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
-				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public org.obeonetwork.dsl.bpmn2.Error basicGetErrorRef() {
+        return (org.obeonetwork.dsl.bpmn2.Error) eDynamicGet(Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF, Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setErrorRef(org.obeonetwork.dsl.bpmn2.Error newErrorRef) {
-		eDynamicSet(Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF,
-				Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, newErrorRef);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setErrorRef(org.obeonetwork.dsl.bpmn2.Error newErrorRef) {
+        eDynamicSet(Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF, Bpmn2Package.Literals.ERROR_EVENT_DEFINITION__ERROR_REF, newErrorRef);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF:
-			if (resolve)
-				return getErrorRef();
-			return basicGetErrorRef();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF:
+            if (resolve)
+                return getErrorRef();
+            return basicGetErrorRef();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF:
-			setErrorRef((org.obeonetwork.dsl.bpmn2.Error) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF:
+            setErrorRef((org.obeonetwork.dsl.bpmn2.Error) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF:
-			setErrorRef((org.obeonetwork.dsl.bpmn2.Error) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF:
+            setErrorRef((org.obeonetwork.dsl.bpmn2.Error) null);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF:
-			return basicGetErrorRef() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.ERROR_EVENT_DEFINITION__ERROR_REF:
+            return basicGetErrorRef() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //ErrorEventDefinitionImpl

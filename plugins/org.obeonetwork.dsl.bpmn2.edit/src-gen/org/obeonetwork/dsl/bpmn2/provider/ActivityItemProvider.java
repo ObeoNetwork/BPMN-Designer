@@ -34,284 +34,240 @@ import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 
 /**
- * This is the item provider adapter for a
- * {@link org.obeonetwork.dsl.bpmn2.Activity} object. <!-- begin-user-doc -->
+ * This is the item provider adapter for a {@link org.obeonetwork.dsl.bpmn2.Activity} object.
+ * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
-public class ActivityItemProvider extends FlowNodeItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
-	/**
-	 * This constructs an instance from a factory and a notifier. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public ActivityItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+public class ActivityItemProvider extends FlowNodeItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+    /**
+     * This constructs an instance from a factory and a notifier. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public ActivityItemProvider(AdapterFactory adapterFactory) {
+        super(adapterFactory);
+    }
 
-	/**
-	 * This returns the property descriptors for the adapted class. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+    /**
+     * This returns the property descriptors for the adapted class. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addIncomingConversationLinksPropertyDescriptor(object);
-			addOutgoingConversationLinksPropertyDescriptor(object);
-			addIsForCompensationPropertyDescriptor(object);
-			addDefaultPropertyDescriptor(object);
-			addBoundaryEventRefsPropertyDescriptor(object);
-			addStartQuantityPropertyDescriptor(object);
-			addCompletionQuantityPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addIncomingConversationLinksPropertyDescriptor(object);
+            addOutgoingConversationLinksPropertyDescriptor(object);
+            addIsForCompensationPropertyDescriptor(object);
+            addDefaultPropertyDescriptor(object);
+            addBoundaryEventRefsPropertyDescriptor(object);
+            addStartQuantityPropertyDescriptor(object);
+            addCompletionQuantityPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
-	/**
-	 * This adds a property descriptor for the Incoming Conversation Links feature.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected void addIncomingConversationLinksPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_InteractionNode_incomingConversationLinks_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_InteractionNode_incomingConversationLinks_feature", "_UI_InteractionNode_type"),
-						Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false, true, null,
-						null, null));
-	}
+    /**
+     * This adds a property descriptor for the Incoming Conversation Links feature.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addIncomingConversationLinksPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_InteractionNode_incomingConversationLinks_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_InteractionNode_incomingConversationLinks_feature", "_UI_InteractionNode_type"),
+                Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, false, true, null, null, null));
+    }
 
-	/**
-	 * This adds a property descriptor for the Outgoing Conversation Links feature.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected void addOutgoingConversationLinksPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_InteractionNode_outgoingConversationLinks_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_InteractionNode_outgoingConversationLinks_feature", "_UI_InteractionNode_type"),
-						Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false, true, null,
-						null, null));
-	}
+    /**
+     * This adds a property descriptor for the Outgoing Conversation Links feature.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addOutgoingConversationLinksPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_InteractionNode_outgoingConversationLinks_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_InteractionNode_outgoingConversationLinks_feature", "_UI_InteractionNode_type"),
+                Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, false, true, null, null, null));
+    }
 
-	/**
-	 * This adds a property descriptor for the Is For Compensation feature. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected void addIsForCompensationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Activity_isForCompensation_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Activity_isForCompensation_feature",
-								"_UI_Activity_type"),
-						Bpmn2Package.Literals.ACTIVITY__IS_FOR_COMPENSATION, true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
-	}
+    /**
+     * This adds a property descriptor for the Is For Compensation feature. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    protected void addIsForCompensationPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_Activity_isForCompensation_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Activity_isForCompensation_feature", "_UI_Activity_type"),
+                Bpmn2Package.Literals.ACTIVITY__IS_FOR_COMPENSATION, true, false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+    }
 
-	/**
-	 * This adds a property descriptor for the Default feature. <!-- begin-user-doc
-	 * --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected void addDefaultPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Activity_default_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Activity_default_feature",
-								"_UI_Activity_type"),
-						Bpmn2Package.Literals.ACTIVITY__DEFAULT, true, false, true, null, null, null));
-	}
+    /**
+     * This adds a property descriptor for the Default feature.
+     * <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addDefaultPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_Activity_default_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Activity_default_feature", "_UI_Activity_type"), Bpmn2Package.Literals.ACTIVITY__DEFAULT, true, false, true, null, null, null));
+    }
 
-	/**
-	 * This adds a property descriptor for the Boundary Event Refs feature. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected void addBoundaryEventRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Activity_boundaryEventRefs_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Activity_boundaryEventRefs_feature",
-								"_UI_Activity_type"),
-						Bpmn2Package.Literals.ACTIVITY__BOUNDARY_EVENT_REFS, true, false, true, null, null, null));
-	}
+    /**
+     * This adds a property descriptor for the Boundary Event Refs feature. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    protected void addBoundaryEventRefsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_Activity_boundaryEventRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Activity_boundaryEventRefs_feature", "_UI_Activity_type"),
+                Bpmn2Package.Literals.ACTIVITY__BOUNDARY_EVENT_REFS, true, false, true, null, null, null));
+    }
 
-	/**
-	 * This adds a property descriptor for the Start Quantity feature. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected void addStartQuantityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Activity_startQuantity_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Activity_startQuantity_feature",
-								"_UI_Activity_type"),
-						Bpmn2Package.Literals.ACTIVITY__START_QUANTITY, true, false, false,
-						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
-	}
+    /**
+     * This adds a property descriptor for the Start Quantity feature. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    protected void addStartQuantityPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_Activity_startQuantity_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Activity_startQuantity_feature", "_UI_Activity_type"),
+                Bpmn2Package.Literals.ACTIVITY__START_QUANTITY, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+    }
 
-	/**
-	 * This adds a property descriptor for the Completion Quantity feature. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected void addCompletionQuantityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Activity_completionQuantity_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Activity_completionQuantity_feature",
-								"_UI_Activity_type"),
-						Bpmn2Package.Literals.ACTIVITY__COMPLETION_QUANTITY, true, false, false,
-						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
-	}
+    /**
+     * This adds a property descriptor for the Completion Quantity feature. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    protected void addCompletionQuantityPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_Activity_completionQuantity_feature"), getString("_UI_PropertyDescriptor_description", "_UI_Activity_completionQuantity_feature", "_UI_Activity_type"),
+                Bpmn2Package.Literals.ACTIVITY__COMPLETION_QUANTITY, true, false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+    }
 
-	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an
-	 * appropriate feature for an {@link org.eclipse.emf.edit.command.AddCommand},
-	 * {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(Bpmn2Package.Literals.ACTIVITY__LOOP_CHARACTERISTICS);
-			childrenFeatures.add(Bpmn2Package.Literals.ACTIVITY__RESOURCES);
-			childrenFeatures.add(Bpmn2Package.Literals.ACTIVITY__PROPERTIES);
-			childrenFeatures.add(Bpmn2Package.Literals.ACTIVITY__IO_SPECIFICATION);
-			childrenFeatures.add(Bpmn2Package.Literals.ACTIVITY__DATA_INPUT_ASSOCIATIONS);
-			childrenFeatures.add(Bpmn2Package.Literals.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS);
-		}
-		return childrenFeatures;
-	}
+    /**
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(Bpmn2Package.Literals.ACTIVITY__LOOP_CHARACTERISTICS);
+            childrenFeatures.add(Bpmn2Package.Literals.ACTIVITY__RESOURCES);
+            childrenFeatures.add(Bpmn2Package.Literals.ACTIVITY__PROPERTIES);
+            childrenFeatures.add(Bpmn2Package.Literals.ACTIVITY__IO_SPECIFICATION);
+            childrenFeatures.add(Bpmn2Package.Literals.ACTIVITY__DATA_INPUT_ASSOCIATIONS);
+            childrenFeatures.add(Bpmn2Package.Literals.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS);
+        }
+        return childrenFeatures;
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to
-		// use for
-		// adding (see {@link AddCommand}) it as a child.
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EStructuralFeature getChildFeature(Object object, Object child) {
+        // Check the type of the specified child object and return the proper feature to use for
+        // adding (see {@link AddCommand}) it as a child.
 
-		return super.getChildFeature(object, child);
-	}
+        return super.getChildFeature(object, child);
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	protected boolean shouldComposeCreationImage() {
-		return true;
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
 
-	/**
-	 * This returns the label text for the adapted class. <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * 
-	 * @generated NOT
-	 */
-	@Override
-	public String getText(Object object) {
-		String label = ((Activity) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Activity_type") : label;
-	}
+    /**
+     * This returns the label text for the adapted class. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated NOT
+     */
+    @Override
+    public String getText(Object object) {
+        String label = ((Activity) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_Activity_type") : label;
+    }
 
-	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update
-	 * any cached children and by creating a viewer notification, which it passes to
-	 * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+    /**
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void notifyChanged(Notification notification) {
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(Activity.class)) {
-		case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
-		case Bpmn2Package.ACTIVITY__START_QUANTITY:
-		case Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
-		case Bpmn2Package.ACTIVITY__RESOURCES:
-		case Bpmn2Package.ACTIVITY__PROPERTIES:
-		case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
-		case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
-		case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(Activity.class)) {
+        case Bpmn2Package.ACTIVITY__IS_FOR_COMPENSATION:
+        case Bpmn2Package.ACTIVITY__START_QUANTITY:
+        case Bpmn2Package.ACTIVITY__COMPLETION_QUANTITY:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            return;
+        case Bpmn2Package.ACTIVITY__LOOP_CHARACTERISTICS:
+        case Bpmn2Package.ACTIVITY__RESOURCES:
+        case Bpmn2Package.ACTIVITY__PROPERTIES:
+        case Bpmn2Package.ACTIVITY__IO_SPECIFICATION:
+        case Bpmn2Package.ACTIVITY__DATA_INPUT_ASSOCIATIONS:
+        case Bpmn2Package.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+            return;
+        }
+        super.notifyChanged(notification);
+    }
 
-	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing
-	 * the children that can be created under this object. <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
+    /**
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+        super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__LOOP_CHARACTERISTICS,
-				Bpmn2Factory.eINSTANCE.createMultiInstanceLoopCharacteristics()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__LOOP_CHARACTERISTICS, Bpmn2Factory.eINSTANCE.createMultiInstanceLoopCharacteristics()));
 
-		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__LOOP_CHARACTERISTICS,
-				Bpmn2Factory.eINSTANCE.createStandardLoopCharacteristics()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__LOOP_CHARACTERISTICS, Bpmn2Factory.eINSTANCE.createStandardLoopCharacteristics()));
 
-		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES,
-				Bpmn2Factory.eINSTANCE.createResourceRole()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES, Bpmn2Factory.eINSTANCE.createResourceRole()));
 
-		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES,
-				Bpmn2Factory.eINSTANCE.createPerformer()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES, Bpmn2Factory.eINSTANCE.createPerformer()));
 
-		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES,
-				Bpmn2Factory.eINSTANCE.createHumanPerformer()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES, Bpmn2Factory.eINSTANCE.createHumanPerformer()));
 
-		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES,
-				Bpmn2Factory.eINSTANCE.createPotentialOwner()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__RESOURCES, Bpmn2Factory.eINSTANCE.createPotentialOwner()));
 
-		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__PROPERTIES,
-				Bpmn2Factory.eINSTANCE.createProperty()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__PROPERTIES, Bpmn2Factory.eINSTANCE.createProperty()));
 
-		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__IO_SPECIFICATION,
-				Bpmn2Factory.eINSTANCE.createInputOutputSpecification()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__IO_SPECIFICATION, Bpmn2Factory.eINSTANCE.createInputOutputSpecification()));
 
-		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__DATA_INPUT_ASSOCIATIONS,
-				Bpmn2Factory.eINSTANCE.createDataInputAssociation()));
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__DATA_INPUT_ASSOCIATIONS, Bpmn2Factory.eINSTANCE.createDataInputAssociation()));
 
-		newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS,
-				Bpmn2Factory.eINSTANCE.createDataOutputAssociation()));
-	}
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.ACTIVITY__DATA_OUTPUT_ASSOCIATIONS, Bpmn2Factory.eINSTANCE.createDataOutputAssociation()));
+    }
 
 }

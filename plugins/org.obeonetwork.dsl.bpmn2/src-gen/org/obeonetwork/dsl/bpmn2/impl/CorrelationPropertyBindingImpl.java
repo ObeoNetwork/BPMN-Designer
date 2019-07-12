@@ -37,169 +37,168 @@ import org.obeonetwork.dsl.bpmn2.FormalExpression;
  * @generated
  */
 public class CorrelationPropertyBindingImpl extends BaseElementImpl implements CorrelationPropertyBinding {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CorrelationPropertyBindingImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CorrelationPropertyBindingImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FormalExpression getDataPath() {
-		return (FormalExpression) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public FormalExpression getDataPath() {
+        return (FormalExpression) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH, Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDataPath(FormalExpression newDataPath, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newDataPath, Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH,
-				msgs);
-		return msgs;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetDataPath(FormalExpression newDataPath, NotificationChain msgs) {
+        msgs = eDynamicInverseAdd((InternalEObject) newDataPath, Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH, msgs);
+        return msgs;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDataPath(FormalExpression newDataPath) {
-		eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH, newDataPath);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setDataPath(FormalExpression newDataPath) {
+        eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH, Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH, newDataPath);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CorrelationProperty getCorrelationPropertyRef() {
-		return (CorrelationProperty) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public CorrelationProperty getCorrelationPropertyRef() {
+        return (CorrelationProperty) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF, Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
+                true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CorrelationProperty basicGetCorrelationPropertyRef() {
-		return (CorrelationProperty) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CorrelationProperty basicGetCorrelationPropertyRef() {
+        return (CorrelationProperty) eDynamicGet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF, Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
+                false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCorrelationPropertyRef(CorrelationProperty newCorrelationPropertyRef) {
-		eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
-				Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF,
-				newCorrelationPropertyRef);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setCorrelationPropertyRef(CorrelationProperty newCorrelationPropertyRef) {
+        eDynamicSet(Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF, Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF, newCorrelationPropertyRef);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH:
-			return basicSetDataPath(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH:
+            return basicSetDataPath(null, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH:
-			return getDataPath();
-		case Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF:
-			if (resolve)
-				return getCorrelationPropertyRef();
-			return basicGetCorrelationPropertyRef();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH:
+            return getDataPath();
+        case Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF:
+            if (resolve)
+                return getCorrelationPropertyRef();
+            return basicGetCorrelationPropertyRef();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH:
-			setDataPath((FormalExpression) newValue);
-			return;
-		case Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF:
-			setCorrelationPropertyRef((CorrelationProperty) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH:
+            setDataPath((FormalExpression) newValue);
+            return;
+        case Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF:
+            setCorrelationPropertyRef((CorrelationProperty) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH:
-			setDataPath((FormalExpression) null);
-			return;
-		case Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF:
-			setCorrelationPropertyRef((CorrelationProperty) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH:
+            setDataPath((FormalExpression) null);
+            return;
+        case Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF:
+            setCorrelationPropertyRef((CorrelationProperty) null);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH:
-			return getDataPath() != null;
-		case Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF:
-			return basicGetCorrelationPropertyRef() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH:
+            return getDataPath() != null;
+        case Bpmn2Package.CORRELATION_PROPERTY_BINDING__CORRELATION_PROPERTY_REF:
+            return basicGetCorrelationPropertyRef() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //CorrelationPropertyBindingImpl

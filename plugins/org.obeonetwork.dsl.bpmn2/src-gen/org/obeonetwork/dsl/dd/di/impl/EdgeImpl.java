@@ -42,155 +42,158 @@ import org.obeonetwork.dsl.dd.di.Edge;
  * @generated
  */
 public abstract class EdgeImpl extends DiagramElementImpl implements Edge {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EdgeImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected EdgeImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return DiPackage.Literals.EDGE;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return DiPackage.Literals.EDGE;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DiagramElement getSource() {
-		return (DiagramElement) eDynamicGet(DiPackage.EDGE__SOURCE, DiPackage.Literals.EDGE__SOURCE, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public DiagramElement getSource() {
+        return (DiagramElement) eDynamicGet(DiPackage.EDGE__SOURCE, DiPackage.Literals.EDGE__SOURCE, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DiagramElement basicGetSource() {
-		return (DiagramElement) eDynamicGet(DiPackage.EDGE__SOURCE, DiPackage.Literals.EDGE__SOURCE, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public DiagramElement basicGetSource() {
+        return (DiagramElement) eDynamicGet(DiPackage.EDGE__SOURCE, DiPackage.Literals.EDGE__SOURCE, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DiagramElement getTarget() {
-		return (DiagramElement) eDynamicGet(DiPackage.EDGE__TARGET, DiPackage.Literals.EDGE__TARGET, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public DiagramElement getTarget() {
+        return (DiagramElement) eDynamicGet(DiPackage.EDGE__TARGET, DiPackage.Literals.EDGE__TARGET, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DiagramElement basicGetTarget() {
-		return (DiagramElement) eDynamicGet(DiPackage.EDGE__TARGET, DiPackage.Literals.EDGE__TARGET, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public DiagramElement basicGetTarget() {
+        return (DiagramElement) eDynamicGet(DiPackage.EDGE__TARGET, DiPackage.Literals.EDGE__TARGET, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Point> getWaypoint() {
-		return (EList<Point>) eDynamicGet(DiPackage.EDGE__WAYPOINT, DiPackage.Literals.EDGE__WAYPOINT, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<Point> getWaypoint() {
+        return (EList<Point>) eDynamicGet(DiPackage.EDGE__WAYPOINT, DiPackage.Literals.EDGE__WAYPOINT, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case DiPackage.EDGE__WAYPOINT:
-			return ((InternalEList<?>) getWaypoint()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case DiPackage.EDGE__WAYPOINT:
+            return ((InternalEList<?>) getWaypoint()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case DiPackage.EDGE__SOURCE:
-			if (resolve)
-				return getSource();
-			return basicGetSource();
-		case DiPackage.EDGE__TARGET:
-			if (resolve)
-				return getTarget();
-			return basicGetTarget();
-		case DiPackage.EDGE__WAYPOINT:
-			return getWaypoint();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case DiPackage.EDGE__SOURCE:
+            if (resolve)
+                return getSource();
+            return basicGetSource();
+        case DiPackage.EDGE__TARGET:
+            if (resolve)
+                return getTarget();
+            return basicGetTarget();
+        case DiPackage.EDGE__WAYPOINT:
+            return getWaypoint();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case DiPackage.EDGE__WAYPOINT:
-			getWaypoint().clear();
-			getWaypoint().addAll((Collection<? extends Point>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case DiPackage.EDGE__WAYPOINT:
+            getWaypoint().clear();
+            getWaypoint().addAll((Collection<? extends Point>) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case DiPackage.EDGE__WAYPOINT:
-			getWaypoint().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case DiPackage.EDGE__WAYPOINT:
+            getWaypoint().clear();
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case DiPackage.EDGE__SOURCE:
-			return basicGetSource() != null;
-		case DiPackage.EDGE__TARGET:
-			return basicGetTarget() != null;
-		case DiPackage.EDGE__WAYPOINT:
-			return !getWaypoint().isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case DiPackage.EDGE__SOURCE:
+            return basicGetSource() != null;
+        case DiPackage.EDGE__TARGET:
+            return basicGetTarget() != null;
+        case DiPackage.EDGE__WAYPOINT:
+            return !getWaypoint().isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //EdgeImpl

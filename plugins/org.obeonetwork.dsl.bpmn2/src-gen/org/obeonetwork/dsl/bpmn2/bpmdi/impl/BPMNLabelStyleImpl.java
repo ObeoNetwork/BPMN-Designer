@@ -36,124 +36,125 @@ import org.obeonetwork.dsl.dd.di.impl.StyleImpl;
  * @generated
  */
 public class BPMNLabelStyleImpl extends StyleImpl implements BPMNLabelStyle {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BPMNLabelStyleImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected BPMNLabelStyleImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return BpmnDiPackage.Literals.BPMN_LABEL_STYLE;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return BpmnDiPackage.Literals.BPMN_LABEL_STYLE;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Font getFont() {
-		return (Font) eDynamicGet(BpmnDiPackage.BPMN_LABEL_STYLE__FONT, BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT,
-				true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Font getFont() {
+        return (Font) eDynamicGet(BpmnDiPackage.BPMN_LABEL_STYLE__FONT, BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetFont(Font newFont, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newFont, BpmnDiPackage.BPMN_LABEL_STYLE__FONT, msgs);
-		return msgs;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetFont(Font newFont, NotificationChain msgs) {
+        msgs = eDynamicInverseAdd((InternalEObject) newFont, BpmnDiPackage.BPMN_LABEL_STYLE__FONT, msgs);
+        return msgs;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFont(Font newFont) {
-		eDynamicSet(BpmnDiPackage.BPMN_LABEL_STYLE__FONT, BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT, newFont);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setFont(Font newFont) {
+        eDynamicSet(BpmnDiPackage.BPMN_LABEL_STYLE__FONT, BpmnDiPackage.Literals.BPMN_LABEL_STYLE__FONT, newFont);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
-			return basicSetFont(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
+            return basicSetFont(null, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
-			return getFont();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
+            return getFont();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
-			setFont((Font) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
+            setFont((Font) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
-			setFont((Font) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
+            setFont((Font) null);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
-			return getFont() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_LABEL_STYLE__FONT:
+            return getFont() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //BPMNLabelStyleImpl

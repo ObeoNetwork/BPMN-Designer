@@ -42,175 +42,175 @@ import org.obeonetwork.dsl.bpmn2.SequenceFlow;
  * @generated
  */
 public abstract class FlowNodeImpl extends FlowElementImpl implements FlowNode {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FlowNodeImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected FlowNodeImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.FLOW_NODE;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.FLOW_NODE;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<SequenceFlow> getOutgoing() {
-		return (EList<SequenceFlow>) eDynamicGet(Bpmn2Package.FLOW_NODE__OUTGOING,
-				Bpmn2Package.Literals.FLOW_NODE__OUTGOING, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<SequenceFlow> getOutgoing() {
+        return (EList<SequenceFlow>) eDynamicGet(Bpmn2Package.FLOW_NODE__OUTGOING, Bpmn2Package.Literals.FLOW_NODE__OUTGOING, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<SequenceFlow> getIncoming() {
-		return (EList<SequenceFlow>) eDynamicGet(Bpmn2Package.FLOW_NODE__INCOMING,
-				Bpmn2Package.Literals.FLOW_NODE__INCOMING, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<SequenceFlow> getIncoming() {
+        return (EList<SequenceFlow>) eDynamicGet(Bpmn2Package.FLOW_NODE__INCOMING, Bpmn2Package.Literals.FLOW_NODE__INCOMING, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Lane> getLanes() {
-		return (EList<Lane>) eDynamicGet(Bpmn2Package.FLOW_NODE__LANES, Bpmn2Package.Literals.FLOW_NODE__LANES, true,
-				true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<Lane> getLanes() {
+        return (EList<Lane>) eDynamicGet(Bpmn2Package.FLOW_NODE__LANES, Bpmn2Package.Literals.FLOW_NODE__LANES, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.FLOW_NODE__OUTGOING:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoing()).basicAdd(otherEnd, msgs);
-		case Bpmn2Package.FLOW_NODE__INCOMING:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncoming()).basicAdd(otherEnd, msgs);
-		case Bpmn2Package.FLOW_NODE__LANES:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getLanes()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.FLOW_NODE__OUTGOING:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoing()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.FLOW_NODE__INCOMING:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncoming()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.FLOW_NODE__LANES:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getLanes()).basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.FLOW_NODE__OUTGOING:
-			return ((InternalEList<?>) getOutgoing()).basicRemove(otherEnd, msgs);
-		case Bpmn2Package.FLOW_NODE__INCOMING:
-			return ((InternalEList<?>) getIncoming()).basicRemove(otherEnd, msgs);
-		case Bpmn2Package.FLOW_NODE__LANES:
-			return ((InternalEList<?>) getLanes()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.FLOW_NODE__OUTGOING:
+            return ((InternalEList<?>) getOutgoing()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.FLOW_NODE__INCOMING:
+            return ((InternalEList<?>) getIncoming()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.FLOW_NODE__LANES:
+            return ((InternalEList<?>) getLanes()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.FLOW_NODE__OUTGOING:
-			return getOutgoing();
-		case Bpmn2Package.FLOW_NODE__INCOMING:
-			return getIncoming();
-		case Bpmn2Package.FLOW_NODE__LANES:
-			return getLanes();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.FLOW_NODE__OUTGOING:
+            return getOutgoing();
+        case Bpmn2Package.FLOW_NODE__INCOMING:
+            return getIncoming();
+        case Bpmn2Package.FLOW_NODE__LANES:
+            return getLanes();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.FLOW_NODE__OUTGOING:
-			getOutgoing().clear();
-			getOutgoing().addAll((Collection<? extends SequenceFlow>) newValue);
-			return;
-		case Bpmn2Package.FLOW_NODE__INCOMING:
-			getIncoming().clear();
-			getIncoming().addAll((Collection<? extends SequenceFlow>) newValue);
-			return;
-		case Bpmn2Package.FLOW_NODE__LANES:
-			getLanes().clear();
-			getLanes().addAll((Collection<? extends Lane>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.FLOW_NODE__OUTGOING:
+            getOutgoing().clear();
+            getOutgoing().addAll((Collection<? extends SequenceFlow>) newValue);
+            return;
+        case Bpmn2Package.FLOW_NODE__INCOMING:
+            getIncoming().clear();
+            getIncoming().addAll((Collection<? extends SequenceFlow>) newValue);
+            return;
+        case Bpmn2Package.FLOW_NODE__LANES:
+            getLanes().clear();
+            getLanes().addAll((Collection<? extends Lane>) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.FLOW_NODE__OUTGOING:
-			getOutgoing().clear();
-			return;
-		case Bpmn2Package.FLOW_NODE__INCOMING:
-			getIncoming().clear();
-			return;
-		case Bpmn2Package.FLOW_NODE__LANES:
-			getLanes().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.FLOW_NODE__OUTGOING:
+            getOutgoing().clear();
+            return;
+        case Bpmn2Package.FLOW_NODE__INCOMING:
+            getIncoming().clear();
+            return;
+        case Bpmn2Package.FLOW_NODE__LANES:
+            getLanes().clear();
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.FLOW_NODE__OUTGOING:
-			return !getOutgoing().isEmpty();
-		case Bpmn2Package.FLOW_NODE__INCOMING:
-			return !getIncoming().isEmpty();
-		case Bpmn2Package.FLOW_NODE__LANES:
-			return !getLanes().isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.FLOW_NODE__OUTGOING:
+            return !getOutgoing().isEmpty();
+        case Bpmn2Package.FLOW_NODE__INCOMING:
+            return !getIncoming().isEmpty();
+        case Bpmn2Package.FLOW_NODE__LANES:
+            return !getLanes().isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //FlowNodeImpl

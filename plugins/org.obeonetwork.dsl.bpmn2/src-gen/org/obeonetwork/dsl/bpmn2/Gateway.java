@@ -31,34 +31,34 @@ package org.obeonetwork.dsl.bpmn2;
  * @generated
  */
 public interface Gateway extends FlowNode {
-	/**
-	 * Returns the value of the '<em><b>Gateway Direction</b></em>' attribute.
-	 * The default value is <code>"Unspecified"</code>.
-	 * The literals are from the enumeration {@link org.obeonetwork.dsl.bpmn2.GatewayDirection}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Gateway Direction</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Gateway Direction</em>' attribute.
-	 * @see org.obeonetwork.dsl.bpmn2.GatewayDirection
-	 * @see #setGatewayDirection(GatewayDirection)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getGateway_GatewayDirection()
-	 * @model default="Unspecified" required="true" ordered="false"
-	 * @generated
-	 */
-	GatewayDirection getGatewayDirection();
+    /**
+     * Returns the value of the '<em><b>Gateway Direction</b></em>' attribute.
+     * The default value is <code>"Unspecified"</code>.
+     * The literals are from the enumeration {@link org.obeonetwork.dsl.bpmn2.GatewayDirection}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Gateway Direction</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Gateway Direction</em>' attribute.
+     * @see org.obeonetwork.dsl.bpmn2.GatewayDirection
+     * @see #setGatewayDirection(GatewayDirection)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getGateway_GatewayDirection()
+     * @model default="Unspecified" required="true" ordered="false"
+     * @generated
+     */
+    GatewayDirection getGatewayDirection();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.Gateway#getGatewayDirection <em>Gateway Direction</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Gateway Direction</em>' attribute.
-	 * @see org.obeonetwork.dsl.bpmn2.GatewayDirection
-	 * @see #getGatewayDirection()
-	 * @generated
-	 */
-	void setGatewayDirection(GatewayDirection value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.Gateway#getGatewayDirection <em>Gateway Direction</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Gateway Direction</em>' attribute.
+     * @see org.obeonetwork.dsl.bpmn2.GatewayDirection
+     * @see #getGatewayDirection()
+     * @generated
+     */
+    void setGatewayDirection(GatewayDirection value);
 
 } // Gateway

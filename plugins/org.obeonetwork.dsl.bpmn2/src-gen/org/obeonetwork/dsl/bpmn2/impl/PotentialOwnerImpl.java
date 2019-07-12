@@ -26,23 +26,23 @@ import org.obeonetwork.dsl.bpmn2.PotentialOwner;
  * @generated
  */
 public class PotentialOwnerImpl extends HumanPerformerImpl implements PotentialOwner {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PotentialOwnerImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected PotentialOwnerImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.POTENTIAL_OWNER;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.POTENTIAL_OWNER;
+    }
 
 } //PotentialOwnerImpl

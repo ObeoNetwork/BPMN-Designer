@@ -34,30 +34,30 @@ import org.obeonetwork.dsl.dd.di.Plane;
  * @generated
  */
 public interface BPMNPlane extends Plane {
-	/**
-	 * Returns the value of the '<em><b>Bpmn Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bpmn Element</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bpmn Element</em>' reference.
-	 * @see #setBpmnElement(BaseElement)
-	 * @see org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage#getBPMNPlane_BpmnElement()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	BaseElement getBpmnElement();
+    /**
+     * Returns the value of the '<em><b>Bpmn Element</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Bpmn Element</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Bpmn Element</em>' reference.
+     * @see #setBpmnElement(BaseElement)
+     * @see org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage#getBPMNPlane_BpmnElement()
+     * @model ordered="false"
+     * @generated
+     */
+    BaseElement getBpmnElement();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNPlane#getBpmnElement <em>Bpmn Element</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bpmn Element</em>' reference.
-	 * @see #getBpmnElement()
-	 * @generated
-	 */
-	void setBpmnElement(BaseElement value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNPlane#getBpmnElement <em>Bpmn Element</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Bpmn Element</em>' reference.
+     * @see #getBpmnElement()
+     * @generated
+     */
+    void setBpmnElement(BaseElement value);
 
 } // BPMNPlane

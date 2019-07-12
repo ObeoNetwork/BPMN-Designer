@@ -37,94 +37,94 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface ThrowEvent extends Event {
-	/**
-	 * Returns the value of the '<em><b>Input Set</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input Set</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Set</em>' containment reference.
-	 * @see #setInputSet(InputSet)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getThrowEvent_InputSet()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	InputSet getInputSet();
+    /**
+     * Returns the value of the '<em><b>Input Set</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Input Set</em>' containment reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Input Set</em>' containment reference.
+     * @see #setInputSet(InputSet)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getThrowEvent_InputSet()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    InputSet getInputSet();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.ThrowEvent#getInputSet <em>Input Set</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Set</em>' containment reference.
-	 * @see #getInputSet()
-	 * @generated
-	 */
-	void setInputSet(InputSet value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.ThrowEvent#getInputSet <em>Input Set</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Input Set</em>' containment reference.
+     * @see #getInputSet()
+     * @generated
+     */
+    void setInputSet(InputSet value);
 
-	/**
-	 * Returns the value of the '<em><b>Event Definition Refs</b></em>' reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.EventDefinition}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Event Definition Refs</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Event Definition Refs</em>' reference list.
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getThrowEvent_EventDefinitionRefs()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<EventDefinition> getEventDefinitionRefs();
+    /**
+     * Returns the value of the '<em><b>Event Definition Refs</b></em>' reference list.
+     * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.EventDefinition}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Event Definition Refs</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Event Definition Refs</em>' reference list.
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getThrowEvent_EventDefinitionRefs()
+     * @model ordered="false"
+     * @generated
+     */
+    EList<EventDefinition> getEventDefinitionRefs();
 
-	/**
-	 * Returns the value of the '<em><b>Data Input Association</b></em>' containment reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.DataInputAssociation}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Data Input Association</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Data Input Association</em>' containment reference list.
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getThrowEvent_DataInputAssociation()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<DataInputAssociation> getDataInputAssociation();
+    /**
+     * Returns the value of the '<em><b>Data Input Association</b></em>' containment reference list.
+     * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.DataInputAssociation}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Data Input Association</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Data Input Association</em>' containment reference list.
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getThrowEvent_DataInputAssociation()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<DataInputAssociation> getDataInputAssociation();
 
-	/**
-	 * Returns the value of the '<em><b>Data Inputs</b></em>' containment reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.DataInput}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Data Inputs</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Data Inputs</em>' containment reference list.
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getThrowEvent_DataInputs()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<DataInput> getDataInputs();
+    /**
+     * Returns the value of the '<em><b>Data Inputs</b></em>' containment reference list.
+     * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.DataInput}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Data Inputs</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Data Inputs</em>' containment reference list.
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getThrowEvent_DataInputs()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<DataInput> getDataInputs();
 
-	/**
-	 * Returns the value of the '<em><b>Event Definitions</b></em>' containment reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.EventDefinition}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Event Definitions</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Event Definitions</em>' containment reference list.
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getThrowEvent_EventDefinitions()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<EventDefinition> getEventDefinitions();
+    /**
+     * Returns the value of the '<em><b>Event Definitions</b></em>' containment reference list.
+     * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.EventDefinition}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Event Definitions</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Event Definitions</em>' containment reference list.
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getThrowEvent_EventDefinitions()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<EventDefinition> getEventDefinitions();
 
 } // ThrowEvent

@@ -26,23 +26,23 @@ import org.obeonetwork.dsl.bpmn2.GlobalManualTask;
  * @generated
  */
 public class GlobalManualTaskImpl extends GlobalTaskImpl implements GlobalManualTask {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GlobalManualTaskImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected GlobalManualTaskImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.GLOBAL_MANUAL_TASK;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.GLOBAL_MANUAL_TASK;
+    }
 
 } //GlobalManualTaskImpl

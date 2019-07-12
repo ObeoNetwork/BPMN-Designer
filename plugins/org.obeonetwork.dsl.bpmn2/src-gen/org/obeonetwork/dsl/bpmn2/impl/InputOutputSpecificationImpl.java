@@ -45,180 +45,180 @@ import org.obeonetwork.dsl.bpmn2.OutputSet;
  * @generated
  */
 public class InputOutputSpecificationImpl extends BaseElementImpl implements InputOutputSpecification {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InputOutputSpecificationImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected InputOutputSpecificationImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<InputSet> getInputSets() {
-		return (EList<InputSet>) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS,
-				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<InputSet> getInputSets() {
+        return (EList<InputSet>) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS, Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<OutputSet> getOutputSets() {
-		return (EList<OutputSet>) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS,
-				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<OutputSet> getOutputSets() {
+        return (EList<OutputSet>) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS, Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<DataInput> getDataInputs() {
-		return (EList<DataInput>) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS,
-				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<DataInput> getDataInputs() {
+        return (EList<DataInput>) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS, Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<DataOutput> getDataOutputs() {
-		return (EList<DataOutput>) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS,
-				Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<DataOutput> getDataOutputs() {
+        return (EList<DataOutput>) eDynamicGet(Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS, Bpmn2Package.Literals.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
-			return ((InternalEList<?>) getInputSets()).basicRemove(otherEnd, msgs);
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
-			return ((InternalEList<?>) getOutputSets()).basicRemove(otherEnd, msgs);
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
-			return ((InternalEList<?>) getDataInputs()).basicRemove(otherEnd, msgs);
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
-			return ((InternalEList<?>) getDataOutputs()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
+            return ((InternalEList<?>) getInputSets()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
+            return ((InternalEList<?>) getOutputSets()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
+            return ((InternalEList<?>) getDataInputs()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
+            return ((InternalEList<?>) getDataOutputs()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
-			return getInputSets();
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
-			return getOutputSets();
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
-			return getDataInputs();
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
-			return getDataOutputs();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
+            return getInputSets();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
+            return getOutputSets();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
+            return getDataInputs();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
+            return getDataOutputs();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
-			getInputSets().clear();
-			getInputSets().addAll((Collection<? extends InputSet>) newValue);
-			return;
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
-			getOutputSets().clear();
-			getOutputSets().addAll((Collection<? extends OutputSet>) newValue);
-			return;
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
-			getDataInputs().clear();
-			getDataInputs().addAll((Collection<? extends DataInput>) newValue);
-			return;
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
-			getDataOutputs().clear();
-			getDataOutputs().addAll((Collection<? extends DataOutput>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
+            getInputSets().clear();
+            getInputSets().addAll((Collection<? extends InputSet>) newValue);
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
+            getOutputSets().clear();
+            getOutputSets().addAll((Collection<? extends OutputSet>) newValue);
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
+            getDataInputs().clear();
+            getDataInputs().addAll((Collection<? extends DataInput>) newValue);
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
+            getDataOutputs().clear();
+            getDataOutputs().addAll((Collection<? extends DataOutput>) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
-			getInputSets().clear();
-			return;
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
-			getOutputSets().clear();
-			return;
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
-			getDataInputs().clear();
-			return;
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
-			getDataOutputs().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
+            getInputSets().clear();
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
+            getOutputSets().clear();
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
+            getDataInputs().clear();
+            return;
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
+            getDataOutputs().clear();
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
-			return !getInputSets().isEmpty();
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
-			return !getOutputSets().isEmpty();
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
-			return !getDataInputs().isEmpty();
-		case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
-			return !getDataOutputs().isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__INPUT_SETS:
+            return !getInputSets().isEmpty();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__OUTPUT_SETS:
+            return !getOutputSets().isEmpty();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_INPUTS:
+            return !getDataInputs().isEmpty();
+        case Bpmn2Package.INPUT_OUTPUT_SPECIFICATION__DATA_OUTPUTS:
+            return !getDataOutputs().isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //InputOutputSpecificationImpl

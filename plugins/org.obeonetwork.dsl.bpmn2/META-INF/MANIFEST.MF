@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2;singleton:=true
+Automatic-Module-Name: org.obeonetwork.dsl.bpmn2
 Bundle-Version: 4.0.1.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -9,8 +10,7 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.ecore.xmi;visibility:=reexport,
- org.eclipse.emf.cdo;bundle-version="4.0.1";visibility:=reexport
+ org.eclipse.emf.ecore.xmi;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Export-Package: org.obeonetwork.dsl.bpmn2,
  org.obeonetwork.dsl.bpmn2.bpmdi,

@@ -26,23 +26,23 @@ import org.obeonetwork.dsl.bpmn2.ParallelGateway;
  * @generated
  */
 public class ParallelGatewayImpl extends GatewayImpl implements ParallelGateway {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ParallelGatewayImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ParallelGatewayImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.PARALLEL_GATEWAY;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.PARALLEL_GATEWAY;
+    }
 
 } //ParallelGatewayImpl

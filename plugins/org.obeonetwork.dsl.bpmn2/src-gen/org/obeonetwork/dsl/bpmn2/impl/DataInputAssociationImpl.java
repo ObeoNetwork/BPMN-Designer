@@ -26,23 +26,23 @@ import org.obeonetwork.dsl.bpmn2.DataInputAssociation;
  * @generated
  */
 public class DataInputAssociationImpl extends DataAssociationImpl implements DataInputAssociation {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DataInputAssociationImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected DataInputAssociationImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.DATA_INPUT_ASSOCIATION;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.DATA_INPUT_ASSOCIATION;
+    }
 
 } //DataInputAssociationImpl

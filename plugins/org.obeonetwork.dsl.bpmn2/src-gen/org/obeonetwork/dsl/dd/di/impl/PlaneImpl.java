@@ -46,131 +46,130 @@ import org.obeonetwork.dsl.dd.di.util.DiValidator;
  * @generated
  */
 public abstract class PlaneImpl extends NodeImpl implements Plane {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PlaneImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected PlaneImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return DiPackage.Literals.PLANE;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return DiPackage.Literals.PLANE;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<DiagramElement> getPlaneElement() {
-		return (EList<DiagramElement>) eDynamicGet(DiPackage.PLANE__PLANE_ELEMENT,
-				DiPackage.Literals.PLANE__PLANE_ELEMENT, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<DiagramElement> getPlaneElement() {
+        return (EList<DiagramElement>) eDynamicGet(DiPackage.PLANE__PLANE_ELEMENT, DiPackage.Literals.PLANE__PLANE_ELEMENT, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean plane_element_type(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, DiValidator.DIAGNOSTIC_SOURCE,
-						DiValidator.PLANE__PLANE_ELEMENT_TYPE,
-						EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic",
-								new Object[] { "plane_element_type", EObjectValidator.getObjectLabel(this, context) }),
-						new Object[] { this }));
-			}
-			return false;
-		}
-		return true;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean plane_element_type(DiagnosticChain diagnostics, Map<Object, Object> context) {
+        // TODO: implement this method
+        // -> specify the condition that violates the invariant
+        // -> verify the details of the diagnostic, including severity and message
+        // Ensure that you remove @generated or mark it @generated NOT
+        if (false) {
+            if (diagnostics != null) {
+                diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, DiValidator.DIAGNOSTIC_SOURCE, DiValidator.PLANE__PLANE_ELEMENT_TYPE,
+                        EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "plane_element_type", EObjectValidator.getObjectLabel(this, context) }),
+                        new Object[] { this }));
+            }
+            return false;
+        }
+        return true;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case DiPackage.PLANE__PLANE_ELEMENT:
-			return ((InternalEList<?>) getPlaneElement()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case DiPackage.PLANE__PLANE_ELEMENT:
+            return ((InternalEList<?>) getPlaneElement()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case DiPackage.PLANE__PLANE_ELEMENT:
-			return getPlaneElement();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case DiPackage.PLANE__PLANE_ELEMENT:
+            return getPlaneElement();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case DiPackage.PLANE__PLANE_ELEMENT:
-			getPlaneElement().clear();
-			getPlaneElement().addAll((Collection<? extends DiagramElement>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case DiPackage.PLANE__PLANE_ELEMENT:
+            getPlaneElement().clear();
+            getPlaneElement().addAll((Collection<? extends DiagramElement>) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case DiPackage.PLANE__PLANE_ELEMENT:
-			getPlaneElement().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case DiPackage.PLANE__PLANE_ELEMENT:
+            getPlaneElement().clear();
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case DiPackage.PLANE__PLANE_ELEMENT:
-			return !getPlaneElement().isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case DiPackage.PLANE__PLANE_ELEMENT:
+            return !getPlaneElement().isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //PlaneImpl

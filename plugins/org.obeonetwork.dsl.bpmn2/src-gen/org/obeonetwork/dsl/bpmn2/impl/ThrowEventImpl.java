@@ -46,219 +46,220 @@ import org.obeonetwork.dsl.bpmn2.ThrowEvent;
  * @generated
  */
 public abstract class ThrowEventImpl extends EventImpl implements ThrowEvent {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ThrowEventImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ThrowEventImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.THROW_EVENT;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.THROW_EVENT;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InputSet getInputSet() {
-		return (InputSet) eDynamicGet(Bpmn2Package.THROW_EVENT__INPUT_SET, Bpmn2Package.Literals.THROW_EVENT__INPUT_SET,
-				true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public InputSet getInputSet() {
+        return (InputSet) eDynamicGet(Bpmn2Package.THROW_EVENT__INPUT_SET, Bpmn2Package.Literals.THROW_EVENT__INPUT_SET, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetInputSet(InputSet newInputSet, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newInputSet, Bpmn2Package.THROW_EVENT__INPUT_SET, msgs);
-		return msgs;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetInputSet(InputSet newInputSet, NotificationChain msgs) {
+        msgs = eDynamicInverseAdd((InternalEObject) newInputSet, Bpmn2Package.THROW_EVENT__INPUT_SET, msgs);
+        return msgs;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInputSet(InputSet newInputSet) {
-		eDynamicSet(Bpmn2Package.THROW_EVENT__INPUT_SET, Bpmn2Package.Literals.THROW_EVENT__INPUT_SET, newInputSet);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setInputSet(InputSet newInputSet) {
+        eDynamicSet(Bpmn2Package.THROW_EVENT__INPUT_SET, Bpmn2Package.Literals.THROW_EVENT__INPUT_SET, newInputSet);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<EventDefinition> getEventDefinitionRefs() {
-		return (EList<EventDefinition>) eDynamicGet(Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS,
-				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITION_REFS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<EventDefinition> getEventDefinitionRefs() {
+        return (EList<EventDefinition>) eDynamicGet(Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS, Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITION_REFS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<DataInputAssociation> getDataInputAssociation() {
-		return (EList<DataInputAssociation>) eDynamicGet(Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION,
-				Bpmn2Package.Literals.THROW_EVENT__DATA_INPUT_ASSOCIATION, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<DataInputAssociation> getDataInputAssociation() {
+        return (EList<DataInputAssociation>) eDynamicGet(Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION, Bpmn2Package.Literals.THROW_EVENT__DATA_INPUT_ASSOCIATION, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<DataInput> getDataInputs() {
-		return (EList<DataInput>) eDynamicGet(Bpmn2Package.THROW_EVENT__DATA_INPUTS,
-				Bpmn2Package.Literals.THROW_EVENT__DATA_INPUTS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<DataInput> getDataInputs() {
+        return (EList<DataInput>) eDynamicGet(Bpmn2Package.THROW_EVENT__DATA_INPUTS, Bpmn2Package.Literals.THROW_EVENT__DATA_INPUTS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<EventDefinition> getEventDefinitions() {
-		return (EList<EventDefinition>) eDynamicGet(Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS,
-				Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<EventDefinition> getEventDefinitions() {
+        return (EList<EventDefinition>) eDynamicGet(Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS, Bpmn2Package.Literals.THROW_EVENT__EVENT_DEFINITIONS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.THROW_EVENT__INPUT_SET:
-			return basicSetInputSet(null, msgs);
-		case Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION:
-			return ((InternalEList<?>) getDataInputAssociation()).basicRemove(otherEnd, msgs);
-		case Bpmn2Package.THROW_EVENT__DATA_INPUTS:
-			return ((InternalEList<?>) getDataInputs()).basicRemove(otherEnd, msgs);
-		case Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS:
-			return ((InternalEList<?>) getEventDefinitions()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.THROW_EVENT__INPUT_SET:
+            return basicSetInputSet(null, msgs);
+        case Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION:
+            return ((InternalEList<?>) getDataInputAssociation()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.THROW_EVENT__DATA_INPUTS:
+            return ((InternalEList<?>) getDataInputs()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS:
+            return ((InternalEList<?>) getEventDefinitions()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.THROW_EVENT__INPUT_SET:
-			return getInputSet();
-		case Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS:
-			return getEventDefinitionRefs();
-		case Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION:
-			return getDataInputAssociation();
-		case Bpmn2Package.THROW_EVENT__DATA_INPUTS:
-			return getDataInputs();
-		case Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS:
-			return getEventDefinitions();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.THROW_EVENT__INPUT_SET:
+            return getInputSet();
+        case Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS:
+            return getEventDefinitionRefs();
+        case Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION:
+            return getDataInputAssociation();
+        case Bpmn2Package.THROW_EVENT__DATA_INPUTS:
+            return getDataInputs();
+        case Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS:
+            return getEventDefinitions();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.THROW_EVENT__INPUT_SET:
-			setInputSet((InputSet) newValue);
-			return;
-		case Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS:
-			getEventDefinitionRefs().clear();
-			getEventDefinitionRefs().addAll((Collection<? extends EventDefinition>) newValue);
-			return;
-		case Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION:
-			getDataInputAssociation().clear();
-			getDataInputAssociation().addAll((Collection<? extends DataInputAssociation>) newValue);
-			return;
-		case Bpmn2Package.THROW_EVENT__DATA_INPUTS:
-			getDataInputs().clear();
-			getDataInputs().addAll((Collection<? extends DataInput>) newValue);
-			return;
-		case Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS:
-			getEventDefinitions().clear();
-			getEventDefinitions().addAll((Collection<? extends EventDefinition>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.THROW_EVENT__INPUT_SET:
+            setInputSet((InputSet) newValue);
+            return;
+        case Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS:
+            getEventDefinitionRefs().clear();
+            getEventDefinitionRefs().addAll((Collection<? extends EventDefinition>) newValue);
+            return;
+        case Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION:
+            getDataInputAssociation().clear();
+            getDataInputAssociation().addAll((Collection<? extends DataInputAssociation>) newValue);
+            return;
+        case Bpmn2Package.THROW_EVENT__DATA_INPUTS:
+            getDataInputs().clear();
+            getDataInputs().addAll((Collection<? extends DataInput>) newValue);
+            return;
+        case Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS:
+            getEventDefinitions().clear();
+            getEventDefinitions().addAll((Collection<? extends EventDefinition>) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.THROW_EVENT__INPUT_SET:
-			setInputSet((InputSet) null);
-			return;
-		case Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS:
-			getEventDefinitionRefs().clear();
-			return;
-		case Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION:
-			getDataInputAssociation().clear();
-			return;
-		case Bpmn2Package.THROW_EVENT__DATA_INPUTS:
-			getDataInputs().clear();
-			return;
-		case Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS:
-			getEventDefinitions().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.THROW_EVENT__INPUT_SET:
+            setInputSet((InputSet) null);
+            return;
+        case Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS:
+            getEventDefinitionRefs().clear();
+            return;
+        case Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION:
+            getDataInputAssociation().clear();
+            return;
+        case Bpmn2Package.THROW_EVENT__DATA_INPUTS:
+            getDataInputs().clear();
+            return;
+        case Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS:
+            getEventDefinitions().clear();
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.THROW_EVENT__INPUT_SET:
-			return getInputSet() != null;
-		case Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS:
-			return !getEventDefinitionRefs().isEmpty();
-		case Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION:
-			return !getDataInputAssociation().isEmpty();
-		case Bpmn2Package.THROW_EVENT__DATA_INPUTS:
-			return !getDataInputs().isEmpty();
-		case Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS:
-			return !getEventDefinitions().isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.THROW_EVENT__INPUT_SET:
+            return getInputSet() != null;
+        case Bpmn2Package.THROW_EVENT__EVENT_DEFINITION_REFS:
+            return !getEventDefinitionRefs().isEmpty();
+        case Bpmn2Package.THROW_EVENT__DATA_INPUT_ASSOCIATION:
+            return !getDataInputAssociation().isEmpty();
+        case Bpmn2Package.THROW_EVENT__DATA_INPUTS:
+            return !getDataInputs().isEmpty();
+        case Bpmn2Package.THROW_EVENT__EVENT_DEFINITIONS:
+            return !getEventDefinitions().isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //ThrowEventImpl

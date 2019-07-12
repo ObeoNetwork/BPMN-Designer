@@ -32,59 +32,59 @@ package org.obeonetwork.dsl.bpmn2;
  * @generated
  */
 public interface BoundaryEvent extends CatchEvent {
-	/**
-	 * Returns the value of the '<em><b>Cancel Activity</b></em>' attribute.
-	 * The default value is <code>"true"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Cancel Activity</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cancel Activity</em>' attribute.
-	 * @see #setCancelActivity(boolean)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getBoundaryEvent_CancelActivity()
-	 * @model default="true" required="true" ordered="false"
-	 * @generated
-	 */
-	boolean isCancelActivity();
+    /**
+     * Returns the value of the '<em><b>Cancel Activity</b></em>' attribute.
+     * The default value is <code>"true"</code>.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Cancel Activity</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Cancel Activity</em>' attribute.
+     * @see #setCancelActivity(boolean)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getBoundaryEvent_CancelActivity()
+     * @model default="true" required="true" ordered="false"
+     * @generated
+     */
+    boolean isCancelActivity();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.BoundaryEvent#isCancelActivity <em>Cancel Activity</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cancel Activity</em>' attribute.
-	 * @see #isCancelActivity()
-	 * @generated
-	 */
-	void setCancelActivity(boolean value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.BoundaryEvent#isCancelActivity <em>Cancel Activity</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Cancel Activity</em>' attribute.
+     * @see #isCancelActivity()
+     * @generated
+     */
+    void setCancelActivity(boolean value);
 
-	/**
-	 * Returns the value of the '<em><b>Attached To Ref</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.bpmn2.Activity#getBoundaryEventRefs <em>Boundary Event Refs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Attached To Ref</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Attached To Ref</em>' reference.
-	 * @see #setAttachedToRef(Activity)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getBoundaryEvent_AttachedToRef()
-	 * @see org.obeonetwork.dsl.bpmn2.Activity#getBoundaryEventRefs
-	 * @model opposite="boundaryEventRefs" required="true" ordered="false"
-	 * @generated
-	 */
-	Activity getAttachedToRef();
+    /**
+     * Returns the value of the '<em><b>Attached To Ref</b></em>' reference.
+     * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.bpmn2.Activity#getBoundaryEventRefs <em>Boundary Event Refs</em>}'.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Attached To Ref</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Attached To Ref</em>' reference.
+     * @see #setAttachedToRef(Activity)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getBoundaryEvent_AttachedToRef()
+     * @see org.obeonetwork.dsl.bpmn2.Activity#getBoundaryEventRefs
+     * @model opposite="boundaryEventRefs" required="true" ordered="false"
+     * @generated
+     */
+    Activity getAttachedToRef();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.BoundaryEvent#getAttachedToRef <em>Attached To Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Attached To Ref</em>' reference.
-	 * @see #getAttachedToRef()
-	 * @generated
-	 */
-	void setAttachedToRef(Activity value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.BoundaryEvent#getAttachedToRef <em>Attached To Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Attached To Ref</em>' reference.
+     * @see #getAttachedToRef()
+     * @generated
+     */
+    void setAttachedToRef(Activity value);
 
 } // BoundaryEvent

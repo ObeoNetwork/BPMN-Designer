@@ -14,7 +14,7 @@
  */
 package org.obeonetwork.dsl.bpmn2;
 
-import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,112 +33,111 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getInputOutputBinding()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface InputOutputBinding extends CDOObject {
-	/**
-	 * Returns the value of the '<em><b>Input Data Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input Data Ref</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Data Ref</em>' reference.
-	 * @see #setInputDataRef(InputSet)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getInputOutputBinding_InputDataRef()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	InputSet getInputDataRef();
+public interface InputOutputBinding extends EObject {
+    /**
+     * Returns the value of the '<em><b>Input Data Ref</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Input Data Ref</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Input Data Ref</em>' reference.
+     * @see #setInputDataRef(InputSet)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getInputOutputBinding_InputDataRef()
+     * @model required="true" ordered="false"
+     * @generated
+     */
+    InputSet getInputDataRef();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.InputOutputBinding#getInputDataRef <em>Input Data Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Data Ref</em>' reference.
-	 * @see #getInputDataRef()
-	 * @generated
-	 */
-	void setInputDataRef(InputSet value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.InputOutputBinding#getInputDataRef <em>Input Data Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Input Data Ref</em>' reference.
+     * @see #getInputDataRef()
+     * @generated
+     */
+    void setInputDataRef(InputSet value);
 
-	/**
-	 * Returns the value of the '<em><b>Output Data Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Output Data Ref</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Output Data Ref</em>' reference.
-	 * @see #setOutputDataRef(OutputSet)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getInputOutputBinding_OutputDataRef()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	OutputSet getOutputDataRef();
+    /**
+     * Returns the value of the '<em><b>Output Data Ref</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Output Data Ref</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Output Data Ref</em>' reference.
+     * @see #setOutputDataRef(OutputSet)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getInputOutputBinding_OutputDataRef()
+     * @model required="true" ordered="false"
+     * @generated
+     */
+    OutputSet getOutputDataRef();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.InputOutputBinding#getOutputDataRef <em>Output Data Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Output Data Ref</em>' reference.
-	 * @see #getOutputDataRef()
-	 * @generated
-	 */
-	void setOutputDataRef(OutputSet value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.InputOutputBinding#getOutputDataRef <em>Output Data Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Output Data Ref</em>' reference.
+     * @see #getOutputDataRef()
+     * @generated
+     */
+    void setOutputDataRef(OutputSet value);
 
-	/**
-	 * Returns the value of the '<em><b>Operation Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Operation Ref</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Operation Ref</em>' reference.
-	 * @see #setOperationRef(Operation)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getInputOutputBinding_OperationRef()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	Operation getOperationRef();
+    /**
+     * Returns the value of the '<em><b>Operation Ref</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Operation Ref</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Operation Ref</em>' reference.
+     * @see #setOperationRef(Operation)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getInputOutputBinding_OperationRef()
+     * @model required="true" ordered="false"
+     * @generated
+     */
+    Operation getOperationRef();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.InputOutputBinding#getOperationRef <em>Operation Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Operation Ref</em>' reference.
-	 * @see #getOperationRef()
-	 * @generated
-	 */
-	void setOperationRef(Operation value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.InputOutputBinding#getOperationRef <em>Operation Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Operation Ref</em>' reference.
+     * @see #getOperationRef()
+     * @generated
+     */
+    void setOperationRef(Operation value);
 
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getInputOutputBinding_Id()
-	 * @model id="true" required="true" ordered="false"
-	 * @generated
-	 */
-	String getId();
+    /**
+     * Returns the value of the '<em><b>Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Id</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Id</em>' attribute.
+     * @see #setId(String)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getInputOutputBinding_Id()
+     * @model id="true" required="true" ordered="false"
+     * @generated
+     */
+    String getId();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.InputOutputBinding#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.InputOutputBinding#getId <em>Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Id</em>' attribute.
+     * @see #getId()
+     * @generated
+     */
+    void setId(String value);
 
 } // InputOutputBinding

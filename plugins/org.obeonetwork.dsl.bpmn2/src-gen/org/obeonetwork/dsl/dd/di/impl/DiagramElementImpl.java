@@ -44,217 +44,213 @@ import org.obeonetwork.dsl.dd.di.Style;
  * @generated
  */
 public abstract class DiagramElementImpl extends BPMN2ObjectImpl implements DiagramElement {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DiagramElementImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected DiagramElementImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return DiPackage.Literals.DIAGRAM_ELEMENT;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return DiPackage.Literals.DIAGRAM_ELEMENT;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Diagram getOwningDiagram() {
-		return (Diagram) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM,
-				DiPackage.Literals.DIAGRAM_ELEMENT__OWNING_DIAGRAM, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Diagram getOwningDiagram() {
+        return (Diagram) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM, DiPackage.Literals.DIAGRAM_ELEMENT__OWNING_DIAGRAM, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetOwningDiagram(Diagram newOwningDiagram, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newOwningDiagram, DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM, msgs);
-		return msgs;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetOwningDiagram(Diagram newOwningDiagram, NotificationChain msgs) {
+        msgs = eDynamicInverseAdd((InternalEObject) newOwningDiagram, DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM, msgs);
+        return msgs;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DiagramElement getOwningElement() {
-		return (DiagramElement) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT,
-				DiPackage.Literals.DIAGRAM_ELEMENT__OWNING_ELEMENT, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public DiagramElement getOwningElement() {
+        return (DiagramElement) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT, DiPackage.Literals.DIAGRAM_ELEMENT__OWNING_ELEMENT, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetOwningElement(DiagramElement newOwningElement, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newOwningElement, DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT, msgs);
-		return msgs;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetOwningElement(DiagramElement newOwningElement, NotificationChain msgs) {
+        msgs = eDynamicInverseAdd((InternalEObject) newOwningElement, DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT, msgs);
+        return msgs;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<DiagramElement> getOwnedElement() {
-		return (EList<DiagramElement>) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT,
-				DiPackage.Literals.DIAGRAM_ELEMENT__OWNED_ELEMENT, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<DiagramElement> getOwnedElement() {
+        return (EList<DiagramElement>) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT, DiPackage.Literals.DIAGRAM_ELEMENT__OWNED_ELEMENT, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EObject getModelElement() {
-		return (EObject) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__MODEL_ELEMENT,
-				DiPackage.Literals.DIAGRAM_ELEMENT__MODEL_ELEMENT, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EObject getModelElement() {
+        return (EObject) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__MODEL_ELEMENT, DiPackage.Literals.DIAGRAM_ELEMENT__MODEL_ELEMENT, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EObject basicGetModelElement() {
-		return (EObject) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__MODEL_ELEMENT,
-				DiPackage.Literals.DIAGRAM_ELEMENT__MODEL_ELEMENT, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EObject basicGetModelElement() {
+        return (EObject) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__MODEL_ELEMENT, DiPackage.Literals.DIAGRAM_ELEMENT__MODEL_ELEMENT, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Style getStyle() {
-		return (Style) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__STYLE, DiPackage.Literals.DIAGRAM_ELEMENT__STYLE, true,
-				true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Style getStyle() {
+        return (Style) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__STYLE, DiPackage.Literals.DIAGRAM_ELEMENT__STYLE, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Style basicGetStyle() {
-		return (Style) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__STYLE, DiPackage.Literals.DIAGRAM_ELEMENT__STYLE, false,
-				true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Style basicGetStyle() {
+        return (Style) eDynamicGet(DiPackage.DIAGRAM_ELEMENT__STYLE, DiPackage.Literals.DIAGRAM_ELEMENT__STYLE, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
-			Diagram owningDiagram = getOwningDiagram();
-			if (owningDiagram != null)
-				msgs = ((InternalEObject) owningDiagram).eInverseRemove(this, DiPackage.DIAGRAM__ROOT_ELEMENT,
-						Diagram.class, msgs);
-			return basicSetOwningDiagram((Diagram) otherEnd, msgs);
-		case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
-			DiagramElement owningElement = getOwningElement();
-			if (owningElement != null)
-				msgs = ((InternalEObject) owningElement).eInverseRemove(this, DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT,
-						DiagramElement.class, msgs);
-			return basicSetOwningElement((DiagramElement) otherEnd, msgs);
-		case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOwnedElement()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
+            Diagram owningDiagram = getOwningDiagram();
+            if (owningDiagram != null)
+                msgs = ((InternalEObject) owningDiagram).eInverseRemove(this, DiPackage.DIAGRAM__ROOT_ELEMENT, Diagram.class, msgs);
+            return basicSetOwningDiagram((Diagram) otherEnd, msgs);
+        case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
+            DiagramElement owningElement = getOwningElement();
+            if (owningElement != null)
+                msgs = ((InternalEObject) owningElement).eInverseRemove(this, DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT, DiagramElement.class, msgs);
+            return basicSetOwningElement((DiagramElement) otherEnd, msgs);
+        case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOwnedElement()).basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
-			return basicSetOwningDiagram(null, msgs);
-		case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
-			return basicSetOwningElement(null, msgs);
-		case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
-			return ((InternalEList<?>) getOwnedElement()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
+            return basicSetOwningDiagram(null, msgs);
+        case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
+            return basicSetOwningElement(null, msgs);
+        case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
+            return ((InternalEList<?>) getOwnedElement()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
-			return getOwningDiagram();
-		case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
-			return getOwningElement();
-		case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
-			return getOwnedElement();
-		case DiPackage.DIAGRAM_ELEMENT__MODEL_ELEMENT:
-			if (resolve)
-				return getModelElement();
-			return basicGetModelElement();
-		case DiPackage.DIAGRAM_ELEMENT__STYLE:
-			if (resolve)
-				return getStyle();
-			return basicGetStyle();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
+            return getOwningDiagram();
+        case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
+            return getOwningElement();
+        case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
+            return getOwnedElement();
+        case DiPackage.DIAGRAM_ELEMENT__MODEL_ELEMENT:
+            if (resolve)
+                return getModelElement();
+            return basicGetModelElement();
+        case DiPackage.DIAGRAM_ELEMENT__STYLE:
+            if (resolve)
+                return getStyle();
+            return basicGetStyle();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
-			return getOwningDiagram() != null;
-		case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
-			return getOwningElement() != null;
-		case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
-			return !getOwnedElement().isEmpty();
-		case DiPackage.DIAGRAM_ELEMENT__MODEL_ELEMENT:
-			return basicGetModelElement() != null;
-		case DiPackage.DIAGRAM_ELEMENT__STYLE:
-			return basicGetStyle() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
+            return getOwningDiagram() != null;
+        case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
+            return getOwningElement() != null;
+        case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
+            return !getOwnedElement().isEmpty();
+        case DiPackage.DIAGRAM_ELEMENT__MODEL_ELEMENT:
+            return basicGetModelElement() != null;
+        case DiPackage.DIAGRAM_ELEMENT__STYLE:
+            return basicGetStyle() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //DiagramElementImpl

@@ -33,113 +33,112 @@ import org.obeonetwork.dsl.bpmn2.CallableElement;
  * @generated
  */
 public class CallActivityImpl extends ActivityImpl implements CallActivity {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CallActivityImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CallActivityImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.CALL_ACTIVITY;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.CALL_ACTIVITY;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CallableElement getCalledElementRef() {
-		return (CallableElement) eDynamicGet(Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
-				Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public CallableElement getCalledElementRef() {
+        return (CallableElement) eDynamicGet(Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF, Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CallableElement basicGetCalledElementRef() {
-		return (CallableElement) eDynamicGet(Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
-				Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public CallableElement basicGetCalledElementRef() {
+        return (CallableElement) eDynamicGet(Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF, Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCalledElementRef(CallableElement newCalledElementRef) {
-		eDynamicSet(Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF,
-				Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, newCalledElementRef);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setCalledElementRef(CallableElement newCalledElementRef) {
+        eDynamicSet(Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF, Bpmn2Package.Literals.CALL_ACTIVITY__CALLED_ELEMENT_REF, newCalledElementRef);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
-			if (resolve)
-				return getCalledElementRef();
-			return basicGetCalledElementRef();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
+            if (resolve)
+                return getCalledElementRef();
+            return basicGetCalledElementRef();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
-			setCalledElementRef((CallableElement) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
+            setCalledElementRef((CallableElement) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
-			setCalledElementRef((CallableElement) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
+            setCalledElementRef((CallableElement) null);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
-			return basicGetCalledElementRef() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.CALL_ACTIVITY__CALLED_ELEMENT_REF:
+            return basicGetCalledElementRef() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //CallActivityImpl

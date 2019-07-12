@@ -32,56 +32,56 @@ package org.obeonetwork.dsl.bpmn2;
  * @generated
  */
 public interface Transaction extends SubProcess {
-	/**
-	 * Returns the value of the '<em><b>Protocol</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Protocol</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Protocol</em>' attribute.
-	 * @see #setProtocol(String)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getTransaction_Protocol()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	String getProtocol();
+    /**
+     * Returns the value of the '<em><b>Protocol</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Protocol</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Protocol</em>' attribute.
+     * @see #setProtocol(String)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getTransaction_Protocol()
+     * @model ordered="false"
+     * @generated
+     */
+    String getProtocol();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.Transaction#getProtocol <em>Protocol</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Protocol</em>' attribute.
-	 * @see #getProtocol()
-	 * @generated
-	 */
-	void setProtocol(String value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.Transaction#getProtocol <em>Protocol</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Protocol</em>' attribute.
+     * @see #getProtocol()
+     * @generated
+     */
+    void setProtocol(String value);
 
-	/**
-	 * Returns the value of the '<em><b>Method</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Method</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Method</em>' attribute.
-	 * @see #setMethod(String)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getTransaction_Method()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	String getMethod();
+    /**
+     * Returns the value of the '<em><b>Method</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Method</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Method</em>' attribute.
+     * @see #setMethod(String)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getTransaction_Method()
+     * @model required="true" ordered="false"
+     * @generated
+     */
+    String getMethod();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.Transaction#getMethod <em>Method</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Method</em>' attribute.
-	 * @see #getMethod()
-	 * @generated
-	 */
-	void setMethod(String value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.Transaction#getMethod <em>Method</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Method</em>' attribute.
+     * @see #getMethod()
+     * @generated
+     */
+    void setMethod(String value);
 
 } // Transaction

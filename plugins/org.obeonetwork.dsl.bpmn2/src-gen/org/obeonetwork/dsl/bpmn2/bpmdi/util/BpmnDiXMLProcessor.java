@@ -29,31 +29,31 @@ import org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage;
  */
 public class BpmnDiXMLProcessor extends XMLProcessor {
 
-	/**
-	 * Public constructor to instantiate the helper.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BpmnDiXMLProcessor() {
-		super((EPackage.Registry.INSTANCE));
-		BpmnDiPackage.eINSTANCE.eClass();
-	}
+    /**
+     * Public constructor to instantiate the helper.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public BpmnDiXMLProcessor() {
+        super((EPackage.Registry.INSTANCE));
+        BpmnDiPackage.eINSTANCE.eClass();
+    }
 
-	/**
-	 * Register for "*" and "xml" file extensions the BpmnDiResourceFactoryImpl factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected Map<String, Resource.Factory> getRegistrations() {
-		if (registrations == null) {
-			super.getRegistrations();
-			registrations.put(XML_EXTENSION, new BpmnDiResourceFactoryImpl());
-			registrations.put(STAR_EXTENSION, new BpmnDiResourceFactoryImpl());
-		}
-		return registrations;
-	}
+    /**
+     * Register for "*" and "xml" file extensions the BpmnDiResourceFactoryImpl factory.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected Map<String, Resource.Factory> getRegistrations() {
+        if (registrations == null) {
+            super.getRegistrations();
+            registrations.put(XML_EXTENSION, new BpmnDiResourceFactoryImpl());
+            registrations.put(STAR_EXTENSION, new BpmnDiResourceFactoryImpl());
+        }
+        return registrations;
+    }
 
 } //BpmnDiXMLProcessor

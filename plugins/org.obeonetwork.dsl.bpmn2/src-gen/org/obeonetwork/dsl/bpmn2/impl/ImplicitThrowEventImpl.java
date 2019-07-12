@@ -26,23 +26,23 @@ import org.obeonetwork.dsl.bpmn2.ImplicitThrowEvent;
  * @generated
  */
 public class ImplicitThrowEventImpl extends ThrowEventImpl implements ImplicitThrowEvent {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ImplicitThrowEventImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ImplicitThrowEventImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.IMPLICIT_THROW_EVENT;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.IMPLICIT_THROW_EVENT;
+    }
 
 } //ImplicitThrowEventImpl

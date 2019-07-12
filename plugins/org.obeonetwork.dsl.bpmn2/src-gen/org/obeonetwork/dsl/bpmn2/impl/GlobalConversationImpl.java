@@ -26,23 +26,23 @@ import org.obeonetwork.dsl.bpmn2.GlobalConversation;
  * @generated
  */
 public class GlobalConversationImpl extends CollaborationImpl implements GlobalConversation {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GlobalConversationImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected GlobalConversationImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.GLOBAL_CONVERSATION;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.GLOBAL_CONVERSATION;
+    }
 
 } //GlobalConversationImpl
