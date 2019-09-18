@@ -2919,4 +2919,45 @@
     <entries xsi:type="description:UserFixedColor" red="172" green="226" blue="253" name="ParticipantBackgroundLeft"/>
     <entries xsi:type="description:UserFixedColor" red="133" green="200" blue="250" name="ParticipantBorder"/>
   </userColorsPalettes>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
+    <metamodels href="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI#/"/>
+    <categories name="Default Category">
+      <pages name="Default Page" labelExpression="Main" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1"/>
+      <pages name="Extended" labelExpression="Extended" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0"/>
+      <groups name="Group1" labelExpression="Group 1" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextDescription" name="name" labelExpression="Name" valueExpression="aql:self.name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="id" labelExpression="Id" valueExpression="aql:self.id">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:RadioDescription" name="ProcessType" labelExpression="Process Type" valueExpression="aql:self.processType.toString()" candidatesExpression="aql:bpmn2::ProcessType.eLiterals" candidateDisplayExpression="aql:candidate.name" numberOfColumns="5">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:SelectDescription" name="definitionalCollaborationRef" labelExpression="Definitional Collaboration Ref" valueExpression="aql:self.definitionalCollaborationRef.eClass().name + ' ' + self.definitionalCollaborationRef.name" candidatesExpression="aql:self.eResource().getContents().eAllContents(bpmn2::Collaboration)" candidateDisplayExpression="aql:candidate.eClass().name + ' ' + candidate.name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="Group2" labelExpression="Group2" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextAreaDescription" name="Description" labelExpression="Description" valueExpression="aql:self.description">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:CheckboxDescription" name="isClosed" labelExpression="Is Closed" valueExpression="aql:self.isClosed">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+      </groups>
+    </categories>
+  </extensions>
 </description:Group>
