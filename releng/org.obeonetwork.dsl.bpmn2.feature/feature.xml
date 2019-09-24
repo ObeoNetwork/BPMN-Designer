@@ -224,6 +224,7 @@ litigation.
       <import feature="org.eclipse.sirius.runtime.ide.ui.acceleo"/>
       <import feature="org.eclipse.sirius.specifier.ide.ui"/>
       <import feature="org.eclipse.sirius.specifier.ide.ui.acceleo"/>
+      <import feature="org.eclipse.sirius.properties.feature"/>
    </requires>
 
    <plugin
