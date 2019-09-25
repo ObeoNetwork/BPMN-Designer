@@ -11,11 +11,13 @@
 package org.obeonetwork.bpmn2.design;
 
 import java.util.List;
+import java.util.Set;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.sirius.properties.core.api.SiriusInputDescriptor;
 import org.eclipse.sirius.properties.core.internal.EditSupportSpec;
+import org.eclipse.sirius.properties.core.internal.SiriusContext;
 
 /**
  * This class provides utility methods for Sirius properties so that every expression like aql:input.emfEditServices(self).xxx can be changed to aql:self.xxx
@@ -87,7 +89,7 @@ public class PropertiesHelper {
 	/**
 	 * Equivalent method for aql:input.getAllSemanticElements()
 	 */
-	public Object getAllSemanticElements(EObject eObject) {
+	public Set<EObject> getAllSemanticElements(EObject eObject) {
 		SiriusInputDescriptor siriusInputDescriptor = new SiriusInputDescriptor(eObject);
 		return siriusInputDescriptor.getAllSemanticElements();
 	}
@@ -95,8 +97,8 @@ public class PropertiesHelper {
 	/**
 	* Equivalent method for aql:input.emfEditServices(self).getTabName()
 	*/
-	public Object getTabName(EObject eObject) {
-		EditSupportSpec editSupportSpec = new EditSupportSpec(null, eObject);
+	public String getTabName(EObject eObject) {
+		EditSupportSpec editSupportSpec = new EditSupportSpec(SiriusContext.from(eObject), eObject);
 		return editSupportSpec.getTabName();
 	}
 }
