@@ -2922,7 +2922,7 @@
   </userColorsPalettes>
   <extensions xsi:type="properties:ViewExtensionDescription" name="sirius_default_rules_properties">
     <categories name="Default">
-      <pages name="sirius_default_rules_defaultpage" labelExpression="aql:self.getTabName()" semanticCandidateExpression="aql:self.getAllSemanticElements()" groups="//@extensions.0/@categories.0/@groups.0"/>
+      <pages name="sirius_default_rules_defaultpage" labelExpression="aql:self.getTabName()" semanticCandidateExpression="aql:self" groups="//@extensions.0/@categories.0/@groups.0"/>
       <groups name="sirius_default_rules_defaultgroup" labelExpression="Properties" semanticCandidateExpression="var:self" preconditionExpression="">
         <controls xsi:type="properties:DynamicMappingForDescription" name="sirius_default_rules_structural_features_for" iterator="eStructuralFeature" iterableExpression="aql:self.getEStructuralFeatures()">
           <ifs name="sirius_default_rules_mono_string_if" predicateExpression="aql:self.getDefaultRulesMonoString(eStructuralFeature)">
