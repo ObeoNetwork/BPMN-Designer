@@ -98,7 +98,22 @@ public class PropertiesHelper {
 	* Equivalent method for aql:input.emfEditServices(self).getTabName()
 	*/
 	public String getTabName(EObject eObject) {
-		EditSupportSpec editSupportSpec = new EditSupportSpec(SiriusContext.from(eObject), eObject);
-		return editSupportSpec.getTabName();
+		EditSupportSpec editSupportSpec = new EditSupportSpec(null, eObject);
+		String text = editSupportSpec.getText();
+		if (text == null || text.isEmpty()) {
+			text = "Main";
+		}else {
+			text = elide(text, 10);
+		}
+		return text;
 	}
+	
+    private String elide(String s, int maxLength) {
+        final String dots = "..."; //$NON-NLS-1$
+        if (dots.length() <= maxLength && maxLength < s.length()) {
+            return s.substring(0, maxLength - dots.length()) + dots;
+        } else {
+            return s;
+        }
+    }
 }
