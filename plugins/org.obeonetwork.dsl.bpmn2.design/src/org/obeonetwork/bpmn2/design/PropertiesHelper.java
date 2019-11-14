@@ -81,7 +81,7 @@ public class PropertiesHelper {
 	/**
 	 * Equivalent method for aql:input.emfEditServices(self).setValue(eStructuralFeature, newValue)
 	 */
-	public Object setValue(EObject eObject, EStructuralFeature eStructuralFeature, EObject newValue) {
+	public Object setValue(EObject eObject, EStructuralFeature eStructuralFeature, Object newValue) {
 		EditSupportSpec editSupportSpec = new EditSupportSpec(null, eObject);
 		return editSupportSpec.setValue(eStructuralFeature, newValue);
 	}
