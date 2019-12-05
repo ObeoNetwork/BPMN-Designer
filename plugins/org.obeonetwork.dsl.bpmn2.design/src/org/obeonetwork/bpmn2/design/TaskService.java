@@ -47,11 +47,8 @@ import org.obeonetwork.dsl.bpmn2.impl.TaskImpl;
  */
 public class TaskService {
 
-	public String getLabel(Task task, boolean borderedNodes) {
+	public String getLabel(Task task) {
 		String result = " \n \n" + task.getName();
-		// if (borderedNodes) {
-		// result = " \n" + result;
-		// }
 		return result;
 	}
 
