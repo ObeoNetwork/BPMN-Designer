@@ -14,7 +14,6 @@
  */
 package org.obeonetwork.dsl.dd.di;
 
-import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -36,90 +35,89 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagramElement()
  * @model abstract="true"
- * @extends CDOObject
  * @generated
  */
-public interface DiagramElement extends CDOObject {
-	/**
-	 * Returns the value of the '<em><b>Owning Diagram</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.dd.di.Diagram#getRootElement <em>Root Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Owning Diagram</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Owning Diagram</em>' reference.
-	 * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagramElement_OwningDiagram()
-	 * @see org.obeonetwork.dsl.dd.di.Diagram#getRootElement
-	 * @model opposite="rootElement" resolveProxies="false" transient="true" changeable="false" derived="true" ordered="false"
-	 * @generated
-	 */
-	Diagram getOwningDiagram();
+public interface DiagramElement extends EObject {
+    /**
+     * Returns the value of the '<em><b>Owning Diagram</b></em>' reference.
+     * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.dd.di.Diagram#getRootElement <em>Root Element</em>}'.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Owning Diagram</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Owning Diagram</em>' reference.
+     * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagramElement_OwningDiagram()
+     * @see org.obeonetwork.dsl.dd.di.Diagram#getRootElement
+     * @model opposite="rootElement" resolveProxies="false" transient="true" changeable="false" derived="true" ordered="false"
+     * @generated
+     */
+    Diagram getOwningDiagram();
 
-	/**
-	 * Returns the value of the '<em><b>Owning Element</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.dd.di.DiagramElement#getOwnedElement <em>Owned Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Owning Element</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Owning Element</em>' reference.
-	 * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagramElement_OwningElement()
-	 * @see org.obeonetwork.dsl.dd.di.DiagramElement#getOwnedElement
-	 * @model opposite="ownedElement" resolveProxies="false" transient="true" changeable="false" derived="true" ordered="false"
-	 * @generated
-	 */
-	DiagramElement getOwningElement();
+    /**
+     * Returns the value of the '<em><b>Owning Element</b></em>' reference.
+     * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.dd.di.DiagramElement#getOwnedElement <em>Owned Element</em>}'.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Owning Element</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Owning Element</em>' reference.
+     * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagramElement_OwningElement()
+     * @see org.obeonetwork.dsl.dd.di.DiagramElement#getOwnedElement
+     * @model opposite="ownedElement" resolveProxies="false" transient="true" changeable="false" derived="true" ordered="false"
+     * @generated
+     */
+    DiagramElement getOwningElement();
 
-	/**
-	 * Returns the value of the '<em><b>Owned Element</b></em>' reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.dd.di.DiagramElement}.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.dd.di.DiagramElement#getOwningElement <em>Owning Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Owned Element</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Owned Element</em>' reference list.
-	 * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagramElement_OwnedElement()
-	 * @see org.obeonetwork.dsl.dd.di.DiagramElement#getOwningElement
-	 * @model opposite="owningElement" resolveProxies="false" transient="true" changeable="false" derived="true" ordered="false"
-	 * @generated
-	 */
-	EList<DiagramElement> getOwnedElement();
+    /**
+     * Returns the value of the '<em><b>Owned Element</b></em>' reference list.
+     * The list contents are of type {@link org.obeonetwork.dsl.dd.di.DiagramElement}.
+     * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.dd.di.DiagramElement#getOwningElement <em>Owning Element</em>}'.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Owned Element</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Owned Element</em>' reference list.
+     * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagramElement_OwnedElement()
+     * @see org.obeonetwork.dsl.dd.di.DiagramElement#getOwningElement
+     * @model opposite="owningElement" resolveProxies="false" transient="true" changeable="false" derived="true" ordered="false"
+     * @generated
+     */
+    EList<DiagramElement> getOwnedElement();
 
-	/**
-	 * Returns the value of the '<em><b>Model Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Model Element</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Model Element</em>' reference.
-	 * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagramElement_ModelElement()
-	 * @model transient="true" changeable="false" derived="true" ordered="false"
-	 * @generated
-	 */
-	EObject getModelElement();
+    /**
+     * Returns the value of the '<em><b>Model Element</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Model Element</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Model Element</em>' reference.
+     * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagramElement_ModelElement()
+     * @model transient="true" changeable="false" derived="true" ordered="false"
+     * @generated
+     */
+    EObject getModelElement();
 
-	/**
-	 * Returns the value of the '<em><b>Style</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Style</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Style</em>' reference.
-	 * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagramElement_Style()
-	 * @model transient="true" changeable="false" derived="true" ordered="false"
-	 * @generated
-	 */
-	Style getStyle();
+    /**
+     * Returns the value of the '<em><b>Style</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Style</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Style</em>' reference.
+     * @see org.obeonetwork.dsl.dd.di.DiPackage#getDiagramElement_Style()
+     * @model transient="true" changeable="false" derived="true" ordered="false"
+     * @generated
+     */
+    Style getStyle();
 
 } // DiagramElement

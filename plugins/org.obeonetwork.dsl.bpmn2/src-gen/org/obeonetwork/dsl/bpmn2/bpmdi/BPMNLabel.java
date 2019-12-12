@@ -33,30 +33,30 @@ import org.obeonetwork.dsl.dd.di.Label;
  * @generated
  */
 public interface BPMNLabel extends Label {
-	/**
-	 * Returns the value of the '<em><b>Label Style</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Label Style</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Label Style</em>' reference.
-	 * @see #setLabelStyle(BPMNLabelStyle)
-	 * @see org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage#getBPMNLabel_LabelStyle()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	BPMNLabelStyle getLabelStyle();
+    /**
+     * Returns the value of the '<em><b>Label Style</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Label Style</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Label Style</em>' reference.
+     * @see #setLabelStyle(BPMNLabelStyle)
+     * @see org.obeonetwork.dsl.bpmn2.bpmdi.BpmnDiPackage#getBPMNLabel_LabelStyle()
+     * @model ordered="false"
+     * @generated
+     */
+    BPMNLabelStyle getLabelStyle();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabel#getLabelStyle <em>Label Style</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Label Style</em>' reference.
-	 * @see #getLabelStyle()
-	 * @generated
-	 */
-	void setLabelStyle(BPMNLabelStyle value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.bpmdi.BPMNLabel#getLabelStyle <em>Label Style</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Label Style</em>' reference.
+     * @see #getLabelStyle()
+     * @generated
+     */
+    void setLabelStyle(BPMNLabelStyle value);
 
 } // BPMNLabel

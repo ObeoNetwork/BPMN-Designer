@@ -34,154 +34,152 @@ import org.obeonetwork.dsl.bpmn2.ServiceTask;
  * @generated
  */
 public class ServiceTaskImpl extends TaskImpl implements ServiceTask {
-	/**
-	 * The default value of the '{@link #getImplementation() <em>Implementation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImplementation()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String IMPLEMENTATION_EDEFAULT = null;
+    /**
+     * The default value of the '{@link #getImplementation() <em>Implementation</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getImplementation()
+     * @generated
+     * @ordered
+     */
+    protected static final String IMPLEMENTATION_EDEFAULT = null;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ServiceTaskImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ServiceTaskImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.SERVICE_TASK;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.SERVICE_TASK;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getImplementation() {
-		return (String) eDynamicGet(Bpmn2Package.SERVICE_TASK__IMPLEMENTATION,
-				Bpmn2Package.Literals.SERVICE_TASK__IMPLEMENTATION, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getImplementation() {
+        return (String) eDynamicGet(Bpmn2Package.SERVICE_TASK__IMPLEMENTATION, Bpmn2Package.Literals.SERVICE_TASK__IMPLEMENTATION, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setImplementation(String newImplementation) {
-		eDynamicSet(Bpmn2Package.SERVICE_TASK__IMPLEMENTATION, Bpmn2Package.Literals.SERVICE_TASK__IMPLEMENTATION,
-				newImplementation);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setImplementation(String newImplementation) {
+        eDynamicSet(Bpmn2Package.SERVICE_TASK__IMPLEMENTATION, Bpmn2Package.Literals.SERVICE_TASK__IMPLEMENTATION, newImplementation);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Operation getOperationRef() {
-		return (Operation) eDynamicGet(Bpmn2Package.SERVICE_TASK__OPERATION_REF,
-				Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Operation getOperationRef() {
+        return (Operation) eDynamicGet(Bpmn2Package.SERVICE_TASK__OPERATION_REF, Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Operation basicGetOperationRef() {
-		return (Operation) eDynamicGet(Bpmn2Package.SERVICE_TASK__OPERATION_REF,
-				Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Operation basicGetOperationRef() {
+        return (Operation) eDynamicGet(Bpmn2Package.SERVICE_TASK__OPERATION_REF, Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOperationRef(Operation newOperationRef) {
-		eDynamicSet(Bpmn2Package.SERVICE_TASK__OPERATION_REF, Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF,
-				newOperationRef);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setOperationRef(Operation newOperationRef) {
+        eDynamicSet(Bpmn2Package.SERVICE_TASK__OPERATION_REF, Bpmn2Package.Literals.SERVICE_TASK__OPERATION_REF, newOperationRef);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
-			return getImplementation();
-		case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
-			if (resolve)
-				return getOperationRef();
-			return basicGetOperationRef();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
+            return getImplementation();
+        case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
+            if (resolve)
+                return getOperationRef();
+            return basicGetOperationRef();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
-			setImplementation((String) newValue);
-			return;
-		case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
-			setOperationRef((Operation) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
+            setImplementation((String) newValue);
+            return;
+        case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
+            setOperationRef((Operation) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
-			setImplementation(IMPLEMENTATION_EDEFAULT);
-			return;
-		case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
-			setOperationRef((Operation) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
+            setImplementation(IMPLEMENTATION_EDEFAULT);
+            return;
+        case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
+            setOperationRef((Operation) null);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
-			return IMPLEMENTATION_EDEFAULT == null ? getImplementation() != null
-					: !IMPLEMENTATION_EDEFAULT.equals(getImplementation());
-		case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
-			return basicGetOperationRef() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.SERVICE_TASK__IMPLEMENTATION:
+            return IMPLEMENTATION_EDEFAULT == null ? getImplementation() != null : !IMPLEMENTATION_EDEFAULT.equals(getImplementation());
+        case Bpmn2Package.SERVICE_TASK__OPERATION_REF:
+            return basicGetOperationRef() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //ServiceTaskImpl

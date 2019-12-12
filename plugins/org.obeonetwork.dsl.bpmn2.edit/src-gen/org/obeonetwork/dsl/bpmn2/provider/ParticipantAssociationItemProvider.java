@@ -37,128 +37,121 @@ import org.obeonetwork.dsl.bpmn2.ParticipantAssociation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ParticipantAssociationItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
-	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ParticipantAssociationItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+public class ParticipantAssociationItemProvider extends BaseElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+    /**
+     * This constructs an instance from a factory and a notifier.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public ParticipantAssociationItemProvider(AdapterFactory adapterFactory) {
+        super(adapterFactory);
+    }
 
-	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+    /**
+     * This returns the property descriptors for the adapted class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addInnerParticipantRefPropertyDescriptor(object);
-			addOuterParticipantRefPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addInnerParticipantRefPropertyDescriptor(object);
+            addOuterParticipantRefPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
-	/**
-	 * This adds a property descriptor for the Inner Participant Ref feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInnerParticipantRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ParticipantAssociation_innerParticipantRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ParticipantAssociation_innerParticipantRef_feature", "_UI_ParticipantAssociation_type"),
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, true, false, true, null, null,
-				null));
-	}
+    /**
+     * This adds a property descriptor for the Inner Participant Ref feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addInnerParticipantRefPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_ParticipantAssociation_innerParticipantRef_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_ParticipantAssociation_innerParticipantRef_feature", "_UI_ParticipantAssociation_type"),
+                Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, true, false, true, null, null, null));
+    }
 
-	/**
-	 * This adds a property descriptor for the Outer Participant Ref feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOuterParticipantRefPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ParticipantAssociation_outerParticipantRef_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ParticipantAssociation_outerParticipantRef_feature", "_UI_ParticipantAssociation_type"),
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, true, false, true, null, null,
-				null));
-	}
+    /**
+     * This adds a property descriptor for the Outer Participant Ref feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addOuterParticipantRefPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_ParticipantAssociation_outerParticipantRef_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_ParticipantAssociation_outerParticipantRef_feature", "_UI_ParticipantAssociation_type"),
+                Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, true, false, true, null, null, null));
+    }
 
-	/**
-	 * This returns ParticipantAssociation.png.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		try {
-			return overlayImage(object, getResourceLocator().getImage("full/obj16/ParticipantAssociation.png"));
-		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object, getResourceLocator().getImage("full/obj16/ParticipantAssociation.gif"));
-		}
-	}
+    /**
+     * This returns ParticipantAssociation.png.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object getImage(Object object) {
+        try {
+            return overlayImage(object, getResourceLocator().getImage("full/obj16/ParticipantAssociation.png"));
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object, getResourceLocator().getImage("full/obj16/ParticipantAssociation.gif"));
+        }
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected boolean shouldComposeCreationImage() {
-		return true;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
 
-	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getText(Object object) {
-		String label = ((ParticipantAssociation) object).getId();
-		return label == null || label.length() == 0 ? getString("_UI_ParticipantAssociation_type")
-				: getString("_UI_ParticipantAssociation_type") + " " + label;
-	}
+    /**
+     * This returns the label text for the adapted class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getText(Object object) {
+        String label = ((ParticipantAssociation) object).getId();
+        return label == null || label.length() == 0 ? getString("_UI_ParticipantAssociation_type") : getString("_UI_ParticipantAssociation_type") + " " + label;
+    }
 
-	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
-		super.notifyChanged(notification);
-	}
+    /**
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void notifyChanged(Notification notification) {
+        updateChildren(notification);
+        super.notifyChanged(notification);
+    }
 
-	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+    /**
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+        super.collectNewChildDescriptors(newChildDescriptors, object);
+    }
 
 }

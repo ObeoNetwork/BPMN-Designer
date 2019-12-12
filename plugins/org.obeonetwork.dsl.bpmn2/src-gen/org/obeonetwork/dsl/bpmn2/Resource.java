@@ -34,46 +34,46 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface Resource extends RootElement {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getResource_Name()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	String getName();
+    /**
+     * Returns the value of the '<em><b>Name</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Name</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Name</em>' attribute.
+     * @see #setName(String)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getResource_Name()
+     * @model required="true" ordered="false"
+     * @generated
+     */
+    String getName();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.Resource#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.Resource#getName <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Name</em>' attribute.
+     * @see #getName()
+     * @generated
+     */
+    void setName(String value);
 
-	/**
-	 * Returns the value of the '<em><b>Resource Parameters</b></em>' containment reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.ResourceParameter}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Resource Parameters</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resource Parameters</em>' containment reference list.
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getResource_ResourceParameters()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<ResourceParameter> getResourceParameters();
+    /**
+     * Returns the value of the '<em><b>Resource Parameters</b></em>' containment reference list.
+     * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.ResourceParameter}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Resource Parameters</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Resource Parameters</em>' containment reference list.
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getResource_ResourceParameters()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<ResourceParameter> getResourceParameters();
 
 } // Resource

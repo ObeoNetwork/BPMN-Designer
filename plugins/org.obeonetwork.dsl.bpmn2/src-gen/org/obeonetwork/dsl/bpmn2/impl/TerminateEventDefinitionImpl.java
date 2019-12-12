@@ -26,23 +26,23 @@ import org.obeonetwork.dsl.bpmn2.TerminateEventDefinition;
  * @generated
  */
 public class TerminateEventDefinitionImpl extends EventDefinitionImpl implements TerminateEventDefinition {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TerminateEventDefinitionImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected TerminateEventDefinitionImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.TERMINATE_EVENT_DEFINITION;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.TERMINATE_EVENT_DEFINITION;
+    }
 
 } //TerminateEventDefinitionImpl

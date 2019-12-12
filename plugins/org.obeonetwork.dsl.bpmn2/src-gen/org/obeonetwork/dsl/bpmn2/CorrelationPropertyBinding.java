@@ -32,56 +32,56 @@ package org.obeonetwork.dsl.bpmn2;
  * @generated
  */
 public interface CorrelationPropertyBinding extends BaseElement {
-	/**
-	 * Returns the value of the '<em><b>Data Path</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Data Path</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Data Path</em>' containment reference.
-	 * @see #setDataPath(FormalExpression)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getCorrelationPropertyBinding_DataPath()
-	 * @model containment="true" required="true" ordered="false"
-	 * @generated
-	 */
-	FormalExpression getDataPath();
+    /**
+     * Returns the value of the '<em><b>Data Path</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Data Path</em>' containment reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Data Path</em>' containment reference.
+     * @see #setDataPath(FormalExpression)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getCorrelationPropertyBinding_DataPath()
+     * @model containment="true" required="true" ordered="false"
+     * @generated
+     */
+    FormalExpression getDataPath();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.CorrelationPropertyBinding#getDataPath <em>Data Path</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Data Path</em>' containment reference.
-	 * @see #getDataPath()
-	 * @generated
-	 */
-	void setDataPath(FormalExpression value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.CorrelationPropertyBinding#getDataPath <em>Data Path</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Data Path</em>' containment reference.
+     * @see #getDataPath()
+     * @generated
+     */
+    void setDataPath(FormalExpression value);
 
-	/**
-	 * Returns the value of the '<em><b>Correlation Property Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Correlation Property Ref</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Correlation Property Ref</em>' reference.
-	 * @see #setCorrelationPropertyRef(CorrelationProperty)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getCorrelationPropertyBinding_CorrelationPropertyRef()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	CorrelationProperty getCorrelationPropertyRef();
+    /**
+     * Returns the value of the '<em><b>Correlation Property Ref</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Correlation Property Ref</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Correlation Property Ref</em>' reference.
+     * @see #setCorrelationPropertyRef(CorrelationProperty)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getCorrelationPropertyBinding_CorrelationPropertyRef()
+     * @model required="true" ordered="false"
+     * @generated
+     */
+    CorrelationProperty getCorrelationPropertyRef();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.CorrelationPropertyBinding#getCorrelationPropertyRef <em>Correlation Property Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Correlation Property Ref</em>' reference.
-	 * @see #getCorrelationPropertyRef()
-	 * @generated
-	 */
-	void setCorrelationPropertyRef(CorrelationProperty value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.CorrelationPropertyBinding#getCorrelationPropertyRef <em>Correlation Property Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Correlation Property Ref</em>' reference.
+     * @see #getCorrelationPropertyRef()
+     * @generated
+     */
+    void setCorrelationPropertyRef(CorrelationProperty value);
 
 } // CorrelationPropertyBinding

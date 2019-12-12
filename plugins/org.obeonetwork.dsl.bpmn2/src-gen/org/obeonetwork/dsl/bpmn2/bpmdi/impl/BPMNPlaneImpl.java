@@ -34,113 +34,112 @@ import org.obeonetwork.dsl.dd.di.impl.PlaneImpl;
  * @generated
  */
 public class BPMNPlaneImpl extends PlaneImpl implements BPMNPlane {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BPMNPlaneImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected BPMNPlaneImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return BpmnDiPackage.Literals.BPMN_PLANE;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return BpmnDiPackage.Literals.BPMN_PLANE;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BaseElement getBpmnElement() {
-		return (BaseElement) eDynamicGet(BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT,
-				BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public BaseElement getBpmnElement() {
+        return (BaseElement) eDynamicGet(BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT, BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BaseElement basicGetBpmnElement() {
-		return (BaseElement) eDynamicGet(BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT,
-				BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public BaseElement basicGetBpmnElement() {
+        return (BaseElement) eDynamicGet(BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT, BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBpmnElement(BaseElement newBpmnElement) {
-		eDynamicSet(BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT, BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT,
-				newBpmnElement);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setBpmnElement(BaseElement newBpmnElement) {
+        eDynamicSet(BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT, BpmnDiPackage.Literals.BPMN_PLANE__BPMN_ELEMENT, newBpmnElement);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
-			if (resolve)
-				return getBpmnElement();
-			return basicGetBpmnElement();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
+            if (resolve)
+                return getBpmnElement();
+            return basicGetBpmnElement();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
-			setBpmnElement((BaseElement) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
+            setBpmnElement((BaseElement) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
-			setBpmnElement((BaseElement) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
+            setBpmnElement((BaseElement) null);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
-			return basicGetBpmnElement() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_PLANE__BPMN_ELEMENT:
+            return basicGetBpmnElement() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //BPMNPlaneImpl

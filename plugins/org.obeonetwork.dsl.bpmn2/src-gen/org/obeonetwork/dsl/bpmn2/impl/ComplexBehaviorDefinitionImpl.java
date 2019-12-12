@@ -37,168 +37,167 @@ import org.obeonetwork.dsl.bpmn2.ImplicitThrowEvent;
  * @generated
  */
 public class ComplexBehaviorDefinitionImpl extends BaseElementImpl implements ComplexBehaviorDefinition {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ComplexBehaviorDefinitionImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ComplexBehaviorDefinitionImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FormalExpression getCondition() {
-		return (FormalExpression) eDynamicGet(Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
-				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public FormalExpression getCondition() {
+        return (FormalExpression) eDynamicGet(Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCondition(FormalExpression newCondition, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newCondition, Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
-				msgs);
-		return msgs;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetCondition(FormalExpression newCondition, NotificationChain msgs) {
+        msgs = eDynamicInverseAdd((InternalEObject) newCondition, Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, msgs);
+        return msgs;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCondition(FormalExpression newCondition) {
-		eDynamicSet(Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION,
-				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, newCondition);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setCondition(FormalExpression newCondition) {
+        eDynamicSet(Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__CONDITION, newCondition);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ImplicitThrowEvent getEvent() {
-		return (ImplicitThrowEvent) eDynamicGet(Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT,
-				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public ImplicitThrowEvent getEvent() {
+        return (ImplicitThrowEvent) eDynamicGet(Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetEvent(ImplicitThrowEvent newEvent, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newEvent, Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, msgs);
-		return msgs;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetEvent(ImplicitThrowEvent newEvent, NotificationChain msgs) {
+        msgs = eDynamicInverseAdd((InternalEObject) newEvent, Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, msgs);
+        return msgs;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEvent(ImplicitThrowEvent newEvent) {
-		eDynamicSet(Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT,
-				Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT, newEvent);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setEvent(ImplicitThrowEvent newEvent) {
+        eDynamicSet(Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT, Bpmn2Package.Literals.COMPLEX_BEHAVIOR_DEFINITION__EVENT, newEvent);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
-			return basicSetCondition(null, msgs);
-		case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
-			return basicSetEvent(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
+            return basicSetCondition(null, msgs);
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
+            return basicSetEvent(null, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
-			return getCondition();
-		case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
-			return getEvent();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
+            return getCondition();
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
+            return getEvent();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
-			setCondition((FormalExpression) newValue);
-			return;
-		case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
-			setEvent((ImplicitThrowEvent) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
+            setCondition((FormalExpression) newValue);
+            return;
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
+            setEvent((ImplicitThrowEvent) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
-			setCondition((FormalExpression) null);
-			return;
-		case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
-			setEvent((ImplicitThrowEvent) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
+            setCondition((FormalExpression) null);
+            return;
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
+            setEvent((ImplicitThrowEvent) null);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
-			return getCondition() != null;
-		case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
-			return getEvent() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__CONDITION:
+            return getCondition() != null;
+        case Bpmn2Package.COMPLEX_BEHAVIOR_DEFINITION__EVENT:
+            return getEvent() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //ComplexBehaviorDefinitionImpl

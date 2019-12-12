@@ -48,284 +48,283 @@ import org.obeonetwork.dsl.bpmn2.Participant;
  * @generated
  */
 public abstract class ConversationNodeImpl extends BaseElementImpl implements ConversationNode {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
+    /**
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected static final String NAME_EDEFAULT = null;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ConversationNodeImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ConversationNodeImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.CONVERSATION_NODE;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.CONVERSATION_NODE;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<ConversationLink> getIncomingConversationLinks() {
-		return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS,
-				Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<ConversationLink> getIncomingConversationLinks() {
+        return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS, Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<ConversationLink> getOutgoingConversationLinks() {
-		return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS,
-				Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<ConversationLink> getOutgoingConversationLinks() {
+        return (EList<ConversationLink>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS, Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__NAME, Bpmn2Package.Literals.CONVERSATION_NODE__NAME,
-				true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getName() {
+        return (String) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__NAME, Bpmn2Package.Literals.CONVERSATION_NODE__NAME, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.CONVERSATION_NODE__NAME, Bpmn2Package.Literals.CONVERSATION_NODE__NAME, newName);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setName(String newName) {
+        eDynamicSet(Bpmn2Package.CONVERSATION_NODE__NAME, Bpmn2Package.Literals.CONVERSATION_NODE__NAME, newName);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Participant> getParticipantRefs() {
-		return (EList<Participant>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS,
-				Bpmn2Package.Literals.CONVERSATION_NODE__PARTICIPANT_REFS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<Participant> getParticipantRefs() {
+        return (EList<Participant>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS, Bpmn2Package.Literals.CONVERSATION_NODE__PARTICIPANT_REFS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<MessageFlow> getMessageFlowRefs() {
-		return (EList<MessageFlow>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS,
-				Bpmn2Package.Literals.CONVERSATION_NODE__MESSAGE_FLOW_REFS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<MessageFlow> getMessageFlowRefs() {
+        return (EList<MessageFlow>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS, Bpmn2Package.Literals.CONVERSATION_NODE__MESSAGE_FLOW_REFS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<CorrelationKey> getCorrelationKeys() {
-		return (EList<CorrelationKey>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS,
-				Bpmn2Package.Literals.CONVERSATION_NODE__CORRELATION_KEYS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<CorrelationKey> getCorrelationKeys() {
+        return (EList<CorrelationKey>) eDynamicGet(Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS, Bpmn2Package.Literals.CONVERSATION_NODE__CORRELATION_KEYS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks())
-					.basicAdd(otherEnd, msgs);
-		case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoingConversationLinks())
-					.basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncomingConversationLinks()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutgoingConversationLinks()).basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-			return ((InternalEList<?>) getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
-		case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-			return ((InternalEList<?>) getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
-		case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
-			return ((InternalEList<?>) getCorrelationKeys()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
+            return ((InternalEList<?>) getIncomingConversationLinks()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
+            return ((InternalEList<?>) getOutgoingConversationLinks()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
+            return ((InternalEList<?>) getCorrelationKeys()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-			return getIncomingConversationLinks();
-		case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-			return getOutgoingConversationLinks();
-		case Bpmn2Package.CONVERSATION_NODE__NAME:
-			return getName();
-		case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
-			return getParticipantRefs();
-		case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
-			return getMessageFlowRefs();
-		case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
-			return getCorrelationKeys();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
+            return getIncomingConversationLinks();
+        case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
+            return getOutgoingConversationLinks();
+        case Bpmn2Package.CONVERSATION_NODE__NAME:
+            return getName();
+        case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
+            return getParticipantRefs();
+        case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
+            return getMessageFlowRefs();
+        case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
+            return getCorrelationKeys();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.CONVERSATION_NODE__NAME:
-			setName((String) newValue);
-			return;
-		case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
-			getParticipantRefs().clear();
-			getParticipantRefs().addAll((Collection<? extends Participant>) newValue);
-			return;
-		case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
-			getMessageFlowRefs().clear();
-			getMessageFlowRefs().addAll((Collection<? extends MessageFlow>) newValue);
-			return;
-		case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
-			getCorrelationKeys().clear();
-			getCorrelationKeys().addAll((Collection<? extends CorrelationKey>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.CONVERSATION_NODE__NAME:
+            setName((String) newValue);
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
+            getParticipantRefs().clear();
+            getParticipantRefs().addAll((Collection<? extends Participant>) newValue);
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
+            getMessageFlowRefs().clear();
+            getMessageFlowRefs().addAll((Collection<? extends MessageFlow>) newValue);
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
+            getCorrelationKeys().clear();
+            getCorrelationKeys().addAll((Collection<? extends CorrelationKey>) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CONVERSATION_NODE__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
-			getParticipantRefs().clear();
-			return;
-		case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
-			getMessageFlowRefs().clear();
-			return;
-		case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
-			getCorrelationKeys().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.CONVERSATION_NODE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
+            getParticipantRefs().clear();
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
+            getMessageFlowRefs().clear();
+            return;
+        case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
+            getCorrelationKeys().clear();
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-			return !getIncomingConversationLinks().isEmpty();
-		case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-			return !getOutgoingConversationLinks().isEmpty();
-		case Bpmn2Package.CONVERSATION_NODE__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
-		case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
-			return !getParticipantRefs().isEmpty();
-		case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
-			return !getMessageFlowRefs().isEmpty();
-		case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
-			return !getCorrelationKeys().isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
+            return !getIncomingConversationLinks().isEmpty();
+        case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
+            return !getOutgoingConversationLinks().isEmpty();
+        case Bpmn2Package.CONVERSATION_NODE__NAME:
+            return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
+        case Bpmn2Package.CONVERSATION_NODE__PARTICIPANT_REFS:
+            return !getParticipantRefs().isEmpty();
+        case Bpmn2Package.CONVERSATION_NODE__MESSAGE_FLOW_REFS:
+            return !getMessageFlowRefs().isEmpty();
+        case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
+            return !getCorrelationKeys().isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == InteractionNode.class) {
-			switch (derivedFeatureID) {
-			case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
-				return Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS;
-			case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
-				return Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS;
-			default:
-				return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+        if (baseClass == InteractionNode.class) {
+            switch (derivedFeatureID) {
+            case Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS:
+                return Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS;
+            case Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS:
+                return Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS;
+            default:
+                return -1;
+            }
+        }
+        return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == InteractionNode.class) {
-			switch (baseFeatureID) {
-			case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
-				return Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS;
-			case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
-				return Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS;
-			default:
-				return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+        if (baseClass == InteractionNode.class) {
+            switch (baseFeatureID) {
+            case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+                return Bpmn2Package.CONVERSATION_NODE__INCOMING_CONVERSATION_LINKS;
+            case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+                return Bpmn2Package.CONVERSATION_NODE__OUTGOING_CONVERSATION_LINKS;
+            default:
+                return -1;
+            }
+        }
+        return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+    }
 
 } //ConversationNodeImpl

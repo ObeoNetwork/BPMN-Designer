@@ -1,7 +1,7 @@
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.design;singleton:=true
-Bundle-Version: 4.0.1.qualifier
+Bundle-Version: 4.0.2.qualifier
 Bundle-Localization: plugin
 Bundle-Activator: org.obeonetwork.bpmn2.design.Activator
 Require-Bundle: org.eclipse.ui,
@@ -12,13 +12,15 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.transaction,
  com.google.guava,
  org.obeonetwork.dsl.bpmn2,
- org.eclipse.emf.cdo;bundle-version="4.0.1",
  org.eclipse.sirius,
  org.eclipse.sirius.common,
  org.eclipse.sirius.ui,
  org.eclipse.sirius.diagram,
  org.eclipse.sirius.diagram.ui,
- org.eclipse.sirius.ext.base
+ org.eclipse.sirius.ext.base,
+ org.eclipse.emf.ecore,
+ org.eclipse.sirius.properties.core,
+ org.eclipse.sirius.properties
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.obeonetwork.bpmn2.design

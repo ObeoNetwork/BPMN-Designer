@@ -33,20 +33,20 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface Event extends FlowNode, InteractionNode {
-	/**
-	 * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.Property}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Properties</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Properties</em>' containment reference list.
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getEvent_Properties()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<Property> getProperties();
+    /**
+     * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
+     * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.Property}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Properties</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Properties</em>' containment reference list.
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getEvent_Properties()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<Property> getProperties();
 
 } // Event

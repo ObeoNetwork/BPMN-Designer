@@ -33,113 +33,112 @@ import org.obeonetwork.dsl.bpmn2.SequenceFlow;
  * @generated
  */
 public class ExclusiveGatewayImpl extends GatewayImpl implements ExclusiveGateway {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExclusiveGatewayImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ExclusiveGatewayImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.EXCLUSIVE_GATEWAY;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.EXCLUSIVE_GATEWAY;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SequenceFlow getDefault() {
-		return (SequenceFlow) eDynamicGet(Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT,
-				Bpmn2Package.Literals.EXCLUSIVE_GATEWAY__DEFAULT, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public SequenceFlow getDefault() {
+        return (SequenceFlow) eDynamicGet(Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT, Bpmn2Package.Literals.EXCLUSIVE_GATEWAY__DEFAULT, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SequenceFlow basicGetDefault() {
-		return (SequenceFlow) eDynamicGet(Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT,
-				Bpmn2Package.Literals.EXCLUSIVE_GATEWAY__DEFAULT, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SequenceFlow basicGetDefault() {
+        return (SequenceFlow) eDynamicGet(Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT, Bpmn2Package.Literals.EXCLUSIVE_GATEWAY__DEFAULT, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDefault(SequenceFlow newDefault) {
-		eDynamicSet(Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT, Bpmn2Package.Literals.EXCLUSIVE_GATEWAY__DEFAULT,
-				newDefault);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setDefault(SequenceFlow newDefault) {
+        eDynamicSet(Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT, Bpmn2Package.Literals.EXCLUSIVE_GATEWAY__DEFAULT, newDefault);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT:
-			if (resolve)
-				return getDefault();
-			return basicGetDefault();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT:
+            if (resolve)
+                return getDefault();
+            return basicGetDefault();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT:
-			setDefault((SequenceFlow) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT:
+            setDefault((SequenceFlow) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT:
-			setDefault((SequenceFlow) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT:
+            setDefault((SequenceFlow) null);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT:
-			return basicGetDefault() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.EXCLUSIVE_GATEWAY__DEFAULT:
+            return basicGetDefault() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //ExclusiveGatewayImpl

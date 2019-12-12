@@ -33,20 +33,20 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface GlobalTask extends CallableElement {
-	/**
-	 * Returns the value of the '<em><b>Resources</b></em>' containment reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.ResourceRole}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Resources</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resources</em>' containment reference list.
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getGlobalTask_Resources()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<ResourceRole> getResources();
+    /**
+     * Returns the value of the '<em><b>Resources</b></em>' containment reference list.
+     * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.ResourceRole}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Resources</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Resources</em>' containment reference list.
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getGlobalTask_Resources()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<ResourceRole> getResources();
 
 } // GlobalTask

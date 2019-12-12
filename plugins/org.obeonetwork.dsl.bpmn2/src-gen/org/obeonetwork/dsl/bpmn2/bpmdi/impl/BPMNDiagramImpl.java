@@ -42,149 +42,150 @@ import org.obeonetwork.dsl.dd.di.impl.DiagramImpl;
  * @generated
  */
 public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BPMNDiagramImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected BPMNDiagramImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return BpmnDiPackage.Literals.BPMN_DIAGRAM;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return BpmnDiPackage.Literals.BPMN_DIAGRAM;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BPMNPlane getPlane() {
-		return (BPMNPlane) eDynamicGet(BpmnDiPackage.BPMN_DIAGRAM__PLANE, BpmnDiPackage.Literals.BPMN_DIAGRAM__PLANE,
-				true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public BPMNPlane getPlane() {
+        return (BPMNPlane) eDynamicGet(BpmnDiPackage.BPMN_DIAGRAM__PLANE, BpmnDiPackage.Literals.BPMN_DIAGRAM__PLANE, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetPlane(BPMNPlane newPlane, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject) newPlane, BpmnDiPackage.BPMN_DIAGRAM__PLANE, msgs);
-		return msgs;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public NotificationChain basicSetPlane(BPMNPlane newPlane, NotificationChain msgs) {
+        msgs = eDynamicInverseAdd((InternalEObject) newPlane, BpmnDiPackage.BPMN_DIAGRAM__PLANE, msgs);
+        return msgs;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPlane(BPMNPlane newPlane) {
-		eDynamicSet(BpmnDiPackage.BPMN_DIAGRAM__PLANE, BpmnDiPackage.Literals.BPMN_DIAGRAM__PLANE, newPlane);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setPlane(BPMNPlane newPlane) {
+        eDynamicSet(BpmnDiPackage.BPMN_DIAGRAM__PLANE, BpmnDiPackage.Literals.BPMN_DIAGRAM__PLANE, newPlane);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<BPMNLabelStyle> getLabelStyle() {
-		return (EList<BPMNLabelStyle>) eDynamicGet(BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE,
-				BpmnDiPackage.Literals.BPMN_DIAGRAM__LABEL_STYLE, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<BPMNLabelStyle> getLabelStyle() {
+        return (EList<BPMNLabelStyle>) eDynamicGet(BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE, BpmnDiPackage.Literals.BPMN_DIAGRAM__LABEL_STYLE, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
-			return basicSetPlane(null, msgs);
-		case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-			return ((InternalEList<?>) getLabelStyle()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
+            return basicSetPlane(null, msgs);
+        case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
+            return ((InternalEList<?>) getLabelStyle()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
-			return getPlane();
-		case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-			return getLabelStyle();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
+            return getPlane();
+        case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
+            return getLabelStyle();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
-			setPlane((BPMNPlane) newValue);
-			return;
-		case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-			getLabelStyle().clear();
-			getLabelStyle().addAll((Collection<? extends BPMNLabelStyle>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
+            setPlane((BPMNPlane) newValue);
+            return;
+        case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
+            getLabelStyle().clear();
+            getLabelStyle().addAll((Collection<? extends BPMNLabelStyle>) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
-			setPlane((BPMNPlane) null);
-			return;
-		case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-			getLabelStyle().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
+            setPlane((BPMNPlane) null);
+            return;
+        case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
+            getLabelStyle().clear();
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
-			return getPlane() != null;
-		case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-			return !getLabelStyle().isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
+            return getPlane() != null;
+        case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
+            return !getLabelStyle().isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //BPMNDiagramImpl

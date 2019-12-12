@@ -33,20 +33,20 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface SubConversation extends ConversationNode {
-	/**
-	 * Returns the value of the '<em><b>Conversation Nodes</b></em>' containment reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.ConversationNode}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Conversation Nodes</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Conversation Nodes</em>' containment reference list.
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getSubConversation_ConversationNodes()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<ConversationNode> getConversationNodes();
+    /**
+     * Returns the value of the '<em><b>Conversation Nodes</b></em>' containment reference list.
+     * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.ConversationNode}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Conversation Nodes</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Conversation Nodes</em>' containment reference list.
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getSubConversation_ConversationNodes()
+     * @model containment="true" ordered="false"
+     * @generated
+     */
+    EList<ConversationNode> getConversationNodes();
 
 } // SubConversation

@@ -36,50 +36,50 @@ import org.obeonetwork.dsl.dd.dc.Point;
  * @generated
  */
 public interface Edge extends DiagramElement {
-	/**
-	 * Returns the value of the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Source</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source</em>' reference.
-	 * @see org.obeonetwork.dsl.dd.di.DiPackage#getEdge_Source()
-	 * @model transient="true" changeable="false" derived="true" ordered="false"
-	 * @generated
-	 */
-	DiagramElement getSource();
+    /**
+     * Returns the value of the '<em><b>Source</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Source</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Source</em>' reference.
+     * @see org.obeonetwork.dsl.dd.di.DiPackage#getEdge_Source()
+     * @model transient="true" changeable="false" derived="true" ordered="false"
+     * @generated
+     */
+    DiagramElement getSource();
 
-	/**
-	 * Returns the value of the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target</em>' reference.
-	 * @see org.obeonetwork.dsl.dd.di.DiPackage#getEdge_Target()
-	 * @model transient="true" changeable="false" derived="true" ordered="false"
-	 * @generated
-	 */
-	DiagramElement getTarget();
+    /**
+     * Returns the value of the '<em><b>Target</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Target</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Target</em>' reference.
+     * @see org.obeonetwork.dsl.dd.di.DiPackage#getEdge_Target()
+     * @model transient="true" changeable="false" derived="true" ordered="false"
+     * @generated
+     */
+    DiagramElement getTarget();
 
-	/**
-	 * Returns the value of the '<em><b>Waypoint</b></em>' containment reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.dd.dc.Point}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Waypoint</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Waypoint</em>' containment reference list.
-	 * @see org.obeonetwork.dsl.dd.di.DiPackage#getEdge_Waypoint()
-	 * @model containment="true" lower="2"
-	 * @generated
-	 */
-	EList<Point> getWaypoint();
+    /**
+     * Returns the value of the '<em><b>Waypoint</b></em>' containment reference list.
+     * The list contents are of type {@link org.obeonetwork.dsl.dd.dc.Point}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Waypoint</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Waypoint</em>' containment reference list.
+     * @see org.obeonetwork.dsl.dd.di.DiPackage#getEdge_Waypoint()
+     * @model containment="true" lower="2"
+     * @generated
+     */
+    EList<Point> getWaypoint();
 
 } // Edge

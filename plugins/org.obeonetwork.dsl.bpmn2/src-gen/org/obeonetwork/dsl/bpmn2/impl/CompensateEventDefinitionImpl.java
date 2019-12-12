@@ -34,153 +34,152 @@ import org.obeonetwork.dsl.bpmn2.CompensateEventDefinition;
  * @generated
  */
 public class CompensateEventDefinitionImpl extends EventDefinitionImpl implements CompensateEventDefinition {
-	/**
-	 * The default value of the '{@link #isWaitForCompletion() <em>Wait For Completion</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isWaitForCompletion()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean WAIT_FOR_COMPLETION_EDEFAULT = false;
+    /**
+     * The default value of the '{@link #isWaitForCompletion() <em>Wait For Completion</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #isWaitForCompletion()
+     * @generated
+     * @ordered
+     */
+    protected static final boolean WAIT_FOR_COMPLETION_EDEFAULT = false;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CompensateEventDefinitionImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected CompensateEventDefinitionImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isWaitForCompletion() {
-		return (Boolean) eDynamicGet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
-				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean isWaitForCompletion() {
+        return (Boolean) eDynamicGet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWaitForCompletion(boolean newWaitForCompletion) {
-		eDynamicSet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION,
-				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, newWaitForCompletion);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setWaitForCompletion(boolean newWaitForCompletion) {
+        eDynamicSet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, newWaitForCompletion);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Activity getActivityRef() {
-		return (Activity) eDynamicGet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
-				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Activity getActivityRef() {
+        return (Activity) eDynamicGet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Activity basicGetActivityRef() {
-		return (Activity) eDynamicGet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
-				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Activity basicGetActivityRef() {
+        return (Activity) eDynamicGet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setActivityRef(Activity newActivityRef) {
-		eDynamicSet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF,
-				Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, newActivityRef);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setActivityRef(Activity newActivityRef) {
+        eDynamicSet(Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF, newActivityRef);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-			return isWaitForCompletion();
-		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
-			if (resolve)
-				return getActivityRef();
-			return basicGetActivityRef();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+            return isWaitForCompletion();
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+            if (resolve)
+                return getActivityRef();
+            return basicGetActivityRef();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-			setWaitForCompletion((Boolean) newValue);
-			return;
-		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
-			setActivityRef((Activity) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+            setWaitForCompletion((Boolean) newValue);
+            return;
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+            setActivityRef((Activity) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-			setWaitForCompletion(WAIT_FOR_COMPLETION_EDEFAULT);
-			return;
-		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
-			setActivityRef((Activity) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+            setWaitForCompletion(WAIT_FOR_COMPLETION_EDEFAULT);
+            return;
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+            setActivityRef((Activity) null);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-			return isWaitForCompletion() != WAIT_FOR_COMPLETION_EDEFAULT;
-		case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
-			return basicGetActivityRef() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
+            return isWaitForCompletion() != WAIT_FOR_COMPLETION_EDEFAULT;
+        case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__ACTIVITY_REF:
+            return basicGetActivityRef() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //CompensateEventDefinitionImpl

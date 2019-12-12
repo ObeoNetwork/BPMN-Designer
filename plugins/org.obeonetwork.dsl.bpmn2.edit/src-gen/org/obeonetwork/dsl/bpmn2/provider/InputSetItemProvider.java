@@ -32,186 +32,165 @@ import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.InputSet;
 
 /**
- * This is the item provider adapter for a
- * {@link org.obeonetwork.dsl.bpmn2.InputSet} object. <!-- begin-user-doc -->
+ * This is the item provider adapter for a {@link org.obeonetwork.dsl.bpmn2.InputSet} object.
+ * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
-public class InputSetItemProvider extends BaseElementItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
-	/**
-	 * This constructs an instance from a factory and a notifier. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public InputSetItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+public class InputSetItemProvider extends BaseElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+    /**
+     * This constructs an instance from a factory and a notifier. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public InputSetItemProvider(AdapterFactory adapterFactory) {
+        super(adapterFactory);
+    }
 
-	/**
-	 * This returns the property descriptors for the adapted class. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+    /**
+     * This returns the property descriptors for the adapted class. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
+        if (itemPropertyDescriptors == null) {
+            super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addDataInputRefsPropertyDescriptor(object);
-			addOptionalInputRefsPropertyDescriptor(object);
-			addWhileExecutingInputRefsPropertyDescriptor(object);
-			addOutputSetRefsPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+            addNamePropertyDescriptor(object);
+            addDataInputRefsPropertyDescriptor(object);
+            addOptionalInputRefsPropertyDescriptor(object);
+            addWhileExecutingInputRefsPropertyDescriptor(object);
+            addOutputSetRefsPropertyDescriptor(object);
+        }
+        return itemPropertyDescriptors;
+    }
 
-	/**
-	 * This adds a property descriptor for the Name feature. <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_InputSet_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_InputSet_name_feature",
-								"_UI_InputSet_type"),
-						Bpmn2Package.Literals.INPUT_SET__NAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
+    /**
+     * This adds a property descriptor for the Name feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addNamePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(), getString("_UI_InputSet_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_InputSet_name_feature", "_UI_InputSet_type"), Bpmn2Package.Literals.INPUT_SET__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+    }
 
-	/**
-	 * This adds a property descriptor for the Data Input Refs feature. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected void addDataInputRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_InputSet_dataInputRefs_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_InputSet_dataInputRefs_feature",
-								"_UI_InputSet_type"),
-						Bpmn2Package.Literals.INPUT_SET__DATA_INPUT_REFS, true, false, true, null, null, null));
-	}
+    /**
+     * This adds a property descriptor for the Data Input Refs feature. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    protected void addDataInputRefsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_InputSet_dataInputRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InputSet_dataInputRefs_feature", "_UI_InputSet_type"),
+                Bpmn2Package.Literals.INPUT_SET__DATA_INPUT_REFS, true, false, true, null, null, null));
+    }
 
-	/**
-	 * This adds a property descriptor for the Optional Input Refs feature. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected void addOptionalInputRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_InputSet_optionalInputRefs_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_InputSet_optionalInputRefs_feature",
-								"_UI_InputSet_type"),
-						Bpmn2Package.Literals.INPUT_SET__OPTIONAL_INPUT_REFS, true, false, true, null, null, null));
-	}
+    /**
+     * This adds a property descriptor for the Optional Input Refs feature. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    protected void addOptionalInputRefsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_InputSet_optionalInputRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InputSet_optionalInputRefs_feature", "_UI_InputSet_type"),
+                Bpmn2Package.Literals.INPUT_SET__OPTIONAL_INPUT_REFS, true, false, true, null, null, null));
+    }
 
-	/**
-	 * This adds a property descriptor for the While Executing Input Refs feature.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected void addWhileExecutingInputRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_InputSet_whileExecutingInputRefs_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_InputSet_whileExecutingInputRefs_feature",
-								"_UI_InputSet_type"),
-						Bpmn2Package.Literals.INPUT_SET__WHILE_EXECUTING_INPUT_REFS, true, false, true, null, null,
-						null));
-	}
+    /**
+     * This adds a property descriptor for the While Executing Input Refs feature.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addWhileExecutingInputRefsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_InputSet_whileExecutingInputRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InputSet_whileExecutingInputRefs_feature", "_UI_InputSet_type"),
+                Bpmn2Package.Literals.INPUT_SET__WHILE_EXECUTING_INPUT_REFS, true, false, true, null, null, null));
+    }
 
-	/**
-	 * This adds a property descriptor for the Output Set Refs feature. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected void addOutputSetRefsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_InputSet_outputSetRefs_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_InputSet_outputSetRefs_feature",
-								"_UI_InputSet_type"),
-						Bpmn2Package.Literals.INPUT_SET__OUTPUT_SET_REFS, true, false, true, null, null, null));
-	}
+    /**
+     * This adds a property descriptor for the Output Set Refs feature. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    protected void addOutputSetRefsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_InputSet_outputSetRefs_feature"), getString("_UI_PropertyDescriptor_description", "_UI_InputSet_outputSetRefs_feature", "_UI_InputSet_type"),
+                Bpmn2Package.Literals.INPUT_SET__OUTPUT_SET_REFS, true, false, true, null, null, null));
+    }
 
-	/**
-	 * This returns InputSet.png. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		try {
-			return overlayImage(object, getResourceLocator().getImage("full/obj16/InputSet.png"));
-		} catch (java.util.MissingResourceException e) {
-			return overlayImage(object, getResourceLocator().getImage("full/obj16/InputSet.gif"));
-		}
-	}
+    /**
+     * This returns InputSet.png.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object getImage(Object object) {
+        try {
+            return overlayImage(object, getResourceLocator().getImage("full/obj16/InputSet.png"));
+        } catch (java.util.MissingResourceException e) {
+            return overlayImage(object, getResourceLocator().getImage("full/obj16/InputSet.gif"));
+        }
+    }
 
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	protected boolean shouldComposeCreationImage() {
-		return true;
-	}
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
 
-	/**
-	 * This returns the label text for the adapted class. <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * 
-	 * @generated NOT
-	 */
-	@Override
-	public String getText(Object object) {
-		String label = ((InputSet) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_InputSet_type") : label;
-	}
+    /**
+     * This returns the label text for the adapted class. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated NOT
+     */
+    @Override
+    public String getText(Object object) {
+        String label = ((InputSet) object).getName();
+        return label == null || label.length() == 0 ? getString("_UI_InputSet_type") : label;
+    }
 
-	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update
-	 * any cached children and by creating a viewer notification, which it passes to
-	 * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+    /**
+     * This handles model notifications by calling {@link #updateChildren} to update any cached
+     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void notifyChanged(Notification notification) {
+        updateChildren(notification);
 
-		switch (notification.getFeatureID(InputSet.class)) {
-		case Bpmn2Package.INPUT_SET__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
-		super.notifyChanged(notification);
-	}
+        switch (notification.getFeatureID(InputSet.class)) {
+        case Bpmn2Package.INPUT_SET__NAME:
+            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            return;
+        }
+        super.notifyChanged(notification);
+    }
 
-	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing
-	 * the children that can be created under this object. <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+    /**
+     * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+     * that can be created under this object.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+        super.collectNewChildDescriptors(newChildDescriptors, object);
+    }
 
 }

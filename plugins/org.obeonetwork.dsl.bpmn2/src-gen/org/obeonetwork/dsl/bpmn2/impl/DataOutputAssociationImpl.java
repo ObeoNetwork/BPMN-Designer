@@ -26,23 +26,23 @@ import org.obeonetwork.dsl.bpmn2.DataOutputAssociation;
  * @generated
  */
 public class DataOutputAssociationImpl extends DataAssociationImpl implements DataOutputAssociation {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DataOutputAssociationImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected DataOutputAssociationImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.DATA_OUTPUT_ASSOCIATION;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.DATA_OUTPUT_ASSOCIATION;
+    }
 
 } //DataOutputAssociationImpl

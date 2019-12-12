@@ -37,133 +37,134 @@ import org.obeonetwork.dsl.bpmn2.PartnerRole;
  * @generated
  */
 public class PartnerRoleImpl extends RootElementImpl implements PartnerRole {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
+    /**
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected static final String NAME_EDEFAULT = null;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PartnerRoleImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected PartnerRoleImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.PARTNER_ROLE;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.PARTNER_ROLE;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.PARTNER_ROLE__NAME, Bpmn2Package.Literals.PARTNER_ROLE__NAME, true,
-				true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getName() {
+        return (String) eDynamicGet(Bpmn2Package.PARTNER_ROLE__NAME, Bpmn2Package.Literals.PARTNER_ROLE__NAME, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.PARTNER_ROLE__NAME, Bpmn2Package.Literals.PARTNER_ROLE__NAME, newName);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setName(String newName) {
+        eDynamicSet(Bpmn2Package.PARTNER_ROLE__NAME, Bpmn2Package.Literals.PARTNER_ROLE__NAME, newName);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Participant> getParticipantRef() {
-		return (EList<Participant>) eDynamicGet(Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTNER_ROLE__PARTICIPANT_REF, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<Participant> getParticipantRef() {
+        return (EList<Participant>) eDynamicGet(Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF, Bpmn2Package.Literals.PARTNER_ROLE__PARTICIPANT_REF, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.PARTNER_ROLE__NAME:
-			return getName();
-		case Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF:
-			return getParticipantRef();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.PARTNER_ROLE__NAME:
+            return getName();
+        case Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF:
+            return getParticipantRef();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.PARTNER_ROLE__NAME:
-			setName((String) newValue);
-			return;
-		case Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF:
-			getParticipantRef().clear();
-			getParticipantRef().addAll((Collection<? extends Participant>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.PARTNER_ROLE__NAME:
+            setName((String) newValue);
+            return;
+        case Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF:
+            getParticipantRef().clear();
+            getParticipantRef().addAll((Collection<? extends Participant>) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.PARTNER_ROLE__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF:
-			getParticipantRef().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.PARTNER_ROLE__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF:
+            getParticipantRef().clear();
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.PARTNER_ROLE__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
-		case Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF:
-			return !getParticipantRef().isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.PARTNER_ROLE__NAME:
+            return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
+        case Bpmn2Package.PARTNER_ROLE__PARTICIPANT_REF:
+            return !getParticipantRef().isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //PartnerRoleImpl

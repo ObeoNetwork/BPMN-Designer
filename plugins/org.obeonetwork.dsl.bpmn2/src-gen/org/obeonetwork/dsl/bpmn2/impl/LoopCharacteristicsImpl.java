@@ -26,23 +26,23 @@ import org.obeonetwork.dsl.bpmn2.LoopCharacteristics;
  * @generated
  */
 public abstract class LoopCharacteristicsImpl extends BaseElementImpl implements LoopCharacteristics {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LoopCharacteristicsImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected LoopCharacteristicsImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.LOOP_CHARACTERISTICS;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.LOOP_CHARACTERISTICS;
+    }
 
 } //LoopCharacteristicsImpl

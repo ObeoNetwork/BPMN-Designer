@@ -33,20 +33,20 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface LabeledShape extends Shape {
-	/**
-	 * Returns the value of the '<em><b>Owned Label</b></em>' reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.dd.di.Label}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Owned Label</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Owned Label</em>' reference list.
-	 * @see org.obeonetwork.dsl.dd.di.DiPackage#getLabeledShape_OwnedLabel()
-	 * @model transient="true" changeable="false" derived="true" ordered="false"
-	 * @generated
-	 */
-	EList<Label> getOwnedLabel();
+    /**
+     * Returns the value of the '<em><b>Owned Label</b></em>' reference list.
+     * The list contents are of type {@link org.obeonetwork.dsl.dd.di.Label}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Owned Label</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Owned Label</em>' reference list.
+     * @see org.obeonetwork.dsl.dd.di.DiPackage#getLabeledShape_OwnedLabel()
+     * @model transient="true" changeable="false" derived="true" ordered="false"
+     * @generated
+     */
+    EList<Label> getOwnedLabel();
 
 } // LabeledShape

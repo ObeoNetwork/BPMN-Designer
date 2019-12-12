@@ -44,241 +44,241 @@ import org.obeonetwork.dsl.bpmn2.OutputSet;
  * @generated
  */
 public class InputSetImpl extends BaseElementImpl implements InputSet {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
+    /**
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected static final String NAME_EDEFAULT = null;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InputSetImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected InputSetImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.INPUT_SET;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.INPUT_SET;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.INPUT_SET__NAME, Bpmn2Package.Literals.INPUT_SET__NAME, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getName() {
+        return (String) eDynamicGet(Bpmn2Package.INPUT_SET__NAME, Bpmn2Package.Literals.INPUT_SET__NAME, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.INPUT_SET__NAME, Bpmn2Package.Literals.INPUT_SET__NAME, newName);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setName(String newName) {
+        eDynamicSet(Bpmn2Package.INPUT_SET__NAME, Bpmn2Package.Literals.INPUT_SET__NAME, newName);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<DataInput> getDataInputRefs() {
-		return (EList<DataInput>) eDynamicGet(Bpmn2Package.INPUT_SET__DATA_INPUT_REFS,
-				Bpmn2Package.Literals.INPUT_SET__DATA_INPUT_REFS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<DataInput> getDataInputRefs() {
+        return (EList<DataInput>) eDynamicGet(Bpmn2Package.INPUT_SET__DATA_INPUT_REFS, Bpmn2Package.Literals.INPUT_SET__DATA_INPUT_REFS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<DataInput> getOptionalInputRefs() {
-		return (EList<DataInput>) eDynamicGet(Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS,
-				Bpmn2Package.Literals.INPUT_SET__OPTIONAL_INPUT_REFS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<DataInput> getOptionalInputRefs() {
+        return (EList<DataInput>) eDynamicGet(Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS, Bpmn2Package.Literals.INPUT_SET__OPTIONAL_INPUT_REFS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<DataInput> getWhileExecutingInputRefs() {
-		return (EList<DataInput>) eDynamicGet(Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS,
-				Bpmn2Package.Literals.INPUT_SET__WHILE_EXECUTING_INPUT_REFS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<DataInput> getWhileExecutingInputRefs() {
+        return (EList<DataInput>) eDynamicGet(Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS, Bpmn2Package.Literals.INPUT_SET__WHILE_EXECUTING_INPUT_REFS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<OutputSet> getOutputSetRefs() {
-		return (EList<OutputSet>) eDynamicGet(Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS,
-				Bpmn2Package.Literals.INPUT_SET__OUTPUT_SET_REFS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<OutputSet> getOutputSetRefs() {
+        return (EList<OutputSet>) eDynamicGet(Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS, Bpmn2Package.Literals.INPUT_SET__OUTPUT_SET_REFS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getDataInputRefs()).basicAdd(otherEnd, msgs);
-		case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOptionalInputRefs()).basicAdd(otherEnd,
-					msgs);
-		case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getWhileExecutingInputRefs()).basicAdd(otherEnd,
-					msgs);
-		case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutputSetRefs()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getDataInputRefs()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOptionalInputRefs()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getWhileExecutingInputRefs()).basicAdd(otherEnd, msgs);
+        case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutputSetRefs()).basicAdd(otherEnd, msgs);
+        }
+        return super.eInverseAdd(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
-			return ((InternalEList<?>) getDataInputRefs()).basicRemove(otherEnd, msgs);
-		case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
-			return ((InternalEList<?>) getOptionalInputRefs()).basicRemove(otherEnd, msgs);
-		case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-			return ((InternalEList<?>) getWhileExecutingInputRefs()).basicRemove(otherEnd, msgs);
-		case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
-			return ((InternalEList<?>) getOutputSetRefs()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
+            return ((InternalEList<?>) getDataInputRefs()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
+            return ((InternalEList<?>) getOptionalInputRefs()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
+            return ((InternalEList<?>) getWhileExecutingInputRefs()).basicRemove(otherEnd, msgs);
+        case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
+            return ((InternalEList<?>) getOutputSetRefs()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.INPUT_SET__NAME:
-			return getName();
-		case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
-			return getDataInputRefs();
-		case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
-			return getOptionalInputRefs();
-		case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-			return getWhileExecutingInputRefs();
-		case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
-			return getOutputSetRefs();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.INPUT_SET__NAME:
+            return getName();
+        case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
+            return getDataInputRefs();
+        case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
+            return getOptionalInputRefs();
+        case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
+            return getWhileExecutingInputRefs();
+        case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
+            return getOutputSetRefs();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.INPUT_SET__NAME:
-			setName((String) newValue);
-			return;
-		case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
-			getDataInputRefs().clear();
-			getDataInputRefs().addAll((Collection<? extends DataInput>) newValue);
-			return;
-		case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
-			getOptionalInputRefs().clear();
-			getOptionalInputRefs().addAll((Collection<? extends DataInput>) newValue);
-			return;
-		case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-			getWhileExecutingInputRefs().clear();
-			getWhileExecutingInputRefs().addAll((Collection<? extends DataInput>) newValue);
-			return;
-		case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
-			getOutputSetRefs().clear();
-			getOutputSetRefs().addAll((Collection<? extends OutputSet>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.INPUT_SET__NAME:
+            setName((String) newValue);
+            return;
+        case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
+            getDataInputRefs().clear();
+            getDataInputRefs().addAll((Collection<? extends DataInput>) newValue);
+            return;
+        case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
+            getOptionalInputRefs().clear();
+            getOptionalInputRefs().addAll((Collection<? extends DataInput>) newValue);
+            return;
+        case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
+            getWhileExecutingInputRefs().clear();
+            getWhileExecutingInputRefs().addAll((Collection<? extends DataInput>) newValue);
+            return;
+        case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
+            getOutputSetRefs().clear();
+            getOutputSetRefs().addAll((Collection<? extends OutputSet>) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.INPUT_SET__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
-			getDataInputRefs().clear();
-			return;
-		case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
-			getOptionalInputRefs().clear();
-			return;
-		case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-			getWhileExecutingInputRefs().clear();
-			return;
-		case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
-			getOutputSetRefs().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.INPUT_SET__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
+            getDataInputRefs().clear();
+            return;
+        case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
+            getOptionalInputRefs().clear();
+            return;
+        case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
+            getWhileExecutingInputRefs().clear();
+            return;
+        case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
+            getOutputSetRefs().clear();
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.INPUT_SET__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
-		case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
-			return !getDataInputRefs().isEmpty();
-		case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
-			return !getOptionalInputRefs().isEmpty();
-		case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
-			return !getWhileExecutingInputRefs().isEmpty();
-		case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
-			return !getOutputSetRefs().isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.INPUT_SET__NAME:
+            return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
+        case Bpmn2Package.INPUT_SET__DATA_INPUT_REFS:
+            return !getDataInputRefs().isEmpty();
+        case Bpmn2Package.INPUT_SET__OPTIONAL_INPUT_REFS:
+            return !getOptionalInputRefs().isEmpty();
+        case Bpmn2Package.INPUT_SET__WHILE_EXECUTING_INPUT_REFS:
+            return !getWhileExecutingInputRefs().isEmpty();
+        case Bpmn2Package.INPUT_SET__OUTPUT_SET_REFS:
+            return !getOutputSetRefs().isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //InputSetImpl

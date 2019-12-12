@@ -40,149 +40,148 @@ import org.obeonetwork.dsl.bpmn2.Rendering;
  * @generated
  */
 public class GlobalUserTaskImpl extends GlobalTaskImpl implements GlobalUserTask {
-	/**
-	 * The default value of the '{@link #getImplementation() <em>Implementation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImplementation()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String IMPLEMENTATION_EDEFAULT = null;
+    /**
+     * The default value of the '{@link #getImplementation() <em>Implementation</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getImplementation()
+     * @generated
+     * @ordered
+     */
+    protected static final String IMPLEMENTATION_EDEFAULT = null;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GlobalUserTaskImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected GlobalUserTaskImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.GLOBAL_USER_TASK;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.GLOBAL_USER_TASK;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getImplementation() {
-		return (String) eDynamicGet(Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION,
-				Bpmn2Package.Literals.GLOBAL_USER_TASK__IMPLEMENTATION, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getImplementation() {
+        return (String) eDynamicGet(Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION, Bpmn2Package.Literals.GLOBAL_USER_TASK__IMPLEMENTATION, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setImplementation(String newImplementation) {
-		eDynamicSet(Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION,
-				Bpmn2Package.Literals.GLOBAL_USER_TASK__IMPLEMENTATION, newImplementation);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setImplementation(String newImplementation) {
+        eDynamicSet(Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION, Bpmn2Package.Literals.GLOBAL_USER_TASK__IMPLEMENTATION, newImplementation);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Rendering> getRenderings() {
-		return (EList<Rendering>) eDynamicGet(Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS,
-				Bpmn2Package.Literals.GLOBAL_USER_TASK__RENDERINGS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<Rendering> getRenderings() {
+        return (EList<Rendering>) eDynamicGet(Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS, Bpmn2Package.Literals.GLOBAL_USER_TASK__RENDERINGS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS:
-			return ((InternalEList<?>) getRenderings()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS:
+            return ((InternalEList<?>) getRenderings()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION:
-			return getImplementation();
-		case Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS:
-			return getRenderings();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION:
+            return getImplementation();
+        case Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS:
+            return getRenderings();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION:
-			setImplementation((String) newValue);
-			return;
-		case Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS:
-			getRenderings().clear();
-			getRenderings().addAll((Collection<? extends Rendering>) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION:
+            setImplementation((String) newValue);
+            return;
+        case Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS:
+            getRenderings().clear();
+            getRenderings().addAll((Collection<? extends Rendering>) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION:
-			setImplementation(IMPLEMENTATION_EDEFAULT);
-			return;
-		case Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS:
-			getRenderings().clear();
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION:
+            setImplementation(IMPLEMENTATION_EDEFAULT);
+            return;
+        case Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS:
+            getRenderings().clear();
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION:
-			return IMPLEMENTATION_EDEFAULT == null ? getImplementation() != null
-					: !IMPLEMENTATION_EDEFAULT.equals(getImplementation());
-		case Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS:
-			return !getRenderings().isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.GLOBAL_USER_TASK__IMPLEMENTATION:
+            return IMPLEMENTATION_EDEFAULT == null ? getImplementation() != null : !IMPLEMENTATION_EDEFAULT.equals(getImplementation());
+        case Bpmn2Package.GLOBAL_USER_TASK__RENDERINGS:
+            return !getRenderings().isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //GlobalUserTaskImpl

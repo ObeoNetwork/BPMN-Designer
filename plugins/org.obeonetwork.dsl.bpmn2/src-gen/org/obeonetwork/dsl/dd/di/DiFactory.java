@@ -25,21 +25,21 @@ import org.eclipse.emf.ecore.EFactory;
  * @generated
  */
 public interface DiFactory extends EFactory {
-	/**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	DiFactory eINSTANCE = org.obeonetwork.dsl.dd.di.impl.DiFactoryImpl.init();
+    /**
+     * The singleton instance of the factory.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    DiFactory eINSTANCE = org.obeonetwork.dsl.dd.di.impl.DiFactoryImpl.init();
 
-	/**
-	 * Returns the package supported by this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
-	 */
-	DiPackage getDiPackage();
+    /**
+     * Returns the package supported by this factory.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the package supported by this factory.
+     * @generated
+     */
+    DiPackage getDiPackage();
 
 } //DiFactory

@@ -41,258 +41,257 @@ import org.obeonetwork.dsl.bpmn2.Operation;
  * @generated
  */
 public class OperationImpl extends BaseElementImpl implements Operation {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
+    /**
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
+    protected static final String NAME_EDEFAULT = null;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OperationImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected OperationImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.OPERATION;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.OPERATION;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String) eDynamicGet(Bpmn2Package.OPERATION__NAME, Bpmn2Package.Literals.OPERATION__NAME, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String getName() {
+        return (String) eDynamicGet(Bpmn2Package.OPERATION__NAME, Bpmn2Package.Literals.OPERATION__NAME, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eDynamicSet(Bpmn2Package.OPERATION__NAME, Bpmn2Package.Literals.OPERATION__NAME, newName);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setName(String newName) {
+        eDynamicSet(Bpmn2Package.OPERATION__NAME, Bpmn2Package.Literals.OPERATION__NAME, newName);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Message getInMessageRef() {
-		return (Message) eDynamicGet(Bpmn2Package.OPERATION__IN_MESSAGE_REF,
-				Bpmn2Package.Literals.OPERATION__IN_MESSAGE_REF, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Message getInMessageRef() {
+        return (Message) eDynamicGet(Bpmn2Package.OPERATION__IN_MESSAGE_REF, Bpmn2Package.Literals.OPERATION__IN_MESSAGE_REF, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Message basicGetInMessageRef() {
-		return (Message) eDynamicGet(Bpmn2Package.OPERATION__IN_MESSAGE_REF,
-				Bpmn2Package.Literals.OPERATION__IN_MESSAGE_REF, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Message basicGetInMessageRef() {
+        return (Message) eDynamicGet(Bpmn2Package.OPERATION__IN_MESSAGE_REF, Bpmn2Package.Literals.OPERATION__IN_MESSAGE_REF, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInMessageRef(Message newInMessageRef) {
-		eDynamicSet(Bpmn2Package.OPERATION__IN_MESSAGE_REF, Bpmn2Package.Literals.OPERATION__IN_MESSAGE_REF,
-				newInMessageRef);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setInMessageRef(Message newInMessageRef) {
+        eDynamicSet(Bpmn2Package.OPERATION__IN_MESSAGE_REF, Bpmn2Package.Literals.OPERATION__IN_MESSAGE_REF, newInMessageRef);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Message getOutMessageRef() {
-		return (Message) eDynamicGet(Bpmn2Package.OPERATION__OUT_MESSAGE_REF,
-				Bpmn2Package.Literals.OPERATION__OUT_MESSAGE_REF, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Message getOutMessageRef() {
+        return (Message) eDynamicGet(Bpmn2Package.OPERATION__OUT_MESSAGE_REF, Bpmn2Package.Literals.OPERATION__OUT_MESSAGE_REF, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Message basicGetOutMessageRef() {
-		return (Message) eDynamicGet(Bpmn2Package.OPERATION__OUT_MESSAGE_REF,
-				Bpmn2Package.Literals.OPERATION__OUT_MESSAGE_REF, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Message basicGetOutMessageRef() {
+        return (Message) eDynamicGet(Bpmn2Package.OPERATION__OUT_MESSAGE_REF, Bpmn2Package.Literals.OPERATION__OUT_MESSAGE_REF, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOutMessageRef(Message newOutMessageRef) {
-		eDynamicSet(Bpmn2Package.OPERATION__OUT_MESSAGE_REF, Bpmn2Package.Literals.OPERATION__OUT_MESSAGE_REF,
-				newOutMessageRef);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setOutMessageRef(Message newOutMessageRef) {
+        eDynamicSet(Bpmn2Package.OPERATION__OUT_MESSAGE_REF, Bpmn2Package.Literals.OPERATION__OUT_MESSAGE_REF, newOutMessageRef);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<org.obeonetwork.dsl.bpmn2.Error> getErrorRefs() {
-		return (EList<org.obeonetwork.dsl.bpmn2.Error>) eDynamicGet(Bpmn2Package.OPERATION__ERROR_REFS,
-				Bpmn2Package.Literals.OPERATION__ERROR_REFS, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<org.obeonetwork.dsl.bpmn2.Error> getErrorRefs() {
+        return (EList<org.obeonetwork.dsl.bpmn2.Error>) eDynamicGet(Bpmn2Package.OPERATION__ERROR_REFS, Bpmn2Package.Literals.OPERATION__ERROR_REFS, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EObject getImplementationRef() {
-		return (EObject) eDynamicGet(Bpmn2Package.OPERATION__IMPLEMENTATION_REF,
-				Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EObject getImplementationRef() {
+        return (EObject) eDynamicGet(Bpmn2Package.OPERATION__IMPLEMENTATION_REF, Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EObject basicGetImplementationRef() {
-		return (EObject) eDynamicGet(Bpmn2Package.OPERATION__IMPLEMENTATION_REF,
-				Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EObject basicGetImplementationRef() {
+        return (EObject) eDynamicGet(Bpmn2Package.OPERATION__IMPLEMENTATION_REF, Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setImplementationRef(EObject newImplementationRef) {
-		eDynamicSet(Bpmn2Package.OPERATION__IMPLEMENTATION_REF, Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF,
-				newImplementationRef);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setImplementationRef(EObject newImplementationRef) {
+        eDynamicSet(Bpmn2Package.OPERATION__IMPLEMENTATION_REF, Bpmn2Package.Literals.OPERATION__IMPLEMENTATION_REF, newImplementationRef);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.OPERATION__NAME:
-			return getName();
-		case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
-			if (resolve)
-				return getInMessageRef();
-			return basicGetInMessageRef();
-		case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
-			if (resolve)
-				return getOutMessageRef();
-			return basicGetOutMessageRef();
-		case Bpmn2Package.OPERATION__ERROR_REFS:
-			return getErrorRefs();
-		case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
-			if (resolve)
-				return getImplementationRef();
-			return basicGetImplementationRef();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.OPERATION__NAME:
+            return getName();
+        case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
+            if (resolve)
+                return getInMessageRef();
+            return basicGetInMessageRef();
+        case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
+            if (resolve)
+                return getOutMessageRef();
+            return basicGetOutMessageRef();
+        case Bpmn2Package.OPERATION__ERROR_REFS:
+            return getErrorRefs();
+        case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
+            if (resolve)
+                return getImplementationRef();
+            return basicGetImplementationRef();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.OPERATION__NAME:
-			setName((String) newValue);
-			return;
-		case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
-			setInMessageRef((Message) newValue);
-			return;
-		case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
-			setOutMessageRef((Message) newValue);
-			return;
-		case Bpmn2Package.OPERATION__ERROR_REFS:
-			getErrorRefs().clear();
-			getErrorRefs().addAll((Collection<? extends org.obeonetwork.dsl.bpmn2.Error>) newValue);
-			return;
-		case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
-			setImplementationRef((EObject) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.OPERATION__NAME:
+            setName((String) newValue);
+            return;
+        case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
+            setInMessageRef((Message) newValue);
+            return;
+        case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
+            setOutMessageRef((Message) newValue);
+            return;
+        case Bpmn2Package.OPERATION__ERROR_REFS:
+            getErrorRefs().clear();
+            getErrorRefs().addAll((Collection<? extends org.obeonetwork.dsl.bpmn2.Error>) newValue);
+            return;
+        case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
+            setImplementationRef((EObject) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.OPERATION__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
-			setInMessageRef((Message) null);
-			return;
-		case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
-			setOutMessageRef((Message) null);
-			return;
-		case Bpmn2Package.OPERATION__ERROR_REFS:
-			getErrorRefs().clear();
-			return;
-		case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
-			setImplementationRef((EObject) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.OPERATION__NAME:
+            setName(NAME_EDEFAULT);
+            return;
+        case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
+            setInMessageRef((Message) null);
+            return;
+        case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
+            setOutMessageRef((Message) null);
+            return;
+        case Bpmn2Package.OPERATION__ERROR_REFS:
+            getErrorRefs().clear();
+            return;
+        case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
+            setImplementationRef((EObject) null);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.OPERATION__NAME:
-			return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
-		case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
-			return basicGetInMessageRef() != null;
-		case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
-			return basicGetOutMessageRef() != null;
-		case Bpmn2Package.OPERATION__ERROR_REFS:
-			return !getErrorRefs().isEmpty();
-		case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
-			return basicGetImplementationRef() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.OPERATION__NAME:
+            return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
+        case Bpmn2Package.OPERATION__IN_MESSAGE_REF:
+            return basicGetInMessageRef() != null;
+        case Bpmn2Package.OPERATION__OUT_MESSAGE_REF:
+            return basicGetOutMessageRef() != null;
+        case Bpmn2Package.OPERATION__ERROR_REFS:
+            return !getErrorRefs().isEmpty();
+        case Bpmn2Package.OPERATION__IMPLEMENTATION_REF:
+            return basicGetImplementationRef() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //OperationImpl

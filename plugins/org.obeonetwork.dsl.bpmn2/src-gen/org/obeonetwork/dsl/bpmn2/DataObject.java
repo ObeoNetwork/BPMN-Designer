@@ -31,31 +31,31 @@ package org.obeonetwork.dsl.bpmn2;
  * @generated
  */
 public interface DataObject extends FlowElement, ItemAwareElement {
-	/**
-	 * Returns the value of the '<em><b>Is Collection</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Is Collection</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Collection</em>' attribute.
-	 * @see #setIsCollection(boolean)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getDataObject_IsCollection()
-	 * @model default="false" required="true" ordered="false"
-	 * @generated
-	 */
-	boolean isIsCollection();
+    /**
+     * Returns the value of the '<em><b>Is Collection</b></em>' attribute.
+     * The default value is <code>"false"</code>.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Is Collection</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Is Collection</em>' attribute.
+     * @see #setIsCollection(boolean)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getDataObject_IsCollection()
+     * @model default="false" required="true" ordered="false"
+     * @generated
+     */
+    boolean isIsCollection();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.DataObject#isIsCollection <em>Is Collection</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Collection</em>' attribute.
-	 * @see #isIsCollection()
-	 * @generated
-	 */
-	void setIsCollection(boolean value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.DataObject#isIsCollection <em>Is Collection</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Is Collection</em>' attribute.
+     * @see #isIsCollection()
+     * @generated
+     */
+    void setIsCollection(boolean value);
 
 } // DataObject

@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>BPMN2</groupId>
   <artifactId>org.obeonetwork.dsl.bpmn2.parent</artifactId>
-  <version>4.0.1-SNAPSHOT</version>
+  <version>4.0.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   
   <modules>
@@ -20,7 +20,7 @@
   
   
   <properties>
-  <tycho-version>0.23.1</tycho-version>
+  <tycho-version>1.3.0</tycho-version>
  </properties>
 
  <repositories>
@@ -28,12 +28,12 @@
   <repository>
    <id>eclipse</id>
     <layout>p2</layout>
-    <url>http://download.eclipse.org/releases/mars/</url>
+    <url>http://download.eclipse.org/releases/photon/</url>
   </repository>
   <repository>
    	<id>Sirius</id>
     <layout>p2</layout>
-    <url>http://download.eclipse.org/sirius/updates/releases/3.1.x/mars/</url>
+    <url>http://download.eclipse.org/sirius/updates/releases/6.1.1/photon/</url>
   </repository>
   <repository>
    	<id>AcceleoLegacy</id>

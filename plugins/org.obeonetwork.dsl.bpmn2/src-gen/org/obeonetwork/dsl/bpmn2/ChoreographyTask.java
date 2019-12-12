@@ -33,20 +33,20 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface ChoreographyTask extends ChoreographyActivity {
-	/**
-	 * Returns the value of the '<em><b>Message Flow Ref</b></em>' reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.MessageFlow}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Message Flow Ref</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Message Flow Ref</em>' reference list.
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getChoreographyTask_MessageFlowRef()
-	 * @model upper="2" ordered="false"
-	 * @generated
-	 */
-	EList<MessageFlow> getMessageFlowRef();
+    /**
+     * Returns the value of the '<em><b>Message Flow Ref</b></em>' reference list.
+     * The list contents are of type {@link org.obeonetwork.dsl.bpmn2.MessageFlow}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Message Flow Ref</em>' reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Message Flow Ref</em>' reference list.
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getChoreographyTask_MessageFlowRef()
+     * @model upper="2" ordered="false"
+     * @generated
+     */
+    EList<MessageFlow> getMessageFlowRef();
 
 } // ChoreographyTask

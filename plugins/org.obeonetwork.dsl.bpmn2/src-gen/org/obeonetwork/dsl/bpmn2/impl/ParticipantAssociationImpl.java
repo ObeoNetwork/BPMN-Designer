@@ -34,155 +34,153 @@ import org.obeonetwork.dsl.bpmn2.ParticipantAssociation;
  * @generated
  */
 public class ParticipantAssociationImpl extends BaseElementImpl implements ParticipantAssociation {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ParticipantAssociationImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected ParticipantAssociationImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION;
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Participant getInnerParticipantRef() {
-		return (Participant) eDynamicGet(Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Participant getInnerParticipantRef() {
+        return (Participant) eDynamicGet(Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Participant basicGetInnerParticipantRef() {
-		return (Participant) eDynamicGet(Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Participant basicGetInnerParticipantRef() {
+        return (Participant) eDynamicGet(Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInnerParticipantRef(Participant newInnerParticipantRef) {
-		eDynamicSet(Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, newInnerParticipantRef);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setInnerParticipantRef(Participant newInnerParticipantRef) {
+        eDynamicSet(Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF, newInnerParticipantRef);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Participant getOuterParticipantRef() {
-		return (Participant) eDynamicGet(Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, true, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Participant getOuterParticipantRef() {
+        return (Participant) eDynamicGet(Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, true, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Participant basicGetOuterParticipantRef() {
-		return (Participant) eDynamicGet(Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, false, true);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Participant basicGetOuterParticipantRef() {
+        return (Participant) eDynamicGet(Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, false, true);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOuterParticipantRef(Participant newOuterParticipantRef) {
-		eDynamicSet(Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF,
-				Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, newOuterParticipantRef);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setOuterParticipantRef(Participant newOuterParticipantRef) {
+        eDynamicSet(Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, Bpmn2Package.Literals.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF, newOuterParticipantRef);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
-			if (resolve)
-				return getInnerParticipantRef();
-			return basicGetInnerParticipantRef();
-		case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
-			if (resolve)
-				return getOuterParticipantRef();
-			return basicGetOuterParticipantRef();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
+            if (resolve)
+                return getInnerParticipantRef();
+            return basicGetInnerParticipantRef();
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
+            if (resolve)
+                return getOuterParticipantRef();
+            return basicGetOuterParticipantRef();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
-			setInnerParticipantRef((Participant) newValue);
-			return;
-		case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
-			setOuterParticipantRef((Participant) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet(int featureID, Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
+            setInnerParticipantRef((Participant) newValue);
+            return;
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
+            setOuterParticipantRef((Participant) newValue);
+            return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
-			setInnerParticipantRef((Participant) null);
-			return;
-		case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
-			setOuterParticipantRef((Participant) null);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
+            setInnerParticipantRef((Participant) null);
+            return;
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
+            setOuterParticipantRef((Participant) null);
+            return;
+        }
+        super.eUnset(featureID);
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
-			return basicGetInnerParticipantRef() != null;
-		case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
-			return basicGetOuterParticipantRef() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__INNER_PARTICIPANT_REF:
+            return basicGetInnerParticipantRef() != null;
+        case Bpmn2Package.PARTICIPANT_ASSOCIATION__OUTER_PARTICIPANT_REF:
+            return basicGetOuterParticipantRef() != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //ParticipantAssociationImpl

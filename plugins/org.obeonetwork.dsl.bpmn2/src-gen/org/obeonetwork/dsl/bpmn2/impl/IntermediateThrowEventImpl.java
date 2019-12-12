@@ -26,23 +26,23 @@ import org.obeonetwork.dsl.bpmn2.IntermediateThrowEvent;
  * @generated
  */
 public class IntermediateThrowEventImpl extends ThrowEventImpl implements IntermediateThrowEvent {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IntermediateThrowEventImpl() {
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected IntermediateThrowEventImpl() {
+        super();
+    }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return Bpmn2Package.Literals.INTERMEDIATE_THROW_EVENT;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.INTERMEDIATE_THROW_EVENT;
+    }
 
 } //IntermediateThrowEventImpl

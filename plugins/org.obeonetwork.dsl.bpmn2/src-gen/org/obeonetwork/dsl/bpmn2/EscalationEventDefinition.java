@@ -31,30 +31,30 @@ package org.obeonetwork.dsl.bpmn2;
  * @generated
  */
 public interface EscalationEventDefinition extends EventDefinition {
-	/**
-	 * Returns the value of the '<em><b>Escalation Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Escalation Ref</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Escalation Ref</em>' reference.
-	 * @see #setEscalationRef(Escalation)
-	 * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getEscalationEventDefinition_EscalationRef()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	Escalation getEscalationRef();
+    /**
+     * Returns the value of the '<em><b>Escalation Ref</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Escalation Ref</em>' reference isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Escalation Ref</em>' reference.
+     * @see #setEscalationRef(Escalation)
+     * @see org.obeonetwork.dsl.bpmn2.Bpmn2Package#getEscalationEventDefinition_EscalationRef()
+     * @model ordered="false"
+     * @generated
+     */
+    Escalation getEscalationRef();
 
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.EscalationEventDefinition#getEscalationRef <em>Escalation Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Escalation Ref</em>' reference.
-	 * @see #getEscalationRef()
-	 * @generated
-	 */
-	void setEscalationRef(Escalation value);
+    /**
+     * Sets the value of the '{@link org.obeonetwork.dsl.bpmn2.EscalationEventDefinition#getEscalationRef <em>Escalation Ref</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Escalation Ref</em>' reference.
+     * @see #getEscalationRef()
+     * @generated
+     */
+    void setEscalationRef(Escalation value);
 
 } // EscalationEventDefinition

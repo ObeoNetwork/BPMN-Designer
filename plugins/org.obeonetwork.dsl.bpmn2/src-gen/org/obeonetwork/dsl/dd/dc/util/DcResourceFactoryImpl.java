@@ -26,26 +26,26 @@ import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
  * @generated
  */
 public class DcResourceFactoryImpl extends ResourceFactoryImpl {
-	/**
-	 * Creates an instance of the resource factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DcResourceFactoryImpl() {
-		super();
-	}
+    /**
+     * Creates an instance of the resource factory.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public DcResourceFactoryImpl() {
+        super();
+    }
 
-	/**
-	 * Creates an instance of the resource.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Resource createResource(URI uri) {
-		Resource result = new DcResourceImpl(uri);
-		return result;
-	}
+    /**
+     * Creates an instance of the resource.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Resource createResource(URI uri) {
+        Resource result = new DcResourceImpl(uri);
+        return result;
+    }
 
 } //DcResourceFactoryImpl
