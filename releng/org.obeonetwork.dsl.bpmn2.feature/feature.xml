@@ -2,7 +2,7 @@
 <feature
       id="org.obeonetwork.dsl.bpmn2.feature"
       label="BPMN-Designer"
-      version="4.0.1.qualifier"
+      version="4.0.2.qualifier"
       provider-name="Obeo">
 
    <description url="http://marketplace.obeonetwork.com/module/bpmn">
