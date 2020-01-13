@@ -38,7 +38,7 @@
           </style>
         </edgeMappings>
         <containerMappings name="HorizontalLaneSet" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" deletionDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteLaneSet']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.laneSets" doubleClickDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='LaneSet_AutosizeLanes_DoubleClick']" domainClass="bpmn2.LaneSet" childrenPresentation="VerticalStack">
-          <subContainerMappings name="Lane" label="Lane" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.lanes" domainClass="bpmn2.Lane" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementToLane'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveExtensionValueToLane']" reusedContainerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']">
+          <subContainerMappings name="Lane" label="Lane" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.lanes" domainClass="bpmn2.Lane" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveInputOutputSpecificationToLane'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementToLane'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveExtensionValueToLane']" reusedContainerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']">
             <subNodeMappings name="StartEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.flowNodeRefs->filter(bpmn2::StartEvent)" semanticElements="aql:self.eventDefinitions->union(Sequence{self})" domainClass="bpmn2.StartEvent">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/start-event/start.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -281,7 +281,38 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:views.toggleCollapse()"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ContainerDropDescription" name="MoveExtensionValueToLane" forceRefresh="true" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataInput'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataObject%20'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataOutput'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataStore'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='TextAnnotation']" moveEdges="true">
+          <ownedTools xsi:type="tool_1:ContainerDropDescription" name="MoveInputOutputSpecificationToLane" forceRefresh="true" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataInput'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataOutput']" moveEdges="true">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:newSemanticContainer">
+                <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.eContainerOrSelf(bpmn2::Lane).partitionElement->isEmpty()">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.InputOutputSpecification" referenceName="partitionElement">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:newSemanticContainer"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.eContainerOrSelf(bpmn2::Lane).partitionElement">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:element.oclIsKindOf(bpmn2::DataInput)">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="dataInputs" valueExpression="aql:element">
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:newSemanticContainer.eContainerOrSelf(bpmn2::Lane)"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:element.oclIsKindOf(bpmn2::DataOutput)">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="dataOutputs" valueExpression="aql:element">
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:newSemanticContainer.eContainerOrSelf(bpmn2::Lane)"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ContainerDropDescription" name="MoveExtensionValueToLane" forceRefresh="true" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataObject%20'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataStore'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='TextAnnotation']" moveEdges="true">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
@@ -1359,7 +1390,7 @@
           </style>
         </edgeMappings>
         <containerMappings name="Participant" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" deletionDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='DeleteParticipant']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.participants" semanticElements="aql:self.processRef" doubleClickDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='LaneSet_AutosizeLanes_DoubleClick']" domainClass="bpmn2.Participant" childrenPresentation="VerticalStack">
-          <subContainerMappings name="Lane" label="Lane" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.processRef.laneSets->first().lanes" domainClass="bpmn2.Lane" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementToLane']">
+          <subContainerMappings name="Lane" label="Lane" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.processRef.laneSets->first().lanes" domainClass="bpmn2.Lane" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementToLane'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveExtensionValueToLane'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveInputOutputSpecificationToLane']">
             <subNodeMappings name="StartEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.flowNodeRefs->filter(bpmn2::StartEvent)" semanticElements="aql:self.eventDefinitions->union(Sequence{self})" domainClass="bpmn2.StartEvent">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/start-event/start.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1438,7 +1469,7 @@
                 <labelFormat>bold</labelFormat>
               </style>
             </subContainerMappings>
-            <subContainerMappings name="SubProcess" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" deletionDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteSubProcess']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.flowNodeRefs->filter(bpmn2::SubProcess)" domainClass="bpmn2.SubProcess" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementToLane']">
+            <subContainerMappings name="SubProcess" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" deletionDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteSubProcess']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.flowNodeRefs->filter(bpmn2::SubProcess)" domainClass="bpmn2.SubProcess" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementToLane'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveInputOutputSpecificationToLane']">
               <borderedNodeMappings name="TaskBorderOnSubProcess" semanticCandidatesExpression="aql:self.boundaryEventRefs" semanticElements="aql:self.eventDefinitions->union(Sequence{self})" domainClass="bpmn2.BoundaryEvent">
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/none.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1599,7 +1630,7 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:views.toggleCollapse()"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ContainerDropDescription" name="MoveExtensionValueToLane" forceRefresh="true" dragSource="BOTH" moveEdges="true">
+          <ownedTools xsi:type="tool_1:ContainerDropDescription" name="MoveExtensionValueToLane" forceRefresh="true" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataObject%20'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataStore']" dragSource="BOTH" moveEdges="true">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
@@ -1726,6 +1757,37 @@
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ContainerDropDescription" name="MoveInputOutputSpecificationToLane" forceRefresh="true" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataInput'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataOutput']" moveEdges="true">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:newSemanticContainer">
+                <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.eContainerOrSelf(bpmn2::Lane).partitionElement->isEmpty()">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.InputOutputSpecification" referenceName="partitionElement">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:newSemanticContainer"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.eContainerOrSelf(bpmn2::Lane).partitionElement">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:element.oclIsKindOf(bpmn2::DataInput)">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="dataInputs" valueExpression="aql:element">
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:newSemanticContainer.eContainerOrSelf(bpmn2::Lane)"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:element.oclIsKindOf(bpmn2::DataOutput)">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="dataOutputs" valueExpression="aql:element">
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:newSemanticContainer.eContainerOrSelf(bpmn2::Lane)"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
         </toolSections>
         <toolSections name="Collaboration" label="%Collaboration" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/MessageFlow.png">
