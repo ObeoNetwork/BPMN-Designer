@@ -1,3 +1,4 @@
+dist: trusty 
 language: java
 env:
   global:
@@ -31,3 +32,4 @@ deploy:
     tags: true
     all_branches: true
     repo: ObeoNetwork/BPMN-Designer
+    
