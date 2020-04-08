@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Samples
 Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.samples;singleton:=true
-Bundle-Version: 4.0.2.qualifier
+Bundle-Version: 4.0.3.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Activator: org.obeonetwork.dsl.bpmn2.samples.Bpmn2SamplesPlugin
 Require-Bundle: org.eclipse.ui,
