@@ -2817,7 +2817,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Other" label="%Other" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
-          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Lane" label="%Lane" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Lane.png">
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Lane" label="%Lane" precondition="aql:self.processRef!=null" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Lane.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
