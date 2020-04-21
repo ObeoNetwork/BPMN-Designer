@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   id="svg5795"
+   version="1.1"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="signal.svg">
+  <defs
+     id="defs5797" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.328125"
+     inkscape:cx="-9.722815"
+     inkscape:cy="-2.7252729"
+     inkscape:document-units="px"
+     inkscape:current-layer="g5217"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5800">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1020.3622)">
+    <g
+       transform="translate(-104.08754,739.68601)"
+       id="g5756"
+       inkscape:export-filename="/Volumes/partage/private/marketing/Design/Produits/BPMN/design/nodes/boundary-events/png/signal.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <g
+         transform="translate(0.7788497,260.40842)"
+         id="g5217"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         inkscape:export-filename="/Volumes/partage/private/marketing/Design/Produits/BPMN/design/nodes/boundary-events/png/none.png"
+         style="stroke:#3a9ed6;stroke-opacity:1">
+        <path
+           transform="matrix(0.34661363,0,0,0.26862556,81.181191,9.9219258)"
+           d="m 154.28571,98.076469 c 0,31.559131 -19.82739,57.142861 -44.28571,57.142861 -24.458324,0 -44.285713,-25.58373 -44.285713,-57.142861 0,-31.559128 19.827389,-57.142856 44.285713,-57.142856 24.45832,0 44.28571,25.583728 44.28571,57.142856 z"
+           sodipodi:ry="57.142857"
+           sodipodi:rx="44.285713"
+           sodipodi:cy="98.076469"
+           sodipodi:cx="110"
+           id="path5219"
+           style="fill:#ffffff;fill-opacity:1;stroke:#3a9ed6;stroke-width:4.26036541;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:17.04146169,4.26036541;stroke-dashoffset:0"
+           sodipodi:type="arc" />
+        <path
+           transform="matrix(0.26081651,0,0,0.20213279,90.618876,16.443302)"
+           d="m 154.28571,98.076469 c 0,31.559131 -19.82739,57.142861 -44.28571,57.142861 -24.458324,0 -44.285713,-25.58373 -44.285713,-57.142861 0,-31.559128 19.827389,-57.142856 44.285713,-57.142856 24.45832,0 44.28571,25.583728 44.28571,57.142856 z"
+           sodipodi:ry="57.142857"
+           sodipodi:rx="44.285713"
+           sodipodi:cy="98.076469"
+           sodipodi:cx="110"
+           id="path5221"
+           style="fill:#ffffff;fill-opacity:1;stroke:#3a9ed6;stroke-width:5.66155937;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:22.64623741,5.66155937;stroke-dashoffset:0"
+           sodipodi:type="arc" />
+      </g>
+      <path
+         style="fill:none;stroke:#3a9ed6;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 120.08754,290.62199 5.39998,10.90919 -10.79996,0 z"
+         id="path5223"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+    </g>
+  </g>
+</svg>
