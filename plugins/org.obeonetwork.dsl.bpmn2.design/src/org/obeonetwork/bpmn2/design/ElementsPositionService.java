@@ -116,7 +116,17 @@ public class ElementsPositionService {
 
 		int relativeIndex = list.indexOf(relativeElement);
 
-		list.move(relativeIndex, element);
+		list.move(relativeIndex+1, element);
+
+		return referenceOwner;
+	}
+	
+	public EObject moveElementFirstPosition(EObject referenceOwner, String referenceName, final EObject element) {
+		EStructuralFeature feature = referenceOwner.eClass().getEStructuralFeature(referenceName);
+		@SuppressWarnings("unchecked")
+		EList<EObject> list = (EList<EObject>) referenceOwner.eGet(feature);
+
+		list.move(0, element);
 
 		return referenceOwner;
 	}

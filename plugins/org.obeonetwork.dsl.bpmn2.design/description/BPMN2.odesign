@@ -1243,6 +1243,9 @@
                 <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(bpmn2::Lane)">
                   <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.eContainerOrSelf(bpmn2::LaneSet).moveElement('lanes',newLane,container)"/>
                 </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="aql:not container.oclIsKindOf(bpmn2::Lane)">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.moveElementFirstPosition('lanes',newLane)"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -1479,7 +1482,7 @@
           </style>
         </edgeMappings>
         <containerMappings name="Participant" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" deletionDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='DeleteParticipant']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.participants" semanticElements="aql:self.processRef" doubleClickDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='LaneSet_AutosizeLanes_DoubleClick']" domainClass="bpmn2.Participant" childrenPresentation="VerticalStack">
-          <subContainerMappings name="Lane" label="Lane" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.processRef.laneSets->first().lanes" domainClass="bpmn2.Lane" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementToLane'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveExtensionValueToLane'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveInputOutputSpecificationToLane']">
+          <subContainerMappings name="Lane" label="Lane" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.processRef.laneSets->first().lanes" domainClass="bpmn2.Lane" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementToLane'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveExtensionValueToLane'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveInputOutputSpecificationToLane']" reusedContainerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']">
             <subNodeMappings name="StartEvent" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.flowNodeRefs->filter(bpmn2::StartEvent)" semanticElements="aql:self.eventDefinitions->union(Sequence{self})" domainClass="bpmn2.StartEvent">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/start-event/start.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -2981,40 +2984,74 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Other" label="%Other" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
-          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Lane" label="%Lane" precondition="aql:self.processRef!=null" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Lane.png">
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Lane" label="%Lane" precondition="aql:self.processRef!=null or self.oclIsKindOf(bpmn2::Lane)" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Lane.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.processRef.laneSets->first()">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Lane" referenceName="lanes" variableName="newLane">
-                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
-                    <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                      <initialOperation/>
-                    </buttons>
-                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                      <initialOperation/>
-                    </buttons>
-                    <page name="LanePage" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.6/@ownedTools[name='Lane']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                    <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self">
-                      <controls xsi:type="properties:TextDescription" name="LaneName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
-                            <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                      <controls xsi:type="properties:TextAreaDescription" name="LaneDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
-                            <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                    </groups>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self">
+                <subModelOperations xsi:type="tool:If" conditionExpression="aql:not container.oclIsKindOf(bpmn2::Lane)">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.processRef.laneSets->first()">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Lane" referenceName="lanes" variableName="newLane">
+                      <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
+                        <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                          <initialOperation/>
+                        </buttons>
+                        <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                          <initialOperation/>
+                        </buttons>
+                        <page name="LanePage" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.6/@ownedTools[name='Lane']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                        <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self">
+                          <controls xsi:type="properties:TextDescription" name="LaneName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
+                              </firstModelOperations>
+                            </initialOperation>
+                          </controls>
+                          <controls xsi:type="properties:TextAreaDescription" name="LaneDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
+                              </firstModelOperations>
+                            </initialOperation>
+                          </controls>
+                        </groups>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.moveElementFirstPosition('lanes',newLane)"/>
                   </subModelOperations>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(bpmn2::Lane)">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.eContainerOrSelf(bpmn2::LaneSet).moveElement('lanes',newLane,container)"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.eContainerOrSelf(bpmn2::LaneSet)">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Lane" referenceName="lanes" variableName="newLane">
+                      <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
+                        <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                          <initialOperation/>
+                        </buttons>
+                        <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                          <initialOperation/>
+                        </buttons>
+                        <page name="LanePage" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.6/@ownedTools[name='Lane']/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                        <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self">
+                          <controls xsi:type="properties:TextDescription" name="LaneName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
+                              </firstModelOperations>
+                            </initialOperation>
+                          </controls>
+                          <controls xsi:type="properties:TextAreaDescription" name="LaneDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
+                              </firstModelOperations>
+                            </initialOperation>
+                          </controls>
+                        </groups>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.moveElement('lanes',newLane,container)"/>
+                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
