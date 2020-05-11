@@ -91,13 +91,11 @@ public class ExpressionItemProvider extends BaseElementItemProvider implements I
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Expression) object).getId();
-		return label == null || label.length() == 0 ? getString("_UI_Expression_type")
-				: getString("_UI_Expression_type") + " " + label;
+		return getString("_UI_Expression_type");
 	}
 
 	/**
