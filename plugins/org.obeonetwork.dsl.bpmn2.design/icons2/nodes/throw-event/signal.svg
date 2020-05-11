@@ -9,15 +9,15 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="32.170078"
-   height="31.840523"
+   width="32"
+   height="32"
    id="svg5795"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="signal.svg"
-   inkscape:export-filename="/Users/lchituc/Downloads/bpmn/throw-event/signal.png"
-   inkscape:export-xdpi="44"
-   inkscape:export-ydpi="44">
+   inkscape:export-filename="/Users/lchituc/Downloads/bpmn/catch-event/signal.png"
+   inkscape:export-xdpi="45.21981"
+   inkscape:export-ydpi="45.21981">
   <defs
      id="defs5797" />
   <sodipodi:namedview
@@ -28,20 +28,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.328125"
-     inkscape:cx="-3.8040829"
-     inkscape:cy="17.698635"
+     inkscape:cx="-30.475546"
+     inkscape:cy="8.1915714"
      inkscape:document-units="px"
-     inkscape:current-layer="g5756"
+     inkscape:current-layer="g4138"
      showgrid="false"
-     inkscape:window-width="966"
-     inkscape:window-height="852"
-     inkscape:window-x="1560"
-     inkscape:window-y="422"
-     inkscape:window-maximized="0"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata5800">
     <rdf:RDF>
@@ -58,57 +54,52 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(2.5754488,-1019.1119)">
+     transform="translate(0,-1020.3622)">
     <g
+       transform="translate(-104.08754,739.68601)"
        id="g5756"
        inkscape:export-filename="/Volumes/partage/private/marketing/Design/Produits/BPMN/design/nodes/boundary-events/png/signal.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
-       transform="translate(-106.57795,738.35552)"
-       style="stroke:#c51325;stroke-opacity:1">
+       style="stroke:#3a9ed6;stroke-opacity:1;fill:none;fill-opacity:1">
       <g
-         transform="translate(0.7788497,260.40842)"
-         id="g5217"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"
-         inkscape:export-filename="/Volumes/partage/private/marketing/Design/Produits/BPMN/design/nodes/boundary-events/png/none.png"
-         style="stroke:#3a9ed6;stroke-opacity:1" />
-      <g
-         id="g4140"
+         id="g4138"
          inkscape:export-xdpi="90"
          inkscape:export-ydpi="90">
-        <ellipse
+        <g
+           style="stroke:#3a9ed6;stroke-opacity:1;fill:none;fill-opacity:1"
+           inkscape:export-filename="/Volumes/partage/private/marketing/Design/Produits/BPMN/design/nodes/boundary-events/png/none.png"
            inkscape:export-ydpi="90"
            inkscape:export-xdpi="90"
-           style="stroke:#3a9ed6;stroke-opacity:1;fill:#ffffff;fill-opacity:0;stroke-width:4.26015568;stroke-miterlimit:4;stroke-dasharray:none"
-           id="path5219"
-           transform="matrix(0.34661363,0,0,0.26862556,81.96004,270.33035)"
-           d="M 154.28571,98.076469 A 44.285713,57.142857 0 0 1 110,155.21933 44.285713,57.142857 0 0 1 65.714287,98.076469 44.285713,57.142857 0 0 1 110,40.933613 44.285713,57.142857 0 0 1 154.28571,98.076469 Z"
-           sodipodi:type="arc"
-           sodipodi:ry="57.142857"
-           sodipodi:rx="44.285713"
-           sodipodi:cy="98.076469"
-           sodipodi:cx="110" />
-        <ellipse
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           style="stroke:#3a9ed6;stroke-opacity:1;fill:#ffffff;fill-opacity:0;stroke-width:5.6615591;stroke-miterlimit:4;stroke-dasharray:none"
-           id="path5221"
-           transform="matrix(0.26081651,0,0,0.20213279,91.397725,276.85172)"
-           d="M 154.28571,98.076469 A 44.285713,57.142857 0 0 1 110,155.21933 44.285713,57.142857 0 0 1 65.714287,98.076469 44.285713,57.142857 0 0 1 110,40.933613 44.285713,57.142857 0 0 1 154.28571,98.076469 Z"
-           sodipodi:type="arc"
-           sodipodi:ry="57.142857"
-           sodipodi:rx="44.285713"
-           sodipodi:cy="98.076469"
-           sodipodi:cx="110" />
+           id="g5217"
+           transform="translate(0.7788497,260.40842)">
+          <path
+             sodipodi:type="arc"
+             style="fill:none;fill-opacity:1;stroke:#3a9ed6;stroke-width:4.26015568;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="path5219"
+             sodipodi:cx="110"
+             sodipodi:cy="98.076469"
+             sodipodi:rx="44.285713"
+             sodipodi:ry="57.142857"
+             d="M 154.28571,98.076469 A 44.285713,57.142857 0 0 1 110,155.21933 44.285713,57.142857 0 0 1 65.714287,98.076469 44.285713,57.142857 0 0 1 110,40.933613 44.285713,57.142857 0 0 1 154.28571,98.076469 Z"
+             transform="matrix(0.34661363,0,0,0.26862556,81.181191,9.9219258)" />
+          <path
+             sodipodi:type="arc"
+             style="fill:none;fill-opacity:1;stroke:#3a9ed6;stroke-width:5.6615591;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="path5221"
+             sodipodi:cx="110"
+             sodipodi:cy="98.076469"
+             sodipodi:rx="44.285713"
+             sodipodi:ry="57.142857"
+             d="M 154.28571,98.076469 A 44.285713,57.142857 0 0 1 110,155.21933 44.285713,57.142857 0 0 1 65.714287,98.076469 44.285713,57.142857 0 0 1 110,40.933613 44.285713,57.142857 0 0 1 154.28571,98.076469 Z"
+             transform="matrix(0.26081651,0,0,0.20213279,90.618876,16.443302)" />
+        </g>
         <path
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
            sodipodi:nodetypes="cccc"
            inkscape:connector-curvature="0"
            id="path5223"
            d="m 120.08754,290.62199 5.39998,10.90919 -10.79996,0 z"
-           style="fill:#3a9ed6;fill-opacity:1;stroke:#3a9ed6;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+           style="fill:#3a9ed6;stroke:#3a9ed6;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1" />
       </g>
     </g>
   </g>
