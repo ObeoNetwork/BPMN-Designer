@@ -228,6 +228,12 @@
                 <labelFormat>bold</labelFormat>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
+              <conditionnalStyles predicateExpression="aql:self.triggeredByEvent">
+                <style xsi:type="style:FlatContainerStyleDescription" arcWidth="20" arcHeight="20" borderSizeComputationExpression="3" borderColor="//@userColorsPalettes[name='Colors']/@entries[name='DarkYellow']" borderLineStyle="dash" labelSize="9" showIcon="false" roundedCorner="true" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']">
+                  <labelFormat>bold</labelFormat>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
             </subContainerMappings>
             <subContainerMappings name="CallActivity_Process" preconditionExpression="aql:self.calledElementRef.oclIsTypeOf(bpmn2::Process)" deletionDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteCallActivity']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.flowNodeRefs->filter(bpmn2::CallActivity)" semanticElements="aql:Sequence{self,self.calledElementRef})" domainClass="bpmn2.CallActivity">
               <borderedNodeMappings name="TaskBorderOnCallActivity_Process" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.boundaryEventRefs" semanticElements="aql:self.eventDefinitions->union(Sequence{self})" domainClass="bpmn2.BoundaryEvent">
@@ -1706,9 +1712,14 @@
                   <labelFormat>bold</labelFormat>
                 </style>
               </subContainerMappings>
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="20" arcHeight="20" borderSizeComputationExpression="3" borderColor="//@userColorsPalettes[name='Colors']/@entries[name='Yellow']" labelSize="9" showIcon="false" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" roundedCorner="true" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="20" arcHeight="20" borderSizeComputationExpression="3" borderColor="//@userColorsPalettes[name='Colors']/@entries[name='DarkYellow']" labelSize="9" showIcon="false" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" roundedCorner="true" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']">
                 <labelFormat>bold</labelFormat>
               </style>
+              <conditionnalStyles predicateExpression="aql:self.triggeredByEvent">
+                <style xsi:type="style:FlatContainerStyleDescription" arcWidth="20" arcHeight="20" borderSizeComputationExpression="3" borderColor="//@userColorsPalettes[name='Colors']/@entries[name='DarkYellow']" borderLineStyle="dash" labelSize="9" showIcon="false" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" roundedCorner="true" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']">
+                  <labelFormat>bold</labelFormat>
+                </style>
+              </conditionnalStyles>
             </subContainerMappings>
             <subContainerMappings name="CallActivity_Process" preconditionExpression="aql:self.calledElementRef.oclIsTypeOf(bpmn2::Process)" deletionDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteCallActivity']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.flowNodeRefs->filter(bpmn2::CallActivity)" semanticElements="aql:Sequence{self,self.calledElementRef})" domainClass="bpmn2.CallActivity">
               <borderedNodeMappings name="TaskBorderOnCallActivity_Process" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.boundaryEventRefs" semanticElements="aql:self.eventDefinitions->union(Sequence{self})" domainClass="bpmn2.BoundaryEvent">
