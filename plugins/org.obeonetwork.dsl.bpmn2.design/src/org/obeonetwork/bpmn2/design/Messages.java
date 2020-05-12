@@ -30,6 +30,8 @@ public class Messages extends NLS {
 
 	public static String NameLabel;
 
+	public static String NamingService_0;
+
 	public static String HelpNameLabel;
 
 	public static String TaskAttributeNaming;

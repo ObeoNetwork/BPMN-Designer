@@ -12,6 +12,8 @@
 package org.obeonetwork.bpmn2.design;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 
 /**
  * 
@@ -20,8 +22,14 @@ import org.eclipse.emf.ecore.EObject;
  */
 public class NamingService {
 
+	/** Label provider */
+	private static final AdapterFactoryLabelProvider LABEL_PROVIDER = new AdapterFactoryLabelProvider(
+			new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE));
+
 	public String getPropertiesTitle(EObject eObj) {
-		return Messages.PropertiesTitle;
+		String msg = Messages.NamingService_0;
+		msg = msg + LABEL_PROVIDER.getText(eObj);
+		return msg;
 	}
 
 	public String getCancelLabel(EObject eObj) {

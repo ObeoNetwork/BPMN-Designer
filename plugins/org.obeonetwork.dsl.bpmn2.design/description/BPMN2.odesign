@@ -1995,12 +1995,12 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Collaboration" label="%Collaboration" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/MessageFlow.png">
-          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Particpant" label="%Participant" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Participant.png">
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Particpant" label="%ParticipantAndNewProcess" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Participant.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Participant" referenceName="participants">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Participant" referenceName="participants" variableName="participant">
                   <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
                     <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
                       <initialOperation/>
@@ -2027,6 +2027,131 @@
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql: if participant.eContainer(bpmn2::Definitions) &lt;> null then participant.eContainer(bpmn2::Definitions) else participant.eContainerOrSelf(basemm::Folder) endif">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.oclIsKindOf(basemm::Folder)">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::Process" referenceName="elements" variableName="newProcess">
+                      <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
+                        <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                          <initialOperation/>
+                        </buttons>
+                        <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                          <initialOperation/>
+                        </buttons>
+                        <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Particpant']/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                        <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                          <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
+                              </firstModelOperations>
+                            </initialOperation>
+                          </controls>
+                          <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
+                              </firstModelOperations>
+                            </initialOperation>
+                          </controls>
+                        </groups>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:participant">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="processRef" valueExpression="aql:newProcess">
+                          <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:newProcess">
+                            <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::LaneSet" referenceName="laneSets">
+                              <subModelOperations xsi:type="tool:CreateInstance" typeName="Lane" referenceName="lanes"/>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.oclIsKindOf(bpmn2::Definitions)">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::Process" referenceName="rootElements" variableName="newProcess">
+                      <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
+                        <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                          <initialOperation/>
+                        </buttons>
+                        <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                          <initialOperation/>
+                        </buttons>
+                        <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Particpant']/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                        <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                          <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
+                              </firstModelOperations>
+                            </initialOperation>
+                          </controls>
+                          <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
+                              </firstModelOperations>
+                            </initialOperation>
+                          </controls>
+                        </groups>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:participant">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="processRef" valueExpression="aql:newProcess">
+                          <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:newProcess">
+                            <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::LaneSet" referenceName="laneSets">
+                              <subModelOperations xsi:type="tool:CreateInstance" typeName="Lane" referenceName="lanes"/>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="LinkProcess" label="%ParticipantAndExistingProcess" precondition="aql:self.oclIsTypeOf(bpmn2::Collaboration)" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::Process) else self.eResource().eAllContents(bpmn2::Process) endif" message="%SelectProcess" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Participant" referenceName="participants" variableName="participant">
+                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
+                    <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                      <initialOperation/>
+                    </buttons>
+                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                      <initialOperation/>
+                    </buttons>
+                    <page name="ParticipantPage" domainClass="bpmn2::Participant" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='LinkProcess']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                    <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Participant" semanticCandidateExpression="var:self">
+                      <controls xsi:type="properties:TextDescription" name="ParticipantName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                            <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
+                          </firstModelOperations>
+                        </initialOperation>
+                      </controls>
+                      <controls xsi:type="properties:TextAreaDescription" name="ParticipantDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                            <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
+                          </firstModelOperations>
+                        </initialOperation>
+                      </controls>
+                    </groups>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:participant">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="processRef" valueExpression="aql:element">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.processRef">
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.laneSets->isEmpty()">
+                        <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::LaneSet" referenceName="laneSets">
+                          <subModelOperations xsi:type="tool:CreateInstance" typeName="Lane" referenceName="lanes"/>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -2040,106 +2165,6 @@
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.MessageFlow" referenceName="messageFlows">
                   <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="aql:source"/>
                   <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="aql:target"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Process" label="%Process" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql: if container.eContainer(bpmn2::Definitions) &lt;> null then container.eContainer(bpmn2::Definitions) else container.eContainerOrSelf(basemm::Folder) endif">
-                <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.oclIsKindOf(basemm::Folder)">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::Process" referenceName="elements" variableName="newProcess">
-                    <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
-                      <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                        <initialOperation/>
-                      </buttons>
-                      <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                        <initialOperation/>
-                      </buttons>
-                      <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Process']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                      <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
-                        <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
-                          <initialOperation>
-                            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
-                              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
-                            </firstModelOperations>
-                          </initialOperation>
-                        </controls>
-                        <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
-                          <initialOperation>
-                            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
-                              <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
-                            </firstModelOperations>
-                          </initialOperation>
-                        </controls>
-                      </groups>
-                    </subModelOperations>
-                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container">
-                      <subModelOperations xsi:type="tool:SetValue" featureName="processRef" valueExpression="aql:newProcess">
-                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:newProcess">
-                          <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::LaneSet" referenceName="laneSets">
-                            <subModelOperations xsi:type="tool:CreateInstance" typeName="Lane" referenceName="lanes"/>
-                          </subModelOperations>
-                        </subModelOperations>
-                      </subModelOperations>
-                    </subModelOperations>
-                  </subModelOperations>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.oclIsKindOf(bpmn2::Definitions)">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::Process" referenceName="rootElements" variableName="newProcess">
-                    <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
-                      <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                        <initialOperation/>
-                      </buttons>
-                      <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                        <initialOperation/>
-                      </buttons>
-                      <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Process']/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                      <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
-                        <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
-                          <initialOperation>
-                            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
-                              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
-                            </firstModelOperations>
-                          </initialOperation>
-                        </controls>
-                        <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
-                          <initialOperation>
-                            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
-                              <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
-                            </firstModelOperations>
-                          </initialOperation>
-                        </controls>
-                      </groups>
-                    </subModelOperations>
-                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container">
-                      <subModelOperations xsi:type="tool:SetValue" featureName="processRef" valueExpression="aql:newProcess">
-                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:newProcess">
-                          <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::LaneSet" referenceName="laneSets">
-                            <subModelOperations xsi:type="tool:CreateInstance" typeName="Lane" referenceName="lanes"/>
-                          </subModelOperations>
-                        </subModelOperations>
-                      </subModelOperations>
-                    </subModelOperations>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="LinkProcess" label="%LinkProcess" precondition="aql:self.oclIsTypeOf(bpmn2::Participant)" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::Process) else self.eResource().eAllContents(bpmn2::Process) endif" message="%SelectProcess">
-            <element name="element"/>
-            <containerView name="containerView"/>
-            <container name="container"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:SetValue" featureName="processRef" valueExpression="aql:element">
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.processRef">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.laneSets->isEmpty()">
-                    <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::LaneSet" referenceName="laneSets">
-                      <subModelOperations xsi:type="tool:CreateInstance" typeName="Lane" referenceName="lanes"/>
-                    </subModelOperations>
-                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
