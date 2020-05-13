@@ -1069,20 +1069,113 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)" forceRefresh="true" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
-            <element name="element"/>
-            <containerView name="containerView"/>
-            <container name="container"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.eContainerOrSelf(bpmn2::FlowElementsContainer)">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.CallActivity" referenceName="flowElements">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="calledElementRef" valueExpression="aql:element"/>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(bpmn2::Lane)">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:container"/>
+          <ownedTools xsi:type="tool_1:ToolGroup" name="CallActivity" label="%CallActivity">
+            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)" forceRefresh="true" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
+              <element name="element"/>
+              <containerView name="containerView"/>
+              <container name="container"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.eContainerOrSelf(bpmn2::FlowElementsContainer)">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.CallActivity" referenceName="flowElements">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="calledElementRef" valueExpression="aql:element"/>
+                    <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(bpmn2::Lane)">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:container"/>
+                    </subModelOperations>
                   </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:ToolDescription" name="CallActivityNewProcess" label="%CallActivityNewProcess" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.eContainerOrSelf(bpmn2::FlowElementsContainer)">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.CallActivity" referenceName="flowElements" variableName="callActivity">
+                    <subModelOperations xsi:type="tool:If" conditionExpression="aql:element.oclIsKindOf(bpmn2::Lane)">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:element"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql: if callActivity.eContainer(bpmn2::Definitions) &lt;> null then callActivity.eContainer(bpmn2::Definitions) else callActivity.eContainerOrSelf(basemm::Folder) endif">
+                    <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.oclIsKindOf(basemm::Folder)">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::Process" referenceName="elements" variableName="newProcess">
+                        <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
+                          <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                            <initialOperation/>
+                          </buttons>
+                          <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                            <initialOperation/>
+                          </buttons>
+                          <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                          <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                            <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                              <initialOperation>
+                                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
+                                </firstModelOperations>
+                              </initialOperation>
+                            </controls>
+                            <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                              <initialOperation>
+                                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                  <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
+                                </firstModelOperations>
+                              </initialOperation>
+                            </controls>
+                          </groups>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:callActivity">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="calledElementRef" valueExpression="aql:newProcess">
+                            <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:newProcess">
+                              <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::LaneSet" referenceName="laneSets">
+                                <subModelOperations xsi:type="tool:CreateInstance" typeName="Lane" referenceName="lanes"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.oclIsKindOf(bpmn2::Definitions)">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::Process" referenceName="rootElements" variableName="newProcess">
+                        <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
+                          <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                            <initialOperation/>
+                          </buttons>
+                          <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                            <initialOperation/>
+                          </buttons>
+                          <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                          <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                            <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                              <initialOperation>
+                                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
+                                </firstModelOperations>
+                              </initialOperation>
+                            </controls>
+                            <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                              <initialOperation>
+                                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                  <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
+                                </firstModelOperations>
+                              </initialOperation>
+                            </controls>
+                          </groups>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:callActivity">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="calledElementRef" valueExpression="aql:newProcess">
+                            <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:newProcess">
+                              <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::LaneSet" referenceName="laneSets">
+                                <subModelOperations xsi:type="tool:CreateInstance" typeName="Lane" referenceName="lanes"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup">
             <tools xsi:type="tool:ToolDescription" name="LoopMarker" label="%LoopMarker" precondition="aql:container.oclIsKindOf(bpmn2::Activity)" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/activity/list/looptype.standard.png">
@@ -3006,20 +3099,113 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)" forceRefresh="true" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
-            <element name="element"/>
-            <containerView name="containerView"/>
-            <container name="container"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.eContainerOrSelf(bpmn2::FlowElementsContainer)">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.CallActivity" referenceName="flowElements">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="calledElementRef" valueExpression="aql:element"/>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(bpmn2::Lane)">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:container"/>
+          <ownedTools xsi:type="tool_1:ToolGroup" name="CallActivity" label="%CallActivity">
+            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)" forceRefresh="true" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
+              <element name="element"/>
+              <containerView name="containerView"/>
+              <container name="container"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.eContainerOrSelf(bpmn2::FlowElementsContainer)">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.CallActivity" referenceName="flowElements">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="calledElementRef" valueExpression="aql:element"/>
+                    <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(bpmn2::Lane)">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:container"/>
+                    </subModelOperations>
                   </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:ToolDescription" name="CallActivityNewProcess" label="%CallActivityNewProcess" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.eContainerOrSelf(bpmn2::FlowElementsContainer)">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.CallActivity" referenceName="flowElements" variableName="callActivity">
+                    <subModelOperations xsi:type="tool:If" conditionExpression="aql:element.oclIsKindOf(bpmn2::Lane)">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:element"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql: if callActivity.eContainer(bpmn2::Definitions) &lt;> null then callActivity.eContainer(bpmn2::Definitions) else callActivity.eContainerOrSelf(basemm::Folder) endif">
+                    <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.oclIsKindOf(basemm::Folder)">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::Process" referenceName="elements" variableName="newProcess">
+                        <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
+                          <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                            <initialOperation/>
+                          </buttons>
+                          <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                            <initialOperation/>
+                          </buttons>
+                          <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.3/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                          <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                            <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                              <initialOperation>
+                                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
+                                </firstModelOperations>
+                              </initialOperation>
+                            </controls>
+                            <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                              <initialOperation>
+                                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                  <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
+                                </firstModelOperations>
+                              </initialOperation>
+                            </controls>
+                          </groups>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:callActivity">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="calledElementRef" valueExpression="aql:newProcess">
+                            <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:newProcess">
+                              <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::LaneSet" referenceName="laneSets">
+                                <subModelOperations xsi:type="tool:CreateInstance" typeName="Lane" referenceName="lanes"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.oclIsKindOf(bpmn2::Definitions)">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::Process" referenceName="rootElements" variableName="newProcess">
+                        <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
+                          <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                            <initialOperation/>
+                          </buttons>
+                          <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                            <initialOperation/>
+                          </buttons>
+                          <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.3/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                          <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                            <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                              <initialOperation>
+                                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
+                                </firstModelOperations>
+                              </initialOperation>
+                            </controls>
+                            <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                              <initialOperation>
+                                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                  <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
+                                </firstModelOperations>
+                              </initialOperation>
+                            </controls>
+                          </groups>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:callActivity">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="calledElementRef" valueExpression="aql:newProcess">
+                            <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:newProcess">
+                              <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::LaneSet" referenceName="laneSets">
+                                <subModelOperations xsi:type="tool:CreateInstance" typeName="Lane" referenceName="lanes"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup">
             <tools xsi:type="tool:ToolDescription" name="LoopMarker" label="%LoopMarker" precondition="aql:container.oclIsKindOf(bpmn2::Activity)" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/activity/list/looptype.standard.png">
