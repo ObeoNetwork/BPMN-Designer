@@ -576,6 +576,16 @@
                     </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="aql:source.oclIsKindOf(bpmn2::BoundaryEvent) and source.eventDefinitions->select(e|e.oclIsTypeOf(bpmn2::CompensateEventDefinition))->notEmpty()">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:target.isForCompensation">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Association" referenceName="artifacts">
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:instance">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="aql:source"/>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="aql:target"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -2615,6 +2625,16 @@
                 </subModelOperations>
                 <subModelOperations xsi:type="tool:If" conditionExpression="aql:source.oclIsKindOf(bpmn2::Task) or source.oclIsKindOf(bpmn2::ReceiveTask) or source.oclIsKindOf(bpmn2::SendTask) or source.oclIsKindOf(bpmn2::Gateway) or source.oclIsKindOf(bpmn2::Event) or source.oclIsKindOf(bpmn2::SubProcess) or source.oclIsKindOf(bpmn2::CallActivity)">
                   <subModelOperations xsi:type="tool:If" conditionExpression="aql:target.oclIsKindOf(bpmn2::DataObject) or target.oclIsKindOf(bpmn2::DataInput) or target.oclIsKindOf(bpmn2::DataOutput) or target.oclIsKindOf(bpmn2::DataStore) or target.oclIsKindOf(bpmn2::TextAnnotation)">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Association" referenceName="artifacts">
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:instance">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="aql:source"/>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="targetRef" valueExpression="aql:target"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="aql:source.oclIsKindOf(bpmn2::BoundaryEvent) and source.eventDefinitions->select(e|e.oclIsTypeOf(bpmn2::CompensateEventDefinition))->notEmpty()">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:target.isForCompensation">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Association" referenceName="artifacts">
                       <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:instance">
                         <subModelOperations xsi:type="tool:SetValue" featureName="sourceRef" valueExpression="aql:source"/>
