@@ -11,15 +11,30 @@
  */
 package org.obeonetwork.bpmn2.design;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.ECrossReferenceAdapter;
+import org.eclipse.sirius.diagram.DDiagramElement;
+import org.eclipse.sirius.diagram.DNode;
+import org.eclipse.sirius.diagram.DNodeContainer;
+import org.obeonetwork.dsl.bpmn2.BaseElement;
+import org.obeonetwork.dsl.bpmn2.BoundaryEvent;
+import org.obeonetwork.dsl.bpmn2.CallActivity;
 import org.obeonetwork.dsl.bpmn2.Definitions;
+import org.obeonetwork.dsl.bpmn2.Event;
+import org.obeonetwork.dsl.bpmn2.Gateway;
+import org.obeonetwork.dsl.bpmn2.ItemAwareElement;
 import org.obeonetwork.dsl.bpmn2.Process;
+import org.obeonetwork.dsl.bpmn2.SubProcess;
+import org.obeonetwork.dsl.bpmn2.Task;
 
 public class ServiceHelper {
+
+	private static final String IS_EXTERNAL_LABEL = "isExternalLabel";
 
 	/**
 	 * Return the cross referencer attached to a particular EObject.
@@ -46,23 +61,64 @@ public class ServiceHelper {
 	}
 
 	public static Definitions getDefinitionsObject(EObject eObject) {
-		if(eObject==null) {
+		if (eObject == null) {
 			return null;
 		}
-		if(eObject instanceof Definitions) {
+		if (eObject instanceof Definitions) {
 			return (Definitions) eObject;
 		}
 		return getDefinitionsObject(eObject.eContainer());
 	}
-	
+
 	public static Process getProcess(EObject eObject) {
-		if(eObject==null) {
+		if (eObject == null) {
 			return null;
 		}
-		if(eObject instanceof Process) {
+		if (eObject instanceof Process) {
 			return (Process) eObject;
 		}
 		return getProcess(eObject.eContainer());
 	}
-	
+
+	public static List<BaseElement> getElementsWithExternalLabel(DNodeContainer dNodeContainer) {
+		List<BaseElement> result = new ArrayList<BaseElement>();
+
+		Iterator<DDiagramElement> it = dNodeContainer.getElements().iterator();
+		while (it.hasNext()) {
+			DDiagramElement dde = it.next();
+			Object bpmnElement = dde.getTarget();
+			if ((bpmnElement instanceof Event) || (bpmnElement instanceof Gateway)
+					|| (bpmnElement instanceof ItemAwareElement)) {
+				if (!(bpmnElement instanceof BoundaryEvent) && isExternalLabel((DNode) dde)) {
+					result.add((BaseElement) bpmnElement);
+				}
+			} else if ((bpmnElement instanceof Task) || (bpmnElement instanceof SubProcess)
+					|| (bpmnElement instanceof CallActivity)) {
+				DNodeContainer dNodeTask = (DNodeContainer) dde;
+				for (DDiagramElement subDDE : dNodeTask.getElements()) {
+					if (subDDE.getTarget() instanceof BoundaryEvent) {
+						if (isExternalLabel((DNode) subDDE)) {
+							result.add((BaseElement) subDDE.getTarget());
+						}
+					}
+				}
+			}
+		}
+
+		return result;
+	}
+
+	public static boolean isExternalLabel(DNode dNode) {
+		return dNode.getOwnedStyle().getCustomFeatures().contains(ServiceHelper.IS_EXTERNAL_LABEL);
+	}
+
+	public static void setExternalLabel(DNode dNode) {
+		dNode.getStyle().getCustomFeatures().add(IS_EXTERNAL_LABEL);
+	}
+
+	public static void setInternalLabel(DNode dNode) {
+		dNode.getStyle().getCustomFeatures().remove(IS_EXTERNAL_LABEL);
+
+	}
+
 }

@@ -57,4 +57,17 @@
         </newWizardShortcut>
      </perspectiveExtension>
   </extension>
+  <extension
+        point="org.eclipse.sirius.externalJavaAction">
+     <javaActions
+           actionClass="org.obeonetwork.bpmn2.design.SetUnsetExternalLabels"
+           id="org.obeonetwork.bpmn2.design.setUnsetExternalLabels">
+     </javaActions>
+  </extension>
+   <extension
+         point="org.eclipse.sirius.sessionManagerListener">
+      <listener
+            class="org.obeonetwork.bpmn2.design.BPMNSessionListener">
+      </listener>
+   </extension>
 </plugin>
