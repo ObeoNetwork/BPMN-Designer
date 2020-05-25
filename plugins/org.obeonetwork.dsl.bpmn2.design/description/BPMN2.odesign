@@ -715,7 +715,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Escalation Event Definition" label="%Escalation" precondition="aql:element.oclIsKindOf(bpmn2::Event) and element.eventDefinitions->filter(bpmn2::EscalationEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EscalationEventDefinition.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Escalation Event Definition" label="%Escalation" precondition="aql:element.oclIsKindOf(bpmn2::Event) and element.eventDefinitions->filter(bpmn2::EscalationEventDefinition)->isEmpty() and not element.oclIsKindOf(bpmn2::StartEvent)" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EscalationEventDefinition.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -733,7 +733,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Link Event Definition" label="%Link" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::EndEvent) and not element.oclIsKindOf(bpmn2::BoundaryEvent) and element.eventDefinitions->filter(bpmn2::LinkEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/LinkEventDefinition.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Link Event Definition" label="%Link" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::EndEvent) and not element.oclIsKindOf(bpmn2::BoundaryEvent)  and not element.oclIsKindOf(bpmn2::StartEvent) and element.eventDefinitions->filter(bpmn2::LinkEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/LinkEventDefinition.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -742,7 +742,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Error Event Definition" label="%Error" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::ImplicitThrowEvent) and element.eventDefinitions->filter(bpmn2::ErrorEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ErrorEventDefinition.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Error Event Definition" label="%Error" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::ImplicitThrowEvent) and not element.oclIsKindOf(bpmn2::StartEvent) and element.eventDefinitions->filter(bpmn2::ErrorEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ErrorEventDefinition.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -751,7 +751,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Cancel Event Definition" label="%Cancel" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::ImplicitThrowEvent) and element.eventDefinitions->filter(bpmn2::CancelEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CancelEventDefinition.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Cancel Event Definition" label="%Cancel" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::ImplicitThrowEvent)  and not element.oclIsKindOf(bpmn2::StartEvent) and element.eventDefinitions->filter(bpmn2::CancelEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CancelEventDefinition.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -760,7 +760,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Compensate Event Definition" label="%Compensate" precondition="aql:element.oclIsKindOf(bpmn2::Event) and element.eventDefinitions->filter(bpmn2::CompensateEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CompensateEventDefinition.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Compensate Event Definition" label="%Compensate" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::StartEvent) and element.eventDefinitions->filter(bpmn2::CompensateEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CompensateEventDefinition.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -778,7 +778,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Terminate Event Definition" label="%Terminate" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::ImplicitThrowEvent) and not element.oclIsKindOf(bpmn2::BoundaryEvent) and element.eventDefinitions->filter(bpmn2::TerminateEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/TerminateEventDefinition.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Terminate Event Definition" label="%Terminate" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::ImplicitThrowEvent) and not element.oclIsKindOf(bpmn2::StartEvent) and not element.oclIsKindOf(bpmn2::BoundaryEvent) and element.eventDefinitions->filter(bpmn2::TerminateEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/TerminateEventDefinition.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -2798,7 +2798,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Escalation Event Definition" label="%Escalation" precondition="aql:element.oclIsKindOf(bpmn2::Event) and element.eventDefinitions->filter(bpmn2::EscalationEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EscalationEventDefinition.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Escalation Event Definition" label="%Escalation" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::StartEvent) and element.eventDefinitions->filter(bpmn2::EscalationEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EscalationEventDefinition.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -2816,7 +2816,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Link Event Definition" label="%Link" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::EndEvent) and not element.oclIsKindOf(bpmn2::BoundaryEvent) and element.eventDefinitions->filter(bpmn2::LinkEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/LinkEventDefinition.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Link Event Definition" label="%Link" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::StartEvent) and not element.oclIsKindOf(bpmn2::EndEvent) and not element.oclIsKindOf(bpmn2::BoundaryEvent) and element.eventDefinitions->filter(bpmn2::LinkEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/LinkEventDefinition.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -2825,7 +2825,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Error Event Definition" label="%Error" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::ImplicitThrowEvent) and element.eventDefinitions->filter(bpmn2::ErrorEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ErrorEventDefinition.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Error Event Definition" label="%Error" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::ImplicitThrowEvent) and not element.oclIsKindOf(bpmn2::StartEvent) and element.eventDefinitions->filter(bpmn2::ErrorEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ErrorEventDefinition.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -2834,7 +2834,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Cancel Event Definition" label="%Cancel" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::ImplicitThrowEvent) and element.eventDefinitions->filter(bpmn2::CancelEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CancelEventDefinition.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Cancel Event Definition" label="%Cancel" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::ImplicitThrowEvent) and not element.oclIsKindOf(bpmn2::StartEvent) and element.eventDefinitions->filter(bpmn2::CancelEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CancelEventDefinition.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -2843,7 +2843,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Compensate Event Definition" label="%Compensate" precondition="aql:element.oclIsKindOf(bpmn2::Event) and element.eventDefinitions->filter(bpmn2::CompensateEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CompensateEventDefinition.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Compensate Event Definition" label="%Compensate" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::StartEvent) and element.eventDefinitions->filter(bpmn2::CompensateEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CompensateEventDefinition.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -2861,7 +2861,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Terminate Event Definition" label="%Terminate" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::ImplicitThrowEvent) and not element.oclIsKindOf(bpmn2::BoundaryEvent) and element.eventDefinitions->filter(bpmn2::TerminateEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/TerminateEventDefinition.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Terminate Event Definition" label="%Terminate" precondition="aql:element.oclIsKindOf(bpmn2::Event) and not element.oclIsKindOf(bpmn2::ImplicitThrowEvent) and not element.oclIsKindOf(bpmn2::BoundaryEvent) and not element.oclIsKindOf(bpmn2::StartEvent) and element.eventDefinitions->filter(bpmn2::TerminateEventDefinition)->isEmpty()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/TerminateEventDefinition.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
