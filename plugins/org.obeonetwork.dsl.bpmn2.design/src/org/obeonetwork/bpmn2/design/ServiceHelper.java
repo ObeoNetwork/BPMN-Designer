@@ -118,7 +118,6 @@ public class ServiceHelper {
 
 	public static void setInternalLabel(DNode dNode) {
 		dNode.getStyle().getCustomFeatures().remove(IS_EXTERNAL_LABEL);
-
 	}
 
 }

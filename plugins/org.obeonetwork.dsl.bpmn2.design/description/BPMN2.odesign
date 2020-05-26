@@ -673,28 +673,28 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Events" label="%Events" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
-          <ownedTools xsi:type="tool:ToolDescription" name="Start" label="%Start" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Start" label="%Start" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('StartEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="End" label="%End" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EndEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="End" label="%End" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EndEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('EndEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" label="%IntermediateCatch" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" label="%IntermediateCatch" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('IntermediateCatchEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Throw" label="%IntermediateThrow" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Throw" label="%IntermediateThrow" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -828,7 +828,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Activities" label="%Activities" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
-          <ownedTools xsi:type="tool:ToolDescription" name="Task" label="%Task" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Task" label="%Task" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -861,7 +861,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Business Rule Task" label="%BusinessRuleTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Business Rule Task" label="%BusinessRuleTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -894,7 +894,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Manual Task" label="%ManualTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Manual Task" label="%ManualTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -927,7 +927,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Receive Task" label="%ReceiveTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ReceiveTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Receive Task" label="%ReceiveTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ReceiveTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -960,7 +960,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Script Task" label="%ScriptTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ScriptTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Script Task" label="%ScriptTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ScriptTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -993,7 +993,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Send Task" label="%SendTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Send Task" label="%SendTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -1026,7 +1026,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Service Task" label="%ServiceTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Service Task" label="%ServiceTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -1059,7 +1059,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="User Task" label="%UserTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="User Task" label="%UserTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -1093,7 +1093,7 @@
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup" name="SubProcessGroup" label="%SubProcess">
-            <tools xsi:type="tool:ToolDescription" name="Sub Process" label="%SubProcess" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SubProcess.png">
+            <tools xsi:type="tool:ToolDescription" name="Sub Process" label="%SubProcess" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SubProcess.png">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -1132,7 +1132,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:ToolDescription" name="Ad Hoc Sub Process" label="%AdHocSubProcess" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/AdHocSubProcess.png">
+            <tools xsi:type="tool:ToolDescription" name="Ad Hoc Sub Process" label="%AdHocSubProcess" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/AdHocSubProcess.png">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -1173,7 +1173,7 @@
             </tools>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup" name="CallActivity" label="%CallActivity">
-            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)" forceRefresh="true" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
+            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:(container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)) and containerView.isNotCollapsed()" forceRefresh="true" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
               <element name="element"/>
               <containerView name="containerView"/>
               <container name="container"/>
@@ -1188,7 +1188,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:ToolDescription" name="CallActivityNewProcess" label="%CallActivityNewProcess" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
+            <tools xsi:type="tool:ToolDescription" name="CallActivityNewProcess" label="%CallActivityNewProcess" precondition="aql:containerView.isNotCollapsed()" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -1336,35 +1336,35 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Gateways" label="%Gateways" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
-          <ownedTools xsi:type="tool:ToolDescription" name="Parallel Gateway" label="%ParallelGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Parallel Gateway" label="%ParallelGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('ParallelGateway')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Exclusive Gateway" label="%ExclusiveGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Exclusive Gateway" label="%ExclusiveGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('ExclusiveGateway')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Inclusive Gateway" label="%InclusiveGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Inclusive Gateway" label="%InclusiveGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('InclusiveGateway')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Complex Gateway" label="%ComplexGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Complex Gateway" label="%ComplexGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('ComplexGateway')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Event Based Gateway" label="%EventBasedGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Event Based Gateway" label="%EventBasedGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -1373,7 +1373,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Data" label="%Data" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/DataObject.png">
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Object" label="%DataObject" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataObject%20'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataObject%20']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Object" label="%DataObject" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataObject%20'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataObject%20']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1385,7 +1385,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Input" label="%DataInput" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataInput'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataInput']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Input" label="%DataInput" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataInput'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataInput']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1411,7 +1411,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Output" label="%DataOutput" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataOutput'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataOutput']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Output" label="%DataOutput" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataOutput'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataOutput']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1437,7 +1437,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Store" label="%DataStore" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataStore'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataStore']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Store" label="%DataStore" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataStore'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataStore']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1492,7 +1492,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="TextAnnotation" label="%TextAnnotation" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='TextAnnotation']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/TextAnnotation.png">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="TextAnnotation" label="%TextAnnotation" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='TextAnnotation']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/TextAnnotation.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1514,7 +1514,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Group" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Group']">
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Group" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Group']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1553,6 +1553,7 @@
           <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="ActivitySequentialMultiInstanceMarker" position="SOUTH" preconditionExpression="aql:self.loopCharacteristics.oclIsKindOf(bpmn2::MultiInstanceLoopCharacteristics) and self.loopCharacteristics.isSequential" imageExpression="/org.obeonetwork.dsl.bpmn2.design/icons2/decorations/process/south/mi.sequential.png" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subContainerMappings[name='SPTask'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Process'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Task']"/>
           <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="SubProcess" position="SOUTH" preconditionExpression="aql:containerView.ownedDiagramElements->first().filter(diagram::DNodeContainer).isCollapsed()" imageExpression="/org.obeonetwork.dsl.bpmn2.design/icons2/decorations/process/south/subprocess.collapsed.png" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']"/>
           <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="AdHocSubProcessMarker" position="SOUTH" preconditionExpression="aql:self.oclIsTypeOf(bpmn2::AdHocSubProcess)" imageExpression="/org.obeonetwork.dsl.bpmn2.design/icons2/decorations/process/south/adhoc-sub-process.png" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="CollapsedSubProcessMarker" position="SOUTH" preconditionExpression="aql:view.isCollapsed()" imageExpression="/org.obeonetwork.dsl.bpmn2.design/icons2/decorations/process/south/subprocess.collapsed.png" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']"/>
         </decorationDescriptionsSet>
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.eventDefinitions->size()==1 and self.eventDefinitions->first().oclIsTypeOf(bpmn2::CancelEventDefinition)">
@@ -1899,7 +1900,7 @@
                 <labelFormat>bold</labelFormat>
               </style>
             </subContainerMappings>
-            <subContainerMappings name="SubProcess" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" deletionDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteSubProcess']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.flowNodeRefs->filter(bpmn2::SubProcess)" domainClass="bpmn2.SubProcess" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementFromLaneToSubProcess']">
+            <subContainerMappings name="SubProcess" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" deletionDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteSubProcess']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.flowNodeRefs->filter(bpmn2::SubProcess)" doubleClickDescription="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='SubProcessToggleCollapse_DoubleClick']" domainClass="bpmn2.SubProcess" dropDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MoveFlowElementFromLaneToSubProcess']">
               <borderedNodeMappings name="TaskBorderOnSubProcess" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.boundaryEventRefs" semanticElements="aql:self.eventDefinitions->union(Sequence{self})" domainClass="bpmn2.BoundaryEvent">
                 <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.getNonExternalLabel(view)" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" sizeComputationExpression="-1" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/sub-process-boundary-events/none.svg">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -2085,7 +2086,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:DoubleClickDescription" name="SubProcessToggleCollapse_DoubleClick" forceRefresh="true">
+          <ownedTools xsi:type="tool_1:DoubleClickDescription" name="SubProcessToggleCollapse_DoubleClick" forceRefresh="true" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -2437,6 +2438,7 @@
           <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="ActivitySequentialMultiInstanceMarker" position="SOUTH" preconditionExpression="aql:self.loopCharacteristics.oclIsKindOf(bpmn2::MultiInstanceLoopCharacteristics) and self.loopCharacteristics.isSequential" imageExpression="/org.obeonetwork.dsl.bpmn2.design/icons2/decorations/process/south/mi.sequential.png" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subContainerMappings[name='SPTask'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subContainerMappings[name='SPSubProcess'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Process'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Task']"/>
           <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="SubProcess" position="SOUTH" preconditionExpression="aql:containerView.ownedDiagramElements->first().filter(diagram::DNodeContainer).isCollapsed()" imageExpression="/org.obeonetwork.dsl.bpmn2.design/icons2/decorations/process/south/subprocess.collapsed.png" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']"/>
           <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="AdHocSubProcessMarker" position="SOUTH" preconditionExpression="aql:self.oclIsTypeOf(bpmn2::AdHocSubProcess)" imageExpression="/org.obeonetwork.dsl.bpmn2.design/icons2/decorations/process/south/adhoc-sub-process.png" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="CollapsedSubProcessMarker" position="SOUTH" preconditionExpression="aql:view.isCollapsed()" imageExpression="/org.obeonetwork.dsl.bpmn2.design/icons2/decorations/process/south/subprocess.collapsed.png" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']"/>
         </decorationDescriptionsSet>
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.eventDefinitions->size()==1 and self.eventDefinitions->first().oclIsTypeOf(bpmn2::CancelEventDefinition)">
@@ -2799,28 +2801,28 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Events" label="%Events" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
-          <ownedTools xsi:type="tool:ToolDescription" name="Start" label="%Start" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Start" label="%Start" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('StartEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="End" label="%End" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EndEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="End" label="%End" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EndEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('EndEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" label="%IntermediateCatch" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" label="%IntermediateCatch" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('IntermediateCatchEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Throw" label="%IntermediateThrow" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Throw" label="%IntermediateThrow" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -2954,7 +2956,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Activities" label="%Activities" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
-          <ownedTools xsi:type="tool:ToolDescription" name="Task" label="%Task" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Task" label="%Task" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -2987,7 +2989,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Business Rule Task" label="%BusinessRuleTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Business Rule Task" label="%BusinessRuleTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -3020,7 +3022,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Manual Task" label="%ManualTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Manual Task" label="%ManualTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -3053,7 +3055,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Receive Task" label="%ReceiveTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ReceiveTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Receive Task" label="%ReceiveTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ReceiveTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -3086,7 +3088,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Script Task" label="%ScriptTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ScriptTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Script Task" label="%ScriptTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ScriptTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -3119,7 +3121,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Send Task" label="%SendTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Send Task" label="%SendTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -3152,7 +3154,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Service Task" label="%ServiceTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Service Task" label="%ServiceTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -3185,7 +3187,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="User Task" label="%UserTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="User Task" label="%UserTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -3219,7 +3221,7 @@
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup" name="SubProcess" label="%SubProcess">
-            <tools xsi:type="tool:ToolDescription" name="Sub Process" label="%SubProcess" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SubProcess.png">
+            <tools xsi:type="tool:ToolDescription" name="Sub Process" label="%SubProcess" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SubProcess.png">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -3258,7 +3260,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:ToolDescription" name="Ad Hoc Sub Process" label="%AdHocSubProcess" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/AdHocSubProcess.png">
+            <tools xsi:type="tool:ToolDescription" name="Ad Hoc Sub Process" label="%AdHocSubProcess" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/AdHocSubProcess.png">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -3299,7 +3301,7 @@
             </tools>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup" name="CallActivity" label="%CallActivity">
-            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)" forceRefresh="true" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
+            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:(container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)) and containerView.isNotCollapsed()" forceRefresh="true" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
               <element name="element"/>
               <containerView name="containerView"/>
               <container name="container"/>
@@ -3314,7 +3316,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:ToolDescription" name="CallActivityNewProcess" label="%CallActivityNewProcess" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
+            <tools xsi:type="tool:ToolDescription" name="CallActivityNewProcess" label="%CallActivityNewProcess" precondition="aql:containerView.isNotCollapsed()" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -3462,35 +3464,35 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Gateways" label="%Gateways" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
-          <ownedTools xsi:type="tool:ToolDescription" name="Parallel Gateway" label="%ParallelGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Parallel Gateway" label="%ParallelGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('ParallelGateway')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Exclusive Gateway" label="%ExclusiveGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Exclusive Gateway" label="%ExclusiveGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('ExclusiveGateway')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Inclusive Gateway" label="%InclusiveGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Inclusive Gateway" label="%InclusiveGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('InclusiveGateway')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Complex Gateway" label="%ComplexGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Complex Gateway" label="%ComplexGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('ComplexGateway')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Event Based Gateway" label="%EventBasedGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Event Based Gateway" label="%EventBasedGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -3499,7 +3501,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Data" label="%Data" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/DataObject.png">
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Object" label="%DataObject" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataObject%20'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataObject%20']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Object" label="%DataObject" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataObject%20'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataObject%20']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3511,7 +3513,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Input" label="%DataInput" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataInput'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataInput']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Input" label="%DataInput" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataInput'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataInput']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3537,7 +3539,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Output" label="%DataOutput" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataOutput'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataOutput']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Output" label="%DataOutput" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataOutput'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataOutput']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3563,7 +3565,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Store" label="%DataStore" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataStore'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataStore']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Store" label="%DataStore" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@subNodeMappings[name='SPDataStore'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataStore']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3649,7 +3651,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="TextAnnotation" label="%TextAnnotation" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='TextAnnotation']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/TextAnnotation.png">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="TextAnnotation" label="%TextAnnotation" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='TextAnnotation']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/TextAnnotation.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3671,7 +3673,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Group" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Group']">
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Group" precondition="aql:containerView.isNotCollapsed()" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Group']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -4222,28 +4224,28 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Events" label="%Events" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
-          <ownedTools xsi:type="tool:ToolDescription" name="Start" label="%Start" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Start" label="%Start" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('StartEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="End" label="%End" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EndEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="End" label="%End" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EndEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('EndEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" label="%IntermediateCatch" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" label="%IntermediateCatch" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('IntermediateCatchEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Throw" label="%IntermediateThrow" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Throw" label="%IntermediateThrow" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -4377,7 +4379,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Activities" label="%Activities" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
-          <ownedTools xsi:type="tool:ToolDescription" name="Task" label="%Task" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Task" label="%Task" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -4410,7 +4412,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Business Rule Task" label="%BusinessRuleTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Business Rule Task" label="%BusinessRuleTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -4443,7 +4445,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Manual Task" label="%ManualTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Manual Task" label="%ManualTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -4476,7 +4478,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Receive Task" label="%ReceiveTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ReceiveTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Receive Task" label="%ReceiveTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ReceiveTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -4509,7 +4511,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Script Task" label="%ScriptTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ScriptTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Script Task" label="%ScriptTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ScriptTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -4542,7 +4544,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Send Task" label="%SendTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Send Task" label="%SendTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -4575,7 +4577,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Service Task" label="%ServiceTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Service Task" label="%ServiceTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -4608,7 +4610,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="User Task" label="%UserTask" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="User Task" label="%UserTask" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -4642,7 +4644,7 @@
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup" name="SubProcessGroup" label="%SubProcess">
-            <tools xsi:type="tool:ToolDescription" name="Sub Process" label="%SubProcess" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SubProcess.png">
+            <tools xsi:type="tool:ToolDescription" name="Sub Process" label="%SubProcess" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SubProcess.png">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -4681,7 +4683,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:ToolDescription" name="Ad Hoc Sub Process" label="%AdHocSubProcess" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/AdHocSubProcess.png">
+            <tools xsi:type="tool:ToolDescription" name="Ad Hoc Sub Process" label="%AdHocSubProcess" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/AdHocSubProcess.png">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -4722,7 +4724,7 @@
             </tools>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup" name="CallActivity" label="%CallActivity">
-            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)" forceRefresh="true" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
+            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:(container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)) and containerView.isNotCollapsed()" forceRefresh="true" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
               <element name="element"/>
               <containerView name="containerView"/>
               <container name="container"/>
@@ -4737,7 +4739,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:ToolDescription" name="CallActivityNewProcess" label="%CallActivityNewProcess" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
+            <tools xsi:type="tool:ToolDescription" name="CallActivityNewProcess" label="%CallActivityNewProcess" precondition="aql:containerView.isNotCollapsed()" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -4885,35 +4887,35 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Gateways" label="%Gateways" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
-          <ownedTools xsi:type="tool:ToolDescription" name="Parallel Gateway" label="%ParallelGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Parallel Gateway" label="%ParallelGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('ParallelGateway')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Exclusive Gateway" label="%ExclusiveGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Exclusive Gateway" label="%ExclusiveGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('ExclusiveGateway')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Inclusive Gateway" label="%InclusiveGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Inclusive Gateway" label="%InclusiveGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('InclusiveGateway')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Complex Gateway" label="%ComplexGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Complex Gateway" label="%ComplexGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('ComplexGateway')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Event Based Gateway" label="%EventBasedGateway" precondition="aql:element.isApplicableType()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Event Based Gateway" label="%EventBasedGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -4922,7 +4924,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Data" label="%Data" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/DataObject.png">
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Object" label="%DataObject" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPDataObject%20']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Object" label="%DataObject" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPDataObject%20']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -4934,7 +4936,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Input" label="%DataInput" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPDataInput']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Input" label="%DataInput" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPDataInput']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -4960,7 +4962,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Output" label="%DataOutput" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPDataOutput']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Output" label="%DataOutput" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPDataOutput']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -4986,7 +4988,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Store" label="%DataStore" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPDataStore']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="Data Store" label="%DataStore" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPDataStore']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -5000,7 +5002,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Other" label="%Other" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Lane.png">
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="TextAnnotation" label="%TextAnnotation" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='TextAnnotation']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/TextAnnotation.png">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="TextAnnotation" label="%TextAnnotation" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='TextAnnotation']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/TextAnnotation.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -5022,7 +5024,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Group" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subContainerMappings[name='Group']">
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Group" precondition="aql:containerView.isNotCollapsed()" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subContainerMappings[name='Group']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -5061,6 +5063,7 @@
           <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="ActivitySequentialMultiInstanceMarker" position="SOUTH" preconditionExpression="aql:self.loopCharacteristics.oclIsKindOf(bpmn2::MultiInstanceLoopCharacteristics) and self.loopCharacteristics.isSequential" imageExpression="/org.obeonetwork.dsl.bpmn2.design/icons2/decorations/process/south/mi.sequential.png" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subContainerMappings[name='SPTask']"/>
           <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="SubProcess" position="SOUTH" preconditionExpression="aql:containerView.ownedDiagramElements->first().filter(diagram::DNodeContainer).isCollapsed()" imageExpression="/org.obeonetwork.dsl.bpmn2.design/icons2/decorations/process/south/subprocess.collapsed.png" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']"/>
           <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="AdHocSubProcessMarker" position="SOUTH" preconditionExpression="aql:self.oclIsTypeOf(bpmn2::AdHocSubProcess)" imageExpression="/org.obeonetwork.dsl.bpmn2.design/icons2/decorations/process/south/adhoc-sub-process.png" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="CollapsedSubProcessMarker" position="SOUTH" preconditionExpression="aql:view.isCollapsed()" imageExpression="/org.obeonetwork.dsl.bpmn2.design/icons2/decorations/process/south/subprocess.collapsed.png" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']"/>
         </decorationDescriptionsSet>
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.eventDefinitions->size()==1 and self.eventDefinitions->first().oclIsTypeOf(bpmn2::CancelEventDefinition)">

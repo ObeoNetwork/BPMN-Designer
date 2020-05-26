@@ -12,11 +12,8 @@
 package org.obeonetwork.bpmn2.design;
 
 import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature.Setting;
 import org.eclipse.emf.ecore.util.ECrossReferenceAdapter;
@@ -24,9 +21,8 @@ import org.eclipse.sirius.business.api.dialect.DialectManager;
 import org.eclipse.sirius.diagram.DDiagramElement;
 import org.eclipse.sirius.diagram.DDiagramElementContainer;
 import org.eclipse.sirius.diagram.DSemanticDiagram;
-import org.eclipse.sirius.diagram.business.api.helper.display.DisplayService;
-import org.eclipse.sirius.diagram.business.api.helper.display.DisplayServiceManager;
 import org.eclipse.sirius.diagram.business.api.helper.graphicalfilters.HideFilterHelper;
+import org.obeonetwork.dsl.bpmn2.BoundaryEvent;
 import org.obeonetwork.dsl.bpmn2.FlowNode;
 import org.obeonetwork.dsl.bpmn2.Lane;
 import org.obeonetwork.dsl.bpmn2.MessageFlow;
@@ -52,6 +48,8 @@ import org.obeonetwork.dsl.bpmn2.Process;
  *         </p>
  */
 public class ExpandCollapseService {
+
+	private static final String IS_COLLAPSED_ANNOTATION = "IsCollapsed";
 
 	public EObject getSourceRef(DSemanticDiagram diagram, MessageFlow messageFlow) {
 		EObject result = getElement(diagram, messageFlow.getSourceRef());
@@ -87,7 +85,8 @@ public class ExpandCollapseService {
 									laneView = d;
 								}
 							}
-							if (laneView==null || laneView.getGraphicalFilters()==null || laneView.getGraphicalFilters().size() == 0) {
+							if (laneView == null || laneView.getGraphicalFilters() == null
+									|| laneView.getGraphicalFilters().size() == 0) {
 								return result;
 							}
 							return object;
@@ -113,19 +112,6 @@ public class ExpandCollapseService {
 
 	}
 
-
-
-	private boolean isDisplayed(DSemanticDiagram diagram, EObject eo) {
-		boolean result = false;
-		List<DDiagramElement> elements = diagram.getDiagramElements();
-		for (DDiagramElement d : elements) {
-			if (d.getTarget().equals(eo) && d.isVisible()) {
-				return true;
-			}
-		}
-		return result;
-	}
-
 	/**
 	 * Toggle the expand/collapse state of the given DDiagramElementContainer.
 	 * 
@@ -135,8 +121,10 @@ public class ExpandCollapseService {
 	public DDiagramElementContainer toggleCollapse(final DDiagramElementContainer elementContainer) {
 
 		if (isCollapsed(elementContainer)) {
+			unsetCollapsed(elementContainer);
 			expand(elementContainer);
 		} else {
+			setCollapsed(elementContainer);
 			collapse(elementContainer);
 		}
 
@@ -150,9 +138,9 @@ public class ExpandCollapseService {
 	 * @param elementContainer
 	 * @return elementContainer
 	 */
-	public DDiagramElementContainer collapse(final DDiagramElementContainer elementContainer) {
+	public static DDiagramElementContainer collapse(final DDiagramElementContainer elementContainer) {
 		for (DDiagramElement child : elementContainer.getElements()) {
-			if (child.eContainer() == elementContainer) {
+			if ((child.eContainer() == elementContainer) && !(child.getTarget() instanceof BoundaryEvent)) {
 				HideFilterHelper.INSTANCE.hide(child);
 			}
 		}
@@ -172,7 +160,7 @@ public class ExpandCollapseService {
 	 * @param elementContainer
 	 * @return elementContainer
 	 */
-	public DDiagramElementContainer expand(final DDiagramElementContainer elementContainer) {
+	public static DDiagramElementContainer expand(final DDiagramElementContainer elementContainer) {
 		for (DDiagramElement child : elementContainer.getElements()) {
 			if (child.eContainer() == elementContainer) {
 				HideFilterHelper.INSTANCE.reveal(child);
@@ -187,25 +175,20 @@ public class ExpandCollapseService {
 		return elementContainer;
 	}
 
-	/**
-	 * Test if a DDiagramElementContainer is collapsed.
-	 * 
-	 * @param elementContainer
-	 * @return true if at least one child of elementContainer is hidden.
-	 */
-	public boolean isCollapsed(final DDiagramElementContainer elementContainer) {
-		final DisplayService displayService = DisplayServiceManager.INSTANCE.getDisplayService();
-		for (DDiagramElement child : elementContainer.getElements()) {
-			if (child.eContainer() == elementContainer) {
-				// if (!child.isVisible()) {
-				// return true;
-				// }
-				if (!displayService.isDisplayed(child.getParentDiagram(), child)) {
-					return true;
-				}
-			}
-		}
-		return false;
+	public static boolean isCollapsed(DDiagramElementContainer elementContainer) {
+		return elementContainer.getOwnedStyle().getCustomFeatures().contains(IS_COLLAPSED_ANNOTATION);
+	}
+
+	public static boolean isNotCollapsed(DDiagramElementContainer elementContainer) {
+		return !isCollapsed(elementContainer);
+	}
+
+	public static void setCollapsed(DDiagramElementContainer elementContainer) {
+		elementContainer.getStyle().getCustomFeatures().add(IS_COLLAPSED_ANNOTATION);
+	}
+
+	public static void unsetCollapsed(DDiagramElementContainer elementContainer) {
+		elementContainer.getStyle().getCustomFeatures().remove(IS_COLLAPSED_ANNOTATION);
 	}
 
 }

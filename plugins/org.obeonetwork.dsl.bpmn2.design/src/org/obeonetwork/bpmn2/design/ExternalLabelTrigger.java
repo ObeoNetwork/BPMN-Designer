@@ -85,6 +85,10 @@ public class ExternalLabelTrigger implements ModelChangeTrigger {
 				}
 			}
 		}
+		
+		if (dNodes.isEmpty()) {
+			return Options.<Command>newNone();
+		}
 
 		TransactionalEditingDomain ted = (TransactionalEditingDomain) AdapterFactoryEditingDomain
 				.getEditingDomainFor(dNodes.get(0));

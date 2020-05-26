@@ -21,6 +21,8 @@ import org.eclipse.sirius.viewpoint.description.Viewpoint;
 public class BPMNSessionListener implements SessionManagerListener {
 
 	private ExternalLabelTrigger externalLabelTrigger = new ExternalLabelTrigger();
+	
+	private CollapsedSubProcessTrigger collapsedSubProcessTrigger = new CollapsedSubProcessTrigger();
 
 	/*
 	 * (non-Javadoc)
@@ -43,6 +45,7 @@ public class BPMNSessionListener implements SessionManagerListener {
 	@Override
 	public void notifyAddSession(Session session) {
 		session.getEventBroker().addLocalTrigger(ExternalLabelTrigger.EXTERNAL_LABEL_FILTER, this.externalLabelTrigger);
+		session.getEventBroker().addLocalTrigger(CollapsedSubProcessTrigger.COLLAPSED_SUBPROCESS_FILTER, this.collapsedSubProcessTrigger);
 	}
 
 	/*
@@ -54,6 +57,7 @@ public class BPMNSessionListener implements SessionManagerListener {
 	@Override
 	public void notifyRemoveSession(Session session) {
 		session.getEventBroker().removeLocalTrigger(this.externalLabelTrigger);
+		session.getEventBroker().removeLocalTrigger(this.collapsedSubProcessTrigger);
 	}
 
 	/*
