@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="48"
+   inkscape:export-xdpi="48"
+   inkscape:export-filename="/Users/arichard/data/2020/OCP/Compensation.png"
+   inkscape:version="1.0beta2 (2b71d25, 2019-12-03)"
+   height="32"
+   width="32"
+   sodipodi:docname="Compensation.svg"
+   version="1.1"
+   viewBox="0 0 32 32"
+   id="svg2">
+  <metadata
+     id="metadata844">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="svg2"
+     inkscape:window-maximized="1"
+     inkscape:window-y="23"
+     inkscape:window-x="0"
+     inkscape:cy="8"
+     inkscape:cx="8"
+     inkscape:zoom="13.86"
+     showgrid="false"
+     id="namedview842"
+     inkscape:window-height="1075"
+     inkscape:window-width="1792"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     inkscape:document-rotation="0"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <defs
+     id="defs835">
+    <style
+       id="style833">.cls-1{fill:none;stroke:#045fa5;stroke-width:0.75px;}</style>
+  </defs>
+  <title
+     id="title837">icon</title>
+  <path
+     inkscape:connector-curvature="0"
+     d="M 1.2294989,16.00004 14.775739,2.1551401 V 29.84494 Z"
+     class="cls-1"
+     id="path3755" />
+  <path
+     inkscape:connector-curvature="0"
+     d="M 17.574887,16.00004 31.121129,2.1551401 V 29.84494 Z"
+     class="cls-1"
+     id="path3755-2" />
+</svg>

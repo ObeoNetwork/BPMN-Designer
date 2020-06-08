@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="48"
+   inkscape:export-xdpi="48"
+   inkscape:export-filename="/Users/arichard/data/2020/OCP/MultiInstanceLoopCharacteristics.png"
+   inkscape:version="1.0beta2 (2b71d25, 2019-12-03)"
+   height="32"
+   width="32"
+   sodipodi:docname="MultiInstanceLoopCharacteristics.svg"
+   version="1.1"
+   viewBox="0 0 32 32"
+   id="svg2">
+  <metadata
+     id="metadata852">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="svg2"
+     inkscape:window-maximized="0"
+     inkscape:window-y="23"
+     inkscape:window-x="0"
+     inkscape:cy="8"
+     inkscape:cx="-0.20588235"
+     inkscape:zoom="9.1157323"
+     showgrid="false"
+     id="namedview850"
+     inkscape:window-height="824"
+     inkscape:window-width="1338"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     inkscape:document-rotation="0"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <defs
+     id="defs842">
+    <style
+       id="style840">.cls-1{fill:none;stroke:#045fa5;stroke-width:0.75px;}</style>
+  </defs>
+  <title
+     id="title844">icon</title>
+  <path
+     inkscape:connector-curvature="0"
+     d="M 1.1787666,32 V 0"
+     class="cls-1"
+     id="path5137" />
+  <path
+     inkscape:connector-curvature="0"
+     d="M 16,32 V 0"
+     class="cls-1"
+     id="path5168" />
+  <path
+     inkscape:connector-curvature="0"
+     d="M 30.821233,32 V 0"
+     class="cls-1"
+     data-name="path5168"
+     id="path5168-2" />
+</svg>
