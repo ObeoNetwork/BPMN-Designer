@@ -828,7 +828,7 @@
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup">
-            <tools xsi:type="tool:ToolDescription" name="LoopMarker" label="Loop Marker" precondition="aql:container.oclIsKindOf(bpmn2::Activity)" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StandardLoopCharacteristics.png">
+            <tools xsi:type="tool:ToolDescription" name="LoopMarker" label="Loop Marker" precondition="aql:container.oclIsKindOf(bpmn2::Activity)" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Compensation.png">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
