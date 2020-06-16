@@ -3,11 +3,11 @@
  <parent>
   <groupId>BPMN2</groupId>
   <artifactId>org.obeonetwork.dsl.bpmn2.parent</artifactId>
-  <version>4.0.2-SNAPSHOT</version>
+  <version>4.0.3-SNAPSHOT</version>
   <relativePath>../org.obeonetwork.dsl.bpmn2.parent/pom.xml</relativePath>
  </parent>
  <groupId>BPMN2</groupId>
  <artifactId>org.obeonetwork.dsl.bpmn2.feature</artifactId>
- <version>4.0.2-SNAPSHOT</version>
+ <version>4.0.3-SNAPSHOT</version>
  <packaging>eclipse-feature</packaging>
 </project>
