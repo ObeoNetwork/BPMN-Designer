@@ -275,7 +275,7 @@
               </style>
             </subContainerMappings>
             <subContainerMappings name="Group" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.7/@ownedTools[name='GroupDirectEdit']" semanticCandidatesExpression="aql:self.extensionValues.value->filter(bpmn2::Group)" domainClass="bpmn2.Group">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="feature:description" widthComputationExpression="0" heightComputationExpression="0" backgroundStyle="GradientTopToBottom" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="feature:description" widthComputationExpression="15" heightComputationExpression="3" backgroundStyle="GradientTopToBottom" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -2020,7 +2020,7 @@
               </style>
             </subContainerMappings>
             <subContainerMappings name="Group" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.6/@ownedTools[name='GroupDirectEdit']" semanticCandidatesExpression="aql:self.extensionValues.value->filter(bpmn2::Group)" domainClass="bpmn2.Group">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="feature:description" widthComputationExpression="0" heightComputationExpression="0" backgroundStyle="GradientTopToBottom" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="feature:description" widthComputationExpression="15" heightComputationExpression="3" backgroundStyle="GradientTopToBottom" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='LightYellow']">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
