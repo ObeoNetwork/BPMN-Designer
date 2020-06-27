@@ -1514,7 +1514,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Group" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Group']">
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Group" label="%Group" precondition="aql:containerView.isNotCollapsed()" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Group']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3673,7 +3673,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Group" precondition="aql:containerView.isNotCollapsed()" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Group']">
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Group" label="%Group" precondition="aql:containerView.isNotCollapsed()" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Group']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
