@@ -109,6 +109,9 @@ public class ServiceHelper {
 	}
 
 	public static boolean isExternalLabel(DNode dNode) {
+		if(dNode==null || dNode.getOwnedStyle()==null || dNode.getOwnedStyle().getCustomFeatures()==null) {
+			return false;
+		}
 		return dNode.getOwnedStyle().getCustomFeatures().contains(ServiceHelper.IS_EXTERNAL_LABEL);
 	}
 
