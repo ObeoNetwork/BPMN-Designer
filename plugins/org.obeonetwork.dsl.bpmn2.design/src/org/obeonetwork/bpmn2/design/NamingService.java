@@ -87,7 +87,7 @@ public class NamingService {
 
 		return name == null ? "" : name;
 	}
-	
+
 	public static String getLabel(BaseElement fn) {
 		String name = "";
 		if (fn instanceof FlowElement) {
@@ -165,6 +165,10 @@ public class NamingService {
 		}
 
 		return result;
+	}
+
+	public int getExternalLabelSize(BaseElement be) {
+		return 7;
 	}
 
 }

@@ -104,7 +104,7 @@ public class ExternalLabelTrigger implements ModelChangeTrigger {
 								Node gmfNodeWithoutLabel = SiriusGMFHelper.getGmfNode(dNodeWithoutLabel);
 								if (gmfNodeWithoutLabel != null) {
 									((Bounds) gmfNode.getLayoutConstraint())
-											.setX(((Bounds) gmfNodeWithoutLabel.getLayoutConstraint()).getX() - 0);
+											.setX(((Bounds) gmfNodeWithoutLabel.getLayoutConstraint()).getX() - 80);
 									((Bounds) gmfNode.getLayoutConstraint())
 											.setY(((Bounds) gmfNodeWithoutLabel.getLayoutConstraint()).getY() - 35);
 								}
