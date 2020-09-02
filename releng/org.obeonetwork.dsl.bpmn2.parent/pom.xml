@@ -4,7 +4,15 @@
   <artifactId>org.obeonetwork.dsl.bpmn2.parent</artifactId>
   <version>4.0.3-SNAPSHOT</version>
   <packaging>pom</packaging>
-  
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/ObeoNetwork/BPMN-Designer</url>
+    </repository>
+  </distributionManagement>
+
   <modules>
 
   <module>../../plugins/org.obeonetwork.dsl.bpmn2</module>
