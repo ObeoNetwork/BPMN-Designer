@@ -25,11 +25,19 @@ Contributors:
        packaging/org.obeonetwork.dsl.bpmn2.parent.
   -->
 
-    <groupId>BPMN2</groupId>
-    <artifactId>top</artifactId>
-    <version>4.0.3-SNAPSHOT</version>
+  <groupId>BPMN2</groupId>
+  <artifactId>top</artifactId>
+  <version>4.0.3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/ObeoNetwork/BPMN-Designer</url>
+    </repository>
+  </distributionManagement>
+  
   <modules>
     <module>releng/org.obeonetwork.dsl.bpmn2.parent</module>
   </modules>
