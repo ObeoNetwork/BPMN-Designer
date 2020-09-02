@@ -1,0 +1,22 @@
+name: Maven Publish
+on:
+  push:
+    branches:
+      - ocp
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Java SDK
+        uses: actions/setup-java@v1.3.0
+        with:
+          java-version: 8
+
+      - name: Maven
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mvn -B clean deploy
