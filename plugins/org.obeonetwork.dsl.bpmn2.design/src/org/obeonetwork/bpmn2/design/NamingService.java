@@ -17,6 +17,7 @@ import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.sirius.diagram.DNode;
 import org.obeonetwork.dsl.bpmn2.BaseElement;
+import org.obeonetwork.dsl.bpmn2.CallActivity;
 import org.obeonetwork.dsl.bpmn2.CancelEventDefinition;
 import org.obeonetwork.dsl.bpmn2.CatchEvent;
 import org.obeonetwork.dsl.bpmn2.CompensateEventDefinition;
@@ -169,6 +170,17 @@ public class NamingService {
 
 	public int getExternalLabelSize(BaseElement be) {
 		return 7;
+	}
+
+	public String getCallActivityLabel(CallActivity callActivity) {
+		String result = "";
+		if (!Strings.isNullOrEmpty(callActivity.getName())) {
+			result = callActivity.getName();
+		} else if (callActivity.getCalledElementRef() != null
+				&& !Strings.isNullOrEmpty(callActivity.getCalledElementRef().getName())) {
+			result = callActivity.getCalledElementRef().getName();
+		}
+		return result;
 	}
 
 }
