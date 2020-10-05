@@ -19,16 +19,22 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.ECrossReferenceAdapter;
 import org.eclipse.sirius.diagram.DDiagramElement;
+import org.eclipse.sirius.diagram.DEdge;
 import org.eclipse.sirius.diagram.DNode;
 import org.eclipse.sirius.diagram.DNodeContainer;
+import org.eclipse.sirius.diagram.EdgeTarget;
 import org.obeonetwork.dsl.bpmn2.BaseElement;
 import org.obeonetwork.dsl.bpmn2.BoundaryEvent;
 import org.obeonetwork.dsl.bpmn2.CallActivity;
+import org.obeonetwork.dsl.bpmn2.ComplexGateway;
 import org.obeonetwork.dsl.bpmn2.Definitions;
 import org.obeonetwork.dsl.bpmn2.Event;
+import org.obeonetwork.dsl.bpmn2.ExclusiveGateway;
 import org.obeonetwork.dsl.bpmn2.Gateway;
+import org.obeonetwork.dsl.bpmn2.InclusiveGateway;
 import org.obeonetwork.dsl.bpmn2.ItemAwareElement;
 import org.obeonetwork.dsl.bpmn2.Process;
+import org.obeonetwork.dsl.bpmn2.SequenceFlow;
 import org.obeonetwork.dsl.bpmn2.SubProcess;
 import org.obeonetwork.dsl.bpmn2.Task;
 
@@ -109,7 +115,7 @@ public class ServiceHelper {
 	}
 
 	public static boolean isExternalLabel(DNode dNode) {
-		if(dNode==null || dNode.getOwnedStyle()==null || dNode.getOwnedStyle().getCustomFeatures()==null) {
+		if (dNode == null || dNode.getOwnedStyle() == null || dNode.getOwnedStyle().getCustomFeatures() == null) {
 			return false;
 		}
 		return dNode.getOwnedStyle().getCustomFeatures().contains(ServiceHelper.IS_EXTERNAL_LABEL);
@@ -121,6 +127,24 @@ public class ServiceHelper {
 
 	public static void setInternalLabel(DNode dNode) {
 		dNode.getStyle().getCustomFeatures().remove(IS_EXTERNAL_LABEL);
+	}
+
+	public static boolean isDefaultPath(DEdge dEdge) {
+		boolean result = false;
+		if (dEdge.getTarget() instanceof SequenceFlow) {
+			EdgeTarget edgeTarget = dEdge.getSourceNode();
+			if (edgeTarget instanceof DNode) {
+				DNode dNode = (DNode) edgeTarget;
+				if ((dNode.getTarget() instanceof InclusiveGateway)) {
+					result = dEdge.getTarget().equals(((InclusiveGateway) dNode.getTarget()).getDefault());
+				} else if ((dNode.getTarget() instanceof ExclusiveGateway)) {
+					result = dEdge.getTarget().equals(((ExclusiveGateway) dNode.getTarget()).getDefault());
+				} else if ((dNode.getTarget() instanceof ComplexGateway)) {
+					result = dEdge.getTarget().equals(((ComplexGateway) dNode.getTarget()).getDefault());
+				}
+			}
+		}
+		return result;
 	}
 
 }

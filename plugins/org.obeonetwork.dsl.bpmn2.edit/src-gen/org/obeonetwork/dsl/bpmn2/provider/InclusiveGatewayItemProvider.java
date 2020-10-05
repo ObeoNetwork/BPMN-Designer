@@ -14,6 +14,7 @@
  */
 package org.obeonetwork.dsl.bpmn2.provider;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -26,7 +27,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
+import org.obeonetwork.dsl.bpmn2.ComplexGateway;
 import org.obeonetwork.dsl.bpmn2.InclusiveGateway;
 
 /**
@@ -68,15 +71,25 @@ public class InclusiveGatewayItemProvider extends GatewayItemProvider implements
 	 * This adds a property descriptor for the Default feature. <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
-	protected void addDefaultPropertyDescriptor(Object object) {
+	protected void addDefaultPropertyDescriptor(Object object) {		
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_InclusiveGateway_default_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_InclusiveGateway_default_feature",
-								"_UI_InclusiveGateway_type"),
-						Bpmn2Package.Literals.INCLUSIVE_GATEWAY__DEFAULT, true, false, true, null, null, null));
+		.add(new ItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+				getResourceLocator(), getString("_UI_InclusiveGateway_default_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_InclusiveGateway_default_feature",
+						"_UI_InclusiveGateway_type"),
+				Bpmn2Package.Literals.INCLUSIVE_GATEWAY__DEFAULT, true, false, true, null, null, null) {
+			@Override
+			public Collection<?> getChoiceOfValues(Object object) {
+				List<Object> choiceOfValues = new ArrayList<>();
+				if (object instanceof InclusiveGateway) {
+					choiceOfValues.add(null);
+					choiceOfValues.addAll(((InclusiveGateway) object).getOutgoing());
+				}
+				return choiceOfValues;
+			}
+		});
 	}
 
 	/**

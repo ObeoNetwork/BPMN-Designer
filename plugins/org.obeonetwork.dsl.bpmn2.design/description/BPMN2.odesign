@@ -21,8 +21,27 @@
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
-          <conditionnalStyles predicateExpression="aql:self.conditionExpression!=null">
+          <conditionnalStyles predicateExpression="aql:self.conditionExpression!=null and not view.isDefaultPath()">
             <style strokeColor="//@userColorsPalettes[name='Colors']/@entries[name='SequenceFlowColor']" sourceArrow="Diamond" targetArrow="InputFillClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+              <beginLabelStyleDescription labelExpression="aql:self.conditionExpression.description" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Expression.gif">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+              <centerLabelStyleDescription showIcon="false" labelExpression="aql:self.name">
+                <labelFormat>italic</labelFormat>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.conditionExpression==null and view.isDefaultPath()">
+            <style strokeColor="//@userColorsPalettes[name='Colors']/@entries[name='SequenceFlowColor']" targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+              <centerLabelStyleDescription showIcon="false" labelExpression="aql:self.name">
+                <labelFormat>italic</labelFormat>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.conditionExpression!=null and view.isDefaultPath()">
+            <style strokeColor="//@userColorsPalettes[name='Colors']/@entries[name='SequenceFlowColor']" sourceArrow="Diamond" targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
               <beginLabelStyleDescription labelExpression="aql:self.conditionExpression.description" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Expression.gif">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -1770,8 +1789,27 @@
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
-          <conditionnalStyles predicateExpression="aql:self.conditionExpression!=null">
+          <conditionnalStyles predicateExpression="aql:self.conditionExpression!=null and not view.isDefaultPath()">
             <style strokeColor="//@userColorsPalettes[name='Colors']/@entries[name='SequenceFlowColor']" sourceArrow="Diamond" targetArrow="InputFillClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+              <beginLabelStyleDescription labelExpression="aql:self.conditionExpression.description" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Expression.gif">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+              <centerLabelStyleDescription showIcon="false" labelExpression="aql:self.name">
+                <labelFormat>italic</labelFormat>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.conditionExpression==null and view.isDefaultPath()">
+            <style strokeColor="//@userColorsPalettes[name='Colors']/@entries[name='SequenceFlowColor']" targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+              <centerLabelStyleDescription showIcon="false" labelExpression="aql:self.name">
+                <labelFormat>italic</labelFormat>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.conditionExpression!=null and view.isDefaultPath()">
+            <style strokeColor="//@userColorsPalettes[name='Colors']/@entries[name='SequenceFlowColor']" sourceArrow="Diamond" targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
               <beginLabelStyleDescription labelExpression="aql:self.conditionExpression.description" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Expression.gif">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
@@ -3787,8 +3825,27 @@
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
-          <conditionnalStyles predicateExpression="aql:self.conditionExpression!=null">
+          <conditionnalStyles predicateExpression="aql:self.conditionExpression!=null and not view.isDefaultPath()">
             <style strokeColor="//@userColorsPalettes[name='Colors']/@entries[name='SequenceFlowColor']" sourceArrow="Diamond" targetArrow="InputFillClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+              <beginLabelStyleDescription labelExpression="aql:self.conditionExpression.description" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Expression.gif">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+              <centerLabelStyleDescription showIcon="false" labelExpression="aql:self.name">
+                <labelFormat>italic</labelFormat>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.conditionExpression==null and view.isDefaultPath()">
+            <style strokeColor="//@userColorsPalettes[name='Colors']/@entries[name='SequenceFlowColor']" targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+              <centerLabelStyleDescription showIcon="false" labelExpression="aql:self.name">
+                <labelFormat>italic</labelFormat>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.conditionExpression!=null and view.isDefaultPath()">
+            <style strokeColor="//@userColorsPalettes[name='Colors']/@entries[name='SequenceFlowColor']" sourceArrow="Diamond" targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
               <beginLabelStyleDescription labelExpression="aql:self.conditionExpression.description" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Expression.gif">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </beginLabelStyleDescription>
