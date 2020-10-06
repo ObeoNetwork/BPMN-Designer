@@ -84,7 +84,7 @@ public class ComplexGatewayItemProvider extends GatewayItemProvider implements I
 						Bpmn2Package.Literals.COMPLEX_GATEWAY__DEFAULT, true, false, true, null, null, null) {
 					@Override
 					public Collection<?> getChoiceOfValues(Object object) {
-						List<Object> choiceOfValues = new ArrayList<>();
+						List<Object> choiceOfValues = new ArrayList<Object>();
 						if (object instanceof ComplexGateway) {
 							choiceOfValues.add(null);
 							choiceOfValues.addAll(((ComplexGateway) object).getOutgoing());

@@ -81,7 +81,7 @@ public class ExclusiveGatewayItemProvider extends GatewayItemProvider implements
 						Bpmn2Package.Literals.EXCLUSIVE_GATEWAY__DEFAULT, true, false, true, null, null, null) {
 					@Override
 					public Collection<?> getChoiceOfValues(Object object) {
-						List<Object> choiceOfValues = new ArrayList<>();
+						List<Object> choiceOfValues = new ArrayList<Object>();
 						if (object instanceof ExclusiveGateway) {
 							choiceOfValues.add(null);
 							choiceOfValues.addAll(((ExclusiveGateway) object).getOutgoing());
