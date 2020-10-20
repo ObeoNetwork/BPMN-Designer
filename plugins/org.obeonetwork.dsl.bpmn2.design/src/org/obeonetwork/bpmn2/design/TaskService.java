@@ -48,8 +48,7 @@ import org.obeonetwork.dsl.bpmn2.impl.TaskImpl;
 public class TaskService {
 
 	public String getLabel(Task task) {
-		String result = " \n \n" + task.getName();
-		return result;
+		return task.getName() == null ? "" : task.getName();
 	}
 
 	public String trimLabel(EObject eo, String newLabel) {
