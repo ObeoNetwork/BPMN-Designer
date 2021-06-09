@@ -33,7 +33,7 @@
   <repository>
    	<id>Sirius</id>
     <layout>p2</layout>
-    <url>http://download.eclipse.org/sirius/updates/releases/3.1.x/mars/</url>
+    <url>http://download.eclipse.org/sirius/updates/releases/3.1.9/mars</url>
   </repository>
   <repository>
    	<id>AcceleoLegacy</id>
