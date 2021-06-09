@@ -3773,7 +3773,7 @@
       <ownedColumnMappings name="Description" headerLabelExpression="Description" featureName="description" labelExpression="aql:description"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="GlobalTaskDefinitions" label="Global Task Definitions" domainClass="bpmn2.Definitions">
-      <ownedLineMappings name="GlobalTask" domainClass="bpmn2.GlobalTask" semanticCandidatesExpression="aql:rootElements->filter(bpmn2::GlobalTask)"/>
+      <ownedLineMappings name="GlobalTask" domainClass="bpmn2.GlobalTask" semanticCandidatesExpression="aql:self.rootElements->filter(bpmn2::GlobalTask)"/>
       <ownedCreateLine name="Create Global User Task" elementsToSelect="service:stdEmptyCollection">
         <variables name="root" documentation="The semantic element of the table."/>
         <variables name="element" documentation="The semantic currently edited element."/>
