@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.obeonetwork.dsl.bpmn2.feature_4.1.0.qualifier.jar" id="org.obeonetwork.dsl.bpmn2.feature" version="4.1.0.qualifier">
+   <feature url="features/org.obeonetwork.dsl.bpmn2.feature_4.1.1.qualifier.jar" id="org.obeonetwork.dsl.bpmn2.feature" version="4.1.1.qualifier">
       <category name="BPMN Designer"/>
    </feature>
    <feature id="org.eclipse.sirius.query.legacy.feature" version="0.0.0">
