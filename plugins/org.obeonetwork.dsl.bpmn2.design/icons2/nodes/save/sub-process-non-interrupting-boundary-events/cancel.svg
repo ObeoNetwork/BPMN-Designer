@@ -13,7 +13,7 @@
    height="32"
    id="svg5795"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="cancel.svg">
   <defs
      id="defs5797" />
@@ -25,16 +25,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.328125"
-     inkscape:cx="-7.4029855"
+     inkscape:cx="-56.119403"
      inkscape:cy="56.548487"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g5099"
      showgrid="false"
-     inkscape:window-width="966"
-     inkscape:window-height="852"
-     inkscape:window-x="1598"
-     inkscape:window-y="324"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata5800">
     <rdf:RDF>
@@ -57,7 +57,7 @@
        transform="translate(-101.5,899.96429)">
       <path
          sodipodi:type="arc"
-         style="fill:#ffffff;fill-opacity:1;stroke:#3a9ed6;stroke-width:4.26015568;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:#ffffff;fill-opacity:1;stroke:#3a9ed6;stroke-width:4.26036541;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:17.04146169,4.26036541;stroke-dashoffset:0"
          id="path4717"
          sodipodi:cx="110"
          sodipodi:cy="98.076469"
@@ -65,16 +65,6 @@
          sodipodi:ry="57.142857"
          d="m 154.28571,98.076469 c 0,31.559131 -19.82739,57.142861 -44.28571,57.142861 -24.458324,0 -44.285713,-25.58373 -44.285713,-57.142861 0,-31.559128 19.827389,-57.142856 44.285713,-57.142856 24.45832,0 44.28571,25.583728 44.28571,57.142856 z"
          transform="matrix(0.34661363,0,0,0.26862556,79.372501,110.05206)" />
-      <path
-         sodipodi:type="arc"
-         style="fill:#ffffff;fill-opacity:1;stroke:#3a9ed6;stroke-width:5.6615591;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="path4719"
-         sodipodi:cx="110"
-         sodipodi:cy="98.076469"
-         sodipodi:rx="44.285713"
-         sodipodi:ry="57.142857"
-         d="m 154.28571,98.076469 c 0,31.559131 -19.82739,57.142861 -44.28571,57.142861 -24.458324,0 -44.285713,-25.58373 -44.285713,-57.142861 0,-31.559128 19.827389,-57.142856 44.285713,-57.142856 24.45832,0 44.28571,25.583728 44.28571,57.142856 z"
-         transform="matrix(0.26081651,0,0,0.20213279,88.810186,116.57343)" />
     </g>
     <path
        inkscape:connector-curvature="0"
