@@ -11,7 +11,9 @@ To install it:
 - Unzip and start it
 - Add the following update sites:
  - http://download.eclipse.org/releases/oxygen/
- - https://s3-eu-west-1.amazonaws.com/obeo-bpmndesigner-releases/4.0.3/repository/
+ - https://s3-eu-west-1.amazonaws.com/obeo-bpmndesigner-releases/4.1.1/repository/
 - Install the BPMN-Designer and Sirius Support for Legacy Queries features
 
 To test it, create a new sample project: Ctrl+N > Examples > BPMN > BPMN Samples
+
+You can also download BPMN-Designer installed in Obeo Designer Community edition here: https://github.com/ObeoNetwork/BPMN-Designer/releases/download/4.1.1/BPMNDesigner-4.1.1.zip (Windows version only).
