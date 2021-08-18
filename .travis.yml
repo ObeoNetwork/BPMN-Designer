@@ -33,3 +33,7 @@ deploy:
     all_branches: true
     repo: ObeoNetwork/BPMN-Designer
     
+
+cache:
+  directories:
+  - $HOME/.m2
