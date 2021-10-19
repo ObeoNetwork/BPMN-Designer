@@ -10,6 +10,7 @@ on:
     branches: [ master ]
   create:
     tags:
+      - '*'
   workflow_dispatch:
 
 jobs:
