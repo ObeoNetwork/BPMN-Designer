@@ -2139,7 +2139,7 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:views.toggleCollapse()"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ContainerDropDescription" name="MoveExtensionValueToLane" forceRefresh="true" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataObject%20'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataStore']" dragSource="BOTH" moveEdges="true">
+          <ownedTools xsi:type="tool_1:ContainerDropDescription" name="MoveExtensionValueToLane" forceRefresh="true" mappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataObject%20'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='DataStore']" moveEdges="true">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
