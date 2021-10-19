@@ -1,0 +1,68 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Environment
+      run: |
+        echo GITHUB_WORKSPACE $GITHUB_WORKSPACE
+        echo GITHUB_REF $GITHUB_REF
+        echo GITHUB_SHA $GITHUB_SHA
+        echo GITHUB_EVENT_NAME $GITHUB_EVENT_NAME
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      
+    - name: Set up Java SDK 8
+      uses: actions/setup-java@v1.3.0
+      with:
+        java-version: '8'
+        distribution: 'adopt'
+        cache: maven
+    
+    - name: Cache Maven packages
+      uses: actions/cache@v2
+      with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+    - name: Build with Maven
+      run: mvn clean verify
+
+    - name: Prepare deploy local directory
+      id: prepare_deploy
+      if: $(echo $GITHUB_REF | cut -d"/" -f2)" != "heads"
+      run: |
+        export TAG="$(echo $GITHUB_REF | cut -d"/" -f3)";
+        export SOURCE_DIR="$(echo $GITHUB_WORKSPACE/$TAG)";
+        chmod a+x ./prepare-deploy-local-dir.sh
+        ./prepare-deploy-local-dir.sh $SOURCE_DIR
+        echo ::set-output name=TAG::${TAG}
+        echo ::set-output name=SOURCE_DIR::${SOURCE_DIR}
+        
+    - name: Deploy to S3
+      if: ${{ steps.prepare_deploy.outputs.TAG != "" }}
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: "eu-west-1"
+        SOURCE_DIR: ${{ steps.prepare_deploy.outputs.SOURCE_DIR }}
+        DEST_DIR: ${{ steps.prepare_deploy.outputs.TAG }}
+     
+          
