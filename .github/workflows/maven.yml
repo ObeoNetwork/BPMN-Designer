@@ -25,7 +25,7 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Set up Java SDK 8
-      uses: actions/setup-java@v1.3.0
+      uses: actions/setup-java@v2
       with:
         java-version: '8'
         distribution: 'adopt'
