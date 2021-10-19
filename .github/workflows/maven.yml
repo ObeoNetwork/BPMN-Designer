@@ -53,7 +53,7 @@ jobs:
         echo ::set-output name=SOURCE_DIR::${SOURCE_DIR}
         
     - name: Deploy to S3
-      if: ${{ steps.prepare_deploy.outputs.TAG != "" }}
+      if: ${{ steps.prepare_deploy.outputs.TAG }} != ""
       uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl public-read --delete
