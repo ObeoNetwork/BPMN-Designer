@@ -41,3 +41,30 @@ jobs:
     - name: Build with Maven
       run: mvn clean verify
 
+    - name: Prepare deploy local directory
+      id: prepare_deploy
+      if: $(echo $GITHUB_REF | cut -d"/" -f2) != "heads"
+      run: |
+        export TAG="$(echo $GITHUB_REF | cut -d"/" -f3)";
+        export SOURCE_DIR="$(echo $GITHUB_WORKSPACE/$TAG)";
+        chmod a+x ./prepare-deploy-local-dir.sh
+        ./prepare-deploy-local-dir.sh $SOURCE_DIR
+        echo ::set-output name=TAG::${TAG}
+        echo ::set-output name=SOURCE_DIR::${SOURCE_DIR}
+       
+    - name: Deploy to S3
+      if: ${{ steps.prepare_deploy.outputs.TAG != '' }}
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: "eu-west-1"
+        SOURCE_DIR: ${{ steps.prepare_deploy.outputs.SOURCE_DIR }}
+        DEST_DIR: ${{ steps.prepare_deploy.outputs.TAG }}
+    
+         
+
+
