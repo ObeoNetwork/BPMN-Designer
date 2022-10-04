@@ -581,7 +581,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:ToolDescription" name="Condition" label="%Condition" precondition="aql:self.conditionExpression==null" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Expression.gif">
+            <tools xsi:type="tool:ToolDescription" name="Condition" label="%Condition" precondition="aql:element.oclIsKindOf(bpmn2::SequenceFlow) and element.oclAsType(bpmn2::SequenceFlow)==null" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Expression.gif">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -590,7 +590,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:ToolDescription" name="SuppressCondition" label="%SupressCondition" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/remove.png">
+            <tools xsi:type="tool:ToolDescription" name="SuppressCondition" label="%SupressCondition" precondition="aql:element.oclIsKindOf(bpmn2::SequenceFlow) and element.oclAsType(bpmn2::SequenceFlow).conditionExpression!=null" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/remove.png">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -2706,7 +2706,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:ToolDescription" name="Condition" label="%Condition" precondition="aql:self.conditionExpression==null" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Expression.gif">
+            <tools xsi:type="tool:ToolDescription" name="Condition" label="%Condition" precondition="aql:element.oclIsKindOf(bpmn2::SequenceFlow) and element.oclAsType(bpmn2::SequenceFlow)==null" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Expression.gif">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -2715,7 +2715,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:ToolDescription" name="SuppressCondition" label="%SupressCondition" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/remove.png">
+            <tools xsi:type="tool:ToolDescription" name="SuppressCondition" label="%SupressCondition" precondition="aql:element.oclIsKindOf(bpmn2::SequenceFlow) and element.oclAsType(bpmn2::SequenceFlow).conditionExpression!=null" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/remove.png">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -4174,7 +4174,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:ToolDescription" name="Condition" label="%Condition" precondition="aql:self.conditionExpression==null" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Expression.gif">
+            <tools xsi:type="tool:ToolDescription" name="Condition" label="%Condition" precondition="aql:element.oclIsKindOf(bpmn2::SequenceFlow) and element.oclAsType(bpmn2::SequenceFlow)==null" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Expression.gif">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -4183,7 +4183,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:ToolDescription" name="SuppressCondition" label="%SupressCondition" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/remove.png">
+            <tools xsi:type="tool:ToolDescription" name="SuppressCondition" label="%SupressCondition" precondition="aql:element.oclIsKindOf(bpmn2::SequenceFlow) and element.oclAsType(bpmn2::SequenceFlow).conditionExpression!=null" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.design/icons/remove.png">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
