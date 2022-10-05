@@ -5,11 +5,11 @@
   <parent>
    <artifactId>org.obeonetwork.dsl.bpmn2.parent</artifactId>
    <groupId>BPMN2</groupId>
-   <version>4.1.2-SNAPSHOT</version>
+   <version>4.1.3-SNAPSHOT</version>
    <relativePath>../../releng/org.obeonetwork.dsl.bpmn2.parent/pom.xml</relativePath>
   </parent>
   <groupId>BPMN2</groupId>
   <artifactId>org.obeonetwork.dsl.bpmn2</artifactId>
-  <version>4.1.2-SNAPSHOT</version>
+  <version>4.1.3-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
 </project>
