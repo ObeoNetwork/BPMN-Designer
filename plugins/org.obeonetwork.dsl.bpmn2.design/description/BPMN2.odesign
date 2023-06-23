@@ -2069,6 +2069,9 @@
               <labelFormat>bold</labelFormat>
             </style>
           </subContainerMappings>
+          <subContainerMappings name="FakeLane" preconditionExpression="aql:self.processRef.laneSets->first().lanes->isEmpty()" semanticCandidatesExpression="aql:self" domainClass="bpmn2.Participant">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="0" arcHeight="0" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" labelSize="12" showIcon="false" labelExpression="" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='Yellow']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='Yellow']"/>
+          </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="0" arcHeight="0" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" labelSize="12" showIcon="false" labelExpression="aql:self.name" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" backgroundColor="//@userColorsPalettes[name='Colors']/@entries[name='Yellow']" foregroundColor="//@userColorsPalettes[name='Colors']/@entries[name='Yellow']">
             <labelFormat>bold</labelFormat>
           </style>
@@ -2277,7 +2280,42 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Collaboration" label="%Collaboration" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/MessageFlow.png">
-          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Particpant" label="%ParticipantAndNewProcess" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Participant.png">
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="ParticpantWithoutProcess" label="%ParticipantWithoutProcess" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Participant.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Participant" referenceName="participants" variableName="participant">
+                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
+                    <buttons labelExpression="service:getCancelLabel()" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                      <initialOperation/>
+                    </buttons>
+                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                      <initialOperation/>
+                    </buttons>
+                    <page name="ParticipantPage" domainClass="bpmn2::Participant" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='ParticpantWithoutProcess']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                    <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Participant" semanticCandidateExpression="var:self">
+                      <controls xsi:type="properties:TextDescription" name="ParticipantName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                            <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
+                          </firstModelOperations>
+                        </initialOperation>
+                      </controls>
+                      <controls xsi:type="properties:TextAreaDescription" name="ParticipantDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                            <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
+                          </firstModelOperations>
+                        </initialOperation>
+                      </controls>
+                    </groups>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Particpant" label="%ParticipantAndNewProcess" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParticipantWithProcess.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
