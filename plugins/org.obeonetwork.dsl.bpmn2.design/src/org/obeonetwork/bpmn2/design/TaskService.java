@@ -13,11 +13,13 @@ package org.obeonetwork.bpmn2.design;
 
 import java.util.Collection;
 
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature.Setting;
 import org.eclipse.emf.ecore.util.ECrossReferenceAdapter;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.sirius.business.api.dialect.DialectManager;
 import org.eclipse.sirius.diagram.DDiagramElementContainer;
 import org.eclipse.sirius.diagram.DNodeContainer;
 import org.obeonetwork.dsl.bpmn2.Association;
@@ -123,22 +125,22 @@ public class TaskService {
 	public Task convertToTask(final DNodeContainer view) {
 		Task eObject = (Task) view.getTarget();
 		if (!eObject.getClass().isAssignableFrom(TaskImpl.class)) {
-			return (Task) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getTask());
+			return (Task) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getTask(),view);
 		}
 		return eObject;
 	}
 
 	public BusinessRuleTask convertToBusinessRuleTask(final DNodeContainer view) {
 		return (BusinessRuleTask) convertToSpecificTask((Task) view.getTarget(),
-				Bpmn2Package.eINSTANCE.getBusinessRuleTask());
+				Bpmn2Package.eINSTANCE.getBusinessRuleTask(),view);
 	}
 
 	public ManualTask convertToManualTask(final DNodeContainer view) {
-		return (ManualTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getManualTask());
+		return (ManualTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getManualTask(),view);
 	}
 
 	public ReceiveTask convertToReceiveTask(final DNodeContainer view) {
-		return (ReceiveTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getReceiveTask());
+		return (ReceiveTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getReceiveTask(),view);
 	}
 
 	public ScriptTask convertToScriptTask(final DNodeContainer view) {
@@ -147,24 +149,15 @@ public class TaskService {
 	}
 
 	public SendTask convertToSendTask(final DNodeContainer view) {
-		return (SendTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getSendTask());
+		return (SendTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getSendTask(),view);
 	}
 
 	public ServiceTask convertToServiceTask(final DNodeContainer view) {
-		return (ServiceTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getServiceTask());
+		return (ServiceTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getServiceTask(),view);
 	}
 
 	public UserTask convertToUserTask(final DNodeContainer view) {
-		return (UserTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getUserTask());
-	}
-
-	private Task convertToSpecificTask(Task task, EClass eClass) {
-		if (eClass.equals(task.eClass())) {
-			return task;
-		} else {
-			Task cloneTask = clone(task, (Task) Bpmn2Factory.eINSTANCE.create(eClass));
-			return cloneTask;
-		}
+		return (UserTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getUserTask(),view);
 	}
 
 	private Task convertToSpecificTask(Task task, EClass eClass, DNodeContainer container) {
@@ -174,9 +167,8 @@ public class TaskService {
 		} else {
 			Task cloneTask = clone(task, (Task) Bpmn2Factory.eINSTANCE.create(eClass));
 			result = cloneTask;
-		}
-		if (result != null) {
 			container.setTarget(result);
+			DialectManager.INSTANCE.refresh(container.getParentDiagram(), new NullProgressMonitor());
 		}
 		return result;
 	}
