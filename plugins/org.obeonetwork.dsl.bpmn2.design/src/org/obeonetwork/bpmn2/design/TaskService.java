@@ -17,6 +17,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature.Setting;
 import org.eclipse.emf.ecore.util.ECrossReferenceAdapter;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.sirius.diagram.DDiagramElementContainer;
 import org.eclipse.sirius.diagram.DNodeContainer;
 import org.obeonetwork.dsl.bpmn2.Association;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
@@ -140,7 +142,8 @@ public class TaskService {
 	}
 
 	public ScriptTask convertToScriptTask(final DNodeContainer view) {
-		return (ScriptTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getScriptTask());
+		return (ScriptTask) convertToSpecificTask((Task) view.getTarget(), Bpmn2Package.eINSTANCE.getScriptTask(),
+				view);
 	}
 
 	public SendTask convertToSendTask(final DNodeContainer view) {
@@ -162,6 +165,20 @@ public class TaskService {
 			Task cloneTask = clone(task, (Task) Bpmn2Factory.eINSTANCE.create(eClass));
 			return cloneTask;
 		}
+	}
+
+	private Task convertToSpecificTask(Task task, EClass eClass, DNodeContainer container) {
+		Task result = null;
+		if (eClass.equals(task.eClass())) {
+			result = task;
+		} else {
+			Task cloneTask = clone(task, (Task) Bpmn2Factory.eINSTANCE.create(eClass));
+			result = cloneTask;
+		}
+		if (result != null) {
+			container.setTarget(result);
+		}
+		return result;
 	}
 
 	private Task clone(Task task, Task cloneTask) {
@@ -233,4 +250,11 @@ public class TaskService {
 		}
 	}
 
+	public void deleteSubProcess(EObject subProcess, DDiagramElementContainer subProcessView) {
+		if (ExpandCollapseService.isCollapsed(subProcessView)) {
+			ExpandCollapseService.unsetCollapsed(subProcessView);
+			ExpandCollapseService.expand(subProcessView);
+		}
+		EcoreUtil.remove(subProcess);
+	}
 }

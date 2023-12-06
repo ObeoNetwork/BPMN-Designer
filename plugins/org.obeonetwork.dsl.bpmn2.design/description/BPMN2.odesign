@@ -522,9 +522,7 @@
             <elementView name="elementView"/>
             <containerView name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.eContainer(bpmn2::FlowElementsContainer)">
-                <subModelOperations xsi:type="tool:Unset" featureName="flowElements" elementExpression="aql:element"/>
-              </firstModelOperations>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.deleteSubProcess(elementView)"/>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:PopupMenu" name="ReorderLane_Popup" label="%ReorderLane" precondition="aql:self.oclIsKindOf(bpmn2::Lane) and self.eContainer().lanes->size()>1" forceRefresh="true">
@@ -2247,9 +2245,7 @@
             <elementView name="elementView"/>
             <containerView name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.eContainer(bpmn2::FlowElementsContainer)">
-                <subModelOperations xsi:type="tool:Unset" featureName="flowElements" elementExpression="aql:element"/>
-              </firstModelOperations>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.deleteSubProcess(elementView)"/>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:PopupMenu" name="ReorderLane_Popup" label="%ReorderLane" precondition="aql:self.oclIsKindOf(bpmn2::Lane) and self.eContainer().lanes->size()>1" forceRefresh="true">
@@ -4177,9 +4173,7 @@
             <elementView name="elementView"/>
             <containerView name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.eContainer(bpmn2::FlowElementsContainer)">
-                <subModelOperations xsi:type="tool:Unset" featureName="flowElements" elementExpression="aql:element"/>
-              </firstModelOperations>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.deleteSubProcess(elementView)"/>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:OperationAction" name="ExternalLabel" label="%ExternalLabel" precondition="aql:self.oclIsKindOf(bpmn2::Event) or self.oclIsKindOf(bpmn2::Gateway)  or self.oclIsKindOf(bpmn2::ItemAwareElement)" forceRefresh="true">
