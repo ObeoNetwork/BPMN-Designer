@@ -14,7 +14,9 @@ package org.obeonetwork.bpmn2.design;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
+import org.eclipse.core.runtime.IStatus;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.ECrossReferenceAdapter;
@@ -30,9 +32,11 @@ import org.obeonetwork.dsl.bpmn2.ComplexGateway;
 import org.obeonetwork.dsl.bpmn2.Definitions;
 import org.obeonetwork.dsl.bpmn2.Event;
 import org.obeonetwork.dsl.bpmn2.ExclusiveGateway;
+import org.obeonetwork.dsl.bpmn2.FlowNode;
 import org.obeonetwork.dsl.bpmn2.Gateway;
 import org.obeonetwork.dsl.bpmn2.InclusiveGateway;
 import org.obeonetwork.dsl.bpmn2.ItemAwareElement;
+import org.obeonetwork.dsl.bpmn2.Lane;
 import org.obeonetwork.dsl.bpmn2.Process;
 import org.obeonetwork.dsl.bpmn2.SequenceFlow;
 import org.obeonetwork.dsl.bpmn2.SubProcess;
@@ -45,8 +49,7 @@ public class ServiceHelper {
 	/**
 	 * Return the cross referencer attached to a particular EObject.
 	 * 
-	 * @param eo
-	 *            EObject
+	 * @param eo EObject
 	 * @return the cross referencer if it exists.
 	 */
 	public static ECrossReferenceAdapter getCrossReferenceAdapter(EObject eo) {
@@ -143,6 +146,48 @@ public class ServiceHelper {
 					result = dEdge.getTarget().equals(((ComplexGateway) dNode.getTarget()).getDefault());
 				}
 			}
+		}
+		return result;
+	}
+
+	public void dropFlowElement(FlowNode element, EObject oldSemanticContainer, EObject newSemanticContainer) {
+		if (((oldSemanticContainer instanceof Lane) || (oldSemanticContainer instanceof SubProcess))
+				&& ((newSemanticContainer instanceof Lane) || (newSemanticContainer instanceof SubProcess))) {
+
+			if (oldSemanticContainer instanceof Lane) {
+				((Lane) oldSemanticContainer).getFlowNodeRefs().remove(element);
+			} else if (oldSemanticContainer instanceof SubProcess) {
+				((SubProcess) oldSemanticContainer).getFlowElements().remove(element);
+			}
+
+			if (newSemanticContainer instanceof Lane) {
+				((Lane) newSemanticContainer).getFlowNodeRefs().add(element);
+			} else if (newSemanticContainer instanceof SubProcess) {
+				((SubProcess) newSemanticContainer).getFlowElements().add(element);
+			}
+		}
+	}
+
+	public List<FlowNode> getFlowNodeElements(EObject container, String className) {
+		List<FlowNode> result;
+		Class<?> clazz = null;
+		try {
+			clazz = Class.forName("org.obeonetwork.dsl.bpmn2." + className);//$NON-NLS-1$
+		} catch (ClassNotFoundException e) {
+			Activator.log(IStatus.ERROR, e.getMessage(), e);
+		}
+		if (clazz != null) {
+			if (container instanceof Lane) {
+				result = ((Lane) container).getFlowNodeRefs().stream().filter(clazz::isInstance)
+						.map(FlowNode.class::cast).collect(Collectors.toList());
+			} else if (container instanceof SubProcess) {
+				result = ((SubProcess) container).getFlowElements().stream().filter(clazz::isInstance)
+						.map(FlowNode.class::cast).collect(Collectors.toList());
+			} else {
+				result = List.of();
+			}
+		} else {
+			result = List.of();
 		}
 		return result;
 	}
