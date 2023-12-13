@@ -1,4 +1,5 @@
 Bundle-ManifestVersion: 2
+Automatic-Module-Name: org.obeonetwork.dsl.bpmn2.design
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.design;singleton:=true
 Bundle-Version: 4.1.4.qualifier
@@ -21,7 +22,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius.ext.base,
  org.eclipse.emf.edit.ui
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.obeonetwork.bpmn2.design
 Bundle-Vendor: %providerName
 Import-Package: org.eclipse.gmf.runtime.notation
