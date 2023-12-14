@@ -34,10 +34,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       
-    - name: Set up Java SDK 11
+    - name: Set up Java SDK 8
       uses: actions/setup-java@v2
       with:
-        java-version: '11'
+        java-version: '8'
         distribution: 'adopt'
         cache: maven
     

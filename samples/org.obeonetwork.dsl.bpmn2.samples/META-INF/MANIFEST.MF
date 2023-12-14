@@ -4,7 +4,7 @@ Automatic-Module-Name: org.obeonetwork.dsl.bpmn2.samples
 Bundle-Name: Samples
 Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.samples;singleton:=true
 Bundle-Version: 4.1.4.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Activator: org.obeonetwork.dsl.bpmn2.samples.Bpmn2SamplesPlugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
