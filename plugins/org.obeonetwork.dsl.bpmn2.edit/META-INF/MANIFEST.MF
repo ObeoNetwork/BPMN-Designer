@@ -8,7 +8,7 @@ Bundle-ClassPath: .
 Bundle-Activator: org.obeonetwork.dsl.bpmn2.provider.Bpmn2EditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.obeonetwork.dsl.bpmn2.bpmdi.provider,
  org.obeonetwork.dsl.bpmn2.provider,
  org.obeonetwork.dsl.dd.dc.provider,
