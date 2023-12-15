@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Automatic-Module-Name: org.obeonetwork.dsl.bpmn2.samples.pack.core
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.samples.pack.core;singleton:=true
-Bundle-Version: 4.1.4.qualifier
+Bundle-Version: 5.0.0.qualifier
 Bundle-Activator: org.obeonetwork.dsl.bpmn2.samples.pack.core.CoreSamplePlugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
