@@ -29,12 +29,15 @@ import org.obeonetwork.dsl.bpmn2.BaseElement;
 import org.obeonetwork.dsl.bpmn2.BoundaryEvent;
 import org.obeonetwork.dsl.bpmn2.CallActivity;
 import org.obeonetwork.dsl.bpmn2.ComplexGateway;
+import org.obeonetwork.dsl.bpmn2.DataInput;
+import org.obeonetwork.dsl.bpmn2.DataOutput;
 import org.obeonetwork.dsl.bpmn2.Definitions;
 import org.obeonetwork.dsl.bpmn2.Event;
 import org.obeonetwork.dsl.bpmn2.ExclusiveGateway;
 import org.obeonetwork.dsl.bpmn2.FlowNode;
 import org.obeonetwork.dsl.bpmn2.Gateway;
 import org.obeonetwork.dsl.bpmn2.InclusiveGateway;
+import org.obeonetwork.dsl.bpmn2.InputOutputSpecification;
 import org.obeonetwork.dsl.bpmn2.ItemAwareElement;
 import org.obeonetwork.dsl.bpmn2.Lane;
 import org.obeonetwork.dsl.bpmn2.Process;
@@ -188,6 +191,30 @@ public class ServiceHelper {
 			}
 		} else {
 			result = List.of();
+		}
+		return result;
+	}
+
+	public List<DataInput> getDataInputs(EObject container) {
+		List<DataInput> result = List.of();
+		if (container instanceof Lane && ((Lane) container).getPartitionElement() instanceof InputOutputSpecification) {
+			InputOutputSpecification ioSepc = (InputOutputSpecification) ((Lane) container).getPartitionElement();
+			result = ioSepc.getDataInputs();
+		} else if (container instanceof SubProcess) {
+			InputOutputSpecification ioSepc = ((SubProcess) container).getIoSpecification();
+			result = ioSepc.getDataInputs();
+		}
+		return result;
+	}
+	
+	public List<DataOutput> getDataOutputs(EObject container) {
+		List<DataOutput> result = List.of();
+		if (container instanceof Lane && ((Lane) container).getPartitionElement() instanceof InputOutputSpecification) {
+			InputOutputSpecification ioSepc = (InputOutputSpecification) ((Lane) container).getPartitionElement();
+			result = ioSepc.getDataOutputs();
+		} else if (container instanceof SubProcess) {
+			InputOutputSpecification ioSepc = ((SubProcess) container).getIoSpecification();
+			result = ioSepc.getDataOutputs();
 		}
 		return result;
 	}

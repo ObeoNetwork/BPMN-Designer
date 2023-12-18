@@ -152,12 +152,12 @@
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="DataInput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.partitionElement->filter(bpmn2::InputOutputSpecification).dataInputs" domainClass="bpmn2.DataInput">
+            <subNodeMappings name="DataInput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.getDataInputs()" domainClass="bpmn2.DataInput">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.getNonExternalLabel(view)" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" resizeKind="NSEW" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/data/data-input.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="DataOutput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.partitionElement->filter(bpmn2::InputOutputSpecification).dataOutputs" domainClass="bpmn2.DataOutput">
+            <subNodeMappings name="DataOutput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.getDataOutputs()" domainClass="bpmn2.DataOutput">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.getNonExternalLabel(view)" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" resizeKind="NSEW" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/data/data-output.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -1824,12 +1824,12 @@
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="DataInput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.partitionElement->filter(bpmn2::InputOutputSpecification).dataInputs" domainClass="bpmn2.DataInput">
+            <subNodeMappings name="DataInput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.getDataInputs()" domainClass="bpmn2.DataInput">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.getNonExternalLabel(view)" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" resizeKind="NSEW" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/data/data-input.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="DataOutput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.partitionElement->filter(bpmn2::InputOutputSpecification).dataOutputs" domainClass="bpmn2.DataOutput">
+            <subNodeMappings name="DataOutput" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.getDataOutputs()" domainClass="bpmn2.DataOutput">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.getNonExternalLabel(view)" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" resizeKind="NSEW" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/data/data-output.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
