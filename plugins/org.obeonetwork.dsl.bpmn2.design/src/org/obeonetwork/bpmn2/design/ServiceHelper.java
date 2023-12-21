@@ -198,23 +198,31 @@ public class ServiceHelper {
 	public List<DataInput> getDataInputs(EObject container) {
 		List<DataInput> result = List.of();
 		if (container instanceof Lane && ((Lane) container).getPartitionElement() instanceof InputOutputSpecification) {
-			InputOutputSpecification ioSepc = (InputOutputSpecification) ((Lane) container).getPartitionElement();
-			result = ioSepc.getDataInputs();
+			InputOutputSpecification ioSpec = (InputOutputSpecification) ((Lane) container).getPartitionElement();
+			if (ioSpec != null) {
+				result = ioSpec.getDataInputs();
+			}
 		} else if (container instanceof SubProcess) {
-			InputOutputSpecification ioSepc = ((SubProcess) container).getIoSpecification();
-			result = ioSepc.getDataInputs();
+			InputOutputSpecification ioSpec = ((SubProcess) container).getIoSpecification();
+			if (ioSpec != null) {
+				result = ioSpec.getDataInputs();
+			}
 		}
 		return result;
 	}
-	
+
 	public List<DataOutput> getDataOutputs(EObject container) {
 		List<DataOutput> result = List.of();
 		if (container instanceof Lane && ((Lane) container).getPartitionElement() instanceof InputOutputSpecification) {
-			InputOutputSpecification ioSepc = (InputOutputSpecification) ((Lane) container).getPartitionElement();
-			result = ioSepc.getDataOutputs();
+			InputOutputSpecification ioSpec = (InputOutputSpecification) ((Lane) container).getPartitionElement();
+			if (ioSpec != null) {
+				result = ioSpec.getDataOutputs();
+			}
 		} else if (container instanceof SubProcess) {
-			InputOutputSpecification ioSepc = ((SubProcess) container).getIoSpecification();
-			result = ioSepc.getDataOutputs();
+			InputOutputSpecification ioSpec = ((SubProcess) container).getIoSpecification();
+			if (ioSpec != null) {
+				result = ioSpec.getDataOutputs();
+			}
 		}
 		return result;
 	}
