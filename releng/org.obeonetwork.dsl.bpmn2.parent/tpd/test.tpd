@@ -1,0 +1,47 @@
+/*******************************************************************************
+ * Copyright (c) 2021 TNO/ESI
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License 2.0
+ * which accompanies this distribution, and is available aBPMN-Designerhttps://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *
+ * Contributors:
+ *    TNO/ESI - initial API and implementation
+ *    Obeo - refactoring
+ *******************************************************************************/
+target "BPMN-Designer - Test" 
+
+//
+// Dependencies for tests executions
+//
+
+with requirements
+// do not include source for this target
+// it should be used only by compiler
+
+// This target platform declare dependencies only used by automatic tests
+
+location eclipse "https://download.eclipse.org/releases/2021-09/" {
+	
+	// Required for tooling in xtend
+	// Included org.eclipse.xtext.sdk.feature.group
+	// org.eclipse.xtext.xbase.feature.group	
+	// org.eclipse.xtext.redist.feature.group
+	
+	// org.eclipse.platform.feature.group (in runtime)
+	// +-> org.eclipse.ui.ide.application (default of sure-fire)
+
+	org.junit
+	
+	org.eclipse.pde.feature.group
+	// +-> org.eclipse.pde.junit
+
+}
+         
+location sirius "https://download.eclipse.org/sirius/updates/releases/6.6.0/2020-09/" {
+	org.eclipse.sirius.tests.support.feature.group
+	org.eclipse.sirius.tests.feature.group
+}
+
+

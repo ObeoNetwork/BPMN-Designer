@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde?>
+<!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
+<target name="BPMN-Designer - SDK" sequenceNumber="1709040839">
+  <locations>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="com.google.guava" version="15.0.0.v201403281430"/>
+      <repository id="Orbit-2020-09" location="https://download.eclipse.org/tools/orbit/downloads/drops/R20190602212107/repository"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.gmf.runtime.notation.sdk.feature.group" version="1.13.0.202004160913"/>
+      <repository id="GMF-Notation-1.13.0" location="https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R202004160913"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.gmf.runtime.sdk.feature.group" version="1.13.0.202004160913"/>
+      <unit id="org.eclipse.gmf.runtime.thirdparty.feature.group" version="1.13.0.202004160913"/>
+      <repository id="GMF-Runtime-1.13.0" location="https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/R202004160913"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.license.feature.group" version="2.0.2.v20181016-2210"/>
+      <repository id="eclipse_license" location="https://download.eclipse.org/cbi/updates/license"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.sirius.query.legacy.feature.feature.group" version="1.0.0.201408130952"/>
+      <repository id="sirius_legacy" location="https://download.eclipse.org/sirius/updates/legacy/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.xtext.redist.feature.group" version="2.25.0.v20210301-1429"/>
+      <unit id="org.junit" version="4.13.0.v20200204-1500"/>
+      <unit id="org.eclipse.pde.feature.group" version="3.14.900.v20210906-0500"/>
+      <unit id="org.eclipse.platform.feature.group" version="4.21.0.v20210906-0842"/>
+      <unit id="org.eclipse.epp.mpc.feature.group" version="1.9.1.v20210204-1408"/>
+      <unit id="org.eclipse.egit.feature.group" version="5.13.0.202109080827-r"/>
+      <unit id="org.eclipse.emf.feature.group" version="2.27.0.v20210816-1137"/>
+      <unit id="org.eclipse.emf.transaction.sdk.feature.group" version="1.12.0.201805140824"/>
+      <unit id="org.eclipse.eef.sdk.feature.feature.group" version="2.1.5.202008270808"/>
+      <unit id="org.eclipse.eef.ext.widgets.reference.feature.feature.group" version="2.1.5.202008270808"/>
+      <unit id="org.eclipse.emf.cdo" version="4.14.1.v20210908-1040"/>
+      <repository id="eclipse" location="https://download.eclipse.org/releases/2021-09/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.sirius.specifier.ide.ui.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.specifier.ide.ui.aql.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.specifier.properties.feature.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.diagram.elk.sdk.feature.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.tests.support.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.tests.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.acceleo.ui.interpreter.feature.group" version="3.7.11.202102190929"/>
+      <unit id="org.eclipse.sirius.diagram.elk.feature.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.doc.feature.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.interpreter.feature.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.properties.feature.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.runtime.acceleo.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.runtime.aql.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.runtime.ide.eef.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.runtime.ide.ui.acceleo.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.runtime.ide.ui.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.runtime.ide.xtext.feature.group" version="6.6.0.202111261321"/>
+      <unit id="org.eclipse.sirius.runtime.feature.group" version="6.6.0.202111261321"/>
+      <repository id="sirius" location="https://download.eclipse.org/sirius/updates/releases/6.6.0/2020-09/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.mypsycho.emf.modit_feature.feature.group" version="1.2.0.v20231218-1557"/>
+      <unit id="org.mypsycho.emf.modit.sirius_feature.feature.group" version="1.2.0.v20231218-1557"/>
+      <repository id="modit" location="https://mypsycho.github.io/ModIt/releases/v1.2"/>
+    </location>
+  </locations>
+  <targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11"/>
+</target>

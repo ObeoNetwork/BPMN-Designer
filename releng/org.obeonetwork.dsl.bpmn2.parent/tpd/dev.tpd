@@ -1,0 +1,43 @@
+/*******************************************************************************
+
+  Copyright (c) 2024 OBEO. All rights reserved.
+
+  Contributors: 
+    Obeo - initial API and implementation.
+
+ *******************************************************************************/
+target "BPMN-Designer - Dev" 
+
+//
+// Components used only in development env.
+// 
+
+with requirements
+
+environment JavaSE-11
+
+
+location eclipse "https://download.eclipse.org/releases/2021-09/" {
+	org.eclipse.xtext.redist.feature.group
+}
+
+
+location sirius "https://download.eclipse.org/sirius/updates/releases/6.6.0/2020-09/" {
+	
+	// Includes Odesign edit, Sirius interpreter view and Odesign reload 
+	org.eclipse.sirius.specifier.ide.ui.feature.group
+	org.eclipse.sirius.specifier.ide.ui.aql.feature.group
+	org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group
+	org.eclipse.sirius.specifier.properties.feature.feature.group
+	
+	// Include 'Export diagram as ELK'
+	org.eclipse.sirius.diagram.elk.sdk.feature.feature.group
+}
+
+
+location modit "https://mypsycho.github.io/ModIt/releases/v1.2" {
+	org.mypsycho.emf.modit_feature.feature.group
+	org.mypsycho.emf.modit.sirius_feature.feature.group
+}
+
+

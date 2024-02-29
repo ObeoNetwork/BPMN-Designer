@@ -1,0 +1,90 @@
+/*******************************************************************************
+
+  Copyright (c) 2024 OBEO. All rights reserved.
+
+  Contributors: 
+    Obeo - initial API and implementation.
+
+ *******************************************************************************/
+target "BPMN-Designer - Runtime" 
+
+//
+// This target platform list dependencies to build project components.
+//
+
+with requirements
+// do not include source for this target
+// it should be used only by compiler
+
+// This target platform declare dependencies of components to be release
+
+
+location eclipse "https://download.eclipse.org/releases/2021-09/" {
+    org.eclipse.platform.feature.group
+    // includes rcp, e4.rcp, p2, osgi
+    // org.eclipse.equinox.sdk.feature.group
+
+    org.eclipse.epp.mpc.feature.group // Market Place
+    
+    // JGit & EGit 5.4.0
+    org.eclipse.egit.feature.group // include jgit
+    
+    org.eclipse.emf.feature.group 
+    // Includes common, ecore.*, 
+    // This includes codegen which drags jdt !
+
+    org.eclipse.emf.transaction.sdk.feature.group
+    // include validation.sdf, emf.workspace    
+    
+	org.eclipse.eef.sdk.feature.feature.group // no other feature for EEF-2
+    org.eclipse.eef.ext.widgets.reference.feature.feature.group
+    
+    // BPMN is CDO based.
+    org.eclipse.emf.cdo // no feature. For CDO, less is best.
+    
+}
+
+location Orbit-2020-09 "https://download.eclipse.org/tools/orbit/downloads/drops/R20190602212107/repository" {
+	// Because of low version, order matters for tycho (Don't know why).
+	com.google.guava [15.0.0,16.0.0) // Required by obeo bpmn
+	// BPMN uses sirius.legacy
+}
+
+
+
+location GMF-Notation-1.13.0 "https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R202004160913" {
+    org.eclipse.gmf.runtime.notation.sdk.feature.group
+}
+
+location GMF-Runtime-1.13.0 "https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/R202004160913" {
+    org.eclipse.gmf.runtime.sdk.feature.group
+    org.eclipse.gmf.runtime.thirdparty.feature.group
+}
+
+
+location sirius "https://download.eclipse.org/sirius/updates/releases/6.6.0/2020-09/" {
+    org.eclipse.acceleo.ui.interpreter.feature.group
+    org.eclipse.sirius.diagram.elk.feature.feature.group
+    org.eclipse.sirius.diagram.elk.sdk.feature.feature.group
+    org.eclipse.sirius.doc.feature.feature.group
+    org.eclipse.sirius.interpreter.feature.feature.group
+    org.eclipse.sirius.properties.feature.feature.group
+    
+    org.eclipse.sirius.runtime.acceleo.feature.group
+    org.eclipse.sirius.runtime.aql.feature.group
+    org.eclipse.sirius.runtime.ide.eef.feature.group
+    org.eclipse.sirius.runtime.ide.ui.acceleo.feature.group
+    org.eclipse.sirius.runtime.ide.ui.feature.group
+    org.eclipse.sirius.runtime.ide.xtext.feature.group
+    org.eclipse.sirius.runtime.feature.group
+}
+
+
+location eclipse_license "https://download.eclipse.org/cbi/updates/license" {
+    org.eclipse.license.feature.group
+}
+
+
+location sirius_legacy "https://download.eclipse.org/sirius/updates/legacy/" {
+	org.eclipse.sirius.query.legacy.feature.feature.group
+}

@@ -1,0 +1,21 @@
+/*******************************************************************************
+
+  Copyright (c) 2024 OBEO. All rights reserved.
+
+  Contributors: 
+    Obeo - initial API and implementation.
+
+ *******************************************************************************/
+target "BPMN-Designer - Build" 
+
+// all classpath to compile and run tests
+
+with requirements
+
+environment JavaSE-11
+
+// Do not modify, do not include sources (useless)
+
+include "runtime.tpd"
+
+include "test.tpd"
