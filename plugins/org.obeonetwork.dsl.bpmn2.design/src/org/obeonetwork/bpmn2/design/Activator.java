@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2019 Obeo.
+ * Copyright (c) 2011-2024 Obeo.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -11,13 +11,11 @@
  */
 package org.obeonetwork.bpmn2.design;
 
-import org.eclipse.sirius.business.api.componentization.ViewpointRegistry;
-import org.eclipse.sirius.viewpoint.description.Viewpoint;
-
-import java.util.HashSet;
 import java.util.Set;
 
 import org.eclipse.core.runtime.Status;
+import org.eclipse.sirius.business.api.componentization.ViewpointRegistry;
+import org.eclipse.sirius.viewpoint.description.Viewpoint;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
@@ -27,41 +25,26 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 	// The plug-in ID
 	public static final String PLUGIN_ID = "org.obeonetwork.dsl.bpmn2.design";
-
+	public static final String DESIGN_PATH = PLUGIN_ID + "/description/BPMN2.odesign";
 	// The shared instance
 	private static Activator plugin;
 
-	private static Set<Viewpoint> viewpoints;
+	private Set<Viewpoint> viewpoints;
 
-	/**
-	 * The constructor
-	 */
-	public Activator() {
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#start(org.osgi.framework.BundleContext)
-	 */
+	@Override
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
 		plugin = this;
-		viewpoints = new HashSet<Viewpoint>();
-		viewpoints.addAll(ViewpointRegistry.getInstance().registerFromPlugin(
-				PLUGIN_ID + "/description/BPMN2.odesign"));
+		viewpoints = ViewpointRegistry.getInstance().registerFromPlugin(DESIGN_PATH);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#stop(org.osgi.framework.BundleContext)
-	 */
+	@Override
 	public void stop(BundleContext context) throws Exception {
 		plugin = null;
 		if (viewpoints != null) {
 			for (final Viewpoint viewpoint : viewpoints) {
 				ViewpointRegistry.getInstance().disposeFromPlugin(viewpoint);
 			}
-			viewpoints.clear();
 			viewpoints = null;
 		}
 		super.stop(context);
