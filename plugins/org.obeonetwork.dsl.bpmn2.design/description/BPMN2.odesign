@@ -353,7 +353,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::Task)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -361,7 +361,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToBusinessRuleTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::BusinessRuleTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -369,7 +369,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToManualTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ManualTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -377,7 +377,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToReceiveTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ReceiveTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -385,7 +385,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToScriptTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ScriptTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -393,7 +393,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSendTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::SendTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -401,7 +401,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToServiceTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ServiceTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -409,7 +409,49 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToUserTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::UserTask)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PopupMenu" name="ConvertGateway_Popup" label="%ConvertGatewayTo" precondition="aql:self.oclIsKindOf(bpmn2::Gateway)" forceRefresh="true">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToParallelGateway_ContextAction" label="%ParallelGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ParallelGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToExclusiveGateway_ContextAction" label="%ExclusiveGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ExclusiveGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToInclusiveGateway_ContextAction" label="%InclusiveGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::InclusiveGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToComplexGateway_ContextAction" label="%ComplexGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ComplexGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToEventBasedGateway_ContextAction" label="%EventBasedGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::EventBasedGateway)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -1980,7 +2022,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::Task)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -1988,7 +2030,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToBusinessRuleTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::BusinessRuleTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -1996,7 +2038,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToManualTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ManualTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -2004,7 +2046,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToReceiveTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ReceiveTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -2012,7 +2054,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToScriptTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ScriptTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -2020,7 +2062,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSendTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::SendTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -2028,7 +2070,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToServiceTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ServiceTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -2036,7 +2078,49 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToUserTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::UserTask)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PopupMenu" name="ConvertGateway_Popup" label="%ConvertGatewayTo" precondition="aql:self.oclIsKindOf(bpmn2::Gateway)" forceRefresh="true">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToParallelGateway_ContextAction" label="%ParallelGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ParallelGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToExclusiveGateway_ContextAction" label="%ExclusiveGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ExclusiveGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToInclusiveGateway_ContextAction" label="%InclusiveGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::InclusiveGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToComplexGateway_ContextAction" label="%ComplexGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ComplexGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToEventBasedGateway_ContextAction" label="%EventBasedGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::EventBasedGateway)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -3908,7 +3992,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::Task)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -3916,7 +4000,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToBusinessRuleTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::BusinessRuleTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -3924,7 +4008,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToManualTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ManualTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -3932,7 +4016,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToReceiveTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ReceiveTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -3940,7 +4024,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToScriptTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ScriptTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -3948,7 +4032,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSendTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::SendTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -3956,7 +4040,7 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToServiceTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ServiceTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -3964,7 +4048,49 @@
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToUserTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::UserTask)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PopupMenu" name="ConvertGateway_Popup" label="%ConvertGatewayTo" precondition="aql:self.oclIsKindOf(bpmn2::Gateway)" forceRefresh="true">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToParallelGateway_ContextAction" label="%ParallelGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ParallelGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToExclusiveGateway_ContextAction" label="%ExclusiveGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ExclusiveGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToInclusiveGateway_ContextAction" label="%InclusiveGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::InclusiveGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToComplexGateway_ContextAction" label="%ComplexGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ComplexGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToEventBasedGateway_ContextAction" label="%EventBasedGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::EventBasedGateway)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -5176,6 +5302,7 @@
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.ElementsPositionService"/>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.ExpandCollapseService"/>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.TaskService"/>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.FlowNodeService"/>
     <ownedJavaExtensions qualifiedClassName="org.eclipse.sirius.common.tools.api.interpreter.StandardServices"/>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.ProcessService"/>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.NamingService"/>

@@ -1035,10 +1035,14 @@ abstract class BpmnDiagram extends SiriusDiagram {
 			label = "%" + target
 			forceRefresh = true
 			icon = operationIcon ?: "/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/" + target + ".png"
+			// Deal with same type ?? when not precondition, operation is hidden.
+			// precondition = '''self.trace() <> null'''.trimAql 
+			// if false, 
+			//   self is 1 of selection, 
+			//   views is available
 			view = ContainerViewVariable.create("views")
 			operation = '''views'''.trimAql.forDo("view", 
-				// '''view.convertToSpecific«conversion»(bpmn2::«target»)'''.trimAql.toOperation
-				'''view.convertTo«target»()'''.trimAql.toOperation
+				'''view.convertToSpecific«conversion»(bpmn2::«target»)'''.trimAql.toOperation
 			)
 		]
 	}
@@ -1064,11 +1068,12 @@ abstract class BpmnDiagram extends SiriusDiagram {
 			label = "%ConvertGatewayTo"
 			precondition = '''self.oclIsKindOf(bpmn2::Gateway)'''.trimAql
 			forceRefresh = true
+			
+			menuItemDescription += "ParallelGateway".createConvertOperation("Gateway", null)
+			menuItemDescription += "ExclusiveGateway".createConvertOperation("Gateway", null)
+			menuItemDescription += "InclusiveGateway".createConvertOperation("Gateway", null)			
 			menuItemDescription += "ComplexGateway".createConvertOperation("Gateway", null)
 			menuItemDescription += "EventBasedGateway".createConvertOperation("Gateway", null)
-			menuItemDescription += "ExclusiveGateway".createConvertOperation("Gateway", null)
-			menuItemDescription += "InclusiveGateway".createConvertOperation("Gateway", null)
-			menuItemDescription += "ParallelGateway".createConvertOperation("Gateway", null)
 		]
 	}
 
@@ -1076,7 +1081,7 @@ abstract class BpmnDiagram extends SiriusDiagram {
 		#[
 			createConvertTaskMenu,
 			createConvertGatewayMenu
-		].get(0)
+		]
 	}
 
 

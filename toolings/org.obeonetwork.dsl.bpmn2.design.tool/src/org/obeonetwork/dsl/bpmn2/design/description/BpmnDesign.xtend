@@ -9,6 +9,7 @@ import org.eclipse.sirius.viewpoint.description.tool.InitialOperation
 import org.mypsycho.modit.emf.sirius.api.SiriusVpGroup
 import org.obeonetwork.bpmn2.design.ElementsPositionService
 import org.obeonetwork.bpmn2.design.ExpandCollapseService
+import org.obeonetwork.bpmn2.design.FlowNodeService
 import org.obeonetwork.bpmn2.design.NamingService
 import org.obeonetwork.bpmn2.design.ProcessService
 import org.obeonetwork.bpmn2.design.ServiceHelper
@@ -38,7 +39,7 @@ class BpmnDesign extends SiriusVpGroup {
 			use(ElementsPositionService)
 			use(ExpandCollapseService)
 			use(TaskService)
-			// use(FlowNodeService)
+			use(FlowNodeService)
 			use(StandardServices)
 			use(ProcessService)
 			use(NamingService)

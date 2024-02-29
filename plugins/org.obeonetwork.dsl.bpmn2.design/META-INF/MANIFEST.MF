@@ -20,6 +20,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius.diagram,
  org.eclipse.sirius.diagram.ui,
  org.eclipse.sirius.ext.base,
+ org.eclipse.sirius.common.acceleo.aql,
  org.eclipse.emf.edit.ui
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-11
