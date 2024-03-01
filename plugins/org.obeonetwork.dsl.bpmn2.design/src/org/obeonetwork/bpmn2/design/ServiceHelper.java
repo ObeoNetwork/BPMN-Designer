@@ -17,9 +17,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.OperationCanceledException;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.ECrossReferenceAdapter;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.emf.transaction.impl.InternalTransactionalEditingDomain;
+import org.eclipse.sirius.business.api.session.Session;
 import org.eclipse.sirius.diagram.DDiagramElement;
 import org.eclipse.sirius.diagram.DEdge;
 import org.eclipse.sirius.diagram.DNode;
@@ -225,6 +230,22 @@ public class ServiceHelper {
 			}
 		}
 		return result;
+	}
+	
+	/**
+	 * Aborts a Sirius operation.
+	 * 
+	 * @param context of operation
+	 * @throws OperationCanceledException always
+	 */
+	public static void abortOperation(EObject context) throws OperationCanceledException {
+		TransactionalEditingDomain edt = Session.of(context).get().getTransactionalEditingDomain();
+		// Cancel Operation does not cancel !! 
+		// ChangeContext catches them all !!
+		// What a trainer ...
+		((InternalTransactionalEditingDomain) edt).getActiveTransaction().abort(Status.CANCEL_STATUS);
+		// This hacks prevent history pollution.
+		throw new OperationCanceledException();
 	}
 
 }

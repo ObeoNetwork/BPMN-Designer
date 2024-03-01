@@ -65,7 +65,7 @@ abstract class BpmnDiagram extends SiriusDiagram {
 	
 	def customImage(String iconPart, String... nodes) {
 		"workspacePath".attCustomization(
-		"/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/" + iconPart + ".svg",
+			'''/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/«iconPart».svg''',
 			nodes.map[
 				WorkspaceImageDescription.localRef(Ns.node, it) [ 
 					(it as NodeMapping).style as WorkspaceImageDescription
@@ -903,6 +903,8 @@ abstract class BpmnDiagram extends SiriusDiagram {
 					)
 				]
 			]
+		
+			ownedTools += createConvertTool("Task")
 		]
 	}
 
@@ -916,6 +918,7 @@ abstract class BpmnDiagram extends SiriusDiagram {
 			ownedTools += "InclusiveGateway".createFlowElementCreation("Inclusive Gateway")
 			ownedTools += "ComplexGateway".createFlowElementCreation("Complex Gateway")
 			ownedTools += "EventBasedGateway".createFlowElementCreation("Event Based Gateway")
+			ownedTools += createConvertTool("Gateway")
 		]
 	}
 
@@ -1084,5 +1087,15 @@ abstract class BpmnDiagram extends SiriusDiagram {
 		]
 	}
 
+	def createConvertTool(String type) {
+		ToolDescription.createAs(Ns.operation, type + "ConvertTool") [
+			label = '''%Convert«type»To'''
+			// icon = TODO
+			precondition = '''self.oclIsKindOf(bpmn2::«type»)'''.trimAql
+			element = ElementVariable.create("element")
+			elementView = ElementViewVariable.create("elementView")
+			operation = '''self.convertToChoosable«type»(elementView)'''.trimAql.toOperation
+		]
+	}
 
 }

@@ -11,16 +11,23 @@
  */
 package org.obeonetwork.bpmn2.design;
 
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Function;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature.Setting;
 import org.eclipse.emf.ecore.util.ECrossReferenceAdapter;
 import org.eclipse.sirius.diagram.AbstractDNode;
+import org.obeonetwork.bpmn2.design.ui.PopupChoiceSelector;
+import org.obeonetwork.bpmn2.design.ui.UiConstants;
 import org.obeonetwork.dsl.bpmn2.Association;
 import org.obeonetwork.dsl.bpmn2.BaseElement;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
+import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.FlowElementsContainer;
 import org.obeonetwork.dsl.bpmn2.FlowNode;
 import org.obeonetwork.dsl.bpmn2.Gateway;
@@ -29,14 +36,32 @@ import org.obeonetwork.dsl.bpmn2.MessageFlow;
 
 
 /**
- * Test and conversion services to operate on FlowNode objects.
+ * Conversion services to operate on FlowNode objects.
  * 
  * @author nperansin
  *
  */
 public class FlowNodeService {
+	
+	private static final Bpmn2Package PKG = Bpmn2Package.eINSTANCE;
+	private static final List<EClass> GATEWAY_CLASSES = Arrays.asList(
+			// Order is the same to Gateways Toolsection of VSM
+		PKG.getParallelGateway(), PKG.getExclusiveGateway(),
+		PKG.getInclusiveGateway(), PKG.getComplexGateway(),
+		PKG.getEventBasedGateway()
+	);
 
-	public Gateway convertToSpecificGateway(AbstractDNode view, EClass eClass) {
+	/**
+	 * Converts a Gateway into another kind.
+	 * <p>
+	 * Most of related data are restored.
+	 * </p>
+	 * 
+	 * @param view of Gateway
+	 * @param eClass class to convert in
+	 * @return created Gateway
+	 */
+	public static Gateway convertToSpecificGateway(AbstractDNode view, EClass eClass) {
 		Gateway previous = (Gateway) view.getTarget();
 		if (eClass.equals(previous.eClass())) {
 			return previous;
@@ -54,11 +79,19 @@ public class FlowNodeService {
 		return result;
 	}
 	
-	public static Gateway replaceGateway(Gateway previous, Gateway next) {
+	private static Gateway replaceGateway(Gateway previous, Gateway next) {
 		next.setGatewayDirection(previous.getGatewayDirection());
 		return replaceNode(previous, next);
 	}
 
+	/**
+	 * Replace a node by another node.
+	 * 
+	 * @param <N> type of new node
+	 * @param previous node
+	 * @param next node
+	 * @return next node
+	 */
 	public static <N extends FlowNode> N replaceNode(FlowNode previous, N next) {
 
 		next.getCategoryValueRef().addAll(previous.getCategoryValueRef());
@@ -120,5 +153,40 @@ public class FlowNodeService {
 		}
 	}
 
+	/**
+	 * Applies a function with a type choosen by user.
+	 * 
+	 * @param it context
+	 * @param types to choose from
+	 * @param transform to apply
+	 */
+	public static <T> T applyToChoosableClass(EObject it, List<EClass> types, Function<EClass, T> transform) {
+		PopupChoiceSelector<EClass> choice = new PopupChoiceSelector<>();
+		types.forEach(eClass -> {
+			String label = Activator.getI10n().getString(eClass.getName());
+			String iconPath = UiConstants.getEditIconPath(eClass);
+			choice.addItem(label, iconPath, eClass);
+		});
+		Optional<EClass> target = choice.perform();
+		if (!target.isPresent()) {
+			ServiceHelper.abortOperation(it);
+		}
+		return transform.apply(target.get());
+	}
+	
+	/**
+	 * Converts a gateway in a new type.
+	 * <p>
+	 * If no gateway is selected, whole operation is aborted.
+	 * </p>
+	 * 
+	 * @param it gateway to convert
+	 * @param view on which the task is triggered
+	 * @return new gateway
+	 */
+	public static Gateway convertToChoosableGateway(Gateway it, AbstractDNode view) {
+		return FlowNodeService.applyToChoosableClass(it, GATEWAY_CLASSES, 
+				type -> convertToSpecificGateway(view, type));
+	}
 
 }

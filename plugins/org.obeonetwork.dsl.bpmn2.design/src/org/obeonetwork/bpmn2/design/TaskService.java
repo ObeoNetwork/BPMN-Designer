@@ -11,18 +11,23 @@
  */
 package org.obeonetwork.bpmn2.design;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.sirius.diagram.DDiagramElementContainer;
 import org.eclipse.sirius.diagram.DNodeContainer;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
+import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.BusinessRuleTask;
 import org.obeonetwork.dsl.bpmn2.CallActivity;
 import org.obeonetwork.dsl.bpmn2.ChoreographyTask;
 import org.obeonetwork.dsl.bpmn2.GlobalBusinessRuleTask;
 import org.obeonetwork.dsl.bpmn2.GlobalManualTask;
 import org.obeonetwork.dsl.bpmn2.GlobalScriptTask;
+import org.obeonetwork.dsl.bpmn2.GlobalTask;
 import org.obeonetwork.dsl.bpmn2.GlobalUserTask;
 import org.obeonetwork.dsl.bpmn2.ManualTask;
 import org.obeonetwork.dsl.bpmn2.ReceiveTask;
@@ -34,13 +39,21 @@ import org.obeonetwork.dsl.bpmn2.UserTask;
 
 
 /**
- * Test and conversion services to operate on Task objects.
+ * Evaluation and conversion services to operate on Task objects.
  * 
  * @author vrichard
- *
  */
 public class TaskService {
 
+	private static final Bpmn2Package PKG = Bpmn2Package.eINSTANCE;
+	private static final List<EClass> TASK_CLASSES = Arrays.asList(
+			// Order is the same to Gateways Toolsection of VSM
+		PKG.getTask(), PKG.getBusinessRuleTask(),
+		PKG.getManualTask(), PKG.getReceiveTask(),
+		PKG.getScriptTask(), PKG.getSendTask(),
+		PKG.getServiceTask(), PKG.getUserTask()
+	);
+	
 	public String getLabel(Task task, boolean borderedNodes) {
 		String result = " \n \n" + task.getName();
 		// if (borderedNodes) {
@@ -56,40 +69,26 @@ public class TaskService {
 		return newLabel;
 	}
 
+	private boolean isLikeTask(EObject it, Class<? extends Task> type, Class<? extends GlobalTask> global) {
+		return type.isInstance(it)
+			|| (it instanceof CallActivity 
+					&& global.isInstance(((CallActivity) it).getCalledElementRef()));
+	}
+	
 	public boolean isLikeScriptTask(final EObject eObject) {
-		boolean isLikeScriptTask = eObject instanceof ScriptTask;
-		if (!isLikeScriptTask && eObject instanceof CallActivity) {
-			CallActivity callActivity = (CallActivity) eObject;
-			isLikeScriptTask = callActivity.getCalledElementRef() instanceof GlobalScriptTask;
-		}
-		return isLikeScriptTask;
+		return isLikeTask(eObject, ScriptTask.class, GlobalScriptTask.class);
 	}
 
 	public boolean isLikeBusinessRuleTask(final EObject eObject) {
-		boolean isLikeBusinessRuleTask = eObject instanceof BusinessRuleTask;
-		if (!isLikeBusinessRuleTask && eObject instanceof CallActivity) {
-			CallActivity callActivity = (CallActivity) eObject;
-			isLikeBusinessRuleTask = callActivity.getCalledElementRef() instanceof GlobalBusinessRuleTask;
-		}
-		return isLikeBusinessRuleTask;
+		return isLikeTask(eObject, BusinessRuleTask.class, GlobalBusinessRuleTask.class);
 	}
 
 	public boolean isLikeUserTask(final EObject eObject) {
-		boolean isLikeUserTask = eObject instanceof UserTask;
-		if (!isLikeUserTask && eObject instanceof CallActivity) {
-			CallActivity callActivity = (CallActivity) eObject;
-			isLikeUserTask = callActivity.getCalledElementRef() instanceof GlobalUserTask;
-		}
-		return isLikeUserTask;
+		return isLikeTask(eObject, UserTask.class, GlobalUserTask.class);
 	}
 
 	public boolean isLikeManualTask(final EObject eObject) {
-		boolean isLikeManualTask = eObject instanceof ManualTask;
-		if (!isLikeManualTask && eObject instanceof CallActivity) {
-			CallActivity callActivity = (CallActivity) eObject;
-			isLikeManualTask = callActivity.getCalledElementRef() instanceof GlobalManualTask;
-		}
-		return isLikeManualTask;
+		return isLikeTask(eObject, ManualTask.class, GlobalManualTask.class);
 	}
 
 	public boolean isLikeReceiveTask(final EObject eObject) {
@@ -108,7 +107,17 @@ public class TaskService {
 		return eObject instanceof ChoreographyTask;
 	}
 
-	public Task convertToSpecificTask(DNodeContainer view, EClass eClass) {
+	/**
+	 * Converts a task into another kind.
+	 * <p>
+	 * Most of related data are restored.
+	 * </p>
+	 * 
+	 * @param view of task
+	 * @param eClass class to convert in
+	 * @return created task
+	 */
+	public static Task convertToSpecificTask(DNodeContainer view, EClass eClass) {
 		Task previous = (Task) view.getTarget();
 		if (eClass.equals(previous.eClass())) {
 			return previous;
@@ -128,7 +137,7 @@ public class TaskService {
 		return result;
 	}
 	
-	private Task replaceTask(Task task, Task cloneTask) {
+	private static Task replaceTask(Task task, Task cloneTask) {
 		cloneTask.getBoundaryEventRefs().addAll(task.getBoundaryEventRefs());
 		cloneTask.getDataInputAssociations().addAll(task.getDataInputAssociations());
 		cloneTask.getDataOutputAssociations().addAll(task.getDataOutputAssociations());
@@ -154,5 +163,21 @@ public class TaskService {
 			ExpandCollapseService.expand(subProcessView);
 		}
 		EcoreUtil.remove(subProcess);
+	}
+	
+	
+	/**
+	 * Converts a task in a new type.
+	 * <p>
+	 * If no task is selected, whole operation is aborted.
+	 * </p>
+	 * 
+	 * @param it task to convert
+	 * @param view on which the task is triggered
+	 * @return new task
+	 */
+	public static Task convertToChoosableTask(Task it, DNodeContainer view) {
+		return FlowNodeService.applyToChoosableClass(it, TASK_CLASSES, 
+				type -> convertToSpecificTask(view, type));
 	}
 }
