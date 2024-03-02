@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2019 Obeo.
+ * Copyright (c) 2011-2024 Obeo.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -19,6 +19,7 @@ import java.util.List;
 import org.eclipse.emf.cdo.eresource.CDOResource;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
 import org.obeonetwork.dsl.bpmn2.BoundaryEvent;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
+import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.ChoreographyTask;
 import org.obeonetwork.dsl.bpmn2.Collaboration;
 import org.obeonetwork.dsl.bpmn2.ComplexGateway;
@@ -119,7 +121,9 @@ public class ProcessService {
 			if (containment.getEType().equals(copiedElement.eClass())
 					|| copiedElement.eClass().getEAllSuperTypes().contains(containment.getEType())) {
 				if (containment.isMany()) {
-					((EList<EObject>) container.eGet(containment)).add(copiedElement);
+					@SuppressWarnings("unchecked")
+					EList<EObject> values = ((EList<EObject>) container.eGet(containment));
+					values.add(copiedElement);
 				} else {
 					container.eSet(containment, copiedElement);
 				}
@@ -152,7 +156,7 @@ public class ProcessService {
 
 	public EObject createFlowElement(EObject container, String typeToCreate) {
 		FlowElementsContainer flowElementsContainer = getFlowElementsContainer(container);
-		FlowNode newElement = createElement(typeToCreate);
+		FlowNode newElement = (FlowNode) createElement(typeToCreate);
 		flowElementsContainer.getFlowElements().add(newElement);
 
 		if (isEventTaskOrGateway(container)) {
@@ -184,44 +188,9 @@ public class ProcessService {
 		return result;
 	}
 
-	private FlowNode createElement(String typeToCreate) {
-		FlowNode result = null;
-		if ("StartEvent".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createStartEvent();
-		} else if ("EndEvent".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createEndEvent();
-		} else if ("IntermediateCatchEvent".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createIntermediateCatchEvent();
-		} else if ("IntermediateThrowEvent".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createIntermediateThrowEvent();
-		} else if ("Task".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createTask();
-		} else if ("BusinessRuleTask".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createBusinessRuleTask();
-		} else if ("ManualTask".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createManualTask();
-		} else if ("ReceiveTask".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createReceiveTask();
-		} else if ("ScriptTask".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createScriptTask();
-		} else if ("SendTask".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createSendTask();
-		} else if ("ServiceTask".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createServiceTask();
-		} else if ("UserTask".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createUserTask();
-		} else if ("ParallelGateway".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createParallelGateway();
-		} else if ("ExclusiveGateway".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createExclusiveGateway();
-		} else if ("InclusiveGateway".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createInclusiveGateway();
-		} else if ("ComplexGateway".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createComplexGateway();
-		} else if ("EventBasedGateway".equals(typeToCreate)) {
-			result = Bpmn2Factory.eINSTANCE.createEventBasedGateway();
-		}
-		return result;
+	private EObject createElement(String typeToCreate) {
+		EClass eClass = (EClass) Bpmn2Package.eINSTANCE.getEClassifier(typeToCreate);
+		return Bpmn2Factory.eINSTANCE.create(eClass);
 	}
 
 }

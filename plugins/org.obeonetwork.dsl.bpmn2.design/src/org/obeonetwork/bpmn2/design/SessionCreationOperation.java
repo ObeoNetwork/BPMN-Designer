@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2019 Obeo.
+ * Copyright (c) 2011-2024 Obeo.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -13,17 +13,12 @@ package org.obeonetwork.bpmn2.design;
 
 import java.io.IOException;
 import java.util.Collections;
-import java.util.HashMap;
 
-import org.eclipse.core.commands.ExecutionEvent;
-import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.core.expressions.EvaluationContext;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
@@ -31,19 +26,18 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.transaction.RecordingCommand;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.sirius.business.api.componentization.ViewpointRegistry;
 import org.eclipse.sirius.business.api.modelingproject.ModelingProject;
 import org.eclipse.sirius.business.api.session.Session;
 import org.eclipse.sirius.ext.base.Option;
 import org.eclipse.sirius.ui.business.api.viewpoint.ViewpointSelectionCallback;
-import org.eclipse.sirius.ui.tools.internal.actions.nature.ModelingToggleNatureAction;
+import org.eclipse.sirius.ui.tools.api.project.ModelingProjectManager;
 import org.eclipse.sirius.viewpoint.description.Viewpoint;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.obeonetwork.bpmn2.design.ui.wizards.newmodel.Messages;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
 import org.obeonetwork.dsl.bpmn2.Definitions;
-
-import com.google.common.collect.Lists;
 
 /**
  * An operation to create and initialize a new session with empty semantic BPMN
@@ -95,20 +89,35 @@ public class SessionCreationOperation extends WorkspaceModifyOperation {
 		return createdSession;
 	}
 
-	/**
-	 * {@inheritDoc}
-	 */
 	@Override
 	protected void execute(final IProgressMonitor monitor)
 			throws CoreException, InterruptedException {
 
+		createModelContent();
+
+		// Ensure proper representation
+		IProject prj = modelFile.getProject();
+		if (prj != null) {
+			
+			if (!ModelingProject.hasModelingProjectNature(prj)) {
+				// Convert project to Modeling project
+				ModelingProjectManager.INSTANCE.convertToModelingProject(prj, monitor);
+			}
+			final Option<ModelingProject> created = ModelingProject
+					.asModelingProject(prj);
+			if (created.some()) {
+				addProcessViewpoint(created.get(), monitor);
+			}
+		}
+	}
+
+	private void createModelContent() {
 		final ResourceSet resourceSet = new ResourceSetImpl();
 		resourceSet.getURIConverter().getURIMap()
-				.putAll(EcorePlugin.computePlatformURIMap());
+				.putAll(EcorePlugin.computePlatformURIMap(false));
 
 		// Get the URI of the model file.
-		final URI fileURI = URI.createPlatformResourceURI(modelFile
-				.getFullPath().toString(), true);
+		final URI fileURI = URI.createPlatformResourceURI(modelFile.getFullPath().toString(), true);
 
 		final EObject rootObject = createInitialModel();
 
@@ -124,56 +133,31 @@ public class SessionCreationOperation extends WorkspaceModifyOperation {
 							Messages.Bpmn2ModelWizard_UI_Error_CreatingBpmn2ModelSession,
 							e);
 		}
-
-		IProject prj = modelFile.getProject();
-		if (prj != null
-				&& !ModelingProject.hasModelingProjectNature(prj)) {
-			ModelingToggleNatureAction toogleProject = new ModelingToggleNatureAction();
-			EvaluationContext evaluationContext = new EvaluationContext(null,
-					Lists.newArrayList(prj));
-			@SuppressWarnings("rawtypes")
-			ExecutionEvent event = new ExecutionEvent(null, new HashMap(),
-					null, evaluationContext);
-
-			// Convert project to Modeling project
-			try {
-				toogleProject.execute(event);
-			} catch (ExecutionException e) {
-				Activator
-						.log(IStatus.ERROR,
-								Messages.Bpmn2ModelWizard_UI_Error_CreatingBpmn2ModelSession,
-								e);
-			}
-			final Option<ModelingProject> created = ModelingProject
-					.asModelingProject(prj);
-			if (created.some()) {
-
-				created.get()
-						.getSession()
-						.getTransactionalEditingDomain()
-						.getCommandStack()
-						.execute(
-								new RecordingCommand(created.get().getSession()
-										.getTransactionalEditingDomain()) {
-
-									@Override
-									protected void doExecute() {
-										ViewpointSelectionCallback selection = new ViewpointSelectionCallback();
-										for (Viewpoint vp : ViewpointRegistry
-												.getInstance().getViewpoints()) {
-											if ("Process".equals(vp.getName())) {
-												selection.selectViewpoint(vp,
-														created.get()
-																.getSession(), new NullProgressMonitor());
-											}
-										}
-									}
-								});
-			}
-
-		}
 	}
 
+	private void addProcessViewpoint(ModelingProject project, final IProgressMonitor monitor) {
+		Session session = project.getSession();
+		TransactionalEditingDomain edt = session.getTransactionalEditingDomain();
+		
+		edt.getCommandStack().execute(new RecordingCommand(edt) {
+
+			@Override
+			protected void doExecute() {
+				for (Viewpoint vp : ViewpointRegistry.getInstance().getViewpoints()) {
+					if (isProcessViewPoint(vp)) {
+						new ViewpointSelectionCallback()
+							.selectViewpoint(vp, session, monitor);
+					}
+				}
+			}
+		});
+	}
+
+	private static boolean isProcessViewPoint(Viewpoint vp) {
+		return "Process".equals(vp.getName())
+			&& vp.eResource().getURI().toString().endsWith(Activator.DESIGN_PATH);
+	}
+	
 	/**
 	 * Creates the semantic root element from the given operation arguments.
 	 * 
