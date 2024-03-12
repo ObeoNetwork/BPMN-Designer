@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2019 Obeo.
+ * Copyright (c) 2011-2024 Obeo.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -12,8 +12,10 @@
 package org.obeonetwork.bpmn2.design;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import org.eclipse.core.runtime.IStatus;
@@ -29,7 +31,6 @@ import org.eclipse.sirius.diagram.DDiagramElement;
 import org.eclipse.sirius.diagram.DEdge;
 import org.eclipse.sirius.diagram.DNode;
 import org.eclipse.sirius.diagram.DNodeContainer;
-import org.eclipse.sirius.diagram.EdgeTarget;
 import org.obeonetwork.dsl.bpmn2.BaseElement;
 import org.obeonetwork.dsl.bpmn2.BoundaryEvent;
 import org.obeonetwork.dsl.bpmn2.CallActivity;
@@ -50,6 +51,12 @@ import org.obeonetwork.dsl.bpmn2.SequenceFlow;
 import org.obeonetwork.dsl.bpmn2.SubProcess;
 import org.obeonetwork.dsl.bpmn2.Task;
 
+
+/**
+ * Services for BPMN Viewpoints.
+ * 
+ * @author sdrapeau
+ */
 public class ServiceHelper {
 
 	private static final String IS_EXTERNAL_LABEL = "isExternalLabel";
@@ -72,29 +79,46 @@ public class ServiceHelper {
 		return eCrossReferenceAdapter;
 	}
 
-	public static EObject trace(EObject eObject) {
-		System.out.println("Trace(" + eObject + ")");
-		return eObject;
+	/**
+	 * Logs a message with called message.
+	 * <p>
+	 * This method should only be used will editing VSM. It must be used any released version.
+	 * </p>
+	 * 
+	 * @param eObject
+	 * @return
+	 */
+	@Deprecated
+	public static EObject bpmnDebug(EObject it) {
+		System.out.println("Sirius-Debug:" + it);
+		return it;
 	}
 
-	public static Definitions getDefinitionsObject(EObject eObject) {
-		if (eObject == null) {
-			return null;
-		}
-		if (eObject instanceof Definitions) {
-			return (Definitions) eObject;
-		}
-		return getDefinitionsObject(eObject.eContainer());
+	/**
+	 * Gets the Definition ancestor.
+	 * 
+	 * @param it element to get definitions from
+	 * @return definition container or null
+	 */
+	public static Definitions getDefinitionsObject(EObject it) {
+		return getAncestor(Definitions.class, it);
 	}
 
-	public static Process getProcess(EObject eObject) {
-		if (eObject == null) {
-			return null;
-		}
-		if (eObject instanceof Process) {
-			return (Process) eObject;
-		}
-		return getProcess(eObject.eContainer());
+	/**
+	 * Gets the Process ancestor.
+	 * 
+	 * @param it element to get the process from
+	 * @return definition container or null
+	 */
+	public static Process getProcess(EObject it) {
+		return getAncestor(Process.class, it);
+	}
+	
+	@SuppressWarnings("unchecked")
+	private static <T extends EObject> T getAncestor(Class<T> type, EObject it) {
+		return it == null || type.isInstance(it)
+				? (T) it
+				: getAncestor(type, it.eContainer());
 	}
 
 	public static List<BaseElement> getElementsWithExternalLabel(DNodeContainer dNodeContainer) {
@@ -104,12 +128,14 @@ public class ServiceHelper {
 		while (it.hasNext()) {
 			DDiagramElement dde = it.next();
 			Object bpmnElement = dde.getTarget();
-			if ((bpmnElement instanceof Event) || (bpmnElement instanceof Gateway)
+			if ((bpmnElement instanceof Event) 
+					|| (bpmnElement instanceof Gateway)
 					|| (bpmnElement instanceof ItemAwareElement)) {
 				if (!(bpmnElement instanceof BoundaryEvent) && isExternalLabel((DNode) dde)) {
 					result.add((BaseElement) bpmnElement);
 				}
-			} else if ((bpmnElement instanceof Task) || (bpmnElement instanceof SubProcess)
+			} else if ((bpmnElement instanceof Task) 
+					|| (bpmnElement instanceof SubProcess)
 					|| (bpmnElement instanceof CallActivity)) {
 				DNodeContainer dNodeTask = (DNodeContainer) dde;
 				for (DDiagramElement subDDE : dNodeTask.getElements()) {
@@ -142,94 +168,92 @@ public class ServiceHelper {
 
 	public static boolean isDefaultPath(DEdge dEdge) {
 		boolean result = false;
-		if (dEdge.getTarget() instanceof SequenceFlow) {
-			EdgeTarget edgeTarget = dEdge.getSourceNode();
-			if (edgeTarget instanceof DNode) {
-				DNode dNode = (DNode) edgeTarget;
-				if ((dNode.getTarget() instanceof InclusiveGateway)) {
-					result = dEdge.getTarget().equals(((InclusiveGateway) dNode.getTarget()).getDefault());
-				} else if ((dNode.getTarget() instanceof ExclusiveGateway)) {
-					result = dEdge.getTarget().equals(((ExclusiveGateway) dNode.getTarget()).getDefault());
-				} else if ((dNode.getTarget() instanceof ComplexGateway)) {
-					result = dEdge.getTarget().equals(((ComplexGateway) dNode.getTarget()).getDefault());
-				}
+		if (dEdge.getTarget() instanceof SequenceFlow && dEdge.getSourceNode() instanceof DNode) {
+			DNode source = (DNode) dEdge.getSourceNode();
+			if (source.getTarget() instanceof Gateway) {
+				result = Objects.equals(dEdge.getTarget(), getGatewayDefault((Gateway) source.getTarget()));
 			}
 		}
 		return result;
 	}
+	
+	private static SequenceFlow getGatewayDefault(Gateway it) {
+		SequenceFlow result = null;
+		if (it instanceof InclusiveGateway) {
+			result = ((InclusiveGateway) it).getDefault();
+		} else if (it instanceof ExclusiveGateway) {
+			result = ((ExclusiveGateway) it).getDefault();
+		} else if (it instanceof ComplexGateway) {
+			result = ((ComplexGateway) it).getDefault();
+		}
+		return result;
+	}
 
+	/**
+	 * Moves a flow node from a container to another container.
+	 * 
+	 * @param element to mode
+	 * @param oldSemanticContainer old container
+	 * @param newSemanticContainer new container
+	 */
 	public void dropFlowElement(FlowNode element, EObject oldSemanticContainer, EObject newSemanticContainer) {
-		if (((oldSemanticContainer instanceof Lane) || (oldSemanticContainer instanceof SubProcess))
-				&& ((newSemanticContainer instanceof Lane) || (newSemanticContainer instanceof SubProcess))) {
-
-			if (oldSemanticContainer instanceof Lane) {
-				((Lane) oldSemanticContainer).getFlowNodeRefs().remove(element);
-			} else if (oldSemanticContainer instanceof SubProcess) {
-				((SubProcess) oldSemanticContainer).getFlowElements().remove(element);
-			}
-
-			if (newSemanticContainer instanceof Lane) {
-				((Lane) newSemanticContainer).getFlowNodeRefs().add(element);
-			} else if (newSemanticContainer instanceof SubProcess) {
-				((SubProcess) newSemanticContainer).getFlowElements().add(element);
-			}
+		List<? super FlowNode> oldContainment = getFlowNodeContainment(oldSemanticContainer);
+		List<? super FlowNode> newContainment = getFlowNodeContainment(newSemanticContainer);
+		if (oldContainment != null && newContainment != null) {
+			oldContainment.remove(element);
+			newContainment.add(element);
 		}
 	}
 
+	private List<? super FlowNode> getFlowNodeContainment(EObject container) {
+		if (container instanceof Lane) {
+			return ((Lane) container).getFlowNodeRefs();
+		} else if (container instanceof SubProcess) {
+			return ((SubProcess) container).getFlowElements();
+		}
+		// no empty list to indicate containment is not possible
+		return null;
+	}
+	
 	public List<FlowNode> getFlowNodeElements(EObject container, String className) {
-		List<FlowNode> result;
 		Class<?> clazz = null;
 		try {
 			clazz = Class.forName("org.obeonetwork.dsl.bpmn2." + className);//$NON-NLS-1$
 		} catch (ClassNotFoundException e) {
 			Activator.log(IStatus.ERROR, e.getMessage(), e);
+			return Collections.emptyList();
 		}
-		if (clazz != null) {
-			if (container instanceof Lane) {
-				result = ((Lane) container).getFlowNodeRefs().stream().filter(clazz::isInstance)
-						.map(FlowNode.class::cast).collect(Collectors.toList());
-			} else if (container instanceof SubProcess) {
-				result = ((SubProcess) container).getFlowElements().stream().filter(clazz::isInstance)
-						.map(FlowNode.class::cast).collect(Collectors.toList());
-			} else {
-				result = List.of();
-			}
-		} else {
-			result = List.of();
-		}
-		return result;
+		
+		List<?> elements = getFlowNodeContainment(container);
+		return elements == null
+				? Collections.emptyList()
+				: elements.stream()
+					.filter(clazz::isInstance)
+					.map(FlowNode.class::cast)
+					.collect(Collectors.toList());
 	}
 
 	public List<DataInput> getDataInputs(EObject container) {
-		List<DataInput> result = List.of();
-		if (container instanceof Lane && ((Lane) container).getPartitionElement() instanceof InputOutputSpecification) {
-			InputOutputSpecification ioSpec = (InputOutputSpecification) ((Lane) container).getPartitionElement();
-			if (ioSpec != null) {
-				result = ioSpec.getDataInputs();
-			}
-		} else if (container instanceof SubProcess) {
-			InputOutputSpecification ioSpec = ((SubProcess) container).getIoSpecification();
-			if (ioSpec != null) {
-				result = ioSpec.getDataInputs();
-			}
-		}
-		return result;
+		InputOutputSpecification ioSpec = getIoSpecification(container);
+		return ioSpec != null
+			? ioSpec.getDataInputs()
+			: Collections.emptyList();
 	}
 
 	public List<DataOutput> getDataOutputs(EObject container) {
-		List<DataOutput> result = List.of();
+		InputOutputSpecification ioSpec = getIoSpecification(container);
+		return ioSpec != null
+			? ioSpec.getDataOutputs()
+			: Collections.emptyList();
+	}
+	
+	private InputOutputSpecification getIoSpecification(EObject container) {
 		if (container instanceof Lane && ((Lane) container).getPartitionElement() instanceof InputOutputSpecification) {
-			InputOutputSpecification ioSpec = (InputOutputSpecification) ((Lane) container).getPartitionElement();
-			if (ioSpec != null) {
-				result = ioSpec.getDataOutputs();
-			}
+			return (InputOutputSpecification) ((Lane) container).getPartitionElement();
 		} else if (container instanceof SubProcess) {
-			InputOutputSpecification ioSpec = ((SubProcess) container).getIoSpecification();
-			if (ioSpec != null) {
-				result = ioSpec.getDataOutputs();
-			}
+			return ((SubProcess) container).getIoSpecification();
 		}
-		return result;
+		return null;
 	}
 	
 	/**

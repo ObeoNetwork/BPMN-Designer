@@ -36,28 +36,39 @@ import org.obeonetwork.dsl.bpmn2.BoundaryEvent;
 
 /**
  * This triggers move "external labels" near the forms without label.
+ * 
+ * @author sdrapeau
  */
 public class ExternalLabelTrigger implements ModelChangeTrigger {
 
 	protected static final NotificationFilter EXTERNAL_LABEL_FILTER = new Custom() {
 		@Override
 		public boolean matches(Notification notification) {
-			return notification.getEventType() == Notification.SET && notification.getNotifier() instanceof Bounds
+			return notification.getEventType() == Notification.SET 
+					&& notification.getNotifier() instanceof Bounds
 					&& notification.getFeature() == NotationPackage.Literals.LOCATION__X
-					&& ((Integer) notification.getNewValue()) != 0 && ((Integer) notification.getOldValue()) == 0
-					&& ((Bounds) notification.getNotifier()).eContainer() instanceof Node
-					&& ((Node) ((Bounds) notification.getNotifier()).eContainer()).getElement() instanceof DNode //
-					&& (//
-			"ExternalLabel"
-					.equals(((DNode) ((Node) ((Bounds) notification.getNotifier()).eContainer()).getElement())
-							.getActualMapping().getName())//
-					|| //
-			"SPExternalLabel".equals(((DNode) ((Node) ((Bounds) notification.getNotifier()).eContainer()).getElement())
-					.getActualMapping().getName())//
+					&& ((Integer) notification.getNewValue()) != 0 
+					&& ((Integer) notification.getOldValue()) == 0
+					&& isExternalLabelBound((Bounds) notification.getNotifier()
 			);
 		}
 	};
 
+	private static boolean isExternalLabelBound(Bounds bounds) {
+		if (bounds.eContainer() instanceof Node 
+				&& ((Node) bounds.eContainer()).getElement() instanceof DNode) {
+			return isExternalLabelNode((DNode) ((Node) bounds.eContainer()).getElement());
+		}
+		return false;
+	}
+	
+	private static boolean isExternalLabelNode(DNode node) {
+		String mapping = node.getActualMapping().getName();
+		return "ExternalLabel".equals(mapping) || "SPExternalLabel".equals(mapping);
+	}
+	
+
+	
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -116,9 +127,11 @@ public class ExternalLabelTrigger implements ModelChangeTrigger {
 
 			private DNode getDNodeWithoutLabel(DNode dNode) {
 				for (DDiagramElement d : ((DNodeContainer) dNode.eContainer()).getElements()) {
-					if (d.getTarget().equals(dNode.getTarget()) && (d instanceof DNode) && (//
+					if (d.getTarget().equals(dNode.getTarget()) 
+							&& (d instanceof DNode) 
+							&& (//
 					!"ExternalLabel".equals(d.getMapping().getName()) //
-							|| //
+							|| // Highly suspicious : Always True !!!
 					!"SPExternalLabel".equals(d.getMapping().getName()))//
 					) {
 						return (DNode) d;
