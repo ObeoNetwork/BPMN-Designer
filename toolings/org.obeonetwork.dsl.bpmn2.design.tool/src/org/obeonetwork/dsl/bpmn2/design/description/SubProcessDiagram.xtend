@@ -86,7 +86,7 @@ class SubProcessDiagram extends BpmnDiagram {
 			deletionDescription = DeleteElementDescription.localRef(Ns.del, "DeleteSubProcess")
 			labelDirectEdit = DirectEditLabel.localRef(Ns.operation, "FlowElementNameEdit")
 			dropDescriptions += ContainerDropDescription.localRef(Ns.drop, "MoveFlowElementFromLaneToSubProcess")
-			style = FlatContainerStyleDescription.create [
+			val styleInit = [ FlatContainerStyleDescription it |
 				arcWidth = 20
 				arcHeight = 20
 				borderSizeComputationExpression = "3"
@@ -99,19 +99,12 @@ class SubProcessDiagram extends BpmnDiagram {
 				backgroundColor = UserFixedColor.ref("color:LightYellow")
 				foregroundColor = UserFixedColor.ref("color:LightYellow")
 			]
+			style = FlatContainerStyleDescription.create [
+				styleInit.apply(it)
+			]
 			styleIf(FlatContainerStyleDescription, '''self.triggeredByEvent'''.trimAql) [
-				arcWidth = 20
-				arcHeight = 20
-				borderSizeComputationExpression = "3"
+				styleInit.apply(it)
 				borderLineStyle = LineStyle.DASH_LITERAL
-				labelSize = 9
-				labelFormat += FontFormat.BOLD_LITERAL
-				showIcon = false
-				roundedCorner = true
-				borderColor = UserFixedColor.ref("color:DarkYellow")
-				labelColor = SystemColor.extraRef("color:black")
-				backgroundColor = UserFixedColor.ref("color:LightYellow")
-				foregroundColor = UserFixedColor.ref("color:LightYellow")
 			]
 			borderedNodeMappings += NodeMapping.createAs(Ns.node, "TaskBorderOnSubProcess") [
 				semanticCandidatesExpression = '''self.boundaryEventRefs'''.trimAql

@@ -1,9 +1,14 @@
-/*******************************************************************************
- * Copyright (c) 2024 IRT-SystemX. All rights reserved.
- *
+/**
+ * Copyright (c) 2024 Obeo. All rights reserved.
+ * 
+ * This program and the accompanying materials are made available under the 
+ * terms of the Eclipse Public License v1.0 which accompanies this 
+ * distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
  * Contributors:
- *    Obeo - initial API and implementation
- *******************************************************************************/
+ *     Obeo - initial API and implementation
+ */
 package org.obeonetwork.dsl.bpmn2.design.description
 
 import org.eclipse.emf.ecore.EObject
@@ -46,10 +51,7 @@ import static extension org.mypsycho.modit.emf.sirius.api.SiriusDesigns.*
 import org.eclipse.sirius.viewpoint.description.tool.CreateInstance
 
 /**
- * BpmnDiagram of org.obeonetwork.dsl.bpmn2.design.tool.
- * <p>
- * 
- * </p>
+ * Common class for Bmpn diagram.
  *
  * @author nperansin
  */
@@ -629,99 +631,33 @@ abstract class BpmnDiagram extends SiriusDiagram {
 	
 	}
 
+	def createTaskCreationTool(String name, String type) {
+		ToolDescription.createAs(Ns.operation, name) [
+				label = '''%«type»'''
+				precondition = '''element.isApplicableType() and containerView.isNotCollapsed()'''.trimAql
+				forceRefresh = true
+				iconPath = '''/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/«type».png'''
+				element = ElementVariable.create("element")
+				elementView = ElementViewVariable.create("elementView")
+				operation = '''element.createFlowElement('«type»')'''.trimAql.toContext(
+					createInitDialog("Task")
+				)
+			]
+	}
 
 	def createActivitiesTools() {
 		ToolSection.create("Activities") [
 			label = "%Activities"
 			icon = "/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png"
-			ownedTools += ToolDescription.createAs(Ns.operation, "Task") [
-				label = "%Task"
-				precondition = '''element.isApplicableType() and containerView.isNotCollapsed()'''.trimAql
-				forceRefresh = true
-				iconPath = "/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png"
-				element = ElementVariable.create("element")
-				elementView = ElementViewVariable.create("elementView")
-				operation = '''element.createFlowElement('Task')'''.trimAql.toContext(
-					createInitDialog("Task")
-				)
-			]
-			ownedTools += ToolDescription.createAs(Ns.operation, "Business Rule Task") [
-				label = "%BusinessRuleTask"
-				precondition = '''element.isApplicableType() and containerView.isNotCollapsed()'''.trimAql
-				forceRefresh = true
-				iconPath = "/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png"
-				element = ElementVariable.create("element")
-				elementView = ElementViewVariable.create("elementView")
-				operation = '''element.createFlowElement('BusinessRuleTask')'''.trimAql.toContext(
-					createInitDialog("Task")
-				)
-			]
-			ownedTools += ToolDescription.createAs(Ns.operation, "Manual Task") [
-				label = "%ManualTask"
-				precondition = '''element.isApplicableType() and containerView.isNotCollapsed()'''.trimAql
-				forceRefresh = true
-				iconPath = "/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png"
-				element = ElementVariable.create("element")
-				elementView = ElementViewVariable.create("elementView")
-				operation = '''element.createFlowElement('ManualTask')'''.trimAql.toContext(
-					createInitDialog("Task")
-				)
-			]
-			ownedTools += ToolDescription.createAs(Ns.operation, "Receive Task") [
-				label = "%ReceiveTask"
-				precondition = '''element.isApplicableType() and containerView.isNotCollapsed()'''.trimAql
-				forceRefresh = true
-				iconPath = "/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ReceiveTask.png"
-				element = ElementVariable.create("element")
-				elementView = ElementViewVariable.create("elementView")
-				operation = '''element.createFlowElement('ReceiveTask')'''.trimAql.toContext(
-					createInitDialog("Task")
-				)
-			]
-			ownedTools += ToolDescription.createAs(Ns.operation, "Script Task") [
-				label = "%ScriptTask"
-				precondition = '''element.isApplicableType() and containerView.isNotCollapsed()'''.trimAql
-				forceRefresh = true
-				iconPath = "/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ScriptTask.png"
-				element = ElementVariable.create("element")
-				elementView = ElementViewVariable.create("elementView")
-				operation = '''element.createFlowElement('ScriptTask')'''.trimAql.toContext(
-					createInitDialog("Task")
-				)
-			]
-			ownedTools += ToolDescription.createAs(Ns.operation, "Send Task") [
-				label = "%SendTask"
-				precondition = '''element.isApplicableType() and containerView.isNotCollapsed()'''.trimAql
-				forceRefresh = true
-				iconPath = "/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png"
-				element = ElementVariable.create("element")
-				elementView = ElementViewVariable.create("elementView")
-				operation = '''element.createFlowElement('SendTask')'''.trimAql.toContext(
-					createInitDialog("Task")
-				)
-			]
-			ownedTools += ToolDescription.createAs(Ns.operation, "Service Task") [
-				label = "%ServiceTask"
-				precondition = '''element.isApplicableType() and containerView.isNotCollapsed()'''.trimAql
-				forceRefresh = true
-				iconPath = "/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png"
-				element = ElementVariable.create("element")
-				elementView = ElementViewVariable.create("elementView")
-				operation = '''element.createFlowElement('ServiceTask')'''.trimAql.toContext(
-					createInitDialog("Task")
-				)
-			]
-			ownedTools += ToolDescription.createAs(Ns.operation, "User Task") [
-				label = "%UserTask"
-				precondition = '''element.isApplicableType() and containerView.isNotCollapsed()'''.trimAql
-				forceRefresh = true
-				iconPath = "/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png"
-				element = ElementVariable.create("element")
-				elementView = ElementViewVariable.create("elementView")
-				operation = '''element.createFlowElement('UserTask')'''.trimAql.toContext(
-					createInitDialog("Task")
-				)
-			]
+			ownedTools += "Task".createTaskCreationTool("Task") // Basic task
+			ownedTools += "Business Rule Task".createTaskCreationTool("BusinessRuleTask")
+			ownedTools += "Manual Task".createTaskCreationTool("ManualTask")
+			ownedTools += "Receive Task".createTaskCreationTool("ReceiveTask")
+			ownedTools += "Script Task".createTaskCreationTool("ScriptTask")
+			ownedTools += "Send Task".createTaskCreationTool("SendTask")
+			ownedTools += "Service Task".createTaskCreationTool("ServiceTask")
+			ownedTools += "User Task".createTaskCreationTool("UserTask")
+			
 			ownedTools += ToolGroup.create("SubProcessGroup") [
 				label = "%SubProcess"
 				tools += ToolDescription.createAs(Ns.operation, "Sub Process") [
