@@ -16,10 +16,10 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.sirius.diagram.DDiagramElementContainer;
 import org.eclipse.sirius.diagram.DNodeContainer;
-import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.BusinessRuleTask;
 import org.obeonetwork.dsl.bpmn2.CallActivity;
@@ -123,37 +123,14 @@ public class TaskService {
 			return previous;
 		}
 		
-		Task result = replaceTask(previous, (Task) Bpmn2Factory.eINSTANCE.create(eClass));			
-		
-		// FIXME 
-		// This breaks EditPart cache and edition state.
-		// Instead :
-		// - Store gmf-node of node and edges.
-		// - Create a view and restore gmf-nodes.
-		view.setTarget(result);
-		
-		// DialectManager.INSTANCE.refresh(container.getParentDiagram(), new NullProgressMonitor()); // No effect
-		
-		return result;
+		return (Task) new SiriusElementRefactor(view) {
+			@Override
+			protected boolean isTransferable(EStructuralFeature feature, EClass targetType) {
+				return Bpmn2Package.eINSTANCE.getBaseElement_Id() != feature;
+			}
+		}.transformInto(eClass);
 	}
 	
-	private static Task replaceTask(Task task, Task cloneTask) {
-		cloneTask.getBoundaryEventRefs().addAll(task.getBoundaryEventRefs());
-		cloneTask.getDataInputAssociations().addAll(task.getDataInputAssociations());
-		cloneTask.getDataOutputAssociations().addAll(task.getDataOutputAssociations());
-		cloneTask.getIncomingConversationLinks().addAll(task.getIncomingConversationLinks());
-		cloneTask.getOutgoingConversationLinks().addAll(task.getOutgoingConversationLinks());
-		cloneTask.getProperties().addAll(task.getProperties());
-		cloneTask.getResources().addAll(task.getResources());
-		cloneTask.setCompletionQuantity(task.getCompletionQuantity());
-		cloneTask.setDefault(task.getDefault());
-		cloneTask.setIoSpecification(task.getIoSpecification());
-		cloneTask.setIsForCompensation(task.isIsForCompensation());
-		cloneTask.setLoopCharacteristics(task.getLoopCharacteristics());
-		cloneTask.setStartQuantity(task.getStartQuantity());
-		
-		return FlowNodeService.replaceNode(task, cloneTask);
-	}
 
 
 

@@ -12,27 +12,24 @@
 package org.obeonetwork.bpmn2.design;
 
 import java.util.Arrays;
-import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EStructuralFeature.Setting;
-import org.eclipse.emf.ecore.util.ECrossReferenceAdapter;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.sirius.diagram.AbstractDNode;
+import org.eclipse.sirius.diagram.description.AbstractNodeMapping;
+import org.eclipse.sirius.diagram.description.ContainerMapping;
+import org.eclipse.sirius.diagram.description.Layer;
+import org.eclipse.sirius.diagram.description.NodeMapping;
 import org.obeonetwork.bpmn2.design.ui.PopupChoiceSelector;
 import org.obeonetwork.bpmn2.design.ui.UiConstants;
-import org.obeonetwork.dsl.bpmn2.Association;
-import org.obeonetwork.dsl.bpmn2.BaseElement;
-import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
-import org.obeonetwork.dsl.bpmn2.FlowElementsContainer;
-import org.obeonetwork.dsl.bpmn2.FlowNode;
 import org.obeonetwork.dsl.bpmn2.Gateway;
-import org.obeonetwork.dsl.bpmn2.InteractionNode;
-import org.obeonetwork.dsl.bpmn2.MessageFlow;
 
 
 /**
@@ -66,92 +63,40 @@ public class FlowNodeService {
 		if (eClass.equals(previous.eClass())) {
 			return previous;
 		}
-		
-		// FIXME 
-		// Node position is lost as refresh detect a new content.
-		// Instead :
-		// - Store gmf-node of node and edges.
-		// - Create a view and restore gmf-nodes.
-		
-		Gateway result = replaceGateway(previous, (Gateway) Bpmn2Factory.eINSTANCE.create(eClass));			
-		view.setTarget(result);
-		
-		return result;
+
+		return (Gateway) new SiriusElementRefactor(view) {
+			@Override
+			protected boolean isTransferable(EStructuralFeature feature, EClass targetType) {
+				return Bpmn2Package.eINSTANCE.getBaseElement_Id() != feature;
+			}
+			
+			@Override
+			protected AbstractNodeMapping getApplicableNodeMapping(AbstractNodeMapping previous, EObject current) {
+				// Gateways have several mappings. (For no good reason: only image)
+				return current instanceof Gateway
+						? getGatewayMapping(previous.eContainer(), current)
+						: previous;
+			}
+		}.transformInto(eClass);
 	}
 	
-	private static Gateway replaceGateway(Gateway previous, Gateway next) {
-		next.setGatewayDirection(previous.getGatewayDirection());
-		return replaceNode(previous, next);
-	}
-
-	/**
-	 * Replace a node by another node.
-	 * 
-	 * @param <N> type of new node
-	 * @param previous node
-	 * @param next node
-	 * @return next node
-	 */
-	public static <N extends FlowNode> N replaceNode(FlowNode previous, N next) {
-
-		next.getCategoryValueRef().addAll(previous.getCategoryValueRef());
-		next.getDocumentation().addAll(previous.getDocumentation());
-		next.getExtensionDefinitions().addAll(previous.getExtensionDefinitions());
-		next.getExtensionValues().addAll(previous.getExtensionValues());
-		next.getIncoming().addAll(previous.getIncoming());
-		next.getLanes().addAll(previous.getLanes());
-		next.getOutgoing().addAll(previous.getOutgoing());
-
-		next.setAuditing(previous.getAuditing());
-		next.setId(previous.getId());
-		next.setMonitoring(previous.getMonitoring());
-		next.setName(previous.getName());
-
-		updateLinks(previous, next);
-
-		FlowElementsContainer container = (FlowElementsContainer) previous.eContainer();
-		int index = container.getFlowElements().indexOf(previous);
-		container.getFlowElements().add(index, next);
-		container.getFlowElements().remove(previous);
-		
-		return next;
-	}
-
-	private static void updateLinks(BaseElement previous, BaseElement next) {
-		ECrossReferenceAdapter eCrossReferenceAdapter = ServiceHelper.getCrossReferenceAdapter(previous);
-		if (eCrossReferenceAdapter != null) {
-			Collection<Setting> inverseReferences = eCrossReferenceAdapter.getInverseReferences(previous);
-			for (Setting setting : inverseReferences) {
-				EObject object = setting.getEObject();
-				if (object instanceof MessageFlow 
-						&& previous instanceof InteractionNode
-						&& next instanceof InteractionNode) {
-					updateMessageFlow((InteractionNode) previous, 
-							(InteractionNode) next, (MessageFlow) object);
-				} else if (object instanceof Association) {
-					updateAssociation(previous, next, (Association) object);
-				}
+	private static AbstractNodeMapping getGatewayMapping(EObject mappingOwner, EObject target) {
+		List<NodeMapping> siblingMappings = Collections.emptyList();
+		if (mappingOwner instanceof ContainerMapping) {
+			siblingMappings = ((ContainerMapping) mappingOwner).getSubNodeMappings();
+		} else if (mappingOwner instanceof Layer) {
+			siblingMappings = ((Layer) mappingOwner).getNodeMappings();
+		}
+		String classname = "bpmn2." + target.eClass().getName(); // Notation used in ODesign
+		for (NodeMapping mapping : siblingMappings) {
+			if (Objects.equals(mapping.getDomainClass(), classname)) {
+				return mapping;
 			}
 		}
+		return null;
 	}
+	
 
-	private static void updateMessageFlow(InteractionNode previous, InteractionNode next, MessageFlow it) {
-		if (previous.equals(it.getSourceRef())) {
-			it.setSourceRef(next);
-		}
-		if (previous.equals(it.getTargetRef())) {
-			it.setTargetRef(next);
-		}
-	}
-
-	private static void updateAssociation(BaseElement previous, BaseElement target, Association it) {
-		if (previous.equals(it.getSourceRef())) {
-			it.setSourceRef(target);
-		}
-		if (previous.equals(it.getTargetRef())) {
-			it.setTargetRef(target);
-		}
-	}
 
 	/**
 	 * Applies a function with a type choosen by user.
