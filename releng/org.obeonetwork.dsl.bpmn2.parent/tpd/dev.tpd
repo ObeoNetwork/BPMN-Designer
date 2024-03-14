@@ -17,7 +17,7 @@ with requirements
 environment JavaSE-11
 
 
-location eclipse "https://download.eclipse.org/releases/2021-09/" {
+location eclipse "https://download.eclipse.org/releases/2022-12/" {
 	org.eclipse.xtext.redist.feature.group
 }
 

@@ -19,7 +19,7 @@ with requirements
 // This target platform declare dependencies of components to be release
 
 
-location eclipse "https://download.eclipse.org/releases/2021-09/" {
+location eclipse "https://download.eclipse.org/releases/2022-12/" {
     org.eclipse.platform.feature.group
     // includes rcp, e4.rcp, p2, osgi
     // org.eclipse.equinox.sdk.feature.group
