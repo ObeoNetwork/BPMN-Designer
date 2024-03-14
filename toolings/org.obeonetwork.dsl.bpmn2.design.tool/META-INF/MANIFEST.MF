@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.design.tool;singleton:=true
+Automatic-Module-Name: org.obeonetwork.dsl.bpmn2.design.tool
+Bundle-Version: 1.0.0.qualifier
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-Name: %pluginName
+Bundle-Vendor: %providerName
+Fragment-Host: org.obeonetwork.dsl.bpmn2.design
+Require-Bundle: 
+ org.mypsycho.emf.modit,
+ org.mypsycho.emf.modit.sirius,
+ org.eclipse.xtext.xbase,
+ org.eclipse.xtend.lib.macro,
+ org.eclipse.xtend.lib,
+ org.junit,
+ org.apache.commons.lang,
+ org.eclipse.core.runtime,
+ org.eclipse.sirius.properties.ext.widgets.reference,
+ org.eclipse.sirius.properties

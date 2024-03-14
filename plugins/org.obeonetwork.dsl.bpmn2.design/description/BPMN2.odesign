@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="ASCII"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" name="BPMN20" version="12.0.0.2017041100">
   <ownedViewpoints name="Process" label="BPMN 2.0 - Process" modelFileExtension="bpmn">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ProcessDiagram" label="Process Diagram" titleExpression="aql:self.name" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" domainClass="bpmn2.Process" enablePopupBars="true">
-      <metamodel href="../../org.obeonetwork.dsl.bpmn2/model/BPMN20.ecore#/"/>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ProcessDiagram" label="Process Diagram" titleExpression="aql:self.name" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" domainClass="bpmn2::Process" enablePopupBars="true">
+      <metamodel href="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI#/"/>
       <layout xsi:type="description_1:CompositeLayout" direction="LeftToRight"/>
       <diagramInitialisation>
         <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self">
@@ -132,7 +132,7 @@
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="EventBasedGateway" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.getFlowNodeElements('EventBasedGateway')" domainClass="bpmn2.EventBasedGateway">
+            <subNodeMappings name="EventBasedGateway" label="EventBased Gateway" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.getFlowNodeElements('EventBasedGateway')" domainClass="bpmn2.EventBasedGateway">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.getNonExternalLabel(view)" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" sizeComputationExpression="4" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/gateway/event-based-gateway.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -349,67 +349,109 @@
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:PopupMenu" name="ConvertTask_Popup" label="%ConvertTaskTo" precondition="aql:self.oclIsKindOf(bpmn2::Task)" forceRefresh="true">
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToTask_ContextAction" label="Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToTask_ContextAction" label="%Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::Task)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToBusinessRuleTask_ContextAction" label="Business Rule Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToBusinessRuleTask_ContextAction" label="%BusinessRuleTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToBusinessRuleTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::BusinessRuleTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToManualTask_ContextAction" label="Manual Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToManualTask_ContextAction" label="%ManualTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToManualTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ManualTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="Receive Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/receiveTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="%ReceiveTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/receiveTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToReceiveTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ReceiveTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="Script Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/scriptTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="%ScriptTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/scriptTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToScriptTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ScriptTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToSendTask_ContextAction" label="Send Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToSendTask_ContextAction" label="%SendTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSendTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::SendTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToServiceTask_ContextAction" label="Service Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToServiceTask_ContextAction" label="%ServiceTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToServiceTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ServiceTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToUserTask_ContextAction" label="User Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToUserTask_ContextAction" label="%UserTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToUserTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::UserTask)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PopupMenu" name="ConvertGateway_Popup" label="%ConvertGatewayTo" precondition="aql:self.oclIsKindOf(bpmn2::Gateway)" forceRefresh="true">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToParallelGateway_ContextAction" label="%ParallelGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ParallelGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToExclusiveGateway_ContextAction" label="%ExclusiveGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ExclusiveGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToInclusiveGateway_ContextAction" label="%InclusiveGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::InclusiveGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToComplexGateway_ContextAction" label="%ComplexGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ComplexGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToEventBasedGateway_ContextAction" label="%EventBasedGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::EventBasedGateway)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -596,28 +638,28 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Events" label="%Events" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
-          <ownedTools xsi:type="tool:ToolDescription" name="Start" label="%Start" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Start" label="%StartEvent" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('StartEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="End" label="%End" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EndEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="End" label="%EndEvent" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EndEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('EndEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" label="%IntermediateCatch" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" label="%IntermediateCatchEvent" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('IntermediateCatchEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Throw" label="%IntermediateThrow" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Throw" label="%IntermediateThrowEvent" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -1034,15 +1076,15 @@
                         <initialOperation/>
                       </buttons>
                       <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='SubProcessGroup']/@tools.0/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
-                      <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
-                        <controls xsi:type="properties:TextDescription" name="TaskName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                      <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                        <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                           <initialOperation>
                             <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
                               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
                             </firstModelOperations>
                           </initialOperation>
                         </controls>
-                        <controls xsi:type="properties:TextAreaDescription" name="TaskDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                        <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
                           <initialOperation>
                             <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
                               <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
@@ -1073,15 +1115,15 @@
                         <initialOperation/>
                       </buttons>
                       <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='SubProcessGroup']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
-                      <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
-                        <controls xsi:type="properties:TextDescription" name="TaskName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                      <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                        <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                           <initialOperation>
                             <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
                               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
                             </firstModelOperations>
                           </initialOperation>
                         </controls>
-                        <controls xsi:type="properties:TextAreaDescription" name="TaskDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                        <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
                           <initialOperation>
                             <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
                               <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
@@ -1096,7 +1138,7 @@
             </tools>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup" name="CallActivity" label="%CallActivity">
-            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:(container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)) and containerView.isNotCollapsed()" forceRefresh="true" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
+            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:(container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)) and containerView.isNotCollapsed()" forceRefresh="true" candidatesExpression="aql:if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql:if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
               <element name="element"/>
               <containerView name="containerView"/>
               <container name="container"/>
@@ -1121,7 +1163,7 @@
                       <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:element"/>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql: if callActivity.eContainer(bpmn2::Definitions) &lt;> null then callActivity.eContainer(bpmn2::Definitions) else callActivity.eContainerOrSelf(basemm::Folder) endif">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:if callActivity.eContainer(bpmn2::Definitions) &lt;> null then callActivity.eContainer(bpmn2::Definitions) else callActivity.eContainerOrSelf(basemm::Folder) endif">
                     <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.oclIsKindOf(basemm::Folder)">
                       <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::Process" referenceName="elements" variableName="newProcess">
                         <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
@@ -1131,8 +1173,8 @@
                           <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                             <initialOperation/>
                           </buttons>
-                          <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                          <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                          <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                          <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
                             <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                               <initialOperation>
                                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -1169,8 +1211,8 @@
                           <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                             <initialOperation/>
                           </buttons>
-                          <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                          <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                          <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                          <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
                             <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                               <initialOperation>
                                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -1257,6 +1299,13 @@
               </initialOperation>
             </tools>
           </ownedTools>
+          <ownedTools xsi:type="tool:ToolDescription" name="TaskConvertTool" label="%ConvertTaskTo" precondition="aql:self.oclIsKindOf(bpmn2::Task)">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.convertToChoosableTask(elementView)"/>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
         <toolSections name="Gateways" label="%Gateways" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
           <ownedTools xsi:type="tool:ToolDescription" name="Parallel Gateway" label="%ParallelGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
@@ -1292,6 +1341,13 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('EventBasedGateway')"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolDescription" name="GatewayConvertTool" label="%ConvertGatewayTo" precondition="aql:self.oclIsKindOf(bpmn2::Gateway)">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.convertToChoosableGateway(elementView)"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
@@ -1345,7 +1401,7 @@
                       <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:container"/>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.eContainerOrSelf(bpmn2::Lane).partitionElement">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.partitionElement">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.DataOutput" referenceName="dataOutputs"/>
                   </subModelOperations>
                 </subModelOperations>
@@ -1388,7 +1444,7 @@
                       <initialOperation/>
                     </buttons>
                     <page name="LanePage" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@toolSections.7/@ownedTools[name='Lane']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                    <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self">
+                    <groups name="LaneGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self">
                       <controls xsi:type="properties:TextDescription" name="LaneName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                         <initialOperation>
                           <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -1611,9 +1667,7 @@
           </vsmElementCustomizations>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.eventDefinitions->size()>1 and self.parallelMultiple">
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/start-event/mi.parallel.svg"/>
-            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/end-event/multiple.parallel.svg"/>
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateCatchEvent']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/catch-event/multiple.parallel.svg"/>
-            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateThrowEvent']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/throw-event/multiple.parallel.svg"/>
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Process']/@style //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Task']/@style //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/multiple.parallel.svg"/>
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@borderedNodeMappings[name='TaskBorderOnSubProcess']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/sub-process-boundary-events/multiple.parallel.svg"/>
           </vsmElementCustomizations>
@@ -1625,7 +1679,7 @@
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Process']/@style //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Task']/@style //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/non-interrupting-boundary-events/multiple.parallel.svg"/>
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@borderedNodeMappings[name='TaskBorderOnSubProcess']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/sub-process-non-interrupting-boundary-events/multiple.parallel.svg"/>
           </vsmElementCustomizations>
-          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.eventDefinitions->size()==0  and not self.cancelActivity">
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.eventDefinitions->size()==0 and not self.cancelActivity">
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Process']/@style //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Task']/@style //@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/non-interrupting-boundary-events/none.svg"/>
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@containerMappings[name='HorizontalLaneSet']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@borderedNodeMappings[name='TaskBorderOnSubProcess']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/sub-process-non-interrupting-boundary-events/none.svg"/>
           </vsmElementCustomizations>
@@ -1683,8 +1737,8 @@
         </customization>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CollaborationDiagram" label="Collaboration Diagram" titleExpression="aql:self.name" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" domainClass="bpmn2.Collaboration" enablePopupBars="true">
-      <metamodel href="../../org.obeonetwork.dsl.bpmn2/model/BPMN20.ecore#/"/>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CollaborationDiagram" label="Collaboration Diagram" titleExpression="aql:self.name" pasteDescriptions="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Paste']" domainClass="bpmn2::Collaboration" enablePopupBars="true">
+      <metamodel href="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI#/"/>
       <layout xsi:type="description_1:CompositeLayout" direction="LeftToRight"/>
       <defaultLayer name="Default">
         <edgeMappings name="SequenceFlow" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.participants.processRef.eAllContents()" semanticElements="aql:Sequence{self}->union(Sequence{self.conditionExpression})" sourceMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Process'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ComplexGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EventBasedGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ExclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='InclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateCatchEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateThrowEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task']/@borderedNodeMappings[name='TaskBorder'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@borderedNodeMappings[name='TaskBorderOnSubProcess']" targetMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Process'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ComplexGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EventBasedGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ExclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='InclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateCatchEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateThrowEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='ParallelGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@borderedNodeMappings[name='TaskBorderOnSubProcess'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']" targetFinderExpression="aql:self.targetRef" sourceFinderExpression="aql:self.sourceRef" domainClass="SequenceFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.0/@ownedTools[name='ReconnectTargetSequenceFlow'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.0/@ownedTools[name='ReconnectSourceSequenceFlow']">
@@ -1806,7 +1860,7 @@
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="EventBasedGateway" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.getFlowNodeElements('EventBasedGateway')" domainClass="bpmn2.EventBasedGateway">
+            <subNodeMappings name="EventBasedGateway" label="EventBased Gateway" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:self.getFlowNodeElements('EventBasedGateway')" domainClass="bpmn2.EventBasedGateway">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:self.getNonExternalLabel(view)" labelColor="//@userColorsPalettes[name='Colors']/@entries[name='TextBackground']" sizeComputationExpression="4" arcWidth="1" arcHeight="1" workspacePath="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/gateway/event-based-gateway.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -1978,67 +2032,109 @@
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:PopupMenu" name="ConvertTask_Popup" label="%ConvertTaskTo" precondition="aql:self.oclIsKindOf(bpmn2::Task)" forceRefresh="true">
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToTask_ContextAction" label="Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToTask_ContextAction" label="%Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::Task)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToBusinessRuleTask_ContextAction" label="Business Rule Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToBusinessRuleTask_ContextAction" label="%BusinessRuleTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToBusinessRuleTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::BusinessRuleTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToManualTask_ContextAction" label="Manual Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToManualTask_ContextAction" label="%ManualTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToManualTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ManualTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="Receive Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/receiveTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="%ReceiveTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/receiveTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToReceiveTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ReceiveTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="Script Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/scriptTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="%ScriptTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/scriptTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToScriptTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ScriptTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToSendTask_ContextAction" label="Send Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToSendTask_ContextAction" label="%SendTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSendTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::SendTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToServiceTask_ContextAction" label="Service Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToServiceTask_ContextAction" label="%ServiceTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToServiceTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ServiceTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToUserTask_ContextAction" label="User Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToUserTask_ContextAction" label="%UserTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToUserTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::UserTask)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PopupMenu" name="ConvertGateway_Popup" label="%ConvertGatewayTo" precondition="aql:self.oclIsKindOf(bpmn2::Gateway)" forceRefresh="true">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToParallelGateway_ContextAction" label="%ParallelGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ParallelGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToExclusiveGateway_ContextAction" label="%ExclusiveGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ExclusiveGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToInclusiveGateway_ContextAction" label="%InclusiveGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::InclusiveGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToComplexGateway_ContextAction" label="%ComplexGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ComplexGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToEventBasedGateway_ContextAction" label="%EventBasedGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::EventBasedGateway)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -2102,7 +2198,7 @@
                       <initialOperation/>
                     </buttons>
                     <page name="ParticipantPage" domainClass="bpmn2::Participant" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='ParticpantWithoutProcess']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                    <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Participant" semanticCandidateExpression="var:self">
+                    <groups name="ParticipantGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Participant" semanticCandidateExpression="var:self">
                       <controls xsi:type="properties:TextDescription" name="ParticipantName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                         <initialOperation>
                           <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -2137,7 +2233,7 @@
                       <initialOperation/>
                     </buttons>
                     <page name="ParticipantPage" domainClass="bpmn2::Participant" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Particpant']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                    <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Participant" semanticCandidateExpression="var:self">
+                    <groups name="ParticipantGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Participant" semanticCandidateExpression="var:self">
                       <controls xsi:type="properties:TextDescription" name="ParticipantName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                         <initialOperation>
                           <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -2155,7 +2251,7 @@
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql: if participant.eContainer(bpmn2::Definitions) &lt;> null then participant.eContainer(bpmn2::Definitions) else participant.eContainerOrSelf(basemm::Folder) endif">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:if participant.eContainer(bpmn2::Definitions) &lt;> null then participant.eContainer(bpmn2::Definitions) else participant.eContainerOrSelf(basemm::Folder) endif">
                   <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.oclIsKindOf(basemm::Folder)">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::Process" referenceName="elements" variableName="newProcess">
                       <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
@@ -2165,8 +2261,8 @@
                         <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                           <initialOperation/>
                         </buttons>
-                        <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Particpant']/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                        <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                        <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Particpant']/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                        <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
                           <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                             <initialOperation>
                               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -2203,8 +2299,8 @@
                         <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                           <initialOperation/>
                         </buttons>
-                        <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Particpant']/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                        <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                        <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Particpant']/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                        <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
                           <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                             <initialOperation>
                               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -2236,7 +2332,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="LinkProcess" label="%ParticipantAndExistingProcess" precondition="aql:self.oclIsTypeOf(bpmn2::Collaboration)" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::Process) else self.eResource().eAllContents(bpmn2::Process) endif" message="%SelectProcess" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="LinkProcess" label="%ParticipantAndExistingProcess" precondition="aql:self.oclIsTypeOf(bpmn2::Collaboration)" candidatesExpression="aql:if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::Process) else self.eResource().eAllContents(bpmn2::Process) endif" message="%SelectProcess" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -2251,7 +2347,7 @@
                       <initialOperation/>
                     </buttons>
                     <page name="ParticipantPage" domainClass="bpmn2::Participant" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='LinkProcess']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                    <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Participant" semanticCandidateExpression="var:self">
+                    <groups name="ParticipantGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Participant" semanticCandidateExpression="var:self">
                       <controls xsi:type="properties:TextDescription" name="ParticipantName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                         <initialOperation>
                           <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -2459,9 +2555,7 @@
           </vsmElementCustomizations>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.eventDefinitions->size()>1 and self.parallelMultiple">
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='StartEvent']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/start-event/mi.parallel.svg"/>
-            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='EndEvent']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/end-event/mi.parallel.svg"/>
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateCatchEvent']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/catch-event/multiple.parallel.svg"/>
-            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subNodeMappings[name='IntermediateThrowEvent']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/throw-event/multiple.parallel.svg"/>
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Process']/@style //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Task']/@style //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task']/@borderedNodeMappings[name='TaskBorder']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/boundary-events/multiple.parallel.svg"/>
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@borderedNodeMappings[name='TaskBorderOnSubProcess']/@style" attributeName="workspacePath" value="/org.obeonetwork.dsl.bpmn2.design/icons2/nodes/sub-process-boundary-events/multiple.parallel.svg"/>
           </vsmElementCustomizations>
@@ -2689,35 +2783,35 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Events" label="%Events" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
-          <ownedTools xsi:type="tool:ToolDescription" name="Start" label="%Start" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Start" label="%StartEvent" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('StartEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="End" label="%End" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EndEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="End" label="%EndEvent" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EndEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('EndEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" label="%IntermediateCatch" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" label="%IntermediateCatchEvent" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('IntermediateCatchEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Throw" label="%IntermediateThrow" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Throw" label="%IntermediateThrowEvent" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('IntermediateThrowEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="BoundaryEventCreation" label="%Boundary" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@borderedNodeMappings[name='TaskBorderOnSubProcess'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task']/@borderedNodeMappings[name='TaskBorder'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Process'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Task']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BoundaryEvent.png">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="BoundaryEventCreation" label="%Boundary" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='Task']/@borderedNodeMappings[name='TaskBorder'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='SubProcess']/@borderedNodeMappings[name='TaskBorderOnSubProcess'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Process']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Process'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']/@subContainerMappings[name='Lane']/@subContainerMappings[name='CallActivity_Task']/@borderedNodeMappings[name='TaskBorderOnCallActivity_Task']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BoundaryEvent.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3108,7 +3202,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ToolGroup" name="SubProcess" label="%SubProcess">
+          <ownedTools xsi:type="tool_1:ToolGroup" name="SubProcessGroup" label="%SubProcess">
             <tools xsi:type="tool:ToolDescription" name="Sub Process" label="%SubProcess" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SubProcess.png">
               <element name="element"/>
               <elementView name="elementView"/>
@@ -3126,16 +3220,16 @@
                       <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                         <initialOperation/>
                       </buttons>
-                      <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.3/@ownedTools[name='SubProcess']/@tools.0/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
-                      <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
-                        <controls xsi:type="properties:TextDescription" name="TaskName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                      <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.3/@ownedTools[name='SubProcessGroup']/@tools.0/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
+                      <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                        <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                           <initialOperation>
                             <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
                               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
                             </firstModelOperations>
                           </initialOperation>
                         </controls>
-                        <controls xsi:type="properties:TextAreaDescription" name="TaskDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                        <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
                           <initialOperation>
                             <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
                               <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
@@ -3165,16 +3259,16 @@
                       <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                         <initialOperation/>
                       </buttons>
-                      <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.3/@ownedTools[name='SubProcess']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
-                      <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
-                        <controls xsi:type="properties:TextDescription" name="TaskName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                      <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.3/@ownedTools[name='SubProcessGroup']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
+                      <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                        <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                           <initialOperation>
                             <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
                               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
                             </firstModelOperations>
                           </initialOperation>
                         </controls>
-                        <controls xsi:type="properties:TextAreaDescription" name="TaskDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                        <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
                           <initialOperation>
                             <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
                               <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
@@ -3189,7 +3283,7 @@
             </tools>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup" name="CallActivity" label="%CallActivity">
-            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:(container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)) and containerView.isNotCollapsed()" forceRefresh="true" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
+            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:(container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)) and containerView.isNotCollapsed()" forceRefresh="true" candidatesExpression="aql:if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql:if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
               <element name="element"/>
               <containerView name="containerView"/>
               <container name="container"/>
@@ -3214,7 +3308,7 @@
                       <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:element"/>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql: if callActivity.eContainer(bpmn2::Definitions) &lt;> null then callActivity.eContainer(bpmn2::Definitions) else callActivity.eContainerOrSelf(basemm::Folder) endif">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:if callActivity.eContainer(bpmn2::Definitions) &lt;> null then callActivity.eContainer(bpmn2::Definitions) else callActivity.eContainerOrSelf(basemm::Folder) endif">
                     <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.oclIsKindOf(basemm::Folder)">
                       <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::Process" referenceName="elements" variableName="newProcess">
                         <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
@@ -3224,8 +3318,8 @@
                           <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                             <initialOperation/>
                           </buttons>
-                          <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.3/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                          <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                          <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.3/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                          <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
                             <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                               <initialOperation>
                                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -3262,8 +3356,8 @@
                           <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                             <initialOperation/>
                           </buttons>
-                          <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.3/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                          <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                          <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.3/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                          <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
                             <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                               <initialOperation>
                                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -3350,6 +3444,13 @@
               </initialOperation>
             </tools>
           </ownedTools>
+          <ownedTools xsi:type="tool:ToolDescription" name="TaskConvertTool" label="%ConvertTaskTo" precondition="aql:self.oclIsKindOf(bpmn2::Task)">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.convertToChoosableTask(elementView)"/>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
         <toolSections name="Gateways" label="%Gateways" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
           <ownedTools xsi:type="tool:ToolDescription" name="Parallel Gateway" label="%ParallelGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
@@ -3385,6 +3486,13 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('EventBasedGateway')"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolDescription" name="GatewayConvertTool" label="%ConvertGatewayTo" precondition="aql:self.oclIsKindOf(bpmn2::Gateway)">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.convertToChoosableGateway(elementView)"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
@@ -3438,7 +3546,7 @@
                       <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:container"/>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.eContainerOrSelf(bpmn2::Lane).partitionElement">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.partitionElement">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.DataOutput" referenceName="dataOutputs"/>
                   </subModelOperations>
                 </subModelOperations>
@@ -3483,7 +3591,7 @@
                           <initialOperation/>
                         </buttons>
                         <page name="LanePage" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.6/@ownedTools[name='Lane']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                        <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self">
+                        <groups name="LaneGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self">
                           <controls xsi:type="properties:TextDescription" name="LaneName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                             <initialOperation>
                               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -3515,7 +3623,7 @@
                           <initialOperation/>
                         </buttons>
                         <page name="LanePage" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@additionalLayers[name='Process']/@toolSections.6/@ownedTools[name='Lane']/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                        <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self">
+                        <groups name="LaneGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Lane" semanticCandidateExpression="var:self">
                           <controls xsi:type="properties:TextDescription" name="LaneName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                             <initialOperation>
                               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -3586,18 +3694,19 @@
         </toolSections>
       </additionalLayers>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="ProcessDefinitions" label="Process Definitions" domainClass="bpmn2.Definitions">
+    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="ProcessDefinitions" label="Process Definitions" domainClass="bpmn2::Definitions">
+      <metamodel href="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI#/"/>
       <ownedLineMappings name="Process" reusedSubLines="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDefinitions']/@ownedLineMappings[name='Process']" reusedInMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDefinitions']/@ownedLineMappings[name='Process']" domainClass="bpmn2.Process" semanticCandidatesExpression="[if (self.oclIsTypeOf(bpmn2::Definitions)) then self.oclAsType(bpmn2::Definitions).rootElements else self.oclAsType(bpmn2::Process).decomposedBy endif /]">
         <create name="Duplicate Process" forceRefresh="true" elementsToSelect="service:stdEmptyCollection" mapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDefinitions']/@ownedLineMappings[name='Process']">
-          <variables name="root" documentation="The semantic element of the table."/>
-          <variables name="element" documentation="The semantic currently edited element."/>
-          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+          <variables name="element"/>
+          <variables name="container"/>
+          <variables name="root"/>
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="aql:element.duplicate()"/>
         </create>
         <create name="Create Nested Process" forceRefresh="true" elementsToSelect="service:stdEmptyCollection" mapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDefinitions']/@ownedLineMappings[name='Process']">
-          <variables name="root" documentation="The semantic element of the table."/>
-          <variables name="element" documentation="The semantic currently edited element."/>
-          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+          <variables name="element"/>
+          <variables name="container"/>
+          <variables name="root"/>
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="aql:element">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Process" referenceName="decomposedBy">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;New>"/>
@@ -3606,9 +3715,9 @@
         </create>
       </ownedLineMappings>
       <ownedCreateLine name="Create Root Process" forceRefresh="true" elementsToSelect="service:stdEmptyCollection" mapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDefinitions']/@ownedLineMappings[name='Process']">
-        <variables name="root" documentation="The semantic element of the table."/>
-        <variables name="element" documentation="The semantic currently edited element."/>
-        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <variables name="element"/>
+        <variables name="container"/>
+        <variables name="root"/>
         <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="aql:container">
           <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Process" referenceName="rootElements">
             <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;New>"/>
@@ -3618,12 +3727,13 @@
       <ownedColumnMappings name="Name" headerLabelExpression="Name" featureName="name" labelExpression="aql:name"/>
       <ownedColumnMappings name="Description" headerLabelExpression="Description" featureName="description" labelExpression="aql:description"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="GlobalTaskDefinitions" label="Global Task Definitions" domainClass="bpmn2.Definitions">
+    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="GlobalTaskDefinitions" label="Global Task Definitions" domainClass="bpmn2::Definitions">
+      <metamodel href="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI#/"/>
       <ownedLineMappings name="GlobalTask" domainClass="bpmn2.GlobalTask" semanticCandidatesExpression="aql:self.rootElements->filter(bpmn2::GlobalTask)"/>
       <ownedCreateLine name="Create Global User Task" elementsToSelect="service:stdEmptyCollection">
-        <variables name="root" documentation="The semantic element of the table."/>
-        <variables name="element" documentation="The semantic currently edited element."/>
-        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <variables name="element"/>
+        <variables name="container"/>
+        <variables name="root"/>
         <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="aql:container">
           <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.GlobalUserTask" referenceName="rootElements">
             <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Global User Task"/>
@@ -3631,9 +3741,9 @@
         </firstModelOperation>
       </ownedCreateLine>
       <ownedCreateLine name="Create Global Manual Task" elementsToSelect="service:stdEmptyCollection">
-        <variables name="root" documentation="The semantic element of the table."/>
-        <variables name="element" documentation="The semantic currently edited element."/>
-        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <variables name="element"/>
+        <variables name="container"/>
+        <variables name="root"/>
         <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="aql:container">
           <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.GlobalManualTask" referenceName="rootElements">
             <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Global Manual Task"/>
@@ -3641,9 +3751,9 @@
         </firstModelOperation>
       </ownedCreateLine>
       <ownedCreateLine name="Create Global Script Task" elementsToSelect="service:stdEmptyCollection">
-        <variables name="root" documentation="The semantic element of the table."/>
-        <variables name="element" documentation="The semantic currently edited element."/>
-        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <variables name="element"/>
+        <variables name="container"/>
+        <variables name="root"/>
         <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="aql:container">
           <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.GlobalScriptTask" referenceName="rootElements">
             <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Global Script Task"/>
@@ -3651,9 +3761,9 @@
         </firstModelOperation>
       </ownedCreateLine>
       <ownedCreateLine name="Create Global Business Rule Task" elementsToSelect="service:stdEmptyCollection">
-        <variables name="root" documentation="The semantic element of the table."/>
-        <variables name="element" documentation="The semantic currently edited element."/>
-        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <variables name="element"/>
+        <variables name="container"/>
+        <variables name="root"/>
         <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="aql:container">
           <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.GlobalBusinessRuleTask" referenceName="rootElements">
             <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Global Business Rule Task"/>
@@ -3662,8 +3772,8 @@
       </ownedCreateLine>
       <ownedColumnMappings name="Name" headerLabelExpression="Name" featureName="name" labelExpression="feature:name"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="SubProcessDiagram" label="Sub-Process Diagram" titleExpression="aql:self.name" domainClass="bpmn2.SubProcess" enablePopupBars="true">
-      <metamodel href="../../org.obeonetwork.dsl.bpmn2/model/BPMN20.ecore#/"/>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="SubProcessDiagram" label="Sub-Process Diagram" titleExpression="aql:self.name" domainClass="bpmn2::SubProcess" enablePopupBars="true">
+      <metamodel href="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI#/"/>
       <layout xsi:type="description_1:CompositeLayout" direction="LeftToRight"/>
       <defaultLayer name="Default">
         <edgeMappings name="SequenceFlow" labelDirectEdit="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='FlowElementNameEdit']" semanticCandidatesExpression="aql:containerView.target.eAllContents(bpmn2::SequenceFlow)" semanticElements="aql:Sequence{self}->union(Sequence{self.conditionExpression})" sourceMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPComplexGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPEndEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPEventBasedGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPExclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPInclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPIntermediateCatchEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPParallelGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPStartEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subContainerMappings[name='SPTask'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subContainerMappings[name='SPCallActivity_Process'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subContainerMappings[name='SPCallActivity_Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@borderedNodeMappings[name='TaskBorderOnSubProcess'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPIntermediateThrowEvent']" targetMapping="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPComplexGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPEndEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPEventBasedGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPExclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPInclusiveGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPIntermediateCatchEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPParallelGateway'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPStartEvent'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subContainerMappings[name='SPTask'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subContainerMappings[name='SPCallActivity_Process'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subContainerMappings[name='SPCallActivity_Task'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@borderedNodeMappings[name='TaskBorderOnSubProcess'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@containerMappings[name='SubProcess']/@subNodeMappings[name='SPIntermediateThrowEvent']" targetFinderExpression="aql:self.targetRef" sourceFinderExpression="aql:self.sourceRef" domainClass="SequenceFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='ReconnectTargetSequenceFlow'] //@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='ReconnectSourceSequenceFlow']">
@@ -3906,67 +4016,109 @@
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:PopupMenu" name="ConvertTask_Popup" label="%ConvertTaskTo" precondition="aql:self.oclIsKindOf(bpmn2::Task)" forceRefresh="true">
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToTask_ContextAction" label="Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToTask_ContextAction" label="%Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Task.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::Task)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToBusinessRuleTask_ContextAction" label="Business Rule Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToBusinessRuleTask_ContextAction" label="%BusinessRuleTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/BusinessRuleTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToBusinessRuleTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::BusinessRuleTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToManualTask_ContextAction" label="Manual Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToManualTask_ContextAction" label="%ManualTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ManualTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToManualTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ManualTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="Receive Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/receiveTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="%ReceiveTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/receiveTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToReceiveTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ReceiveTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="Script Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/scriptTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="%ScriptTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.design/icons/obj16/scriptTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToScriptTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ScriptTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToSendTask_ContextAction" label="Send Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToSendTask_ContextAction" label="%SendTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/SendTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSendTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::SendTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToServiceTask_ContextAction" label="Service Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToServiceTask_ContextAction" label="%ServiceTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ServiceTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToServiceTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::ServiceTask)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToUserTask_ContextAction" label="User Task" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToUserTask_ContextAction" label="%UserTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/UserTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToUserTask()"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificTask(bpmn2::UserTask)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PopupMenu" name="ConvertGateway_Popup" label="%ConvertGatewayTo" precondition="aql:self.oclIsKindOf(bpmn2::Gateway)" forceRefresh="true">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToParallelGateway_ContextAction" label="%ParallelGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ParallelGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToExclusiveGateway_ContextAction" label="%ExclusiveGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ExclusiveGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ExclusiveGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToInclusiveGateway_ContextAction" label="%InclusiveGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/InclusiveGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::InclusiveGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToComplexGateway_ContextAction" label="%ComplexGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ComplexGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::ComplexGateway)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertGatewayToEventBasedGateway_ContextAction" label="%EventBasedGateway" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EventBasedGateway.png">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:view.convertToSpecificGateway(bpmn2::EventBasedGateway)"/>
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
@@ -4129,28 +4281,28 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Events" label="%Events" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
-          <ownedTools xsi:type="tool:ToolDescription" name="Start" label="%Start" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Start" label="%StartEvent" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/StartEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('StartEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="End" label="%End" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EndEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="End" label="%EndEvent" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/EndEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('EndEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" label="%IntermediateCatch" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Catch" label="%IntermediateCatchEvent" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateCatchEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('IntermediateCatchEvent')"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Throw" label="%IntermediateThrow" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
+          <ownedTools xsi:type="tool:ToolDescription" name="Intermediate Throw" label="%IntermediateThrowEvent" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/IntermediateThrowEvent.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -4567,15 +4719,15 @@
                         <initialOperation/>
                       </buttons>
                       <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='SubProcessGroup']/@tools.0/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
-                      <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
-                        <controls xsi:type="properties:TextDescription" name="TaskName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                      <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                        <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                           <initialOperation>
                             <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
                               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
                             </firstModelOperations>
                           </initialOperation>
                         </controls>
-                        <controls xsi:type="properties:TextAreaDescription" name="TaskDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                        <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
                           <initialOperation>
                             <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
                               <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
@@ -4606,15 +4758,15 @@
                         <initialOperation/>
                       </buttons>
                       <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='SubProcessGroup']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
-                      <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
-                        <controls xsi:type="properties:TextDescription" name="TaskName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
+                      <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                        <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                           <initialOperation>
                             <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
                               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
                             </firstModelOperations>
                           </initialOperation>
                         </controls>
-                        <controls xsi:type="properties:TextAreaDescription" name="TaskDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
+                        <controls xsi:type="properties:TextAreaDescription" name="ProcessDescription" labelExpression="service:getDescriptionLabel()" helpExpression="service:getHelpDescriptionLabel()">
                           <initialOperation>
                             <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
                               <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
@@ -4629,7 +4781,7 @@
             </tools>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup" name="CallActivity" label="%CallActivity">
-            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:(container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)) and containerView.isNotCollapsed()" forceRefresh="true" candidatesExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql: if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
+            <tools xsi:type="tool:SelectionWizardDescription" name="Call Activity" label="%CallActivity" precondition="aql:(container.oclIsKindOf(bpmn2::Lane) or container.oclIsKindOf(bpmn2::SubProcess)) and containerView.isNotCollapsed()" forceRefresh="true" candidatesExpression="aql:if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::CallableElement) else self.eResource().eAllContents(bpmn2::CallableElement) endif" rootExpression="aql:if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions) else self.eResource() endif" childrenExpression="aql:self.eAllContents(bpmn2::CallableElement)" message="Select a Callable Element" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/CallActivity.png">
               <element name="element"/>
               <containerView name="containerView"/>
               <container name="container"/>
@@ -4654,7 +4806,7 @@
                       <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:element"/>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql: if callActivity.eContainer(bpmn2::Definitions) &lt;> null then callActivity.eContainer(bpmn2::Definitions) else callActivity.eContainerOrSelf(basemm::Folder) endif">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:if callActivity.eContainer(bpmn2::Definitions) &lt;> null then callActivity.eContainer(bpmn2::Definitions) else callActivity.eContainerOrSelf(basemm::Folder) endif">
                     <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.oclIsKindOf(basemm::Folder)">
                       <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2::Process" referenceName="elements" variableName="newProcess">
                         <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="service:getPropertiesTitle()">
@@ -4664,8 +4816,8 @@
                           <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                             <initialOperation/>
                           </buttons>
-                          <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                          <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                          <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                          <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
                             <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                               <initialOperation>
                                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -4702,8 +4854,8 @@
                           <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                             <initialOperation/>
                           </buttons>
-                          <page name="ProcesstPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                          <groups name="Group" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
+                          <page name="ProcessPage" domainClass="bpmn2::Process" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='SubProcessDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='CallActivity']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.1/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                          <groups name="ProcessGroup" labelExpression="service:getAttributesLabel()" domainClass="bpmn2::Process" semanticCandidateExpression="var:self">
                             <controls xsi:type="properties:TextDescription" name="ProcessName" labelExpression="service:getNameLabel()" helpExpression="service:getHelpNameLabel()">
                               <initialOperation>
                                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -4790,6 +4942,13 @@
               </initialOperation>
             </tools>
           </ownedTools>
+          <ownedTools xsi:type="tool:ToolDescription" name="TaskConvertTool" label="%ConvertTaskTo" precondition="aql:self.oclIsKindOf(bpmn2::Task)">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.convertToChoosableTask(elementView)"/>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
         <toolSections name="Gateways" label="%Gateways" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
           <ownedTools xsi:type="tool:ToolDescription" name="Parallel Gateway" label="%ParallelGateway" precondition="aql:element.isApplicableType() and containerView.isNotCollapsed()" forceRefresh="true" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParallelGateway.png">
@@ -4825,6 +4984,13 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.createFlowElement('EventBasedGateway')"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolDescription" name="GatewayConvertTool" label="%ConvertGatewayTo" precondition="aql:self.oclIsKindOf(bpmn2::Gateway)">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.convertToChoosableGateway(elementView)"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
@@ -4878,7 +5044,7 @@
                       <subModelOperations xsi:type="tool:SetValue" featureName="lanes" valueExpression="aql:container"/>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.eContainerOrSelf(bpmn2::Lane).partitionElement">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.partitionElement">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.DataOutput" referenceName="dataOutputs"/>
                   </subModelOperations>
                 </subModelOperations>
@@ -5178,6 +5344,7 @@
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.ElementsPositionService"/>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.ExpandCollapseService"/>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.TaskService"/>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.FlowNodeService"/>
     <ownedJavaExtensions qualifiedClassName="org.eclipse.sirius.common.tools.api.interpreter.StandardServices"/>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.ProcessService"/>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.bpmn2.design.NamingService"/>

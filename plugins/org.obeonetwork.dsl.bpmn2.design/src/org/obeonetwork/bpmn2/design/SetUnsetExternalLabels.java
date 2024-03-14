@@ -26,9 +26,6 @@ import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
  */
 public class SetUnsetExternalLabels implements IExternalJavaAction {
 
-	public SetUnsetExternalLabels() {
-		// Nada
-	}
 
 	@Override
 	public void execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
@@ -38,8 +35,7 @@ public class SetUnsetExternalLabels implements IExternalJavaAction {
 
 		Object o = parameters.get("views");
 		if (o instanceof List) {
-			List<Object> list = (List<Object>) o;
-			for (Object oo : list) {
+			for (Object oo : (List<?>) o) {
 				if (oo instanceof DNode) {
 					DNode dNode= (DNode)oo;
 					if (ServiceHelper.isExternalLabel(dNode)) {

@@ -20,7 +20,12 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius.diagram,
  org.eclipse.sirius.diagram.ui,
  org.eclipse.sirius.ext.base,
- org.eclipse.emf.edit.ui
+ org.eclipse.sirius.common.acceleo.aql,
+ org.eclipse.emf.edit.ui,
+ org.eclipse.gmf.runtime.diagram.ui,
+ org.eclipse.sirius.common.ui,
+ org.eclipse.gmf.runtime.diagram.ui.resources.editor,
+ org.eclipse.sirius.ecore.extender
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.obeonetwork.bpmn2.design
