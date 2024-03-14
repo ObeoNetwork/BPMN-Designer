@@ -22,7 +22,7 @@ location eclipse "https://download.eclipse.org/releases/2021-09/" {
 }
 
 
-location sirius "https://download.eclipse.org/sirius/updates/releases/6.6.0/2020-09/" {
+location sirius "https://download.eclipse.org/sirius/updates/releases/7.1.1/2021-06/" {
 	
 	// Includes Odesign edit, Sirius interpreter view and Odesign reload 
 	org.eclipse.sirius.specifier.ide.ui.feature.group

@@ -62,7 +62,7 @@ location GMF-Runtime-1.13.0 "https://download.eclipse.org/modeling/gmp/gmf-runti
 }
 
 
-location sirius "https://download.eclipse.org/sirius/updates/releases/6.6.0/2020-09/" {
+location sirius "https://download.eclipse.org/sirius/updates/releases/7.1.1/2021-06/" {
     org.eclipse.acceleo.ui.interpreter.feature.group
     org.eclipse.sirius.diagram.elk.feature.feature.group
     org.eclipse.sirius.diagram.elk.sdk.feature.feature.group
