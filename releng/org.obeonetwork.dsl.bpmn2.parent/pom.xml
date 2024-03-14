@@ -36,6 +36,11 @@
     <url>https://download.eclipse.org/sirius/updates/releases/7.1.1/2021-06/</url>
   </repository>
   <repository>
+   	<id>Orbit</id><!-- Acceleo Legacy needs Guava [11.0.2,16.0.0) -->
+    <layout>p2</layout>
+    <url>https://download.eclipse.org/tools/orbit/R-builds/R20170307180635/repository/</url>
+  </repository>
+  <repository>
    	<id>AcceleoLegacy</id>
     <layout>p2</layout>
     <url>http://download.eclipse.org/sirius/updates/legacy/</url>
