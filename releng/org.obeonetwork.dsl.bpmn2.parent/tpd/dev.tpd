@@ -16,13 +16,12 @@ with requirements
 
 environment JavaSE-11
 
-
-location eclipse "https://download.eclipse.org/releases/2022-12/" {
+location eclipse "https://download.eclipse.org/releases/2022-09/" {
 	org.eclipse.xtext.redist.feature.group
 }
 
 
-location sirius "https://download.eclipse.org/sirius/updates/releases/7.1.1/2021-06/" {
+location sirius "https://download.eclipse.org/sirius/updates/releases/7.0.8/2021-06/" {
 	
 	// Includes Odesign edit, Sirius interpreter view and Odesign reload 
 	org.eclipse.sirius.specifier.ide.ui.feature.group

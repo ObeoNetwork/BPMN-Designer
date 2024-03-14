@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="BPMN-Designer - SDK" sequenceNumber="1710409073">
+<target name="BPMN-Designer - SDK" sequenceNumber="1710410814">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="com.google.guava" version="15.0.0.v201403281430"/>
@@ -25,40 +25,40 @@
       <repository id="sirius_legacy" location="https://download.eclipse.org/sirius/updates/legacy/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.xtext.redist.feature.group" version="2.29.0.v20221121-1054"/>
+      <unit id="org.eclipse.xtext.redist.feature.group" version="2.28.0.v20220829-0555"/>
       <unit id="org.junit" version="4.13.2.v20211018-1956"/>
-      <unit id="org.eclipse.pde.feature.group" version="3.14.1400.v20221123-1800"/>
-      <unit id="org.eclipse.platform.feature.group" version="4.26.0.v20221123-2302"/>
-      <unit id="org.eclipse.epp.mpc.feature.group" version="1.10.1.v20221110-1841"/>
-      <unit id="org.eclipse.egit.feature.group" version="6.4.0.202211300538-r"/>
-      <unit id="org.eclipse.emf.feature.group" version="2.32.0.v20221121-1400"/>
+      <unit id="org.eclipse.pde.feature.group" version="3.14.1300.v20220831-1800"/>
+      <unit id="org.eclipse.platform.feature.group" version="4.25.0.v20220831-1800"/>
+      <unit id="org.eclipse.epp.mpc.feature.group" version="1.10.0.v20220502-0731"/>
+      <unit id="org.eclipse.egit.feature.group" version="6.3.0.202209071007-r"/>
+      <unit id="org.eclipse.emf.feature.group" version="2.31.0.v20220817-1401"/>
       <unit id="org.eclipse.emf.transaction.sdk.feature.group" version="1.13.0.202208110935"/>
-      <unit id="org.eclipse.eef.sdk.feature.feature.group" version="2.1.6.202210191223"/>
-      <unit id="org.eclipse.eef.ext.widgets.reference.feature.feature.group" version="2.1.6.202210191223"/>
-      <unit id="org.eclipse.emf.cdo" version="4.20.0.v20221124-1637"/>
-      <repository id="eclipse" location="https://download.eclipse.org/releases/2022-12/"/>
+      <unit id="org.eclipse.eef.sdk.feature.feature.group" version="2.1.5.202008270808"/>
+      <unit id="org.eclipse.eef.ext.widgets.reference.feature.feature.group" version="2.1.5.202008270808"/>
+      <unit id="org.eclipse.emf.cdo" version="4.19.0.v20220907-1437"/>
+      <repository id="eclipse" location="https://download.eclipse.org/releases/2022-09/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.sirius.specifier.ide.ui.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.specifier.ide.ui.aql.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.specifier.properties.feature.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.diagram.elk.sdk.feature.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.tests.support.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.tests.feature.group" version="7.1.1.202306201521"/>
+      <unit id="org.eclipse.sirius.specifier.ide.ui.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.specifier.ide.ui.aql.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.specifier.properties.feature.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.diagram.elk.sdk.feature.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.tests.support.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.tests.feature.group" version="7.0.8.202306201559"/>
       <unit id="org.eclipse.acceleo.ui.interpreter.feature.group" version="3.7.12.202211151354"/>
-      <unit id="org.eclipse.sirius.diagram.elk.feature.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.doc.feature.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.interpreter.feature.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.properties.feature.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.runtime.acceleo.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.runtime.aql.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.runtime.ide.eef.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.runtime.ide.ui.acceleo.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.runtime.ide.ui.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.runtime.ide.xtext.feature.group" version="7.1.1.202306201521"/>
-      <unit id="org.eclipse.sirius.runtime.feature.group" version="7.1.1.202306201521"/>
-      <repository id="sirius" location="https://download.eclipse.org/sirius/updates/releases/7.1.1/2021-06/"/>
+      <unit id="org.eclipse.sirius.diagram.elk.feature.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.doc.feature.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.interpreter.feature.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.properties.feature.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.runtime.acceleo.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.runtime.aql.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.runtime.ide.eef.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.runtime.ide.ui.acceleo.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.runtime.ide.ui.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.runtime.ide.xtext.feature.group" version="7.0.8.202306201559"/>
+      <unit id="org.eclipse.sirius.runtime.feature.group" version="7.0.8.202306201559"/>
+      <repository id="sirius" location="https://download.eclipse.org/sirius/updates/releases/7.0.8/2021-06/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.mypsycho.emf.modit_feature.feature.group" version="1.2.0.v20231218-1557"/>

@@ -18,8 +18,7 @@ with requirements
 
 // This target platform declare dependencies of components to be release
 
-
-location eclipse "https://download.eclipse.org/releases/2022-12/" {
+location eclipse "https://download.eclipse.org/releases/2022-09/" {
     org.eclipse.platform.feature.group
     // includes rcp, e4.rcp, p2, osgi
     // org.eclipse.equinox.sdk.feature.group
@@ -62,7 +61,7 @@ location GMF-Runtime-1.13.0 "https://download.eclipse.org/modeling/gmp/gmf-runti
 }
 
 
-location sirius "https://download.eclipse.org/sirius/updates/releases/7.1.1/2021-06/" {
+location sirius "https://download.eclipse.org/sirius/updates/releases/7.0.8/2021-06/" {
     org.eclipse.acceleo.ui.interpreter.feature.group
     org.eclipse.sirius.diagram.elk.feature.feature.group
     org.eclipse.sirius.diagram.elk.sdk.feature.feature.group

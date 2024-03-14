@@ -22,7 +22,7 @@ with requirements
 
 // This target platform declare dependencies only used by automatic tests
 
-location eclipse "https://download.eclipse.org/releases/2022-12/" {
+location eclipse "https://download.eclipse.org/releases/2022-09/" {
 	
 	// Required for tooling in xtend
 	// Included org.eclipse.xtext.sdk.feature.group
@@ -39,7 +39,7 @@ location eclipse "https://download.eclipse.org/releases/2022-12/" {
 
 }
          
-location sirius "https://download.eclipse.org/sirius/updates/releases/7.1.1/2021-06/" {
+location sirius "https://download.eclipse.org/sirius/updates/releases/7.0.8/2021-06/" {
 	org.eclipse.sirius.tests.support.feature.group
 	org.eclipse.sirius.tests.feature.group
 }
