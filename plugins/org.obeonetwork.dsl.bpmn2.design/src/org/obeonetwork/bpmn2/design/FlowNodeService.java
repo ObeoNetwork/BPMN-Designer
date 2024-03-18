@@ -22,15 +22,17 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.sirius.diagram.AbstractDNode;
+import org.eclipse.sirius.diagram.DDiagram;
+import org.eclipse.sirius.diagram.DNode;
 import org.eclipse.sirius.diagram.description.AbstractNodeMapping;
 import org.eclipse.sirius.diagram.description.ContainerMapping;
 import org.eclipse.sirius.diagram.description.Layer;
 import org.eclipse.sirius.diagram.description.NodeMapping;
+import org.obeonetwork.bpmn2.design.refactoring.SiriusElementRefactor;
 import org.obeonetwork.bpmn2.design.ui.PopupChoiceSelector;
 import org.obeonetwork.bpmn2.design.ui.UiConstants;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.Gateway;
-
 
 /**
  * Conversion services to operate on FlowNode objects.
@@ -39,14 +41,12 @@ import org.obeonetwork.dsl.bpmn2.Gateway;
  *
  */
 public class FlowNodeService {
-	
+
 	private static final Bpmn2Package PKG = Bpmn2Package.eINSTANCE;
 	private static final List<EClass> GATEWAY_CLASSES = Arrays.asList(
 			// Order is the same to Gateways Toolsection of VSM
-		PKG.getParallelGateway(), PKG.getExclusiveGateway(),
-		PKG.getInclusiveGateway(), PKG.getComplexGateway(),
-		PKG.getEventBasedGateway()
-	);
+			PKG.getParallelGateway(), PKG.getExclusiveGateway(), PKG.getInclusiveGateway(), PKG.getComplexGateway(),
+			PKG.getEventBasedGateway());
 
 	/**
 	 * Converts a Gateway into another kind.
@@ -54,7 +54,7 @@ public class FlowNodeService {
 	 * Most of related data are restored.
 	 * </p>
 	 * 
-	 * @param view of Gateway
+	 * @param view   of Gateway
 	 * @param eClass class to convert in
 	 * @return created Gateway
 	 */
@@ -63,46 +63,57 @@ public class FlowNodeService {
 		if (eClass.equals(previous.eClass())) {
 			return previous;
 		}
-
 		return (Gateway) new SiriusElementRefactor(view) {
 			@Override
 			protected boolean isTransferable(EStructuralFeature feature, EClass targetType) {
 				return Bpmn2Package.eINSTANCE.getBaseElement_Id() != feature;
 			}
-			
+
 			@Override
 			protected AbstractNodeMapping getApplicableNodeMapping(AbstractNodeMapping previous, EObject current) {
-				// Gateways have several mappings. (For no good reason: only image)
-				return current instanceof Gateway
-						? getGatewayMapping(previous.eContainer(), current)
-						: previous;
+				// Gateways have several mappings.
+				return current instanceof Gateway ? getGatewayMapping(previous, current) : previous;
+			}
+
+			@Override
+			protected void postCreateNewNode(AbstractDNode newDNode, boolean isExternalLabel) {
+				if (newDNode instanceof DNode && isExternalLabel) {
+					ServiceHelper.setExternalLabel((DNode) newDNode);
+				}
 			}
 		}.transformInto(eClass);
 	}
-	
-	private static AbstractNodeMapping getGatewayMapping(EObject mappingOwner, EObject target) {
+
+	private static AbstractNodeMapping getGatewayMapping(AbstractNodeMapping previous, EObject target) {
+		if (previous.getName().endsWith("Gateway")) {
+			String classname = "bpmn2." + target.eClass().getName(); // Notation used in ODesign
+			return getMapping(previous.eContainer(), classname);
+		} else {
+			String classname = "bpmn2.BaseElement"; // Notation used in ODesign
+			return getMapping(previous.eContainer(), classname);
+		}
+	}
+
+	private static AbstractNodeMapping getMapping(EObject mappingOwner, String className) {
 		List<NodeMapping> siblingMappings = Collections.emptyList();
 		if (mappingOwner instanceof ContainerMapping) {
 			siblingMappings = ((ContainerMapping) mappingOwner).getSubNodeMappings();
 		} else if (mappingOwner instanceof Layer) {
 			siblingMappings = ((Layer) mappingOwner).getNodeMappings();
 		}
-		String classname = "bpmn2." + target.eClass().getName(); // Notation used in ODesign
 		for (NodeMapping mapping : siblingMappings) {
-			if (Objects.equals(mapping.getDomainClass(), classname)) {
+			if (Objects.equals(mapping.getDomainClass(), className)) {
 				return mapping;
 			}
 		}
 		return null;
 	}
-	
-
 
 	/**
 	 * Applies a function with a type choosen by user.
 	 * 
-	 * @param it context
-	 * @param types to choose from
+	 * @param it        context
+	 * @param types     to choose from
 	 * @param transform to apply
 	 */
 	public static <T> T applyToChoosableClass(EObject it, List<EClass> types, Function<EClass, T> transform) {
@@ -118,20 +129,19 @@ public class FlowNodeService {
 		}
 		return transform.apply(target.get());
 	}
-	
+
 	/**
 	 * Converts a gateway in a new type.
 	 * <p>
 	 * If no gateway is selected, whole operation is aborted.
 	 * </p>
 	 * 
-	 * @param it gateway to convert
+	 * @param it   gateway to convert
 	 * @param view on which the task is triggered
 	 * @return new gateway
 	 */
 	public static Gateway convertToChoosableGateway(Gateway it, AbstractDNode view) {
-		return FlowNodeService.applyToChoosableClass(it, GATEWAY_CLASSES, 
-				type -> convertToSpecificGateway(view, type));
+		return FlowNodeService.applyToChoosableClass(it, GATEWAY_CLASSES, type -> convertToSpecificGateway(view, type));
 	}
 
 }

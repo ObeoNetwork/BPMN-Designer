@@ -51,7 +51,6 @@ import org.obeonetwork.dsl.bpmn2.SequenceFlow;
 import org.obeonetwork.dsl.bpmn2.SubProcess;
 import org.obeonetwork.dsl.bpmn2.Task;
 
-
 /**
  * Services for BPMN Viewpoints.
  * 
@@ -82,7 +81,8 @@ public class ServiceHelper {
 	/**
 	 * Logs a message with called message.
 	 * <p>
-	 * This method should only be used will editing VSM. It must be used any released version.
+	 * This method should only be used will editing VSM. It must be used any
+	 * released version.
 	 * </p>
 	 * 
 	 * @param eObject
@@ -113,12 +113,10 @@ public class ServiceHelper {
 	public static Process getProcess(EObject it) {
 		return getAncestor(Process.class, it);
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	private static <T extends EObject> T getAncestor(Class<T> type, EObject it) {
-		return it == null || type.isInstance(it)
-				? (T) it
-				: getAncestor(type, it.eContainer());
+		return it == null || type.isInstance(it) ? (T) it : getAncestor(type, it.eContainer());
 	}
 
 	public static List<BaseElement> getElementsWithExternalLabel(DNodeContainer dNodeContainer) {
@@ -128,14 +126,12 @@ public class ServiceHelper {
 		while (it.hasNext()) {
 			DDiagramElement dde = it.next();
 			Object bpmnElement = dde.getTarget();
-			if ((bpmnElement instanceof Event) 
-					|| (bpmnElement instanceof Gateway)
+			if ((bpmnElement instanceof Event) || (bpmnElement instanceof Gateway)
 					|| (bpmnElement instanceof ItemAwareElement)) {
 				if (!(bpmnElement instanceof BoundaryEvent) && isExternalLabel((DNode) dde)) {
 					result.add((BaseElement) bpmnElement);
 				}
-			} else if ((bpmnElement instanceof Task) 
-					|| (bpmnElement instanceof SubProcess)
+			} else if ((bpmnElement instanceof Task) || (bpmnElement instanceof SubProcess)
 					|| (bpmnElement instanceof CallActivity)) {
 				DNodeContainer dNodeTask = (DNodeContainer) dde;
 				for (DDiagramElement subDDE : dNodeTask.getElements()) {
@@ -152,18 +148,35 @@ public class ServiceHelper {
 	}
 
 	public static boolean isExternalLabel(DNode dNode) {
+		if (dNode != null && ServiceHelper.IS_EXTERNAL_LABEL.equals(dNode.getTooltipText())) {
+			//Crapy code used when the type of a Task or a Gateway is changed.
+			if (dNode.getStyle() != null || dNode.getOwnedStyle().getCustomFeatures() != null) {
+				setExternalLabel(dNode);
+			} else {
+				return true;
+			}
+		}
 		if (dNode == null || dNode.getOwnedStyle() == null || dNode.getOwnedStyle().getCustomFeatures() == null) {
 			return false;
 		}
 		return dNode.getOwnedStyle().getCustomFeatures().contains(ServiceHelper.IS_EXTERNAL_LABEL);
 	}
 
+	public static void setExternalLabelInTooltip(DNode dNode) {
+		//Crapy code used when the type of a Task or a Gateway is changed.
+		dNode.setTooltipText(IS_EXTERNAL_LABEL);
+	}
+	
 	public static void setExternalLabel(DNode dNode) {
 		dNode.getStyle().getCustomFeatures().add(IS_EXTERNAL_LABEL);
+		//Crapy code used when the type of a Task or a Gateway is changed.
+		setExternalLabelInTooltip(dNode);
 	}
 
 	public static void setInternalLabel(DNode dNode) {
 		dNode.getStyle().getCustomFeatures().remove(IS_EXTERNAL_LABEL);
+		//Crapy code used when the type of a Task or a Gateway is changed.
+		dNode.setTooltipText("");
 	}
 
 	public static boolean isDefaultPath(DEdge dEdge) {
@@ -176,7 +189,7 @@ public class ServiceHelper {
 		}
 		return result;
 	}
-	
+
 	private static SequenceFlow getGatewayDefault(Gateway it) {
 		SequenceFlow result = null;
 		if (it instanceof InclusiveGateway) {
@@ -192,7 +205,7 @@ public class ServiceHelper {
 	/**
 	 * Moves a flow node from a container to another container.
 	 * 
-	 * @param element to mode
+	 * @param element              to mode
 	 * @param oldSemanticContainer old container
 	 * @param newSemanticContainer new container
 	 */
@@ -214,7 +227,7 @@ public class ServiceHelper {
 		// no empty list to indicate containment is not possible
 		return null;
 	}
-	
+
 	public List<FlowNode> getFlowNodeElements(EObject container, String className) {
 		Class<?> clazz = null;
 		try {
@@ -223,30 +236,22 @@ public class ServiceHelper {
 			Activator.log(IStatus.ERROR, e.getMessage(), e);
 			return Collections.emptyList();
 		}
-		
+
 		List<?> elements = getFlowNodeContainment(container);
-		return elements == null
-				? Collections.emptyList()
-				: elements.stream()
-					.filter(clazz::isInstance)
-					.map(FlowNode.class::cast)
-					.collect(Collectors.toList());
+		return elements == null ? Collections.emptyList()
+				: elements.stream().filter(clazz::isInstance).map(FlowNode.class::cast).collect(Collectors.toList());
 	}
 
 	public List<DataInput> getDataInputs(EObject container) {
 		InputOutputSpecification ioSpec = getIoSpecification(container);
-		return ioSpec != null
-			? ioSpec.getDataInputs()
-			: Collections.emptyList();
+		return ioSpec != null ? ioSpec.getDataInputs() : Collections.emptyList();
 	}
 
 	public List<DataOutput> getDataOutputs(EObject container) {
 		InputOutputSpecification ioSpec = getIoSpecification(container);
-		return ioSpec != null
-			? ioSpec.getDataOutputs()
-			: Collections.emptyList();
+		return ioSpec != null ? ioSpec.getDataOutputs() : Collections.emptyList();
 	}
-	
+
 	private InputOutputSpecification getIoSpecification(EObject container) {
 		if (container instanceof Lane && ((Lane) container).getPartitionElement() instanceof InputOutputSpecification) {
 			return (InputOutputSpecification) ((Lane) container).getPartitionElement();
@@ -255,7 +260,7 @@ public class ServiceHelper {
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Aborts a Sirius operation.
 	 * 
@@ -264,7 +269,7 @@ public class ServiceHelper {
 	 */
 	public static void abortOperation(EObject context) throws OperationCanceledException {
 		TransactionalEditingDomain edt = Session.of(context).get().getTransactionalEditingDomain();
-		// Cancel Operation does not cancel !! 
+		// Cancel Operation does not cancel !!
 		// ChangeContext catches them all !!
 		// What a trainer ...
 		((InternalTransactionalEditingDomain) edt).getActiveTransaction().abort(Status.CANCEL_STATUS);
