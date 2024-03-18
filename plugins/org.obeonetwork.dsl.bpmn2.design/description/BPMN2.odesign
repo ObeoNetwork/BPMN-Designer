@@ -2219,7 +2219,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Particpant" label="%ParticipantAndNewProcess" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParticipantWithProcess.png">
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Particpant" label="%ParticipantAndNewProcess" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Process']/@ownedRepresentations[name='CollaborationDiagram']/@defaultLayer/@containerMappings[name='Participant']" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParticipantWithNewProcess.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2332,7 +2332,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="LinkProcess" label="%ParticipantAndExistingProcess" precondition="aql:self.oclIsTypeOf(bpmn2::Collaboration)" candidatesExpression="aql:if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::Process) else self.eResource().eAllContents(bpmn2::Process) endif" message="%SelectProcess" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/Process.png">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="LinkProcess" label="%ParticipantAndExistingProcess" precondition="aql:self.oclIsTypeOf(bpmn2::Collaboration)" candidatesExpression="aql:if self.eContainer(bpmn2::Definitions) &lt;> null then self.eContainer(bpmn2::Definitions).eAllContents(bpmn2::Process) else self.eResource().eAllContents(bpmn2::Process) endif" message="%SelectProcess" iconPath="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ParticipantWithProcess.png">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
