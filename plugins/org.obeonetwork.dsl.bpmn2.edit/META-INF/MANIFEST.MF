@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Automatic-Module-Name: org.obeonetwork.dsl.bpmn2.edit
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.edit;singleton:=true
-Bundle-Version: 5.0.0.qualifier
+Bundle-Version: 5.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.obeonetwork.dsl.bpmn2.provider.Bpmn2EditPlugin$Implementation
 Bundle-Vendor: %providerName

@@ -2,7 +2,7 @@ Bundle-ManifestVersion: 2
 Automatic-Module-Name: org.obeonetwork.dsl.bpmn2.design
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.bpmn2.design;singleton:=true
-Bundle-Version: 5.0.0.qualifier
+Bundle-Version: 5.1.0.qualifier
 Bundle-Localization: plugin
 Bundle-Activator: org.obeonetwork.bpmn2.design.Activator
 Require-Bundle: org.eclipse.ui,
