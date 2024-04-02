@@ -21,10 +21,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
+import org.eclipse.sirius.diagram.DDiagramElement;
 import org.obeonetwork.dsl.bpmn2.BoundaryEvent;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
@@ -99,36 +99,42 @@ public class ProcessService {
 		}
 	}
 
-	public static void paste(EObject container, EObject containerView, EObject copiedView, EObject copiedElement) {
+	public static void paste(EObject newContainer, DDiagramElement containerView, EObject copiedView,
+			EObject newElement) {
+		String oldId = EcoreUtil.getID(newElement);
+		String newId = EcoreUtil.generateUUID();
+
 		// change IDs
-		EcoreUtil.setID(copiedElement, EcoreUtil.generateUUID());
-		for (Iterator<EObject> iterator = copiedElement.eAllContents(); iterator.hasNext();) {
+		EcoreUtil.setID(newElement, newId);
+		for (Iterator<EObject> iterator = newElement.eAllContents(); iterator.hasNext();) {
 			EcoreUtil.setID(iterator.next(), EcoreUtil.generateUUID());
 		}
 
 		// change Name
-		EStructuralFeature nameFeature = copiedElement.eClass().getEStructuralFeature("name"); //$NON-NLS-1$
+		EStructuralFeature nameFeature = newElement.eClass().getEStructuralFeature("name"); //$NON-NLS-1$
 		if (nameFeature != null) {
-			Object name = copiedElement.eGet(nameFeature);
+			Object name = newElement.eGet(nameFeature);
 			if (name == null) {
 				name = "";
 			}
-			copiedElement.eSet(nameFeature, name + " (copy)"); // $NON-NLS-1$
+			if (!(newElement instanceof SequenceFlow)) {
+				name = name + " (copy)";
+			}
+			newElement.eSet(nameFeature, name); // $NON-NLS-1$
 		}
 
-		// add to container
-		for (EReference containment : container.eClass().getEAllContainments()) {
-			if (containment.getEType().equals(copiedElement.eClass())
-					|| copiedElement.eClass().getEAllSuperTypes().contains(containment.getEType())) {
-				if (containment.isMany()) {
-					@SuppressWarnings("unchecked")
-					EList<EObject> values = ((EList<EObject>) container.eGet(containment));
-					values.add(copiedElement);
-				} else {
-					container.eSet(containment, copiedElement);
-				}
+		// Set reference and containment
+		if (newContainer instanceof Lane) {
+			Lane lane = (Lane) newContainer;
+			if (newElement instanceof FlowNode) {
+				lane.getFlowNodeRefs().add((FlowNode) newElement);
 			}
 		}
+		FlowElementsContainer flowElementsContainer = getFlowElementsContainer(newContainer);
+		flowElementsContainer.getFlowElements().add((FlowElement) newElement);
+
+		// Copy Sirius and GMF styles
+		CopySiriusGMFStylesHelper.copyStyles(newElement, containerView, oldId, newId);
 	}
 
 	public EList<FlowElement> getSubElements(EObject eo) {
@@ -178,7 +184,7 @@ public class ProcessService {
 		return newElement;
 	}
 
-	private FlowElementsContainer getFlowElementsContainer(EObject eo) {
+	private static FlowElementsContainer getFlowElementsContainer(EObject eo) {
 		FlowElementsContainer result = null;
 		if (eo instanceof FlowElementsContainer) {
 			result = (FlowElementsContainer) eo;

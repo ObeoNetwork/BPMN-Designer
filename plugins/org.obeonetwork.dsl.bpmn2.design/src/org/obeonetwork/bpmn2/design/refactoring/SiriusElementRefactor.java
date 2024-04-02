@@ -22,16 +22,12 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.eclipse.core.runtime.IStatus;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EFactory;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.gmf.runtime.notation.Diagram;
-import org.eclipse.sirius.business.api.dialect.DialectManager;
-import org.eclipse.sirius.business.api.session.CustomDataConstants;
 import org.eclipse.sirius.business.api.session.Session;
 import org.eclipse.sirius.diagram.AbstractDNode;
 import org.eclipse.sirius.diagram.DDiagram;
@@ -50,16 +46,15 @@ import org.eclipse.sirius.diagram.description.ContainerMapping;
 import org.eclipse.sirius.diagram.description.EdgeMapping;
 import org.eclipse.sirius.diagram.description.IEdgeMapping;
 import org.eclipse.sirius.diagram.description.NodeMapping;
-import org.eclipse.sirius.diagram.ui.internal.refresh.diagram.DDiagramCanonicalSynchronizer;
 import org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditor;
 import org.eclipse.sirius.ui.business.api.session.SessionEditorInput;
 import org.eclipse.sirius.viewpoint.DRepresentationDescriptor;
 import org.eclipse.sirius.viewpoint.DRepresentationElement;
 import org.eclipse.sirius.viewpoint.ViewpointPackage;
-import org.eclipse.sirius.viewpoint.description.AnnotationEntry;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PlatformUI;
 import org.obeonetwork.bpmn2.design.Activator;
+import org.obeonetwork.bpmn2.design.util.SiriusHelper;
 
 /**
  * Refactor an element into a Sirius Session.
@@ -150,7 +145,7 @@ public class SiriusElementRefactor {
 			edgeLayouts.forEach(it -> toRefresh.add(createNewEdge(target, it)));
 
 			// Refresh Diagrams to create GMF notation
-			toRefresh.forEach(it -> refresh(it));
+			toRefresh.forEach(it -> SiriusHelper.refresh(it));
 
 			// Restore layout nodes
 			nodeLayouts.forEach(it -> it.update());
@@ -208,30 +203,7 @@ public class SiriusElementRefactor {
 		// (like for a VSM update)
 	}
 
-	private void refresh(DSemanticDiagram it) {
-		Diagram gmfDiagram = getGMFDiagram(it);
-		if (gmfDiagram == null) {
-			return;
-		}
-		// Create proper location
-		DDiagramCanonicalSynchronizer gmfSynch = new DDiagramCanonicalSynchronizer(gmfDiagram);
-		gmfSynch.storeViewsToArrange(false);
 
-		// Clean diagram and related edges
-		DialectManager.INSTANCE.refresh(it, new NullProgressMonitor());
-
-		// Create gmf nodes of new elements. This is performed in pre-commit.
-		gmfSynch.synchronize();
-	}
-
-	private static Diagram getGMFDiagram(DDiagram it) {
-		for (AnnotationEntry anno : it.getOwnedAnnotationEntries()) {
-			if (Objects.equals(anno.getSource(), CustomDataConstants.GMF_DIAGRAMS)) {
-				return (Diagram) anno.getData();
-			}
-		}
-		return null;
-	}
 
 	private DSemanticDiagram createNewNode(EObject target, NodeLayout save) {
 		DSemanticDiagram diagram = getAncestor(DSemanticDiagram.class, save.container);

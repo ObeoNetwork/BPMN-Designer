@@ -11,6 +11,8 @@
  */
 package org.obeonetwork.bpmn2.design.refactoring;
 
+import java.util.Collection;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.business.api.session.Session;
 import org.eclipse.sirius.diagram.DDiagramElement;
@@ -21,6 +23,12 @@ import org.eclipse.sirius.diagram.description.DiagramElementMapping;
  * @author nperansin
  */
 abstract class RepresentationLayout<M extends DiagramElementMapping, D extends DDiagramElement> {
+	
+	static <T extends RepresentationLayout<?, ?>> T findLayout(Collection<T> layouts, DDiagramElement element) {
+		return layouts.stream().filter(
+				it -> it.target.getTarget() == element.getTarget() && it.mapping == element.getDiagramElementMapping())
+				.findFirst().orElse(null);
+	}
 
 	final Session session;
 
@@ -49,4 +57,6 @@ abstract class RepresentationLayout<M extends DiagramElementMapping, D extends D
 	}
 
 	protected abstract void update(D newView);
+	
+	
 }

@@ -36,14 +36,15 @@ import org.eclipse.sirius.diagram.ui.business.api.view.SiriusGMFHelper;
 import org.eclipse.sirius.viewpoint.Style;
 import org.obeonetwork.bpmn2.design.Activator;
 import org.obeonetwork.bpmn2.design.ServiceHelper;
+import org.obeonetwork.bpmn2.design.util.GMFStyleCopier;
+import org.obeonetwork.bpmn2.design.util.SiriusHelper;
+import org.obeonetwork.bpmn2.design.util.SiriusStyleCopier;
 
 /**
  * 
  * @author nperansin
  */
 class NodeLayout extends RepresentationLayout<AbstractNodeMapping, AbstractDNode> {
-
-	private static final String LABEL_NODE_TYPE = "5003";
 
 	final Bounds bounds;
 	final Location labelLocation;
@@ -69,7 +70,7 @@ class NodeLayout extends RepresentationLayout<AbstractNodeMapping, AbstractDNode
 				for (Object o : node.getChildren()) {
 					if (o instanceof Node) {
 						Node subNode = (Node) o;
-						if (LABEL_NODE_TYPE.equals(subNode.getType())
+						if (SiriusHelper.LABEL_NODE_TYPE.equals(subNode.getType())
 								&& subNode.getLayoutConstraint() instanceof Location) {
 							labelLocation = (Location) subNode.getLayoutConstraint();
 						}
@@ -107,7 +108,7 @@ class NodeLayout extends RepresentationLayout<AbstractNodeMapping, AbstractDNode
 			for (Object o : node.getChildren()) {
 				if (o instanceof Node) {
 					Node subNode = (Node) o;
-					if (LABEL_NODE_TYPE.equals(subNode.getType())) {
+					if (SiriusHelper.LABEL_NODE_TYPE.equals(subNode.getType())) {
 						subNode.setLayoutConstraint(labelLocation);
 					}
 				}
@@ -117,7 +118,7 @@ class NodeLayout extends RepresentationLayout<AbstractNodeMapping, AbstractDNode
 		updateNodeContainerStyle(target, gmfView instanceof Node ? (Node) gmfView : null);
 
 		if (target instanceof DNode && isExternalLabel) {
-			//Crapy code to set that the DNode has an external label.
+			// Crapy code to set that the DNode has an external label.
 			ServiceHelper.setExternalLabelInTooltip((DNode) target);
 		}
 
@@ -134,15 +135,14 @@ class NodeLayout extends RepresentationLayout<AbstractNodeMapping, AbstractDNode
 	private void updateNodeContainerStyle(AbstractDNode target, Node gmfNode) {
 		if (target != null && (target.getStyle() instanceof FlatContainerStyle)
 				&& (siriusStyle instanceof FlatContainerStyle)) {
-			SiriusElementRefactorHelper.updateSiriusNodeContainerFlatContainerStyle((FlatContainerStyle) siriusStyle,
+			SiriusStyleCopier.updateSiriusNodeContainerFlatContainerStyle((FlatContainerStyle) siriusStyle,
 					(FlatContainerStyle) target.getStyle());
 		} else if (target != null && (target.getStyle() instanceof WorkspaceImage)
 				&& (siriusStyle instanceof WorkspaceImage)) {
-			SiriusElementRefactorHelper.updateSiriusNodeContainerWorkspaceImageStyle((WorkspaceImage) siriusStyle,
+			SiriusStyleCopier.updateSiriusNodeContainerWorkspaceImageStyle((WorkspaceImage) siriusStyle,
 					(WorkspaceImage) target.getStyle());
 		} else if (target != null && (target.getStyle() instanceof Square) && (siriusStyle instanceof Square)) {
-			SiriusElementRefactorHelper.updateSiriusNodeContainerSquareStyle((Square) siriusStyle,
-					(Square) target.getStyle());
+			SiriusStyleCopier.updateSiriusNodeContainerSquareStyle((Square) siriusStyle, (Square) target.getStyle());
 		} else {
 			if (target == null || ((DNode) target).getStyle() == null) {
 				Activator.log(IStatus.ERROR, "Target or style is null: " + target.getStyle().getClass().getName() + "/"
@@ -160,7 +160,7 @@ class NodeLayout extends RepresentationLayout<AbstractNodeMapping, AbstractDNode
 
 				oldStyleOpt.ifPresent(oldStyle -> {
 					if (oldStyle instanceof FontStyle && newStyle instanceof FontStyle) {
-						SiriusElementRefactorHelper.updateFontStyle((FontStyle) oldStyle, (FontStyle) newStyle);
+						GMFStyleCopier.updateFontStyle((FontStyle) oldStyle, (FontStyle) newStyle);
 					}
 				});
 			});
@@ -184,7 +184,7 @@ class NodeLayout extends RepresentationLayout<AbstractNodeMapping, AbstractDNode
 	}
 
 	protected void updateBorder(DNode border) {
-		NodeLayout layout = SiriusElementRefactorHelper.findLayout(borders, border);
+		NodeLayout layout = findLayout(borders, border);
 		if (layout != null) {
 			layout.updateBorderStyle(border);
 		}

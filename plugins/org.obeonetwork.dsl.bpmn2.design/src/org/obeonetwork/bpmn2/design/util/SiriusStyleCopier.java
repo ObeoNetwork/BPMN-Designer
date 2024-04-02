@@ -9,65 +9,24 @@
  *     Obeo - initial API and implementation
  * 
  */
-package org.obeonetwork.bpmn2.design.refactoring;
+package org.obeonetwork.bpmn2.design.util;
 
-import java.util.Collection;
+import java.util.Optional;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.gmf.runtime.notation.ConnectorStyle;
+import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.FontStyle;
-import org.eclipse.gmf.runtime.notation.Node;
-import org.eclipse.sirius.diagram.DDiagramElement;
 import org.eclipse.sirius.diagram.DEdge;
 import org.eclipse.sirius.diagram.EdgeStyle;
-import org.eclipse.sirius.diagram.EdgeTarget;
 import org.eclipse.sirius.diagram.FlatContainerStyle;
 import org.eclipse.sirius.diagram.Square;
 import org.eclipse.sirius.diagram.WorkspaceImage;
+import org.eclipse.sirius.diagram.impl.DiagramFactoryImpl;
 
-public class SiriusElementRefactorHelper {
+public class SiriusStyleCopier {
 
-	static boolean isGmfLabelNode(Object it) {
-		if (!(it instanceof Node)) {
-			return false;
-		}
-		Node node = (Node) it;
-		return node.getPersistedChildren().isEmpty() && node.getType() != null;
-	}
-
-	static <T extends RepresentationLayout<?, ?>> T findLayout(Collection<T> layouts, DDiagramElement element) {
-		return layouts.stream().filter(
-				it -> it.target.getTarget() == element.getTarget() && it.mapping == element.getDiagramElementMapping())
-				.findFirst().orElse(null);
-	}
-
-	static EdgeTarget getEnd(DEdge src, boolean out) {
-		return out ? src.getTargetNode() : src.getSourceNode();
-	}
-
-	static void updateFontStyle(FontStyle oldStyle, FontStyle newStyle) {
-		newStyle.setBold(oldStyle.isBold());
-		newStyle.setFontColor(oldStyle.getFontColor());
-		newStyle.setFontHeight(oldStyle.getFontHeight());
-		newStyle.setFontName(oldStyle.getFontName());
-		newStyle.setItalic(oldStyle.isItalic());
-		newStyle.setStrikeThrough(oldStyle.isStrikeThrough());
-		newStyle.setUnderline(oldStyle.isUnderline());
-	}
-
-	static void updateConnectorStyle(ConnectorStyle oldStyle, ConnectorStyle newStyle) {
-		newStyle.setAvoidObstructions(oldStyle.isAvoidObstructions());
-		newStyle.setClosestDistance(oldStyle.isClosestDistance());
-		newStyle.setJumpLinksReverse(oldStyle.isJumpLinksReverse());
-		newStyle.setJumpLinkStatus(oldStyle.getJumpLinkStatus());
-		newStyle.setJumpLinkType(oldStyle.getJumpLinkType());
-		newStyle.setLineColor(oldStyle.getLineColor());
-		newStyle.setLineWidth(oldStyle.getLineWidth());
-		newStyle.setRoundedBendpointsRadius(oldStyle.getRoundedBendpointsRadius());
-		newStyle.setRouting(oldStyle.getRouting());
-		newStyle.setSmoothness(oldStyle.getSmoothness());
-	}
-
-	static void updateSiriusNodeContainerFlatContainerStyle(FlatContainerStyle oldContainerStyle,
+	public static void updateSiriusNodeContainerFlatContainerStyle(FlatContainerStyle oldContainerStyle,
 			FlatContainerStyle containerStyle) {
 		containerStyle.setDescription(oldContainerStyle.getDescription());
 		containerStyle.setUid(oldContainerStyle.getUid());
@@ -89,12 +48,12 @@ public class SiriusElementRefactorHelper {
 		containerStyle.setShowIcon(oldContainerStyle.isShowIcon());
 	}
 
-	static void updateSiriusEdgeStyle(EdgeStyle siriusStyle, EdgeStyle newSiriusStyle) {
-		newSiriusStyle.setBeginLabelStyle(siriusStyle.getBeginLabelStyle());
+	public static void updateSiriusEdgeStyle(EdgeStyle siriusStyle, EdgeStyle newSiriusStyle) {
+		//newSiriusStyle.setBeginLabelStyle(siriusStyle.getBeginLabelStyle());
 		newSiriusStyle.setCentered(siriusStyle.getCentered());
-		newSiriusStyle.setCenterLabelStyle(siriusStyle.getCenterLabelStyle());
+		updateSiriusCenterLabelStyle(siriusStyle, newSiriusStyle);
 		newSiriusStyle.setDescription(siriusStyle.getDescription());
-		newSiriusStyle.setEndLabelStyle(siriusStyle.getEndLabelStyle());
+		//newSiriusStyle.setEndLabelStyle(siriusStyle.getEndLabelStyle());
 		newSiriusStyle.setFoldingStyle(siriusStyle.getFoldingStyle());
 		newSiriusStyle.setLineStyle(siriusStyle.getLineStyle());
 		newSiriusStyle.setRoutingStyle(siriusStyle.getRoutingStyle());
@@ -106,6 +65,23 @@ public class SiriusElementRefactorHelper {
 		newSiriusStyle.getCustomFeatures().clear();
 		newSiriusStyle.getCustomFeatures().addAll(siriusStyle.getCustomFeatures());
 	}
+
+	private static void updateSiriusCenterLabelStyle(EdgeStyle siriusStyle, EdgeStyle newSiriusStyle) {
+		if (newSiriusStyle.getCenterLabelStyle() == null && siriusStyle.getCenterLabelStyle() != null) {
+			newSiriusStyle.setCenterLabelStyle(DiagramFactoryImpl.eINSTANCE.createCenterLabelStyle());
+		}
+		if (newSiriusStyle.getCenterLabelStyle() != null && siriusStyle.getCenterLabelStyle() != null) {
+			newSiriusStyle.getCenterLabelStyle().setDescription(siriusStyle.getCenterLabelStyle().getDescription());
+			newSiriusStyle.getCenterLabelStyle().setIconPath(siriusStyle.getCenterLabelStyle().getIconPath());
+			newSiriusStyle.getCenterLabelStyle().setLabelColor(siriusStyle.getCenterLabelStyle().getLabelColor());
+			newSiriusStyle.getCenterLabelStyle().setLabelSize(siriusStyle.getCenterLabelStyle().getLabelSize());
+			newSiriusStyle.getCenterLabelStyle().setShowIcon(siriusStyle.getCenterLabelStyle().isShowIcon());
+			newSiriusStyle.getCenterLabelStyle().getCustomFeatures()
+					.addAll(siriusStyle.getCenterLabelStyle().getCustomFeatures());
+		}
+	}
+	
+	
 
 	public static void updateSiriusNodeContainerWorkspaceImageStyle(WorkspaceImage oldContainerStyle,
 			WorkspaceImage containerStyle) {
@@ -147,5 +123,28 @@ public class SiriusElementRefactorHelper {
 		containerStyle.setShowIcon(oldContainerStyle.isShowIcon());
 		containerStyle.setWidth(oldContainerStyle.getWidth());
 	}
+	
+	@SuppressWarnings("unchecked")
+	public static void updateEdgeStyle(DEdge targetSiriusEdge, Edge targetEdge, EdgeStyle oldSiriusStyle,
+			EList<?> oldGMFStyles) {
+		if (oldSiriusStyle != null) {
+			SiriusStyleCopier.updateSiriusEdgeStyle(oldSiriusStyle, (EdgeStyle) targetSiriusEdge.getStyle());
+		}
+
+		targetEdge.getStyles().forEach(newStyle -> {
+			Optional<?> oldStyleOpt = oldGMFStyles.stream()
+					.filter(oldStyle -> oldStyle.getClass().equals(newStyle.getClass())).findFirst();
+
+			oldStyleOpt.ifPresent(oldStyle -> {
+				if (oldStyle instanceof FontStyle && newStyle instanceof FontStyle) {
+					GMFStyleCopier.updateFontStyle((FontStyle) oldStyle, (FontStyle) newStyle);
+				} else if (oldStyle instanceof ConnectorStyle && newStyle instanceof ConnectorStyle) {
+					GMFStyleCopier.updateConnectorStyle((ConnectorStyle) oldStyle, (ConnectorStyle) newStyle);
+				}
+			});
+		});
+	}
+
+
 
 }

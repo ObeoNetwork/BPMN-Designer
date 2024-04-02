@@ -22,6 +22,11 @@ import org.eclipse.sirius.diagram.EdgeTarget;
  * @author nperansin
  */
 class EndLayout extends EdgeLayout {
+
+	static EdgeTarget getEnd(DEdge src, boolean out) {
+		return out ? src.getTargetNode() : src.getSourceNode();
+	}
+
 	final boolean targetChange;
 	final EdgeTarget end;
 	final boolean outEnd;
@@ -31,13 +36,13 @@ class EndLayout extends EdgeLayout {
 		super(src, session);
 		targetChange = src.getTarget() == targeting.getTarget();
 		outEnd = out;
-		end = SiriusElementRefactorHelper.getEnd(src, out);
+		end = getEnd(src, out);
 		endChange = end == targeting;
 	}
 
 	protected boolean match(DEdge it, AbstractDNode previous, AbstractDNode current) {
 		EObject expectedTarget = targetChange ? current.getTarget() : target.getTarget();
-		EdgeTarget actualEnd = SiriusElementRefactorHelper.getEnd(it, outEnd);
+		EdgeTarget actualEnd = getEnd(it, outEnd);
 		EdgeTarget expectedEnd = endChange ? (EdgeTarget) current : end;
 
 		return it.getTarget() == expectedTarget // proper target
