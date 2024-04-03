@@ -48,7 +48,12 @@ import org.obeonetwork.bpmn2.design.util.GMFHelper;
 import org.obeonetwork.bpmn2.design.util.GMFStyleCopier;
 import org.obeonetwork.bpmn2.design.util.SiriusHelper;
 import org.obeonetwork.bpmn2.design.util.SiriusStyleCopier;
+import org.obeonetwork.dsl.bpmn2.Association;
 import org.obeonetwork.dsl.bpmn2.BoundaryEvent;
+import org.obeonetwork.dsl.bpmn2.DataInput;
+import org.obeonetwork.dsl.bpmn2.DataObject;
+import org.obeonetwork.dsl.bpmn2.DataOutput;
+import org.obeonetwork.dsl.bpmn2.DataStore;
 import org.obeonetwork.dsl.bpmn2.FlowNode;
 import org.obeonetwork.dsl.bpmn2.SequenceFlow;
 
@@ -56,15 +61,16 @@ public class CopySiriusGMFStylesHelper {
 
 	public static void copyStyles(EObject newElement, DDiagramElement containerView, String oldId, String newId) {
 		if (newElement instanceof BoundaryEvent) {
-			copyBoundaryEvent((BoundaryEvent) newElement, containerView, oldId, newId);
-		} else if (newElement instanceof FlowNode) {
-			copyFlowNode((FlowNode) newElement, containerView, oldId, newId);
-		} else if (newElement instanceof SequenceFlow) {
-			copySequenceFlow((SequenceFlow) newElement, containerView, oldId, newId);
+			copyBoundaryNode(newElement, containerView, oldId, newId);
+		} else if (newElement instanceof FlowNode || newElement instanceof DataStore || newElement instanceof DataObject
+				|| newElement instanceof DataInput || newElement instanceof DataOutput) {
+			copyNode(newElement, containerView, oldId, newId);
+		} else if (newElement instanceof SequenceFlow || newElement instanceof Association) {
+			copyEdge(newElement, containerView, oldId, newId);
 		}
 	}
 
-	private static void copyBoundaryEvent(BoundaryEvent newElement, DDiagramElement containerView, String oldId,
+	private static void copyBoundaryNode(EObject newElement, DDiagramElement containerView, String oldId,
 			String newId) {
 		IWorkbench workbench = PlatformUI.getWorkbench();
 		IWorkbenchPage[] pages = workbench.getActiveWorkbenchWindow().getPages();
@@ -104,7 +110,7 @@ public class CopySiriusGMFStylesHelper {
 		}
 	}
 
-	private static void copyFlowNode(FlowNode newElement, DDiagramElement containerView, String oldId, String newId) {
+	private static void copyNode(EObject newElement, DDiagramElement containerView, String oldId, String newId) {
 		IWorkbench workbench = PlatformUI.getWorkbench();
 		IWorkbenchPage[] pages = workbench.getActiveWorkbenchWindow().getPages();
 		AbstractDNode oldAbstractDNode = SiriusHelper.getAbstractDNode(oldId, pages);
@@ -119,8 +125,7 @@ public class CopySiriusGMFStylesHelper {
 		}
 	}
 
-	private static void copySequenceFlow(SequenceFlow newElement, DDiagramElement containerView, String oldId,
-			String newId) {
+	private static void copyEdge(EObject newElement, DDiagramElement containerView, String oldId, String newId) {
 		IWorkbench workbench = PlatformUI.getWorkbench();
 		IWorkbenchPage[] pages = workbench.getActiveWorkbenchWindow().getPages();
 		// Update edges asynchronously.

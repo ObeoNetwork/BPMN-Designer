@@ -25,21 +25,28 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
 import org.eclipse.sirius.diagram.DDiagramElement;
+import org.obeonetwork.dsl.bpmn2.Association;
 import org.obeonetwork.dsl.bpmn2.BoundaryEvent;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Factory;
 import org.obeonetwork.dsl.bpmn2.Bpmn2Package;
 import org.obeonetwork.dsl.bpmn2.ChoreographyTask;
 import org.obeonetwork.dsl.bpmn2.Collaboration;
 import org.obeonetwork.dsl.bpmn2.ComplexGateway;
+import org.obeonetwork.dsl.bpmn2.DataInput;
+import org.obeonetwork.dsl.bpmn2.DataObject;
+import org.obeonetwork.dsl.bpmn2.DataOutput;
+import org.obeonetwork.dsl.bpmn2.DataStore;
 import org.obeonetwork.dsl.bpmn2.Definitions;
 import org.obeonetwork.dsl.bpmn2.EndEvent;
 import org.obeonetwork.dsl.bpmn2.EventBasedGateway;
 import org.obeonetwork.dsl.bpmn2.ExclusiveGateway;
+import org.obeonetwork.dsl.bpmn2.ExtensionAttributeValue;
 import org.obeonetwork.dsl.bpmn2.FlowElement;
 import org.obeonetwork.dsl.bpmn2.FlowElementsContainer;
 import org.obeonetwork.dsl.bpmn2.FlowNode;
 import org.obeonetwork.dsl.bpmn2.ImplicitThrowEvent;
 import org.obeonetwork.dsl.bpmn2.InclusiveGateway;
+import org.obeonetwork.dsl.bpmn2.InputOutputSpecification;
 import org.obeonetwork.dsl.bpmn2.InteractionNode;
 import org.obeonetwork.dsl.bpmn2.IntermediateCatchEvent;
 import org.obeonetwork.dsl.bpmn2.Lane;
@@ -130,11 +137,64 @@ public class ProcessService {
 				lane.getFlowNodeRefs().add((FlowNode) newElement);
 			}
 		}
-		FlowElementsContainer flowElementsContainer = getFlowElementsContainer(newContainer);
-		flowElementsContainer.getFlowElements().add((FlowElement) newElement);
+		if (newElement instanceof FlowElement) {
+			FlowElementsContainer flowElementsContainer = getFlowElementsContainer(newContainer);
+			flowElementsContainer.getFlowElements().add((FlowElement) newElement);
+		} else if (newElement instanceof DataStore || newElement instanceof DataObject
+				|| newElement instanceof DataInput || newElement instanceof DataOutput) {
+			setDataInContainer(newContainer, newElement);
+		} else if (newElement instanceof Association) {
+			Process process = ServiceHelper.getProcess(newContainer);
+			if (process != null) {
+				process.getArtifacts().add((Association) newElement);
+			}
+		}
 
 		// Copy Sirius and GMF styles
 		CopySiriusGMFStylesHelper.copyStyles(newElement, containerView, oldId, newId);
+	}
+
+	private static void setDataInContainer(EObject newContainer, EObject newElement) {
+		if (newContainer instanceof Lane) {
+			Lane lane = (Lane) newContainer;
+			if (newElement instanceof DataStore || newElement instanceof DataObject) {
+				ExtensionAttributeValue extensionAttributeValue = Bpmn2Factory.eINSTANCE
+						.createExtensionAttributeValue();
+				lane.getExtensionValues().add(extensionAttributeValue);
+				extensionAttributeValue.setValue(newElement);
+			} else if (newElement instanceof DataInput || newElement instanceof DataOutput) {
+				if (lane.getPartitionElement() == null) {
+					InputOutputSpecification ioSpec = Bpmn2Factory.eINSTANCE.createInputOutputSpecification();
+					lane.setPartitionElement(ioSpec);
+				}
+				if (newElement instanceof DataInput) {
+					((InputOutputSpecification) lane.getPartitionElement()).getDataInputs().add((DataInput) newElement);
+				} else if (newElement instanceof DataOutput) {
+					((InputOutputSpecification) lane.getPartitionElement()).getDataOutputs()
+							.add((DataOutput) newElement);
+				}
+			}
+		} else if (newContainer instanceof SubProcess) {
+			SubProcess process = (SubProcess) newContainer;
+			if (newElement instanceof DataStore || newElement instanceof DataObject) {
+				ExtensionAttributeValue extensionAttributeValue = Bpmn2Factory.eINSTANCE
+						.createExtensionAttributeValue();
+				process.getExtensionValues().add(extensionAttributeValue);
+				extensionAttributeValue.setValue(newElement);
+			} else if (newElement instanceof DataInput || newElement instanceof DataOutput) {
+				if (process.getIoSpecification() == null) {
+					InputOutputSpecification ioSpec = Bpmn2Factory.eINSTANCE.createInputOutputSpecification();
+					process.setIoSpecification(ioSpec);
+				}
+				if (newElement instanceof DataInput) {
+					((InputOutputSpecification) process.getIoSpecification()).getDataInputs()
+							.add((DataInput) newElement);
+				} else if (newElement instanceof DataOutput) {
+					((InputOutputSpecification) process.getIoSpecification()).getDataOutputs()
+							.add((DataOutput) newElement);
+				}
+			}
+		}
 	}
 
 	public EList<FlowElement> getSubElements(EObject eo) {
