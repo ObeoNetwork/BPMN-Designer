@@ -373,7 +373,7 @@
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="%ReceiveTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/receiveTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="%ReceiveTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ReceiveTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
@@ -381,7 +381,7 @@
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="%ScriptTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/scriptTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="%ScriptTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ScriptTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
@@ -2056,7 +2056,7 @@
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="%ReceiveTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/receiveTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="%ReceiveTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ReceiveTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
@@ -2064,7 +2064,7 @@
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="%ScriptTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/scriptTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="%ScriptTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ScriptTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
@@ -4040,7 +4040,7 @@
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="%ReceiveTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/receiveTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToReceiveTask_ContextAction" label="%ReceiveTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ReceiveTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
@@ -4048,7 +4048,7 @@
                 </firstModelOperations>
               </initialOperation>
             </menuItemDescription>
-            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="%ScriptTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/scriptTask.png">
+            <menuItemDescription xsi:type="tool:OperationAction" name="ConvertTaskToScriptTask_ContextAction" label="%ScriptTask" forceRefresh="true" icon="/org.obeonetwork.dsl.bpmn2.edit/icons/full/obj16/ScriptTask.png">
               <view name="views"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:For" expression="aql:views" iteratorName="view">
