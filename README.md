@@ -9,7 +9,7 @@ These plugins have been created with Eclipse/Sirius and are released under the E
 To install it:
 - Download OD Community Edition version 11.8: https://www.obeodesigner.com/
 - Unzip and start it
-- Add the BPMN-Designer update site: https://s3-eu-west-1.amazonaws.com/obeo-bpmndesigner-releases/5.1.2/repository/
+- Add the BPMN-Designer update site: https://s3-eu-west-1.amazonaws.com/obeo-bpmndesigner-releases/5.1.3/repository/
 - Install the BPMN-Designer and Sirius Support for Legacy Queries features
 
 To test it, create a new sample project: Ctrl+N > Examples > BPMN > BPMN Samples
