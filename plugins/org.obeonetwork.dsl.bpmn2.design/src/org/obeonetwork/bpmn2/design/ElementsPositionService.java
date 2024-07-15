@@ -11,23 +11,16 @@
  */
 package org.obeonetwork.bpmn2.design;
 
-import java.util.Set;
-
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.gmf.runtime.notation.Bounds;
 import org.eclipse.gmf.runtime.notation.Node;
-import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.sirius.business.api.dialect.DialectManager;
 import org.eclipse.sirius.diagram.DDiagramElement;
 import org.eclipse.sirius.diagram.DDiagramElementContainer;
-import org.eclipse.sirius.diagram.DNode;
-import org.eclipse.sirius.diagram.business.api.refresh.CanonicalSynchronizer;
-import org.eclipse.sirius.diagram.business.api.refresh.CanonicalSynchronizerFactory;
 import org.eclipse.sirius.diagram.ui.business.api.view.SiriusGMFHelper;
-import org.eclipse.sirius.diagram.ui.business.api.view.SiriusLayoutDataManager;
 import org.obeonetwork.dsl.bpmn2.Lane;
 import org.obeonetwork.dsl.bpmn2.LaneSet;
 
@@ -50,40 +43,6 @@ public class ElementsPositionService {
 		int pos = laneSet.getLanes().lastIndexOf(lane);
 		if (pos < (laneSet.getLanes().size() - 1)) {
 			laneSet.getLanes().move(pos + 1, pos);
-		}
-	}
-
-	/**
-	 * This method fix the position of a new element created from contextual menu.
-	 * 
-	 * @param currentNode the node where the contextual menu displayed
-	 * @param newNode     the new element to create
-	 * 
-	 * @author atakarabt
-	 */
-	public void positionRelativeToCurrent(EObject currentNode, EObject newNode) {
-		if (currentNode instanceof DNode && newNode instanceof DNode) {
-			DNode currentDNode = (DNode) currentNode;
-			DNode newDNode = (DNode) newNode;
-			// Retrieve GMF nodes associated with our graphical nodes
-			Node firstNode = SiriusGMFHelper.getGmfNode(currentDNode);
-			Bounds firstBounds = (Bounds) firstNode.getLayoutConstraint();
-			// Launch refresh so that GMF view corresponding to the newDNode are created
-			CanonicalSynchronizer canonicalSynchronizer = CanonicalSynchronizerFactory.INSTANCE
-					.createCanonicalSynchronizer(firstNode.getDiagram());
-			canonicalSynchronizer.synchronize();
-			Node secondNode = SiriusGMFHelper.getGmfNode(newDNode);
-			Bounds secondBounds = (Bounds) secondNode.getLayoutConstraint();
-			// Make sure that the created view will never be arranged
-			Set<View> createdViewsToArrange = SiriusLayoutDataManager.INSTANCE.getCreatedViewWithCenterLayout()
-					.get(secondNode.getDiagram());
-			if (createdViewsToArrange != null) {
-				createdViewsToArrange.remove(secondNode);
-			}
-			// Set bounds for this new node
-			secondBounds.setX(firstBounds.getX() + 150);
-			secondBounds.setY(firstBounds.getY());
-
 		}
 	}
 
@@ -116,11 +75,11 @@ public class ElementsPositionService {
 
 		int relativeIndex = list.indexOf(relativeElement);
 
-		list.move(relativeIndex+1, element);
+		list.move(relativeIndex + 1, element);
 
 		return referenceOwner;
 	}
-	
+
 	public EObject moveElementFirstPosition(EObject referenceOwner, String referenceName, final EObject element) {
 		EStructuralFeature feature = referenceOwner.eClass().getEStructuralFeature(referenceName);
 		@SuppressWarnings("unchecked")
